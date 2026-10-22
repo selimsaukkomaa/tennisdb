@@ -15,7 +15,7 @@ const GRIP_DRY = '[data-gfilter-group="feel"][data-gfilter-value="dry"]';
 const compareBox = (id: string): string => `#regna-content input[data-compare-id="${id}"]`;
 
 /** Strip content the port has not reached yet; views showing it are expected to fail. */
-const STRIPS_PENDING = 'log and gut strips not ported yet';
+const STRIPS_PENDING = 'log strip not ported yet (step 3)';
 
 interface View {
   name: string;
@@ -33,6 +33,12 @@ const VIEWS: View[] = [
   { name: 'Percept 100D', clicks: ['#btn-racquet-percept'], pending: STRIPS_PENDING },
   { name: 'Pro Tour 630', clicks: ['#btn-racquet-headpt630'], pending: STRIPS_PENDING },
   { name: 'Grips', clicks: ['#btn-cat-grips'] },
+  { name: 'gut hybrids expanded', clicks: ['[data-gut-toggle="regna"]'], pending: STRIPS_PENDING },
+  {
+    name: 'gut strip expanded (Pro Tour 630)',
+    clicks: ['#btn-racquet-headpt630', '[data-gut-toggle="headpt630"]'],
+    element: '.gut-section[data-racquet="headpt630"]',
+  },
   { name: 'filters open, Hex active', clicks: ['#btn-filters', HEX], pending: STRIPS_PENDING },
   { name: 'grip filters open, Dry active', clicks: ['#btn-cat-grips', '#btn-filters', GRIP_DRY] },
   {

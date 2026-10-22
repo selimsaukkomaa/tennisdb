@@ -3,6 +3,7 @@ import { assembleDb, copy } from './core/db';
 import { initCompare } from './ui/compare';
 import { initFilterPanel } from './ui/filter-panel';
 import { initFilters } from './ui/filters';
+import { initGut } from './ui/gut';
 import { initNav, showCategory, showRacquet } from './ui/nav';
 import { renderShell } from './ui/shell';
 
@@ -13,6 +14,7 @@ initFilters();
 initNav(db);
 initFilterPanel();
 initCompare(db);
+initGut(db, copy);
 
 // Globals the v0.990 smoke suite drives; removed once the suite is ported (step 4).
 Object.assign(window, { TENNIS_DB: db, showRacquet, showCategory });

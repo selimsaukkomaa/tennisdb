@@ -9,6 +9,7 @@ import type { Racquet, TennisDb } from '../../src/core/types';
 import { initCompare } from '../../src/ui/compare';
 import { initFilterPanel } from '../../src/ui/filter-panel';
 import { initFilters } from '../../src/ui/filters';
+import { initGut } from '../../src/ui/gut';
 import { initNav, showRacquet } from '../../src/ui/nav';
 import { renderShell } from '../../src/ui/shell';
 
@@ -47,6 +48,7 @@ beforeAll(() => {
   initNav(db);
   initFilterPanel();
   initCompare(db);
+  initGut(db, copy);
 });
 
 describe('fourth racquet from data alone', () => {
@@ -150,5 +152,18 @@ describe('compare on the fourth racquet', () => {
     ]);
     document.getElementById('compare-modal-close')!.click();
     document.getElementById('compare-clear')!.click();
+  });
+});
+
+describe('gut strip on the fourth racquet', () => {
+  test('shows no pairings and the empty message when expanded', () => {
+    const section = document.querySelector('.gut-section[data-racquet="test4"]')!;
+    expect(section.querySelector('.gut-status-count')?.textContent).toBe('0 pairings');
+    section.querySelector<HTMLElement>('[data-gut-toggle="test4"]')!.click();
+    expect(section.querySelector('.gut-empty')?.textContent).toBe(
+      'No gut hybrid pairings configured for this racquet.',
+    );
+    section.querySelector<HTMLElement>('[data-gut-toggle="test4"]')!.click();
+    expect(section.querySelector('.gut-panel')!.innerHTML).toBe('');
   });
 });
