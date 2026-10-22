@@ -1,0 +1,30 @@
+{
+  "toroline": {
+    "name": "Toroline",
+    "accent": "#fbbf24"
+  },
+  "solinco": {
+    "name": "Solinco",
+    "accent": "#4ade80"
+  },
+  "yonex": {
+    "name": "Yonex",
+    "accent": "#38bdf8"
+  },
+  "restring": {
+    "name": "ReString",
+    "accent": "#f472b6"
+  },
+  "grapplesnake": {
+    "name": "Grapplesnake",
+    "accent": "#a3e635"
+  },
+  "luxilon": {
+    "name": "Luxilon",
+    "accent": "#9aa3ad"
+  },
+  "tourna": {
+    "name": "Tourna",
+    "accent": "#1e40af"
+  }
+}

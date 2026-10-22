@@ -1,0 +1,11 @@
+legacy/
+data/
+content/
+dist/
+ios/
+src/styles/
+src/assets/
+package-lock.json
+index.html
+test-results/
+playwright-report/

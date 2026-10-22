@@ -1,0 +1,79 @@
+{
+  "brandFooters": {
+    "toroline": {
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, and Toroline product descriptions. Bars are relative within the Toroline lineup. All sets come as two half-sets (hybrid-ready).</p>",
+      "byRacquet": {
+        "headpt630": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, and Toroline product descriptions. Bars are relative within the Toroline lineup. All sets come as two half-sets (hybrid-ready). Tension ranges are 2–3 kg lower than Regna to account for the dense 18×20 pattern.</p>"
+      }
+    },
+    "solinco": {
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Evoke Tennis, and Solinco product descriptions. Bars are relative within the Solinco lineup. Gauge range is industry-leading (15L–20 for Tour Bite &amp; Hyper-G).</p>",
+      "byRacquet": {
+        "headpt630": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Evoke Tennis, and Solinco product descriptions. Bars are relative within the Solinco lineup. Gauge range is industry-leading (15L–20 for Tour Bite &amp; Hyper-G). String 2–3 kg lower than Regna for the dense 18×20.</p>"
+      }
+    },
+    "yonex": {
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Tennispro, and Yonex product descriptions. Bars are relative within the Yonex lineup. All Polytour polys are pre-stretched at controlled temperatures for improved tension maintenance.</p>"
+    },
+    "restring": {
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TennCom, Tennisnerd, Prostrung, and ReString product descriptions. Bars are relative within the ReString lineup. All strings feature a lubricated coating for enhanced snapback and durability.</p>"
+    },
+    "grapplesnake": {
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing where available. Subjective ratings from TW playtests, Tennisnerd, TennCom, and Grapplesnake product descriptions. Bars are relative within the Grapplesnake lineup. Made in Germany.</p>"
+    }
+  },
+  "hybridCards": {
+    "toroline": {
+      "heading": "⚡ Toroline Hybrids",
+      "intro": "Toroline's OMAKASE blends — poly/poly hybrids designed to be strung together. All sets come as two half-sets. String mains 1–1.5 kg lower than crosses for optimal balance."
+    }
+  },
+  "gripAbout": {
+    "kimony": "<strong>About Kimony:</strong> Japanese grip manufacturer producing all grips in Japan (except the Tourna KGT141, made in USA). Renowned for their Hi-Soft polyurethane formula – widely considered the tackiest overgrip material available. The lineup spans wet/tacky overgrips (smooth, perforated, spiral-cushioned, textured), dry-feel overgrips for heavy sweaters, and premium replacement grips in both leather and synthetic. <span class=\"pick\">Hi-Soft EX</span> is the flagship wet grip; <span class=\"pick\">Last Dry</span> is the flagship dry grip.",
+    "yonex": "<strong>About Yonex:</strong> The world's largest racquet sports manufacturer, producing grips in Indonesia with materials from Japan. The Super Grap line (launched 1987) is one of the best-selling overgrips globally – enough tape sold to wrap around the world six times. The lineup spans wet/tacky overgrips (smooth, cushion-ridged, antibacterial), dry-feel overgrips, and replacement grips in both leather and synthetic. <span class=\"pick\">Wet Super Grap (AC102)</span> is the flagship overgrip; <span class=\"pick\">Ultimum Leather</span> is the premium replacement grip.",
+    "tourna": "<strong>About Tourna:</strong> Tourna built its reputation on the original blue dry overgrip — the most copied grip in tennis. <span class=\"pick\">Tourna Grip Original (XL-1)</span> is the reference for sweat absorption (though with intentionally low durability — typical pro changes it every match). <span class=\"pick\">Tac</span> and <span class=\"pick\">Mega Tac</span> are the wet/tacky alternatives. <span class=\"pick\">Pro Tour Leather</span> is the leather replacement grip, slightly more textured than Fairway Leather. For comparison: Kimony Last Dry has subtle tackiness and 3× the durability of Tourna Original; Yonex Dry Grap is similar to Tourna but slightly less absorbent."
+  },
+  "gutIntro": "Natural gut is made from cow serosa fibers — the most elastic, comfortable, and powerful string material available. Two configurations are practical: <strong>⬆ gut mains</strong> (max power & feel; the Federer setup) or <strong>⬇ gut crosses</strong> (max spin & control; the Djokovic setup, with longer gut life since crosses move less).",
+  "legends": {
+    "strings": [
+      {
+        "swatch": "linear-gradient(90deg,#94a3b8,#475569)",
+        "label": "Stiffness (higher = firmer)"
+      },
+      {
+        "swatch": "linear-gradient(90deg,#fb923c,#dc2626)",
+        "label": "Power (higher = more power)"
+      },
+      {
+        "swatch": "linear-gradient(90deg,#10b981,#059669)",
+        "label": "Spin potential"
+      },
+      {
+        "swatch": "linear-gradient(90deg,#a78bfa,#7c3aed)",
+        "label": "Control"
+      },
+      {
+        "swatch": "linear-gradient(90deg,#60a5fa,#818cf8)",
+        "label": "Comfort"
+      }
+    ],
+    "grips": [
+      {
+        "swatch": "linear-gradient(90deg,#f59e0b,#d97706)",
+        "label": "Tackiness (higher = stickier)"
+      },
+      {
+        "swatch": "linear-gradient(90deg,#06b6d4,#0891b2)",
+        "label": "Absorption (higher = more moisture-wicking)"
+      },
+      {
+        "swatch": "linear-gradient(90deg,#10b981,#059669)",
+        "label": "Durability (higher = longer-lasting)"
+      },
+      {
+        "swatch": "linear-gradient(90deg,#8b5cf6,#6d28d9)",
+        "label": "Thickness"
+      }
+    ]
+  }
+}

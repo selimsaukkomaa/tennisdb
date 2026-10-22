@@ -1,0 +1,552 @@
+[
+  {
+    "name": "K-Pop",
+    "shapeAttr": "hexagonal,square",
+    "feelAttr": "crisp,firm",
+    "mains": {
+      "string": "Wasabi",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Square · Firm"
+    },
+    "crosses": {
+      "string": "Caviar",
+      "gauge": "1.24",
+      "shapeFeelLabel": "Hexagonal · Med-Firm"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 75
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 35
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 90
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Controlled",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Square bite, hex control",
+    "feelExpand": "Wasabi's square edges grip the ball; Caviar crosses hold tension and keep the response tight and flat.",
+    "id": "toroline-k-pop",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23/24",
+        "note": "The flagship Toroline hybrid — Karue Sell's setup. Wasabi square mains bite the ball; Caviar hex crosses hold tension and keep launch low. In the open 16×19: high spin from edge bite plus snapback, low power, tight directional response. Med-firm bed in the 64 RA frame, feedback clear."
+      },
+      "percept": {
+        "tension": "22/23",
+        "note": "Square mains supply the edge bite the 18×19 depends on, and Caviar crosses add tension hold in a pattern that shows loss early. Low launch on a low-launch frame; the med-firm bed keeps the low-powered Percept from feeling loose. Firm feedback through the 66 RA. 22/23 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "Square mains give the 18×20 maximum edge bite and Caviar crosses add controlled snapback and tension hold. The PT630's flex absorbs the harshness square mains can produce in stiffer hoops. High spin, low launch, low power — the most control-oriented Toroline hybrid on this frame. 20/19 kg."
+      }
+    }
+  },
+  {
+    "name": "K-Pop Spin",
+    "shapeAttr": "hexagonal,pentagonal",
+    "feelAttr": "soft,plush,lively",
+    "mains": {
+      "string": "O-Toro Spin",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Pentagonal · Med"
+    },
+    "crosses": {
+      "string": "O-Toro",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Hexagonal · Med-Soft"
+    },
+    "stiffness": {
+      "label": "Medium",
+      "width": 58
+    },
+    "power": {
+      "label": "Medium",
+      "width": 52
+    },
+    "spin": {
+      "label": "Elite",
+      "width": 97
+    },
+    "feelTags": [
+      {
+        "label": "Pocketing",
+        "variant": "plush"
+      },
+      {
+        "label": "Lively",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Ball dives into court",
+    "feelExpand": "Pentagonal mains with the highest string-to-ball friction over hex crosses with the lowest string-to-string friction.",
+    "id": "toroline-k-pop-spin",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22/23",
+        "note": "Maximum-spin recipe: O-Toro Spin mains carry the highest string-to-ball friction in the lineup; O-Toro crosses the lowest string-to-string friction, for snapback. Both strings sit around 0.95 kg/mm, so the bed is medium, pocketing and high-launch in the open 16×19. Heavy topspin arc with a steep drop."
+      },
+      "percept": {
+        "tension": "21/22",
+        "note": "Pentagonal mains cover spin where the 18×19 restricts snapback; the slick O-Toro crosses recover some cross movement. A medium-soft bed in a low-powered frame: pocketing, higher launch than the Percept usually gives, less directional lockdown than K-Pop. 21/22 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "Pentagonal mains are the spin source in the 18×20, where friction is all that's available; slick crosses help the mains move. Two ~0.95 strings in the 58 RA frame make a medium-soft, high-dwell bed with more launch than the dense pattern usually allows. The PT630's mass keeps it stable. 20/19 kg."
+      }
+    }
+  },
+  {
+    "name": "Dreddy",
+    "shapeAttr": "hexagonal,round",
+    "feelAttr": "crisp,firm,lively",
+    "mains": {
+      "string": "O-Toro Tour",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Hexagonal · Firm"
+    },
+    "crosses": {
+      "string": "O-Toro Snap",
+      "gauge": "1.25",
+      "shapeFeelLabel": "Round · Soft"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 70
+    },
+    "power": {
+      "label": "Medium",
+      "width": 52
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Explosive",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Bite + snapback",
+    "feelExpand": "Sharp string-to-ball grip on contact with fast string return for spin.",
+    "id": "toroline-dreddy",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23/24",
+        "note": "Dustin Brown's setup. Firm O-Toro Tour hex mains (1.10) bite the ball; slick, medium-stiffness O-Toro Snap crosses (~0.95) give snapback and add feel. In the 64 RA frame: firm-launching mains, softer contact than a full Tour bed, high spin from edge bite plus snapback in the open 16×19. 23/24 kg."
+      },
+      "percept": {
+        "tension": "22/23",
+        "note": "Firm hex mains define launch and spin in the 18×19; slick Snap crosses restore cross movement the dense pattern takes away and soften contact through the 66 RA. A firm-launching, medium-contact bed — more feel than K-Pop, less lockdown. 22/23 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "O-Toro Tour mains supply edge bite in the 18×20 and hold launch low; Snap's slick round crosses help the mains move in a pattern that pins snapback. The 58 RA flex softens the firm mains. Firm-launching bed with softer contact than a full Tour bed. (Earlier notes here described a Caviar/O-Toro pairing — that is the Cole recipe.) 20/19 kg."
+      }
+    }
+  },
+  {
+    "name": "Stevie",
+    "shapeAttr": "hexagonal,round",
+    "feelAttr": "firm,plush",
+    "mains": {
+      "string": "O-Toro Tour",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Hexagonal · Firm"
+    },
+    "crosses": {
+      "string": "Truffle X",
+      "gauge": "1.30",
+      "shapeFeelLabel": "Round · Very Soft"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 68
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 62
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Plush",
+        "variant": "plush"
+      },
+      {
+        "label": "Precise",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Tour control + comfort",
+    "feelExpand": "Firm hex mains over non-polyester PEEK crosses — control from the mains, dwell and comfort from the crosses.",
+    "id": "toroline-stevie",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23/25",
+        "note": "Steve Johnson's blend: O-Toro Tour control mains over Truffle X (PEEK, non-polyester) crosses. The mains set launch and spin; the very soft crosses add power and pocketing the Regna doesn't supply on its own. The softest-contact Toroline hybrid with a firm-launching main. Truffle X crosses at 16 kg or below. 23/25 kg listed — cross tension is capped at the knot ceiling."
+      },
+      "percept": {
+        "tension": "22/24",
+        "note": "Truffle X crosses add power and dwell to a low-powered frame; the 18×19 contains the crosses' softness so the firm hex mains keep directional control. Softer contact than any full-poly Percept bed. The cross-tension ceiling of 16 kg applies regardless of the listed 24. 22/24 kg listed."
+      },
+      "headpt630": {
+        "tension": "20/16",
+        "note": "Firm hex mains for spin and launch in the 18×20, ultra-soft PEEK crosses for power in a low-powered frame. The 58 RA flex plus soft crosses stacks compliance — high dwell, quiet contact, mains still defining trajectory. Keep Truffle X at or below 16 kg. 20/16 kg."
+      }
+    }
+  },
+  {
+    "name": "101",
+    "shapeAttr": "hexagonal,round",
+    "feelAttr": "soft,plush,lively",
+    "mains": {
+      "string": "O-Toro",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Hexagonal · Med-Soft"
+    },
+    "crosses": {
+      "string": "O-Toro Snap",
+      "gauge": "1.25",
+      "shapeFeelLabel": "Round · Soft"
+    },
+    "stiffness": {
+      "label": "Med-Soft",
+      "width": 48
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 60
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 90
+    },
+    "feelTags": [
+      {
+        "label": "Comfortable",
+        "variant": "plush"
+      },
+      {
+        "label": "Lively",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Spin + comfort",
+    "feelExpand": "Good spin generation with a softer, more forgiving response.",
+    "id": "toroline-101",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22/23",
+        "note": "Ben Johnson (TheTennis101) blend: medium-soft O-Toro hex mains for bite-plus-snapback spin, slick Snap round crosses for cross movement. Two ~0.95 strings — a medium-soft, pocketing bed in the 64 RA frame, higher launch and softer contact than K-Pop or Dreddy. 22/23 kg."
+      },
+      "percept": {
+        "tension": "21/22",
+        "note": "Two medium-soft strings in a firm, low-powered frame: the 18×19 firms the bed and pulls launch down, hex mains supply spin where snapback is limited, and the slick crosses recover some cross movement. Contact is soft through the 66 RA; directional control is looser than the firmer hybrids. 21/22 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "Medium-soft on medium-soft in the 58 RA frame: compliance stacks into a plush, high-dwell bed. Hex mains still supply edge bite in the 18×20, and slick crosses help them move. The softest-contact Toroline poly hybrid on this frame. (Earlier notes here described Toro Toro mains — 101 uses O-Toro.) 20/19 kg."
+      }
+    }
+  },
+  {
+    "name": "O-Snap",
+    "shapeAttr": "hexagonal,round",
+    "feelAttr": "crisp,soft,lively",
+    "mains": {
+      "string": "O-Toro",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Hexagonal · Med-Soft"
+    },
+    "crosses": {
+      "string": "O-Toro Snap TF",
+      "gauge": "1.25",
+      "shapeFeelLabel": "Round · Med-Firm"
+    },
+    "stiffness": {
+      "label": "Medium",
+      "width": 55
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Responsive",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Faster snapback",
+    "feelExpand": "O-Toro hex mains over the firmer Snap TF cross — a soft/firm contrast that speeds snapback and adds definition.",
+    "id": "toroline-o-snap",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22/23",
+        "note": "Tuned by TennCom. Medium-soft O-Toro hex mains over the firmer Snap Tour Flex crosses: the stiffness contrast speeds snapback and gives the bed more definition than the 101. In the 64 RA frame: medium bed, high spin from bite plus snapback, lower launch and firmer contact than the 101. 22/23 kg."
+      },
+      "percept": {
+        "tension": "21/22",
+        "note": "The firmer Snap TF cross gives a soft-main hybrid definition the low-powered Percept can use — launch stays low and the bed stays firm through the 18×19. Hex mains supply the spin; the slick cross recovers some movement. Medium bed, clearer feedback than the 101 through the 66 RA. 21/22 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "Hex mains give the 18×20 its edge bite; firm slick crosses keep the bed defined in a frame that softens everything and help the mains move in a dense pattern. Medium bed in the 58 RA frame — more control than the 101, less bite than K-Pop. 20/19 kg."
+      }
+    }
+  },
+  {
+    "name": "Wasabi Pro",
+    "shapeAttr": "round,square",
+    "feelAttr": "firm",
+    "mains": {
+      "string": "Wasabi",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Square · Firm"
+    },
+    "crosses": {
+      "string": "Wasabi X",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Round · Med-Soft"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 65
+    },
+    "power": {
+      "label": "Medium",
+      "width": 48
+    },
+    "spin": {
+      "label": "Elite",
+      "width": 95
+    },
+    "feelTags": [
+      {
+        "label": "Aggressive",
+        "variant": "firm"
+      },
+      {
+        "label": "Bite",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Pure spin machine",
+    "feelExpand": "Square Wasabi mains for maximum edge bite over slick round Wasabi X crosses for maximum snapback.",
+    "id": "toroline-wasabi-pro",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22/23",
+        "note": "Square Wasabi mains grip aggressively; slick round Wasabi X crosses let them snap back freely. More raw spin than K-Pop, less directional predictability. In the open 16×19 both mechanisms are fully available — the highest-spin Toroline hybrid here, with a medium-firm bed and a lively, less refined contact. 22/23 kg."
+      },
+      "percept": {
+        "tension": "21/22",
+        "note": "Square edges are the spin source in the 18×19, and the slick Wasabi X crosses recover some of the cross movement the dense pattern takes away. Med-firm bed, low launch through a low-launch frame, lively contact. Spin stays high; control is looser than K-Pop. 21/22 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "Square mains give the 18×20 maximum edge bite; slick crosses help them move in a pattern that pins snapback. The 58 RA flex absorbs the square edges' harshness. (Earlier notes here described Wasabi/Caviar — that is K-Pop.) Med-firm, lively, high-spin bed. 20/19 kg."
+      }
+    }
+  },
+  {
+    "name": "What The Hybrid",
+    "shapeAttr": "hexagonal,square",
+    "feelAttr": "soft,plush",
+    "mains": {
+      "string": "Wasabi",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Square · Firm"
+    },
+    "crosses": {
+      "string": "Toro Toro",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Hexagonal · Med-Soft"
+    },
+    "stiffness": {
+      "label": "Medium",
+      "width": 60
+    },
+    "power": {
+      "label": "Medium",
+      "width": 52
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "feelTags": [
+      {
+        "label": "Pocketing",
+        "variant": "plush"
+      },
+      {
+        "label": "Bite",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Wasabi bite + Toro feel",
+    "feelExpand": "Square Wasabi mains for bite with Toro Toro's softer hex crosses for pocketing and feel.",
+    "id": "toroline-what-the-hybrid",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22/23",
+        "note": "Wasabi square mains for edge bite; Toro Toro's softer hex crosses (0.95) for pocketing and feel. Hex-on-square crosses don't slide as freely as Wasabi X, so snapback is lower than Wasabi Pro and the contact is softer and more damped. A medium bed in the 64 RA frame between K-Pop's control and Wasabi Pro's aggression. 22/23 kg."
+      },
+      "percept": {
+        "tension": "21/22",
+        "note": "Square mains supply the friction the 18×19 needs; the softer Toro Toro crosses add pocketing to a low-powered frame. Cross movement is limited by both the hex-on-square contact and the dense pattern, so spin is edge-driven. Medium, damped bed through the 66 RA. 21/22 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "Square mains for edge bite in the 18×20; softer hex crosses for dwell in a frame that already supplies compliance — a damped, medium-soft bed. Snapback is doubly limited (hex-on-square, dense pattern), so spin is what the edges give. (Earlier notes here described Snapper/O-Toro — that is not this recipe.) 20/19 kg."
+      }
+    }
+  },
+  {
+    "name": "Snapaholic",
+    "shapeAttr": "octagonal,round",
+    "feelAttr": "crisp,firm",
+    "mains": {
+      "string": "Snapper",
+      "gauge": "1.23",
+      "shapeFeelLabel": "Octagonal · Firm"
+    },
+    "crosses": {
+      "string": "O-Toro Snap TF",
+      "gauge": "1.25",
+      "shapeFeelLabel": "Round · Med-Firm"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 68
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 40
+    },
+    "spin": {
+      "label": "Elite",
+      "width": 95
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Bite",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Shaped mains + slick crosses",
+    "feelExpand": "Textured mains bite the ball; smooth crosses snap back quickly.",
+    "id": "toroline-snapaholic",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22/23",
+        "note": "Chef's Choice series debut: soft octagonal Snapper mains (0.85) over the firm, ultra-slick Snap Tour Flex cross. The stiffness contrast maximises snapback; the octagonal edges add bite. In the open 16×19: very high spin, med-firm bed, lively, elastic contact, launch held down by the firm cross. 22/23 kg."
+      },
+      "percept": {
+        "tension": "21/22",
+        "note": "Octagonal mains supply the friction the 18×19 relies on; the slick, firm Snap TF cross recovers cross movement and keeps the bed defined in a low-powered frame. Med-firm, low-launch, high-spin bed with clearer feedback than a soft-cross hybrid. 21/22 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "Octagonal mains give the 18×20 aggressive edge bite; the firm slick cross keeps a soft main defined in the 58 RA frame and helps it move in a dense pattern. Med-firm, elastic bed with high spin. (Earlier notes here described O-Toro Tour/Snap — that is Dreddy.) 20/19 kg."
+      }
+    }
+  },
+  {
+    "name": "Cole",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "crisp,firm",
+    "mains": {
+      "string": "O-Toro Tour 1.23 Mint",
+      "gauge": "",
+      "shapeFeelLabel": "Hexagonal · Firm"
+    },
+    "crosses": {
+      "string": "O-Toro 1.23 Green",
+      "gauge": "",
+      "shapeFeelLabel": "Hexagonal · Medium"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 70
+    },
+    "power": {
+      "label": "Medium",
+      "width": 50
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "feelTags": [
+      {
+        "label": "Precise",
+        "variant": "firm"
+      },
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Control mains + spin crosses",
+    "feelExpand": "Two hex profiles: O-Toro Tour mains for control and tension hold, O-Toro crosses for spin and softer contact.",
+    "id": "toroline-cole",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22/23",
+        "note": "Two flagship hex shapes: O-Toro Tour mains (1.10) for durability, control and tension hold; O-Toro crosses (0.95) for spin and a softer contact. Hex-on-hex crosses slide less freely than round crosses, so spin is edge-led. In the 64 RA frame: clean, low launch, penetrating flight, firmer than the 101, more spin than a full Tour bed. 22/23 kg."
+      },
+      "percept": {
+        "tension": "21/22",
+        "note": "Firm hex mains keep the low-powered Percept's bed defined; O-Toro crosses add spin and take the edge off the contact through the 66 RA. Edge bite from both strings covers the 18×19's spin tax; snapback is limited by hex-on-hex crossings. Firm-launching, medium-firm bed. 21/22 kg."
+      },
+      "headpt630": {
+        "tension": "20/19",
+        "note": "Hex mains and hex crosses both contribute edge bite in the 18×20 — the shape-on-shape recipe for a pattern with no snapback to speak of. O-Toro Tour mains hold launch low and tension steady; O-Toro crosses soften contact in a frame the 58 RA already softens. Clean, precise, medium-firm bed. 20/19 kg."
+      }
+    }
+  }
+]

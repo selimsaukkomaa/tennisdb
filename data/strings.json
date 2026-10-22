@@ -1,0 +1,4723 @@
+[
+  {
+    "name": "O-Toro Tour",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.23 / 17",
+      "1.20 / 17+"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#3ee68a",
+          "name": "Mint"
+        },
+        {
+          "hex": "#39ff14",
+          "name": "Neon Green"
+        }
+      ],
+      "label": "Mint, Neon Green"
+    },
+    "stiffness": {
+      "label": "Firm · 1.10",
+      "width": 88
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 38
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 92
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 95
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Firm, high-feedback",
+    "feelExpand": "Firm hexagonal co-poly with high feedback transmission and a low, flat launch.",
+    "id": "toroline-o-toro-tour",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Firmest in the O-Toro family — Racketpedia 1.10 kg/mm, roughly 15% above standard O-Toro. In the 64 RA frame the bed stays firm at 23 kg: low launch, short dwell, high-frequency feedback passing through the handle largely unfiltered. Hex edges give bite-driven spin that fades as the edges wear rather than as tension drops. 1.20 adds liveliness, 1.23 control. Arm load at 23 kg here is at the higher end of this database."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Same 1.10 kg/mm string in a denser (18×19), stiffer (66 RA) frame. Extra crosses raise effective bed stiffness — hence 1 kg below the Regna. Launch drops in a frame that already flies low, and hex bite does more of the spin work because the pattern restricts snapback. Feedback stays firm and clear; the 66 RA doesn't filter much."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Firm string in the most flexible frame here. The 58 RA layup spreads the impact impulse and the Twaron damps post-impact vibration, so the same 1.10 kg/mm string plays softer and quieter than in either Yonex while keeping short dwell and low launch. Hex bite is the main spin source in the 18×20. Run 2–3 kg below the Regna — dense pattern and smaller hoop both raise effective bed stiffness."
+      }
+    }
+  },
+  {
+    "name": "Caviar",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.16 / 18",
+      "1.20 / 17",
+      "1.24 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ffe033",
+          "name": "Neon Yellow"
+        }
+      ],
+      "label": "Neon Yellow"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 1.00",
+      "width": 72
+    },
+    "power": {
+      "label": "Low",
+      "width": 30
+    },
+    "spin": {
+      "label": "High",
+      "width": 80
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 92
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Direct, precise",
+    "feelExpand": "Tight, low-powered response with a narrow launch window and predictable placement.",
+    "id": "toroline-caviar",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Racketpedia 1.00 kg/mm — firm, a step below O-Toro Tour. In the 64 RA frame: low launch, short dwell, clear feedback, low power. Hex edges supply bite-driven spin that the open 16×19 lets breathe. Tension maintenance is the standout — stays playable 10+ hours. Three gauges give a fine control/liveliness lever."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "The 18×19 adds crosses, raising effective bed stiffness — hence 1 kg below the Regna. Launch drops further in a frame that already flies low, and the hex bite works harder because the dense pattern restricts snapback. Tension hold matters more here: a denser bed shows tension loss sooner and is more work to restring."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "1.00 kg/mm in the 58 RA frame lands mid-range: the flex and Twaron layup soften the impact, while the string keeps the bed from going loose. Hex bite is the main spin source in the 18×20. Tension hold matters in a pattern that's tedious to restring. Run 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Vamos",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "crisp,soft",
+    "gauges": [
+      "1.23 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c8a97e",
+          "name": "Latte"
+        }
+      ],
+      "label": "Latte"
+    },
+    "stiffness": {
+      "label": "Med",
+      "width": 62
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "control": {
+      "label": "Very High",
+      "width": 85
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 62
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Shaped A5, higher launch",
+    "feelExpand": "Hexagonal profile over the A5 polymer — added edge bite and a higher launch angle than the round base string.",
+    "id": "toroline-vamos",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "NEW (Jun 2026) — Toroline × Tennisnerd collaboration; Jonas Eriksson's stated brief was a firmer, shaped option in Toroline's range. No Racketpedia data yet: the A5 base measures 0.90 kg/mm, but Toroline's own ranking puts A5 near the stiff end, so the sources conflict. Higher launch is a design goal, which the Regna's flat trajectory will show. Hex bite in the open 16×19. Single gauge (1.23), single colour — no gauge lever."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "The 18×19 flattens launch and taxes spin; Vamos's hex profile and higher launch angle both push the other way, so the string's two defining traits are more visible here than in the Regna. Stiffness unverified — see the Regna note for the source conflict. Single gauge means tension is the only dial. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "The 58 RA frame softens Vamos further, and the hex shape gives the 18×20 its spin. The extra launch is partly cancelled by the dense pattern's flattening. The open question is stiffness: if Vamos really sits near 0.90 kg/mm, the frame's own compliance plus the string's makes a soft, high-dwell bed. No lab data yet. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Cash",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#22c55e",
+          "name": "Green"
+        }
+      ],
+      "label": "Green"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 74
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 35
+    },
+    "spin": {
+      "label": "Medium",
+      "width": 55
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 92
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 50
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Solid, direct, round",
+    "feelExpand": "Firm round co-poly with clear feedback; spin from snapback rather than edge bite.",
+    "id": "toroline-cash",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Developed with ATP doubles specialist Julien Cash. The July 2026 Tennisnerd review describes a firm, control-oriented response with strong tension maintenance, firmer than both A5 and O-Toro. Round profile: spin is snapback-driven — decent for a round poly, well short of O-Toro Tour or Caviar; the open 16×19 helps. No lab stiffness — the Med-Firm placement is inferred from review comparisons."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Round in the 18×19 restricts snapback, the only spin mechanism Cash has, so spin is on the low side here. What the pattern rewards is the firmness and tension hold: a low-launch, flat-hitting, stable bed. As crosses under a shaped main it holds tension and lets the mains slide. Stiffness still inferred, not measured. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Round plus 18×20 is the least spin-friendly combination in this database: no edge bite, snapback pinned. Firm and control-oriented suits the frame's low power — a flat, penetrating ball with good directional stability — and the 58 RA flex takes the edge off the firmness. Slice and net play are where a firm round string in this frame shows best. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "A5",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,soft",
+    "gauges": [
+      "1.25 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#6b7280",
+          "name": "Carbon Gray"
+        }
+      ],
+      "label": "Carbon Gray"
+    },
+    "stiffness": {
+      "label": "Med · 0.90",
+      "width": 60
+    },
+    "power": {
+      "label": "Medium",
+      "width": 52
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "control": {
+      "label": "Very High",
+      "width": 82
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 65
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Round, snapback-driven",
+    "feelExpand": "Round profile relying on snapback rather than edge bite; clear feedback with a predictable launch angle.",
+    "id": "toroline-a5",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–24",
+        "note": "The base polymer Vamos was built on. Racketpedia has the 1.25 Carbon Gray at 0.90 kg/mm — below Caviar and O-Toro Tour — but Toroline's own ranking places A5 near the stiff end of its line; treat the number as provisional. Round, so spin is entirely snapback-driven (Toroline cites a 100/100 Racketpedia spin score), which the open 16×19 supports, and it persists as the string ages."
+      },
+      "percept": {
+        "tension": "22–23",
+        "note": "Round profile in the 18×19: snapback is constrained by the extra crosses, so A5's only spin mechanism is throttled. Launch stays low and controlled. As crosses under a shaped main, the slick surface gives the main something to snap against. Vamos — the shaped version of the same polymer — takes a different route to spin in this pattern. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–22",
+        "note": "If the 0.90 figure holds, A5 sits on the soft side for a frame already supplying compliance through 58 RA and Twaron: higher dwell, quieter feedback, more launch than the firm options. Round plus 18×20 is the low end for spin here — snapback and edge bite are both limited. The top of the band firms the bed. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "A5 Infrared",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.20 / 17+"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ff2d20",
+          "name": "Infrared"
+        }
+      ],
+      "label": "Infrared"
+    },
+    "stiffness": {
+      "label": "Med-Soft",
+      "width": 45
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 65
+    },
+    "spin": {
+      "label": "High",
+      "width": 75
+    },
+    "control": {
+      "label": "Good",
+      "width": 68
+    },
+    "comfort": {
+      "label": "Very Good",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Plusher A5, more pop",
+    "feelExpand": "Softened 1.20 version of the A5 polymer — deeper pocketing and more launch, less of A5's firmness.",
+    "id": "toroline-a5-infrared",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–24",
+        "note": "The soft 1.20 variant of A5. Toroline's own stiffness ranking places it well below Caviar and O-Toro Tour — one of the softer strings they make. Full bed in the 64 RA frame: deep pocketing, higher launch, more power, softened feedback. Player reports pair it as crosses under O-Toro Tour mains for added pocketing without killing the mains' snapback."
+      },
+      "percept": {
+        "tension": "22–23",
+        "note": "Soft, lively string in a low-powered, low-launch frame — the two traits it adds are the two the 18×19 takes away, so the combination is more balanced than the Regna pairing. As crosses under O-Toro Tour or Caviar it adds pocketing the dense pattern doesn't naturally provide, and the crosses stay contained. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–22",
+        "note": "Toroline's soft, high-launch A5 variant in the lowest-RA frame here. The frame already supplies compliance through 58 RA and Twaron, so this stacks compliance on compliance: deep pocketing, high launch, reduced high-frequency feedback. Whether that's useful depends on wanting the PT630 to play softer than stock. As crosses under a firm shaped main, the 18×20 limits how much comes through."
+      }
+    }
+  },
+  {
+    "name": "O-Toro",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "soft,lively",
+    "gauges": [
+      "1.23 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#39ff14",
+          "name": "Neon Green"
+        },
+        {
+          "hex": "#fff",
+          "name": "White"
+        },
+        {
+          "hex": "#ff69b4",
+          "name": "Neon Pink"
+        },
+        {
+          "hex": "#222",
+          "name": "Black"
+        },
+        {
+          "hex": "#ff8c00",
+          "name": "Orange"
+        }
+      ],
+      "label": "Green, White, Pink, Black, Orange"
+    },
+    "stiffness": {
+      "label": "Med-Soft · 0.95",
+      "width": 58
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 95
+    },
+    "control": {
+      "label": "Good",
+      "width": 72
+    },
+    "comfort": {
+      "label": "High",
+      "width": 82
+    },
+    "feelTags": [
+      {
+        "label": "Elastic",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "More muted than Tour",
+    "feelExpand": "Dampened response compared to the Tour variant, with less vibration at contact.",
+    "id": "toroline-o-toro",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "The flagship. Top spin numbers in lab tests; softer and more elastic than Tour (0.95 vs 1.10 kg/mm). Full bed in the 64 RA frame: more pocketing and launch than Tour, more damped feedback, spin from both hex bite and snapback in the open 16×19. Common hybrid role is mains over a slick round cross (the 101 and O-Snap recipes)."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Softer hex in the 18×19: the pattern's extra crosses firm the bed up and hold launch down, which offsets some of O-Toro's elasticity. Spin leans on the hex edges here since snapback is constrained. Feel is more damped than Tour and softer than the Percept's 66 RA suggests. Hybrid mains over a firm cross is the common deployment. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "More pocketing than O-Toro Tour in a frame that supplies little energy of its own — the string, not the frame, provides the elasticity. 0.95 kg/mm in the 58 RA frame: medium dwell, damped feedback, hex bite doing the spin work in the 18×20. Sits between Tour and the soft Toroline options on this frame. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "O-Toro Octa",
+    "shape": "Octagonal",
+    "shapeAttr": "octagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#222",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Firm · ~1.10",
+      "width": 88
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 42
+    },
+    "spin": {
+      "label": "High",
+      "width": 82
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 90
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 52
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Octagonal, lower launch",
+    "feelExpand": "Sharper ball response than the standard version, with less energy absorption on contact.",
+    "id": "toroline-o-toro-octa",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Tour formula in an octagonal profile. Lower launch and a more penetrating flight than the hex Tour; eight shallower edges bite a little less per edge but hold up longer. Firm (~1.10) in the 64 RA frame: short dwell, clear feedback, low launch. Single gauge 1.25. The flattest-trajectory shaped Toroline in the open 16×19."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Lower launch on a frame that already flies low — the flattest-trajectory Toroline setup in this database. Octagonal edges supply spin in the 18×19 where snapback is limited. Firm bed at 21–23 kg with feedback the 66 RA passes through clearly. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Octagonal profile maximises edge contact — useful in the 18×20 where edge bite is the only spin mechanism available. The PT630's flex softens the ~1.10 stiffness and damps the harshness sharp-edged polys can produce in stiffer hoops. Low launch on top of a dense pattern gives a very flat ball. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "O-Toro Spin",
+    "shape": "Pentagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.23 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ff69b4",
+          "name": "Neon Pink"
+        },
+        {
+          "hex": "#fff",
+          "name": "White"
+        },
+        {
+          "hex": "#c4b5fd",
+          "name": "Lavender"
+        }
+      ],
+      "label": "Pink, White, Lavender"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.95",
+      "width": 58
+    },
+    "power": {
+      "label": "Medium",
+      "width": 52
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 93
+    },
+    "control": {
+      "label": "Good",
+      "width": 75
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 68
+    },
+    "feelTags": [
+      {
+        "label": "Moderate",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "More ball grip",
+    "feelExpand": "Increased string-to-ball friction for higher spin rates and better bite on the ball.",
+    "id": "toroline-o-toro-spin",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Pentagonal profile with the highest string-to-ball friction in the Toroline lineup. Higher launch than Tour or Caviar, and a more elastic, damped feel at ~0.95 kg/mm. In the open 16×19, spin comes from both bite and snapback — the heavy-topspin configuration in this brand. Directional precision is lower than the firm hex options."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Pentagonal bite compensates for the 18×19's reduced snapback; the higher launch offsets the frame's low trajectory. Medium stiffness in a firm frame: some pocketing, damped feedback. A full bed plays softer than the hex Tour; as hybrid mains over a firm cross, launch stays higher and the bed firmer. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Highest string-to-ball friction in the lineup, in a pattern where friction is the only spin mechanism. The 58 RA frame keeps the pentagonal edges from feeling harsh. More spin access than O-Toro Tour, a higher launch than the dense pattern usually gives, less directional precision. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "O-Toro Snap",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#222",
+          "name": "Black"
+        },
+        {
+          "hex": "#3ee68a",
+          "name": "Mint"
+        }
+      ],
+      "label": "Black, Mint"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.95",
+      "width": 60
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 62
+    },
+    "spin": {
+      "label": "Mod-High",
+      "width": 68
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 82
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 65
+    },
+    "feelTags": [
+      {
+        "label": "Smooth",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Round, slick, medium",
+    "feelExpand": "Ultra-slick round co-poly built for snapback; medium stiffness, flat trajectory.",
+    "id": "toroline-o-toro-snap",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Round, ultra-slick surface — the lowest string-to-string friction in the Toroline lineup. Lower launch and less bite than the shaped O-Toros; spin is snapback-driven, which the open 16×19 supports. Medium stiffness (~0.95) gives a smooth, moderately damped bed. Its main role is hybrid crosses under a shaped main (Dreddy, 101)."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Round in the 18×19 limits the snapback Snap depends on, so full-bed spin is modest and launch is very low in a frame that already flies flat. As crosses, the slick surface restores cross movement the dense pattern takes away — the more common use here. Snap TF is the firmer version of the same string. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "No edge geometry, and the 18×20 pins the snapback its slick surface is built for — a low-spin combination as a full bed. The frame's flex softens it further; the ball comes out flat and controlled. As crosses under shaped mains the slickness helps the mains move in the dense pattern. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Wasabi",
+    "shape": "Square",
+    "shapeAttr": "square",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.23 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ff69b4",
+          "name": "Neon Pink"
+        },
+        {
+          "hex": "#39ff14",
+          "name": "Neon Green"
+        },
+        {
+          "hex": "#9333ea",
+          "name": "Grape Purple"
+        }
+      ],
+      "label": "Pink, Green, Purple"
+    },
+    "stiffness": {
+      "label": "Medium · 0.95–1.00",
+      "width": 65
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 35
+    },
+    "spin": {
+      "label": "High",
+      "width": 85
+    },
+    "control": {
+      "label": "Good",
+      "width": 78
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 72
+    },
+    "feelTags": [
+      {
+        "label": "Moderate",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Soft for a shaped string",
+    "feelExpand": "Unusually comfortable for a string with angular cross-section.",
+    "id": "toroline-wasabi",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Square profile — the sharpest edges in the Toroline lineup — at medium stiffness (0.95–1.00). Strong bite-driven spin in the open 16×19 with a moderately damped feel. Reviewers describe a \"plasticky\" contact in stiffer frames, and the 64 RA Regna is firm enough to show it. Mains in K-Pop, Wasabi Pro and What The Hybrid."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Square edges do their best work in dense patterns, and the 18×19 is where Wasabi's bite matters most since snapback is constrained. The Percept's shaft flex softens the plasticky contact reported in stiff frames, so the feel is smoother here than in the Regna. Launch stays low. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Square edges deliver maximum bite, which the 18×20 needs — spin here is edge-driven or nothing. The PT630's deep flex absorbs the harshness square polys can produce, and the string's medium stiffness adds some power to a low-powered frame. Expect faster notching at the crossings than with a round string. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Toro Toro",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.23 / 17",
+      "1.27 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ff69b4",
+          "name": "Neon Pink"
+        },
+        {
+          "hex": "#ff8c00",
+          "name": "Neon Orange"
+        },
+        {
+          "hex": "#8bc34a",
+          "name": "Matcha Green"
+        }
+      ],
+      "label": "Pink, Orange, Matcha"
+    },
+    "stiffness": {
+      "label": "Medium · 0.95",
+      "width": 58
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "High",
+      "width": 84
+    },
+    "control": {
+      "label": "Good",
+      "width": 76
+    },
+    "comfort": {
+      "label": "High",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Softer",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "More pocketing",
+    "feelExpand": "Deeper ball dwell time than the standard version in this lineup.",
+    "id": "toroline-toro-toro",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Hex profile at 0.95 kg/mm with more pocketing and a more damped feel than the O-Toro family. In the 64 RA frame it produces a medium-dwell, moderately muted bed with hex-driven spin the open pattern supports. Two gauges (1.23, 1.27). Used as mains in the Toro Pro hybrid and as crosses in What The Hybrid."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Softer hex in a frame with a dense pattern: the extra crosses firm the bed up, but a 0.95 string in the Percept still plays softer than the frame's 66 RA suggests — the shaft's flex adds to the string's. Hex bite handles spin in the 18×19. 1.27 gauge firms the bed without raising tension. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–22",
+        "note": "Medium-soft hex in the lowest-RA frame here: frame flex and string compliance add up to a high-dwell, damped bed. Hex edges provide the spin the 18×20 can't get from snapback. Softer feel than O-Toro; Toro Toro's pocketing shows most clearly in this frame. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Enso Pro (Carbon)",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.24 / 16L",
+      "1.25 / 16L",
+      "1.27 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#555",
+          "name": "Carbon Grey"
+        },
+        {
+          "hex": "#ff69b4",
+          "name": "Neon Pink"
+        },
+        {
+          "hex": "#8bc34a",
+          "name": "Matcha Green"
+        }
+      ],
+      "label": "Carbon, Pink, Matcha"
+    },
+    "stiffness": {
+      "label": "Med-Soft · 0.90",
+      "width": 50
+    },
+    "power": {
+      "label": "Medium",
+      "width": 50
+    },
+    "spin": {
+      "label": "Moderate",
+      "width": 60
+    },
+    "control": {
+      "label": "Good",
+      "width": 70
+    },
+    "comfort": {
+      "label": "High",
+      "width": 82
+    },
+    "feelTags": [
+      {
+        "label": "Smooth",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Carbon firmer than pink",
+    "feelExpand": "The carbon-coloured version plays noticeably firmer and more direct than the pink variant.",
+    "id": "toroline-enso-pro-carbon",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Non-polyester PEEK polymer; the carbon-grey version plays firmer than pink. Low-friction surface built for snapback under a shaped main — its designed role is crosses. Full bed in the Regna: soft, high-dwell, lively, low feedback. Racketpedia 0.90 kg/mm; Toroline's knot-tension ceiling for its PEEK strings is 16 kg. Pairs with O-Toro Tour or Caviar mains."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "As crosses in the 18×19 the low-friction surface restores some cross movement the dense pattern takes away, and the pattern contains the softness. Under O-Toro Tour or Caviar mains the result is a firm-launching bed with softer contact. A full bed is very soft in any frame; the 16 kg knot ceiling applies. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "max 16",
+        "note": "A PEEK polymer in the lowest-RA frame: as a full bed the compliance stacks — very high dwell, high launch, little high-frequency feedback — and the 16 kg knot ceiling means tension can't compensate. As crosses under O-Toro Tour or Caviar mains, the 18×20 contains the softness and the bed stays firm-launching with lower shock. Do not exceed 16 kg when tying knots."
+      }
+    }
+  },
+  {
+    "name": "Snapper",
+    "shape": "Octagonal",
+    "shapeAttr": "octagonal",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.23 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c4b5fd",
+          "name": "Lavender"
+        }
+      ],
+      "label": "Lavender"
+    },
+    "stiffness": {
+      "label": "Soft · 0.85",
+      "width": 42
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 60
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 90
+    },
+    "control": {
+      "label": "Moderate",
+      "width": 62
+    },
+    "comfort": {
+      "label": "High",
+      "width": 85
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Octagonal, soft, high spin",
+    "feelExpand": "Octagonal profile at low stiffness — bite-driven spin with a soft, damped contact.",
+    "id": "toroline-snapper",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–26",
+        "note": "Softest co-poly in the Toroline lineup (0.85 kg/mm) with an octagonal profile. Full bed in the 64 RA frame: soft, high-dwell, damped, launch on the high side; spin from the edges plus generous snapback in the open pattern. Mains in the Snapaholic hybrid, where a firm slick cross tightens the launch. Part of the Chef's Choice series."
+      },
+      "percept": {
+        "tension": "23–25",
+        "note": "Soft octagonal string in a firm frame: the 18×19's extra crosses firm the bed and pull launch down, offsetting some of the string's softness. Octagonal bite covers spin where snapback is limited. Still a soft, damped bed by the Percept's standards. As hybrid mains over a firmer cross the launch tightens. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Octagonal bite gives the 18×20 aggressive edge-driven spin. At 0.85 kg/mm in the 58 RA frame the compliance stacks: soft, high-dwell, damped bed with more launch than the dense pattern usually gives. An alternative to O-Toro Octa with the same edge count and a considerably softer formula. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Super Toro",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.23 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#3b82f6",
+          "name": "Blue"
+        },
+        {
+          "hex": "#39ff14",
+          "name": "Green"
+        }
+      ],
+      "label": "Blue, Green"
+    },
+    "stiffness": {
+      "label": "Med-Soft · 0.90",
+      "width": 50
+    },
+    "power": {
+      "label": "Low",
+      "width": 28
+    },
+    "spin": {
+      "label": "High",
+      "width": 82
+    },
+    "control": {
+      "label": "Good",
+      "width": 68
+    },
+    "comfort": {
+      "label": "High",
+      "width": 80
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Softer hex, entry-level",
+    "feelExpand": "Budget hex co-poly with a softer formula and a simpler construction than the O-Toro family.",
+    "id": "toroline-super-toro",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–26",
+        "note": "Budget-tier hex at 0.90 kg/mm with a simpler construction than the O-Toro family. Full bed in the 64 RA frame: softer, more damped, moderate dwell, hex-driven spin in the open pattern. Tension maintenance sits below the premium Toroline strings, so the playable window is shorter. Toroline's tagline is \"comfortably crisp\"; the stiffness number says medium-soft."
+      },
+      "percept": {
+        "tension": "23–25",
+        "note": "Softer hex in the 18×19: extra crosses firm the bed and hold launch down. Hex bite supplies spin where snapback is constrained. The shorter tension-maintenance window shows sooner in a dense pattern that reveals tension loss early. Plays as a softer, simpler O-Toro in this frame. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Medium-soft hex in the 58 RA frame: damped, moderate-to-high dwell bed with the hex edges doing the spin work in the 18×20. The simpler construction's weaker tension hold is more noticeable in a pattern that's slow to restring. Close to O-Toro in character with a shorter playable life. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Truffle X",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#9333ea",
+          "name": "Purple"
+        }
+      ],
+      "label": "Purple"
+    },
+    "stiffness": {
+      "label": "Very Soft",
+      "width": 15
+    },
+    "power": {
+      "label": "High",
+      "width": 78
+    },
+    "spin": {
+      "label": "Low-Med",
+      "width": 45
+    },
+    "control": {
+      "label": "Low-Med",
+      "width": 40
+    },
+    "comfort": {
+      "label": "Elite",
+      "width": 98
+    },
+    "feelTags": [
+      {
+        "label": "Plush",
+        "variant": "plush"
+      }
+    ],
+    "feelSummary": "Ultra-soft PEEK polymer",
+    "feelExpand": "Advanced polymer material with exceptionally low stiffness.",
+    "id": "toroline-truffle-x",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "25 (5% PS)",
+        "note": "Not polyester — a PEEK polymer. Lowest static stiffness in the Toroline range; Toroline recommends 5% pre-stretch and a 16 kg knot ceiling, which caps how firm a full bed can be made. Full bed in the Regna: very high dwell and launch, high power, low feedback — the string, not the 64 RA frame, sets the character. Designed role is crosses (the Stevie recipe under O-Toro Tour mains)."
+      },
+      "percept": {
+        "tension": "24 (5% PS)",
+        "note": "As crosses in the 18×19 the dense pattern limits cross movement, so Truffle X contributes comfort more than added snapback. The Percept's flexing shaft already lowers impact shock, so the difference versus a poly cross is smaller here than in a stiffer frame. Full bed: the same high-dwell, high-launch character as in the Regna, with the 18×19 pulling launch down a little. 16 kg knot ceiling applies."
+      },
+      "headpt630": {
+        "tension": "max 16",
+        "note": "Lowest-stiffness string in this database in the lowest-RA frame. As a full bed the two compound: maximum dwell, high launch, very little high-frequency feedback, and the knot ceiling means the bed can't be tightened to compensate. As crosses under a firm shaped main, the 18×20's tight spacing contains the softness — a slightly softer, more forgiving bed with the mains still defining launch and spin."
+      }
+    }
+  },
+  {
+    "name": "O-Toro Snap Tour Flex",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#222",
+          "name": "Black"
+        },
+        {
+          "hex": "#3eb489",
+          "name": "Mint"
+        }
+      ],
+      "label": "Black, Mint"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 72
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 38
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "control": {
+      "label": "Very High",
+      "width": 85
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 50
+    },
+    "feelTags": [
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Firm, controlled, slick",
+    "feelExpand": "Stiff, low-friction surface that keeps shots predictable with a muted, efficient response.",
+    "id": "toroline-o-toro-snap-tour-flex",
+    "brand": "toroline",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Stiffer version of O-Toro Snap — more control, stability and tension hold, same ultra-slick round surface. Full bed in the 64 RA frame: firm, low-launch, smooth contact, spin entirely from snapback in the open 16×19. Crosses in the Snapaholic and O-Snap recipes, where the firmness gives a soft shaped main definition."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Firm round string in a control frame: launch stays very low and the bed stays firm through the 18×19's extra crosses. Snapback is restricted by the dense pattern, so full-bed spin is modest; as crosses, the slick surface lets shaped mains move more freely than a textured cross would. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Firmer than standard Snap; the added stiffness keeps the bed firm in a frame that softens everything. Round in the 18×20 means limited spin — no edges, pinned snapback — and a flat, controlled ball. Its natural role here is crosses under a shaped main, where slickness helps the mains slide. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Tour Bite",
+    "shape": "Square",
+    "shapeAttr": "square",
+    "feelAttr": "crisp,firm,lively",
+    "gauges": [
+      "1.05–1.30",
+      "(20 to 16)"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c0c0c0",
+          "name": "Silver/Grey"
+        }
+      ],
+      "label": "Silver"
+    },
+    "stiffness": {
+      "label": "Firm · 1.12",
+      "width": 95
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 38
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 94
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 95
+    },
+    "comfort": {
+      "label": "Low",
+      "width": 38
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Firm, lively",
+    "feelExpand": "Responsive feel with energy return and clear ball feedback.",
+    "id": "solinco-tour-bite",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "The original Solinco poly and the firmest in the lineup (1.12 kg/mm). Full bed in the 64 RA frame: firm, low-launch, lively feedback with short dwell; square edges give strong bite-driven spin in the open 16×19. Seven gauges (1.05–1.30) make it the most tunable string here — thin for bite and liveliness, thick for control and durability. Arm load is at the top of this database."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Firmest Solinco in the firmest frame here: launch is very low and the bed stays firm through the 18×19's extra crosses — hence 1 kg below the Regna. Square edges supply spin where snapback is limited. Feedback is sharp; the 66 RA doesn't filter much. Gauge is the lever — 1.30 pulls bed stiffness down without changing tension."
+      },
+      "headpt630": {
+        "tension": "18–21",
+        "note": "The PT630's 58 RA flex and Twaron layup soften the firmest Solinco considerably — feedback is clear but not sharp. Square edges are the spin source in the 18×20. The 18–21 band sits low to keep the dense bed elastic. Seven gauges (15L–20) give a wide control/liveliness range. The lowest-launch, most control-oriented Solinco setup on this frame."
+      }
+    }
+  },
+  {
+    "name": "Confidential",
+    "shape": "Square",
+    "shapeAttr": "square",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.15–1.30",
+      "(18 to 16)"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#555",
+          "name": "Dark Grey / Gun Metal"
+        }
+      ],
+      "label": "Dark Grey"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 1.00",
+      "width": 78
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 40
+    },
+    "spin": {
+      "label": "High",
+      "width": 85
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 96
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 52
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Controlled, precise",
+    "feelExpand": "Predictable response with excellent directional accuracy.",
+    "id": "solinco-confidential",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Sits between Tour Bite (firmer) and Hyper-G (softer) at 1.00 kg/mm; four-sided profile. Full bed in the 64 RA frame: low launch, penetrating flight, controlled feedback with a touch more dwell than Tour Bite. Tension maintenance is the standout — among the best in this database. Gauges 1.15–1.30 for tuning."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Low launch on top of a low-launch frame — flat, penetrating ball flight in the 18×19. The square profile supplies spin where snapback is constrained. Its tension hold is worth more here: a denser bed shows tension loss early and is slow to restring. Firm but less sharp than Tour Bite. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Four-sided profile for spin in the 18×20, 1.00 kg/mm that the 58 RA frame softens to a mid-firm feel, and tension maintenance that suits a pattern that's tedious to restring. Slightly more forgiving than Tour Bite in this frame with the same low launch. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Confidential Soft",
+    "shape": "Shaped (4-sided)",
+    "shapeAttr": "square",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.15 / 18",
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ec4899",
+          "name": "Pink"
+        }
+      ],
+      "label": "Pink"
+    },
+    "stiffness": {
+      "label": "Medium",
+      "width": 58
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "High",
+      "width": 80
+    },
+    "control": {
+      "label": "Good",
+      "width": 70
+    },
+    "comfort": {
+      "label": "High",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Softer",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "More pocketing, forgiving",
+    "feelExpand": "Deeper ball dwell time than the stiffer version, with a more arm-friendly response.",
+    "id": "solinco-confidential-soft",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Softer evolution of Confidential with the same four-sided profile. Settles quickly and holds tension well. Full bed in the 64 RA frame: more pocketing, more power and softer, more damped feedback than standard Confidential; launch a little higher. Edge bite covers spin in the open pattern. 1.25 gauge firms the bed up if the extra softness is unwanted."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "The Percept's 66 RA and dense 18×19 give the softer formula structure: launch stays controlled, the bed stays firm enough, and the pocketing takes the edge off a frame that can play board-like with firm square polys. Four-sided profile supplies spin. String at 21–22 kg — 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Softer Confidential in a frame that already softens: pocketing and comfort stack, feedback goes quieter, launch rises a little versus standard Confidential. The four-sided profile keeps spin access in the 18×20. Tension hold is good. Standard Confidential is the firmer, lower-launch version of the same shape here. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Hyper-G",
+    "shape": "Square",
+    "shapeAttr": "square",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.05–1.30",
+      "(20 to 16)"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#39ff14",
+          "name": "Neon Green (Hyper-Green)"
+        }
+      ],
+      "label": "Hyper-Green"
+    },
+    "stiffness": {
+      "label": "Firm · 1.10",
+      "width": 88
+    },
+    "power": {
+      "label": "Medium",
+      "width": 50
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 92
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 93
+    },
+    "comfort": {
+      "label": "Low-Mod",
+      "width": 45
+    },
+    "feelTags": [
+      {
+        "label": "Muted",
+        "variant": "soft"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Firm, heavily damped",
+    "feelExpand": "Square co-poly with strong vibration damping; feedback through the handle is quieter than its stiffness suggests.",
+    "id": "solinco-hyper-g",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Solinco's most popular string. Similar static stiffness to Tour Bite, but with markedly more vibration damping — feedback through the handle is quieter than the number suggests. Square profile with strong edge bite; spin is high and holds up well in the open 16×19. In a 64 RA frame the damping is the dominant character: a firm-but-quiet bed, low launch, controlled response. Seven gauges — thinner adds liveliness, thicker adds control."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "The string's damping adds to the frame's own — the long flex shaft already softens the impulse — so the combined feel is quiet and low-feedback with a firm bed underneath. The square profile earns its keep in the 18×19, where edge bite matters more because snapback is constrained. String 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "The 58 RA frame and Twaron layup both damp vibration, and Hyper-G adds a third damping layer. One of the quietest combinations in this database: firm bed, very low high-frequency feedback, short dwell. Square edges supply the spin in the 18×20. At 19–20 kg the bed keeps enough elasticity to stay away from boardy."
+      }
+    }
+  },
+  {
+    "name": "Mach-10",
+    "shape": "Pentagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.15–1.30",
+      "(18 to 16)"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#38bdf8",
+          "name": "Blue (Cyan)"
+        }
+      ],
+      "label": "Blue"
+    },
+    "stiffness": {
+      "label": "Med-Soft · 0.85",
+      "width": 50
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 65
+    },
+    "spin": {
+      "label": "High",
+      "width": 82
+    },
+    "control": {
+      "label": "Good",
+      "width": 72
+    },
+    "comfort": {
+      "label": "High",
+      "width": 80
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Pocketing, slightly muted",
+    "feelExpand": "Ball sits in the stringbed briefly; feedback is softened.",
+    "id": "solinco-mach-10",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Newest Solinco poly with CloudFORM treatment; more power and comfort than Tour Bite, Confidential and Hyper-G. Racketpedia ~0.85 kg/mm with strong tension maintenance. Pentagonal profile: bite plus snapback in the open 16×19. Full bed in the 64 RA frame: more launch and pocketing than the firmer three, feedback reported as clearer than the stiffness suggests. The \"slightly muted\" summary is inferred from stiffness, not from reviews."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "The Percept is a low-powered frame and Mach-10 adds energy — pocketing and launch in a pattern that flattens both. The pentagonal profile supplies spin in the 18×19. Softer feel than the Big Three Solincos; the extra crosses firm the bed up somewhat. 22–23 kg is the reported starting range, 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "0.85 kg/mm pentagonal in the 58 RA frame: flex and string compliance combine into a softer, higher-dwell bed than the firm Solincos give here, with five edges covering spin in the 18×20 where snapback is pinned. Reported tension hold is strong, which matters in a slow-to-restring pattern. 1.30 gauge is the dial for the added power. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Tour Bite Soft",
+    "shape": "Square",
+    "shapeAttr": "square",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#d4d4d4",
+          "name": "Silver"
+        }
+      ],
+      "label": "Silver"
+    },
+    "stiffness": {
+      "label": "Med-Soft · 0.85",
+      "width": 50
+    },
+    "power": {
+      "label": "Medium",
+      "width": 50
+    },
+    "spin": {
+      "label": "High",
+      "width": 82
+    },
+    "control": {
+      "label": "Good",
+      "width": 70
+    },
+    "comfort": {
+      "label": "High",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Softer",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "More pocketing",
+    "feelExpand": "Deeper ball dwell time than the standard version in this lineup.",
+    "id": "solinco-tour-bite-soft",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Tour Bite's formula with comfort additives — 0.85 vs 1.12 kg/mm. Same square profile, so bite-driven spin is intact in the open 16×19. Full bed in the 64 RA frame: markedly more pocketing and launch, softer, more damped feedback. Tension stability is lower than standard Tour Bite, so the playable window is shorter."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "The 18×19's extra crosses firm up a soft square poly and hold its launch down, so the drop from standard Tour Bite feels smaller here than in the Regna. Square edges supply spin where snapback is limited. The faster tension loss shows earlier in a dense pattern. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Soft square in a soft frame: compliance stacks into a high-dwell, damped bed with square edges still providing spin in the 18×20. The lower tension stability costs more in a pattern that's slow to restring. Standard Tour Bite is the same shape with a much firmer bed and longer life on this frame. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Hyper-G Soft",
+    "shape": "Square",
+    "shapeAttr": "square",
+    "feelAttr": "soft,lively",
+    "gauges": [
+      "1.05–1.25",
+      "(20 to 16L)"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#39ff14",
+          "name": "Green"
+        }
+      ],
+      "label": "Green"
+    },
+    "stiffness": {
+      "label": "Medium · 0.95",
+      "width": 62
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 60
+    },
+    "spin": {
+      "label": "High",
+      "width": 84
+    },
+    "control": {
+      "label": "Good",
+      "width": 72
+    },
+    "comfort": {
+      "label": "High",
+      "width": 80
+    },
+    "feelTags": [
+      {
+        "label": "Lively",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Softer, more elastic",
+    "feelExpand": "Lower stiffness than the standard version; more ball pocketing.",
+    "id": "solinco-hyper-g-soft",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Livelier and softer than standard Hyper-G (0.95 vs 1.10 kg/mm), with less of the damping. Full bed in the 64 RA frame: more launch and energy return, square-edge spin the open 16×19 amplifies. In open patterns the liveliness can run to trampolining — a thicker gauge (16L) tames it without raising tension."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "The 18×19's extra crosses contain the liveliness that runs loose in the Regna, and the low-powered frame absorbs the energy return usefully. Square edges supply spin where snapback is limited. Quieter than standard Hyper-G's heavy damping but still muted by Solinco standards. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Added liveliness in a frame that gives little of its own: more energy return and launch than standard Hyper-G, with square edges covering spin in the 18×20. Softer bed than Hyper-G in the 58 RA frame — compliance stacks, feedback quiets. Hyper-G is the firmer, more damped version of the same profile here. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Revolution",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#3b82f6",
+          "name": "Blue"
+        }
+      ],
+      "label": "Blue"
+    },
+    "stiffness": {
+      "label": "Med-Firm · ~1.00",
+      "width": 72
+    },
+    "power": {
+      "label": "Medium",
+      "width": 52
+    },
+    "spin": {
+      "label": "High",
+      "width": 80
+    },
+    "control": {
+      "label": "Good",
+      "width": 78
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 60
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Firmer, plastic-like",
+    "feelExpand": "Hexagonal co-poly with a harder contact than typical polyester; snappy response with minimal pocketing.",
+    "id": "solinco-revolution",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Six-sided profile (Tennis Warehouse: hexagonal — earlier notes here said 5-sided). Medium-firm (~1.00) with easy power for a firm string. Some reviewers describe a \"plastic-like\" contact at lower racquet-head speeds; Tennis Warehouse's lab found high stiffness but unusually low vibration on court. Full bed in the 64 RA frame: firm, low-launch, hex bite in the open 16×19. Less refined contact than Tour Bite or Confidential."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Hex edges supply spin in the 18×19 where snapback is limited, and the string's easy power offsets some of the frame's low output. The Percept's shaft flex softens the plastic-like contact reported in stiff frames. Firm, low-launch bed. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Hex geometry for spin in the 18×20, with more power than the other firm Solincos — useful in a low-powered hoop. The plastic-like contact reported at low swing speeds is worth noting in a heavy frame that rewards a full swing; the 58 RA flex softens it. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "TB Diamond Rough",
+    "shape": "Square + Textured",
+    "shapeAttr": "square",
+    "feelAttr": "crisp,soft",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c0c0c0",
+          "name": "Silver"
+        }
+      ],
+      "label": "Silver"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.95",
+      "width": 65
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 38
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 90
+    },
+    "control": {
+      "label": "Good",
+      "width": 75
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Softer",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Textured grab",
+    "feelExpand": "String surface texture grips the ball for enhanced spin generation.",
+    "id": "solinco-tb-diamond-rough",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Tour Bite base with a diamond-textured coating for extra ball grab. Full bed in the 64 RA frame: firm, low-launch, with the most surface grip in the Solinco line — square edges plus texture. Tension stability is below standard Tour Bite, and the coating wears, so the playable window and durability are both shorter. Spin holds up well in the open 16×19."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Texture plus square edges give the 18×19 the friction-driven spin it can't get from snapback. Low launch in a low-launch frame. The weaker tension stability shows earlier in a dense pattern and restrings are more frequent as a result. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "18–21",
+        "note": "In the 18×20 every bit of friction counts and the rough coating adds it on top of square edges. Same firm base as Tour Bite, softened by the PT630's flex. The coating's durability loss and the faster tension drop cost more in a pattern that's slow to restring. 18–21 kg — 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Hyper-G Round",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,lively",
+    "gauges": [
+      "1.15–1.30",
+      "(18 to 16)"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#39ff14",
+          "name": "Green"
+        }
+      ],
+      "label": "Green"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.95",
+      "width": 62
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 62
+    },
+    "spin": {
+      "label": "Mod-High",
+      "width": 70
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 82
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 65
+    },
+    "feelTags": [
+      {
+        "label": "Smooth",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Elastic, more pocketing",
+    "feelExpand": "Stretchy stringbed that holds the ball longer on contact for added dwell time.",
+    "id": "solinco-hyper-g-round",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Round version of Hyper-G: lower launch, less bite, better penetration, with excellent tension maintenance. Spin is snapback-driven and the open 16×19 supports it. Full bed in the 64 RA frame: firm-medium, damped, controlled. Its usual role is crosses under Tour Bite or Confidential mains, where the slick surface aids snapback."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Round in the 18×19 limits snapback, so full-bed spin is modest and launch is very low in a frame that already flies flat. As crosses under square mains it holds tension and lets the mains slide. Excellent tension maintenance suits a pattern that shows loss early. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "As crosses under Tour Bite or Confidential mains in the 18×20 it softens the bed a touch and adds feel, with the mains doing the spin work. As a full bed the round profile leaves the 18×20 without an edge-bite source, so spin is low. The frame's flex keeps it comfortable. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Barb Wire",
+    "shape": "Twisted",
+    "shapeAttr": "twisted",
+    "feelAttr": "crisp,soft",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#222",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.95",
+      "width": 60
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 35
+    },
+    "spin": {
+      "label": "High (Slice)",
+      "width": 78
+    },
+    "control": {
+      "label": "Good",
+      "width": 75
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 65
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Twisted, high-friction",
+    "feelExpand": "Twisted construction with very high surface friction; medium stiffness.",
+    "id": "solinco-barb-wire",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Twisted profile: the highest string-to-ball friction in the Solinco range, but also high string-to-string friction, which inhibits snapback. Net effect is bite-driven spin that shows most on slice and flatter strikes, less on brushed topspin where snapback does the work. The open 16×19 recovers some of that. Plays moderately firm in the 64 RA frame."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Snapback is already limited by the 18×19, so Barb Wire's friction penalty costs less here than in an open pattern — bite is the primary spin source either way. Launch stays low. In a control-oriented frame the texture adds grip without adding power. Expect faster cross wear where the twisted mains cross. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "In the 18×20 every bit of surface friction counts, and the twisted profile supplies more than any shaped poly here; snapback wasn't on offer anyway. The frame's flex takes the edge off the texture's harshness. Cross wear is the cost — twisted mains chew crosses faster in a dense pattern, so watch the crossings. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Outlast",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#222",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Med-Soft · ~0.90",
+      "width": 55
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "Moderate",
+      "width": 58
+    },
+    "control": {
+      "label": "Good",
+      "width": 72
+    },
+    "comfort": {
+      "label": "High",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Smooth",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Round, durable",
+    "feelExpand": "Consistent, predictable stringbed response with no surprises across the full swing range.",
+    "id": "solinco-outlast",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Durability-oriented round poly at ~0.90 kg/mm. Full bed in the 64 RA frame: medium-soft, damped, consistent response with snapback-driven spin the open 16×19 supports; less edge bite than any shaped Solinco. Exceptional durability and a long, predictable playable window. Also serves as a hard-wearing cross under shaped mains."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Round in the 18×19 limits snapback, so full-bed spin is modest; launch is low and controlled. The softer formula takes a little edge off a firm frame while the extra crosses keep the bed from feeling loose. Durability shows well in a pattern that's slow to restring. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Round plus 18×20 means little spin access. Medium-soft in the 58 RA frame: damped, moderate-dwell bed; the frame already supplies comfort, so the softness mostly adds pocketing. Its durability is the main attribute in a pattern that's tedious to restring. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Vanquish (Multi)",
+    "shape": "Round (multi)",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#f5f0e0",
+          "name": "Natural"
+        }
+      ],
+      "label": "Natural"
+    },
+    "stiffness": {
+      "label": "Soft",
+      "width": 30
+    },
+    "power": {
+      "label": "High",
+      "width": 78
+    },
+    "spin": {
+      "label": "Low",
+      "width": 35
+    },
+    "control": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "comfort": {
+      "label": "Very High",
+      "width": 92
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Plush, powerful",
+    "feelExpand": "Soft stringbed that absorbs and returns energy for comfortable power.",
+    "id": "solinco-vanquish-multi",
+    "brand": "solinco",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–26",
+        "note": "Premium multifilament. Full bed in the Regna: high power, dwell and launch with a lively, well-damped feel; control drops off versus any poly here and tension loss is faster. Solinco sells it as the cross in an official hybrid with Tour Bite or Confidential mains — the poly mains hold launch and spin while Vanquish adds comfort and pace. Multi crosses notch under shaped mains; durability is the trade."
+      },
+      "percept": {
+        "tension": "23–25",
+        "note": "As crosses in the 18×19 the dense pattern limits cross movement, so the multi contributes comfort and a little power without much snapback. Combined with the Percept's flexing shaft the hybrid plays noticeably softer than a full poly bed. Full bed: high launch and power with the 18×19 pulling launch down; control drops. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Multifilament in the most flexible frame here. Frame and string both soft: very high dwell and comfort, high launch, low high-frequency feedback; control is the lowest of any combination on this frame. In a hybrid the 18×20 contains multi crosses reasonably well — a softer bed while poly mains keep launch and spin. Tension loss is faster than poly and shows more in a dense pattern."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Spin",
+    "shape": "Pentagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#3b82f6",
+          "name": "Blue"
+        },
+        {
+          "hex": "#222",
+          "name": "Black"
+        }
+      ],
+      "label": "Blue, Black"
+    },
+    "stiffness": {
+      "label": "Firm · 1.08",
+      "width": 95
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 38
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 92
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 95
+    },
+    "comfort": {
+      "label": "Low-Mod",
+      "width": 42
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Pentagonal, low launch",
+    "feelExpand": "Flat trajectory with a firm, penetrating response.",
+    "id": "yonex-poly-tour-spin",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Firmest Yonex poly (1.08 kg/mm), pentagonal. Full bed in the 64 RA frame: low, direct ball flight, short dwell, clear feedback; five edges give bite-driven spin the open 16×19 supports. Used by Casper Ruud in a hybrid. Two gauges — 1.20 adds bite and liveliness, 1.25 control. Made in Japan, like the frame."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Low launch on a low-launch frame: the flattest Yonex-on-Yonex combination here. Pentagonal edges supply spin in the 18×19 where snapback is limited. Firm bed at 21–23 kg with feedback the 66 RA passes through clearly. Same 1.08 stiffness, 1 kg below the Regna because the extra crosses raise effective bed stiffness."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Highest stiffness in the Yonex lineup, softened by the PT630's 58 RA flex and Twaron layup into a firm-but-comfortable bed. The pentagonal geometry is the spin source in the 18×20. Low, direct ball flight on top of a dense pattern gives a very flat trajectory. Used by Ruud (hybrid). 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Strike",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#555",
+          "name": "Grey"
+        },
+        {
+          "hex": "#3b82f6",
+          "name": "Blue"
+        },
+        {
+          "hex": "#222",
+          "name": "Black"
+        }
+      ],
+      "label": "Grey, Blue, Black"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 0.92",
+      "width": 72
+    },
+    "power": {
+      "label": "Low",
+      "width": 30
+    },
+    "spin": {
+      "label": "Moderate",
+      "width": 62
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 94
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 52
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Controlled, precise",
+    "feelExpand": "Round co-poly with a firm, penetrating response and the best tension hold in the Yonex range.",
+    "id": "yonex-poly-tour-strike",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Best tension maintenance in the Yonex lineup — stays playable 10+ hours. Round, 0.92 kg/mm: firm, penetrating, low launch, with snapback-driven spin the open 16×19 supports. Full bed in the 64 RA frame is firm and clear without being sharp. Used by Shapovalov, Osaka and Shelton. Three gauges."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Round in the 18×19 limits snapback, so spin is moderate and launch is very low in a frame that already flies flat — a control-first, penetrating bed. Its tension hold matters more here: a dense pattern shows tension loss early and is slow to restring. Firm feedback through the 66 RA. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Outstanding tension maintenance in a dense 18×20 that loses tension faster and is tedious to restring. Round profile limits spin — no edges, pinned snapback — but the controlled, low-launch response matches the frame's own precision. 0.92 kg/mm in the 58 RA frame plays mid-firm and stable. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Pro",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ffe033",
+          "name": "Flash Yellow"
+        },
+        {
+          "hex": "#3b82f6",
+          "name": "Blue"
+        }
+      ],
+      "label": "Flash Yellow, Blue"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 1.05",
+      "width": 82
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 90
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 65
+    },
+    "feelTags": [
+      {
+        "label": "Moderate",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Pocketing, predictable",
+    "feelExpand": "Reliable dwell time on the ball for consistent shotmaking.",
+    "id": "yonex-poly-tour-pro",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Yonex's most popular poly — used by Kyrgios. All-round playability with the most ball pocketing and the least spin bite in the lineup; round, so spin is snapback-driven in the open 16×19. Loses tension faster than Strike. Common role is crosses under Strike or Rev mains. The 1.05 kg/mm figure here sits above Strike's 0.92 despite the softer reported feel — flagged, not resolved."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Round in the 18×19 restricts snapback, so full-bed spin is on the low side and launch is low. The pocketing takes the edge off a firm, low-powered frame. Yonex ships demo 100Ds strung with Poly Tour Pro 1.25. Faster tension loss than Strike shows earlier in a dense pattern. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Softer and more pocketing than Strike in a frame that already supplies comfort — the two add up to a damped, medium-dwell bed. Round in the 18×20 means little spin access. As crosses under Poly Tour Spin mains (the Shelton blend) the mains carry the spin and Pro adds feel. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Rev",
+    "shape": "Octagonal",
+    "shapeAttr": "octagonal",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#9333ea",
+          "name": "Purple"
+        },
+        {
+          "hex": "#ff8c00",
+          "name": "Orange"
+        },
+        {
+          "hex": "#fff",
+          "name": "White"
+        }
+      ],
+      "label": "Purple, Orange, White"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 0.85–0.95",
+      "width": 68
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 62
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 90
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 92
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 50
+    },
+    "feelTags": [
+      {
+        "label": "Muted",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Firm but dampened",
+    "feelExpand": "Stiff stringbed with muted vibration and reduced feedback.",
+    "id": "yonex-poly-tour-rev",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Octagonal profile with silicone-infused (SIF) construction for slickness and snapback. Firmer than Pro, more muted than Strike; 0.85–0.95 kg/mm. Full bed in the 64 RA frame: strong edge bite plus snapback in the open 16×19, high spin, controlled launch, damped feedback. Used by Ruud as hybrid mains."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Eight edges supply spin in the 18×19 where snapback is limited; the silicone slickness recovers a little of the cross movement the pattern takes away. Muted feedback through a firm frame, medium-firm bed. More energy than Strike, useful in a low-powered hoop. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "More power than Strike with good energy return — welcome in a low-powered frame — and octagonal edges that give the 18×20 a spin source (earlier notes here called Rev round; it is octagonal). The silicone slickness helps the mains move in the dense pattern. Muted feel stacks with the frame's damping. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Drive",
+    "shape": "Pentagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "crisp,soft",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ffe033",
+          "name": "Flash Yellow"
+        }
+      ],
+      "label": "Flash Yellow"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.90",
+      "width": 65
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 65
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 85
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 62
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Pentagonal, medium-firm",
+    "feelExpand": "Medium-firm pentagonal co-poly with clear feedback, sold at an entry-level price.",
+    "id": "yonex-poly-tour-drive",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Pentagonal at ~0.90 kg/mm, retailing under $10 — Yonex's budget shaped string. Full bed in the 64 RA frame: five-edge bite plus snapback in the open 16×19, moderate pocketing, medium-firm feedback that stays clear without harshness. Three gauges. Yonex describes it as \"comfortably firm\" with sharp edges."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Pentagonal edges do the spin work in the 18×19 where snapback is limited, and the string's medium stiffness plus the frame's extra crosses give a firm, low-launch bed. Slightly more pocketing than Spin, less lockdown. The price makes it the cheap way to run a shaped poly in this pattern. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Shaped, medium-firm and inexpensive — pentagonal edges supply spin in the 18×20 and the 58 RA flex softens the ~0.90 stiffness into a comfortable, medium-dwell bed. (Earlier notes here described Drive as a round power poly; that was Poly Tour Force's profile.) 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Force",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#dc2626",
+          "name": "Ruby Red"
+        },
+        {
+          "hex": "#222",
+          "name": "Black"
+        }
+      ],
+      "label": "Ruby Red, Black"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 62
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 68
+    },
+    "spin": {
+      "label": "Moderate",
+      "width": 58
+    },
+    "control": {
+      "label": "Good",
+      "width": 70
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 68
+    },
+    "feelTags": [
+      {
+        "label": "Responsive",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Power-leaning, responsive",
+    "feelExpand": "More powerful than average while still transmitting ball feedback.",
+    "id": "yonex-poly-tour-force",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Yonex's most power-oriented poly, positioned between Strike (firmer, more control) and Pro (softer). Used by João Fonseca. No Racketpedia stiffness yet — the Med-Firm placement is inferred from Yonex's positioning and early reports of a firm, controlled feel. In the 64 RA frame: more energy return and depth than Strike, a little more launch, less lockdown. Tension hold reported as good."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "The Percept is a low-powered frame, and the 18×19 lowers launch further — Force's extra energy return offsets both. Round profile: spin is snapback-driven, and the dense crosses limit it, so spin is moderate. Reported tension hold suits a pattern that shows loss early. Stiffness still unmeasured. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "No lab data yet, so this is inference: a medium-firm round poly in the 58 RA frame should add energy to a low-powered hoop while the flex keeps feedback soft. Round plus 18×20 caps spin. Early reports of a firm, controlled feel would fit the frame's character; unverified until Racketpedia numbers land. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Fire",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,lively",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ef4444",
+          "name": "Red"
+        }
+      ],
+      "label": "Red"
+    },
+    "stiffness": {
+      "label": "Medium · 0.80",
+      "width": 52
+    },
+    "power": {
+      "label": "High",
+      "width": 75
+    },
+    "spin": {
+      "label": "Mod-High",
+      "width": 68
+    },
+    "control": {
+      "label": "Good",
+      "width": 72
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 68
+    },
+    "feelTags": [
+      {
+        "label": "Lively",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Silicone-infused power",
+    "feelExpand": "Silicone coating adds power and dampening to the stringbed.",
+    "id": "yonex-poly-tour-fire",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Silicone-oil infusion for snapback and power; 0.80 kg/mm, round. Livelier than Rev and firmer in contact than the number suggests. Full bed in the 64 RA frame: high power, higher launch, snapback-driven spin the open 16×19 amplifies — the most energetic Yonex poly in a frame that already has a lively response."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "A power poly in a low-powered frame: the energy return and higher launch offset what the 18×19 takes away, and the extra crosses contain the liveliness. Round, so spin is snapback-driven — the silicone slickness helps the mains move in the dense pattern. Medium-soft, lively bed. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Adds power and launch to a frame that supplies little of either. Round in the 18×20 limits spin, though the silicone slickness restores a little snapback. 0.80 kg/mm in the 58 RA frame: soft, lively, higher-launch bed with less directional lockdown than the firm Yonex options. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Air",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#60a5fa",
+          "name": "Sky Blue"
+        }
+      ],
+      "label": "Sky Blue"
+    },
+    "stiffness": {
+      "label": "Soft · 0.72",
+      "width": 40
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 68
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "control": {
+      "label": "Good",
+      "width": 70
+    },
+    "comfort": {
+      "label": "Very High",
+      "width": 90
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Plush, comfortable",
+    "feelExpand": "Softest Yonex poly — cushioned contact, high arc over the net.",
+    "id": "yonex-poly-tour-air",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–26",
+        "note": "Softest Yonex poly (0.72 kg/mm). Full bed in the 64 RA frame: plush, high-dwell, high arc over the net, low feedback; spin is snapback-driven in the open 16×19 and the softness adds power. Yonex positions it alongside the VCORE line. Single gauge 1.25. The soft end of this brand's range."
+      },
+      "percept": {
+        "tension": "23–25",
+        "note": "Very soft round poly in a firm, low-launch frame: the 18×19's extra crosses firm the bed and pull the high arc down, so the string's character is more contained here than in the Regna. Spin is modest — round profile, restricted snapback. Plush contact through a 66 RA frame. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–22",
+        "note": "Softest Yonex poly in the lowest-RA frame here: compliance stacks into a very plush, high-dwell, high-arc bed with little high-frequency feedback. Round plus 18×20 leaves spin access low. The band sits high for this frame to retain some launch control. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Poly Tour Tough",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#222",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Med-Soft · 0.77",
+      "width": 48
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 40
+    },
+    "spin": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "control": {
+      "label": "Good",
+      "width": 75
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 60
+    },
+    "feelTags": [
+      {
+        "label": "Smooth",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Low-powered, firm",
+    "feelExpand": "Durability-oriented round co-poly: low static stiffness, low energy return — absorbs pace rather than adding it.",
+    "id": "yonex-poly-tour-tough",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Durability poly built for hard hitters who overhit: low power, round, budget-priced. Low static stiffness (0.77) with low energy return, so the bed feels muted rather than soft — it absorbs pace. Full bed in the 64 RA frame: flat launch, quiet feedback, snapback-driven spin in the open 16×19. Long-lasting practice string."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Low-powered string in a low-powered frame: the least energetic Yonex combination here — very flat, very controlled, muted contact. Round profile with restricted snapback in the 18×19 gives modest spin. Durability shows well in a pattern that's slow to restring. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Muted, low-energy poly in a damped, low-powered frame: the quietest and lowest-powered Yonex setup on this frame, with the 18×20 leaving spin access low. Durability is the attribute. The 58 RA flex keeps the contact soft. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Tour Super 850 (Multi)",
+    "shape": "Round (multi)",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16",
+      "1.32 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#f5f0e0",
+          "name": "Natural"
+        }
+      ],
+      "label": "Natural"
+    },
+    "stiffness": {
+      "label": "Soft",
+      "width": 28
+    },
+    "power": {
+      "label": "Very High",
+      "width": 85
+    },
+    "spin": {
+      "label": "Low",
+      "width": 35
+    },
+    "control": {
+      "label": "Moderate",
+      "width": 58
+    },
+    "comfort": {
+      "label": "Very High",
+      "width": 92
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Plush, arm-friendly",
+    "feelExpand": "Soft, cushioned feel designed to reduce impact shock and protect the arm.",
+    "id": "yonex-tour-super-850-multi",
+    "brand": "yonex",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–26",
+        "note": "Premium multifilament. Full bed in the Regna: very high power, plush high-dwell contact, high launch, low control by poly standards, faster tension loss. Its common role is crosses under Poly Tour Spin or Strike mains, where the poly holds launch and spin and the multi adds comfort and pace. Multi crosses notch under shaped mains."
+      },
+      "percept": {
+        "tension": "23–25",
+        "note": "As crosses in the 18×19 the dense pattern limits cross movement, so the multi contributes comfort and power without much snapback; under Spin or Strike mains the hybrid plays softer than a full poly bed while launch stays controlled. Full bed: high launch and power with the 18×19 pulling launch down. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Multifilament in the most flexible frame here: plush on plush — very high dwell and power, high launch, little high-frequency feedback, low control. In a hybrid the 18×20 contains multi crosses reasonably well, giving a softer bed under poly mains. Tension loss shows more in a dense pattern. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Vivo",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.23 / 17",
+      "1.28 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#2dd4bf",
+          "name": "Turquoise"
+        }
+      ],
+      "label": "Turquoise"
+    },
+    "stiffness": {
+      "label": "Firm · 1.05",
+      "width": 88
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 42
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 92
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 92
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 52
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Firm hex, holds tension",
+    "feelExpand": "Firm hexagonal co-poly with clear feedback; 100/100 tension maintenance on Racketpedia.",
+    "id": "restring-vivo",
+    "brand": "restring",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Firmer than Sync (1.05 kg/mm), hexagonal, made from recycled polyester. Racketpedia scores its tension maintenance a perfect 100/100. Full bed in the 64 RA frame: firm, clear feedback, low launch, hex bite without excessive snapback in the open 16×19. Two gauges — 1.28 firms the bed further."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Hex bite supplies spin in the 18×19 where snapback is limited, and the 1.05 stiffness gives a firm, low-launch bed through the extra crosses. The 100/100 tension hold counts double in a dense pattern that shows loss early and is slow to restring. Firm feedback through the 66 RA. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Hex edges for spin in the 18×20, firmness the 58 RA flex softens to mid-firm, and the best tension hold in this database in a pattern that loses tension faster and is tedious to restring. Recycled polyester. Low launch on a dense bed gives a flat ball. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Sync",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.20 / 18",
+      "1.25 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c0c0c0",
+          "name": "Silver"
+        }
+      ],
+      "label": "Silver"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 0.85–0.95",
+      "width": 68
+    },
+    "power": {
+      "label": "Medium",
+      "width": 52
+    },
+    "spin": {
+      "label": "Mod-High",
+      "width": 72
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 95
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 65
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Smooth",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Smooth, precise",
+    "feelExpand": "Excellent feedback for shot placement with a controlled feel.",
+    "id": "restring-sync",
+    "brand": "restring",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Round co-poly TennCom called the best round poly in the world; ALU Power-like feel with far longer playable life. Full bed in the Regna: low launch, smooth contact, moderate spin from snapback in the open pattern. Its most common role is crosses — the slick surface adds snapback under a shaped main (Vivo is the in-house pairing). Durability is outstanding."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Full bed in the 18×19 gives a smooth, low-launch, control-first response with limited spin — the dense pattern throttles the snapback a round string depends on. As crosses under Vivo or Zero, Sync's slickness restores some of the cross movement the pattern takes away. Long playable life shows well in a pattern that's slow to restring. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Round in the 18×20 is the least spin-friendly combination in this database — no edge bite, and snapback is pinned by the dense crosses. What remains: smooth, quiet contact, low launch, a very stable feel with the frame's flex softening the string's firmness. The natural role is crosses under a shaped main. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Zero",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.23 / 17",
+      "1.28 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#38bdf8",
+          "name": "Sky Blue"
+        }
+      ],
+      "label": "Sky Blue"
+    },
+    "stiffness": {
+      "label": "Firm · 1.05–1.10",
+      "width": 90
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 65
+    },
+    "spin": {
+      "label": "Elite",
+      "width": 98
+    },
+    "control": {
+      "label": "Good",
+      "width": 75
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "feelTags": [
+      {
+        "label": "Muted",
+        "variant": "soft"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Firm but dampened",
+    "feelExpand": "Stiff stringbed with muted vibration and reduced feedback.",
+    "id": "restring-zero",
+    "brand": "restring",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "ReString's flagship spin string. Outspins Hyper-G and RPM Blast in the brand's testing, with 2–5× the playable life. Hexagonal with an ultra-slick coating — edge bite plus extreme snapback in the open 16×19. Firm (1.05–1.10 kg/mm) but muted: the coating and construction damp feedback. Full bed in the 64 RA frame: high spin, controlled launch, quiet contact."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Hex bite covers spin in the 18×19 and the slick coating recovers more snapback than most strings manage in a dense pattern. Firm, low-launch bed; the muted feedback stacks with a frame that already gives little. Long playable life suits a pattern that's slow to restring. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Hex edges give the 18×20 its spin source (earlier notes here called Zero square; it is hexagonal), and the slick coating helps the mains move in the dense pattern. Firm at 1.05–1.10 but the 58 RA flex softens it; the string's muted character plus the frame's damping makes a quiet bed. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "SLAP (Ltd. Edition)",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "soft,lively",
+    "gauges": [
+      "1.23 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#222",
+          "name": "Midnight Black"
+        }
+      ],
+      "label": "Midnight Black"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.95",
+      "width": 65
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 90
+    },
+    "control": {
+      "label": "Moderate",
+      "width": 65
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 62
+    },
+    "feelTags": [
+      {
+        "label": "Lively",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Lively, elastic Zero variant",
+    "feelExpand": "Zero-based formula with a livelier, softer profile. Limited edition.",
+    "id": "restring-slap-ltd-edition",
+    "brand": "restring",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Valldoreix collaboration — Zero-based formula, livelier and softer (~0.95 kg/mm). Full bed in the 64 RA frame: more launch and energy than Zero, hex bite plus snapback in the open 16×19. Reviewers report a tinny, less consistent contact in lively frames, and the Regna is one. Limited availability."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "The 18×19's extra crosses and the frame's low power contain the liveliness that reviewers flag in open, lively frames. Hex bite supplies spin where snapback is limited. Softer bed than Zero with less consistent feedback. Limited availability. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "The added liveliness gives energy to a frame that supplies little, and the 58 RA flex tempers the erratic contact SLAP can show in stiff hoops. Hex edges do the spin work in the 18×20. Softer and less consistent than Zero in the same frame. Limited availability. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Tour Sniper",
+    "shape": "Pentagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#999",
+          "name": "Grey/Silver"
+        }
+      ],
+      "label": "Grey/Silver"
+    },
+    "stiffness": {
+      "label": "Firm · 1.05",
+      "width": 92
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 38
+    },
+    "spin": {
+      "label": "Moderate",
+      "width": 65
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 96
+    },
+    "comfort": {
+      "label": "Low-Mod",
+      "width": 45
+    },
+    "feelTags": [
+      {
+        "label": "Muted",
+        "variant": "soft"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Muted, precise",
+    "feelExpand": "Pre-stretched pentagonal co-poly; damped, control-oriented feel with minimal break-in.",
+    "id": "grapplesnake-tour-sniper",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "The firmest Grapplesnake (1.05 kg/mm), pentagonal, pre-stretched for minimal break-in and strong tension maintenance. Comparable to ALU Power and Tour Bite. Full bed in the 64 RA frame: firm, low-launch, heavily damped contact — vibration is absorbed rather than transmitted — with five-edge bite in the open 16×19. Made in Germany."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Pentagonal edges supply spin in the 18×19, and the firm, pre-stretched construction gives a stable, low-launch bed through the extra crosses. The muted character stacks with a frame that transmits little. Tension hold suits a dense pattern. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Firmest Grapplesnake, softened by the 58 RA flex into a firm-but-comfortable bed. Pentagonal edges are the spin source in the 18×20. The string's own damping plus the frame's makes one of the quieter combinations here. Comparable to ALU Power and Tour Bite in this frame. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Soldier",
+    "shape": "Heptagonal",
+    "shapeAttr": "heptagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#222",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Firm · ~1.00",
+      "width": 85
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 36
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 90
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 93
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 50
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Heptagonal, textured, slow break-in",
+    "feelExpand": "Seven-sided profile with a micro-particle abrasive surface; requires 2–3 sessions before snapback settles in.",
+    "id": "grapplesnake-soldier",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "21–23",
+        "note": "Seven-sided profile with a micro-particle abrasive surface; ~1.00 kg/mm. Maximum tension maintenance in the Grapplesnake range. Needs 2–3 sessions of break-in before snapback kicks in — the bed plays stiff and grabby at first, then loosens into high spin and control. Full bed in the 64 RA frame: firm, low launch, edge-plus-texture bite in the open 16×19."
+      },
+      "percept": {
+        "tension": "20–22",
+        "note": "Seven edges plus texture give the 18×19 friction-driven spin it can't get from snapback. Firm, low-launch bed through the extra crosses; the break-in period feels longer in a dense pattern where the surface has less room to move. Maximum tension hold suits a pattern that's slow to restring. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Heptagonal geometry and abrasive surface are the spin source in the 18×20. Maximum tension maintenance matters in a pattern that loses tension faster and is tedious to restring. The 58 RA flex softens the firm, grabby break-in phase. Once settled: firm, controlled, high spin. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Tour M8",
+    "shape": "Octagonal",
+    "shapeAttr": "octagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#6b8e23",
+          "name": "Olive Green"
+        }
+      ],
+      "label": "Olive Green"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 0.90–0.95",
+      "width": 72
+    },
+    "power": {
+      "label": "Medium",
+      "width": 48
+    },
+    "spin": {
+      "label": "High",
+      "width": 82
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 90
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 62
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Smooth",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Octagonal, medium-firm",
+    "feelExpand": "Sits between Alpha and Tour Sniper in stiffness; a coating that gives a distinctive, loud contact sound.",
+    "id": "grapplesnake-tour-m8",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Positioned between Alpha and Tour Sniper (0.90–0.95 kg/mm), octagonal. Exceptional tension maintenance. The coating produces a distinctive, loud contact — acoustically the most present Grapplesnake. Full bed in the 64 RA frame: medium-firm, good pocketing and dwell, eight-edge bite plus snapback in the open 16×19."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Octagonal edges cover spin in the 18×19 where snapback is limited. Medium-firm stiffness through the extra crosses gives a firm bed with more pocketing than Tour Sniper. The loud contact is unchanged by the frame. Tension hold suits a dense pattern. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Tour Sniper's precision with some of Alpha's softness — in the 58 RA frame that lands as a medium bed with good dwell, eight-edge bite supplying spin in the 18×20. Exceptional tension hold in a pattern that's slow to restring. The middle Grapplesnake option on this frame. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Alpha",
+    "shape": "Pentagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#daa520",
+          "name": "Gold"
+        }
+      ],
+      "label": "Gold"
+    },
+    "stiffness": {
+      "label": "Medium · 0.90",
+      "width": 65
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "High",
+      "width": 80
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 82
+    },
+    "comfort": {
+      "label": "High",
+      "width": 82
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Plush, comfortable",
+    "feelExpand": "Soft, cushioned feel that prioritizes arm comfort.",
+    "id": "grapplesnake-alpha",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Tour Sniper's softer sister — same pentagonal profile at 0.90 kg/mm. Full bed in the 64 RA frame: more pocketing, higher launch and a plusher, more damped contact than Sniper; five-edge bite plus snapback in the open 16×19. Grapplesnake positions it for stiff frames and dense patterns, and as a hybrid cross."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "A pentagonal string built with dense patterns in mind: edges supply spin in the 18×19, and the extra crosses firm up the 0.90 stiffness into a medium bed with controlled launch. Softer contact through the 66 RA than Sniper. Also serves as crosses under a firmer shaped main. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Softer pentagonal in the 58 RA frame: compliance stacks into a plush, medium-to-high dwell bed, with five edges still giving the 18×20 a spin source. Plays markedly softer than Tour Sniper in this frame — the widest gap between the two sisters is here. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Aspera Triplum",
+    "shape": "Square + Textured",
+    "shapeAttr": "square",
+    "feelAttr": "soft,lively",
+    "gauges": [
+      "1.23 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#ffe033",
+          "name": "Neon Yellow"
+        },
+        {
+          "hex": "#6b8e23",
+          "name": "Mantis Green"
+        }
+      ],
+      "label": "Neon Yellow, Mantis"
+    },
+    "stiffness": {
+      "label": "Med-Soft · ~0.85",
+      "width": 58
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 62
+    },
+    "spin": {
+      "label": "Elite",
+      "width": 96
+    },
+    "control": {
+      "label": "Good",
+      "width": 72
+    },
+    "comfort": {
+      "label": "High",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Lively, communicative",
+    "feelExpand": "Triple-spin construction: square shape, abrasive surface and diamond indentations, on a soft formula.",
+    "id": "grapplesnake-aspera-triplum",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Three spin mechanisms at once — square shape, abrasive surface, diamond indentations — on a formula softer than Alpha (~0.85 kg/mm) despite the square profile. Massive spin in the open 16×19, but the trajectory varies with contact quality; reviewers describe it as erratic. String 1–2 kg lighter than usual. Full bed in the 64 RA frame: soft, lively, very grippy."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Square edges plus texture supply the friction-driven spin the 18×19 relies on; the extra crosses firm up the soft formula and hold the launch down, which contains some of the erratic trajectory reported in open patterns. Soft, damped contact through the 66 RA. String 1–2 kg lighter than usual — and 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Square shape, abrasive surface and indentations all count in the 18×20, where friction is the only spin mechanism (earlier notes here called Triplum triangular; the name refers to the triple approach). Soft formula in the 58 RA frame: compliance stacks into a plush, high-dwell bed. String 1–2 kg lighter than usual, 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Game Changer",
+    "shape": "Square",
+    "shapeAttr": "square",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.20 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#39ff14",
+          "name": "Neon Green"
+        }
+      ],
+      "label": "Neon Green"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.90",
+      "width": 65
+    },
+    "power": {
+      "label": "Low-Med",
+      "width": 40
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 92
+    },
+    "control": {
+      "label": "Good",
+      "width": 75
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 68
+    },
+    "feelTags": [
+      {
+        "label": "Moderate",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Powerful, spin-focused",
+    "feelExpand": "Combines power with above-average spin generation.",
+    "id": "grapplesnake-game-changer",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Sharp square edges for spin, on a formula that's more powerful and comfortable than typical square polys (~0.90 kg/mm). Full bed in the 64 RA frame: strong bite plus snapback in the open 16×19, medium stiffness, more launch than the firm Grapplesnakes. Reviewers report an erratic contact in stiff frames — the Regna is firm enough to show it."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Square edges supply spin in the 18×19 where snapback is limited, and the extra crosses contain the liveliness that reads as erratic in open, stiff frames. Medium bed with a little more power than the Percept usually gives. Firm feedback through the 66 RA. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Square edges give the 18×20 maximum edge bite, and the 58 RA flex absorbs the harshness and the erratic contact reported in stiff frames. The formula's extra power helps a low-powered hoop. Medium-soft, grippy bed with more launch than the firm options. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Paradox Pro",
+    "shape": "Round (abrasive)",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.26 / 16L",
+      "1.29 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#228B22",
+          "name": "Forest Green"
+        },
+        {
+          "hex": "#daa520",
+          "name": "Gold"
+        }
+      ],
+      "label": "Forest Green, Gold"
+    },
+    "stiffness": {
+      "label": "Med-Firm · ~0.95",
+      "width": 72
+    },
+    "power": {
+      "label": "Medium",
+      "width": 52
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 85
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 65
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Vintage, solid, precise",
+    "feelExpand": "Classic co-poly character with firm, traditional feel.",
+    "id": "grapplesnake-paradox-pro",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Metal-infused round poly with an abrasive surface — a category of its own. Solid, old-school contact (~0.95 kg/mm) with more spin than a round profile normally gives, from surface friction plus snapback in the open 16×19. Durable. Full bed in the 64 RA frame: medium-firm, low launch, consistent."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "Surface texture supplies the friction the 18×19 needs, since snapback is limited and there are no edges. Medium-firm, low-launch, stable bed through the extra crosses. Round-string consistency with more spin than Sync or Cash in this pattern. Durability suits a slow-to-restring frame. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "The abrasive surface adds some spin access in the 18×20, though less than a shaped string. The vintage, solid contact suits the frame's old-school character, and the 58 RA flex softens the metal-infused firmness. Good control and durability in a pattern that's tedious to restring. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Tour Mako",
+    "shape": "Round (abrasive)",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush,lively",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#008080",
+          "name": "Teal"
+        },
+        {
+          "hex": "#c0c0c0",
+          "name": "Silver"
+        }
+      ],
+      "label": "Teal, Silver"
+    },
+    "stiffness": {
+      "label": "Very Soft · 0.45",
+      "width": 25
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 60
+    },
+    "spin": {
+      "label": "Mod-High",
+      "width": 70
+    },
+    "control": {
+      "label": "Moderate",
+      "width": 60
+    },
+    "comfort": {
+      "label": "Very High",
+      "width": 92
+    },
+    "feelTags": [
+      {
+        "label": "Very Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Powerful, elastic",
+    "feelExpand": "Very soft (0.45 kg/mm) round co-poly with an abrasive surface and non-metallic additives.",
+    "id": "grapplesnake-tour-mako",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Softest string in the Grapplesnake lineup by a wide margin (0.45 kg/mm), round with an abrasive surface and new non-metallic additives. Full bed in the 64 RA frame: very soft, high-dwell, high-power, high-launch; spin from texture plus generous snapback in the open 16×19. Control is low by poly standards."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Very soft, powerful string in a firm, low-powered frame: the 18×19's extra crosses firm the bed and hold launch down, and the frame's low output absorbs the power — the most contained version of Tour Mako across these three frames. Texture plus restricted snapback gives moderate spin. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "0.45 kg/mm in the 58 RA frame: compliance stacks into a very plush, high-dwell, high-launch bed with little high-frequency feedback. Round, so spin in the 18×20 comes from the abrasive surface alone. The soft end of what this frame can be strung with. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Tour Mako Short Fin",
+    "shape": "Hexagonal",
+    "shapeAttr": "hexagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#f5f0d0",
+          "name": "Cream"
+        }
+      ],
+      "label": "Cream"
+    },
+    "stiffness": {
+      "label": "Med-Firm",
+      "width": 68
+    },
+    "power": {
+      "label": "Medium",
+      "width": 55
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "control": {
+      "label": "Very High",
+      "width": 82
+    },
+    "comfort": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Hex bite + abrasive surface",
+    "feelExpand": "Hexagonal edges combined with a rough coating for aggressive ball-grabbing spin.",
+    "id": "grapplesnake-tour-mako-short-fin",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Limited-edition hexagonal variant of Tour Mako, firmer and more rigid than the round version. Edges are moderate — similar to Alpha and Tour Sniper, not sharp. Full bed in the 64 RA frame: medium-firm, hex bite on top of the abrasive surface, snapback in the open 16×19. The Mako formula's feel with more spin and more control than round Mako."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Hex edges plus abrasive surface give the 18×19 friction-driven spin it can't get from snapback; the firmer formula keeps the bed responsive through the extra crosses. Medium-firm, controlled launch. The shaped version is the one that suits this pattern's spin tax. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–22",
+        "note": "Hex geometry adds bite in the 18×20 — a meaningful spin upgrade over round Mako in a pattern with no snapback to speak of. Firmer than the round version, so the bed stays defined in the 58 RA frame instead of stacking softness on softness. Limited edition. 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "Irukandji",
+    "shape": "Rectangular-Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,lively",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c0c0c0",
+          "name": "Silver/Grey"
+        }
+      ],
+      "label": "Silver/Grey"
+    },
+    "stiffness": {
+      "label": "Medium · ~0.85",
+      "width": 58
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 62
+    },
+    "spin": {
+      "label": "Mod-High",
+      "width": 72
+    },
+    "control": {
+      "label": "Good",
+      "width": 72
+    },
+    "comfort": {
+      "label": "Good",
+      "width": 70
+    },
+    "feelTags": [
+      {
+        "label": "Smooth",
+        "variant": "round"
+      }
+    ],
+    "feelSummary": "Slippery, elastic",
+    "feelExpand": "Rectangular-round cross string built to add snapback without notching the mains.",
+    "id": "grapplesnake-irukandji",
+    "brand": "grapplesnake",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Designed specifically as hybrid crosses. The rectangular-round profile presents a flat face to the mains to prevent notching (gut or poly), and the slick surface adds snapback, spin and feel. ~0.85 kg/mm. Under Tour Sniper or Soldier mains in the open 16×19 the mains define launch and the crosses free up movement."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "As crosses in the 18×19 the flat, slick face restores cross movement the dense pattern takes away, and the anti-notching profile matters more where crossings are tighter. Under Tour Sniper or Soldier mains: firm launch from the mains, medium contact. Full bed is medium-soft with limited spin. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Crosses under a shaped main in the 18×20: slick face helps the mains move, anti-notching profile helps in a pattern with 360 crossings. The 0.85 stiffness listed here softens further in the 58 RA frame (earlier notes gave 0.45 kg/mm — that is Tour Mako's figure). Full bed is soft and low-spin. 19–21 kg, 2–3 kg below the Regna."
+      }
+    }
+  },
+  {
+    "name": "ALU Power",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.15 / 18",
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c0c0c0",
+          "name": "Silver"
+        }
+      ],
+      "label": "Silver"
+    },
+    "stiffness": {
+      "label": "Firm · 1.05",
+      "width": 78
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "spin": {
+      "label": "Medium",
+      "width": 60
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 88
+    },
+    "comfort": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Predictable, firm, round",
+    "feelExpand": "Aluminum-coated polyester. The benchmark control-oriented co-poly — the ATP standard for two decades. Smooth response, exceptional consistency.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "The ATP control reference for two decades — aluminium-coated round co-poly at 1.05 kg/mm. Full bed in the 64 RA frame: firm, smooth, low launch, exceptionally consistent; spin is snapback-driven and the open 16×19 supports it. 1.25 is the common gauge; 1.15 and 1.20 add liveliness and feel. Made in Belgium."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Round in the 18×19 restricts snapback, so spin is moderate; what the pattern rewards is ALU Power's consistency and low launch — a very predictable, flat-hitting bed. Firm feedback through the 66 RA. 1 kg below the Regna because the extra crosses raise effective bed stiffness."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Round in the 18×20 leaves little spin access — no edges, pinned snapback. Otherwise a firm, smooth, low-launch bed the 58 RA flex softens to mid-firm. Rough and Spin are the textured and shaped versions of the same string for this pattern. 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-alu-power",
+    "brand": "luxilon"
+  },
+  {
+    "name": "ALU Power Rough",
+    "shape": "Round-Rough",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c0c0c0",
+          "name": "Silver"
+        }
+      ],
+      "label": "Silver"
+    },
+    "stiffness": {
+      "label": "Firm · 1.05",
+      "width": 78
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 48
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 88
+    },
+    "comfort": {
+      "label": "Low-Mod",
+      "width": 45
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Crisp with bite",
+    "feelExpand": "ALU Power with a textured surface. Same 1.05 kg/mm stiffness and tension stability, with notably more spin potential.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "ALU Power with a textured surface: same 1.05 kg/mm and tension stability, noticeably more grip on the ball. Full bed in the 64 RA frame: firm, smooth contact with friction-driven spin on top of snapback in the open 16×19. The step up from standard ALU when the smooth version's spin runs short."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Texture supplies friction the 18×19 needs, since snapback is restricted — Rough produces more shape on the ball in this pattern than smooth ALU Power does. Same firm, low-launch character through the extra crosses. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Texture compensates for the 18×20's spin resistance while keeping ALU Power's smooth, firm feel; the 58 RA flex softens the 1.05 stiffness. Round-rough sits between smooth ALU and the pentagonal Spin in spin access on this frame. 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-alu-power-rough",
+    "brand": "luxilon"
+  },
+  {
+    "name": "ALU Power Soft",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#9aa0a6",
+          "name": "Pearl Silver"
+        }
+      ],
+      "label": "Pearl Silver"
+    },
+    "stiffness": {
+      "label": "Med · 0.85",
+      "width": 55
+    },
+    "power": {
+      "label": "Medium",
+      "width": 60
+    },
+    "spin": {
+      "label": "Medium",
+      "width": 60
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 80
+    },
+    "comfort": {
+      "label": "Med-High",
+      "width": 70
+    },
+    "feelTags": [
+      {
+        "label": "Softer",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "More dwell, still predictable",
+    "feelExpand": "Lower-stiffness sister to ALU Power. Notable dwell time without going fully soft. For arms that find standard ALU Power too direct.",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Lower-stiffness sister to ALU Power (0.85 vs 1.05 kg/mm). Full bed in the 64 RA frame: notably more dwell and a little more launch than standard ALU, with softened feedback; still round, so spin is snapback-driven in the open 16×19. The band sits 1 kg above ALU Power to retain launch control."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "A softer round poly in a firm, low-launch frame: the 18×19 keeps launch and direction in check, and the extra dwell takes the edge off the Percept's firmness. Restricted snapback means moderate spin. String 1 kg above ALU Power on this frame — and 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–22",
+        "note": "0.85 kg/mm in the 58 RA frame: frame flex and string softness stack into a higher-dwell, quieter bed than standard ALU gives here. Round in the 18×20 leaves spin access low. The band is high for this frame to preserve some launch control. 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-alu-power-soft",
+    "brand": "luxilon"
+  },
+  {
+    "name": "ALU Power Spin",
+    "shape": "Pentagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.23 / 17",
+      "1.27 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#1a1a1a",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Firm · 1.00",
+      "width": 72
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 90
+    },
+    "comfort": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Direct with grip",
+    "feelExpand": "Pentagonal-shaped sister to ALU Power. Slightly less smooth feel, much more spin access. The shape engages the ball positively at contact.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Pentagonal sister to ALU Power at 1.00 kg/mm — slightly less smooth in contact, much more spin. Full bed in the 64 RA frame: firm, low launch, five-edge bite plus snapback in the open 16×19. The shape engages the ball at contact where smooth ALU relies on snapback alone. Two gauges (1.23, 1.27)."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Pentagonal edges supply spin in the 18×19 where snapback is restricted, and the firm 1.00 stiffness complements the frame's control bias — a firm, low-launch, shaped bed. Firm feedback through the 66 RA. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Pentagonal geometry is a spin source the 18×20 can use, and the 1.00 stiffness softens in the 58 RA frame to a firm-but-comfortable bed. Adrenaline is the sharper-edged alternative with the same stiffness on this frame. 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-alu-power-spin",
+    "brand": "luxilon"
+  },
+  {
+    "name": "ALU Power Feel",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm,lively",
+    "gauges": [
+      "1.15 / 18",
+      "1.20 / 17"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#c0c0c0",
+          "name": "Silver"
+        }
+      ],
+      "label": "Silver"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 0.95",
+      "width": 65
+    },
+    "power": {
+      "label": "Medium",
+      "width": 60
+    },
+    "spin": {
+      "label": "Med-High",
+      "width": 72
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 82
+    },
+    "comfort": {
+      "label": "Medium",
+      "width": 60
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Direct with feel",
+    "feelExpand": "Thinner-gauge ALU Power tuned for added feel and spin response. Slightly more lively than the standard line.",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "ALU Power in thin gauges (1.15, 1.20) tuned for feel and spin; 0.95 kg/mm. Full bed in the 64 RA frame: livelier and more pocketing than standard ALU, more snapback in the open 16×19 from the thinner string. Durability drops with gauge. Same smooth, predictable character."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "The thin gauge recovers some of the snapback the 18×19 restricts, giving a round string more spin in this pattern than 1.25 ALU manages. Slightly livelier bed than standard ALU through the extra crosses. Durability is the trade in a pattern that's slow to restring. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–22",
+        "note": "Thin gauge helps a round string in the 18×20 a little, but no edges means spin access remains limited; Rough and Spin address the pattern more directly. Medium-firm bed in the 58 RA frame with more feel than standard ALU. 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-alu-power-feel",
+    "brand": "luxilon"
+  },
+  {
+    "name": "4G",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#d4af37",
+          "name": "Gold"
+        }
+      ],
+      "label": "Gold"
+    },
+    "stiffness": {
+      "label": "Very Firm · 1.10",
+      "width": 84
+    },
+    "power": {
+      "label": "Low",
+      "width": 38
+    },
+    "spin": {
+      "label": "Medium",
+      "width": 60
+    },
+    "control": {
+      "label": "Outstanding",
+      "width": 95
+    },
+    "comfort": {
+      "label": "Low-Mod",
+      "width": 42
+    },
+    "feelTags": [
+      {
+        "label": "Firm",
+        "variant": "firm"
+      },
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Direct, lockdown control",
+    "feelExpand": "Stiffer than ALU Power with exceptional tension maintenance — the longest-lasting playability of any Luxilon. For pros who want the firmest possible reference response.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–23",
+        "note": "Firmer than ALU Power (1.10 kg/mm) with the best tension maintenance in the Luxilon mainline — stays playable 12+ hours. Full bed in the 64 RA frame: very firm, low power, lockdown control, minimal dwell; round, so spin is snapback-driven in the open 16×19. The narrow 22–23 band reflects how firm the bed already is."
+      },
+      "percept": {
+        "tension": "21–22",
+        "note": "Very firm string in the firmest frame here: the 66 RA doesn't soften 4G, and the 18×19's extra crosses firm the bed further — off-centre hits transmit clearly. Low launch, low power, maximum control. Restricted snapback gives moderate spin. 21–22 kg, 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–20",
+        "note": "The 58 RA flex softens 4G to a playable firm bed, but the round profile leaves the 18×20 with little spin access. Exceptional tension hold matters in a pattern that loses tension faster and is tedious to restring. 19–20 kg, 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-4g",
+    "brand": "luxilon"
+  },
+  {
+    "name": "4G Rough",
+    "shape": "Round-Rough",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#d4af37",
+          "name": "Gold"
+        }
+      ],
+      "label": "Gold"
+    },
+    "stiffness": {
+      "label": "Very Firm · 1.10",
+      "width": 84
+    },
+    "power": {
+      "label": "Low",
+      "width": 36
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "control": {
+      "label": "Outstanding",
+      "width": 95
+    },
+    "comfort": {
+      "label": "Low-Mod",
+      "width": 40
+    },
+    "feelTags": [
+      {
+        "label": "Firm",
+        "variant": "firm"
+      },
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Lockdown with bite",
+    "feelExpand": "4G with surface texture for spin. Same exceptional tension maintenance, with significantly more grip on the ball.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–23",
+        "note": "4G with surface texture: the same 1.10 kg/mm and exceptional tension maintenance, with much more grip on the ball. Full bed in the 64 RA frame: very firm, low power, lockdown control, with friction-driven spin on top of snapback in the open 16×19. 22–23 kg."
+      },
+      "percept": {
+        "tension": "21–22",
+        "note": "Texture supplies friction where the 18×19 restricts snapback — Rough produces more shape than smooth 4G in this pattern. Still very firm through a 66 RA frame and extra crosses; off-centre hits are felt. 21–22 kg, 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–20",
+        "note": "Texture helps the 18×20 while keeping 4G's firmness and tension hold; the 58 RA flex softens the contact. ALU Power Spin reaches similar spin with a shaped profile and slightly lower stiffness on this frame. 19–20 kg, 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-4g-rough",
+    "brand": "luxilon"
+  },
+  {
+    "name": "4G Soft",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#e0c060",
+          "name": "Light Gold"
+        }
+      ],
+      "label": "Light Gold"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 0.95",
+      "width": 65
+    },
+    "power": {
+      "label": "Medium",
+      "width": 58
+    },
+    "spin": {
+      "label": "Medium",
+      "width": 60
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 88
+    },
+    "comfort": {
+      "label": "Medium",
+      "width": 60
+    },
+    "feelTags": [
+      {
+        "label": "Softer",
+        "variant": "soft"
+      },
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Control with comfort",
+    "feelExpand": "4G's tension stability with reduced stiffness. Sits between ALU Power Soft and standard 4G in feel.",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–24",
+        "note": "4G's tension stability at reduced stiffness (0.95 kg/mm) — sits between ALU Power Soft and standard 4G. Full bed in the 64 RA frame: medium-firm, more dwell than 4G, slightly muted contact, snapback-driven spin in the open 16×19. Long playable life. 23–24 kg."
+      },
+      "percept": {
+        "tension": "22–23",
+        "note": "Medium-firm round poly in a control frame: low launch, controlled response, moderate spin from restricted snapback. Slightly muted versus ALU Power Soft, with a longer playable window. 22–23 kg, 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–21",
+        "note": "Softer 4G in the 58 RA frame: compliance stacks into a medium bed with quieter feedback than standard 4G gives here. Round in the 18×20 leaves spin access low. Tension hold remains the attribute in a slow-to-restring pattern. 20–21 kg, 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-4g-soft",
+    "brand": "luxilon"
+  },
+  {
+    "name": "Element",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#e8d4a0",
+          "name": "Cream"
+        }
+      ],
+      "label": "Cream"
+    },
+    "stiffness": {
+      "label": "Med · 0.85",
+      "width": 55
+    },
+    "power": {
+      "label": "Med-High",
+      "width": 70
+    },
+    "spin": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "control": {
+      "label": "Good",
+      "width": 70
+    },
+    "comfort": {
+      "label": "High",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      },
+      {
+        "label": "Moderate",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Plush, controlled",
+    "feelExpand": "IRIS-fiber co-poly. The most comfort-oriented Luxilon mainline string — designed for players who want poly control without the bite.",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–25",
+        "note": "Racketpedia 0.85 kg/mm, the softest Luxilon mainline poly. In the 64 RA frame it produces notably more dwell and a higher launch than ALU Power, with feedback rounded off at the top end. Round profile, so spin is snapback-driven — which the open 16×19 supports. The high band claws back launch control that the softness gives up; going to 1.30 does the same with less tension load."
+      },
+      "percept": {
+        "tension": "23–24",
+        "note": "Soft round poly in a control frame: the 18×19 keeps launch and direction in check, which contains a 0.85 kg/mm string better than the open Regna does. Snapback is limited by the dense crosses, so spin is moderate. Feel is plush for a 66 RA frame — the shaft's flex adds to the string's. Top of the band for control."
+      },
+      "headpt630": {
+        "tension": "21–22",
+        "note": "Soft co-poly in the 58 RA frame. Frame flex, Twaron damping and the string's 0.85 kg/mm stack: very high dwell, quiet feedback, more launch than the PT630 gives with firm strings. Round profile offers little edge bite in the 18×20, where snapback is also limited, so spin sits at the low end. The band is high for this frame to preserve some launch control."
+      }
+    },
+    "id": "luxilon-element",
+    "brand": "luxilon"
+  },
+  {
+    "name": "Adrenaline",
+    "shape": "Pentagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#404040",
+          "name": "Charcoal"
+        }
+      ],
+      "label": "Charcoal"
+    },
+    "stiffness": {
+      "label": "Firm · 1.00",
+      "width": 72
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 48
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 86
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 88
+    },
+    "comfort": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Sharp, shaped",
+    "feelExpand": "Pentagonal cross-section optimized for spin without sacrificing the firm Luxilon response. Plays similarly to ALU Power Spin with slightly more aggressive shape.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Pentagonal at 1.00 kg/mm with sharper edges than ALU Power Spin — more aggressive grip, a little less smoothness in contact. Full bed in the 64 RA frame: firm, low launch, strong edge bite plus snapback in the open 16×19. Two gauges."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Sharper pentagonal edges supply the friction the 18×19 relies on — more bite than ALU Power Spin in this pattern, slightly rougher contact. Firm, low-launch bed through the extra crosses and the 66 RA. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Pentagonal grip is a spin source the 18×20 can use, and the 1.00 stiffness softens in the 58 RA frame. Adrenaline and ALU Power Spin are the same stiffness with different edge sharpness — a direct A/B pair on this frame. 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-adrenaline",
+    "brand": "luxilon"
+  },
+  {
+    "name": "M2 Pro",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush,lively",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#1a1a1a",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Med · 0.85",
+      "width": 55
+    },
+    "power": {
+      "label": "Medium",
+      "width": 60
+    },
+    "spin": {
+      "label": "Medium",
+      "width": 58
+    },
+    "control": {
+      "label": "Good",
+      "width": 72
+    },
+    "comfort": {
+      "label": "High",
+      "width": 78
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      },
+      {
+        "label": "Elastic",
+        "variant": "lively"
+      }
+    ],
+    "feelSummary": "Plush, lively",
+    "feelExpand": "Multifilament-like response in a co-poly construction. Aimed at players transitioning from natural gut or syn-gut who want some control without losing comfort.",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–26",
+        "note": "Multifilament-like response in a co-poly construction (0.85 kg/mm); Luxilon aims it at players moving from gut or synthetic gut. Full bed in the 64 RA frame: cushioned, lively, more launch and dwell than ALU Power, snapback-driven spin in the open 16×19. Band runs high (24–26) to retain control."
+      },
+      "percept": {
+        "tension": "23–25",
+        "note": "Soft, lively co-poly in a firm, low-launch frame: the 18×19 holds launch down and the extra crosses firm the bed. Slightly livelier than Element, less controlled. Restricted snapback gives moderate spin. 23–25 kg, 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "21–22",
+        "note": "A soft, multi-like co-poly in the 58 RA frame: compliance stacks into a plush, high-dwell, quiet bed with low control by poly standards. Round in the 18×20 leaves spin access low. The band sits high for this frame to retain some launch control. 21–22 kg."
+      }
+    },
+    "id": "luxilon-m2-pro",
+    "brand": "luxilon"
+  },
+  {
+    "name": "Eco Power",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#7fb069",
+          "name": "Eco Green"
+        }
+      ],
+      "label": "Eco Green"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 1.00",
+      "width": 72
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 48
+    },
+    "spin": {
+      "label": "Medium",
+      "width": 60
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 82
+    },
+    "comfort": {
+      "label": "Medium",
+      "width": 58
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      }
+    ],
+    "feelSummary": "Bio-based, medium-firm",
+    "feelExpand": "Bio-sourced polyester (~60% renewable feedstock). Similar playability to ALU Power Soft in a more sustainable construction. Marketed as a bridge between performance and environmental responsibility.",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–24",
+        "note": "Bio-sourced polyester (~60% renewable feedstock). Luxilon positions it near ALU Power Soft in playability; the 1.00 kg/mm figure here sits closer to standard ALU Power — flagged, not resolved. Full bed in the 64 RA frame: medium-firm, smooth, low launch, snapback-driven spin in the open 16×19. Round, two gauges."
+      },
+      "percept": {
+        "tension": "22–23",
+        "note": "Medium-firm round poly in a control frame: low launch, predictable response, moderate spin from restricted snapback. Plays close to the ALU Power family in this pattern. 22–23 kg, 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–21",
+        "note": "Round in the 18×20 leaves spin access low; the 58 RA flex softens the medium-firm stiffness into a smooth, controlled bed. The shaped Luxilons are the versions of this brand that address the pattern. 20–21 kg, 2–3 kg below the Regna."
+      }
+    },
+    "id": "luxilon-eco-power",
+    "brand": "luxilon"
+  },
+  {
+    "name": "Big Hitter Black 7",
+    "shape": "Heptagonal",
+    "shapeAttr": "pentagonal",
+    "feelAttr": "crisp,firm",
+    "gauges": [
+      "1.20 / 17",
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#1a1a1a",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Firm · 1.00",
+      "width": 72
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "spin": {
+      "label": "Very High",
+      "width": 88
+    },
+    "control": {
+      "label": "Excellent",
+      "width": 88
+    },
+    "comfort": {
+      "label": "Med-Low",
+      "width": 48
+    },
+    "feelTags": [
+      {
+        "label": "Crisp",
+        "variant": "crisp"
+      },
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Sharp, shaped, spinny",
+    "feelExpand": "Heptagonal (7-sided) co-poly. The most distinctive spin profile in the Tourna line — sharper edges than typical pentagonals. A favorite among NCAA and lower-tour pros.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Seven-sided co-poly at 1.00 kg/mm with sharper edges than typical pentagonals — a favourite among NCAA and lower-tour players. Full bed in the 64 RA frame: firm, low launch, aggressive edge bite plus snapback in the open 16×19; spin profile slightly beyond ALU Power Spin. Three gauges."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Seven sharp edges supply the friction the 18×19 relies on, with firm, low-launch behaviour through the extra crosses. Firmer than the softer strings this frame's control bias tolerates well. Feedback clear through the 66 RA. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Heptagonal grip is a strong spin source for the 18×20, and the 1.00 stiffness softens in the 58 RA frame to firm-but-comfortable. Sits with Adrenaline and ALU Power Spin as the shaped, 1.00 kg/mm options on this frame, with the sharpest edges of the three. 2–3 kg below the Regna."
+      }
+    },
+    "id": "tourna-big-hitter-black-7",
+    "brand": "tourna"
+  },
+  {
+    "name": "Big Hitter Blue Rough",
+    "shape": "Round-Rough",
+    "shapeAttr": "round",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.25 / 16L",
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#1e40af",
+          "name": "Blue"
+        }
+      ],
+      "label": "Blue"
+    },
+    "stiffness": {
+      "label": "Firm · 1.05",
+      "width": 78
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 48
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 85
+    },
+    "comfort": {
+      "label": "Low-Mod",
+      "width": 45
+    },
+    "feelTags": [
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Textured, firm",
+    "feelExpand": "Textured polyester aimed at competitive juniors and college players. A blue alternative to ALU Power Rough at a friendlier price point.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "Textured round co-poly aimed at competitive juniors and college players; 1.05 kg/mm, priced below ALU Power Rough. Full bed in the 64 RA frame: firm, slightly firmer than ALU Rough overall, texture-driven spin plus snapback in the open 16×19. Less refined contact than the premium shaped strings here."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Texture supplies friction where the 18×19 restricts snapback. Firm, low-launch bed through the extra crosses and the 66 RA — on the firm side of what this frame is usually strung with. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Texture compensates for the 18×20's spin resistance; the 1.05 stiffness is at the upper end for this frame even after the 58 RA flex softens it. Firm, flat, textured bed. 19–21 kg, 2–3 kg below the Regna."
+      }
+    },
+    "id": "tourna-big-hitter-blue-rough",
+    "brand": "tourna"
+  },
+  {
+    "name": "Big Hitter Silver Rough",
+    "shape": "Round-Rough",
+    "shapeAttr": "round",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.25 / 16L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#a8a8a8",
+          "name": "Silver"
+        }
+      ],
+      "label": "Silver"
+    },
+    "stiffness": {
+      "label": "Med-Firm · 0.92",
+      "width": 62
+    },
+    "power": {
+      "label": "Medium",
+      "width": 60
+    },
+    "spin": {
+      "label": "High",
+      "width": 78
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 80
+    },
+    "comfort": {
+      "label": "Medium",
+      "width": 60
+    },
+    "feelTags": [
+      {
+        "label": "Softer",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Softer, textured",
+    "feelExpand": "A softer-formula sister to Big Hitter Black 7. Same brand, friendlier feel — for arms that find typical co-polys too direct.",
+    "perRacquet": {
+      "regna": {
+        "tension": "23–25",
+        "note": "Softer-formula sister to Big Hitter Black 7 (0.92 kg/mm), textured round. Full bed in the 64 RA frame: medium-firm, more dwell and comfort than Blue Rough, texture-driven spin plus snapback in the open 16×19. Trades some of the brand's firmness for arm-friendliness."
+      },
+      "percept": {
+        "tension": "22–24",
+        "note": "The softer formula takes the edge off a firm frame while the 18×19's extra crosses keep launch controlled; texture supplies friction where snapback is restricted. A more affordable version of the ALU Power Soft profile with more grip. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "20–22",
+        "note": "0.92 kg/mm in the 58 RA frame: compliance stacks into a medium, quieter bed. Texture gives the 18×20 some friction-driven spin. Softer than Blue Rough and Black 7 in this frame; the band sits high to retain launch control. 20–22 kg, 2–3 kg below the Regna."
+      }
+    },
+    "id": "tourna-big-hitter-silver-rough",
+    "brand": "tourna"
+  },
+  {
+    "name": "Pro 16",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "firm",
+    "gauges": [
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#404040",
+          "name": "Black"
+        }
+      ],
+      "label": "Black"
+    },
+    "stiffness": {
+      "label": "Firm · 0.98",
+      "width": 70
+    },
+    "power": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "spin": {
+      "label": "Medium",
+      "width": 60
+    },
+    "control": {
+      "label": "Very Good",
+      "width": 80
+    },
+    "comfort": {
+      "label": "Med-Low",
+      "width": 50
+    },
+    "feelTags": [
+      {
+        "label": "Firm",
+        "variant": "firm"
+      }
+    ],
+    "feelSummary": "Basic, predictable",
+    "feelExpand": "No-frills round co-poly. Tournament-grade durability at an entry-level price. Workhorse string for high-school and club players.",
+    "perRacquet": {
+      "regna": {
+        "tension": "22–24",
+        "note": "No-frills round co-poly at 0.98 kg/mm, 1.30 gauge only — tournament durability at an entry-level price. Full bed in the 64 RA frame: firm, flat, durable, snapback-driven spin in the open 16×19. A generic round poly: nothing distinctive in either direction."
+      },
+      "percept": {
+        "tension": "21–23",
+        "note": "Round in the 18×19 restricts snapback, so spin is modest; launch is low and the bed firm through the extra crosses. Durable, predictable, unremarkable. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "19–21",
+        "note": "Round plus 18×20 leaves spin access low. Firm and durable, softened by the 58 RA flex. Durability is the attribute in a pattern that's tedious to restring. 19–21 kg, 2–3 kg below the Regna."
+      }
+    },
+    "id": "tourna-pro-16",
+    "brand": "tourna"
+  },
+  {
+    "name": "Quasi-Gut Armor",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.30 / 16"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#fef9c3",
+          "name": "Natural"
+        }
+      ],
+      "label": "Natural"
+    },
+    "stiffness": {
+      "label": "Soft · 0.65",
+      "width": 38
+    },
+    "power": {
+      "label": "High",
+      "width": 80
+    },
+    "spin": {
+      "label": "Low",
+      "width": 35
+    },
+    "control": {
+      "label": "Good",
+      "width": 65
+    },
+    "comfort": {
+      "label": "Excellent",
+      "width": 92
+    },
+    "feelTags": [
+      {
+        "label": "Very Soft",
+        "variant": "soft"
+      },
+      {
+        "label": "Plush",
+        "variant": "plush"
+      }
+    ],
+    "feelSummary": "Plush, gut-like",
+    "feelExpand": "Multifilament with armored coating for durability. Aimed at recreational players who want gut-like comfort without the cost or maintenance.",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–26",
+        "note": "Multifilament with an armoured coating for durability; 0.65 kg/mm. Aimed at players wanting gut-like comfort without gut's cost. Full bed in the 64 RA frame: plush, high-power, high-launch, low control by poly standards. The Natural Gut section covers the real-gut hybrids this string approximates."
+      },
+      "percept": {
+        "tension": "23–25",
+        "note": "Soft multi in a firm, low-powered frame: the 18×19 holds launch down and the frame's low output absorbs the power, so this is the most contained of the three. Comfort-first, low spin. As a gut substitute in a hybrid, the crosses stay contained by the dense pattern. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "21–22",
+        "note": "Multifilament in the most flexible frame here: plush on plush, very high dwell and power, low feedback, low control, and the 18×20 leaves spin access low. The band sits high for this frame to retain some launch control. 21–22 kg."
+      }
+    },
+    "id": "tourna-quasi-gut-armor",
+    "brand": "tourna"
+  },
+  {
+    "name": "Pro Tour",
+    "shape": "Round",
+    "shapeAttr": "round",
+    "feelAttr": "soft,plush",
+    "gauges": [
+      "1.30 / 16",
+      "1.35 / 15L"
+    ],
+    "colors": {
+      "dots": [
+        {
+          "hex": "#fef9c3",
+          "name": "Natural"
+        }
+      ],
+      "label": "Natural"
+    },
+    "stiffness": {
+      "label": "Soft · 0.55",
+      "width": 30
+    },
+    "power": {
+      "label": "High",
+      "width": 80
+    },
+    "spin": {
+      "label": "Low",
+      "width": 32
+    },
+    "control": {
+      "label": "Moderate",
+      "width": 55
+    },
+    "comfort": {
+      "label": "High",
+      "width": 80
+    },
+    "feelTags": [
+      {
+        "label": "Soft",
+        "variant": "soft"
+      }
+    ],
+    "feelSummary": "Soft synthetic",
+    "feelExpand": "Nylon synthetic gut with wrap construction — very soft, beginner-oriented; occasionally used as a budget cross.",
+    "perRacquet": {
+      "regna": {
+        "tension": "24–26",
+        "note": "Nylon synthetic gut, 0.55 kg/mm — the softest string in this database. Full bed in the 64 RA frame: very soft, powerful, high launch, low control, fast tension loss. Outside the poly-and-multi range everything else here sits in. As a budget cross under a poly main it adds comfort and pace."
+      },
+      "percept": {
+        "tension": "23–25",
+        "note": "Very soft synthetic in a firm, low-launch frame: the 18×19 contains it as far as any pattern can — launch held down, extra crosses firming the bed — but control remains low by this database's standards. Budget cross under a poly main is the plausible use. 1 kg below the Regna."
+      },
+      "headpt630": {
+        "tension": "22–24",
+        "note": "The softest string here in the lowest-RA frame: maximum compliance stacking — very high dwell, high launch, little feedback, low control. As a budget cross under a poly main the 18×20 contains the softness. 22–24 kg, the top of this frame's range."
+      }
+    },
+    "id": "tourna-pro-tour",
+    "brand": "tourna"
+  }
+]

@@ -1,0 +1,1309 @@
+{
+  "kimony": {
+    "wet": [
+      {
+        "name": "Hi-Soft EX",
+        "model": "KGT100",
+        "modelVariants": [
+          "KGT131 (3pk)",
+          "KGT214 (12pk)"
+        ],
+        "specs": [
+          "0.50mm",
+          "29mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Elite",
+          "width": 97
+        },
+        "absorption": {
+          "label": "Very High",
+          "width": 85
+        },
+        "durability": {
+          "label": "Excellent",
+          "width": 93
+        },
+        "feelTags": [
+          {
+            "label": "Smooth",
+            "variant": "crisp"
+          },
+          {
+            "label": "Ultra-Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Premium PU, soft yet durable",
+        "feelExpand": "Kimony's flagship polyurethane formula delivers elite tackiness with a soft hand feel that outlasts most competitors.",
+        "colors": "15 colors incl. White, Black, Red, Navy, Yellow, Fluoro Green/Pink/Yellow, Lavender, Turquoise, Violet",
+        "packSizes": "1 / 3 / 12",
+        "notes": "The flagship. Widely regarded as the tackiest overgrip on the market. Highest-quality Japanese polyurethane provides exceptional softness and durability – outlasts most competitors. The default choice for maximum grip security and control.",
+        "gripType": "wet",
+        "gripFeelAttr": "smooth,tacky",
+        "id": "kimony-hi-soft-ex"
+      },
+      {
+        "name": "Hi-Soft EX Ultra-Thin",
+        "model": "KGT101",
+        "modelVariants": [
+          "KGT133 (3pk)"
+        ],
+        "specs": [
+          "0.33mm",
+          "29mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Elite",
+          "width": 95
+        },
+        "absorption": {
+          "label": "High",
+          "width": 72
+        },
+        "durability": {
+          "label": "Very Good",
+          "width": 78
+        },
+        "feelTags": [
+          {
+            "label": "Thin",
+            "variant": "crisp"
+          },
+          {
+            "label": "Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Barely changes grip size",
+        "feelExpand": "At just 0.33mm, adds virtually no bulk — useful at the top of a grip-size range.",
+        "colors": "White, Black, Red",
+        "packSizes": "1 / 3",
+        "notes": "Same Hi-Soft PU formula at just 0.33mm – thin enough to keep grip size virtually unchanged. High-stretch felt-like surface. Useful at the top of a grip-size range, and passes the most bevel definition through of the Hi-Soft family. Slightly less durable and absorbent than the standard due to thinner profile.",
+        "gripType": "wet",
+        "gripFeelAttr": "smooth,tacky,thin",
+        "id": "kimony-hi-soft-ex-ultra-thin"
+      },
+      {
+        "name": "Punch (Perforated)",
+        "model": "KGT102",
+        "modelVariants": [
+          "KGT135 (3pk)"
+        ],
+        "specs": [
+          "0.50mm",
+          "29mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 90
+        },
+        "absorption": {
+          "label": "Excellent",
+          "width": 93
+        },
+        "durability": {
+          "label": "Very Good",
+          "width": 82
+        },
+        "feelTags": [
+          {
+            "label": "Ventilated",
+            "variant": "crisp"
+          },
+          {
+            "label": "Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Perforations for airflow",
+        "feelExpand": "Punched holes enhance ventilation and sweat evaporation while maintaining a tacky feel.",
+        "colors": "12 colors incl. White, Black, Blue, Orange, Red, Green, Gray, Fluoro Yellow/Pink/Green/Sky, Teal",
+        "packSizes": "1 / 3",
+        "notes": "One of the most popular grips in the lineup. Same Hi-Soft PU with punched perforations for enhanced ventilation and sweat absorption. Aimed at heavy sweat with a wet/tacky surface. Slightly less tacky than non-perforated, with better moisture management.",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky,perforated",
+        "id": "kimony-punch-perforated"
+      },
+      {
+        "name": "Ana Spa Twin",
+        "model": "KGT107",
+        "modelVariants": [],
+        "specs": [
+          "0.50–3.10mm",
+          "29mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 88
+        },
+        "absorption": {
+          "label": "High",
+          "width": 78
+        },
+        "durability": {
+          "label": "Good",
+          "width": 72
+        },
+        "feelTags": [
+          {
+            "label": "Cushioned",
+            "variant": "soft"
+          },
+          {
+            "label": "Dual Ridge",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Double-spiral sponge",
+        "feelExpand": "Two intertwining foam ridges cushion the hand and absorb shock on every impact.",
+        "colors": "White, Black, Red, Royal Blue, Fluoro Yellow",
+        "packSizes": "1",
+        "notes": "Double-spiral overgrip with 2 sponge ridges on the back. Since sponge wraps on both sides, grip sensation is consistent regardless of hand orientation. Dual ridges add cushioning and stability. Variable thickness (0.50mm base to 3.10mm at ridges).",
+        "gripType": "wet",
+        "gripFeelAttr": "cushioned,tacky",
+        "id": "kimony-ana-spa-twin"
+      },
+      {
+        "name": "Ana Spiral",
+        "model": "KGT109",
+        "modelVariants": [],
+        "specs": [
+          "0.50–3.10mm",
+          "29mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 88
+        },
+        "absorption": {
+          "label": "Excellent",
+          "width": 90
+        },
+        "durability": {
+          "label": "Good",
+          "width": 72
+        },
+        "feelTags": [
+          {
+            "label": "Ridged",
+            "variant": "soft"
+          },
+          {
+            "label": "Ventilated",
+            "variant": "crisp"
+          }
+        ],
+        "feelSummary": "Foam ridge + perforations",
+        "feelExpand": "Combines spiral cushioning with punched holes for both comfort and moisture management.",
+        "colors": "10+ colors incl. White, Black, Red, Orange, Blue, Fluoro Yellow/Green/Sky, Lavender",
+        "packSizes": "1",
+        "notes": "Single foam ridge spiraling down the center absorbs impact and provides a more secure grip. Especially helpful for players with lower grip strength. Perforations enhance ventilation. The convex sponge stabilizes the grip. Variable thickness (0.50mm base to 3.10mm at ridge).",
+        "gripType": "wet",
+        "gripFeelAttr": "cushioned,tacky",
+        "id": "kimony-ana-spiral"
+      },
+      {
+        "name": "Top Spin",
+        "model": "KGT112",
+        "modelVariants": [],
+        "specs": [
+          "0.50–3.10mm"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 88
+        },
+        "absorption": {
+          "label": "High",
+          "width": 76
+        },
+        "durability": {
+          "label": "Good",
+          "width": 70
+        },
+        "feelTags": [
+          {
+            "label": "Tapered",
+            "variant": "crisp"
+          },
+          {
+            "label": "Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Thicker at butt cap",
+        "feelExpand": "Graduated thickness facilitates wrist snap for topspin while keeping the handle end thin.",
+        "colors": "White, Black",
+        "packSizes": "1",
+        "notes": "Unique design – thicker at the racket end (butt cap area) to facilitate wrist snap for more topspin. The rest of the grip remains thinner for a firm handle grip. Same Hi-Soft tacky PU. A specialty option for heavy topspin players.",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky,tapered",
+        "id": "kimony-top-spin"
+      },
+      {
+        "name": "Legend",
+        "model": "KGT136",
+        "modelVariants": [
+          "KGT137 (3pk)"
+        ],
+        "specs": [
+          "0.68mm",
+          "27mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 90
+        },
+        "absorption": {
+          "label": "Excellent",
+          "width": 92
+        },
+        "durability": {
+          "label": "Excellent",
+          "width": 90
+        },
+        "feelTags": [
+          {
+            "label": "Textured",
+            "variant": "crisp"
+          },
+          {
+            "label": "Plush",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Floral pattern, extra tacky",
+        "feelExpand": "Engraved surface pattern adds subtle texture and visual flair with maximum tackiness.",
+        "colors": "7+ colors incl. White, Black, Yellow, Orange, Red, Blue",
+        "packSizes": "1 / 3",
+        "notes": "Extra-tacky overgrip with maximum sweat absorption and a soft, plush feel. Floral pattern engraved into the surface enhances both appearance and grip texture. At 0.68mm and 27mm width (vs 29mm standard), provides a slightly different wrap profile. Designed to last longer than average.",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky,textured,plush",
+        "id": "kimony-legend"
+      },
+      {
+        "name": "Legend Rocky",
+        "model": "KGT138",
+        "modelVariants": [],
+        "specs": [
+          "0.68mm",
+          "27mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 92
+        },
+        "absorption": {
+          "label": "Excellent",
+          "width": 92
+        },
+        "durability": {
+          "label": "Excellent",
+          "width": 88
+        },
+        "feelTags": [
+          {
+            "label": "Aggressive",
+            "variant": "crisp"
+          },
+          {
+            "label": "Tracked",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Cross-notch anti-slip",
+        "feelExpand": "Aggressive cross-hatched grooves provide the strongest grip security in the lineup.",
+        "colors": "White, Yellow, Orange, Red, Blue, Black",
+        "packSizes": "3",
+        "notes": "Super wet feel with excellent moisture absorption. Cross notches engraved into the surface greatly enhance anti-slip functionality. More aggressive texture than the standard Legend. The added grip security comes with a pronounced texture under the hand.",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky,textured,aggressive",
+        "id": "kimony-legend-rocky"
+      },
+      {
+        "name": "Legend Star",
+        "model": "KGT140",
+        "modelVariants": [],
+        "specs": [
+          "0.50mm",
+          "27mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 88
+        },
+        "absorption": {
+          "label": "High",
+          "width": 80
+        },
+        "durability": {
+          "label": "Very Good",
+          "width": 82
+        },
+        "feelTags": [
+          {
+            "label": "Textured",
+            "variant": "crisp"
+          },
+          {
+            "label": "Decorative",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Star pattern engraved",
+        "feelExpand": "Decorative surface engraving adds a light texture without changing the overall grip feel.",
+        "colors": "Black, Blue + more",
+        "packSizes": "1",
+        "notes": "Star pattern engraved into the surface for a subtle texture enhancement and distinctive look. Part of the Legend/patterned family. At 0.50mm, thinner than the other Legend variants (0.68mm). Decorative yet functional.",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky,textured",
+        "id": "kimony-legend-star"
+      },
+      {
+        "name": "Forte",
+        "model": "KGT500",
+        "modelVariants": [
+          "KGT501 (3pk)"
+        ],
+        "specs": [
+          "0.68mm",
+          "27mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Moderate",
+          "width": 60
+        },
+        "absorption": {
+          "label": "Medium",
+          "width": 58
+        },
+        "durability": {
+          "label": "Excellent",
+          "width": 92
+        },
+        "feelTags": [
+          {
+            "label": "Firm",
+            "variant": "firm"
+          },
+          {
+            "label": "Substantial",
+            "variant": "crisp"
+          }
+        ],
+        "feelSummary": "Harder feel, very durable",
+        "feelExpand": "Firmer PU construction trades softness for the longest lifespan of any Kimony overgrip.",
+        "colors": "White, Black, Red, Royal Blue",
+        "packSizes": "1 / 3",
+        "notes": "A firmer-feeling overgrip with moderate tackiness and medium absorbency. Thicker and more durable than the Hi-Soft EX and Punch. Harder and more substantial under the hand than the soft, ultra-tacky Hi-Soft. The most durable overgrip in the Kimony lineup.",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky,firm,durable",
+        "id": "kimony-forte"
+      }
+    ],
+    "dry": [
+      {
+        "name": "Neo-Dry",
+        "model": "KGT143",
+        "modelVariants": [
+          "KGT142 (3pk)"
+        ],
+        "specs": [
+          "0.50mm",
+          "29mm × 98cm"
+        ],
+        "tackiness": {
+          "label": "Low",
+          "width": 22
+        },
+        "absorption": {
+          "label": "Excellent",
+          "width": 92
+        },
+        "durability": {
+          "label": "Moderate",
+          "width": 55
+        },
+        "feelTags": [
+          {
+            "label": "Dry",
+            "variant": "round"
+          },
+          {
+            "label": "Absorbent",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Felt-like, moisture-wicking",
+        "feelExpand": "Dry-type surface pulls sweat away from the hand and gets grippier as it absorbs.",
+        "colors": "Black, Blue, White",
+        "packSizes": "1 / 3",
+        "notes": "Kimony's proprietary dry-type overgrip. Used by world-class touring professionals. Gets grippier when wet (opposite of tacky grips). Slightly shorter tape (98cm vs 105cm) – overlap less when wrapping. Designed for heavy sweat without a sticky surface.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,absorbent",
+        "id": "kimony-neo-dry"
+      },
+      {
+        "name": "Last Dry",
+        "model": "KGT150",
+        "modelVariants": [
+          "KGT151 (3pk)",
+          "KGT215 (12pk)"
+        ],
+        "specs": [
+          "0.68mm",
+          "29mm × 105cm"
+        ],
+        "tackiness": {
+          "label": "Low-Med",
+          "width": 35
+        },
+        "absorption": {
+          "label": "Excellent",
+          "width": 90
+        },
+        "durability": {
+          "label": "Excellent",
+          "width": 92
+        },
+        "feelTags": [
+          {
+            "label": "Dry",
+            "variant": "round"
+          },
+          {
+            "label": "Durable",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Slight tack within dry feel",
+        "feelExpand": "Bridges wet and dry grip styles with a subtle tackiness that persists through sweat.",
+        "colors": "Black, White, Peach Pink, Red, Fluoro Yellow, Blue",
+        "packSizes": "1 / 3 / 12",
+        "notes": "Outstanding durability for a dry grip – surface resists peeling and feel doesn't change after absorbing sweat. Has a subtle tackiness within its dry feel that fits the hand well. At 0.68mm, softer and more comfortable than typical papery dry grips. The name plays on \"lasting\" and on being the last dry grip a player needs. Improved materials for superior abrasion resistance.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,durable",
+        "id": "kimony-last-dry"
+      },
+      {
+        "name": "Dry Spiral",
+        "model": "KGT159",
+        "modelVariants": [],
+        "specs": [
+          "Dry type"
+        ],
+        "tackiness": {
+          "label": "Low",
+          "width": 25
+        },
+        "absorption": {
+          "label": "Very High",
+          "width": 88
+        },
+        "durability": {
+          "label": "Good",
+          "width": 68
+        },
+        "feelTags": [
+          {
+            "label": "Dry",
+            "variant": "round"
+          },
+          {
+            "label": "Ridged",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Spiral sponge + dry surface",
+        "feelExpand": "Pairs the cushioning ridge design with a moisture-wicking dry surface layer.",
+        "colors": "Multiple colors",
+        "packSizes": "1",
+        "notes": "Dry-type overgrip with spiral foam ridge design (similar to Ana Spiral) for added cushioning and grip stability, combined with a dry surface feel. Brings the spiral sponge ridge to a dry-type surface. One of Kimony's newer additions.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,cushioned",
+        "id": "kimony-dry-spiral"
+      },
+      {
+        "name": "Tourna",
+        "model": "KGT141",
+        "modelVariants": [
+          "KGT147 (30pk)"
+        ],
+        "specs": [
+          "Dry type",
+          "<em style=\"color:#d97706;\">Made in USA</em>"
+        ],
+        "tackiness": {
+          "label": "Low",
+          "width": 18
+        },
+        "absorption": {
+          "label": "Elite",
+          "width": 96
+        },
+        "durability": {
+          "label": "Low",
+          "width": 30
+        },
+        "feelTags": [
+          {
+            "label": "Dry",
+            "variant": "round"
+          },
+          {
+            "label": "Classic",
+            "variant": "crisp"
+          }
+        ],
+        "feelSummary": "World-famous Tourna feel",
+        "feelExpand": "The classic papery dry grip feel that has been a tour staple for decades.",
+        "colors": "Blue",
+        "packSizes": "1 / 30",
+        "notes": "The classic US-made Tourna Grip, distributed by Kimony in Japan. World-famous dry-feel overgrip renowned for exceptional sweat absorption. Used by many touring pros. The only non-Japan-made grip in the Kimony catalog. Maximum absorption but lowest durability – designed to be replaced frequently.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,absorbent",
+        "id": "kimony-tourna"
+      }
+    ],
+    "replacement": [
+      {
+        "name": "Fairway Leather",
+        "model": "KGL152",
+        "material": "Leather",
+        "materialVariant": "leather",
+        "specs": [
+          "Replacement grip"
+        ],
+        "feelTags": [
+          {
+            "label": "Firm",
+            "variant": "crisp"
+          },
+          {
+            "label": "Classic",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Reference leather grip",
+        "feelExpand": "Premium cowhide with thin profile for maximum bevel feel and ball feedback.",
+        "colors": "Black, Brown",
+        "notes": "Long regarded as the reference leather replacement grip. Thin profile; leather transmits more frame feedback than synthetic, and the bevels are sharply defined for grip changes. Adds weight for a more headlight balance.",
+        "gripType": "replacement",
+        "gripFeelAttr": "leather,firm",
+        "id": "kimony-fairway-leather"
+      },
+      {
+        "name": "Expert Techni Leather",
+        "model": "KGL164",
+        "material": "Leather",
+        "materialVariant": "leather",
+        "specs": [
+          "0.80mm · 25mm × 117cm",
+          "~13g"
+        ],
+        "feelTags": [
+          {
+            "label": "Crisp",
+            "variant": "crisp"
+          },
+          {
+            "label": "Precise",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Thinnest leather available",
+        "feelExpand": "At 0.80mm and 13g, reduces grip size by nearly one full size versus synthetic replacements.",
+        "colors": "Black, Wine, Brown",
+        "notes": "The thinnest leather replacement grip available. Premium cowhide, manufactured and processed in Japan. At 0.80mm and 13g, reduces grip size by about one size vs synthetic replacements without adding weight. Superior bevel feel for precise grip changes. Upgraded from the discontinued KGL161 Techni Leather.",
+        "gripType": "replacement",
+        "gripFeelAttr": "leather,thin,firm",
+        "id": "kimony-expert-techni-leather"
+      },
+      {
+        "name": "Pro Leather",
+        "model": "KGL165",
+        "material": "Leather",
+        "materialVariant": "leather",
+        "specs": [
+          "1.50mm · 25mm × 117cm",
+          "~18g"
+        ],
+        "feelTags": [
+          {
+            "label": "Firm",
+            "variant": "crisp"
+          },
+          {
+            "label": "Cushioned",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Traditional leather feel",
+        "feelExpand": "Thicker leather construction for players who want classic feel with more cushioning.",
+        "colors": "Black",
+        "notes": "Thicker leather replacement for players who want leather feel with more cushioning. Higher-grade natural leather remodeled from the original line. Standard thickness comparable to other premium leather grips (Fairway, Wilson). Available in Black only.",
+        "gripType": "replacement",
+        "gripFeelAttr": "leather,cushioned",
+        "id": "kimony-pro-leather"
+      },
+      {
+        "name": "Hi-Soft Super Saikyo",
+        "model": "KGL170",
+        "material": "Synthetic (PU)",
+        "materialVariant": "wet",
+        "specs": [
+          "1.70mm · 23mm",
+          "~20g"
+        ],
+        "feelTags": [
+          {
+            "label": "Tacky",
+            "variant": "firm"
+          },
+          {
+            "label": "Cushioned",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Premium synthetic, soft",
+        "feelExpand": "Highest-grade Japanese PU replacement with a soft, tacky feel and strong grip power.",
+        "colors": "Black",
+        "notes": "Japan's highest-grade synthetic replacement grip. \"最強\" (Saikyo) means \"strongest.\" Soft feel with high grip power and excellent durability. Polyurethane construction. A premium synthetic alternative for players who want cushioning and tackiness in their base grip without leather's firmness. At 1.70mm and 23mm width, thicker and narrower than leather options.",
+        "gripType": "replacement",
+        "gripFeelAttr": "synthetic,tacky,cushioned",
+        "id": "kimony-hi-soft-super-saikyo"
+      }
+    ]
+  },
+  "yonex": {
+    "wet": [
+      {
+        "name": "Wet Super Grap",
+        "model": "AC102",
+        "modelVariants": [
+          "AC102-12 (12pk)",
+          "AC102-30 (30pk)",
+          "AC102-60 (60pk)"
+        ],
+        "specs": [
+          "0.60mm",
+          "25mm × 1200mm"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 88
+        },
+        "absorption": {
+          "label": "Very High",
+          "width": 82
+        },
+        "durability": {
+          "label": "Excellent",
+          "width": 90
+        },
+        "feelTags": [
+          {
+            "label": "Smooth",
+            "variant": "crisp"
+          },
+          {
+            "label": "Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Cushioned, comfortable",
+        "feelExpand": "Thicker PU construction with a soft feel that absorbs vibration and impact shock.",
+        "colors": "White, Black, Wine Red, Yellow, Green, Purple, Orange, Citrus Green, Turquoise + more",
+        "packSizes": "3 / 12 / 30 / 60",
+        "notes": "Yonex's flagship overgrip since 1987 – one of the world's best-selling grips. PU construction provides excellent tackiness, shock absorption, and durability. Thicker than many competitors at 0.60mm for good cushioning. White version is notably tackier than colored variants. Recently rebranded from \"Super Grap\" to \"Wet Super Grap\" (same product). Used by Wawrinka, Tiafoe, and Shapovalov.",
+        "gripType": "wet",
+        "gripFeelAttr": "smooth,tacky,cushioned",
+        "id": "yonex-wet-super-grap"
+      },
+      {
+        "name": "Wet Super Grap (JP)",
+        "model": "AC103",
+        "modelVariants": [],
+        "specs": [
+          "0.60mm",
+          "25mm × 1200mm"
+        ],
+        "tackiness": {
+          "label": "Elite",
+          "width": 93
+        },
+        "absorption": {
+          "label": "Very High",
+          "width": 82
+        },
+        "durability": {
+          "label": "Excellent",
+          "width": 88
+        },
+        "feelTags": [
+          {
+            "label": "Smooth",
+            "variant": "crisp"
+          },
+          {
+            "label": "Ultra-Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Made in Japan",
+        "feelExpand": "Japan-manufactured version with enhanced tackiness over the standard Indonesian production.",
+        "colors": "White, Black, Pink, Yellow, Red + more",
+        "packSizes": "1 / 3",
+        "notes": "The Japan-made version of the Super Grap with enhanced tackiness. Same dimensions as the AC102 but with a grippier, wetter feel. Primarily available through Japanese retailers. The premium choice for players who want the tackiest possible Super Grap experience. Celebrating its 30th+ anniversary.",
+        "gripType": "wet",
+        "gripFeelAttr": "smooth,tacky",
+        "id": "yonex-wet-super-grap-jp"
+      },
+      {
+        "name": "Super Grap Pure",
+        "model": "AC108",
+        "modelVariants": [],
+        "specs": [
+          "0.60mm",
+          "25mm × 1200mm"
+        ],
+        "tackiness": {
+          "label": "High",
+          "width": 82
+        },
+        "absorption": {
+          "label": "High",
+          "width": 80
+        },
+        "durability": {
+          "label": "Very Good",
+          "width": 84
+        },
+        "feelTags": [
+          {
+            "label": "Smooth",
+            "variant": "crisp"
+          },
+          {
+            "label": "Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Absorbent, comfortable",
+        "feelExpand": "Good moisture management with a cushioned, comfortable hand feel.",
+        "colors": "White, Black, Yellow, Gray, Orange, Citrus Green, Pink, French Pink",
+        "packSizes": "1 / 3",
+        "notes": "A refined variant of the Super Grap tuned for comfort and long-session wear. Combines tackiness with enhanced absorbency for a balanced feel. Same 0.60mm PU construction. Wider color range than the standard AC102. A good middle ground between max tackiness and moisture management.",
+        "gripType": "wet",
+        "gripFeelAttr": "smooth,tacky,absorbent",
+        "id": "yonex-super-grap-pure"
+      },
+      {
+        "name": "Wave Grap",
+        "model": "AC104",
+        "modelVariants": [],
+        "specs": [
+          "0.60–2.60mm",
+          "28mm × 1020mm"
+        ],
+        "tackiness": {
+          "label": "High",
+          "width": 78
+        },
+        "absorption": {
+          "label": "Moderate",
+          "width": 62
+        },
+        "durability": {
+          "label": "Good",
+          "width": 68
+        },
+        "feelTags": [
+          {
+            "label": "Cushioned",
+            "variant": "soft"
+          },
+          {
+            "label": "Ribbed",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Natural rubber center strip",
+        "feelExpand": "Raised rubber ridge spirals down the grip for added cushioning and contoured feel.",
+        "colors": "Black, Yellow",
+        "packSizes": "1",
+        "notes": "Super Grap base with a natural rubber cushion strip spiraling down the center. The raised ridge increases comfort and shock absorption. Variable thickness (0.60mm base to 2.60mm at ridge). Slightly wider at 28mm and shorter at 1020mm than standard grips. Similar concept to Kimony's Ana Spiral. Adds cushioning and a contoured feel.",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky,cushioned,ribbed",
+        "id": "yonex-wave-grap"
+      },
+      {
+        "name": "Clean Grap",
+        "model": "AC147",
+        "modelVariants": [],
+        "specs": [
+          "0.60mm",
+          "25mm × 1200mm"
+        ],
+        "tackiness": {
+          "label": "High",
+          "width": 83
+        },
+        "absorption": {
+          "label": "High",
+          "width": 78
+        },
+        "durability": {
+          "label": "Very Good",
+          "width": 82
+        },
+        "feelTags": [
+          {
+            "label": "Smooth",
+            "variant": "crisp"
+          },
+          {
+            "label": "Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Anti-bacterial & deodorizing",
+        "feelExpand": "Antibacterial agent reduces bacteria by 90% while maintaining the standard Super Grap feel.",
+        "colors": "Black, White/Grey, White/Blue",
+        "packSizes": "3",
+        "notes": "Super Grap with Yonex's \"Odourless\" antibacterial and deodorizing agent. Reduces bacteria buildup by 90% while maintaining the same wet/tacky feel and grip performance. Materials produced in Japan, cut in Indonesia. Replace when the printed pattern on the surface fades. Aimed at frequent play, with the hygiene benefit and an unchanged Super Grap feel.",
+        "gripType": "wet",
+        "gripFeelAttr": "smooth,tacky",
+        "id": "yonex-clean-grap"
+      }
+    ],
+    "dry": [
+      {
+        "name": "Dry Grap",
+        "model": "AC140",
+        "modelVariants": [],
+        "specs": [
+          "0.65mm",
+          "25mm × 1200mm"
+        ],
+        "tackiness": {
+          "label": "Low",
+          "width": 25
+        },
+        "absorption": {
+          "label": "Very High",
+          "width": 88
+        },
+        "durability": {
+          "label": "Good",
+          "width": 62
+        },
+        "feelTags": [
+          {
+            "label": "Dry",
+            "variant": "crisp"
+          },
+          {
+            "label": "Absorbent",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Smooth, soft dry feel",
+        "feelExpand": "PU dry-type surface provides sweat absorption without the papery texture of felt grips.",
+        "colors": "Black, White, Coral Red, Citrus Green",
+        "packSizes": "3",
+        "notes": "Yonex's original dry-type overgrip. PU construction provides a smooth, dry surface with excellent sweat absorption. At 0.65mm, slightly thicker than the standard Super Grap. Gets grippier as it absorbs moisture. Designed for heavy sweat without a tacky surface. Comparable to Tourna Grip's concept but with a smoother, softer surface feel.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,absorbent",
+        "id": "yonex-dry-grap"
+      },
+      {
+        "name": "Dry Super Grap",
+        "model": "AC149",
+        "modelVariants": [
+          "AC149-30 (30pk)",
+          "AC149-60 (60pk)"
+        ],
+        "specs": [
+          "0.45mm",
+          "27mm × 1100mm"
+        ],
+        "tackiness": {
+          "label": "Moderate",
+          "width": 42
+        },
+        "absorption": {
+          "label": "Excellent",
+          "width": 92
+        },
+        "durability": {
+          "label": "Very Good",
+          "width": 78
+        },
+        "feelTags": [
+          {
+            "label": "Thin",
+            "variant": "crisp"
+          },
+          {
+            "label": "Dry-Tacky",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Maintains tack when wet",
+        "feelExpand": "Retains impressive grip security even during heavy perspiration.",
+        "colors": "White, Black",
+        "packSizes": "3 / 30 / 60",
+        "notes": "The premium dry overgrip in the Yonex lineup. At just 0.45mm, it's one of the thinnest overgrips available – minimal grip size increase with excellent bevel feel. Wider at 27mm but shorter at 1100mm than the standard grips. Maintains impressive tack even during extreme perspiration. The Yonex dry grip that keeps the most tack under heavy sweat.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,thin",
+        "id": "yonex-dry-super-grap"
+      }
+    ],
+    "replacement": [
+      {
+        "name": "Ultimum Leather",
+        "model": "AC221",
+        "material": "Leather",
+        "materialVariant": "leather",
+        "specs": [
+          "1.40mm · 27mm × 1000mm",
+          "~37g"
+        ],
+        "feelTags": [
+          {
+            "label": "Firm",
+            "variant": "crisp"
+          },
+          {
+            "label": "Classic",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Premium 100% leather",
+        "feelExpand": "Thin, firm cowhide for direct racquet feedback and precise grip changes.",
+        "colors": "Brown, Black",
+        "notes": "Yonex's premium 100% leather replacement grip. Thin at 1.40mm for excellent bevel feel and direct feedback. At 37g, adds useful weight to the handle for a more headlight balance. A thin, firm leather base that transmits frame feedback directly; commonly used under an overgrip such as Super Grap.",
+        "gripType": "replacement",
+        "gripFeelAttr": "leather,firm",
+        "id": "yonex-ultimum-leather"
+      },
+      {
+        "name": "Synthetic Leather Tour Grip",
+        "model": "AC126",
+        "material": "Synthetic (PU)",
+        "materialVariant": "wet",
+        "specs": [
+          "1.60mm · 25mm × 1200mm"
+        ],
+        "feelTags": [
+          {
+            "label": "Firm",
+            "variant": "crisp"
+          },
+          {
+            "label": "Leather-like",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Mimics leather feel",
+        "feelExpand": "Synthetic PU engineered to replicate leather's firm bevel feel with better moisture handling.",
+        "colors": "Black",
+        "notes": "Designed to mimic natural leather feel with the benefits of synthetic PU – better sweat absorption and a slightly softer touch. At 1.60mm, one of the thinnest synthetic grips available. Great for players who want leather-like bevel feel with improved moisture management. A compromise between leather's firm feedback and synthetic's cushioned response.",
+        "gripType": "replacement",
+        "gripFeelAttr": "synthetic,firm",
+        "id": "yonex-synthetic-leather-tour-grip"
+      },
+      {
+        "name": "Synthetic Leather Excel Grip",
+        "model": "AC117",
+        "material": "Synthetic (PU)",
+        "materialVariant": "wet",
+        "specs": [
+          "1.60mm · 25mm × 1200mm"
+        ],
+        "feelTags": [
+          {
+            "label": "Tacky",
+            "variant": "firm"
+          },
+          {
+            "label": "Cushioned",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Dimpled surface texture",
+        "feelExpand": "Raised dots increase hand contact area for improved grip security under pressure.",
+        "colors": "Black, White",
+        "notes": "Extra-firm synthetic replacement grip with a dimpled surface for maximized gripping performance. PU construction at 1.60mm provides good cushioning while maintaining feedback. The dimpled texture increases surface area contact for better hold. Comes pre-installed on many Yonex racquets. The standard Yonex replacement grip – reliable and widely available.",
+        "gripType": "replacement",
+        "gripFeelAttr": "synthetic,tacky,cushioned",
+        "id": "yonex-synthetic-leather-excel-grip"
+      }
+    ]
+  },
+  "tourna": {
+    "wet": [
+      {
+        "name": "Tac",
+        "model": "TAC-1",
+        "modelVariants": [
+          "TAC-3 (3-pack)",
+          "TAC-10 (10-pack)"
+        ],
+        "specs": [
+          "Wet/tacky",
+          "Made in USA",
+          "0.55 mm thick"
+        ],
+        "tackiness": {
+          "label": "High",
+          "width": 80
+        },
+        "absorption": {
+          "label": "Med-Low",
+          "width": 45
+        },
+        "durability": {
+          "label": "Medium",
+          "width": 60
+        },
+        "feelTags": [
+          {
+            "label": "Tacky",
+            "variant": "crisp"
+          }
+        ],
+        "feelSummary": "Wet/tacky overgrip",
+        "feelExpand": "Tourna's wet/tacky overgrip, similar in profile to Kimony Hi-Soft EX and Punch.",
+        "colors": "Black, White, Blue, Pink",
+        "packSizes": "1 / 3 / 10",
+        "notes": "Conventional wet/tacky overgrip in the same class as Kimony Hi-Soft EX / Punch and Yonex Wet Super Grap. Tourna's reputation rests on its dry grip; Tac is the brand's tacky option.",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky",
+        "id": "tourna-tac"
+      },
+      {
+        "name": "Mega Tac",
+        "model": "MEGA-1",
+        "modelVariants": [
+          "MEGA-3 (3-pack)",
+          "MEGA-10 (10-pack)"
+        ],
+        "specs": [
+          "Wet/very tacky",
+          "Made in USA",
+          "0.60 mm thick"
+        ],
+        "tackiness": {
+          "label": "Very High",
+          "width": 92
+        },
+        "absorption": {
+          "label": "Low",
+          "width": 35
+        },
+        "durability": {
+          "label": "Medium",
+          "width": 60
+        },
+        "feelTags": [
+          {
+            "label": "Very Tacky",
+            "variant": "crisp"
+          }
+        ],
+        "feelSummary": "Maximum stickiness",
+        "feelExpand": "Tourna's highest-tack grip, at the cost of easy grip changes.",
+        "colors": "Black, White, Blue, Pink",
+        "packSizes": "1 / 3 / 10",
+        "notes": "Tourna's highest-tack grip, with low absorption. The level of stick makes mid-point grip changes noticeably harder; it is aimed at very dry hands. (Earlier notes said it out-grips every wet grip here - the tackiness data puts Kimony Hi-Soft EX and Yonex Super Grap JP higher.)",
+        "gripType": "wet",
+        "gripFeelAttr": "tacky",
+        "id": "tourna-mega-tac"
+      }
+    ],
+    "dry": [
+      {
+        "name": "Tourna Grip Original",
+        "model": "XL-1 (single)",
+        "modelVariants": [
+          "XL-3 (3-pack)",
+          "XL-10 (10-pack)",
+          "XL-30 (30-pack tour)"
+        ],
+        "specs": [
+          "Dry",
+          "Made in USA",
+          "0.45 mm thick"
+        ],
+        "tackiness": {
+          "label": "Low",
+          "width": 18
+        },
+        "absorption": {
+          "label": "Elite",
+          "width": 96
+        },
+        "durability": {
+          "label": "Low",
+          "width": 30
+        },
+        "feelTags": [
+          {
+            "label": "Dry",
+            "variant": "round"
+          },
+          {
+            "label": "Classic",
+            "variant": "crisp"
+          }
+        ],
+        "feelSummary": "Reference dry grip",
+        "feelExpand": "The original 1970s blue dry grip. The most copied overgrip in tennis. Highest raw absorption in the category, but designed to be replaced frequently — typical tour pro changes it every match.",
+        "colors": "Blue",
+        "packSizes": "1 / 3 / 10 / 30",
+        "notes": "The reference dry overgrip, with the highest absorption rating in the database. Trade-off: durability is intentionally low (the absorption mechanism wears the surface). For comparison: Kimony Last Dry has subtle tackiness and ~3x the durability; Yonex Dry Grap is similar to Tourna but slightly less absorbent.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,absorbent",
+        "id": "tourna-tourna-grip-original"
+      },
+      {
+        "name": "Tourna Grip XL",
+        "model": "TG-XL",
+        "modelVariants": [],
+        "specs": [
+          "Dry",
+          "Made in USA",
+          "0.45 mm",
+          "Extra long"
+        ],
+        "tackiness": {
+          "label": "Low",
+          "width": 18
+        },
+        "absorption": {
+          "label": "Elite",
+          "width": 96
+        },
+        "durability": {
+          "label": "Low",
+          "width": 30
+        },
+        "feelTags": [
+          {
+            "label": "Dry",
+            "variant": "round"
+          },
+          {
+            "label": "Long",
+            "variant": "crisp"
+          }
+        ],
+        "feelSummary": "Original, longer",
+        "feelExpand": "Same blue Tourna formula but longer to fit oversize handles or to add coverage on butt cap. Identical playing characteristics.",
+        "colors": "Blue",
+        "packSizes": "1 / 3 / 10",
+        "notes": "For longer handles (16″ extended-length racquets), or for extra overlap and cushion when wrapping. Otherwise identical to the Original.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,absorbent",
+        "id": "tourna-tourna-grip-xl"
+      },
+      {
+        "name": "Tourna Grip Pro Thin",
+        "model": "TG-PT",
+        "modelVariants": [],
+        "specs": [
+          "Dry",
+          "Made in USA",
+          "0.40 mm thick"
+        ],
+        "tackiness": {
+          "label": "Low",
+          "width": 18
+        },
+        "absorption": {
+          "label": "High",
+          "width": 88
+        },
+        "durability": {
+          "label": "Low",
+          "width": 30
+        },
+        "feelTags": [
+          {
+            "label": "Dry",
+            "variant": "round"
+          },
+          {
+            "label": "Thin",
+            "variant": "crisp"
+          }
+        ],
+        "feelSummary": "Pro thin variant",
+        "feelExpand": "Thinner version of the original. Passes more bevel feel through from the underlying grip while keeping Tourna's dry surface.",
+        "colors": "Blue, White",
+        "packSizes": "1 / 3 / 10",
+        "notes": "Slightly less absorbent than the Original because of the thinner construction. Passes more bevel definition through from the base grip — most noticeable over a fresh leather grip.",
+        "gripType": "dry",
+        "gripFeelAttr": "dry,absorbent,thin",
+        "id": "tourna-tourna-grip-pro-thin"
+      }
+    ],
+    "replacement": [
+      {
+        "name": "Pro Tour Leather",
+        "model": "TLEATH-1",
+        "material": "Leather",
+        "materialVariant": "leather",
+        "specs": [
+          "Replacement grip",
+          "Made in USA",
+          "Premium calf leather"
+        ],
+        "feelTags": [
+          {
+            "label": "Firm",
+            "variant": "crisp"
+          },
+          {
+            "label": "Classic",
+            "variant": "firm"
+          }
+        ],
+        "feelSummary": "Premium leather",
+        "feelExpand": "Tourna's answer to Babolat VS Original and Fairway Leather. Calf leather construction with a slightly more textured surface than Fairway.",
+        "colors": "Black, Brown",
+        "notes": "An alternative to Kimony's Fairway Leather: slightly more textured surface, bevels a touch sharper. Less widely stocked than Fairway. Pricing typically €18-22 vs Fairway's €25-30.",
+        "gripType": "replacement",
+        "gripFeelAttr": "leather,firm",
+        "id": "tourna-pro-tour-leather"
+      },
+      {
+        "name": "Synthetic Pro",
+        "model": "TSYN-1",
+        "material": "Synthetic",
+        "materialVariant": "synthetic",
+        "specs": [
+          "Replacement grip",
+          "~1.6 mm thick",
+          "Cushioned"
+        ],
+        "feelTags": [
+          {
+            "label": "Cushioned",
+            "variant": "soft"
+          }
+        ],
+        "feelSummary": "Cushioned PU",
+        "feelExpand": "Polyurethane synthetic replacement grip. Soft cushion-feel, similar to Wilson Pro Performance or Head HydroSorb.",
+        "colors": "Black",
+        "notes": "Conventional cushioned synthetic. Most players already get this from their racquet manufacturer (Yonex Excel Pro, etc.); the Tourna version is competitive but not distinctive.",
+        "gripType": "replacement",
+        "gripFeelAttr": "synthetic,cushioned",
+        "id": "tourna-synthetic-pro"
+      }
+    ]
+  }
+}

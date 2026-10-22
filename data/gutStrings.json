@@ -1,0 +1,24 @@
+[
+  {
+    "id": "gut-babolat-vs-touch",
+    "brand": "babolat",
+    "name": "Babolat VS Touch",
+    "gauges": [
+      "1.30 / 16",
+      "1.35 / 15L"
+    ],
+    "description": "The reference natural gut since 1925. BT7 Thermogut coating for moisture resistance. Premium feel and exceptional tension stability.",
+    "priceNote": "~€42-50/set"
+  },
+  {
+    "id": "gut-wilson-natural",
+    "brand": "wilson",
+    "name": "Wilson Natural Gut",
+    "gauges": [
+      "1.25 / 17",
+      "1.30 / 16"
+    ],
+    "description": "Historically manufactured by Babolat for Wilson. Often plays similarly to VS Touch with a different coating. 17 gauge is the thinnest mainstream gut available.",
+    "priceNote": "~€35-42/set"
+  }
+]

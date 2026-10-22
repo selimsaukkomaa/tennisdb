@@ -1,0 +1,665 @@
+{
+  "regna": [
+    {
+      "id": "gh-regna-1",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "crosses": {
+        "string": "ALU Power",
+        "gauge": "1.25 / 16L",
+        "stringId": "luxilon-alu-power"
+      },
+      "feelLabel": "Plush · Powerful",
+      "power": {
+        "label": "Very High",
+        "width": 88
+      },
+      "spin": {
+        "label": "Med",
+        "width": 60
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 90
+      },
+      "gutProtection": {
+        "label": "High",
+        "width": 82
+      },
+      "tension": "26/24",
+      "notes": "The Federer configuration: gut mains over ALU Power crosses. ALU's smooth surface is gentle on the gut and gives the bed a firm, controlled floor under the gut's power and dwell. The open 16×19 already spins well, so a round cross costs little here and extends gut life (15+ hours typical). Plush, powerful, all-court."
+    },
+    {
+      "id": "gh-regna-2",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "crosses": {
+        "string": "Caviar",
+        "gauge": "1.20 / 17",
+        "stringId": "toroline-caviar"
+      },
+      "feelLabel": "Med-Firm · Lively",
+      "power": {
+        "label": "High",
+        "width": 80
+      },
+      "spin": {
+        "label": "High",
+        "width": 78
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 90
+      },
+      "gutProtection": {
+        "label": "Med-Low",
+        "width": 50
+      },
+      "tension": "26/23",
+      "notes": "Gut mains over Caviar hex crosses: more bite than the ALU version, at the cost of gut life — hex edges saw at the mains, so expect 6–8 hours rather than 15+. Livelier, firmer contact than ALU Power crosses. A frequent-restring setup."
+    },
+    {
+      "id": "gh-regna-3",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Wilson Natural Gut",
+        "gauge": "1.25 / 17",
+        "stringId": "gut-wilson-natural"
+      },
+      "crosses": {
+        "string": "ALU Power Soft",
+        "gauge": "1.25 / 16L",
+        "stringId": "luxilon-alu-power-soft"
+      },
+      "feelLabel": "Plush · Soft",
+      "power": {
+        "label": "Very High",
+        "width": 90
+      },
+      "spin": {
+        "label": "Med-Low",
+        "width": 50
+      },
+      "comfort": {
+        "label": "Very Good",
+        "width": 85
+      },
+      "gutProtection": {
+        "label": "Very High",
+        "width": 88
+      },
+      "tension": "25/23",
+      "notes": "The softest gut hybrid here: thinner Wilson 17 mains add elasticity, ALU Power Soft's 0.85 kg/mm keeps the crosses from firming the bed up. Very high power and dwell, plush contact, spin modest from two round strings in the open pattern. Gut life is long with a smooth, soft cross."
+    },
+    {
+      "id": "gh-regna-4",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "Caviar",
+        "gauge": "1.24 / 16L",
+        "stringId": "toroline-caviar"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Med-Firm · Crisp",
+      "power": {
+        "label": "Med-High",
+        "width": 70
+      },
+      "spin": {
+        "label": "High",
+        "width": 78
+      },
+      "comfort": {
+        "label": "Very Good",
+        "width": 85
+      },
+      "gutProtection": null,
+      "tension": "24/26",
+      "notes": "Djokovic-style poly-mains configuration: Caviar mains set spin and low launch; gut crosses add power, feel and comfort. Crosses move less than mains, so the gut lasts noticeably longer (~12–15 hours) — the economical way to run gut. Firmer, more controlled bed than the gut-mains versions."
+    },
+    {
+      "id": "gh-regna-5",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "O-Toro Tour",
+        "gauge": "1.25 / 16L",
+        "stringId": "toroline-o-toro-tour"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Firm · Crisp",
+      "power": {
+        "label": "Med",
+        "width": 62
+      },
+      "spin": {
+        "label": "Med-High",
+        "width": 72
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 90
+      },
+      "gutProtection": null,
+      "tension": "23/25",
+      "notes": "O-Toro Tour hex mains over gut crosses: the mains' 1.10 stiffness and tension stability define a firm, low-launch bed; gut crosses add dwell and feel. Hex edges wear the gut less as crosses than they would as mains. Higher power than the Caviar version, same firm launch."
+    },
+    {
+      "id": "gh-regna-6",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "4G",
+        "gauge": "1.30 / 16",
+        "stringId": "luxilon-4g"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Very Firm · Stable",
+      "power": {
+        "label": "Med-Low",
+        "width": 55
+      },
+      "spin": {
+        "label": "Med",
+        "width": 60
+      },
+      "comfort": {
+        "label": "Outstanding",
+        "width": 95
+      },
+      "gutProtection": null,
+      "tension": "23/25",
+      "notes": "Djokovic's actual pairing: 4G mains over gut crosses. 4G's lockdown control and exceptional tension hold, gut's feel and comfort in the crosses. The lowest-powered gut hybrid here — round, very firm mains — with the best tension stability of any pairing in this section."
+    },
+    {
+      "id": "gh-regna-7",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "Tour Bite",
+        "gauge": "1.20 / 17",
+        "stringId": "solinco-tour-bite"
+      },
+      "crosses": {
+        "string": "Wilson Natural Gut",
+        "gauge": "1.25 / 17",
+        "stringId": "gut-wilson-natural"
+      },
+      "feelLabel": "Firm · Lively",
+      "power": {
+        "label": "Med",
+        "width": 60
+      },
+      "spin": {
+        "label": "Very High",
+        "width": 88
+      },
+      "comfort": {
+        "label": "Very Good",
+        "width": 80
+      },
+      "gutProtection": null,
+      "tension": "22/24",
+      "notes": "Spin-oriented: Tour Bite 1.20 square mains over Wilson 17 gut crosses. Square edges supply bite, the thin gut crosses add elasticity and power. Firm mains make this the least plush gut configuration here; the gut in the crosses sees less wear than it would under square mains."
+    }
+  ],
+  "percept": [
+    {
+      "id": "gh-percept-1",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "crosses": {
+        "string": "ALU Power Soft",
+        "gauge": "1.25 / 16L",
+        "stringId": "luxilon-alu-power-soft"
+      },
+      "feelLabel": "Plush · Round",
+      "power": {
+        "label": "Very High",
+        "width": 92
+      },
+      "spin": {
+        "label": "Med",
+        "width": 58
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 92
+      },
+      "gutProtection": {
+        "label": "Very High",
+        "width": 88
+      },
+      "tension": "24/22",
+      "notes": "Gut mains over ALU Power Soft crosses: maximum dwell in a firm, low-powered frame — the gut adds power and the soft cross keeps the bed from firming up through the 18×19. ALU Power Soft is gentle on the gut. Two round strings, so spin relies on what the pattern allows. Plush, powerful."
+    },
+    {
+      "id": "gh-percept-2",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "crosses": {
+        "string": "Caviar",
+        "gauge": "1.20 / 17",
+        "stringId": "toroline-caviar"
+      },
+      "feelLabel": "Med-Firm · Lively",
+      "power": {
+        "label": "High",
+        "width": 82
+      },
+      "spin": {
+        "label": "Med-High",
+        "width": 72
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 90
+      },
+      "gutProtection": {
+        "label": "Med-Low",
+        "width": 50
+      },
+      "tension": "24/21",
+      "notes": "Gut mains over Caviar hex crosses: the hex edges give the 18×19 the bite two round strings can't, at the cost of gut life — plan on 7–9 hours. Firmer, livelier contact than the ALU Power Soft version. The spin-forward gut-mains option on this frame."
+    },
+    {
+      "id": "gh-percept-3",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Wilson Natural Gut",
+        "gauge": "1.25 / 17",
+        "stringId": "gut-wilson-natural"
+      },
+      "crosses": {
+        "string": "ALU Power",
+        "gauge": "1.25 / 16L",
+        "stringId": "luxilon-alu-power"
+      },
+      "feelLabel": "Plush · Crisp",
+      "power": {
+        "label": "High",
+        "width": 80
+      },
+      "spin": {
+        "label": "Med",
+        "width": 60
+      },
+      "comfort": {
+        "label": "Very Good",
+        "width": 85
+      },
+      "gutProtection": {
+        "label": "High",
+        "width": 80
+      },
+      "tension": "24/22",
+      "notes": "Wilson 17 gut mains over ALU Power crosses: thinner, livelier gut than VS Touch 16, with a firmer cross than ALU Power Soft. The bed sits between the plush ALU Soft pairing and the poly-mains configurations — more definition, less dwell. Round-on-round; spin from the pattern only."
+    },
+    {
+      "id": "gh-percept-4",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "Caviar",
+        "gauge": "1.24 / 16L",
+        "stringId": "toroline-caviar"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Med-Firm · Crisp",
+      "power": {
+        "label": "Med-High",
+        "width": 70
+      },
+      "spin": {
+        "label": "Med-High",
+        "width": 75
+      },
+      "comfort": {
+        "label": "Very Good",
+        "width": 85
+      },
+      "gutProtection": null,
+      "tension": "23/25",
+      "notes": "Caviar mains over gut crosses: the hex mains handle the 18×19's spin tax, gut crosses add power and feel a low-powered frame can use. Crosses move less than mains, so gut life is long. A firmer, lower-launch bed than any gut-mains pairing here."
+    },
+    {
+      "id": "gh-percept-5",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "ALU Power Spin",
+        "gauge": "1.27 / 16L",
+        "stringId": "luxilon-alu-power-spin"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Firm · Shaped",
+      "power": {
+        "label": "Med",
+        "width": 62
+      },
+      "spin": {
+        "label": "High",
+        "width": 80
+      },
+      "comfort": {
+        "label": "Very Good",
+        "width": 82
+      },
+      "gutProtection": null,
+      "tension": "22/24",
+      "notes": "ALU Power Spin pentagonal mains over gut crosses: sharper edge bite than the Caviar version for the dense pattern, with gut supplying dwell and feel. Both materials hold tension well, so this is a long-life setup. Firm-launching, medium contact through the 66 RA."
+    },
+    {
+      "id": "gh-percept-6",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "O-Toro Tour",
+        "gauge": "1.25 / 16L",
+        "stringId": "toroline-o-toro-tour"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Firm · Crisp",
+      "power": {
+        "label": "Med",
+        "width": 60
+      },
+      "spin": {
+        "label": "Med-High",
+        "width": 72
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 88
+      },
+      "gutProtection": null,
+      "tension": "22/24",
+      "notes": "O-Toro Tour hex mains over gut crosses: the mains' tension stability and the gut's slow elasticity decline both hold up over time — a pairing that changes little across its life. Firm, low launch, hex bite for the 18×19, gut dwell in the crosses."
+    },
+    {
+      "id": "gh-percept-7",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "4G",
+        "gauge": "1.30 / 16",
+        "stringId": "luxilon-4g"
+      },
+      "crosses": {
+        "string": "Wilson Natural Gut",
+        "gauge": "1.25 / 17",
+        "stringId": "gut-wilson-natural"
+      },
+      "feelLabel": "Very Firm · Stable",
+      "power": {
+        "label": "Med-Low",
+        "width": 52
+      },
+      "spin": {
+        "label": "Med",
+        "width": 58
+      },
+      "comfort": {
+        "label": "Outstanding",
+        "width": 95
+      },
+      "gutProtection": null,
+      "tension": "21/23",
+      "notes": "4G mains over Wilson 17 gut crosses: maximum tension lockdown from 4G plus gut's elastic recovery — one of the longest-lasting hybrids available. Round, very firm mains in a low-powered frame make this the lowest-powered gut pairing on the Percept; the gut adds comfort, not pace."
+    }
+  ],
+  "headpt630": [
+    {
+      "id": "gh-pt630-1",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "crosses": {
+        "string": "Caviar",
+        "gauge": "1.20 / 17",
+        "stringId": "toroline-caviar"
+      },
+      "feelLabel": "Plush · Hex Bite",
+      "power": {
+        "label": "High",
+        "width": 80
+      },
+      "spin": {
+        "label": "High",
+        "width": 78
+      },
+      "comfort": {
+        "label": "Outstanding",
+        "width": 95
+      },
+      "gutProtection": {
+        "label": "Med",
+        "width": 60
+      },
+      "tension": "22/19",
+      "notes": "Gut mains over Caviar hex crosses: the hex crosses supply the edge bite the 18×20 can't get elsewhere, and the 58 RA frame absorbs enough of the edges' aggression that gut life runs longer than the Regna equivalent (~9–11 hours). Twaron damping plus gut makes a very quiet, high-dwell bed."
+    },
+    {
+      "id": "gh-pt630-2",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "crosses": {
+        "string": "ALU Power Spin",
+        "gauge": "1.27 / 16L",
+        "stringId": "luxilon-alu-power-spin"
+      },
+      "feelLabel": "Plush · Shaped",
+      "power": {
+        "label": "High",
+        "width": 78
+      },
+      "spin": {
+        "label": "High",
+        "width": 78
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 90
+      },
+      "gutProtection": {
+        "label": "Med-High",
+        "width": 70
+      },
+      "tension": "22/19",
+      "notes": "Gut mains over ALU Power Spin pentagonal crosses: slightly gentler on the gut than Caviar's hex edges while still giving the 18×20 a shaped cross. A touch more power and forgiveness than the Caviar version, with the same plush gut contact."
+    },
+    {
+      "id": "gh-pt630-3",
+      "config": "gut-mains",
+      "mains": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.35 / 15L",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "crosses": {
+        "string": "ALU Power Rough",
+        "gauge": "1.25 / 16L",
+        "stringId": "luxilon-alu-power-rough"
+      },
+      "feelLabel": "Plush · Textured",
+      "power": {
+        "label": "Very High",
+        "width": 88
+      },
+      "spin": {
+        "label": "Med-High",
+        "width": 70
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 90
+      },
+      "gutProtection": {
+        "label": "High",
+        "width": 78
+      },
+      "tension": "22/19",
+      "notes": "Thicker 15L gut mains over ALU Power Rough crosses: the 1.35 gauge maximises gut durability, the main concern in a dense pattern, and the textured round cross adds friction where a smooth cross would leave the 18×20 spin-poor. More power, a little less spin than the shaped-cross versions."
+    },
+    {
+      "id": "gh-pt630-4",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "Caviar",
+        "gauge": "1.24 / 16L",
+        "stringId": "toroline-caviar"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Med-Firm · Crisp",
+      "power": {
+        "label": "Med",
+        "width": 60
+      },
+      "spin": {
+        "label": "Med-High",
+        "width": 72
+      },
+      "comfort": {
+        "label": "Very Good",
+        "width": 85
+      },
+      "gutProtection": null,
+      "tension": "21/23",
+      "notes": "The Murray PT57A configuration: Caviar mains over gut crosses. Hex mains handle the dense pattern's spin demand and hold launch low; gut crosses add the power a low-RA frame lacks. Crosses move less, so gut life is long — the economical gut option on this frame."
+    },
+    {
+      "id": "gh-pt630-5",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "4G",
+        "gauge": "1.30 / 16",
+        "stringId": "luxilon-4g"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Very Firm · Stable",
+      "power": {
+        "label": "Med-Low",
+        "width": 52
+      },
+      "spin": {
+        "label": "Med",
+        "width": 60
+      },
+      "comfort": {
+        "label": "Outstanding",
+        "width": 95
+      },
+      "gutProtection": null,
+      "tension": "20/22",
+      "notes": "4G mains over gut crosses in the 58 RA frame: the flex softens 4G's very firm response, and the gut crosses add the dwell a dense pattern otherwise lacks. Exceptional tension stability from both materials. Round mains leave the 18×20 with limited spin access."
+    },
+    {
+      "id": "gh-pt630-6",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "Adrenaline",
+        "gauge": "1.25 / 16L",
+        "stringId": "luxilon-adrenaline"
+      },
+      "crosses": {
+        "string": "Babolat VS Touch",
+        "gauge": "1.30 / 16",
+        "stringId": "gut-babolat-vs-touch"
+      },
+      "feelLabel": "Firm · Sharp",
+      "power": {
+        "label": "Med",
+        "width": 60
+      },
+      "spin": {
+        "label": "High",
+        "width": 80
+      },
+      "comfort": {
+        "label": "Very Good",
+        "width": 82
+      },
+      "gutProtection": null,
+      "tension": "20/22",
+      "notes": "Adrenaline pentagonal mains over gut crosses: sharper edges than the Caviar version for more aggressive bite in the 18×20. Gut crosses bring power and dwell against the firm mains. Firm-launching, medium contact after the 58 RA flex does its work."
+    },
+    {
+      "id": "gh-pt630-7",
+      "config": "gut-crosses",
+      "mains": {
+        "string": "O-Toro Tour",
+        "gauge": "1.25 / 16L",
+        "stringId": "toroline-o-toro-tour"
+      },
+      "crosses": {
+        "string": "Wilson Natural Gut",
+        "gauge": "1.25 / 17",
+        "stringId": "gut-wilson-natural"
+      },
+      "feelLabel": "Firm · Crisp",
+      "power": {
+        "label": "Med",
+        "width": 60
+      },
+      "spin": {
+        "label": "Med-High",
+        "width": 70
+      },
+      "comfort": {
+        "label": "Excellent",
+        "width": 88
+      },
+      "gutProtection": null,
+      "tension": "20/22",
+      "notes": "O-Toro Tour hex mains over Wilson 17 gut crosses: the thinner gut adds slightly more elasticity than VS Touch 16 in the dense pattern; the mains' tension stability pairs with gut's slow decline. A lower-cost gut option — Wilson runs cheaper than VS Touch."
+    }
+  ]
+}
