@@ -5,12 +5,15 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { beforeAll, describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
+import { KeyValueLogStore, type KeyValueBackend } from '../../src/core/log/store';
 import type { Racquet, TennisDb } from '../../src/core/types';
 import { initCompare } from '../../src/ui/compare';
+import { initContextLine } from '../../src/ui/context-line';
 import { initFilterPanel } from '../../src/ui/filter-panel';
 import { initFilters } from '../../src/ui/filters';
 import { initGut } from '../../src/ui/gut';
-import { currentIndex, initSearch } from '../../src/ui/search';
+import { initLog, logSearchEntries } from '../../src/ui/log';
+import { currentIndex, initSearch, rebuildIndex, setLogSearchSource } from '../../src/ui/search';
 import { initNav, showRacquet } from '../../src/ui/nav';
 import { renderShell } from '../../src/ui/shell';
 
@@ -36,8 +39,17 @@ function withFourthRacquet(): TennisDb {
 }
 
 let db: TennisDb;
+const stored = new Map<string, string>();
+const memoryBackend: KeyValueBackend = {
+  async get(k) {
+    return stored.get(k) ?? null;
+  },
+  async set(k, v) {
+    stored.set(k, v);
+  },
+};
 
-beforeAll(() => {
+beforeAll(async () => {
   // Vitest runs from the project root; jsdom's URL global can't make file: paths.
   const indexHtml = readFileSync(resolve('index.html'), 'utf8');
   document.body.innerHTML = indexHtml
@@ -51,6 +63,9 @@ beforeAll(() => {
   initCompare(db);
   initGut(db, copy);
   initSearch(db);
+  setLogSearchSource(logSearchEntries);
+  initContextLine(db);
+  await initLog(db, new KeyValueLogStore(memoryBackend));
 });
 
 describe('fourth racquet from data alone', () => {
@@ -176,5 +191,66 @@ describe('search on the fourth racquet', () => {
     expect(entries.filter((i) => i.type === 'string')).toHaveLength(72);
     expect(entries.filter((i) => i.type === 'hybrid')).toHaveLength(10);
     expect(entries[0]!.sublabel).toMatch(/· Pure Strike 98$/);
+  });
+});
+
+describe('stringing log on the fourth racquet', () => {
+  const q = <T extends Element>(sel: string): T => document.querySelector<T>(sel)!;
+  const form = (): HTMLFormElement => q('.log-section[data-racquet="test4"] .log-form');
+  const fill = (stringId: string, tension: string): void => {
+    const select = form().querySelector<HTMLSelectElement>('[name="stringId"]')!;
+    select.value = stringId;
+    select.dispatchEvent(new Event('change', { bubbles: true }));
+    form().querySelector<HTMLInputElement>('[name="tension"]')!.value = tension;
+  };
+  const submit = (): void => {
+    form().dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+  };
+  const settle = (): Promise<void> => new Promise((r) => setTimeout(r, 0));
+
+  test('adding an entry stores numeric tension and updates strip, context line and search', async () => {
+    q<HTMLElement>('[data-log-toggle="test4"]').click();
+    q<HTMLElement>('[data-log-add="test4"]').click();
+    fill('toroline-caviar', ' 23 / 24 kg ');
+    q<HTMLElement>('.log-section[data-racquet="test4"] [data-star-value="4"]').click();
+    submit();
+    await settle();
+
+    const entry = q('.log-section[data-racquet="test4"] .log-entry');
+    expect(entry.querySelector('.log-entry-tension')?.textContent).toBe('@ 23/24');
+    expect(q('[data-log-toggle="test4"] .log-toggle-label').textContent).toBe('Log (1)');
+    expect(q('.context-line[data-racquet="test4"] .ctx-strung-meta').textContent).toBe(
+      '@ 23/24 kg',
+    );
+
+    const saved = JSON.parse(stored.get('tennis_log_v2')!);
+    expect(saved.entries[0]).toMatchObject({
+      racquetId: 'test4',
+      string: { id: 'toroline-caviar', name: 'Caviar' },
+      tension: { mainsKg: 23, crossesKg: 24 },
+      rating: 4,
+    });
+    rebuildIndex();
+    expect(currentIndex().find((i) => i.type === 'log')?.sublabel).toMatch(
+      /· Pure Strike 98 @ 23\/24$/,
+    );
+  });
+
+  test('unparseable tension blocks saving and marks the field', async () => {
+    q<HTMLElement>('[data-log-add="test4"]').click();
+    fill('toroline-caviar', '23-24');
+    submit();
+    await settle();
+    expect(form().querySelector('[name="tension"]')!.classList.contains('log-form-error')).toBe(
+      true,
+    );
+    expect(q('[data-log-toggle="test4"] .log-toggle-label').textContent).toBe('Log (1)');
+    q<HTMLElement>('.log-section[data-racquet="test4"] [data-form-cancel]').click();
+  });
+
+  test('the backup buttons show in the panel footer', () => {
+    const footer = q('.log-section[data-racquet="test4"] .log-panel-footer');
+    expect(footer.querySelector('[data-log-export]')?.textContent).toBe('Export log');
+    expect(footer.querySelector('[data-log-import]')?.textContent).toBe('Import log');
   });
 });

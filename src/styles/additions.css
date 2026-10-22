@@ -1,0 +1,25 @@
+/* ==========================================================================
+   v0.991 additions: rules for features v0.990 did not have. Everything above
+   this file in index.css is v0.990's stylesheet, verbatim.
+   ========================================================================== */
+
+/* Log backups: Export / Import sit at the left of the log panel footer, styled
+   like the "Clear all" link so the footer keeps its height and layout. */
+.log-backup { float: left; }
+.log-backup-btn {
+  background: transparent;
+  color: #94a3b8;
+  border: none;
+  font-size: 0.7rem;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: underline;
+  margin-right: 12px;
+}
+.log-backup-btn:hover { color: #111; }
+
+/* Unparseable tension in the log form (the select already had an error state). */
+.log-form input.log-form-error {
+  border-color: #dc2626;
+  box-shadow: 0 0 0 2px rgba(220,38,38,0.15);
+}

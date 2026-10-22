@@ -12,7 +12,7 @@ test('split stylesheets concatenate to the legacy <style> block', () => {
   const styleBody = legacy.match(/<style>\n([\s\S]*?)<\/style>/)![1]!;
   const imports = [...read('../../src/styles/index.css').matchAll(/@import '\.\/([\w-]+\.css)';/g)]
     .map((m) => m[1]!)
-    .filter((f) => f !== 'fonts.css');
+    .filter((f) => f !== 'fonts.css' && f !== 'additions.css');
   expect(imports).toHaveLength(8);
   const joined = imports.map((f) => read(`../../src/styles/${f}`)).join('');
   expect(joined).toBe(styleBody);

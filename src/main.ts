@@ -1,12 +1,15 @@
 import './styles/index.css';
 import { assembleDb, copy } from './core/db';
+import { createLogStore } from './platform/storage';
 import { initCompare } from './ui/compare';
+import { initContextLine } from './ui/context-line';
 import { initFilterPanel } from './ui/filter-panel';
 import { initFilters } from './ui/filters';
 import { initGut } from './ui/gut';
+import { initLog, logSearchEntries } from './ui/log';
 import { initNav, showCategory, showRacquet } from './ui/nav';
 import { initPalette } from './ui/palette';
-import { currentIndex, initSearch, rebuildIndex, searchNow } from './ui/search';
+import { currentIndex, initSearch, rebuildIndex, searchNow, setLogSearchSource } from './ui/search';
 import { renderShell } from './ui/shell';
 
 const db = assembleDb();
@@ -20,6 +23,9 @@ initGut(db, copy);
 // Search before the palette: a result click navigates first, then the palette closes.
 initSearch(db);
 initPalette();
+setLogSearchSource(logSearchEntries);
+initContextLine(db);
+await initLog(db, createLogStore());
 
 // Globals the v0.990 smoke suite drives; removed once the suite is ported (step 4).
 Object.assign(window, {

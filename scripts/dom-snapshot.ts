@@ -4,9 +4,11 @@
 //   tsx scripts/dom-snapshot.ts <url> <out.txt> [steps]
 //
 // `steps` is a ';'-separated list run in order before the snapshot. A step is a CSS selector
-// to click, `type <selector>=<text>` to type into a field (then waits out the debounce), or
-// `key <Key>` to press a key, e.g.
-//   '#btn-filters;type #filter-search=hex;key Escape'
+// to click, `type <selector> := <text>` to type into a field (then waits out the debounce),
+// `select <selector> := <value>` to pick an option, or `key <Key>` to press a key, e.g.
+//   '#btn-filters;type #filter-search := hex;key Escape'
+// Confirm dialogs are accepted. SEED_FILE=<json> seeds localStorage before the page loads:
+// a {key: value} object, values stringified.
 //
 // Normalisation: comments, <script>, <style> and <link> dropped; attributes and class tokens
 // sorted; inline styles in CSSOM form; whitespace-only text kept as a single ' ' marker
@@ -16,7 +18,7 @@
 //   - ids of per-racquet brand sections, switcher buttons and filter headers (legacy used a
 //     different prefix per racquet; the port uses <racquet>-<brand>-...)
 //   - data-render-section (set on three Luxilon sections, read by nothing)
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';
 
 const [url, out, steps = ''] = process.argv.slice(2);
@@ -70,15 +72,29 @@ await page.route(
   (u) => u.hostname !== 'localhost' && u.protocol !== 'file:',
   (r) => r.abort(),
 );
+page.on('dialog', (d) => void d.accept());
+if (process.env.SEED_FILE) {
+  const seed = JSON.parse(readFileSync(process.env.SEED_FILE, 'utf8')) as Record<string, unknown>;
+  await page.addInitScript(
+    (items: Record<string, string>) => {
+      for (const [k, v] of Object.entries(items)) localStorage.setItem(k, v);
+    },
+    Object.fromEntries(Object.entries(seed).map(([k, v]) => [k, JSON.stringify(v)])),
+  );
+}
 await page.goto(url);
 await page.waitForLoadState('load');
 await page.waitForTimeout(300);
 for (const step of steps.split(';').filter(Boolean)) {
-  const typing = step.match(/^type (.+?)=(.*)$/);
+  const typing = step.match(/^type (.+?) := (.*)$/);
   const key = step.match(/^key (.+)$/);
+  const choose = step.match(/^select (.+?) := (.*)$/);
   if (typing) {
     await page.locator(typing[1]!).first().pressSequentially(typing[2]!);
     await page.waitForTimeout(400);
+  } else if (choose) {
+    await page.locator(choose[1]!).first().selectOption(choose[2]!);
+    await page.waitForTimeout(150);
   } else if (key) {
     await page.keyboard.press(key[1]!);
     await page.waitForTimeout(150);

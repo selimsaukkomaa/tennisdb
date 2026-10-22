@@ -1,0 +1,82 @@
+{
+  "tennis_log_v1": {
+    "version": 1,
+    "entries": [
+      {
+        "id": "0f6c1e2a-4b3d-4c5e-8f70-1a2b3c4d5e6f",
+        "racquet": "regna",
+        "date": "2026-09-14",
+        "stringId": "toroline-caviar",
+        "stringName": "Caviar",
+        "tension": "23/24",
+        "stars": 4,
+        "note": "Test entry: older, pinned as current.",
+        "pinnedAsCurrent": true
+      },
+      {
+        "id": "7d9e8f10-2c3b-4a5d-9e6f-7a8b9c0d1e2f",
+        "racquet": "regna",
+        "date": "2026-10-05",
+        "stringId": "solinco-hyper-g",
+        "stringName": "Hyper-G",
+        "tension": "24",
+        "stars": 3,
+        "note": "",
+        "pinnedAsCurrent": false
+      },
+      {
+        "id": "3a4b5c6d-7e8f-4a1b-8c2d-3e4f5a6b7c8d",
+        "racquet": "percept",
+        "date": "2026-08-30",
+        "stringId": null,
+        "stringName": "Custom test string",
+        "tension": "22.5",
+        "stars": 0,
+        "note": "Test entry: custom name, half-kilo tension.",
+        "pinnedAsCurrent": false
+      }
+    ]
+  },
+  "tennis_log_v2": {
+    "schema": 2,
+    "entries": [
+      {
+        "id": "0f6c1e2a-4b3d-4c5e-8f70-1a2b3c4d5e6f",
+        "racquetId": "regna",
+        "date": "2026-09-14",
+        "string": { "id": "toroline-caviar", "name": "Caviar" },
+        "tension": { "mainsKg": 23, "crossesKg": 24 },
+        "rating": 4,
+        "note": "Test entry: older, pinned as current.",
+        "createdAt": "2026-09-14T18:00:00.000Z",
+        "updatedAt": "2026-09-14T18:00:00.000Z",
+        "deletedAt": null
+      },
+      {
+        "id": "7d9e8f10-2c3b-4a5d-9e6f-7a8b9c0d1e2f",
+        "racquetId": "regna",
+        "date": "2026-10-05",
+        "string": { "id": "solinco-hyper-g", "name": "Hyper-G" },
+        "tension": { "mainsKg": 24, "crossesKg": null },
+        "rating": 3,
+        "note": "",
+        "createdAt": "2026-10-05T18:00:00.000Z",
+        "updatedAt": "2026-10-05T18:00:00.000Z",
+        "deletedAt": null
+      },
+      {
+        "id": "3a4b5c6d-7e8f-4a1b-8c2d-3e4f5a6b7c8d",
+        "racquetId": "percept",
+        "date": "2026-08-30",
+        "string": { "id": null, "name": "Custom test string" },
+        "tension": { "mainsKg": 22.5, "crossesKg": null },
+        "rating": 0,
+        "note": "Test entry: custom name, half-kilo tension.",
+        "createdAt": "2026-08-30T18:00:00.000Z",
+        "updatedAt": "2026-08-30T18:00:00.000Z",
+        "deletedAt": null
+      }
+    ],
+    "pins": { "regna": "0f6c1e2a-4b3d-4c5e-8f70-1a2b3c4d5e6f" }
+  }
+}
