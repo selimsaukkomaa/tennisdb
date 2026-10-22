@@ -6,6 +6,7 @@ import { resolve } from 'node:path';
 import { beforeAll, describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
 import type { Racquet, TennisDb } from '../../src/core/types';
+import { initCompare } from '../../src/ui/compare';
 import { initFilterPanel } from '../../src/ui/filter-panel';
 import { initFilters } from '../../src/ui/filters';
 import { initNav, showRacquet } from '../../src/ui/nav';
@@ -45,6 +46,7 @@ beforeAll(() => {
   initFilters();
   initNav(db);
   initFilterPanel();
+  initCompare(db);
 });
 
 describe('fourth racquet from data alone', () => {
@@ -125,5 +127,28 @@ describe('filters on the fourth racquet', () => {
     expect(hidden()).toBe(0);
     expect(document.getElementById('filters-count')!.textContent).toBe('0');
     showRacquet('regna');
+  });
+});
+
+describe('compare on the fourth racquet', () => {
+  test('the modal has a tab for it, showing its tensions', () => {
+    for (const id of ['toroline-o-toro-tour', 'toroline-caviar']) {
+      const box = document.querySelector<HTMLInputElement>(
+        `#test4-content input[data-compare-id="${id}"]`,
+      )!;
+      box.checked = true;
+      box.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+    document.getElementById('compare-open')!.click();
+    const tabs = [...document.querySelectorAll<HTMLElement>('.cmp-racquet-tab')];
+    expect(tabs.map((t) => t.textContent)).toContain('Pure Strike 98');
+    tabs.find((t) => t.dataset.cmpRacquet === 'test4')!.click();
+    const tensions = [...document.querySelectorAll('.cmp-cell-tension')].map((c) => c.textContent);
+    expect(tensions).toEqual([
+      db.strings[0]!.perRacquet.test4!.tension,
+      db.strings[1]!.perRacquet.test4!.tension,
+    ]);
+    document.getElementById('compare-modal-close')!.click();
+    document.getElementById('compare-clear')!.click();
   });
 });

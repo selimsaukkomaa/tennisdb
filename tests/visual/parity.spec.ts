@@ -12,6 +12,7 @@ import {
 
 const HEX = '[data-filter-group="shape"][data-filter-value="hexagonal"]';
 const GRIP_DRY = '[data-gfilter-group="feel"][data-gfilter-value="dry"]';
+const compareBox = (id: string): string => `#regna-content input[data-compare-id="${id}"]`;
 
 /** Strip content the port has not reached yet; views showing it are expected to fail. */
 const STRIPS_PENDING = 'log and gut strips not ported yet';
@@ -22,6 +23,8 @@ interface View {
   clicks: string[];
   /** Set while the view depends on unported modules: the test is then expected to fail. */
   pending?: string;
+  /** Compare only this element instead of the full page. */
+  element?: string;
 }
 
 // Key views from the parity plan; the rest are added as their modules are ported.
@@ -32,6 +35,27 @@ const VIEWS: View[] = [
   { name: 'Grips', clicks: ['#btn-cat-grips'] },
   { name: 'filters open, Hex active', clicks: ['#btn-filters', HEX], pending: STRIPS_PENDING },
   { name: 'grip filters open, Dry active', clicks: ['#btn-cat-grips', '#btn-filters', GRIP_DRY] },
+  {
+    name: 'compare open (2 strings + 1 hybrid)',
+    clicks: [
+      compareBox('toroline-o-toro-tour'),
+      compareBox('toroline-caviar'),
+      compareBox('toroline-k-pop'),
+      '#compare-open',
+    ],
+    pending: STRIPS_PENDING,
+  },
+  {
+    name: 'compare modal panel, Percept tab',
+    clicks: [
+      compareBox('toroline-o-toro-tour'),
+      compareBox('toroline-caviar'),
+      compareBox('toroline-k-pop'),
+      '#compare-open',
+      '.cmp-racquet-tab[data-cmp-racquet="percept"]',
+    ],
+    element: '.compare-modal-panel',
+  },
 ];
 
 // The UI tag shows the app version (v0.991) while legacy says v0.990: a declared difference.
@@ -53,7 +77,7 @@ for (const view of VIEWS) {
     for (const url of [LEGACY_URL, APP_URL]) {
       const page = await open(context, url);
       for (const selector of view.clicks) await page.locator(selector).first().click();
-      shots.push(await screenshot(page, maskVersion));
+      shots.push(await screenshot(page, { ...maskVersion, element: view.element }));
     }
     await expectSameRendering(testInfo, shots[0]!, shots[1]!);
   });

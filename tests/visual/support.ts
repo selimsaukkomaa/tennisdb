@@ -92,17 +92,20 @@ export async function loadedFontFamilies(page: Page): Promise<string[]> {
 export interface ShotOptions {
   /** Regions that legitimately differ (each one is a declared, changelogged difference). */
   mask?: (page: Page) => Locator[];
+  /** Capture only this element instead of the full page. */
+  element?: string;
 }
 
 export async function screenshot(page: Page, opts: ShotOptions = {}): Promise<Buffer> {
   await settle(page);
-  return page.screenshot({
-    fullPage: true,
-    animations: 'disabled',
-    caret: 'hide',
+  const options = {
+    animations: 'disabled' as const,
+    caret: 'hide' as const,
     mask: opts.mask?.(page) ?? [],
     maskColor: '#ff00ff',
-  });
+  };
+  if (opts.element) return page.locator(opts.element).first().screenshot(options);
+  return page.screenshot({ ...options, fullPage: true });
 }
 
 /** Writes a PNG under test-results/<test>/ and attaches it to the report. */
