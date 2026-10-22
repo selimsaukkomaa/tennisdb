@@ -10,6 +10,7 @@ import { initCompare } from '../../src/ui/compare';
 import { initFilterPanel } from '../../src/ui/filter-panel';
 import { initFilters } from '../../src/ui/filters';
 import { initGut } from '../../src/ui/gut';
+import { currentIndex, initSearch } from '../../src/ui/search';
 import { initNav, showRacquet } from '../../src/ui/nav';
 import { renderShell } from '../../src/ui/shell';
 
@@ -49,6 +50,7 @@ beforeAll(() => {
   initFilterPanel();
   initCompare(db);
   initGut(db, copy);
+  initSearch(db);
 });
 
 describe('fourth racquet from data alone', () => {
@@ -165,5 +167,14 @@ describe('gut strip on the fourth racquet', () => {
     );
     section.querySelector<HTMLElement>('[data-gut-toggle="test4"]')!.click();
     expect(section.querySelector('.gut-panel')!.innerHTML).toBe('');
+  });
+});
+
+describe('search on the fourth racquet', () => {
+  test('every string and hybrid gets an entry for it', () => {
+    const entries = currentIndex().filter((i) => i.racquet === 'test4');
+    expect(entries.filter((i) => i.type === 'string')).toHaveLength(72);
+    expect(entries.filter((i) => i.type === 'hybrid')).toHaveLength(10);
+    expect(entries[0]!.sublabel).toMatch(/· Pure Strike 98$/);
   });
 });

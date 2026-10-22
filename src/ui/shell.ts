@@ -20,6 +20,7 @@ import {
   type RacquetId,
   type TennisDb,
 } from '../core/types';
+import { gripBrandLabel, racquetSpec } from '../core/labels';
 import { APP_VERSION } from '../version';
 import { html, raw, type SafeHtml } from './html';
 import {
@@ -46,13 +47,6 @@ export const gripSectionId = (brand: BrandId): string => `grip-${brand}-section`
  * filter skips the Tourna section too (bug A, kept for parity, fixed in v0.992).
  */
 export const LEGACY_GRIP_FILTER_BRANDS: readonly BrandId[] = ['kimony', 'yonex'];
-
-/** "Kimony" from "kimony": v0.990 labels grip brands by capitalising the key. */
-export const gripBrandLabel = (brand: BrandId): string =>
-  brand.charAt(0).toUpperCase() + brand.slice(1);
-
-/** Context-line spec, e.g. "64 RA · 16×19 · 100 sq in". */
-export const racquetSpec = (r: Racquet): string => `${r.ra} RA · ${r.pattern} · ${r.headSize}`;
 
 // ---------------------------------------------------------------- topbar
 

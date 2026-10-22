@@ -25,6 +25,8 @@ interface View {
   pending?: string;
   /** Compare only this element instead of the full page. */
   element?: string;
+  /** Text typed into a field after the clicks: [selector, text]. */
+  type?: [string, string];
 }
 
 // Key views from the parity plan; the rest are added as their modules are ported.
@@ -62,6 +64,18 @@ const VIEWS: View[] = [
     ],
     element: '.compare-modal-panel',
   },
+  {
+    name: 'search palette open on "caviar"',
+    clicks: ['#btn-palette'],
+    type: ['#search-input', 'caviar'],
+    pending: STRIPS_PENDING,
+  },
+  {
+    name: 'search results, "gut"',
+    clicks: ['#btn-palette'],
+    type: ['#search-input', 'gut'],
+    element: '#search-results',
+  },
 ];
 
 // The UI tag shows the app version (v0.991) while legacy says v0.990: a declared difference.
@@ -83,6 +97,10 @@ for (const view of VIEWS) {
     for (const url of [LEGACY_URL, APP_URL]) {
       const page = await open(context, url);
       for (const selector of view.clicks) await page.locator(selector).first().click();
+      if (view.type) {
+        await page.locator(view.type[0]).pressSequentially(view.type[1]);
+        await page.locator('.search-results-visible').waitFor();
+      }
       shots.push(await screenshot(page, { ...maskVersion, element: view.element }));
     }
     await expectSameRendering(testInfo, shots[0]!, shots[1]!);
