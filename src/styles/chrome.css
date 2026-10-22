@@ -1,0 +1,326 @@
+/* ==========================================================================
+   v0.990 — chrome restructure
+   Appended last so it wins over earlier rules of equal specificity.
+   ========================================================================== */
+
+/* ── sticky toolbar ─────────────────────────────────────────────────── */
+#topbar {
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  background: rgba(240, 239, 235, 0.93);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid #dedcd5;
+  margin: -24px -24px 18px -24px;
+  padding: 9px 24px;
+}
+.topbar-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.topbar-mark {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #111;
+  white-space: nowrap;
+  margin: 0;
+  cursor: default;
+}
+.topbar-mark-dim { color: #b3afa4; }
+.topbar-div { width: 1px; height: 20px; background: #dedcd5; }
+.topbar-spacer { flex: 1 1 auto; }
+
+#topbar .category-switcher,
+#topbar .racquet-switcher {
+  display: flex;
+  gap: 0;
+  width: auto;
+  margin: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+#topbar .category-switcher button {
+  font-size: 0.72rem;
+  padding: 7px 15px;
+  letter-spacing: 0.4px;
+}
+#topbar .racquet-switcher button {
+  font-size: 0.72rem;
+  padding: 7px 14px;
+  letter-spacing: 0.2px;
+  text-transform: none;
+}
+#topbar-racquets.cat-hidden { display: none; }
+
+.topbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #dedcd5;
+  border-radius: 8px;
+  padding: 6px 11px;
+  font-family: inherit;
+  font-size: 0.78rem;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  white-space: nowrap;
+}
+.topbar-btn:hover { border-color: #111; color: #111; }
+.topbar-btn.is-on { background: #111; border-color: #111; color: #fff; }
+.topbar-btn.is-on kbd { color: #777; border-color: #333; background: #1c1c1c; }
+.topbar-btn-icon { font-size: 0.85rem; line-height: 1; }
+.topbar-btn kbd {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  color: #aaa;
+  border: 1px solid #e5e3dc;
+  border-radius: 4px;
+  padding: 1px 4px;
+  background: #faf9f6;
+}
+.filters-count {
+  display: none;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 9px;
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 1px 6px;
+  font-family: 'Space Mono', monospace;
+}
+.filters-count.count-on { display: inline-block; }
+
+/* ── command palette ────────────────────────────────────────────────── */
+#palette { position: fixed; inset: 0; z-index: 200; display: none; }
+#palette.palette-open { display: block; }
+.palette-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(24, 23, 20, 0.34);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+#palette #search-bar {
+  position: relative;
+  max-width: 640px;
+  margin: 13vh auto 0 auto;
+  padding: 0;
+  background: none;
+  border: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+#palette .search-bar-inner {
+  max-width: none;
+  background: #fff;
+  border: 1px solid #dedcd5;
+  border-radius: 12px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.24);
+  padding: 5px 10px;
+}
+#palette .search-icon { left: 18px; }
+#palette #search-input {
+  border: none;
+  background: transparent;
+  font-size: 0.98rem;
+  padding: 11px 36px 11px 32px;
+}
+#palette #search-input:focus { outline: none; box-shadow: none; }
+#palette .search-hint { display: inline; padding-right: 4px; }
+
+/* ── filter bars: light theme + collapsed by default ────────────────── */
+.filter-bar {
+  background: #fff;
+  border: 1px solid #e2e0d8;
+  border-radius: 10px;
+  padding: 0.9rem 1.1rem;
+  margin-bottom: 1.1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.filter-bar.filter-visible { display: none; }
+.filter-bar.filter-visible.filters-open { display: block; }
+.grip-filter-bar.gfilter-visible { display: none; }
+.grip-filter-bar.gfilter-visible.filters-open { display: block; }
+
+.filter-search {
+  background: #faf9f6;
+  border: 1px solid #e2e0d8;
+  color: #111;
+}
+.filter-search::placeholder { color: #b3afa4; }
+.filter-search:focus { border-color: #111; }
+.filter-chip { background: #fff; border: 1px solid #dedcd5; color: #6b6760; }
+.filter-chip:hover { border-color: #111; color: #111; }
+.filter-chip.chip-active { background: #111; border-color: #111; color: #fff; }
+.filter-group-label { color: #a8a49a; }
+.filter-divider { background: #e2e0d8; }
+.filter-clear-btn { background: #fff; border: 1px solid #dedcd5; color: #6b6760; }
+.filter-clear-btn:hover { border-color: #111; color: #111; }
+.filter-status { color: #8b8780; }
+.filter-status .count-highlight { color: #2563eb; }
+.filter-brand-header { color: #111; border-left-color: #111; }
+.filter-all-badge, .gfilter-all-badge { color: #2563eb; }
+.switcher.filter-all-brands button {
+  background: #efeee8 !important;
+  color: #6b6760 !important;
+  border-right: none;
+}
+
+/* ── active-filter summary (shown while the panel is collapsed) ─────── */
+.filter-summary {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 0 0 14px 0;
+}
+.filter-summary.summary-on { display: flex; }
+.fsum-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.64rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a8a49a;
+}
+.fsum-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-family: inherit;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.fsum-chip:hover { background: #383838; }
+.fsum-chip .fsum-x { opacity: 0.55; font-size: 0.8rem; line-height: 1; }
+.fsum-clear {
+  background: none;
+  border: none;
+  color: #8b8780;
+  font-family: inherit;
+  font-size: 0.72rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 2px 4px;
+}
+.fsum-clear:hover { color: #111; }
+.fsum-count { font-size: 0.72rem; color: #8b8780; }
+
+/* ── per-racquet context line ───────────────────────────────────────── */
+.context-line {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 0 0 14px 0;
+  padding-bottom: 11px;
+  border-bottom: 1px solid #e2e0d8;
+}
+.ctx-name {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: #111;
+  letter-spacing: -0.4px;
+}
+.ctx-spec {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: #a8a49a;
+  letter-spacing: 0.2px;
+}
+.ctx-strung {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 7px;
+  font-size: 0.78rem;
+  color: #6b6760;
+}
+.ctx-strung-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a8a49a;
+}
+.ctx-strung-name { font-weight: 600; color: #111; }
+.ctx-strung-meta { color: #8b8780; }
+.ctx-strung-empty { font-size: 0.76rem; color: #b3afa4; font-style: italic; }
+
+/* ── log + gut strips as one chip row ───────────────────────────────── */
+.strips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 0 0 20px 0;
+}
+.strips > .log-section,
+.strips > .gut-section { margin: 0; flex: 0 1 auto; max-width: 100%; }
+.strips > .log-section.log-expanded,
+.strips > .gut-section.gut-expanded { flex: 1 0 100%; }
+.strips .log-status,
+.strips .gut-status { padding: 6px 11px; font-size: 0.76rem; gap: 9px; }
+/* "currently strung" now lives in the context line, so the collapsed log
+   strip is just its toggle */
+.strips .log-section:not(.log-expanded) .log-status-left { display: none; }
+.strips .gut-status-label { font-weight: 600; }
+
+/* ── brand switcher as a pill row ───────────────────────────────────── */
+.switcher {
+  width: auto;
+  gap: 6px;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  margin-bottom: 18px;
+}
+.switcher button {
+  flex: 0 0 auto;
+  border-radius: 20px;
+  border: 1px solid #dedcd5;
+  padding: 6px 15px;
+  font-size: 0.7rem;
+  background: #fff;
+  color: #8b8780;
+}
+.switcher button.inactive { background: #fff; color: #8b8780; }
+.switcher button.inactive:hover { background: #faf9f6; color: #111; border-color: #b3afa4; }
+.switcher button[class*="active-"] { border-color: #111; }
+/* Tourna's #1e40af on #111 was effectively unreadable */
+.switcher button.active-tourna { color: #7aa2f7; }
+
+/* ── responsive ─────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  /* body padding becomes 12px 10px at this breakpoint — bleed must match */
+  #topbar {
+    margin: -12px -10px 14px -10px;
+    padding: 8px 10px;
+  }
+  .topbar-btn-label { display: none; }
+  .topbar-btn kbd { display: none; }
+  .topbar-spacer { flex-basis: 0; }
+  #palette #search-bar { margin-top: 9vh; max-width: none; padding: 0 10px; }
+}
+@media (max-width: 600px) {
+  .topbar-mark, .topbar-div { display: none; }
+  #topbar .category-switcher button,
+  #topbar .racquet-switcher button { font-size: 0.66rem; padding: 6px 9px; }
+  .ctx-name { font-size: 0.92rem; }
+  .strips .gut-status-count { display: none; }
+}
+

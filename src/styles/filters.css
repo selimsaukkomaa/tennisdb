@@ -1,0 +1,182 @@
+  /* ── Filter Bar (v0.97) ── */
+  .filter-bar {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    display: none;
+  }
+  .filter-bar.filter-visible { display: block; }
+  
+  .filter-search-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .filter-search {
+    flex: 1;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    background: #0f172a;
+    color: #e2e8f0;
+    font-size: 0.85rem;
+    font-family: 'DM Sans', sans-serif;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .filter-search:focus { border-color: #7dd3fc; }
+  .filter-search::placeholder { color: #64748b; }
+  
+  .filter-status {
+    font-size: 0.78rem;
+    color: #94a3b8;
+    white-space: nowrap;
+    min-width: 120px;
+    text-align: right;
+  }
+  .filter-status .count-highlight {
+    color: #7dd3fc;
+    font-weight: 600;
+  }
+  
+  .filter-clear-btn {
+    padding: 0.35rem 0.75rem;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    background: transparent;
+    color: #94a3b8;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    display: none;
+  }
+  .filter-clear-btn.has-filters { display: inline-block; }
+  .filter-clear-btn:hover { background: #334155; color: #e2e8f0; }
+  
+  .filter-groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+  .filter-group-label {
+    font-size: 0.72rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-right: 0.15rem;
+  }
+  .filter-chip {
+    padding: 0.25rem 0.6rem;
+    border: 1px solid #475569;
+    border-radius: 20px;
+    background: transparent;
+    color: #94a3b8;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'DM Sans', sans-serif;
+  }
+  .filter-chip:hover { border-color: #7dd3fc; color: #cbd5e1; }
+  .filter-chip.chip-active {
+    background: #0c4a6e;
+    border-color: #7dd3fc;
+    color: #e0f2fe;
+  }
+  
+  .filter-divider {
+    width: 1px;
+    height: 24px;
+    background: #334155;
+    margin: 0 0.25rem;
+  }
+  
+  /* Row visibility during filtering */
+  tr.filter-hidden { display: none !important; }
+  
+  /* Brand section visibility during filtering */
+  .brand-section.filter-force-show { display: block !important; }
+  
+  /* Brand header shown when cross-brand filtering is active */
+  .filter-brand-header {
+    display: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #7dd3fc;
+    margin: 1.25rem 0 0.35rem 0;
+    padding: 0.35rem 0.5rem;
+    border-left: 3px solid #7dd3fc;
+  }
+  .filter-brand-header.filter-show { display: block; }
+  
+  /* Hide empty tables/sections during filtering */
+  .table-wrap.filter-no-results { display: none; }
+  .brand-section.filter-all-hidden { display: none !important; }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .filter-groups { gap: 0.6rem; }
+    .filter-search-row { flex-wrap: wrap; }
+    .filter-status { text-align: left; min-width: auto; }
+  }
+
+  /* ── Grip Filter Bar (v0.97) ── */
+  .grip-filter-bar { display: none; }
+  .grip-filter-bar.gfilter-visible { display: block; }
+  
+  /* Grip brand header shown during cross-brand grip filtering */
+  .gfilter-brand-header {
+    display: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 1.25rem 0 0.35rem 0;
+    padding: 0.35rem 0.5rem;
+    border-left: 3px solid;
+  }
+  .gfilter-brand-header.gfilter-show { display: block; }
+  .gfilter-brand-header.gfilter-header-kimony { color: #ef4444; border-left-color: #ef4444; }
+  .gfilter-brand-header.gfilter-header-yonex { color: #38bdf8; border-left-color: #38bdf8; }
+  
+  /* Grip section sub-headings (Wet/Dry/Replacement) during filtering */
+  .grip-subheading.gfilter-hide { display: none; }
+  .table-wrap.gfilter-no-results { display: none; }
+  .brand-section.gfilter-force-show { display: block !important; }
+  .brand-section.gfilter-all-hidden { display: none !important; }
+  .rec-box.gfilter-hide-rec { display: none; }
+  tr.gfilter-hidden { display: none !important; }
+
+  /* Grip filter all-brands badge */
+  .gfilter-all-badge {
+    display: none;
+    font-size: 0.72rem;
+    color: #7dd3fc;
+    font-weight: 400;
+    margin-left: 6px;
+  }
+  .gfilter-all-badge.badge-show { display: inline; }
+
+  /* Grip switcher override during filtering */
+  #grip-switcher.gfilter-all-brands {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  #grip-switcher.gfilter-all-brands button {
+    background: #1e293b !important;
+    color: #7dd3fc !important;
+  }
+
+  /* Feel expansion text — hidden on desktop */
+  .feel-expand { display: none; }
+

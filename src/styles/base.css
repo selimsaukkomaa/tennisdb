@@ -1,0 +1,400 @@
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f0efeb;
+    color: #1a1a1a;
+    padding: 24px;
+  }
+  .container { max-width: 1440px; margin: 0 auto; }
+
+  /* Header */
+  .header { margin-bottom: 20px; }
+  h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    color: #111;
+    letter-spacing: -0.5px;
+  }
+  .subtitle { font-size: 0.85rem; color: #888; margin-bottom: 18px; }
+
+  /* Brand Switcher */
+  .switcher {
+    display: flex;
+    gap: 0;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .switcher button {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 11px 28px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  @media (max-width: 600px) {
+    .switcher {
+      border-radius: 8px;
+    }
+    .switcher button {
+      font-size: 0.7rem;
+      padding: 10px 8px;
+      letter-spacing: 0;
+    }
+  }
+  .switcher button.active-toroline {
+    background: #111;
+    color: #fbbf24;
+  }
+  .switcher button.active-solinco {
+    background: #111;
+    color: #4ade80;
+  }
+  .switcher button.active-yonex {
+    background: #111;
+    color: #38bdf8;
+  }
+
+  /* Tourna grip switcher button color */
+  .switcher button.active-tourna {
+    background: #111;
+    color: #1e40af;
+  }
+  .switcher button.active-restring {
+    background: #111;
+    color: #f472b6;
+  }
+  .switcher button.active-grapplesnake {
+    background: #111;
+    color: #a3e635;
+  }
+  .switcher button.active-tourna {
+    background: #111;
+    color: #1e40af;
+  }
+  .switcher button.active-luxilon {
+    background: #111;
+    color: #9aa3ad;
+  }
+  .switcher button.inactive {
+    background: #fff;
+    color: #999;
+  }
+  .switcher button.inactive:hover {
+    background: #f5f5f0;
+    color: #555;
+  }
+  /* Brand switcher: "all brands" state during active filtering */
+  .switcher.filter-all-brands {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  .switcher.filter-all-brands button {
+    background: #1e293b !important;
+    color: #7dd3fc !important;
+    border-right: 1px solid #334155;
+    opacity: 1;
+  }
+  .switcher.filter-all-brands button:last-child {
+    border-right: none;
+  }
+  .filter-all-badge {
+    display: none;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.68rem;
+    color: #7dd3fc;
+    letter-spacing: 0.5px;
+    margin-left: 0.5rem;
+    opacity: 0.8;
+  }
+  .filter-all-badge.badge-show {
+    display: inline;
+  }
+
+  /* Rec box */
+  .rec-box {
+    background: #fff;
+    border-left: 4px solid #111;
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 22px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  }
+  .rec-box strong { color: #111; }
+  .rec-box .pick { font-weight: 700; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+
+  /* Table */
+  .table-wrap {
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    overflow: hidden;
+  }
+  table { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.8rem; }
+  thead th {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px 11px;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    font-size: 0.75rem;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+  thead th:first-child { border-radius: 10px 0 0 0; }
+  thead th:last-child { border-radius: 0 10px 0 0; }
+  tbody td { padding: 9px 11px; border-bottom: 1px solid #f0efeb; vertical-align: top; }
+  tbody tr:hover { background: #fafaf7; }
+  .string-name { font-weight: 700; white-space: nowrap; }
+  .bar-cell { min-width: 88px; }
+  .bar { height: 7px; border-radius: 4px; background: #e8e7e3; position: relative; margin-top: 3px; }
+  .bar-fill { height: 100%; border-radius: 4px; }
+  .bar-label { font-size: 0.72rem; color: #999; font-family: 'Space Mono', monospace; }
+  .stiff { background: linear-gradient(90deg, #94a3b8, #475569); }
+  .power { background: linear-gradient(90deg, #fb923c, #dc2626); }
+  .spin { background: linear-gradient(90deg, #10b981, #059669); }
+  .comfort { background: linear-gradient(90deg, #60a5fa, #818cf8); }
+  .control { background: linear-gradient(90deg, #a78bfa, #7c3aed); }
+  .tag {
+    display: inline-block;
+    padding: 2px 7px;
+    border-radius: 4px;
+    font-size: 0.67rem;
+    font-weight: 600;
+    margin-right: 3px;
+    letter-spacing: 0.2px;
+  }
+  .tag-crisp { background: #fef3c7; color: #92400e; }
+  .tag-soft { background: #dbeafe; color: #1e40af; }
+  .tag-firm { background: #fee2e2; color: #991b1b; }
+  .tag-round { background: #e0e7ff; color: #3730a3; }
+  .tag-lively { background: #dcfce7; color: #166534; }
+  .tag-plush { background: #fae8ff; color: #86198f; }
+  .notes { font-size: 0.76rem; color: #666; line-height: 1.45; }
+
+  /* Color dots */
+  .colors {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3px;
+  }
+  .color-dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(0,0,0,0.15);
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .color-label { font-size: 0.68rem; color: #aaa; }
+
+
+  /* Sortable headers */
+  thead th.sortable {
+    cursor: pointer;
+    user-select: none;
+    padding-right: 18px;
+  }
+  thead th.sortable:hover {
+    background: #2a2a2a;
+  }
+  thead th.sortable::after {
+    content: '⇅';
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.65rem;
+    opacity: 0.4;
+  }
+  thead th.sortable.sort-asc::after {
+    content: '⇅';
+    opacity: 0.9;
+  }
+  thead th.sortable.sort-desc::after {
+    content: '↓';
+    opacity: 0.9;
+  }
+
+  /* Legend */
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 16px; font-size: 0.75rem; color: #888; }
+  .legend-item { display: flex; align-items: center; gap: 5px; }
+  .legend-swatch { width: 12px; height: 12px; border-radius: 3px; }
+  .footer { margin-top: 18px; font-size: 0.72rem; color: #bbb; line-height: 1.55; font-family: 'Space Mono', monospace; }
+  .version-tag { display: inline-block; color: #ccc; font-family: 'Space Mono', monospace; font-size: 0.68rem; margin-top: 4px; }
+
+  /* Racquet Switcher */
+  .racquet-switcher {
+    display: flex;
+    gap: 0;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: fit-content;
+  }
+  .racquet-switcher button {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.3px;
+    position: relative;
+  }
+  .racquet-switcher button.racquet-active {
+    background: #2563eb;
+    color: #fff;
+  }
+  .racquet-switcher button.racquet-inactive {
+    background: #fff;
+    color: #999;
+  }
+  .racquet-switcher button.racquet-inactive:hover {
+    background: #f5f5f0;
+    color: #555;
+  }
+  .racquet-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .brand-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .percept-placeholder {
+    background: #fff;
+    border: 2px dashed #ddd;
+    border-radius: 10px;
+    padding: 48px 24px;
+    text-align: center;
+    color: #999;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+  .percept-placeholder strong {
+    color: #555;
+    display: block;
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  /* Transition */
+  .brand-section { display: none; animation: fadeIn 0.3s ease; }
+  .brand-section.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  /* Category Switcher */
+  .category-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .category-switcher {
+    display: flex;
+    gap: 0;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: fit-content;
+  }
+  .category-switcher button {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 12px 32px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .category-switcher button.cat-active {
+    background: #111;
+    color: #fff;
+  }
+  .category-switcher button.cat-inactive {
+    background: #fff;
+    color: #999;
+  }
+  .category-switcher button.cat-inactive:hover {
+    background: #f5f5f0;
+    color: #555;
+  }
+  .category-content { display: none; animation: fadeIn 0.3s ease; }
+  .category-content.cat-visible { display: block; }
+
+  /* Grip-specific styles */
+  .grip-type-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.67rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+  }
+  .grip-wet { background: #dbeafe; color: #1e40af; }
+  .grip-dry { background: #fef3c7; color: #92400e; }
+  .grip-towel { background: #d1fae5; color: #065f46; }
+  .grip-leather { background: #fce7f3; color: #9d174d; }
+
+  .thickness-bar { height: 7px; border-radius: 4px; background: #e8e7e3; position: relative; margin-top: 3px; }
+  .thickness-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, #8b5cf6, #6d28d9); }
+  .tackiness { background: linear-gradient(90deg, #f59e0b, #d97706); }
+  .absorption { background: linear-gradient(90deg, #06b6d4, #0891b2); }
+  .durability { background: linear-gradient(90deg, #10b981, #059669); }
+
+  .grip-brand-kimony { border-top-color: #ef4444; }
+
+  /* Grip switcher button colors */
+  .switcher button.active-kimony {
+    background: #111;
+    color: #ef4444;
+  }
+
+
+  .grip-brand-yonex { border-top-color: #38bdf8; }
+  .grip-brand-tourna { border-top-color: #1e40af; }
+
+  /* Yonex grip switcher button color */
+  .switcher button.active-yonex {
+    background: #111;
+    color: #38bdf8;
+  }
+

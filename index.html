@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
@@ -6,6 +7,58 @@
 <title>Tennis equipment database — Selim S.</title>
 </head>
 <body>
+<div id="topbar">
+<div class="topbar-inner">
+<h1 class="topbar-mark">EQUIP<span class="topbar-mark-dim">DB</span></h1>
+<span class="topbar-div"></span>
+<div class="category-switcher" id="topbar-cats">
+<button class="cat-active" id="btn-cat-strings" data-nav-category="strings">Strings</button>
+<button class="cat-active" id="btn-cat-grips" data-nav-category="grips">Grips</button>
+</div>
+<div class="racquet-switcher" id="topbar-racquets"></div>
+<span class="topbar-spacer"></span>
+<button class="topbar-btn" id="btn-palette" type="button" aria-label="Search everything">
+<span class="topbar-btn-icon">🔍</span><span class="topbar-btn-label">Search</span><kbd id="palette-kbd">⌘K</kbd>
+</button>
+<button class="topbar-btn" id="btn-filters" type="button" aria-expanded="false">
+<span class="topbar-btn-icon">⚙</span><span class="topbar-btn-label">Filters</span><span class="filters-count" id="filters-count"></span>
+</button>
+</div>
+</div>
+
+<div id="palette" aria-hidden="true">
+<div class="palette-backdrop" id="palette-backdrop"></div>
+<div id="search-bar">
+<div class="search-bar-inner">
+<span class="search-icon">🔍</span>
+<input autocomplete="off" id="search-input" placeholder="Search strings, grips, log entries… (try 'caviar', 'gut', 'hex')" type="search"/>
+<button aria-label="Clear search" id="search-clear">✕</button>
+<span class="search-hint">Esc to close · ↑↓ to navigate</span>
+<div id="search-results"></div>
+</div>
+</div>
+</div>
+
+<div aria-live="polite" class="compare-bar hidden" id="compare-bar">
+<div class="compare-bar-inner">
+<span class="compare-count" id="compare-count">0 / 4</span>
+<div class="compare-chips" id="compare-chips"></div>
+<button class="compare-btn-primary" disabled="" id="compare-open">Select 2 more</button>
+<button class="compare-btn-secondary" id="compare-clear">Clear</button>
+</div>
+</div>
+<div aria-label="Compare strings" aria-modal="true" class="compare-modal hidden" id="compare-modal" role="dialog">
+<div class="compare-modal-backdrop"></div>
+<div class="compare-modal-panel">
+<div class="compare-modal-header">
+<h2>Compare</h2>
+<div class="compare-racquet-tabs" id="compare-racquet-tabs"></div>
+<button aria-label="Close" class="compare-modal-close" id="compare-modal-close">✕</button>
+</div>
+<div class="compare-modal-body" id="compare-modal-body"></div>
+</div>
+</div>
+<div class="container"></div>
 <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

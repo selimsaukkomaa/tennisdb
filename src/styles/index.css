@@ -1,0 +1,13 @@
+/* Stylesheet entry. fonts.css replaces v0.990's Google Fonts <link>; the rest is v0.990's
+   <style> block split verbatim at its version sections, imported in the original cascade
+   order (tests/data/legacy-css.test.ts checks the split against legacy). Later files win
+   over earlier ones at equal specificity, so the order matters. */
+@import './fonts.css';
+@import './base.css';
+@import './filters.css';
+@import './mobile-cards.css';
+@import './compare.css';
+@import './log.css';
+@import './gut.css';
+@import './search.css';
+@import './chrome.css';

@@ -1,0 +1,296 @@
+/* =============== gut hybrids (v0.985) =============== */
+/* =========================================================================
+   Natural Gut / Poly Hybrids styles (v0.985)
+   ========================================================================= */
+
+.gut-section {
+  margin: 8px 0 20px;
+}
+
+/* --- header bar (always visible) --- */
+.gut-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-left: 4px solid #d4a843;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.82rem;
+  flex-wrap: wrap;
+  cursor: default;
+}
+.gut-status-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+.gut-status-icon {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+.gut-status-label {
+  font-weight: 700;
+  color: #78350f;
+  letter-spacing: 0.01em;
+}
+.gut-status-count {
+  font-size: 0.7rem;
+  color: #92400e;
+  font-family: 'Space Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* --- toggle button --- */
+.gut-toggle {
+  background: #1a1a1a;
+  color: #fef3c7;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: background 0.12s;
+}
+.gut-toggle:hover { background: #2a2a2a; }
+.gut-toggle-caret { font-size: 0.7rem; opacity: 0.8; }
+
+/* --- expandable panel --- */
+.gut-panel {
+  display: none;
+  margin-top: 8px;
+}
+.gut-section.gut-expanded .gut-panel {
+  display: block;
+  animation: gut-fade-in 0.14s ease-out;
+}
+@keyframes gut-fade-in {
+  from { opacity: 0; transform: translateY(-3px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- intro card --- */
+.gut-intro {
+  background: #fff;
+  border: 1px solid #e5e5e0;
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+}
+.gut-intro-blurb {
+  font-size: 0.85rem;
+  color: #404040;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+.gut-intro-blurb strong {
+  color: #78350f;
+}
+.gut-intro-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+.gut-intro-card {
+  background: #fffbeb;
+  border-left: 3px solid #d4a843;
+  border-radius: 5px;
+  padding: 10px 12px;
+}
+.gut-intro-title {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #78350f;
+  margin-bottom: 3px;
+}
+.gut-intro-gauges {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: #92400e;
+  margin-bottom: 6px;
+}
+.gut-intro-desc {
+  font-size: 0.78rem;
+  color: #525252;
+  line-height: 1.45;
+  margin-bottom: 6px;
+}
+.gut-intro-price {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* --- table --- */
+.gut-table-wrap {
+  background: #fff;
+  border: 1px solid #e5e5e0;
+  border-radius: 8px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.gut-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+.gut-table thead {
+  background: #1a1a1a;
+  color: #fef3c7;
+}
+.gut-table thead th {
+  padding: 10px 11px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  border-bottom: 1px solid #2a2a2a;
+}
+.gut-table tbody td {
+  padding: 11px 11px;
+  vertical-align: top;
+  border-bottom: 1px solid #eeeae2;
+}
+.gut-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- config cell --- */
+.gut-config-cell {
+  white-space: nowrap;
+  font-size: 0.74rem;
+  font-weight: 600;
+  min-width: 110px;
+}
+.gut-config-icon {
+  font-size: 0.95rem;
+  margin-right: 5px;
+  vertical-align: -1px;
+}
+.gut-config-label {
+  letter-spacing: 0.01em;
+}
+.gut-config-mains .gut-config-icon { color: #d4a843; }
+.gut-config-mains .gut-config-label { color: #78350f; }
+.gut-config-crosses .gut-config-icon { color: #2563eb; }
+.gut-config-crosses .gut-config-label { color: #1e40af; }
+
+/* --- string pill (mains / crosses cell) --- */
+.gut-string-cell {
+  min-width: 140px;
+}
+.gut-string-pill {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #f5f5f0;
+  border-left: 3px solid #94a3b8;
+  font-size: 0.78rem;
+  line-height: 1.25;
+}
+.gut-string-pill[data-brand="gut"]          { background: #fffbeb; border-left-color: #d4a843; }
+.gut-string-pill[data-brand="toroline"]     { border-left-color: #fbbf24; }
+.gut-string-pill[data-brand="solinco"]      { border-left-color: #4ade80; }
+.gut-string-pill[data-brand="yonex"]        { border-left-color: #38bdf8; }
+.gut-string-pill[data-brand="restring"]     { border-left-color: #f472b6; }
+.gut-string-pill[data-brand="grapplesnake"] { border-left-color: #a3e635; }
+.gut-string-pill[data-brand="luxilon"]      { border-left-color: #9aa3ad; }
+.gut-string-pill[data-brand="tourna"]       { border-left-color: #1e40af; }
+.gut-string-name {
+  font-weight: 700;
+  color: #111;
+}
+.gut-string-pill[data-brand="gut"] .gut-string-name { color: #78350f; }
+.gut-string-gauge {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: #525252;
+}
+
+/* --- feel + tension cells --- */
+.gut-feel-cell {
+  font-size: 0.74rem;
+  color: #525252;
+  white-space: nowrap;
+  font-style: italic;
+}
+.gut-tension-cell {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: #111;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* --- bar --- */
+.gut-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 90px;
+}
+.gut-bar-label {
+  font-size: 0.7rem;
+  color: #525252;
+  font-family: 'Space Mono', monospace;
+  white-space: nowrap;
+}
+.gut-dash {
+  color: #d4d4d0;
+  font-size: 0.85rem;
+}
+
+/* gut-protection bar uses warm gold gradient (only metric unique to this section) */
+.bar-fill.gut-protection {
+  background: linear-gradient(90deg, #fbbf24, #d4a843);
+}
+
+/* --- notes --- */
+.gut-notes-cell {
+  font-size: 0.76rem;
+  color: #404040;
+  line-height: 1.5;
+  min-width: 240px;
+  max-width: 360px;
+}
+
+.gut-empty {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  padding: 30px 20px;
+}
+
+/* --- mobile --- */
+@media (max-width: 900px) {
+  .gut-status { padding: 9px 12px; font-size: 0.78rem; }
+  .gut-status-label { font-size: 0.84rem; }
+  .gut-status-count { display: block; flex-basis: 100%; }
+  .gut-toggle { padding: 5px 10px; font-size: 0.74rem; }
+  .gut-intro { padding: 12px 12px; }
+  .gut-intro-cards { grid-template-columns: 1fr; }
+  .gut-table { font-size: 0.74rem; }
+  .gut-table thead th { padding: 8px 9px; font-size: 0.65rem; }
+  .gut-table tbody td { padding: 9px 9px; }
+  .gut-config-cell { min-width: 90px; font-size: 0.7rem; }
+  .gut-string-cell { min-width: 110px; }
+  .gut-bar-wrap { min-width: 75px; }
+  .gut-notes-cell { min-width: 200px; max-width: 240px; font-size: 0.72rem; }
+}
+
+

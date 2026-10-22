@@ -1,0 +1,454 @@
+/* ── Mobile Card Layout (v0.97) ── */
+  @media (max-width: 900px) {
+    /* Transform tables into card stacks */
+    #strings-content table,
+    #strings-content thead,
+    #strings-content tbody,
+    #grips-content table,
+    #grips-content thead,
+    #grips-content tbody {
+      display: block;
+      width: 100%;
+    }
+    
+    /* Hide table headers on mobile */
+    #strings-content thead,
+    #grips-content thead {
+      display: none;
+    }
+    
+    /* ────────────────────────────────────────────────────
+       CARDS: Each <tr> becomes a flex-wrap card
+       ──────────────────────────────────────────────────── */
+    #strings-content tbody tr,
+    #grips-content tbody tr {
+      display: flex;
+      flex-wrap: wrap;
+      background: #fff;
+      border-radius: 10px;
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+      position: relative;
+      border-left: 3px solid #ddd;
+    }
+    
+    /* All tds: block-level, full width by default */
+    #strings-content tbody td,
+    #grips-content tbody td {
+      display: block;
+      width: 100%;
+      padding: 2px 0;
+      border: none;
+      font-size: 0.82rem;
+      box-sizing: border-box;
+    }
+    
+    /* ────────────────────────────────────────────────────
+       REGULAR STRING CARDS — reorder via flex order
+       DOM: 1:Name 2:Shape 3:Gauge 4:Colors 5:Stiffness 6:Power 7:Feel 8:Spin 9:Control 10:Comfort 11:Tension 12:Notes
+       Card: Name(1) → Feel(7) → Shape(2) → Gauge(3) → Colors(4) → Bars(5,6,8,9,10) → Tension(11) → Notes(12)
+       ──────────────────────────────────────────────────── */
+
+    /* Name: card title — order 1 */
+    #strings-content tbody td.string-name,
+    #grips-content tbody td.string-name {
+      order: 1;
+      font-size: 1rem;
+      font-weight: 700;
+      padding-bottom: 6px;
+      margin-bottom: 4px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    /* Feel (col 7): prominent section right after name — order 2 */
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(7) {
+      order: 2;
+      padding: 6px 0 8px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    /* Feel expansion text — visible on mobile */
+    .feel-expand {
+      display: inline;
+      color: #777;
+      font-size: 0.82rem;
+    }
+    /* Shape (col 2): labeled, own row — order 3 */
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(2) {
+      order: 3;
+      font-size: 0.78rem;
+      color: #555;
+      padding: 1px 0;
+    }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(2)::before {
+      content: 'Shape: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    
+    /* Gauge (col 3): labeled, own row below Shape — order 4 */
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(3) {
+      order: 4;
+      font-size: 0.78rem;
+      color: #555;
+      padding: 1px 0;
+      margin-bottom: 4px;
+    }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(3)::before {
+      content: 'Gauge: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    
+    /* Colors (col 4): shown, compact — order 5 */
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(4) {
+      order: 5;
+      padding: 2px 0 6px;
+      font-size: 0.75rem;
+      border-bottom: 1px solid #f5f4f0;
+      margin-bottom: 4px;
+    }
+    
+    /* Bar cells: stacked with inline labels — order 10-14 */
+    #strings-content tbody td.bar-cell,
+    #grips-content tbody td.bar-cell {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 2px 0;
+    }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(5) { order: 10; }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(6) { order: 11; }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(8) { order: 12; }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(9) { order: 13; }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(10) { order: 14; }
+    
+    /* Bar cell internals — uniform alignment */
+    #strings-content tbody td.bar-cell,
+    #grips-content tbody td.bar-cell {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 0;
+    }
+    #strings-content tbody td.bar-cell .bar-label,
+    #grips-content tbody td.bar-cell .bar-label {
+      font-size: 0.65rem;
+      width: 72px;
+      min-width: 72px;
+      text-align: right;
+      flex-shrink: 0;
+    }
+    #strings-content tbody td.bar-cell .bar,
+    #grips-content tbody td.bar-cell .bar {
+      flex: 1;
+      max-width: 140px;
+    }
+
+    /* Bar cell category labels via ::before — full names, fixed width */
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td.bar-cell::before,
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td.bar-cell::before {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      color: #aaa;
+      width: 66px;
+      min-width: 66px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(5)::before { content: 'Stiffness'; }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(6)::before { content: 'Power'; }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(8)::before { content: 'Spin'; }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(9)::before { content: 'Control'; }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(10)::before { content: 'Comfort'; }
+    
+    /* Tension (col 11): labeled — order 20 */
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(11) {
+      order: 20;
+      font-size: 0.75rem;
+      color: #777;
+      padding: 4px 0 2px;
+      border-top: 1px solid #f5f4f0;
+      margin-top: 2px;
+    }
+    #strings-content .table-wrap > table:not(.hybrid-table) tbody td:nth-child(11)::before {
+      content: 'Recommended tension: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    
+    /* Notes: always visible, full — order 30 */
+    #strings-content tbody td.notes,
+    #grips-content tbody td.notes {
+      order: 30;
+      font-size: 0.76rem;
+      color: #666;
+      line-height: 1.5;
+      padding-top: 6px;
+      margin-top: 4px;
+      border-top: 1px solid #f0efeb;
+    }
+
+    /* ────────────────────────────────────────────────────
+       HYBRID CARDS
+       DOM: 1:Name 2:Mains 3:Crosses 4:Stiffness 5:Power 6:Spin 7:Character 8:Tension 9:Notes
+       Card: Name → Character(7) → Mains(2) → Crosses(3) → Bars(4,5,6) → Tension(8) → Notes(9)
+       ──────────────────────────────────────────────────── */
+    
+    /* Character/Feel (col 7) — order 2 */
+    .hybrid-table tbody td:nth-child(7) {
+      order: 2;
+      padding: 4px 0 6px;
+    }
+    
+    /* Mains (col 2) — order 3, labeled */
+    .hybrid-table tbody td:nth-child(2) {
+      order: 3;
+      font-size: 0.78rem;
+      padding: 2px 0;
+    }
+    .hybrid-table tbody td:nth-child(2)::before {
+      content: 'Mains: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    
+    /* Crosses (col 3) — order 4, labeled */
+    .hybrid-table tbody td:nth-child(3) {
+      order: 4;
+      font-size: 0.78rem;
+      padding: 2px 0 6px;
+      border-bottom: 1px solid #f5f4f0;
+      margin-bottom: 4px;
+    }
+    .hybrid-table tbody td:nth-child(3)::before {
+      content: 'Crosses: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    
+    /* Hybrid bars — order 10-12 */
+    .hybrid-table tbody td:nth-child(4) { order: 10; }
+    .hybrid-table tbody td:nth-child(5) { order: 11; }
+    .hybrid-table tbody td:nth-child(6) { order: 12; }
+    .hybrid-table tbody td:nth-child(4)::before { content: 'Stiffness'; }
+    .hybrid-table tbody td:nth-child(5)::before { content: 'Power'; }
+    .hybrid-table tbody td:nth-child(6)::before { content: 'Spin'; }
+    .hybrid-table tbody td.bar-cell::before {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      color: #aaa;
+      width: 66px;
+      min-width: 66px;
+      flex-shrink: 0;
+      text-align: right;
+    }
+    
+    /* Hybrid tension (col 8) — order 20 */
+    .hybrid-table tbody td:nth-child(8) {
+      order: 20;
+      font-size: 0.75rem;
+      color: #777;
+      padding: 4px 0 2px;
+      border-top: 1px solid #f5f4f0;
+      margin-top: 2px;
+    }
+    .hybrid-table tbody td:nth-child(8)::before {
+      content: 'Recommended tension: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* ────────────────────────────────────────────────────
+       GRIP OVERGRIP CARDS
+       DOM: 1:Grip 2:Model 3:Specs 4:Tackiness 5:Absorption 6:Durability 7:Feel 8:Colors 9:Pack 10:Notes
+       Card: Name → Feel(7) → Model(2) + Specs(3) → Colors(8) → Bars(4,5,6) → Pack(9) → Notes(10)
+       ──────────────────────────────────────────────────── */
+    
+    /* Grip Feel (col 7) — order 2 */
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(7) {
+      order: 2;
+      padding: 4px 0 6px;
+    }
+    
+    /* Grip Model (col 2) — order 3, labeled */
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(2) {
+      order: 3;
+      display: inline-block;
+      width: auto;
+      font-size: 0.75rem;
+      color: #777;
+    }
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(2)::before {
+      content: 'Model: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(2)::after {
+      content: '  ·  ';
+      color: #ddd;
+    }
+    
+    /* Grip Specs (col 3) — order 4, inline with model */
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(3) {
+      order: 4;
+      display: inline-block;
+      width: auto;
+      font-size: 0.75rem;
+      color: #666;
+      margin-bottom: 4px;
+    }
+    
+    /* Grip Colors (col 8) — shown — order 5 */
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(8) {
+      order: 5;
+      padding: 2px 0 6px;
+      border-bottom: 1px solid #f5f4f0;
+      margin-bottom: 4px;
+      font-size: 0.75rem;
+    }
+    
+    /* Grip bar cells — order 10-12 */
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(4) { order: 10; }
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(5) { order: 11; }
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(6) { order: 12; }
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(4)::before { content: 'Tackiness'; }
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(5)::before { content: 'Absorption'; }
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(6)::before { content: 'Durability'; }
+    
+    /* Grip Pack Sizes (col 9) — order 20, labeled */
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(9) {
+      order: 20;
+      font-size: 0.75rem;
+      color: #777;
+      padding: 2px 0;
+    }
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(9)::before {
+      content: 'Pack sizes: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    /* ────────────────────────────────────────────────────
+       GRIP REPLACEMENT CARDS
+       DOM: 1:Grip 2:Model 3:Material 4:Specs 5:Feel 6:Colors 7:Notes
+       Card: Name → Feel(5) → Material(3) + Model(2) → Specs(4) → Colors(6) → Notes(7)
+       ──────────────────────────────────────────────────── */
+    
+    .grip-replacement-table tbody td:nth-child(5) {
+      order: 2;
+      padding: 4px 0 6px;
+    }
+    .grip-replacement-table tbody td:nth-child(3) {
+      order: 3;
+      display: inline-block;
+      width: auto;
+    }
+    .grip-replacement-table tbody td:nth-child(3)::after {
+      content: '  ·  ';
+      color: #ddd;
+    }
+    .grip-replacement-table tbody td:nth-child(2) {
+      order: 4;
+      display: inline-block;
+      width: auto;
+      font-size: 0.75rem;
+      color: #777;
+      margin-bottom: 4px;
+    }
+    .grip-replacement-table tbody td:nth-child(2)::before {
+      content: 'Model: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+    }
+    .grip-replacement-table tbody td:nth-child(4) {
+      order: 5;
+      font-size: 0.75rem;
+      color: #666;
+      padding-bottom: 4px;
+    }
+    .grip-replacement-table tbody td:nth-child(4)::before {
+      content: 'Specs: ';
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #aaa;
+    }
+    .grip-replacement-table tbody td:nth-child(6) {
+      order: 6;
+      font-size: 0.75rem;
+      padding: 2px 0 6px;
+      border-bottom: 1px solid #f5f4f0;
+      margin-bottom: 4px;
+    }
+
+    /* ────────────────────────────────────────────────────
+       SHARED CARD STYLES
+       ──────────────────────────────────────────────────── */
+    
+    /* Rec box: tighter on mobile */
+    .rec-box {
+      font-size: 0.8rem;
+      padding: 12px;
+      line-height: 1.5;
+    }
+    
+    /* Table wrap: strip container visuals in card mode */
+    .table-wrap {
+      overflow-x: visible;
+      border-radius: 0;
+      box-shadow: none;
+      background: transparent;
+    }
+    /* Table itself: transparent in card mode (cards provide their own bg) */
+    #strings-content table,
+    #grips-content table {
+      background: transparent;
+    }
+    
+    /* Filter bar: tighter */
+    .filter-bar, .grip-filter-bar {
+      padding: 0.75rem 1rem;
+    }
+    .filter-groups { gap: 0.5rem; }
+    .filter-chip { font-size: 0.7rem; padding: 0.2rem 0.5rem; }
+  }
+
+
+
