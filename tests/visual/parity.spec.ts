@@ -1,3 +1,4 @@
+import type { Page } from '@playwright/test';
 import {
   APP_URL,
   LEGACY_URL,
@@ -9,10 +10,32 @@ import {
   test,
 } from './support';
 
+const HEX = '[data-filter-group="shape"][data-filter-value="hexagonal"]';
+const GRIP_DRY = '[data-gfilter-group="feel"][data-gfilter-value="dry"]';
+
+/** Strip content the port has not reached yet; views showing it are expected to fail. */
+const STRIPS_PENDING = 'log and gut strips not ported yet';
+
+interface View {
+  name: string;
+  /** Selectors clicked in order on both pages before the screenshot. */
+  clicks: string[];
+  /** Set while the view depends on unported modules: the test is then expected to fail. */
+  pending?: string;
+}
+
+// Key views from the parity plan; the rest are added as their modules are ported.
+const VIEWS: View[] = [
+  { name: 'default (Strings / Regna / Toroline)', clicks: [], pending: STRIPS_PENDING },
+  { name: 'Percept 100D', clicks: ['#btn-racquet-percept'], pending: STRIPS_PENDING },
+  { name: 'Pro Tour 630', clicks: ['#btn-racquet-headpt630'], pending: STRIPS_PENDING },
+  { name: 'Grips', clicks: ['#btn-cat-grips'] },
+  { name: 'filters open, Hex active', clicks: ['#btn-filters', HEX], pending: STRIPS_PENDING },
+  { name: 'grip filters open, Dry active', clicks: ['#btn-cat-grips', '#btn-filters', GRIP_DRY] },
+];
+
 // The UI tag shows the app version (v0.991) while legacy says v0.990: a declared difference.
-const maskVersion = {
-  mask: (page: import('@playwright/test').Page) => [page.locator('.version-tag')],
-};
+const maskVersion = { mask: (page: Page) => [page.locator('.version-tag')] };
 
 test('harness: legacy renders identically twice, with the vendored fonts', async ({
   context,
@@ -23,13 +46,15 @@ test('harness: legacy renders identically twice, with the vendored fonts', async
   await expectSameRendering(testInfo, await screenshot(first), await screenshot(second));
 });
 
-test('default view: Strings / Regna / Toroline', async ({ context }, testInfo) => {
-  test.fail(true, 'expected to fail until the app shell is ported in step 2');
-  const legacy = await open(context, LEGACY_URL);
-  const app = await open(context, APP_URL);
-  await expectSameRendering(
-    testInfo,
-    await screenshot(legacy, maskVersion),
-    await screenshot(app, maskVersion),
-  );
-});
+for (const view of VIEWS) {
+  test(`parity: ${view.name}`, async ({ context }, testInfo) => {
+    test.fail(!!view.pending, view.pending);
+    const shots: Buffer[] = [];
+    for (const url of [LEGACY_URL, APP_URL]) {
+      const page = await open(context, url);
+      for (const selector of view.clicks) await page.locator(selector).first().click();
+      shots.push(await screenshot(page, maskVersion));
+    }
+    await expectSameRendering(testInfo, shots[0]!, shots[1]!);
+  });
+}

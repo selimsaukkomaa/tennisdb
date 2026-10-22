@@ -6,6 +6,8 @@ import { resolve } from 'node:path';
 import { beforeAll, describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
 import type { Racquet, TennisDb } from '../../src/core/types';
+import { initFilterPanel } from '../../src/ui/filter-panel';
+import { initFilters } from '../../src/ui/filters';
 import { initNav, showRacquet } from '../../src/ui/nav';
 import { renderShell } from '../../src/ui/shell';
 
@@ -40,7 +42,9 @@ beforeAll(() => {
     .replace(/<script[\s\S]*?<\/script>/g, '');
   db = withFourthRacquet();
   renderShell(db, copy);
+  initFilters();
   initNav(db);
+  initFilterPanel();
 });
 
 describe('fourth racquet from data alone', () => {
@@ -89,5 +93,37 @@ describe('fourth racquet from data alone', () => {
     expect(document.getElementById('test4-toroline-section')!.classList.contains('active')).toBe(
       false,
     );
+  });
+});
+
+describe('filters on the fourth racquet', () => {
+  const rows = (): HTMLElement[] => [
+    ...document.querySelectorAll<HTMLElement>('#test4-content tr[data-shape]'),
+  ];
+  const hidden = (): number => rows().filter((r) => r.classList.contains('filter-hidden')).length;
+  const hex = (): HTMLElement =>
+    document.querySelector('[data-filter-group="shape"][data-filter-value="hexagonal"]')!;
+
+  test('a shape chip narrows its rows, with a status line and all-brands state', () => {
+    showRacquet('test4');
+    hex().click();
+    const visible = rows().filter((r) => !r.classList.contains('filter-hidden'));
+    expect(visible.length).toBeGreaterThan(0);
+    expect(visible.length).toBeLessThan(rows().length);
+    expect(visible.every((r) => r.dataset.shape!.split(',').includes('hexagonal'))).toBe(true);
+    expect(document.getElementById('filter-status')!.textContent).toBe(
+      `${visible.length} of ${rows().length} strings`,
+    );
+    expect(document.getElementById('test4-switcher')!.classList.contains('filter-all-brands')).toBe(
+      true,
+    );
+    expect(document.getElementById('filters-count')!.textContent).toBe('1');
+  });
+
+  test('clearing restores every row', () => {
+    hex().click();
+    expect(hidden()).toBe(0);
+    expect(document.getElementById('filters-count')!.textContent).toBe('0');
+    showRacquet('regna');
   });
 });

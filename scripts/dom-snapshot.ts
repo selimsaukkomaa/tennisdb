@@ -1,10 +1,12 @@
 // Dev aid for the port: writes a normalised dump of a page's live DOM after its scripts ran,
 // so the legacy page and the new build can be compared with `diff -u`.
 //
-//   tsx scripts/dom-snapshot.ts <url> <out.txt> [clicks]
+//   tsx scripts/dom-snapshot.ts <url> <out.txt> [steps]
 //
-// `clicks` is a ';'-separated list of CSS selectors clicked in order before the snapshot,
-// e.g. '#btn-racquet-percept;#percept-switcher button:nth-child(3)'.
+// `steps` is a ';'-separated list run in order before the snapshot. A step is a CSS selector
+// to click, `type <selector>=<text>` to type into a field (then waits out the debounce), or
+// `key <Key>` to press a key, e.g.
+//   '#btn-filters;type #filter-search=hex;key Escape'
 //
 // Normalisation: comments, <script>, <style> and <link> dropped; attributes and class tokens
 // sorted; inline styles in CSSOM form; whitespace-only text kept as a single ' ' marker
@@ -17,8 +19,8 @@
 import { writeFileSync } from 'node:fs';
 import { chromium } from '@playwright/test';
 
-const [url, out, clicks = ''] = process.argv.slice(2);
-if (!url || !out) throw new Error('usage: dom-snapshot.ts <url> <out.txt> [clicks]');
+const [url, out, steps = ''] = process.argv.slice(2);
+if (!url || !out) throw new Error('usage: dom-snapshot.ts <url> <out.txt> [steps]');
 
 // Runs in the page. Plain JS in a string: tsx would otherwise inject helpers the page lacks.
 const SNAPSHOT_JS = String.raw`(() => {
@@ -71,9 +73,19 @@ await page.route(
 await page.goto(url);
 await page.waitForLoadState('load');
 await page.waitForTimeout(300);
-for (const selector of clicks.split(';').filter(Boolean)) {
-  await page.locator(selector).first().click();
-  await page.waitForTimeout(150);
+for (const step of steps.split(';').filter(Boolean)) {
+  const typing = step.match(/^type (.+?)=(.*)$/);
+  const key = step.match(/^key (.+)$/);
+  if (typing) {
+    await page.locator(typing[1]!).first().pressSequentially(typing[2]!);
+    await page.waitForTimeout(400);
+  } else if (key) {
+    await page.keyboard.press(key[1]!);
+    await page.waitForTimeout(150);
+  } else {
+    await page.locator(step).first().click();
+    await page.waitForTimeout(150);
+  }
 }
 const lines = (await page.evaluate(SNAPSHOT_JS)) as string[];
 
