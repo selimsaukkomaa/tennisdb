@@ -137,6 +137,21 @@ export async function expectSameRendering(
   );
 }
 
+/** The same stringing log in v0.990's format (tennis_log_v1) and v0.991's (tennis_log_v2). */
+const LOG_SEED = JSON.parse(
+  readFileSync(fileURLToPath(new URL('../fixtures/log-seed.json', import.meta.url)), 'utf8'),
+) as Record<string, unknown>;
+
+/** Seeds both pages' localStorage with the fixture log before they load. */
+export async function seedLog(context: BrowserContext): Promise<void> {
+  await context.addInitScript(
+    (items: Record<string, string>) => {
+      for (const [k, v] of Object.entries(items)) localStorage.setItem(k, v);
+    },
+    Object.fromEntries(Object.entries(LOG_SEED).map(([k, v]) => [k, JSON.stringify(v)])),
+  );
+}
+
 /** Every test gets a context with the network isolated and the clock fixed. */
 export const test = base.extend({
   context: async ({ context }, use) => {

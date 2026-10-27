@@ -7,12 +7,14 @@ import { initFilterPanel } from './ui/filter-panel';
 import { initFilters } from './ui/filters';
 import { initGut } from './ui/gut';
 import { initLog, logSearchEntries } from './ui/log';
-import { initNav, showCategory, showRacquet } from './ui/nav';
+import { initNav } from './ui/nav';
 import { initPalette } from './ui/palette';
-import { currentIndex, initSearch, rebuildIndex, searchNow, setLogSearchSource } from './ui/search';
+import { initSearch, setLogSearchSource } from './ui/search';
 import { renderShell } from './ui/shell';
 
-const db = assembleDb();
+/** The assembled database (v0.990 exposed it as window.TENNIS_DB). */
+export const db = assembleDb();
+
 renderShell(db, copy);
 // Modules subscribe to nav events before initNav applies the start state.
 initFilters();
@@ -26,19 +28,5 @@ initPalette();
 setLogSearchSource(logSearchEntries);
 initContextLine(db);
 await initLog(db, createLogStore());
-
-// Globals the v0.990 smoke suite drives; removed once the suite is ported (step 4).
-Object.assign(window, {
-  TENNIS_DB: db,
-  showRacquet,
-  showCategory,
-  GLOBAL_SEARCH: { rebuildIndex, search: searchNow },
-  // Never defined in v0.990, which left its smoke check skipped; defined here so it runs.
-  GLOBAL_SEARCH_API: {
-    get index() {
-      return currentIndex();
-    },
-  },
-});
 
 document.documentElement.dataset.ready = '1';

@@ -1,5 +1,3 @@
-import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
 import type { Page } from '@playwright/test';
 import {
   APP_URL,
@@ -9,17 +7,13 @@ import {
   loadedFontFamilies,
   open,
   screenshot,
+  seedLog,
   test,
 } from './support';
 
 const HEX = '[data-filter-group="shape"][data-filter-value="hexagonal"]';
 const GRIP_DRY = '[data-gfilter-group="feel"][data-gfilter-value="dry"]';
 const compareBox = (id: string): string => `#regna-content input[data-compare-id="${id}"]`;
-
-/** The same stringing log in v0.990's format (tennis_log_v1) and v0.991's (tennis_log_v2). */
-const LOG_SEED = JSON.parse(
-  readFileSync(fileURLToPath(new URL('../fixtures/log-seed.json', import.meta.url)), 'utf8'),
-) as Record<string, unknown>;
 
 interface View {
   name: string;
@@ -104,14 +98,7 @@ test('harness: legacy renders identically twice, with the vendored fonts', async
 for (const view of VIEWS) {
   test(`parity: ${view.name}`, async ({ context }, testInfo) => {
     test.fail(!!view.pending, view.pending);
-    if (view.seedLog) {
-      await context.addInitScript(
-        (items: Record<string, string>) => {
-          for (const [k, v] of Object.entries(items)) localStorage.setItem(k, v);
-        },
-        Object.fromEntries(Object.entries(LOG_SEED).map(([k, v]) => [k, JSON.stringify(v)])),
-      );
-    }
+    if (view.seedLog) await seedLog(context);
     const shots: Buffer[] = [];
     for (const url of [LEGACY_URL, APP_URL]) {
       const page = await open(context, url);
