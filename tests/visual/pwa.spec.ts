@@ -15,7 +15,7 @@ test('works offline after the first visit', async ({ context }, testInfo) => {
     const href = document.querySelector<HTMLLinkElement>('link[rel="manifest"]')!.href;
     return (await fetch(href)).json();
   });
-  expect(manifest).toMatchObject({ short_name: 'EquipDB', display: 'standalone' });
+  expect(manifest).toMatchObject({ short_name: 'Strung', display: 'standalone' });
 
   await context.setOffline(true);
   await page.reload();

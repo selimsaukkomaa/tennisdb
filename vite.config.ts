@@ -44,8 +44,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       injectRegister: false,
       manifest: {
-        name: 'Tennis equipment database',
-        short_name: 'EquipDB',
+        name: 'Strung',
+        short_name: 'Strung',
         description: 'Strings, hybrids, natural gut pairings, grips and a stringing log.',
         start_url: '.',
         scope: '.',

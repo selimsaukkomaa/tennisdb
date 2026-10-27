@@ -3,7 +3,7 @@ import type { CapacitorConfig } from '@capacitor/cli';
 // The iOS app wraps the same web build (dist/, built with base '/').
 const config: CapacitorConfig = {
   appId: 'com.selimsaukkomaa.tennisdb',
-  appName: 'EquipDB',
+  appName: 'Strung',
   webDir: 'dist',
   ios: {
     // WKWebView insets the page below the status bar and above the home indicator, so the

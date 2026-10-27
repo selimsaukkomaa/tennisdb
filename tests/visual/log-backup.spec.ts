@@ -23,7 +23,7 @@ test('export, then import into an empty log', async ({ browser, context }, testI
     source.waitForEvent('download'),
     source.locator('.log-section[data-racquet="regna"] [data-log-export]').click(),
   ]);
-  expect(download.suggestedFilename()).toBe('tennisdb-log-2026-10-22.json');
+  expect(download.suggestedFilename()).toBe('strung-log-2026-10-22.json');
   const file = testInfo.outputPath('backup.json');
   await download.saveAs(file);
   const backup = JSON.parse(readFileSync(file, 'utf8'));

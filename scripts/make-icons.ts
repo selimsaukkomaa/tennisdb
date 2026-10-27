@@ -1,45 +1,54 @@
-// Renders the app icon from the topbar wordmark (Space Mono, the app's own colours) with
+// Renders the app icon ("strung" in heavy DM Sans with a line under it, like a string) with
 // Playwright's Chromium, at every size the PWA and the iOS app need.
 //
 //   tsx scripts/make-icons.ts <variant>            writes public/icons/*, the iOS AppIcon and
 //                                                  the iOS launch screen
 //   tsx scripts/make-icons.ts --preview <out.png>  renders all variants side by side
 import { execFileSync } from 'node:child_process';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 import { chromium, type Browser } from '@playwright/test';
 import { PNG } from 'pngjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const FONTS = pathToFileURL(join(ROOT, 'src', 'styles', 'fonts.css')).href;
+/**
+ * The app's bundled DM Sans (a variable font, so any weight), inlined: the icon page is not
+ * allowed to load a file: font itself.
+ */
+const DM_SANS = `data:font/woff2;base64,${readFileSync(
+  join(ROOT, 'src', 'assets', 'fonts', 'dmsans-v17-rP2Hp2ywxg089UriCZOIHTWEBlw.woff2'),
+).toString('base64')}`;
 /** The page background (body in base.css); the launch screen uses it so loading is seamless. */
 const APP_BACKGROUND = '#f0efeb';
 
 interface Variant {
   bg: string;
-  top: string;
-  bottom: string;
+  text: string;
+  line: string;
 }
 
+/** `blue` is the app icon (v0.993); the others are the alternatives it was picked from. */
 export const VARIANTS: Record<string, Variant> = {
-  light: { bg: '#f0efeb', top: '#111111', bottom: '#b3afa4' },
-  dark: { bg: '#111111', top: '#f0efeb', bottom: '#fbbf24' },
-  blue: { bg: '#2563eb', top: '#ffffff', bottom: '#bfdbfe' },
+  blue: { bg: '#1f4fff', text: '#ffffff', line: '#ffffff' },
+  ball: { bg: '#d7f205', text: '#111111', line: '#111111' },
+  coral: { bg: '#ff4f3a', text: '#ffffff', line: '#111111' },
+  pink: { bg: '#ff3d8b', text: '#111111', line: '#ffffff' },
 };
 
 /** `inset` is the share of the side kept clear around the wordmark (maskable icons need more). */
 function iconHtml(v: Variant, inset: number): string {
   const size = 1024;
-  const font = Math.round((size * (1 - 2 * inset)) / 3.2);
-  return `<!doctype html><html><head><link rel="stylesheet" href="${FONTS}">
-<style>
+  const font = Math.round((size * (1 - 2 * inset)) / 3.1);
+  return `<!doctype html><html><head><style>
+  @font-face { font-family: 'DM Sans'; src: url('${DM_SANS}') format('woff2'); font-weight: 100 1000; }
   html, body { margin: 0; width: ${size}px; height: ${size}px; background: ${v.bg}; }
   body { display: flex; flex-direction: column; align-items: center; justify-content: center;
-         font-family: 'Space Mono', monospace; font-weight: 700; line-height: 0.95;
-         letter-spacing: -0.02em; font-size: ${font}px; }
-  .top { color: ${v.top}; } .bottom { color: ${v.bottom}; }
-</style></head><body><div class="top">EQUIP</div><div class="bottom">DB</div></body></html>`;
+         font-family: 'DM Sans'; font-weight: 800; line-height: 1; letter-spacing: -0.04em; }
+  .word { color: ${v.text}; font-size: ${font}px; margin-top: -${Math.round(font * 0.08)}px; }
+  .line { background: ${v.line}; width: ${Math.round(font * 2.4)}px; height: ${Math.round(font * 0.088)}px;
+          border-radius: ${font}px; margin-top: ${Math.round(font * 0.12)}px; }
+</style></head><body><div class="word">strung</div><div class="line"></div></body></html>`;
 }
 
 async function render(browser: Browser, html: string, px: number, out: string): Promise<void> {
@@ -89,7 +98,7 @@ async function main(): Promise<void> {
       .join('');
     const sheet = `<!doctype html><html><body style="margin:0;padding:24px;background:#fff;font:600 28px system-ui;display:flex;gap:32px">
 <style>figure{margin:0;text-align:center}iframe{width:1024px;height:1024px;border:0;border-radius:180px;transform:scale(.35);transform-origin:0 0;margin:0 -666px -666px 0;display:block}</style>${cells}</body></html>`;
-    const page = await browser.newPage({ viewport: { width: 1200, height: 460 } });
+    const page = await browser.newPage({ viewport: { width: 1580, height: 460 } });
     await page.setContent(sheet);
     await page.waitForTimeout(500);
     await page.screenshot({ path: args[1] ?? 'icon-preview.png' });

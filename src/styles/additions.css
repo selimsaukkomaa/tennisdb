@@ -45,3 +45,29 @@
   text-align: center;
   margin: 0 4px 0 -38px;  /* 8px flex gap + 26px + 4px = net zero width */
 }
+
+/* v0.993: the topbar wordmark matches the app icon: "strung" in heavy DM Sans with a line
+   under it, like a string. fonts.css stops at 700, so 800 maps to the same variable file. */
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../assets/fonts/dmsans-v17-rP2Hp2ywxg089UriCZOIHTWEBlw.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.topbar-mark {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.topbar-mark::after {
+  content: '';
+  display: block;
+  height: 2px;
+  margin: 2px 1px 0;
+  border-radius: 2px;
+  background: #1f4fff;
+}

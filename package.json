@@ -1,7 +1,7 @@
 {
   "name": "tennisdb",
   "private": true,
-  "version": "0.992.0",
+  "version": "0.993.0",
   "description": "Personal tennis equipment database: strings, hybrids, gut pairings, grips and a stringing log.",
   "type": "module",
   "scripts": {
@@ -20,7 +20,7 @@
     "fonts:vendor": "tsx scripts/vendor-fonts.ts",
     "build:ios": "vite build && cap sync ios",
     "ios:open": "cap open ios",
-    "icons": "tsx scripts/make-icons.ts dark"
+    "icons": "tsx scripts/make-icons.ts blue"
   },
   "devDependencies": {
     "@capacitor/cli": "^8.5.3",

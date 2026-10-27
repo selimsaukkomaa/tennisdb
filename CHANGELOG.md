@@ -1,7 +1,89 @@
-# Tennis Equipment Database — Changelog
+# Strung — Changelog
 
-Releases up to v0.990 shipped as a single HTML file. Their changelogs are in
-`legacy/` (`tennis_equipmentdb_changelog_v0_989.md`, `…_v0_990.md`).
+Strung was the Tennis Equipment Database (EquipDB) until v0.993. Releases up to
+v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
+(`tennis_equipmentdb_changelog_v0_989.md`, `…_v0_990.md`).
+
+---
+
+# v0.993 — Renamed to Strung
+
+**Date:** 2026-10-27
+**Base:** v0.992 (bug-fix release)
+**Status:** name and icon release — the app is called Strung, with a new icon.
+No data, content or behaviour changes; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## 1. The name
+
+| Where | Was | Now |
+|---|---|---|
+| iOS home screen (`CFBundleDisplayName`, Capacitor `appName`) | EquipDB | Strung |
+| Web app manifest (`name` / `short_name`) | Tennis equipment database / EquipDB | Strung / Strung |
+| Home-screen name Safari suggests (`apple-mobile-web-app-title`, new) | the page title | Strung |
+| Browser tab (`<title>`) | Tennis equipment database — Selim S. | Strung — Selim S. |
+| Topbar wordmark (desktop; hidden on phones, as before) | EQUIP + a dimmed DB, in Space Mono | "strung" in heavy DM Sans with a blue line under it, like the icon |
+| Log backup file | `tennisdb-log-YYYY-MM-DD.json` | `strung-log-YYYY-MM-DD.json` |
+
+Unchanged on purpose: the iOS app id (`com.selimsaukkomaa.tennisdb`), the
+address (`/tennisdb/`) and the repository. Installed copies, the iOS app and
+the home-screen web app, update in place and keep their stringing log. Import
+still accepts backups under the old file name.
+
+## 2. The icon
+
+"strung" in heavy DM Sans (the app's own body font) with a line under it, like
+a string, white on electric blue (`#1f4fff`). It replaces the Space Mono
+"EQUIP / DB" wordmark on near-black. One design at every size: the PWA icons
+(192, 512, maskable 512 with the word inside the safe circle), the apple-touch
+icon, the favicon and the iOS app icon. The launch screen stays plain
+`#f0efeb`. `npm run icons` regenerates them; the alternatives it was picked
+from (optic yellow, coral, pink) stay in its preview mode.
+
+The topbar wordmark follows the icon: "strung" in DM Sans at weight 800 with a
+2 px `#1f4fff` line under it. The v0.990 font declarations stop at weight 700,
+so one more `@font-face` maps 800 to the same bundled variable file. The
+wordmark stays hidden on phones.
+
+## Declared differences from v0.990 (added in v0.993)
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| Topbar wordmark reads "strung" in heavy DM Sans with a blue line | yes, on desktop | D: the wordmark's text and style, and the weight-800 font, as in the app |
+
+The title, manifest and icons are not part of the page the parity suite
+compares.
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+## Verification
+
+`npm run check` passes: 261 Vitest tests, 59 Playwright tests (57 in v0.992).
+
+- **New view:** a close-up of the top bar at both viewports. At full-page size
+  the wordmark is too few pixels for the 0.1% threshold; the close-up fails
+  without patch D (2.7% of pixels differ on desktop). On phones the wordmark is
+  hidden, so that viewport passes either way.
+- Without patch D the DOM comparison fails too (checked on the first scenario;
+  every scenario includes the top bar).
+- The patch loads the weight-800 face itself and waits for it, since the
+  harness waits for fonts before patching. The browser suite then passed 177 of
+  177 runs under load.
+
+## Still open
+
+Unchanged from v0.992, plus (nothing changed):
+
+- **"Strung" is also a label inside the app:** the context line reads
+  "STRUNG Caviar @ 23 kg" for the string currently in a racquet.
+- **`.topbar-mark-dim`** in the v0.990 stylesheet is now a dead rule.
 
 ---
 

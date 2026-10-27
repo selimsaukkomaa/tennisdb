@@ -35,6 +35,8 @@ interface View {
 // Key views from the parity plan.
 const VIEWS: View[] = [
   { name: 'default (Strings / Regna / Toroline)', clicks: [] },
+  // Close up, so the wordmark (patch D, the v0.993 rename) is more than a rounding error.
+  { name: 'topbar', clicks: [], element: '#topbar' },
   { name: 'Percept 100D', clicks: ['#btn-racquet-percept'] },
   { name: 'Pro Tour 630', clicks: ['#btn-racquet-headpt630'] },
   { name: 'Grips', clicks: ['#btn-cat-grips'] },

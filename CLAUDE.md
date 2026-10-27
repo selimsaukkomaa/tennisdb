@@ -1,11 +1,12 @@
-# TennisDB
+# Strung
 
-Personal tennis equipment database: strings, hybrids, gut pairings and grips for three
-racquets, plus a stringing log. It ships as a PWA on GitHub Pages
-(`https://selimsaukkomaa.github.io/tennisdb/`) and as an iOS app (Capacitor, "EquipDB").
+Strung (this repo is `tennisdb`) is a personal tennis equipment database: strings, hybrids,
+gut pairings and grips for three racquets, plus a stringing log. It ships as a PWA on GitHub
+Pages (`https://selimsaukkomaa.github.io/tennisdb/`) and as an iOS app (Capacitor). It was
+called EquipDB until v0.993.
 
 v0.991 was a parity port of the single-file v0.990 app in `legacy/`: same behaviour, same
-look, same data. v0.992 fixed three v0.990 bugs. Release history is in `CHANGELOG.md`;
+look, same data. v0.992 fixed three v0.990 bugs; v0.993 renamed the app. Release history is in `CHANGELOG.md`;
 v0.989 and v0.990 are in `legacy/`.
 
 ## Conventions
@@ -109,7 +110,7 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
 
 The app must render like v0.990. No visual or DOM change without a declared difference:
 
-- pixel parity (`tests/visual/parity.spec.ts`): 14 views at 1440×900 and 390×844, threshold
+- pixel parity (`tests/visual/parity.spec.ts`): 15 views at 1440×900 and 390×844, threshold
   0.1, at most 0.1% of pixels differing.
 - DOM parity (`tests/visual/dom-parity.spec.ts`): 24 scenarios compared node for node.
 - every declared difference is listed in `CHANGELOG.md`.
@@ -148,12 +149,14 @@ smart quotes in source, `index.html` or these two docs. Each rule has a mutation
 
 ## iOS
 
-- App id `com.selimsaukkomaa.tennisdb`, display name EquipDB, iOS 15+. The display name can
-  change freely; the app id is fixed once the app is on a device or in the store.
+- App id `com.selimsaukkomaa.tennisdb`, display name Strung, iOS 15+. The display name can
+  change freely; the app id stays, so installed copies update in place and keep their log.
 - `BridgeViewController` (`ios/App/App/SceneDelegate.swift`) adds a #f0efeb strip behind the
   status bar; `contentInset: 'automatic'` keeps the page below it.
 - The service worker registers only on the web (`!isNative()`).
-- Icons and splash come from `npm run icons` (`scripts/make-icons.ts`).
+- Icons and splash come from `npm run icons` (`scripts/make-icons.ts`): "strung" in heavy DM Sans,
+  white on `#1f4fff`. The icon never uses Space Mono (the owner's call); the topbar wordmark
+  matches it (`additions.css`).
 
 ## Deploy
 

@@ -237,7 +237,7 @@ function setFormStars(starsEl: HTMLElement, value: number): void {
 
 async function exportLog(): Promise<void> {
   await saving;
-  await saveTextFile(`tennisdb-log-${todayISO()}.json`, await store.export());
+  await saveTextFile(`strung-log-${todayISO()}.json`, await store.export());
 }
 
 async function importLog(): Promise<void> {
