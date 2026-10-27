@@ -10,6 +10,7 @@ import {
   seedLog,
   test,
 } from './support';
+import { typeInto } from './dom';
 
 const HEX = '[data-filter-group="shape"][data-filter-value="hexagonal"]';
 const GRIP_DRY = '[data-gfilter-group="feel"][data-gfilter-value="dry"]';
@@ -115,7 +116,7 @@ for (const view of VIEWS) {
       const page = await open(context, url);
       for (const selector of view.clicks) await page.locator(selector).first().click();
       if (view.type) {
-        await page.locator(view.type[0]).pressSequentially(view.type[1]);
+        await typeInto(page, view.type[0], view.type[1]);
         await page.locator('.search-results-visible').waitFor();
       }
       if (view.hover) await page.locator(view.hover).hover();

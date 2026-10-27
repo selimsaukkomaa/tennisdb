@@ -80,7 +80,17 @@ Unchanged since v0.989 (listed under v0.991).
 
 ## Verification
 
-`npm run check` passes locally. CI has not run on this release yet.
+`npm run check` passes locally and in CI.
+
+The new close-up first failed intermittently in CI (2 of 3 runs): both pages
+focus the palette's field and select its text 10 ms after opening, and under
+load the test sometimes typed first, so the selection appeared on one page
+and not the other, or swallowed the first keys ("caviar" became "viar"). It
+reproduced locally under load (23 of 40 runs). Typing into the palette's field
+now waits for that focus (`typeInto` in `tests/visual/dom.ts`); since then
+the search tests passed 325 of 325 runs under the same load, and the full
+browser suite 171 of 171. CI failures now show as public annotations
+(Playwright's `github` reporter), so they can be read without signing in.
 
 **iOS Simulator** (iPhone 18 Pro): the palette's ✕ is the only one in the
 field, shows with text, and a tap empties the field and closes the results.
