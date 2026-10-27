@@ -88,7 +88,7 @@ export async function runSteps(page: Page, steps: readonly Step[]): Promise<void
 const indent = (line: string | undefined): number => (line ?? '').search(/\S|$/);
 
 /**
- * Erases v0.991's declared differences from legacy (each one listed in CHANGELOG.md):
+ * Erases the declared differences from legacy since v0.991 (each one listed in CHANGELOG.md):
  *   - the version tag's text (v0.990 vs the app version)
  *   - the log panel's Export / Import buttons, and the footer they leave on an empty log
  *   - log entry ids (v0.990 made "<timestamp>-<random>" ids; v2 uses UUIDs)

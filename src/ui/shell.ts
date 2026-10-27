@@ -42,12 +42,6 @@ export const brandButtonId = (rid: RacquetId, brand: BrandId): string => `${rid}
 const brandHeaderId = (rid: RacquetId, brand: BrandId): string => `fh-${rid}-${brand}-section`;
 export const gripSectionId = (brand: BrandId): string => `grip-${brand}-section`;
 
-/**
- * Grip brands that get a filter header (`gfh-*`). v0.990 never gave Tourna one, and its grip
- * filter skips the Tourna section too (bug A, kept for parity, fixed in v0.992).
- */
-export const LEGACY_GRIP_FILTER_BRANDS: readonly BrandId[] = ['kimony', 'yonex'];
-
 // ---------------------------------------------------------------- topbar
 
 export function racquetButtons(db: TennisDb): SafeHtml {
@@ -204,9 +198,8 @@ ${replacement ? REPLACEMENT_HEAD : OVERGRIP_HEAD}
 
 function gripBrandSection(db: TennisDb, copy: Copy, brand: BrandId): SafeHtml {
   const types = GRIP_TYPES.filter((t) => db.grips[brand]?.[t]);
-  const header = LEGACY_GRIP_FILTER_BRANDS.includes(brand)
-    ? html`<div class="gfilter-brand-header gfilter-header-${brand}" id="gfh-${brand}">${gripBrandLabel(brand)}</div>\n`
-    : '';
+  // Shown above the section while a grip filter spans every brand. v0.990 had none for Tourna.
+  const header = html`<div class="gfilter-brand-header gfilter-header-${brand}" id="gfh-${brand}">${gripBrandLabel(brand)}</div>\n`;
   const about = copy.gripAbout[brand];
   return html`${header}<div class="brand-section" id="${gripSectionId(brand)}" style="display:none;">
 ${about ? html`<div class="rec-box">\n${raw(about)}\n</div>\n` : ''}${types.map((t, i) => {

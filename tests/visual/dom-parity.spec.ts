@@ -1,5 +1,6 @@
 // DOM parity: after the same steps, the new build's live DOM must equal legacy v0.990's,
-// node for node (normalised, with the declared differences erased; see dom.ts). Catches what
+// node for node (normalised, with the declared differences erased, see dom.ts, and v0.992's
+// fixes patched into legacy, see legacy-fixes.ts). Catches what
 // screenshots can miss: hooks, attributes, hidden elements, whitespace between inline nodes.
 import { APP_URL, LEGACY_URL, expect, open, seedLog, test } from './support';
 import {
@@ -65,7 +66,7 @@ const SCENARIOS: Scenario[] = [
     steps: ['#btn-filters', { type: ['#filter-search', 'caviar'] }, '#btn-filters'],
   },
   {
-    name: 'stale filter after racquet switch (bug B)',
+    name: 'filter, switch racquet, clear, switch back (fix B)',
     steps: [
       '#btn-filters',
       chip('shape', 'hexagonal'),
@@ -75,7 +76,7 @@ const SCENARIOS: Scenario[] = [
     ],
   },
   {
-    name: 'grip Dry chip (bug A)',
+    name: 'grip Dry chip (fix A)',
     steps: ['#btn-cat-grips', '#btn-filters', gripChip('feel', 'dry')],
   },
   {

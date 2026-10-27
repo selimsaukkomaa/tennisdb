@@ -1,11 +1,9 @@
 // String and grip filters, ported from v0.990's main script (the v0.97 filter system).
 // Matching lives in core/filters; this module applies it to rows and sections.
 //
-// Two v0.990 bugs are kept for parity and fixed in v0.992:
-//   A. the grip filter only force-shows LEGACY_GRIP_FILTER_BRANDS, so Tourna matches stay hidden
-//      unless the Tourna tab is active (they still count as shown);
-//   B. a pass only touches the active racquet, so rows filtered on one racquet stay hidden there
-//      after the filters are cleared on another.
+// v0.992 fixed two v0.990 bugs here: a grip filter now force-shows every grip brand (v0.990
+// skipped Tourna), and a string filter pass covers every racquet (v0.990 touched only the
+// active one, leaving stale hidden rows on a racquet switched away from).
 import {
   emptyGripFilter,
   emptyStringFilter,
@@ -19,7 +17,7 @@ import {
 } from '../core/filters';
 import type { RacquetId } from '../core/types';
 import { showBrand, showGripBrand } from './nav';
-import { LEGACY_GRIP_FILTER_BRANDS, gripSectionId, racquetContentId } from './shell';
+import { racquetContentId } from './shell';
 import { emit, on, state } from './state';
 
 export const filterState: StringFilter = emptyStringFilter();
@@ -47,24 +45,38 @@ function updateFilterStatus(visible: number, total: number): void {
     : '';
 }
 
+/**
+ * One filter state applies to every racquet, so each pass covers them all and the active one
+ * last (its counts go in the status). v0.990 filtered only the active racquet, which left a
+ * racquet switched away from with stale hidden rows once the filters were cleared elsewhere.
+ */
 export function applyFilters(): void {
-  const rid = state.racquet;
+  const active = isFilterActive();
+  byId('filter-clear').classList.toggle('has-filters', active);
+  const others = all('[data-nav-switcher]')
+    .map((s) => s.dataset.navSwitcher!)
+    .filter((rid) => rid !== state.racquet);
+  for (const rid of others) applyToRacquet(rid, active);
+  const { visible, total } = applyToRacquet(state.racquet, active);
+  updateFilterStatus(visible, total);
+  emit('filtered', 'strings');
+}
+
+function applyToRacquet(rid: RacquetId, active: boolean): { visible: number; total: number } {
   const container = byId(racquetContentId(rid));
   const rows = all('tr[data-shape]', container);
   const sections = all('.brand-section', container);
-  const active = isFilterActive();
-  byId('filter-clear').classList.toggle('has-filters', active);
 
   if (!active) {
     rows.forEach((r) => r.classList.remove('filter-hidden'));
     sections.forEach((s) => s.classList.remove('filter-force-show', 'filter-all-hidden'));
-    all('.filter-brand-header').forEach((h) => h.classList.remove('filter-show'));
-    all('.table-wrap.filter-no-results').forEach((tw) => tw.classList.remove('filter-no-results'));
+    all('.filter-brand-header', container).forEach((h) => h.classList.remove('filter-show'));
+    all('.table-wrap.filter-no-results', container).forEach((tw) =>
+      tw.classList.remove('filter-no-results'),
+    );
     showBrand(rid, state.brandByRacquet[rid]!);
     updateSwitcherState(rid, false);
-    updateFilterStatus(rows.length, rows.length);
-    emit('filtered', 'strings');
-    return;
+    return { visible: rows.length, total: rows.length };
   }
 
   // Filters span every brand: force all sections visible, with their headers.
@@ -109,9 +121,7 @@ export function applyFilters(): void {
     const header = s.previousElementSibling;
     if (header?.classList.contains('filter-brand-header')) header.classList.remove('filter-show');
   }
-
-  updateFilterStatus(visible, rows.length);
-  emit('filtered', 'strings');
+  return { visible, total: rows.length };
 }
 
 export function toggleChip(btn: HTMLElement): void {
@@ -132,11 +142,8 @@ export function clearAllFilters(): void {
 
 export const isGripFilterOn = (): boolean => isGripFilterActive(gripFilterState);
 
-function gripSections(): HTMLElement[] {
-  return LEGACY_GRIP_FILTER_BRANDS.map((b) => document.getElementById(gripSectionId(b))).filter(
-    (s): s is HTMLElement => s !== null,
-  );
-}
+/** Every grip brand's section: a grip filter spans all brands. */
+const gripSections = (): HTMLElement[] => all('#grips-content > .brand-section');
 
 function updateGripSwitcherState(active: boolean): void {
   byId('grip-switcher').classList.toggle('gfilter-all-brands', active);
@@ -275,7 +282,7 @@ export function initFilters(): void {
     if (cat !== 'strings') clearAllFilters();
     if (cat !== 'grips') clearGripFilters();
   });
-  // Switching racquet re-applies active filters to the newly shown racquet (only; bug B).
+  // Every racquet is already filtered; re-applying puts the new racquet's counts in the status.
   on('racquet', () => {
     if (isFilterActive()) applyFilters();
   });

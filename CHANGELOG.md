@@ -5,6 +5,123 @@ Releases up to v0.990 shipped as a single HTML file. Their changelogs are in
 
 ---
 
+# v0.992 — Three v0.990 bugs fixed
+
+**Date:** 2026-10-27
+**Base:** v0.991 (repository port)
+**Status:** bug-fix release — the three v0.990 bugs v0.991 kept for parity
+are fixed. No data or content changes; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## 1. Grip filters cover every brand (bug A)
+
+Under any grip filter, v0.990 force-showed only the Kimony and Yonex sections,
+and Tourna had no filter header. Tourna's matches stayed hidden unless the
+Tourna tab was the one selected, yet the status counted them as shown: with
+Dry on, "9 of 35 grips" listed six.
+
+- Every grip brand's section is shown under a filter, each with its header.
+  A brand with no match is hidden along with its header, as before.
+- Tourna's header uses `#1e40af`, Tourna's colour on light backgrounds
+  everywhere else in the app (compare, log, gut, search).
+- A new validator rule, `grip-header-css`, requires a header colour for every
+  grip brand, so a new brand can't repeat this.
+
+## 2. One string filter state for every racquet (bug B)
+
+v0.990 kept one set of active chips for all racquets but filtered only the
+racquet on screen. Filter on Regna, switch to Percept and clear: back on Regna
+the hex-only rows, the "— showing all" badge and the all-brands view were
+still there, with no chip active.
+
+- Every filter pass now covers every racquet, so they are filtered and cleared
+  together. The status still counts the racquet on screen.
+- Unchanged: an active filter still follows you when you switch racquet, as in
+  v0.990.
+
+## 3. The search clear button shows
+
+The palette's ✕ was hidden by its CSS (`display: none`), and its script only
+ever reset the inline style, so it never appeared. Chrome and Safari drew their
+own blue ✕ inside the field instead; Firefox drew none.
+
+- The palette's ✕ now shows inside the field's right edge while the field has
+  text, in the palette's grey with its existing hover state. Clicking it
+  empties the field and closes the results, as v0.990's code intended. It is
+  a real button, so Tab reaches it.
+- The browser's own ✕ is hidden, so there is one in every browser.
+- The hint ("Esc to close · ↑↓ to navigate") doesn't move.
+
+## Declared differences from v0.990 (added in v0.992)
+
+The parity suite now patches each fix into the legacy page before comparing
+(`tests/visual/legacy-fixes.ts`), so the rest of every view and DOM scenario
+is still compared in full. Bugs A and B are patched through legacy's own
+filter functions; the CSS repeats the app's rules.
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| Tourna shown under grip filters, with a `#gfh-tourna` header | yes, under a grip filter | `getGripBrandSections` returns all three sections; header and colour added |
+| Every racquet filtered and cleared together | yes, after switching racquet | `applyFilters` runs legacy's own pass for each racquet, the active one last |
+| Palette ✕ shown while the field has text; browser ✕ hidden | yes, in the palette | the class toggle and CSS; legacy's inline `display` removed |
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+---
+
+## Verification
+
+`npm run check` passes locally. CI has not run on this release yet.
+
+**iOS Simulator** (iPhone 18 Pro): the palette's ✕ is the only one in the
+field, shows with text, and a tap empties the field and closes the results.
+The log entry saved under v0.991 survived installing v0.992 over it.
+
+**Vitest: 261 tests** (248 in v0.991).
+
+- **Fixes, 12 new** (`tests/smoke/fixes-v0992.test.ts`, jsdom): A (5),
+  B (3), search clear button (4). They state the fixed behaviour without
+  reference to legacy. Run against v0.991's code, 8 fail; the other 4 guard
+  behaviour that already worked.
+- **Validator, 1 new:** a mutation test for `grip-header-css`.
+
+**Playwright: 57 tests** (55 in v0.991; 27 skipped by design, as before).
+
+- **New view:** the search field with text and the ✕ hovered, as a close-up
+  at both viewports. At full-page size the ✕ is fewer pixels than the 0.1%
+  threshold, so only a close-up can see it.
+- **Each patch checked** by running the suite without it: without A, all 24
+  DOM scenarios and the Dry view fail (the Tourna header is in every page);
+  without B, the three filter scenarios that use it fail; without C, the
+  search scenarios and the close-up fail.
+- The two DOM scenarios named after the bugs are renamed after the fixes.
+
+## File size
+
+| | v0.991 | v0.992 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 423,044 | 424,103 | +1.1 KB |
+| gzip | 100,020 | 100,374 | +0.4 KB |
+
+## Still open
+
+Unchanged from v0.991, plus one observation (nothing changed):
+
+- **The palette hint on phones** ("Esc to close · ↑↓ to navigate") is wider
+  than the field leaves room for and is cut off at the right edge. Its
+  keyboard hints mean little on a touch screen.
+
+---
+
 # v0.991 — Repository port
 
 **Date:** 2026-10-27

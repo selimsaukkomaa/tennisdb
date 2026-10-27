@@ -4,8 +4,9 @@ Personal tennis equipment database: strings, hybrids, gut pairings and grips for
 racquets, plus a stringing log. It ships as a PWA on GitHub Pages
 (`https://selimsaukkomaa.github.io/tennisdb/`) and as an iOS app (Capacitor, "EquipDB").
 
-v0.991 is a parity port of the single-file v0.990 app in `legacy/`: same behaviour, same
-look, same data. Release history is in `CHANGELOG.md`; v0.989 and v0.990 are in `legacy/`.
+v0.991 was a parity port of the single-file v0.990 app in `legacy/`: same behaviour, same
+look, same data. v0.992 fixed three v0.990 bugs. Release history is in `CHANGELOG.md`;
+v0.989 and v0.990 are in `legacy/`.
 
 ## Conventions
 
@@ -106,17 +107,23 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
 
 ## Parity
 
-v0.991 must render like v0.990. No visual or DOM change without a declared difference:
+The app must render like v0.990. No visual or DOM change without a declared difference:
 
-- pixel parity (`tests/visual/parity.spec.ts`): 13 views at 1440×900 and 390×844, threshold
-  0.1, at most 0.1% of pixels differing. A declared difference is a mask plus a reason.
-- DOM parity (`tests/visual/dom-parity.spec.ts`): 24 scenarios compared node for node after
-  `eraseDeclaredDifferences` in `tests/visual/dom.ts`.
+- pixel parity (`tests/visual/parity.spec.ts`): 14 views at 1440×900 and 390×844, threshold
+  0.1, at most 0.1% of pixels differing.
+- DOM parity (`tests/visual/dom-parity.spec.ts`): 24 scenarios compared node for node.
 - every declared difference is listed in `CHANGELOG.md`.
 
-Three v0.990 bugs are kept on purpose until v0.992 (see the changelog): grip filters skip
-Tourna (`LEGACY_GRIP_FILTER_BRANDS`), stale filter state on the racquet switched away from,
-and the search clear button that never shows. Don't fix them as a side effect.
+A difference is declared in one of three ways, with its reason next to it:
+
+- a mask over a region that differs (`masks` in `parity.spec.ts`);
+- an erasure from the DOM snapshots (`eraseDeclaredDifferences` in `tests/visual/dom.ts`);
+- for a change in behaviour, a patch that applies the same change to the legacy page before
+  it is compared (`tests/visual/legacy-fixes.ts`, using legacy's own functions where it can),
+  so the rest of each view is still checked. Its CSS must match `src/styles/additions.css`.
+
+A new pixel view must show its change in more than 0.1% of the screenshot, or the comparison
+can't see it: use `element` (and `hover`) for a close-up, as the search-field view does.
 
 Fonts are vendored in `src/assets/fonts`; the tests route legacy's Google Fonts requests to
 the same files, so both sides render identical glyphs offline.
@@ -126,7 +133,7 @@ the same files, so both sides render identical glyphs offline.
 `src/core/validate.ts` holds the build_990.py invariants and more: neutral text, notes present
 for every racquet, firm-xor-soft against the stiffness band, Crisp chip ⇔ Crisp tag, feel and
 shape tokens are chip values, grip type ⇔ chip, one colour per tag label with CSS for every
-variant, bar-backed claims (Mega Tac, Tourna Grip Original), id and reference integrity, no
+variant, a filter-header colour for every grip brand, bar-backed claims (Mega Tac, Tourna Grip Original), id and reference integrity, no
 retired vocabulary. `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no
 smart quotes in source, `index.html` or these two docs. Each rule has a mutation test in `tests/data/validate.test.ts`.
 

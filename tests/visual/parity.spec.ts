@@ -25,6 +25,8 @@ interface View {
   element?: string;
   /** Text typed into a field after the clicks: [selector, text]. */
   type?: [string, string];
+  /** Element the mouse rests on for the screenshot. */
+  hover?: string;
   /** Seed both pages with the fixture stringing log. */
   seedLog?: boolean;
 }
@@ -74,6 +76,14 @@ const VIEWS: View[] = [
     type: ['#search-input', 'caviar'],
   },
   {
+    // Close up and hovered, so the clear button is more than a rounding error (fix C).
+    name: 'search field with text, clear button hovered',
+    clicks: ['#btn-palette'],
+    type: ['#search-input', 'caviar'],
+    element: '#palette .search-bar-inner',
+    hover: '#search-clear',
+  },
+  {
     name: 'search results, "gut"',
     clicks: ['#btn-palette'],
     type: ['#search-input', 'gut'],
@@ -81,8 +91,9 @@ const VIEWS: View[] = [
   },
 ];
 
-// Declared differences, masked on both pages:
-//   .version-tag  the UI shows the app version (v0.991) where legacy says v0.990
+// Declared differences, masked on both pages (v0.992's fixes are patched into legacy instead,
+// see legacy-fixes.ts):
+//   .version-tag  the UI shows the app version where legacy says v0.990
 //   .log-backup   v0.991's Export / Import buttons in the log panel footer
 const masks = { mask: (page: Page) => [page.locator('.version-tag'), page.locator('.log-backup')] };
 
@@ -107,6 +118,7 @@ for (const view of VIEWS) {
         await page.locator(view.type[0]).pressSequentially(view.type[1]);
         await page.locator('.search-results-visible').waitFor();
       }
+      if (view.hover) await page.locator(view.hover).hover();
       shots.push(await screenshot(page, { ...masks, element: view.element }));
     }
     await expectSameRendering(testInfo, shots[0]!, shots[1]!);

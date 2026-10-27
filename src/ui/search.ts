@@ -166,7 +166,7 @@ export function initSearch(data: TennisDb): void {
 
   input.addEventListener('input', () => {
     const value = input.value;
-    clear.style.display = value.length > 0 ? '' : 'none';
+    clear.classList.toggle('search-clear-visible', value.length > 0);
     clearTimeout(timer);
     timer = setTimeout(() => doSearch(value), DEBOUNCE_MS);
   });
@@ -175,7 +175,7 @@ export function initSearch(data: TennisDb): void {
     const shown = [...document.querySelectorAll<HTMLElement>('.search-result')];
     if (e.key === 'Escape') {
       input.value = '';
-      clear.style.display = 'none';
+      clear.classList.remove('search-clear-visible');
       panel.classList.remove('search-results-visible');
       input.blur();
     } else if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
@@ -197,7 +197,7 @@ export function initSearch(data: TennisDb): void {
 
   clear.addEventListener('click', () => {
     input.value = '';
-    clear.style.display = 'none';
+    clear.classList.remove('search-clear-visible');
     panel.classList.remove('search-results-visible');
     input.focus();
   });

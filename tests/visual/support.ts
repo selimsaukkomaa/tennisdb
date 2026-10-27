@@ -13,6 +13,7 @@ import {
 import pixelmatch from 'pixelmatch';
 import { PNG } from 'pngjs';
 import { APP_PORT, LEGACY_PORT } from '../../playwright.config';
+import { applyLegacyFixes } from './legacy-fixes';
 
 export const LEGACY_URL = `http://localhost:${LEGACY_PORT}/tennis_equipmentdb_v0_990.html`;
 export const APP_URL = `http://localhost:${APP_PORT}/`;
@@ -69,10 +70,12 @@ async function settle(page: Page): Promise<void> {
   });
 }
 
+/** Opens a page and settles it; the legacy page gets v0.992's fixes patched in. */
 export async function open(context: BrowserContext, url: string): Promise<Page> {
   const page = await context.newPage();
   await page.goto(url);
   await settle(page);
+  if (url === LEGACY_URL) await applyLegacyFixes(page);
   return page;
 }
 

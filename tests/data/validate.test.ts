@@ -69,6 +69,11 @@ describe('each rule fires on broken data', () => {
   test('tag-css', () => {
     expect(rulesAfter(() => {}, base.css.replace(/\.tag-plush\s*\{/g, '.tag-gone {'))).toContain('tag-css');
   });
+  test('grip-header-css', () => {
+    expect(
+      rulesAfter(() => {}, base.css.replace(/\.gfilter-header-tourna\s*\{/g, '.gone {')),
+    ).toContain('grip-header-css');
+  });
 });
 
 test('a fourth racquet without notes lists exactly what it is missing', () => {

@@ -1,6 +1,6 @@
 /* ==========================================================================
-   v0.991 additions: rules for features v0.990 did not have. Everything above
-   this file in index.css is v0.990's stylesheet, verbatim.
+   Additions since v0.990: rules for features and fixes v0.990 did not have.
+   Everything above this file in index.css is v0.990's stylesheet, verbatim.
    ========================================================================== */
 
 /* Log backups: Export / Import sit at the left of the log panel footer, styled
@@ -24,4 +24,24 @@
 .log-form input.log-form-error {
   border-color: #dc2626;
   box-shadow: 0 0 0 2px rgba(220,38,38,0.15);
+}
+
+/* v0.992: Tourna's grip filter header, in the brand colour used on light backgrounds. */
+.gfilter-brand-header.gfilter-header-tourna { color: #1e40af; border-left-color: #1e40af; }
+
+/* v0.992: the palette's clear button. v0.990 hid it with display:none and its script could not
+   unhide it, so only the browser's own button (Chrome, Safari) cleared the field. The palette's
+   button now shows inside the field's right padding while there is text, without moving the
+   hint, and the browser's button is hidden. */
+#search-input::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+#search-clear.search-clear-visible { display: block; }
+#palette #search-clear {
+  position: relative;
+  top: auto;
+  right: auto;
+  transform: none;
+  width: 26px;
+  padding: 4px 0;
+  text-align: center;
+  margin: 0 4px 0 -38px;  /* 8px flex gap + 26px + 4px = net zero width */
 }

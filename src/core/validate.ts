@@ -213,6 +213,11 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
     if (!new RegExp(String.raw`\.tag-${v}\s*\{`).test(css))
       fail('tag-css', v, `no CSS rule for .tag-${v}`);
   }
+  // Every grip brand gets a coloured header while a grip filter spans all brands.
+  for (const brand of Object.keys(db.grips)) {
+    if (!new RegExp(String.raw`\.gfilter-header-${brand}\s*\{`).test(css))
+      fail('grip-header-css', brand, `no CSS rule for .gfilter-header-${brand}`);
+  }
 
   // ---- claims in notes that rest on bar values
   for (const claim of BAR_CLAIMS) {
