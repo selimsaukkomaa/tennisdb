@@ -11,6 +11,8 @@ Releases up to v0.990 shipped as a single HTML file. Their changelogs are in
 **Base:** v0.991 (repository port)
 **Status:** bug-fix release — the three v0.990 bugs v0.991 kept for parity
 are fixed. No data or content changes; `TENNIS_DB.version` stays `0.990`.
+**Cutover:** the first release live on GitHub Pages from this repository,
+deployed by GitHub Actions from `main` on 2026-10-27; it replaces v0.990.
 
 ---
 
