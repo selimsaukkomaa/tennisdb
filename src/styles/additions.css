@@ -6,6 +6,8 @@
 /* Log backups: Export / Import sit at the left of the log panel footer, styled
    like the "Clear all" link so the footer keeps its height and layout. */
 .log-backup { float: left; }
+/* Contain the floated links: on an empty log they are the footer's only content. */
+.log-panel-footer { display: flow-root; }
 .log-backup-btn {
   background: transparent;
   color: #94a3b8;

@@ -6,8 +6,9 @@ const config: CapacitorConfig = {
   appName: 'EquipDB',
   webDir: 'dist',
   ios: {
-    // WKWebView insets the content for the status bar and home indicator, so the sticky
-    // topbar sits below the notch without any CSS change.
+    // WKWebView insets the page below the status bar and above the home indicator, so the
+    // sticky topbar sits below the notch without any CSS change. BridgeViewController in
+    // ios/App/App/SceneDelegate.swift covers the status-bar strip so nothing scrolls under it.
     contentInset: 'automatic',
     // Shown behind the page while it loads and when scrolling past its ends.
     backgroundColor: '#f0efeb',

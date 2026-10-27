@@ -53,3 +53,14 @@ test('export, then import into an empty log', async ({ browser, context }, testI
   );
   await other.close();
 });
+
+test('on an empty log the backup links sit inside the panel', async ({ context }, testInfo) => {
+  test.skip(testInfo.project.name !== 'iphone', 'the narrow layout is where it showed');
+  const page = await open(context, APP_URL);
+  await page.locator('[data-log-toggle="regna"]').click();
+  const panel = await page.locator('.log-section[data-racquet="regna"] .log-panel').boundingBox();
+  const link = await page
+    .locator('.log-section[data-racquet="regna"] [data-log-import]')
+    .boundingBox();
+  expect(link!.y + link!.height).toBeLessThanOrEqual(panel!.y + panel!.height);
+});
