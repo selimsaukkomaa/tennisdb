@@ -9,3 +9,5 @@ package-lock.json
 index.html
 test-results/
 playwright-report/
+# Docs are hand-formatted (tables unpadded, as in the legacy changelogs).
+*.md
