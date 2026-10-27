@@ -1,7 +1,21 @@
-// Saving and opening backup files. Web: a download and a file picker. iOS (step 5) saves
-// through the share sheet instead, since a WKWebView ignores download links.
+// Saving and opening backup files. Web: a download and a file picker. iOS: a WKWebView ignores
+// download links, so the file is written to the app's cache and handed to the share sheet
+// (Save to Files, AirDrop, Mail...). The file picker works in both.
+import { Directory, Encoding, Filesystem } from '@capacitor/filesystem';
+import { Share } from '@capacitor/share';
+import { isNative } from './native';
 
 export async function saveTextFile(filename: string, text: string): Promise<void> {
+  if (isNative()) {
+    const { uri } = await Filesystem.writeFile({
+      path: filename,
+      data: text,
+      directory: Directory.Cache,
+      encoding: Encoding.UTF8,
+    });
+    await Share.share({ title: filename, url: uri, dialogTitle: 'Save the stringing log' });
+    return;
+  }
   const url = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
   const a = document.createElement('a');
   a.href = url;

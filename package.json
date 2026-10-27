@@ -17,9 +17,13 @@
     "test:visual": "playwright test",
     "check": "npm run validate && npm run typecheck && npm run lint && prettier --check . && npm test && npm run test:visual",
     "extract": "tsx scripts/extract-legacy.ts",
-    "fonts:vendor": "tsx scripts/vendor-fonts.ts"
+    "fonts:vendor": "tsx scripts/vendor-fonts.ts",
+    "build:ios": "vite build && cap sync ios",
+    "ios:open": "cap open ios",
+    "icons": "tsx scripts/make-icons.ts dark"
   },
   "devDependencies": {
+    "@capacitor/cli": "^8.5.3",
     "@eslint/js": "^10.0.1",
     "@playwright/test": "^1.64.1",
     "@types/jsdom": "^30.0.0",
@@ -34,9 +38,16 @@
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.0",
     "vite": "^8.3.5",
+    "vite-plugin-pwa": "^2.0.0",
     "vitest": "^5.0.5"
   },
   "dependencies": {
+    "@capacitor/core": "^8.5.3",
+    "@capacitor/filesystem": "^8.1.5",
+    "@capacitor/ios": "^8.5.3",
+    "@capacitor/preferences": "^8.0.1",
+    "@capacitor/share": "^8.0.3",
+    "workbox-window": "^7.4.1",
     "zod": "^4.6.7"
   }
 }

@@ -1,5 +1,7 @@
 import './styles/index.css';
 import { assembleDb, copy } from './core/db';
+import { registerSW } from 'virtual:pwa-register';
+import { isNative } from './platform/native';
 import { createLogStore } from './platform/storage';
 import { initCompare } from './ui/compare';
 import { initContextLine } from './ui/context-line';
@@ -30,3 +32,6 @@ initContextLine(db);
 await initLog(db, createLogStore());
 
 document.documentElement.dataset.ready = '1';
+
+// Offline support and installability on the web; the iOS app bundles its files already.
+if (!isNative() && 'serviceWorker' in navigator) registerSW({ immediate: true });
