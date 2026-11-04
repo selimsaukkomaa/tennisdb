@@ -63,6 +63,7 @@ export function fileIssues(): Issue[] {
     'index.html',
     'CLAUDE.md',
     'CHANGELOG.md',
+    ...filesUnder('docs', /\.md$/),
   ];
   for (const rel of code) {
     read(rel)

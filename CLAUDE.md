@@ -136,7 +136,7 @@ for every racquet, firm-xor-soft against the stiffness band, Crisp chip ⇔ Cris
 shape tokens are chip values, grip type ⇔ chip, one colour per tag label with CSS for every
 variant, a filter-header colour for every grip brand, bar-backed claims (Mega Tac, Tourna Grip Original), id and reference integrity, no
 retired vocabulary. `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no
-smart quotes in source, `index.html` or these two docs. Each rule has a mutation test in `tests/data/validate.test.ts`.
+smart quotes in source, `index.html`, these two docs or `docs/`. Each rule has a mutation test in `tests/data/validate.test.ts`.
 
 ## Stringing log
 
