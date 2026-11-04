@@ -1,7 +1,7 @@
 {
   "name": "tennisdb",
   "private": true,
-  "version": "0.993.0",
+  "version": "0.994.0",
   "description": "Personal tennis equipment database: strings, hybrids, gut pairings, grips and a stringing log.",
   "type": "module",
   "scripts": {
@@ -9,6 +9,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "validate": "tsx scripts/validate-data.ts",
+    "schemas": "tsx scripts/export-schemas.ts",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
     "format": "prettier --write .",
@@ -29,6 +30,8 @@
     "@types/jsdom": "^30.0.0",
     "@types/node": "^26.6.5",
     "@types/pngjs": "^6.0.5",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
     "eslint": "^10.13.0",
     "jsdom": "^30.1.3",
     "pixelmatch": "^8.0.0",

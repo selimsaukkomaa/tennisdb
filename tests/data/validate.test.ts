@@ -40,8 +40,6 @@ describe('each rule fires on broken data', () => {
     ['firm-xor-soft', (db) => (str(db, 'toroline-caviar').feelAttr = 'crisp')],
     ['firm-soft-band', (db) => (str(db, 'toroline-o-toro').feelAttr = 'firm,lively')],
     ['crisp-tag', (db) => (str(db, 'toroline-caviar').feelAttr = 'firm')],
-    ['feel-tokens', (db) => (str(db, 'toroline-caviar').feelAttr += ',muted')],
-    ['shape-tokens', (db) => (str(db, 'toroline-caviar').shapeAttr = 'hex')],
     ['feel-chip-coverage', (db) => db.strings.forEach((s) => (s.feelAttr = s.feelAttr.replace(',lively', '')))],
     ['grip-tags', (db) => (grip(db, 'Tac').gripFeelAttr = '')],
     ['grip-tags', (db) => (grip(db, 'Tourna Grip Original').gripFeelAttr = 'absorbent')],
@@ -59,9 +57,7 @@ describe('each rule fires on broken data', () => {
     ['gut-string-refs', (db) => (db.gutHybrids.regna![0]!.crosses.stringId = 'luxilon-nope')],
     ['copy-refs', (_db, copy) => (copy.brandFooters.toroline!.byRacquet = { nope: '<p>x</p>' })],
     ['copy-refs', (_db, copy) => (copy.gripAbout.wilson = 'About Wilson')],
-    ['retired', (db) => ((str(db, 'toroline-caviar') as unknown as Record<string, unknown>).topPick = true)],
     ['retired', (db) => (str(db, 'toroline-caviar').feelSummary = 'Connected, direct')],
-    ['retired', (db) => (str(db, 'solinco-tb-diamond-rough').shapeAttr = 'square-textured')],
   ])('%s', (rule, mutate) => {
     expect(rulesAfter(mutate)).toContain(rule);
   });
@@ -73,6 +69,40 @@ describe('each rule fires on broken data', () => {
     expect(
       rulesAfter(() => {}, base.css.replace(/\.gfilter-header-tourna\s*\{/g, '.gone {')),
     ).toContain('grip-header-css');
+  });
+});
+
+/** Schema issues after a mutation, as "where: message" lines. */
+function schemaAfter(mutate: (db: TennisDb, copy: Copy) => void): string[] {
+  const db = structuredClone(base.db);
+  const copy = structuredClone(base.copy);
+  mutate(db, copy);
+  const issues = validateData(db, copy, base.css);
+  expect(issues.every((i) => i.rule === 'schema')).toBe(true);
+  return issues.map((i) => `${i.where}: ${i.message}`);
+}
+const loose = (o: object): Record<string, unknown> => o as Record<string, unknown>;
+
+describe('the schemas catch a bad shape, and nothing else runs until it is fixed', () => {
+  test.each<[string, string, (db: TennisDb, copy: Copy) => void]>([
+    ['a feel token no chip matches', 'strings.toroline-caviar.feelAttr', (db) => (str(db, 'toroline-caviar').feelAttr += ',muted')],
+    ['a shape token no chip matches', 'strings.toroline-caviar.shapeAttr', (db) => (str(db, 'toroline-caviar').shapeAttr = 'hex')],
+    ['"square-textured" (retired in v0.990)', 'strings.solinco-tb-diamond-rough.shapeAttr', (db) => (str(db, 'solinco-tb-diamond-rough').shapeAttr = 'square-textured')],
+    ['a topPick key (retired in v0.989)', 'strings.toroline-caviar', (db) => (loose(str(db, 'toroline-caviar')).topPick = true)],
+    ['an unknown key on a grip', 'grips.tourna.wet.tourna-tac', (db) => (loose(grip(db, 'Tac')).rating = 5)],
+    ['a missing field', 'strings.toroline-caviar.feelSummary', (db) => delete loose(str(db, 'toroline-caviar')).feelSummary],
+    ['a bar width over 100', 'strings.toroline-caviar.spin.width', (db) => (str(db, 'toroline-caviar').spin.width = 120)],
+    ['a bar width as text', 'strings.toroline-caviar.power.width', (db) => (loose(str(db, 'toroline-caviar').power).width = '38')],
+    ['a colour that is not hex', 'brandsStrings.toroline.accent', (db) => (db.brandsStrings.toroline!.accent = 'gold')],
+    ['an id that is not kebab-case', 'strings.Toroline Caviar.id', (db) => (str(db, 'toroline-caviar').id = 'Toroline Caviar')],
+    ['an unknown grip type', 'grips.tourna.wet.tourna-tac', (db) => (loose(grip(db, 'Tac')).gripType = 'hybrid')],
+    ['an unknown tag colour', 'strings.toroline-caviar.feelTags.0.variant', (db) => (loose(str(db, 'toroline-caviar').feelTags[0]!).variant = 'gold')],
+    ['a gut pairing with an unknown config', 'gutHybrids.regna.', (db) => (loose(db.gutHybrids.regna![0]!).config = 'gut-both')],
+    ['copy without the gut intro', 'copy: gutIntro', (_db, copy) => delete loose(copy).gutIntro],
+  ])('%s', (_name, where, mutate) => {
+    const issues = schemaAfter(mutate);
+    expect(issues.length).toBeGreaterThan(0);
+    expect(issues.some((i) => i.includes(where))).toBe(true);
   });
 });
 

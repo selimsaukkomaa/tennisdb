@@ -67,13 +67,15 @@ open, verification counts, file size and Still open.
 data/              TENNIS_DB, one JSON file per collection (meta, racquets, brandsStrings,
                    strings, hybrids, grips, gutStrings, gutHybrids). 2-space, UTF-8, key order kept.
 content/copy.json  UI copy that lived in v0.990's markup and JS (HTML strings, verbatim)
-src/core/          no DOM: types, db assembly, chips, filter predicates, compare, gut, search
-                   index and scoring, validators, log/ (schema, model, merge, store, tension)
+src/core/          no DOM: data schemas (schema.ts; types.ts infers the types from them), db
+                   assembly, chips, filter predicates, compare, gut, search index and scoring,
+                   validators, log/ (schema, model, merge, store, tension)
 src/ui/            DOM layer: shell, tables, nav, filters, filter panel, compare, gut, search,
                    palette, log, context line; html`` / raw() escaping helpers
 src/platform/      native check, storage backends, file save/pick (share sheet on iOS)
 src/styles/        v0.990 CSS split verbatim, imported in cascade order; additions.css last
-scripts/           validate-data, make-icons, vendor-fonts, extract-legacy (one-off, provenance)
+schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
+scripts/           validate-data, export-schemas, make-icons, vendor-fonts, extract-legacy
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -85,6 +87,7 @@ legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 chang
 npm run dev          # Vite dev server
 npm run check        # everything below, in CI order
 npm run validate     # data validators (also run by every vite build)
+npm run schemas      # regenerate schemas/ after changing a Zod schema
 npm run typecheck
 npm run lint
 npm test             # Vitest: data, unit, smoke
@@ -131,12 +134,18 @@ the same files, so both sides render identical glyphs offline.
 
 ## Data validation
 
-`src/core/validate.ts` holds the build_990.py invariants and more: neutral text, notes present
-for every racquet, firm-xor-soft against the stiffness band, Crisp chip ⇔ Crisp tag, feel and
-shape tokens are chip values, grip type ⇔ chip, one colour per tag label with CSS for every
-variant, a filter-header colour for every grip brand, bar-backed claims (Mega Tac, Tourna Grip Original), id and reference integrity, no
-retired vocabulary. `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no
-smart quotes in source, `index.html`, these two docs or `docs/`. Each rule has a mutation test in `tests/data/validate.test.ts`.
+The Zod schemas in `src/core/schema.ts` run first and own the data's shape: fields, types,
+formats, no unknown keys, the chip token lists. Keep every schema constraint expressible in
+JSON Schema (no `.refine`), so the export in `schemas/` stays complete. Then
+`src/core/validate.ts` holds the content and cross-record rules from build_990.py and more:
+neutral text, notes present for every racquet, firm-xor-soft against the stiffness band,
+Crisp chip ⇔ Crisp tag, every feel chip used, grip type ⇔ chip, one colour per tag label
+with CSS for every variant, a filter-header colour for every grip brand, bar-backed claims
+(Mega Tac, Tourna Grip Original), id and reference integrity, no "Connected" vocabulary.
+`scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in
+source, `index.html`, these two docs or `docs/`. Every rule and each kind of schema check has
+a mutation test in `tests/data/validate.test.ts`; `tests/data/schemas.test.ts` checks that
+`schemas/` is current and that a standard JSON Schema validator agrees with Zod.
 
 ## Stringing log
 

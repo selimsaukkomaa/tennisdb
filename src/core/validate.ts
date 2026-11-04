@@ -1,7 +1,13 @@
 // Data invariants, from v0.990's build_990.py and smoke suite. Pure: they take the assembled
 // data (plus the stylesheet text, for tag colours) and return the problems found. Run by the
 // Vitest suite, `npm run validate`, and a Vite plugin on every dev start and build.
-import { FEEL_CHIPS, SHAPE_CHIPS, tokens } from './chips';
+//
+// The schemas (schema.ts) run first and own the shape: fields, types, formats, no unknown
+// keys, and the chip token lists (which retired v0.990's feel-tokens and shape-tokens rules,
+// the topPick key and "square-textured"). If the shape is wrong only those issues are
+// reported; the rules below are content and cross-record checks on well-formed data.
+import { FEEL_CHIPS, tokens } from './chips';
+import { CopySchema, TennisDbSchema } from './schema';
 import type { Copy, Grip, Hybrid, StringRec, TennisDb } from './types';
 import { GRIP_TYPES } from './types';
 
@@ -100,7 +106,37 @@ export const BAR_CLAIMS: readonly BarClaim[] = [
   },
 ];
 
+/** Where a schema issue is, with array indexes replaced by the record's id when it has one. */
+function describePath(root: unknown, path: readonly PropertyKey[]): string {
+  let node = root;
+  return path
+    .map((key) => {
+      node = (node as Record<PropertyKey, unknown> | undefined)?.[key];
+      const id = (node as { id?: unknown } | undefined)?.id;
+      return typeof key === 'number' && typeof id === 'string' ? id : String(key);
+    })
+    .join('.');
+}
+
+/** The data and copy against their schemas; empty when both are well-formed. */
+export function schemaIssues(db: unknown, copy: unknown): Issue[] {
+  return (
+    [
+      ['data', db, TennisDbSchema.safeParse(db)],
+      ['copy', copy, CopySchema.safeParse(copy)],
+    ] as const
+  ).flatMap(([name, input, result]) =>
+    (result.error?.issues ?? []).map((i) => ({
+      rule: 'schema',
+      where: `${name}: ${describePath(input, i.path)}`,
+      message: i.message,
+    })),
+  );
+}
+
 export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
+  const shape = schemaIssues(db, copy);
+  if (shape.length) return shape;
   const issues: Issue[] = [];
   const fail = (rule: string, where: string, message: string): void => {
     issues.push({ rule, where, message });
@@ -163,14 +199,6 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
     const crispTag = r.feelTags.some((t) => t.label === 'Crisp') || /crisp/i.test(r.feelSummary);
     if (feel.includes('crisp') !== crispTag)
       fail('crisp-tag', r.id, 'Crisp chip and Crisp tag/summary disagree');
-    for (const t of feel) {
-      if (!FEEL_CHIPS.some((c) => c.value === t))
-        fail('feel-tokens', r.id, `feel value "${t}" matches no chip`);
-    }
-    for (const t of tokens(r.shapeAttr)) {
-      if (!SHAPE_CHIPS.some((c) => c.value === t))
-        fail('shape-tokens', r.id, `shape value "${t}" matches no chip`);
-    }
   }
   for (const chip of FEEL_CHIPS) {
     if (!db.strings.some((s) => tokens(s.feelAttr).includes(chip.value))) {
@@ -279,14 +307,9 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
       fail('copy-refs', `about/${brand}`, 'About box for an unknown grip brand');
   }
 
-  // ---- retired in v0.989 / v0.990
-  const json = JSON.stringify(db);
-  if (json.includes('topPick')) fail('retired', 'data', 'topPick key present');
-  if (/[Cc]onnected/.test(json)) fail('retired', 'data', '"Connected" vocabulary present');
-  for (const s of db.strings) {
-    if (s.shapeAttr === 'square-textured')
-      fail('retired', s.id, 'shapeAttr "square-textured" (no chip emits it)');
-  }
+  // ---- retired in v0.989 (a topPick key or "square-textured" now fails the schemas)
+  if (/[Cc]onnected/.test(JSON.stringify(db)))
+    fail('retired', 'data', '"Connected" vocabulary present');
 
   return issues;
 }

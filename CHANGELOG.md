@@ -6,6 +6,104 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v0.994 — Data schemas
+
+**Date:** 2026-11-04
+**Base:** v0.993 (rename)
+**Status:** model release, Phase 2 step 1 (`docs/phase-2-data-model.md`, D9 and
+D10). Every collection and the UI copy now have a schema. No data, content or
+behaviour changes; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## 1. Schemas
+
+`src/core/schema.ts` has a Zod schema per collection (racquets, brands,
+strings, hybrids, grips, gut strings, gut pairings) plus the UI copy,
+describing the data exactly as stored today. They own its shape:
+
+- every field, required or optional, with no unknown keys allowed;
+- formats: kebab-case ids, hex colours, whole-number bar widths 0–100, the
+  "100 sq in" and "16×19" forms, the data version;
+- the vocabularies: the shape and feel tokens the filter chips match, the six
+  tag colours, the three grip types, the two gut configurations.
+
+The TypeScript types are now inferred from the schemas instead of written by
+hand. The imports are type-only, so the app bundle doesn't carry the schemas.
+
+## 2. What the schemas found
+
+On their first run they caught two places where the hand-written types had
+been wrong about the data. The data was right; the types now say so:
+
+| Field | The old type said | The data has |
+|---|---|---|
+| `gutProtection` on a gut pairing | always a bar | `null` in all 12 gut-crosses pairings (the strip shows a dash) |
+| `gauge` on each side of a hybrid | non-empty | empty for Toroline Cole, whose gauges are part of the string names |
+
+## 3. Validation
+
+`npm run validate` (and every build) runs the schemas first. If the shape is
+wrong, it reports only that, with the record's id in the location, e.g.
+`data: strings.toroline-caviar.feelAttr`. The content and cross-record rules
+in `validate.ts` run on well-formed data, as before.
+
+The schemas took over four checks: the `feel-tokens` and `shape-tokens`
+rules, and the `topPick` key and `"square-textured"` parts of `retired`
+(the "Connected" check stays). The other rules stay in `validate.ts`, not as
+schema refinements: JSON Schema can't carry code, and these are checks on this
+repo's content (neutral text, a note per racquet, references, CSS coverage)
+rather than facts about the data's shape.
+
+## 4. JSON Schema export
+
+`npm run schemas` writes `schemas/tennisdb.schema.json`, `copy.schema.json`
+and `stringing-log.schema.json` (draft 2020-12), for a future native app. The
+named parts (TennisDb, Racquet, Brand, String, Hybrid, Grip, GutString,
+GutPairing, Bar, FeelTag, PerRacquet) become definitions. Every constraint
+above is plain JSON Schema (types, patterns, enums), so it carries over. The
+files are generated and left out of Prettier.
+
+---
+
+## Data corrections
+
+None. The two findings above corrected the types, not the data.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+## Verification
+
+`npm run check` passes: 278 Vitest tests (261 in v0.993), 59 Playwright tests.
+
+- **Schema mutations, 14:** a feel or shape token no chip matches,
+  "square-textured", a `topPick` key, an unknown key on a grip, a missing
+  field, a bar width over 100 or written as text, a colour that isn't hex, an
+  id that isn't kebab-case, an unknown grip type, tag colour or gut
+  configuration, and copy without the gut intro. Each is reported as a schema
+  issue at the right record, and nothing else runs.
+- **Export, 7:** each `schemas/` file matches a fresh export; a standard JSON
+  Schema validator (Ajv 8, a new dev dependency) accepts the data, the copy
+  and a log backup, and rejects a bad feel token, an unknown key and an
+  uppercase id.
+- The four mutation tests for the retired rules became schema tests.
+
+## File size
+
+| | v0.993 | v0.994 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 424,956 | 425,033 | +77 bytes |
+| gzip | 100,738 | 100,771 | +33 bytes |
+
+## Still open
+
+Unchanged from v0.993. Next in Phase 2 (D10 step 2): the moves that render
+identically, starting with tension and pairings.
+
+---
+
 # v0.993 — Renamed to Strung
 
 **Date:** 2026-10-27

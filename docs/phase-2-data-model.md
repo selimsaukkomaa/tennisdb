@@ -181,12 +181,18 @@ text (none contains markup today); the one grip spec with HTML
 
 **Decision (2026-11-04):** as proposed.
 
+**Done in v0.994 (schemas):** the schemas own the shape, written so it all
+exports to JSON Schema (types, patterns, enums). Content and cross-record
+rules stay in `validate.ts` rather than becoming refinements, because JSON
+Schema can't carry code. Plain-text notes and the structured grip spec come in
+step 2.
+
 ### D10. Order of work
 
 Each step is its own release, and each stops for the owner's review.
 
 1. **Schemas over today's data** (D9), nothing changed: Zod schemas, JSON
-   Schema export, the validators moved into schema checks.
+   Schema export, the shape checks moved into the schemas. *Done in v0.994.*
 2. **Moves that render identically**, each checked by the parity suite with no
    new declared difference: tension (D6), pairings (D7), racquet fields (D4),
    stiffness storage with `source: 'legacy'` (D1), ratings as

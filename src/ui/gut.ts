@@ -10,7 +10,7 @@ let copy: Copy;
 
 const DASH = raw('<span class="gut-dash">—</span>');
 
-function bar(cls: string, b: Bar | undefined): SafeHtml {
+function bar(cls: string, b: Bar | null | undefined): SafeHtml {
   if (!b) return DASH;
   return html`<div class="gut-bar-wrap"><span class="gut-bar-label">${b.label}</span><div class="bar"><div class="bar-fill ${cls}" style="width:${b.width ?? 0}%"></div></div></div>`;
 }
