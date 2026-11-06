@@ -1,15 +1,7 @@
 // Table markup and row builders, ported from v0.990's tennis-renderer. Rows are built without
 // whitespace between cells, exactly as the legacy string concatenation produced them.
-import type {
-  Bar,
-  Colors,
-  FeelTag,
-  Grip,
-  Hybrid,
-  HybridSide,
-  RacquetId,
-  StringRec,
-} from '../core/types';
+import type { Bar, Colors, FeelTag, Grip, Hybrid, HybridSide, StringRec } from '../core/types';
+import type { PerRacquet } from '../core/pairings';
 import { html, join, raw, type SafeHtml } from './html';
 
 const BR = raw('<br>');
@@ -71,8 +63,8 @@ function hybridSideCell(side: HybridSide | undefined): SafeHtml {
 
 // ---------------------------------------------------------------- rows
 
-export function stringRow(s: StringRec, racquet: RacquetId): SafeHtml {
-  const per = s.perRacquet?.[racquet];
+/** `per` is the string in this racquet (core/pairings: perRacquet). */
+export function stringRow(s: StringRec, per: PerRacquet | undefined): SafeHtml {
   return html`<tr data-shape="${s.shapeAttr}" data-feel="${s.feelAttr}" data-type="string" data-id="${s.id}">${[
     nameCell(s.name, s.id),
     html`<td>${s.shape}</td>`,
@@ -89,8 +81,7 @@ export function stringRow(s: StringRec, racquet: RacquetId): SafeHtml {
   ]}</tr>`;
 }
 
-export function hybridRow(h: Hybrid, racquet: RacquetId): SafeHtml {
-  const per = h.perRacquet?.[racquet];
+export function hybridRow(h: Hybrid, per: PerRacquet | undefined): SafeHtml {
   return html`<tr data-shape="${h.shapeAttr}" data-feel="${h.feelAttr}" data-type="hybrid" data-id="${h.id}">${[
     nameCell(h.name, h.id),
     hybridSideCell(h.mains),

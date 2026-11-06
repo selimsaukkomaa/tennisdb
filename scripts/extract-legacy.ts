@@ -1,5 +1,7 @@
 // One-off: split the v0.990 single-file app into data/*.json (the TENNIS_DB blob, one file per
 // collection) and content/copy.json (prose that lived in markup or JS). Kept for provenance.
+// Don't run it again: it writes the v0.990 shapes, and data/ has moved on since (v0.995,
+// scripts/migrate-pairings.ts). Its npm shortcut was removed for that reason.
 // Every extraction asserts its expected count. `--sample` prints a preview and writes nothing.
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';

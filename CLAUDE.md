@@ -65,7 +65,8 @@ open, verification counts, file size and Still open.
 
 ```
 data/              TENNIS_DB, one JSON file per collection (meta, racquets, brandsStrings,
-                   strings, hybrids, grips, gutStrings, gutHybrids). 2-space, UTF-8, key order kept.
+                   strings, hybrids, pairings, grips, gutStrings, gutHybrids). 2-space, UTF-8.
+                   pairings.json: how each string and hybrid is strung in each racquet.
 content/copy.json  UI copy that lived in v0.990's markup and JS (HTML strings, verbatim)
 src/core/          no DOM: data schemas (schema.ts; types.ts infers the types from them), db
                    assembly, chips, filter predicates, compare, gut, search index and scoring,
@@ -75,7 +76,8 @@ src/ui/            DOM layer: shell, tables, nav, filters, filter panel, compare
 src/platform/      native check, storage backends, file save/pick (share sheet on iOS)
 src/styles/        v0.990 CSS split verbatim, imported in cascade order; additions.css last
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
-scripts/           validate-data, export-schemas, make-icons, vendor-fonts, extract-legacy
+scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
+                   provenance (extract-legacy, migrate-pairings) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -105,9 +107,10 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
   hooks.
 - Modules talk through `state.ts` (active category and racquet) and its event bus
   (`category`, `racquet`, `filtered`, `log`), not window globals.
-- Racquets are data-driven. A fourth frame needs a `racquets.json` entry, a `perRacquet` note
-  for every string and hybrid, and optionally gut pairings; `tests/unit/fourth-racquet.test.ts`
-  proves the UI follows. Brand colours are per brand in CSS and need nothing.
+- Racquets are data-driven. A fourth frame needs a `racquets.json` entry, a pairing (tension
+  and note) in `pairings.json` for every string and hybrid, and optionally gut pairings;
+  `tests/unit/fourth-racquet.test.ts` proves the UI follows. Brand colours are per brand in
+  CSS and need nothing. Views read pairings through `src/core/pairings.ts`, never directly.
 
 ## Parity
 

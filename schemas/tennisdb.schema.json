@@ -38,6 +38,12 @@
             "$ref": "#/$defs/Hybrid"
           }
         },
+        "pairings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Pairing"
+          }
+        },
         "grips": {
           "type": "object",
           "propertyNames": {
@@ -69,16 +75,9 @@
           }
         },
         "gutHybrids": {
-          "type": "object",
-          "propertyNames": {
-            "type": "string",
-            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
-          },
-          "additionalProperties": {
-            "type": "array",
-            "items": {
-              "$ref": "#/$defs/GutPairing"
-            }
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/GutPairing"
           }
         }
       },
@@ -88,6 +87,7 @@
         "brandsStrings",
         "strings",
         "hybrids",
+        "pairings",
         "grips",
         "gutStrings",
         "gutHybrids"
@@ -257,16 +257,6 @@
         "brand": {
           "type": "string",
           "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
-        },
-        "perRacquet": {
-          "type": "object",
-          "propertyNames": {
-            "type": "string",
-            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
-          },
-          "additionalProperties": {
-            "$ref": "#/$defs/PerRacquet"
-          }
         }
       },
       "required": [
@@ -285,8 +275,7 @@
         "feelSummary",
         "feelExpand",
         "id",
-        "brand",
-        "perRacquet"
+        "brand"
       ],
       "additionalProperties": false
     },
@@ -334,24 +323,6 @@
         "variant"
       ],
       "additionalProperties": false
-    },
-    "PerRacquet": {
-      "type": "object",
-      "properties": {
-        "tension": {
-          "type": "string",
-          "minLength": 1
-        },
-        "note": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "tension",
-        "note"
-      ],
-      "additionalProperties": false,
-      "description": "How an item is strung in one racquet."
     },
     "Hybrid": {
       "type": "object",
@@ -444,16 +415,6 @@
         "brand": {
           "type": "string",
           "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
-        },
-        "perRacquet": {
-          "type": "object",
-          "propertyNames": {
-            "type": "string",
-            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
-          },
-          "additionalProperties": {
-            "$ref": "#/$defs/PerRacquet"
-          }
         }
       },
       "required": [
@@ -469,10 +430,172 @@
         "feelSummary",
         "feelExpand",
         "id",
-        "brand",
-        "perRacquet"
+        "brand"
       ],
       "additionalProperties": false
+    },
+    "Pairing": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "itemId": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            },
+            "itemKind": {
+              "type": "string",
+              "const": "string"
+            },
+            "racquetId": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            },
+            "tension": {
+              "oneOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "const": "range"
+                    },
+                    "minKg": {
+                      "type": "number",
+                      "minimum": 5,
+                      "maximum": 40
+                    },
+                    "maxKg": {
+                      "type": "number",
+                      "minimum": 5,
+                      "maximum": 40
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "minKg",
+                    "maxKg"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "const": "max"
+                    },
+                    "maxKg": {
+                      "type": "number",
+                      "minimum": 5,
+                      "maximum": 40
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "maxKg"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "object",
+                  "properties": {
+                    "kind": {
+                      "type": "string",
+                      "const": "prestretch"
+                    },
+                    "kg": {
+                      "type": "number",
+                      "minimum": 5,
+                      "maximum": 40
+                    },
+                    "prestretchPct": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 30
+                    }
+                  },
+                  "required": [
+                    "kind",
+                    "kg",
+                    "prestretchPct"
+                  ],
+                  "additionalProperties": false
+                }
+              ]
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "itemId",
+            "itemKind",
+            "racquetId",
+            "tension",
+            "note"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "itemId": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            },
+            "itemKind": {
+              "type": "string",
+              "const": "hybrid"
+            },
+            "racquetId": {
+              "type": "string",
+              "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+            },
+            "tension": {
+              "$ref": "#/$defs/SplitTension"
+            },
+            "note": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "itemId",
+            "itemKind",
+            "racquetId",
+            "tension",
+            "note"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "How a string or hybrid is strung in one racquet."
+    },
+    "SplitTension": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "const": "split"
+        },
+        "mainsKg": {
+          "type": "number",
+          "minimum": 5,
+          "maximum": 40
+        },
+        "crossesKg": {
+          "type": "number",
+          "minimum": 5,
+          "maximum": 40
+        }
+      },
+      "required": [
+        "kind",
+        "mainsKg",
+        "crossesKg"
+      ],
+      "additionalProperties": false,
+      "description": "Mains / crosses, as in a hybrid or a gut pairing."
     },
     "Grip": {
       "type": "object",
@@ -625,6 +748,10 @@
           "type": "string",
           "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
         },
+        "racquetId": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
         "config": {
           "type": "string",
           "enum": [
@@ -702,8 +829,7 @@
           ]
         },
         "tension": {
-          "type": "string",
-          "minLength": 1
+          "$ref": "#/$defs/SplitTension"
         },
         "notes": {
           "type": "string"
@@ -711,6 +837,7 @@
       },
       "required": [
         "id",
+        "racquetId",
         "config",
         "mains",
         "crosses",

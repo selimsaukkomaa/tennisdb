@@ -14,7 +14,8 @@ export type Brand = z.infer<typeof S.BrandSchema>;
 /** A labelled bar: `width` is the fill percentage. */
 export type Bar = z.infer<typeof S.BarSchema>;
 export type FeelTag = z.infer<typeof S.FeelTagSchema>;
-export type PerRacquet = z.infer<typeof S.PerRacquetSchema>;
+export type Tension = z.infer<typeof S.TensionSchema>;
+export type Pairing = z.infer<typeof S.PairingSchema>;
 export type StringRec = z.infer<typeof S.StringSchema>;
 export type Colors = StringRec['colors'];
 export type Hybrid = z.infer<typeof S.HybridSchema>;

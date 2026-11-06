@@ -6,6 +6,118 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v0.995 — Pairings and numeric tensions
+
+**Date:** 2026-11-06
+**Base:** v0.994 (data schemas)
+**Status:** model release, Phase 2 step 2, first move (`docs/phase-2-data-model.md`,
+D6 and D7). The data is stored differently; the page renders exactly as before.
+No content changes; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## 1. Pairings
+
+How each string and hybrid is strung in each racquet moved out of the item
+into `data/pairings.json`: 246 records (72 strings and 10 hybrids, 3 racquets
+each) of `{ itemId, itemKind, racquetId, tension, note }`. Strings and
+hybrids no longer carry `perRacquet`. A fourth racquet is now a racquet
+record plus its pairings.
+
+Gut pairings stay whole records: four combinations appear in more than one
+racquet, but their feel and bars differ every time, so each is already a
+racquet-specific pairing. `data/gutHybrids.json` went from a map keyed by
+racquet to a flat list of 21, each with a `racquetId` after its `id`. This
+adjusts D7 as written, which had them join the pairings list.
+
+The views read pairings through one lookup, `src/core/pairings.ts`: the
+tables, compare, search and the gut strip.
+
+## 2. Tensions as numbers
+
+| Kind | Count | Was | Now |
+|---|---:|---|---|
+| range | 212 | `22–24` | `{ kind: "range", minKg: 22, maxKg: 24 }` |
+| max | 2 | `max 16` | `{ kind: "max", maxKg: 16 }` |
+| prestretch | 2 | `25 (5% PS)` | `{ kind: "prestretch", kg: 25, prestretchPct: 5 }` |
+| split | 51 | `23/24` | `{ kind: "split", mainsKg: 23, crossesKg: 24 }` |
+
+Strings take a range, a maximum or a prestretch; hybrids and gut pairings
+take a split. The schemas enforce both, with every value between 5 and 40 kg.
+`tensionLabel()` prints them as before.
+
+## 3. The migration
+
+`scripts/migrate-pairings.ts`, a one-off kept for provenance. It ran on a
+sample batch first (one of each tension kind, a hybrid and a gut pairing),
+shown before the full run. Before writing, it asserts:
+
+- 216 string, 30 hybrid and 21 gut pairings;
+- tension kinds 212 / 2 / 2 / 51, with split for hybrids and gut only;
+- every tension prints back to exactly its original text;
+- all 246 notes carried over unchanged and in order.
+
+`scripts/extract-legacy.ts` writes the v0.990 shapes, so running it again
+would undo this; its `npm run extract` shortcut is removed.
+
+## 4. Validation
+
+- `pairings-complete` replaces `per-racquet-keys`: every string and hybrid
+  has exactly one pairing per racquet.
+- New: `pairing-refs` (a pairing names a real item of its kind, and a real
+  racquet) and `tension-range` (a range doesn't run backwards).
+- `gut-racquets` now checks each gut pairing's `racquetId`.
+- Schema issues on a pairing name it by item and racquet, e.g.
+  `data: pairings.toroline-k-pop/regna.tension`.
+
+## Declared differences from v0.990 (added in v0.995)
+
+None. The parity suite passed unchanged.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+## Verification
+
+`npm run check` passes: 286 Vitest tests (278 in v0.994), 59 Playwright tests.
+
+- **Against v0.990:** the data, converted back to the v0.990 shape with the
+  app's own `tensionLabel`, equals the blob embedded in v0.990: every key and
+  value, arrays in order, and the same length when serialised. Until v0.994
+  this was a byte-for-byte comparison. It can't be now: in 18 of the 82 strings
+  and hybrids (all 12 Luxilon and all 6 Tourna), v0.990 put `perRacquet` in
+  the middle of the record, and key order carries no meaning in JSON.
+- **Parity:** all 15 pixel views at both viewports and all 24 DOM scenarios
+  pass with no new declared difference.
+- **New tests, 8:** two pairing gaps (a missing and a duplicated pairing), two
+  bad pairing references, a backwards range, three tensions the schema
+  rejects (the wrong kind for a hybrid, text instead of numbers, 60 kg), and the
+  length check above. One mutation test was retired with `per-racquet-keys`.
+
+## File size
+
+| | v0.994 | v0.995 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 425,033 | 448,794 | +23.8 KB (+5.6%) |
+| gzip | 100,771 | 102,605 | +1.8 KB (+1.8%) |
+
+Explicit pairing records repeat their key names 246 times, which compresses
+well. On disk, `data/` grew from 246 KB to 275 KB (pretty-printed).
+
+## Still open
+
+Unchanged from v0.994. Next in Phase 2 step 2: linking hybrid mains and
+crosses to strings by id (D7), then the racquet fields (D4).
+
+---
+
 # v0.994 — Data schemas
 
 **Date:** 2026-11-04

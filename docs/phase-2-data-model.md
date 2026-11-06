@@ -149,6 +149,11 @@ identical.
 
 **Decision (2026-11-04):** as proposed.
 
+**Done in v0.995.** The prestretch field is `prestretchPct`. Strings take a
+range, a maximum or a prestretch, hybrids and gut pairings a split; the schemas
+enforce both. `tensionLabel()` in `src/core/pairings.ts` prints the same text
+as before.
+
 ### D7. Pairings as records
 
 Today each string and hybrid holds `perRacquet: { regna: { tension, note } }`,
@@ -158,6 +163,14 @@ hybrid mains and crosses link to strings by id. A fourth racquet is then a
 racquet record plus its pairings. Displays stay identical.
 
 **Decision (2026-11-04):** as proposed.
+
+**Done in v0.995, with one adjustment:** gut pairings did not join the
+pairings list. Four gut combinations appear in more than one racquet, but their
+feel and bars differ every time, so each gut pairing already is a
+racquet-specific pairing; it stays one record, with a `racquetId`, in
+`gutHybrids.json` (now a flat list). `pairings.json` holds the 246 string and
+hybrid pairings (`itemKind: 'string' | 'hybrid'`). Linking hybrid mains and
+crosses to strings by id is still to do.
 
 ### D8. Feel: computed vs stored
 
@@ -194,7 +207,8 @@ Each step is its own release, and each stops for the owner's review.
 1. **Schemas over today's data** (D9), nothing changed: Zod schemas, JSON
    Schema export, the shape checks moved into the schemas. *Done in v0.994.*
 2. **Moves that render identically**, each checked by the parity suite with no
-   new declared difference: tension (D6), pairings (D7), racquet fields (D4),
+   new declared difference: tension (D6) and pairings (D7), *done in v0.995*;
+   hybrid sides linked by id (D7), racquet fields (D4),
    stiffness storage with `source: 'legacy'` (D1), ratings as
    `{ score, label }` (D5), plain-text notes and the structured grip spec (D9).
    The migration script asserts every count and runs on a sample first.

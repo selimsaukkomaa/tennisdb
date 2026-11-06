@@ -1,5 +1,6 @@
-// Zod schemas for TENNIS_DB and the UI copy, describing the data exactly as stored today
-// (display strings included; Phase 2 step 2 replaces those, see docs/phase-2-data-model.md).
+// Zod schemas for TENNIS_DB and the UI copy, describing the data as stored. Phase 2 step 2
+// replaces display strings with values one move at a time (docs/phase-2-data-model.md):
+// tensions are numbers and pairings are their own records since v0.995.
 //
 // The schemas own the data's shape: required and optional fields, no unknown keys, formats
 // (ids, colours, bar widths) and the token lists the filter chips match. They are written so
@@ -11,6 +12,7 @@
 // never loads this module.
 import { z } from 'zod';
 import { FEEL_CHIPS, SHAPE_CHIPS } from './chips';
+import { MAX_KG, MIN_KG } from './log/tension';
 import { GRIP_TYPES } from './types';
 
 const Id = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/);
@@ -56,13 +58,48 @@ const ColorsSchema = z.strictObject({
   label: Text,
 });
 
-export const PerRacquetSchema = z
-  .strictObject({
-    tension: Text,
-    /** Presence and length are content rules (validate.ts: notes-present). */
-    note: z.string(),
-  })
-  .meta({ id: 'PerRacquet', description: 'How an item is strung in one racquet.' });
+const Kg = z.number().min(MIN_KG).max(MAX_KG);
+const RangeTension = z.strictObject({ kind: z.literal('range'), minKg: Kg, maxKg: Kg });
+const MaxTension = z.strictObject({ kind: z.literal('max'), maxKg: Kg });
+const PrestretchTension = z.strictObject({
+  kind: z.literal('prestretch'),
+  kg: Kg,
+  prestretchPct: z.number().min(0).max(30),
+});
+const SplitTension = z
+  .strictObject({ kind: z.literal('split'), mainsKg: Kg, crossesKg: Kg })
+  .meta({ id: 'SplitTension', description: 'Mains / crosses, as in a hybrid or a gut pairing.' });
+
+/** A recommended tension in kg. Printed as "22–24", "max 16", "25 (5% PS)" or "23/24". */
+export const TensionSchema = z
+  .discriminatedUnion('kind', [RangeTension, MaxTension, PrestretchTension, SplitTension])
+  .meta({ id: 'Tension' });
+
+const StringTension = z.discriminatedUnion('kind', [RangeTension, MaxTension, PrestretchTension]);
+
+/**
+ * How a string or hybrid is strung in one racquet. Every item has one per racquet, with a
+ * note of at least 40 characters (content rules in validate.ts: pairings-complete,
+ * notes-present). Strings take a range, a maximum or a prestretch; hybrids a split.
+ */
+export const PairingSchema = z
+  .discriminatedUnion('itemKind', [
+    z.strictObject({
+      itemId: Id,
+      itemKind: z.literal('string'),
+      racquetId: Id,
+      tension: StringTension,
+      note: z.string(),
+    }),
+    z.strictObject({
+      itemId: Id,
+      itemKind: z.literal('hybrid'),
+      racquetId: Id,
+      tension: SplitTension,
+      note: z.string(),
+    }),
+  ])
+  .meta({ id: 'Pairing', description: 'How a string or hybrid is strung in one racquet.' });
 
 const SHAPE_TOKENS = tokenList(
   SHAPE_CHIPS.map((c) => c.value),
@@ -72,7 +109,6 @@ const FEEL_TOKENS = tokenList(
   FEEL_CHIPS.map((c) => c.value),
   'Comma-separated feel tokens matched by the Feel chips.',
 );
-const PER_RACQUET = z.record(Id, PerRacquetSchema);
 
 export const StringSchema = z
   .strictObject({
@@ -92,7 +128,6 @@ export const StringSchema = z
     feelExpand: Text,
     id: Id,
     brand: Id,
-    perRacquet: PER_RACQUET,
   })
   .meta({ id: 'String' });
 
@@ -118,7 +153,6 @@ export const HybridSchema = z
     feelExpand: Text,
     id: Id,
     brand: Id,
-    perRacquet: PER_RACQUET,
   })
   .meta({ id: 'Hybrid' });
 
@@ -165,6 +199,7 @@ const GutSideSchema = z.strictObject({ string: Text, gauge: Text, stringId: Id }
 export const GutPairingSchema = z
   .strictObject({
     id: Id,
+    racquetId: Id,
     config: z.enum(['gut-mains', 'gut-crosses']),
     mains: GutSideSchema,
     crosses: GutSideSchema,
@@ -174,7 +209,7 @@ export const GutPairingSchema = z
     comfort: BarSchema,
     /** null for the gut-crosses pairings. */
     gutProtection: BarSchema.nullable(),
-    tension: Text,
+    tension: SplitTension,
     notes: z.string(),
   })
   .meta({ id: 'GutPairing' });
@@ -186,9 +221,10 @@ export const TennisDbSchema = z
     brandsStrings: z.record(Id, BrandSchema),
     strings: z.array(StringSchema),
     hybrids: z.array(HybridSchema),
+    pairings: z.array(PairingSchema),
     grips: z.record(Id, z.partialRecord(z.enum(GRIP_TYPES), z.array(GripSchema))),
     gutStrings: z.array(GutStringSchema),
-    gutHybrids: z.record(Id, z.array(GutPairingSchema)),
+    gutHybrids: z.array(GutPairingSchema),
   })
   .meta({ id: 'TennisDb', description: 'The equipment database (data/*.json, assembled).' });
 

@@ -1,6 +1,7 @@
 // Global search, ported from v0.990's tennis-search: an index over strings and hybrids (one
 // entry per racquet), grips, gut pairings and stringing-log entries, and the v0.990 scoring.
 import { gripBrandLabel } from './labels';
+import { perRacquet, tensionLabel } from './pairings';
 import { GRIP_TYPES, type BrandId, type GripType, type RacquetId, type TennisDb } from './types';
 
 export type SearchType = 'string' | 'hybrid' | 'guthybrid' | 'grip' | 'log';
@@ -56,7 +57,7 @@ export function buildSearchIndex(db: TennisDb, log: readonly LogSearchEntry[] = 
 
   for (const s of db.strings) {
     for (const r of db.racquets) {
-      const per = s.perRacquet?.[r.id];
+      const per = perRacquet(db, s.id, r.id);
       items.push({
         type: 'string',
         icon: '🎾',
@@ -81,7 +82,7 @@ export function buildSearchIndex(db: TennisDb, log: readonly LogSearchEntry[] = 
 
   for (const h of db.hybrids) {
     for (const r of db.racquets) {
-      const per = h.perRacquet?.[r.id];
+      const per = perRacquet(db, h.id, r.id);
       items.push({
         type: 'hybrid',
         icon: '🧬',
@@ -136,26 +137,25 @@ export function buildSearchIndex(db: TennisDb, log: readonly LogSearchEntry[] = 
     }
   }
 
-  for (const rid of Object.keys(db.gutHybrids)) {
-    for (const p of db.gutHybrids[rid] ?? []) {
-      const configLabel = p.config === 'gut-mains' ? '⬆ Gut Mains' : '⬇ Gut Crosses';
-      items.push({
-        type: 'guthybrid',
-        icon: '🎻',
-        id: p.id,
-        label: `${p.mains.string} / ${p.crosses.string}`,
-        sublabel: `${configLabel} · ${racquetLabel(rid)}`,
-        racquet: rid,
-        sourceText: joinText([
-          p.mains.string,
-          p.crosses.string,
-          p.feelLabel,
-          p.notes,
-          p.tension,
-          configLabel,
-        ]),
-      });
-    }
+  for (const p of db.gutHybrids) {
+    const rid = p.racquetId;
+    const configLabel = p.config === 'gut-mains' ? '⬆ Gut Mains' : '⬇ Gut Crosses';
+    items.push({
+      type: 'guthybrid',
+      icon: '🎻',
+      id: p.id,
+      label: `${p.mains.string} / ${p.crosses.string}`,
+      sublabel: `${configLabel} · ${racquetLabel(rid)}`,
+      racquet: rid,
+      sourceText: joinText([
+        p.mains.string,
+        p.crosses.string,
+        p.feelLabel,
+        p.notes,
+        tensionLabel(p.tension),
+        configLabel,
+      ]),
+    });
   }
 
   for (const e of log) {

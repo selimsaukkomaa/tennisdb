@@ -1,12 +1,13 @@
 import { expect, test } from 'vitest';
 import { assembleDb } from '../../src/core/db';
 import { brandOfStringId, orderedPairings } from '../../src/core/gut';
+import { gutPairingsFor } from '../../src/core/pairings';
 
 const db = assembleDb();
 
 test('gut-mains pairings come first, each group in declared order', () => {
   for (const r of db.racquets) {
-    const declared = db.gutHybrids[r.id]!;
+    const declared = gutPairingsFor(db, r.id);
     const ordered = orderedPairings(db, r.id);
     expect(ordered).toHaveLength(declared.length);
     const firstCrosses = ordered.findIndex((p) => p.config === 'gut-crosses');

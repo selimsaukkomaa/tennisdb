@@ -6,6 +6,7 @@ import { resolve } from 'node:path';
 import { beforeAll, describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
 import { KeyValueLogStore, type KeyValueBackend } from '../../src/core/log/store';
+import { tensionLabel } from '../../src/core/pairings';
 import type { Racquet, TennisDb } from '../../src/core/types';
 import { initCompare } from '../../src/ui/compare';
 import { initContextLine } from '../../src/ui/context-line';
@@ -27,16 +28,17 @@ const FOURTH: Racquet = {
   label: 'Babolat Pure Strike 98',
 };
 
+/** The data plus a fourth racquet, every item strung in it as in the Regna. */
 function withFourthRacquet(): TennisDb {
   const base = assembleDb();
-  const copyPer = <T extends { perRacquet: Record<string, unknown> }>(rows: T[]): T[] =>
-    rows.map((r) => ({ ...r, perRacquet: { ...r.perRacquet, test4: r.perRacquet.regna } }));
+  const regna = base.pairings.filter((p) => p.racquetId === 'regna');
   return assembleDb({
     racquets: [...base.racquets, FOURTH],
-    strings: copyPer(base.strings),
-    hybrids: copyPer(base.hybrids),
+    pairings: [...base.pairings, ...regna.map((p) => ({ ...p, racquetId: 'test4' }))],
   });
 }
+const pairingIn4 = (db: TennisDb, itemId: string) =>
+  db.pairings.find((p) => p.itemId === itemId && p.racquetId === 'test4')!;
 
 let db: TennisDb;
 const stored = new Map<string, string>();
@@ -87,7 +89,7 @@ describe('fourth racquet from data alone', () => {
     expect(content.querySelectorAll('tr[data-type="string"]')).toHaveLength(72);
     expect(content.querySelectorAll('tr[data-type="hybrid"]')).toHaveLength(10);
     const row = content.querySelector('tr[data-id="toroline-o-toro-tour"]')!;
-    expect(row.querySelector('.notes')?.textContent).toBe(db.strings[0]!.perRacquet.test4!.note);
+    expect(row.querySelector('.notes')?.textContent).toBe(pairingIn4(db, db.strings[0]!.id).note);
   });
 
   test('log and gut strips exist for it', () => {
@@ -164,8 +166,8 @@ describe('compare on the fourth racquet', () => {
     tabs.find((t) => t.dataset.cmpRacquet === 'test4')!.click();
     const tensions = [...document.querySelectorAll('.cmp-cell-tension')].map((c) => c.textContent);
     expect(tensions).toEqual([
-      db.strings[0]!.perRacquet.test4!.tension,
-      db.strings[1]!.perRacquet.test4!.tension,
+      tensionLabel(pairingIn4(db, db.strings[0]!.id).tension),
+      tensionLabel(pairingIn4(db, db.strings[1]!.id).tension),
     ]);
     document.getElementById('compare-modal-close')!.click();
     document.getElementById('compare-clear')!.click();

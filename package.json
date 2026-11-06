@@ -1,7 +1,7 @@
 {
   "name": "tennisdb",
   "private": true,
-  "version": "0.994.0",
+  "version": "0.995.0",
   "description": "Personal tennis equipment database: strings, hybrids, gut pairings, grips and a stringing log.",
   "type": "module",
   "scripts": {
@@ -17,7 +17,6 @@
     "test:watch": "vitest",
     "test:visual": "playwright test",
     "check": "npm run validate && npm run typecheck && npm run lint && prettier --check . && npm test && npm run test:visual",
-    "extract": "tsx scripts/extract-legacy.ts",
     "fonts:vendor": "tsx scripts/vendor-fonts.ts",
     "build:ios": "vite build && cap sync ios",
     "ios:open": "cap open ios",

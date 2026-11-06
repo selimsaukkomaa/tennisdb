@@ -21,6 +21,7 @@ import {
   type TennisDb,
 } from '../core/types';
 import { gripBrandLabel, racquetSpec } from '../core/labels';
+import { perRacquet } from '../core/pairings';
 import { APP_VERSION } from '../version';
 import { html, raw, type SafeHtml } from './html';
 import {
@@ -117,7 +118,7 @@ function brandSection(db: TennisDb, copy: Copy, r: Racquet, brand: BrandId): Saf
 <p style="font-size:0.85rem; color:#94a3b8; margin-bottom:0.75rem;">${raw(card.intro)}</p>
 <table class="hybrid-table" data-brand="${brand}" data-racquet="${r.id}" data-render="hybrid">
 ${HYBRID_HEAD}
-<tbody>${hybrids.map((h) => hybridRow(h, r.id))}</tbody>
+<tbody>${hybrids.map((h) => hybridRow(h, perRacquet(db, h.id, r.id)))}</tbody>
 </table>
 </div>`
       : '';
@@ -132,7 +133,7 @@ ${raw(footer.byRacquet?.[r.id] ?? footer.default)}
 <div class="table-wrap">
 <table data-brand="${brand}" data-racquet="${r.id}" data-render="strings">
 ${STRING_HEAD}
-<tbody>${strings.map((s) => stringRow(s, r.id))}</tbody>
+<tbody>${strings.map((s) => stringRow(s, perRacquet(db, s.id, r.id)))}</tbody>
 </table>
 </div>${hybridCard}${footerHtml}
 </div>

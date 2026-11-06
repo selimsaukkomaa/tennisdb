@@ -15,6 +15,10 @@ function rulesAfter(mutate: (db: TennisDb, copy: Copy) => void, css = base.css):
 }
 
 const str = (db: TennisDb, id: string) => db.strings.find((s) => s.id === id)!;
+const pairing = (db: TennisDb, itemId: string, racquetId: string) =>
+  db.pairings.find((p) => p.itemId === itemId && p.racquetId === racquetId)!;
+const gutOf = (db: TennisDb, racquetId: string) =>
+  db.gutHybrids.find((p) => p.racquetId === racquetId)!;
 const grip = (db: TennisDb, name: string) =>
   Object.values(db.grips)
     .flatMap((t) => Object.values(t).flat())
@@ -30,12 +34,12 @@ test('data files are UTF-8 without \\u escapes, and code has no smart quotes', (
 
 describe('each rule fires on broken data', () => {
   test.each<[string, (db: TennisDb, copy: Copy) => void]>([
-    ['neutral-text', (db) => (str(db, 'toroline-caviar').perRacquet.regna!.note += ' Ideal for your game.')],
-    ['neutral-text', (db) => (db.gutHybrids.regna![0]!.notes += ' Avoid it.')],
+    ['neutral-text', (db) => (pairing(db, 'toroline-caviar', 'regna').note += ' Ideal for your game.')],
+    ['neutral-text', (db) => (gutOf(db, 'regna').notes += ' Avoid it.')],
     ['neutral-grip-text', (db) => (grip(db, 'Tac').notes = 'Best for sweaty hands.')],
     ['neutral-grip-text', (_db, copy) => (copy.gripAbout.kimony += ' A strong pick.')],
-    ['notes-present', (db) => (str(db, 'toroline-caviar').perRacquet.percept!.note = 'Short.')],
-    ['notes-present', (db) => (db.gutHybrids.percept![0]!.notes = '')],
+    ['notes-present', (db) => (pairing(db, 'toroline-caviar', 'percept').note = 'Short.')],
+    ['notes-present', (db) => (gutOf(db, 'percept').notes = '')],
     ['stiffness-band', (db) => (str(db, 'toroline-caviar').stiffness.label = 'Stiffish · 1.00')],
     ['firm-xor-soft', (db) => (str(db, 'toroline-caviar').feelAttr = 'crisp')],
     ['firm-soft-band', (db) => (str(db, 'toroline-o-toro').feelAttr = 'firm,lively')],
@@ -52,9 +56,13 @@ describe('each rule fires on broken data', () => {
     ['bar-claims', (db) => (grip(db, 'Last Dry').absorption!.width = 99)],
     ['ids-unique', (db) => (db.strings[1]!.id = db.strings[0]!.id)],
     ['brand-refs', (db) => (str(db, 'toroline-caviar').brand = 'wilson')],
-    ['per-racquet-keys', (db) => delete str(db, 'toroline-caviar').perRacquet.headpt630],
-    ['gut-racquets', (db) => (db.gutHybrids.pure98 = [])],
-    ['gut-string-refs', (db) => (db.gutHybrids.regna![0]!.crosses.stringId = 'luxilon-nope')],
+    ['pairings-complete', (db) => db.pairings.splice(db.pairings.indexOf(pairing(db, 'toroline-caviar', 'headpt630')), 1)],
+    ['pairings-complete', (db) => db.pairings.push({ ...pairing(db, 'toroline-caviar', 'regna') })],
+    ['pairing-refs', (db) => (pairing(db, 'toroline-caviar', 'regna').itemId = 'toroline-nope')],
+    ['pairing-refs', (db) => (pairing(db, 'toroline-caviar', 'regna').racquetId = 'pure98')],
+    ['tension-range', (db) => (pairing(db, 'toroline-caviar', 'regna').tension = { kind: 'range', minKg: 24, maxKg: 22 })],
+    ['gut-racquets', (db) => (gutOf(db, 'regna').racquetId = 'pure98')],
+    ['gut-string-refs', (db) => (gutOf(db, 'regna').crosses.stringId = 'luxilon-nope')],
     ['copy-refs', (_db, copy) => (copy.brandFooters.toroline!.byRacquet = { nope: '<p>x</p>' })],
     ['copy-refs', (_db, copy) => (copy.gripAbout.wilson = 'About Wilson')],
     ['retired', (db) => (str(db, 'toroline-caviar').feelSummary = 'Connected, direct')],
@@ -97,7 +105,10 @@ describe('the schemas catch a bad shape, and nothing else runs until it is fixed
     ['an id that is not kebab-case', 'strings.Toroline Caviar.id', (db) => (str(db, 'toroline-caviar').id = 'Toroline Caviar')],
     ['an unknown grip type', 'grips.tourna.wet.tourna-tac', (db) => (loose(grip(db, 'Tac')).gripType = 'hybrid')],
     ['an unknown tag colour', 'strings.toroline-caviar.feelTags.0.variant', (db) => (loose(str(db, 'toroline-caviar').feelTags[0]!).variant = 'gold')],
-    ['a gut pairing with an unknown config', 'gutHybrids.regna.', (db) => (loose(db.gutHybrids.regna![0]!).config = 'gut-both')],
+    ['a gut pairing with an unknown config', 'gutHybrids.gh-regna-1.config', (db) => (loose(gutOf(db, 'regna')).config = 'gut-both')],
+    ['a tension kind the item cannot take', 'pairings.toroline-k-pop/regna.tension', (db) => (loose(pairing(db, 'toroline-k-pop', 'regna')).tension = { kind: 'range', minKg: 22, maxKg: 24 })],
+    ['a tension written as text', 'pairings.toroline-caviar/regna.tension', (db) => (loose(pairing(db, 'toroline-caviar', 'regna')).tension = '22–24')],
+    ['a tension outside 5–40 kg', 'pairings.toroline-caviar/regna.tension', (db) => (pairing(db, 'toroline-caviar', 'regna').tension = { kind: 'max', maxKg: 60 })],
     ['copy without the gut intro', 'copy: gutIntro', (_db, copy) => delete loose(copy).gutIntro],
   ])('%s', (_name, where, mutate) => {
     const issues = schemaAfter(mutate);
@@ -113,5 +124,5 @@ test('a fourth racquet without notes lists exactly what it is missing', () => {
   const missing = issues.filter((i) => i.rule === 'notes-present');
   expect(missing).toHaveLength(72 + 10);
   expect(missing[0]!.where).toBe('toroline-o-toro-tour/test4');
-  expect(issues.filter((i) => i.rule === 'per-racquet-keys')).toHaveLength(82);
+  expect(issues.filter((i) => i.rule === 'pairings-complete')).toHaveLength(82);
 });

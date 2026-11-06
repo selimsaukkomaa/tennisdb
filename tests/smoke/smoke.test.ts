@@ -29,6 +29,9 @@ const $$ = <T extends Element = HTMLElement>(sel: string): T[] => [
   ...document.querySelectorAll<T>(sel),
 ];
 const visible = (tr: Element): boolean => !tr.classList.contains('filter-hidden');
+/** An item's note in a racquet (data/pairings.json since v0.995). */
+const note = (itemId: string, racquet: string): string | undefined =>
+  DB.pairings.find((p) => p.itemId === itemId && p.racquetId === racquet)?.note;
 
 beforeAll(async () => {
   const html = readFileSync(resolve('index.html'), 'utf8');
@@ -57,7 +60,7 @@ describe('data', () => {
     expect(n).toBe(35);
   });
   test('21 gut pairings', () => {
-    expect(Object.values(DB.gutHybrids).reduce((n, a) => n + a.length, 0)).toBe(21);
+    expect(DB.gutHybrids).toHaveLength(21);
   });
   test('7 string brands', () => expect(Object.keys(DB.brandsStrings)).toHaveLength(7));
   test('PT630 98 sq in', () =>
@@ -65,29 +68,23 @@ describe('data', () => {
   test('no topPick keys in data', () => expect(JSON.stringify(DB)).not.toContain('topPick'));
   test('all string+hybrid notes present (≥40 chars)', () => {
     const empty = [...DB.strings, ...DB.hybrids].flatMap((s) =>
-      R.filter((r) => (s.perRacquet[r]?.note ?? '').trim().length < 40).map((r) => `${s.id}/${r}`),
+      R.filter((r) => (note(s.id, r) ?? '').trim().length < 40).map((r) => `${s.id}/${r}`),
     );
     expect(empty).toEqual([]);
   });
   test('all gut notes present', () => {
-    expect(
-      Object.values(DB.gutHybrids)
-        .flat()
-        .every((p) => p.notes && p.notes.length >= 40),
-    ).toBe(true);
+    expect(DB.gutHybrids.every((p) => p.notes && p.notes.length >= 40)).toBe(true);
   });
   test('neutrality audit: no preference/verdict language in notes', () => {
     const pref =
       /\byour\b|\byou\b|\byou're\b|OHBH|one-handed|Selim|\bAvoid\b|\bSkip\b|\bPerfect for\b|\bIdeal for\b|\bdead\b|\bdeadened\b|\bpreference\b/i;
     const hits: string[] = [];
     for (const s of [...DB.strings, ...DB.hybrids]) {
-      R.forEach((r) => pref.test(s.perRacquet[r]!.note) && hits.push(`${s.id}/${r}`));
+      R.forEach((r) => pref.test(note(s.id, r)!) && hits.push(`${s.id}/${r}`));
       if (pref.test(s.feelSummary)) hits.push(`${s.id}/summary`);
       if (pref.test(s.feelExpand)) hits.push(`${s.id}/expand`);
     }
-    Object.values(DB.gutHybrids)
-      .flat()
-      .forEach((p) => pref.test(p.notes) && hits.push(p.id));
+    DB.gutHybrids.forEach((p) => pref.test(p.notes) && hits.push(p.id));
     expect(hits).toEqual([]);
   });
 });

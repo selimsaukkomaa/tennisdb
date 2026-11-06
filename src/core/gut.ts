@@ -1,9 +1,10 @@
 // Natural gut / poly pairings: display order and which brand colour a pairing's strings take.
+import { gutPairingsFor } from './pairings';
 import type { GutPairing, RacquetId, TennisDb } from './types';
 
 /** A racquet's pairings with gut-mains configs first, each group in declared order. */
 export function orderedPairings(db: TennisDb, racquet: RacquetId): GutPairing[] {
-  const pairings = db.gutHybrids[racquet] ?? [];
+  const pairings = gutPairingsFor(db, racquet);
   return pairings
     .map((p, idx) => ({ p, idx, mainsFirst: p.config === 'gut-mains' ? 0 : 1 }))
     .sort((a, b) => a.mainsFirst - b.mainsFirst || a.idx - b.idx)

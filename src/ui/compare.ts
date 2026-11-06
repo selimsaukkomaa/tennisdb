@@ -9,6 +9,7 @@ import {
   type CompareItem,
 } from '../core/compare';
 import type { Bar, RacquetId, TennisDb } from '../core/types';
+import { perRacquet } from '../core/pairings';
 import { html, join, raw, type SafeHtml } from './html';
 import { state } from './state';
 import { feelTagsHtml } from './tables';
@@ -98,7 +99,7 @@ const ATTR_ROWS: readonly AttrRow[] = [
 function cellHtml(row: AttrRow, entry: CompareItem, racquet: RacquetId): SafeHtml {
   if (row.hybrid === false && entry.kind === 'hybrid') return DASH;
   if (row.hybrid === true && entry.kind === 'string') return DASH;
-  const per = entry.item.perRacquet?.[racquet];
+  const per = perRacquet(db, entry.item.id, racquet);
 
   if (entry.kind === 'hybrid' && (row.key === 'mains' || row.key === 'crosses')) {
     const side = entry.item[row.key];

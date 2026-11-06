@@ -1,10 +1,13 @@
-// Assembles TENNIS_DB from data/*.json in the v0.990 key order, so the result serialises
-// byte for byte like the blob the single-file app embedded.
+// Assembles TENNIS_DB from data/*.json. Until v0.994 the result serialised byte for byte like
+// the blob the v0.990 single file embedded; since the pairings move (v0.995) the data has
+// pairings.json and numeric tensions, and tests/data/legacy-roundtrip.test.ts converts it back
+// to the v0.990 shape to prove nothing was lost.
 import meta from '../../data/meta.json';
 import racquets from '../../data/racquets.json';
 import brandsStrings from '../../data/brandsStrings.json';
 import strings from '../../data/strings.json';
 import hybrids from '../../data/hybrids.json';
+import pairings from '../../data/pairings.json';
 import grips from '../../data/grips.json';
 import gutStrings from '../../data/gutStrings.json';
 import gutHybrids from '../../data/gutHybrids.json';
@@ -17,6 +20,7 @@ export const COLLECTIONS = [
   'brandsStrings',
   'strings',
   'hybrids',
+  'pairings',
   'grips',
   'gutStrings',
   'gutHybrids',
@@ -25,12 +29,13 @@ export const COLLECTIONS = [
 export type Collections = Pick<TennisDb, (typeof COLLECTIONS)[number]>;
 
 // JSON imports are typed structurally from the files; the cast pins them to the declared
-// shapes. Phase 2 swaps this for Zod parsing.
+// shapes; the schemas check them at build time (validate.ts), not at runtime.
 const FILES = {
   racquets,
   brandsStrings,
   strings,
   hybrids,
+  pairings,
   grips,
   gutStrings,
   gutHybrids,

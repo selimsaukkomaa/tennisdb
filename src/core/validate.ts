@@ -8,7 +8,7 @@
 // reported; the rules below are content and cross-record checks on well-formed data.
 import { FEEL_CHIPS, tokens } from './chips';
 import { CopySchema, TennisDbSchema } from './schema';
-import type { Copy, Grip, Hybrid, StringRec, TennisDb } from './types';
+import type { Copy, Grip, Hybrid, Pairing, StringRec, TennisDb } from './types';
 import { GRIP_TYPES } from './types';
 
 export interface Issue {
@@ -106,14 +106,20 @@ export const BAR_CLAIMS: readonly BarClaim[] = [
   },
 ];
 
-/** Where a schema issue is, with array indexes replaced by the record's id when it has one. */
+/**
+ * Where a schema issue is, with array indexes replaced by the record's id, or by
+ * "item/racquet" for a pairing.
+ */
 function describePath(root: unknown, path: readonly PropertyKey[]): string {
   let node = root;
   return path
     .map((key) => {
       node = (node as Record<PropertyKey, unknown> | undefined)?.[key];
-      const id = (node as { id?: unknown } | undefined)?.id;
-      return typeof key === 'number' && typeof id === 'string' ? id : String(key);
+      const rec = node as { id?: unknown; itemId?: unknown; racquetId?: unknown } | undefined;
+      if (typeof key !== 'number') return String(key);
+      if (typeof rec?.id === 'string') return rec.id;
+      if (typeof rec?.itemId === 'string') return `${rec.itemId}/${String(rec.racquetId)}`;
+      return String(key);
     })
     .join('.');
 }
@@ -144,21 +150,26 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   const racquetIds = db.racquets.map((r) => r.id);
   const rows: (StringRec | Hybrid)[] = [...db.strings, ...db.hybrids];
   const grips = allGrips(db);
-  const pairings = Object.values(db.gutHybrids).flat();
+  const gutPairings = db.gutHybrids;
+  // Each string's and hybrid's pairings, by racquet (normally exactly one per racquet).
+  const pairingsOf = new Map<string, Pairing[]>();
+  for (const p of db.pairings) {
+    const k = `${p.itemId}/${p.racquetId}`;
+    pairingsOf.set(k, [...(pairingsOf.get(k) ?? []), p]);
+  }
 
   // ---- neutrality
+  for (const p of db.pairings) {
+    if (PREFERENCE_LANGUAGE.test(p.note))
+      fail('neutral-text', `${p.itemId}/${p.racquetId}`, 'preference or verdict language in note');
+  }
   for (const r of rows) {
-    for (const rid of racquetIds) {
-      if (PREFERENCE_LANGUAGE.test(r.perRacquet[rid]?.note ?? '')) {
-        fail('neutral-text', `${r.id}/${rid}`, 'preference or verdict language in note');
-      }
-    }
     if (PREFERENCE_LANGUAGE.test(r.feelSummary))
       fail('neutral-text', `${r.id}/summary`, 'preference or verdict language');
     if (PREFERENCE_LANGUAGE.test(r.feelExpand))
       fail('neutral-text', `${r.id}/expand`, 'preference or verdict language');
   }
-  for (const p of pairings) {
+  for (const p of gutPairings) {
     if (PREFERENCE_LANGUAGE.test(p.notes))
       fail('neutral-text', p.id, 'preference or verdict language in note');
   }
@@ -176,12 +187,12 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   // ---- notes present for every racquet
   for (const r of rows) {
     for (const rid of racquetIds) {
-      const note = r.perRacquet[rid]?.note ?? '';
+      const note = pairingsOf.get(`${r.id}/${rid}`)?.[0]?.note ?? '';
       if (note.trim().length < MIN_NOTE_CHARS)
         fail('notes-present', `${r.id}/${rid}`, 'note missing or shorter than 40 characters');
     }
   }
-  for (const p of pairings) {
+  for (const p of gutPairings) {
     if ((p.notes ?? '').trim().length < MIN_NOTE_CHARS)
       fail('notes-present', p.id, 'gut pairing note missing or short');
   }
@@ -264,25 +275,36 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   const duplicates = (ids: string[]): string[] => ids.filter((id, i) => ids.indexOf(id) !== i);
   for (const id of duplicates([...rows.map((r) => r.id), ...grips.map((g) => g.id)]))
     fail('ids-unique', id, 'duplicate id');
-  for (const id of duplicates([...pairings.map((p) => p.id), ...db.gutStrings.map((g) => g.id)]))
+  for (const id of duplicates([...gutPairings.map((p) => p.id), ...db.gutStrings.map((g) => g.id)]))
     fail('ids-unique', id, 'duplicate id');
   for (const id of duplicates(racquetIds)) fail('ids-unique', id, 'duplicate racquet id');
   for (const r of rows) {
     if (!db.brandsStrings[r.brand]) fail('brand-refs', r.id, `unknown brand "${r.brand}"`);
-    const keys = Object.keys(r.perRacquet).sort().join(',');
-    if (keys !== [...racquetIds].sort().join(','))
-      fail(
-        'per-racquet-keys',
-        r.id,
-        `perRacquet has ${keys}, racquets are ${racquetIds.join(',')}`,
-      );
+    for (const rid of racquetIds) {
+      const count = pairingsOf.get(`${r.id}/${rid}`)?.length ?? 0;
+      if (count !== 1)
+        fail('pairings-complete', `${r.id}/${rid}`, `${count} pairings, expected exactly one`);
+    }
   }
-  for (const rid of Object.keys(db.gutHybrids)) {
-    if (!racquetIds.includes(rid)) fail('gut-racquets', rid, 'gut pairings for an unknown racquet');
+  const itemKinds = new Map<string, string>([
+    ...db.strings.map((s) => [s.id, 'string'] as const),
+    ...db.hybrids.map((h) => [h.id, 'hybrid'] as const),
+  ]);
+  for (const p of db.pairings) {
+    const where = `${p.itemId}/${p.racquetId}`;
+    if (itemKinds.get(p.itemId) !== p.itemKind)
+      fail('pairing-refs', where, `no ${p.itemKind} with id "${p.itemId}"`);
+    if (!racquetIds.includes(p.racquetId)) fail('pairing-refs', where, 'unknown racquet');
+    if (p.tension.kind === 'range' && p.tension.minKg > p.tension.maxKg)
+      fail('tension-range', where, `range ${p.tension.minKg}–${p.tension.maxKg} runs backwards`);
+  }
+  for (const p of gutPairings) {
+    if (!racquetIds.includes(p.racquetId))
+      fail('gut-racquets', p.id, `gut pairing for an unknown racquet "${p.racquetId}"`);
   }
   const stringIds = new Set([...db.strings, ...db.hybrids].map((s) => s.id));
   const gutIds = new Set(db.gutStrings.map((g) => g.id));
-  for (const p of pairings) {
+  for (const p of gutPairings) {
     for (const side of [p.mains, p.crosses]) {
       const ok = side.stringId.startsWith('gut-')
         ? gutIds.has(side.stringId)
