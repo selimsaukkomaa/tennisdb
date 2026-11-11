@@ -77,7 +77,8 @@ src/platform/      native check, storage backends, file save/pick (share sheet o
 src/styles/        v0.990 CSS split verbatim, imported in cascade order; additions.css last
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
-                   provenance (extract-legacy, migrate-pairings) are not meant to run again
+                   provenance (extract-legacy, migrate-pairings, link-hybrid-sides) are not meant
+                   to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)

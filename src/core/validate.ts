@@ -304,6 +304,13 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   }
   const stringIds = new Set([...db.strings, ...db.hybrids].map((s) => s.id));
   const gutIds = new Set(db.gutStrings.map((g) => g.id));
+  const singleStringIds = new Set(db.strings.map((s) => s.id));
+  for (const h of db.hybrids) {
+    for (const side of [h.mains, h.crosses]) {
+      if (side.stringId !== null && !singleStringIds.has(side.stringId))
+        fail('hybrid-string-refs', h.id, `unknown stringId "${side.stringId}"`);
+    }
+  }
   for (const p of gutPairings) {
     for (const side of [p.mains, p.crosses]) {
       const ok = side.stringId.startsWith('gut-')

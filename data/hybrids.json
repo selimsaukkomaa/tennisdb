@@ -6,12 +6,14 @@
     "mains": {
       "string": "Wasabi",
       "gauge": "1.23",
-      "shapeFeelLabel": "Square · Firm"
+      "shapeFeelLabel": "Square · Firm",
+      "stringId": "toroline-wasabi"
     },
     "crosses": {
       "string": "Caviar",
       "gauge": "1.24",
-      "shapeFeelLabel": "Hexagonal · Med-Firm"
+      "shapeFeelLabel": "Hexagonal · Med-Firm",
+      "stringId": "toroline-caviar"
     },
     "stiffness": {
       "label": "Med-Firm",
@@ -47,12 +49,14 @@
     "mains": {
       "string": "O-Toro Spin",
       "gauge": "1.23",
-      "shapeFeelLabel": "Pentagonal · Med"
+      "shapeFeelLabel": "Pentagonal · Med",
+      "stringId": "toroline-o-toro-spin"
     },
     "crosses": {
       "string": "O-Toro",
       "gauge": "1.23",
-      "shapeFeelLabel": "Hexagonal · Med-Soft"
+      "shapeFeelLabel": "Hexagonal · Med-Soft",
+      "stringId": "toroline-o-toro"
     },
     "stiffness": {
       "label": "Medium",
@@ -88,12 +92,14 @@
     "mains": {
       "string": "O-Toro Tour",
       "gauge": "1.23",
-      "shapeFeelLabel": "Hexagonal · Firm"
+      "shapeFeelLabel": "Hexagonal · Firm",
+      "stringId": "toroline-o-toro-tour"
     },
     "crosses": {
       "string": "O-Toro Snap",
       "gauge": "1.25",
-      "shapeFeelLabel": "Round · Soft"
+      "shapeFeelLabel": "Round · Soft",
+      "stringId": "toroline-o-toro-snap"
     },
     "stiffness": {
       "label": "Med-Firm",
@@ -129,12 +135,14 @@
     "mains": {
       "string": "O-Toro Tour",
       "gauge": "1.23",
-      "shapeFeelLabel": "Hexagonal · Firm"
+      "shapeFeelLabel": "Hexagonal · Firm",
+      "stringId": "toroline-o-toro-tour"
     },
     "crosses": {
       "string": "Truffle X",
       "gauge": "1.30",
-      "shapeFeelLabel": "Round · Very Soft"
+      "shapeFeelLabel": "Round · Very Soft",
+      "stringId": "toroline-truffle-x"
     },
     "stiffness": {
       "label": "Med-Firm",
@@ -170,12 +178,14 @@
     "mains": {
       "string": "O-Toro",
       "gauge": "1.23",
-      "shapeFeelLabel": "Hexagonal · Med-Soft"
+      "shapeFeelLabel": "Hexagonal · Med-Soft",
+      "stringId": "toroline-o-toro"
     },
     "crosses": {
       "string": "O-Toro Snap",
       "gauge": "1.25",
-      "shapeFeelLabel": "Round · Soft"
+      "shapeFeelLabel": "Round · Soft",
+      "stringId": "toroline-o-toro-snap"
     },
     "stiffness": {
       "label": "Med-Soft",
@@ -211,12 +221,14 @@
     "mains": {
       "string": "O-Toro",
       "gauge": "1.23",
-      "shapeFeelLabel": "Hexagonal · Med-Soft"
+      "shapeFeelLabel": "Hexagonal · Med-Soft",
+      "stringId": "toroline-o-toro"
     },
     "crosses": {
       "string": "O-Toro Snap TF",
       "gauge": "1.25",
-      "shapeFeelLabel": "Round · Med-Firm"
+      "shapeFeelLabel": "Round · Med-Firm",
+      "stringId": "toroline-o-toro-snap-tour-flex"
     },
     "stiffness": {
       "label": "Medium",
@@ -252,12 +264,14 @@
     "mains": {
       "string": "Wasabi",
       "gauge": "1.23",
-      "shapeFeelLabel": "Square · Firm"
+      "shapeFeelLabel": "Square · Firm",
+      "stringId": "toroline-wasabi"
     },
     "crosses": {
       "string": "Wasabi X",
       "gauge": "1.23",
-      "shapeFeelLabel": "Round · Med-Soft"
+      "shapeFeelLabel": "Round · Med-Soft",
+      "stringId": null
     },
     "stiffness": {
       "label": "Med-Firm",
@@ -293,12 +307,14 @@
     "mains": {
       "string": "Wasabi",
       "gauge": "1.23",
-      "shapeFeelLabel": "Square · Firm"
+      "shapeFeelLabel": "Square · Firm",
+      "stringId": "toroline-wasabi"
     },
     "crosses": {
       "string": "Toro Toro",
       "gauge": "1.23",
-      "shapeFeelLabel": "Hexagonal · Med-Soft"
+      "shapeFeelLabel": "Hexagonal · Med-Soft",
+      "stringId": "toroline-toro-toro"
     },
     "stiffness": {
       "label": "Medium",
@@ -334,12 +350,14 @@
     "mains": {
       "string": "Snapper",
       "gauge": "1.23",
-      "shapeFeelLabel": "Octagonal · Firm"
+      "shapeFeelLabel": "Octagonal · Firm",
+      "stringId": "toroline-snapper"
     },
     "crosses": {
       "string": "O-Toro Snap TF",
       "gauge": "1.25",
-      "shapeFeelLabel": "Round · Med-Firm"
+      "shapeFeelLabel": "Round · Med-Firm",
+      "stringId": "toroline-o-toro-snap-tour-flex"
     },
     "stiffness": {
       "label": "Med-Firm",
@@ -375,12 +393,14 @@
     "mains": {
       "string": "O-Toro Tour 1.23 Mint",
       "gauge": "",
-      "shapeFeelLabel": "Hexagonal · Firm"
+      "shapeFeelLabel": "Hexagonal · Firm",
+      "stringId": "toroline-o-toro-tour"
     },
     "crosses": {
       "string": "O-Toro 1.23 Green",
       "gauge": "",
-      "shapeFeelLabel": "Hexagonal · Medium"
+      "shapeFeelLabel": "Hexagonal · Medium",
+      "stringId": "toroline-o-toro"
     },
     "stiffness": {
       "label": "Med-Firm",

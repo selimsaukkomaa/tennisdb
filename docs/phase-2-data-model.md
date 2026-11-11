@@ -169,8 +169,10 @@ pairings list. Four gut combinations appear in more than one racquet, but their
 feel and bars differ every time, so each gut pairing already is a
 racquet-specific pairing; it stays one record, with a `racquetId`, in
 `gutHybrids.json` (now a flat list). `pairings.json` holds the 246 string and
-hybrid pairings (`itemKind: 'string' | 'hybrid'`). Linking hybrid mains and
-crosses to strings by id is still to do.
+hybrid pairings (`itemKind: 'string' | 'hybrid'`). Since v0.996 each hybrid's
+mains and crosses carry a `stringId`, from a table the owner approved: "O-Toro
+Snap TF" is O-Toro Snap Tour Flex, and "Wasabi X" stays unlinked (`null`),
+because it isn't in the data.
 
 ### D8. Feel: computed vs stored
 
@@ -208,7 +210,7 @@ Each step is its own release, and each stops for the owner's review.
    Schema export, the shape checks moved into the schemas. *Done in v0.994.*
 2. **Moves that render identically**, each checked by the parity suite with no
    new declared difference: tension (D6) and pairings (D7), *done in v0.995*;
-   hybrid sides linked by id (D7), racquet fields (D4),
+   hybrid sides linked by id (D7), *done in v0.996*; racquet fields (D4),
    stiffness storage with `source: 'legacy'` (D1), ratings as
    `{ score, label }` (D5), plain-text notes and the structured grip spec (D9).
    The migration script asserts every count and runs on a sample first.

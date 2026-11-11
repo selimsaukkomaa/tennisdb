@@ -6,6 +6,88 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v0.996 — Hybrid sides linked to their strings
+
+**Date:** 2026-11-09
+**Base:** v0.995 (pairings and numeric tensions)
+**Status:** model release, Phase 2 step 2, second move (`docs/phase-2-data-model.md`,
+D7). Each hybrid's mains and crosses now name the string they use by id. The
+page renders exactly as before; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## 1. The links
+
+Every hybrid side gained a `stringId` next to its text, as gut pairings
+already had. The text stays as it was and is still what the page shows. 19 of
+the 20 sides are linked. The links come from a table the owner approved, not
+from name matching:
+
+- 15 sides name a string exactly (K-Pop, K-Pop Spin, Dreddy, Stevie, 101 and
+  What The Hybrid in full, plus the mains of O-Snap, Wasabi Pro and
+  Snapaholic).
+- **"O-Toro Snap TF"** (O-Snap and Snapaholic crosses) →
+  `toroline-o-toro-snap-tour-flex`. Both hybrids' notes say "Snap Tour Flex",
+  and the side's "Round · Med-Firm" matches Tour Flex, not O-Toro Snap
+  (Medium). Matching on the start of the name would have linked O-Toro Snap.
+- **Cole:** "O-Toro Tour 1.23 Mint" → `toroline-o-toro-tour` and "O-Toro 1.23
+  Green" → `toroline-o-toro`; the gauge and colour are part of the name.
+- **"Wasabi X"** (Wasabi Pro crosses) stays unlinked (`null`). It is described
+  as round and slick, while Wasabi is square, and there's no record for it.
+
+`scripts/link-hybrid-sides.ts` (one-off) holds the table, checks each side's
+text before linking, and asserts 20 sides with 19 links.
+
+## 2. Validation
+
+- New rule `hybrid-string-refs`: a link names a single string in the data,
+  not a hybrid or an unknown id.
+- The schema requires `stringId` on every side (a string id or `null`).
+
+## Declared differences from v0.990 (added in v0.996)
+
+None. The parity suite passed unchanged.
+
+---
+
+## Data corrections
+
+None. The links add information; no text changed.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+## Verification
+
+`npm run check` passes: 289 Vitest tests (286 in v0.995), 59 Playwright tests.
+
+- **New tests, 3:** a link to an unknown id, a link to a hybrid, and a side
+  without its `stringId`.
+- **Against v0.990:** with the links removed, the data still equals v0.990's
+  value for value.
+- **Parity:** all 15 pixel views at both viewports and all 24 DOM scenarios
+  pass unchanged.
+
+## File size
+
+| | v0.995 | v0.996 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 448,794 | 450,022 | +1.2 KB |
+| gzip | 102,605 | 102,549 | −56 bytes |
+
+## Still open
+
+Unchanged from v0.995, plus:
+
+- **Wasabi X** is the crosses string of the Wasabi Pro hybrid, but the data
+  has no record for it, so that side can't be linked. Adding it would be new
+  content: a string record and a note for each racquet.
+
+Next in Phase 2 step 2: the racquet fields (D4).
+
+---
+
 # v0.995 — Pairings and numeric tensions
 
 **Date:** 2026-11-06

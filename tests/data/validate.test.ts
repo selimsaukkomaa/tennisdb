@@ -63,6 +63,8 @@ describe('each rule fires on broken data', () => {
     ['tension-range', (db) => (pairing(db, 'toroline-caviar', 'regna').tension = { kind: 'range', minKg: 24, maxKg: 22 })],
     ['gut-racquets', (db) => (gutOf(db, 'regna').racquetId = 'pure98')],
     ['gut-string-refs', (db) => (gutOf(db, 'regna').crosses.stringId = 'luxilon-nope')],
+    ['hybrid-string-refs', (db) => (db.hybrids[0]!.mains.stringId = 'toroline-nope')],
+    ['hybrid-string-refs', (db) => (db.hybrids[0]!.crosses.stringId = 'toroline-k-pop-spin')],
     ['copy-refs', (_db, copy) => (copy.brandFooters.toroline!.byRacquet = { nope: '<p>x</p>' })],
     ['copy-refs', (_db, copy) => (copy.gripAbout.wilson = 'About Wilson')],
     ['retired', (db) => (str(db, 'toroline-caviar').feelSummary = 'Connected, direct')],
@@ -109,6 +111,7 @@ describe('the schemas catch a bad shape, and nothing else runs until it is fixed
     ['a tension kind the item cannot take', 'pairings.toroline-k-pop/regna.tension', (db) => (loose(pairing(db, 'toroline-k-pop', 'regna')).tension = { kind: 'range', minKg: 22, maxKg: 24 })],
     ['a tension written as text', 'pairings.toroline-caviar/regna.tension', (db) => (loose(pairing(db, 'toroline-caviar', 'regna')).tension = '22–24')],
     ['a tension outside 5–40 kg', 'pairings.toroline-caviar/regna.tension', (db) => (pairing(db, 'toroline-caviar', 'regna').tension = { kind: 'max', maxKg: 60 })],
+    ['a hybrid side without its link', 'hybrids.toroline-k-pop.mains.stringId', (db) => delete loose(db.hybrids[0]!.mains).stringId],
     ['copy without the gut intro', 'copy: gutIntro', (_db, copy) => delete loose(copy).gutIntro],
   ])('%s', (_name, where, mutate) => {
     const issues = schemaAfter(mutate);

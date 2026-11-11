@@ -354,12 +354,25 @@
             "shapeFeelLabel": {
               "type": "string",
               "minLength": 1
+            },
+            "stringId": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "The string this side uses; null when it is not in the data (Wasabi X)."
             }
           },
           "required": [
             "string",
             "gauge",
-            "shapeFeelLabel"
+            "shapeFeelLabel",
+            "stringId"
           ],
           "additionalProperties": false
         },
@@ -376,12 +389,25 @@
             "shapeFeelLabel": {
               "type": "string",
               "minLength": 1
+            },
+            "stringId": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "The string this side uses; null when it is not in the data (Wasabi X)."
             }
           },
           "required": [
             "string",
             "gauge",
-            "shapeFeelLabel"
+            "shapeFeelLabel",
+            "stringId"
           ],
           "additionalProperties": false
         },

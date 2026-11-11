@@ -132,10 +132,14 @@ export const StringSchema = z
   .meta({ id: 'String' });
 
 const HybridSideSchema = z.strictObject({
+  /** The string as the hybrid names it, shown as is. */
   string: Text,
   /** Empty when the gauge is part of `string` (Toroline Cole). */
   gauge: z.string(),
   shapeFeelLabel: Text,
+  stringId: Id.nullable().meta({
+    description: 'The string this side uses; null when it is not in the data (Wasabi X).',
+  }),
 });
 
 export const HybridSchema = z

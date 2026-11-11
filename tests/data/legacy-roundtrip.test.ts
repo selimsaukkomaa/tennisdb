@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
 import { tensionLabel } from '../../src/core/pairings';
-import type { GutPairing, TennisDb } from '../../src/core/types';
+import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
 
 const legacyHtml = readFileSync(
   fileURLToPath(new URL('../../legacy/tennis_equipmentdb_v0_990.html', import.meta.url)),
@@ -28,6 +28,12 @@ function toV0990(db: TennisDb): unknown {
         .filter((p) => p.itemId === itemId)
         .map((p) => [p.racquetId, { tension: tensionLabel(p.tension), note: p.note }]),
     );
+  // v0.996 linked each hybrid side to its string; v0.990 had only the name.
+  const withoutLink = (side: Hybrid['mains']) => {
+    const copy: Partial<Hybrid['mains']> = { ...side };
+    delete copy.stringId;
+    return copy;
+  };
   type V0990GutPairing = Omit<GutPairing, 'racquetId' | 'tension'> & { tension: string };
   const gut: Record<string, V0990GutPairing[]> = {};
   for (const { racquetId, ...p } of db.gutHybrids) {
@@ -36,7 +42,12 @@ function toV0990(db: TennisDb): unknown {
   return {
     ...rest,
     strings: db.strings.map((s) => ({ ...s, perRacquet: perRacquet(s.id) })),
-    hybrids: db.hybrids.map((h) => ({ ...h, perRacquet: perRacquet(h.id) })),
+    hybrids: db.hybrids.map((h) => ({
+      ...h,
+      mains: withoutLink(h.mains),
+      crosses: withoutLink(h.crosses),
+      perRacquet: perRacquet(h.id),
+    })),
     gutHybrids: gut,
   };
 }
