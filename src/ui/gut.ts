@@ -3,6 +3,7 @@
 // pairings, gut-mains configs first.
 import { brandOfStringId, orderedPairings } from '../core/gut';
 import { gutPairingsFor, tensionLabel } from '../core/pairings';
+import { ratingBar } from '../core/ratings';
 import type { Bar, Copy, GutPairing, GutSide, RacquetId, TennisDb } from '../core/types';
 import { html, join, raw, type SafeHtml } from './html';
 
@@ -32,7 +33,7 @@ function intro(): SafeHtml {
 
 function row(p: GutPairing): SafeHtml {
   const mains = p.config === 'gut-mains';
-  return html`<tr data-config="${p.config}" data-id="${p.id}"><td class="gut-config-cell ${mains ? 'gut-config-mains' : 'gut-config-crosses'}"><span class="gut-config-icon">${mains ? '⬆' : '⬇'}</span><span class="gut-config-label">${mains ? 'Gut Mains' : 'Gut Crosses'}</span></td><td class="gut-string-cell">${stringPill(p.mains)}</td><td class="gut-string-cell">${stringPill(p.crosses)}</td><td class="gut-feel-cell">${p.feelLabel || ''}</td><td>${bar('power', p.power)}</td><td>${bar('spin', p.spin)}</td><td>${bar('comfort', p.comfort)}</td><td>${bar('gut-protection', p.gutProtection)}</td><td class="gut-tension-cell">${tensionLabel(p.tension)}</td><td class="gut-notes-cell">${p.notes}</td></tr>`;
+  return html`<tr data-config="${p.config}" data-id="${p.id}"><td class="gut-config-cell ${mains ? 'gut-config-mains' : 'gut-config-crosses'}"><span class="gut-config-icon">${mains ? '⬆' : '⬇'}</span><span class="gut-config-label">${mains ? 'Gut Mains' : 'Gut Crosses'}</span></td><td class="gut-string-cell">${stringPill(p.mains)}</td><td class="gut-string-cell">${stringPill(p.crosses)}</td><td class="gut-feel-cell">${p.feelLabel || ''}</td><td>${bar('power', ratingBar(p.power))}</td><td>${bar('spin', ratingBar(p.spin))}</td><td>${bar('comfort', ratingBar(p.comfort))}</td><td>${bar('gut-protection', ratingBar(p.gutProtection))}</td><td class="gut-tension-cell">${tensionLabel(p.tension)}</td><td class="gut-notes-cell">${p.notes}</td></tr>`;
 }
 
 function table(racquet: RacquetId): SafeHtml {

@@ -2,6 +2,7 @@
 // whitespace between cells, exactly as the legacy string concatenation produced them.
 import type { Bar, Colors, FeelTag, Grip, Hybrid, HybridSide, StringRec } from '../core/types';
 import type { PerRacquet } from '../core/pairings';
+import { ratingBar } from '../core/ratings';
 import { stiffnessBar } from '../core/stiffness';
 import { html, join, raw, type SafeHtml } from './html';
 
@@ -72,11 +73,11 @@ export function stringRow(s: StringRec, per: PerRacquet | undefined): SafeHtml {
     html`<td>${join(s.gauges ?? [], BR)}</td>`,
     colorsCell(s.colors),
     barCell('stiff', stiffnessBar(s.stiffness)),
-    barCell('power', s.power),
+    barCell('power', ratingBar(s.power)),
     feelCell(s.feelTags, s.feelSummary, s.feelExpand),
-    barCell('spin', s.spin),
-    barCell('control', s.control),
-    barCell('comfort', s.comfort),
+    barCell('spin', ratingBar(s.spin)),
+    barCell('control', ratingBar(s.control)),
+    barCell('comfort', ratingBar(s.comfort)),
     tensionCell(per?.tension ?? ''),
     notesCell(per?.note),
   ]}</tr>`;
@@ -88,8 +89,8 @@ export function hybridRow(h: Hybrid, per: PerRacquet | undefined): SafeHtml {
     hybridSideCell(h.mains),
     hybridSideCell(h.crosses),
     barCell('stiff', stiffnessBar(h.stiffness)),
-    barCell('power', h.power),
-    barCell('spin', h.spin),
+    barCell('power', ratingBar(h.power)),
+    barCell('spin', ratingBar(h.spin)),
     feelCell(h.feelTags, h.feelSummary, h.feelExpand),
     tensionCell(per?.tension ?? ''),
     notesCell(per?.note),
@@ -118,9 +119,9 @@ export function overgripRow(g: Grip): SafeHtml {
     nameCell(g.name),
     html`<td>${g.model}${variants}</td>`,
     specsCell(g.specs),
-    barCell('tackiness', g.tackiness),
-    barCell('absorption', g.absorption),
-    barCell('durability', g.durability),
+    barCell('tackiness', ratingBar(g.tackiness)),
+    barCell('absorption', ratingBar(g.absorption)),
+    barCell('durability', ratingBar(g.durability)),
     feelCell(g.feelTags, g.feelSummary, g.feelExpand),
     colorsPlainCell(g.colors),
     html`<td>${g.packSizes || ''}</td>`,

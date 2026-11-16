@@ -32,6 +32,15 @@ describe('a standard JSON Schema validator agrees with the Zod schemas', () => {
     expect(check('stringing-log.schema.json', seed.tennis_log_v2)).toEqual([]);
   });
 
+  test('it rejects a rating word from another list and a rating in the old bar shape', () => {
+    const bad = structuredClone(db);
+    (bad.strings[0]!.power as { label: string }).label = 'Med';
+    (bad.strings[1] as unknown as Record<string, unknown>).spin = { label: 'High', width: 80 };
+    const errors = check('tennisdb.schema.json', bad);
+    expect(errors.some((e) => e.startsWith('/strings/0/power/label'))).toBe(true);
+    expect(errors.some((e) => e.startsWith('/strings/1/spin'))).toBe(true);
+  });
+
   test('it rejects a feel token no chip matches, an unknown key and an uppercase id', () => {
     const bad = structuredClone(db);
     bad.strings[0]!.feelAttr += ',muted';

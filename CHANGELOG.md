@@ -6,6 +6,127 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v0.999 — Ratings as values
+
+**Date:** 2026-11-16
+**Base:** v0.998 (stiffness as values)
+**Status:** model release, no visible change. Phase 2 step 2, fifth move
+(`docs/phase-2-data-model.md`, D5): every rating is stored as a score and a
+label, and renders exactly as before. No note content changed and no rating
+word changed; `TENNIS_DB.version` stays `0.990`.
+
+This is the last release numbered v0.99x. By the owner's decision the next one
+is **v1.0**.
+
+---
+
+## Ratings as values
+
+| | Was | Now |
+|---|---|---|
+| A rating | `{ label: "Low-Med", width: 38 }` | `{ score: 38, label: "Low-Med" }` |
+| Gut protection on a gut-crosses pairing | `null` | `null` |
+
+- **458 ratings:** 308 on strings and hybrids (72 strings × power, spin,
+  control, comfort; 10 hybrids × power, spin), 78 on grips (26 × tackiness,
+  absorption, durability; the 9 replacement grips have none), 72 on gut
+  pairings (21 × power, spin, comfort, plus 9 gut-protection ratings).
+- The score is the number that was the bar's width. `ratingBar()` in
+  `src/core/ratings.ts` gives the views the bar they drew before.
+- Stiffness is not a rating and is untouched; its band and width wait for D2
+  and D3.
+
+**The word lists.** Each label is checked against the list of today's words for
+its axis, lowest first (`RATING_WORDS` in `src/core/ratings.ts`):
+
+| Axis | Words, lowest first |
+|---|---|
+| Power (strings, hybrids) | Low · Low-Med · Med-Low · Medium · Med-High · High · Very High |
+| Spin (strings, hybrids) | Low · Low-Med · Med-Low · Medium · Moderate · Mod-High · Med-High · High · High (Slice) · Very High · Elite |
+| Control | Low-Med · Moderate · Good · Very Good · Very High · Excellent · Outstanding |
+| Comfort | Low · Low-Mod · Med-Low · Moderate · Medium · Good · Med-High · Very Good · High · Very High · Excellent · Elite |
+| Grip tackiness | Low · Low-Med · Moderate · High · Very High · Elite |
+| Grip absorption | Low · Med-Low · Medium · Moderate · High · Very High · Excellent · Elite |
+| Grip durability | Low · Moderate · Medium · Good · Very Good · Excellent |
+| Gut power, spin, protection | Med-Low · Med · Med-High · High · Very High |
+| Gut comfort | Very Good · Excellent · Outstanding |
+
+- Gut pairings have their own lists: they say "Med" where the strings say
+  "Medium", and their scale sits higher (a gut pairing's "Med-Low" power is
+  52–55, a string's 42–50).
+- Near-synonyms are placed by the lowest score each is used at, so "Medium"
+  comes before "Moderate" on spin and after it on comfort and on the grips.
+  That placing is provisional. Unifying the words is the later content pass
+  D5 sets aside, starting with a sample of five.
+
+`scripts/migrate-ratings.ts` (one-off) ran on a sample batch first (a string,
+a hybrid, a grip and two gut pairings). Before writing, it asserts the counts
+above, that every label is on its list, that every listed word is in use, that
+the lowest scores never fall along a list, that no `{ label, width }` bar is
+left, and that converting back gives the data as it was, character for
+character.
+
+**Validation.** The schema fixes each axis's words, so a word from another
+list ("Med" on a string) or the old bar shape fails. New rule:
+`rating-order`, along each list a word's lowest score never falls below that
+of the word before it. It catches a word used far below its place (a "High" at
+20). It does not catch one used too high (a "Low" at 90): the scores of
+neighbouring words overlap today, so no stricter rule holds until the words
+are unified.
+
+## Declared differences from v0.990
+
+None added.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+## Verification
+
+`npm run check` passes: 309 Vitest tests (299 in v0.998), 59 Playwright tests.
+
+- **New tests, 10:** four ratings that break the order (a string, a hybrid, a
+  grip, a gut pairing); five shapes the schema rejects (a word not on its
+  list, a gut word on a string, a string's word on a gut pairing, a grip word
+  from another axis, a stored bar width), where two bar-width tests became
+  score tests; and one check that a standard JSON Schema validator rejects a
+  word from another list and the old bar shape.
+- **Against v0.990:** converted back with `ratingBar`, the data still equals
+  v0.990's value for value, and serialises to the same length.
+- **Parity:** all 15 pixel views and 24 DOM scenarios pass with no new
+  declared difference.
+- **Schemas:** `schemas/tennisdb.schema.json` regenerated; the single `Bar`
+  definition is replaced by one named definition per axis (`PowerRating`,
+  `GutProtectionRating` and so on).
+
+## File size
+
+| | v0.998 | v0.999 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 454,575 | 454,685 | +0.1 KB (+0.0%) |
+| gzip | 102,842 | 102,987 | +0.1 KB |
+
+## Still open
+
+Unchanged from v0.998, except:
+
+- **Closed: version numbers.** The release after this one is v1.0.
+- **New: the rating words.** The lists record today's words as they are,
+  near-synonyms included; `rating-order` is as strict as they allow.
+  Unifying them is Phase 2 step 4.
+
+Next in Phase 2 step 2, as v1.0: plain-text notes and the structured grip spec
+(D9).
+
+---
+
 # v0.998 — Stiffness as values; "strung" title and "Notes" headers
 
 **Date:** 2026-11-16

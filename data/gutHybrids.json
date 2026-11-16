@@ -15,20 +15,20 @@
     },
     "feelLabel": "Plush · Powerful",
     "power": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "spin": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 90
+      "score": 90,
+      "label": "Excellent"
     },
     "gutProtection": {
-      "label": "High",
-      "width": 82
+      "score": 82,
+      "label": "High"
     },
     "tension": {
       "kind": "split",
@@ -53,20 +53,20 @@
     },
     "feelLabel": "Med-Firm · Lively",
     "power": {
-      "label": "High",
-      "width": 80
+      "score": 80,
+      "label": "High"
     },
     "spin": {
-      "label": "High",
-      "width": 78
+      "score": 78,
+      "label": "High"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 90
+      "score": 90,
+      "label": "Excellent"
     },
     "gutProtection": {
-      "label": "Med-Low",
-      "width": 50
+      "score": 50,
+      "label": "Med-Low"
     },
     "tension": {
       "kind": "split",
@@ -91,20 +91,20 @@
     },
     "feelLabel": "Plush · Soft",
     "power": {
-      "label": "Very High",
-      "width": 90
+      "score": 90,
+      "label": "Very High"
     },
     "spin": {
-      "label": "Med-Low",
-      "width": 50
+      "score": 50,
+      "label": "Med-Low"
     },
     "comfort": {
-      "label": "Very Good",
-      "width": 85
+      "score": 85,
+      "label": "Very Good"
     },
     "gutProtection": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "tension": {
       "kind": "split",
@@ -129,16 +129,16 @@
     },
     "feelLabel": "Med-Firm · Crisp",
     "power": {
-      "label": "Med-High",
-      "width": 70
+      "score": 70,
+      "label": "Med-High"
     },
     "spin": {
-      "label": "High",
-      "width": 78
+      "score": 78,
+      "label": "High"
     },
     "comfort": {
-      "label": "Very Good",
-      "width": 85
+      "score": 85,
+      "label": "Very Good"
     },
     "gutProtection": null,
     "tension": {
@@ -164,16 +164,16 @@
     },
     "feelLabel": "Firm · Crisp",
     "power": {
-      "label": "Med",
-      "width": 62
+      "score": 62,
+      "label": "Med"
     },
     "spin": {
-      "label": "Med-High",
-      "width": 72
+      "score": 72,
+      "label": "Med-High"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 90
+      "score": 90,
+      "label": "Excellent"
     },
     "gutProtection": null,
     "tension": {
@@ -199,16 +199,16 @@
     },
     "feelLabel": "Very Firm · Stable",
     "power": {
-      "label": "Med-Low",
-      "width": 55
+      "score": 55,
+      "label": "Med-Low"
     },
     "spin": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "comfort": {
-      "label": "Outstanding",
-      "width": 95
+      "score": 95,
+      "label": "Outstanding"
     },
     "gutProtection": null,
     "tension": {
@@ -234,16 +234,16 @@
     },
     "feelLabel": "Firm · Lively",
     "power": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "spin": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "comfort": {
-      "label": "Very Good",
-      "width": 80
+      "score": 80,
+      "label": "Very Good"
     },
     "gutProtection": null,
     "tension": {
@@ -269,20 +269,20 @@
     },
     "feelLabel": "Plush · Round",
     "power": {
-      "label": "Very High",
-      "width": 92
+      "score": 92,
+      "label": "Very High"
     },
     "spin": {
-      "label": "Med",
-      "width": 58
+      "score": 58,
+      "label": "Med"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 92
+      "score": 92,
+      "label": "Excellent"
     },
     "gutProtection": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "tension": {
       "kind": "split",
@@ -307,20 +307,20 @@
     },
     "feelLabel": "Med-Firm · Lively",
     "power": {
-      "label": "High",
-      "width": 82
+      "score": 82,
+      "label": "High"
     },
     "spin": {
-      "label": "Med-High",
-      "width": 72
+      "score": 72,
+      "label": "Med-High"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 90
+      "score": 90,
+      "label": "Excellent"
     },
     "gutProtection": {
-      "label": "Med-Low",
-      "width": 50
+      "score": 50,
+      "label": "Med-Low"
     },
     "tension": {
       "kind": "split",
@@ -345,20 +345,20 @@
     },
     "feelLabel": "Plush · Crisp",
     "power": {
-      "label": "High",
-      "width": 80
+      "score": 80,
+      "label": "High"
     },
     "spin": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "comfort": {
-      "label": "Very Good",
-      "width": 85
+      "score": 85,
+      "label": "Very Good"
     },
     "gutProtection": {
-      "label": "High",
-      "width": 80
+      "score": 80,
+      "label": "High"
     },
     "tension": {
       "kind": "split",
@@ -383,16 +383,16 @@
     },
     "feelLabel": "Med-Firm · Crisp",
     "power": {
-      "label": "Med-High",
-      "width": 70
+      "score": 70,
+      "label": "Med-High"
     },
     "spin": {
-      "label": "Med-High",
-      "width": 75
+      "score": 75,
+      "label": "Med-High"
     },
     "comfort": {
-      "label": "Very Good",
-      "width": 85
+      "score": 85,
+      "label": "Very Good"
     },
     "gutProtection": null,
     "tension": {
@@ -418,16 +418,16 @@
     },
     "feelLabel": "Firm · Shaped",
     "power": {
-      "label": "Med",
-      "width": 62
+      "score": 62,
+      "label": "Med"
     },
     "spin": {
-      "label": "High",
-      "width": 80
+      "score": 80,
+      "label": "High"
     },
     "comfort": {
-      "label": "Very Good",
-      "width": 82
+      "score": 82,
+      "label": "Very Good"
     },
     "gutProtection": null,
     "tension": {
@@ -453,16 +453,16 @@
     },
     "feelLabel": "Firm · Crisp",
     "power": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "spin": {
-      "label": "Med-High",
-      "width": 72
+      "score": 72,
+      "label": "Med-High"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 88
+      "score": 88,
+      "label": "Excellent"
     },
     "gutProtection": null,
     "tension": {
@@ -488,16 +488,16 @@
     },
     "feelLabel": "Very Firm · Stable",
     "power": {
-      "label": "Med-Low",
-      "width": 52
+      "score": 52,
+      "label": "Med-Low"
     },
     "spin": {
-      "label": "Med",
-      "width": 58
+      "score": 58,
+      "label": "Med"
     },
     "comfort": {
-      "label": "Outstanding",
-      "width": 95
+      "score": 95,
+      "label": "Outstanding"
     },
     "gutProtection": null,
     "tension": {
@@ -523,20 +523,20 @@
     },
     "feelLabel": "Plush · Hex Bite",
     "power": {
-      "label": "High",
-      "width": 80
+      "score": 80,
+      "label": "High"
     },
     "spin": {
-      "label": "High",
-      "width": 78
+      "score": 78,
+      "label": "High"
     },
     "comfort": {
-      "label": "Outstanding",
-      "width": 95
+      "score": 95,
+      "label": "Outstanding"
     },
     "gutProtection": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "tension": {
       "kind": "split",
@@ -561,20 +561,20 @@
     },
     "feelLabel": "Plush · Shaped",
     "power": {
-      "label": "High",
-      "width": 78
+      "score": 78,
+      "label": "High"
     },
     "spin": {
-      "label": "High",
-      "width": 78
+      "score": 78,
+      "label": "High"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 90
+      "score": 90,
+      "label": "Excellent"
     },
     "gutProtection": {
-      "label": "Med-High",
-      "width": 70
+      "score": 70,
+      "label": "Med-High"
     },
     "tension": {
       "kind": "split",
@@ -599,20 +599,20 @@
     },
     "feelLabel": "Plush · Textured",
     "power": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "spin": {
-      "label": "Med-High",
-      "width": 70
+      "score": 70,
+      "label": "Med-High"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 90
+      "score": 90,
+      "label": "Excellent"
     },
     "gutProtection": {
-      "label": "High",
-      "width": 78
+      "score": 78,
+      "label": "High"
     },
     "tension": {
       "kind": "split",
@@ -637,16 +637,16 @@
     },
     "feelLabel": "Med-Firm · Crisp",
     "power": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "spin": {
-      "label": "Med-High",
-      "width": 72
+      "score": 72,
+      "label": "Med-High"
     },
     "comfort": {
-      "label": "Very Good",
-      "width": 85
+      "score": 85,
+      "label": "Very Good"
     },
     "gutProtection": null,
     "tension": {
@@ -672,16 +672,16 @@
     },
     "feelLabel": "Very Firm · Stable",
     "power": {
-      "label": "Med-Low",
-      "width": 52
+      "score": 52,
+      "label": "Med-Low"
     },
     "spin": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "comfort": {
-      "label": "Outstanding",
-      "width": 95
+      "score": 95,
+      "label": "Outstanding"
     },
     "gutProtection": null,
     "tension": {
@@ -707,16 +707,16 @@
     },
     "feelLabel": "Firm · Sharp",
     "power": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "spin": {
-      "label": "High",
-      "width": 80
+      "score": 80,
+      "label": "High"
     },
     "comfort": {
-      "label": "Very Good",
-      "width": 82
+      "score": 82,
+      "label": "Very Good"
     },
     "gutProtection": null,
     "tension": {
@@ -742,16 +742,16 @@
     },
     "feelLabel": "Firm · Crisp",
     "power": {
-      "label": "Med",
-      "width": 60
+      "score": 60,
+      "label": "Med"
     },
     "spin": {
-      "label": "Med-High",
-      "width": 70
+      "score": 70,
+      "label": "Med-High"
     },
     "comfort": {
-      "label": "Excellent",
-      "width": 88
+      "score": 88,
+      "label": "Excellent"
     },
     "gutProtection": null,
     "tension": {

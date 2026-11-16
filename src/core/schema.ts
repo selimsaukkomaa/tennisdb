@@ -1,8 +1,9 @@
 // Zod schemas for TENNIS_DB and the UI copy, describing the data as stored. Phase 2 step 2
 // replaces display strings with values one move at a time (docs/phase-2-data-model.md):
 // tensions are numbers and pairings are their own records since v0.995, hybrid sides link
-// to their strings since v0.996, racquet fields are values since v0.997, and stiffness is a
-// band plus a figure with its provenance since v0.998.
+// to their strings since v0.996, racquet fields are values since v0.997, stiffness is a band
+// plus a figure with its provenance since v0.998, and ratings are a score plus a word from
+// their axis's list since v0.999.
 //
 // The schemas own the data's shape: required and optional fields, no unknown keys, formats
 // (ids, colours, bar widths) and the token lists the filter chips match. They are written so
@@ -15,6 +16,7 @@
 import { z } from 'zod';
 import { FEEL_CHIPS, SHAPE_CHIPS } from './chips';
 import { MAX_KG, MIN_KG } from './log/tension';
+import { RATING_WORDS, type RatingAxis } from './ratings';
 import { GRIP_TYPES } from './types';
 
 const Id = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/);
@@ -33,9 +35,27 @@ function tokenList(values: readonly string[], description: string): z.ZodString 
 /** Tag colours; each has a `.tag-<variant>` rule in the stylesheet (checked by validate.ts). */
 export const TAG_VARIANT_NAMES = ['crisp', 'firm', 'soft', 'round', 'lively', 'plush'] as const;
 
-export const BarSchema = z
-  .strictObject({ label: Text, width: z.int().min(0).max(100) })
-  .meta({ id: 'Bar', description: 'A labelled bar; width is the fill percentage.' });
+const BarWidth = z.int().min(0).max(100);
+
+/**
+ * A rating: a score from 0 to 100, drawn as the bar's fill, and a label from the axis's list of
+ * words (ratings.ts). validate.ts checks that the words keep their order (rating-order).
+ */
+const rating = <A extends RatingAxis>(axis: A, id: string) =>
+  z
+    .strictObject({ score: BarWidth, label: z.enum(RATING_WORDS[axis]) })
+    .meta({ id, description: 'A score from 0 to 100 and a word from the list for its axis.' });
+const PowerRating = rating('power', 'PowerRating');
+const SpinRating = rating('spin', 'SpinRating');
+const ControlRating = rating('control', 'ControlRating');
+const ComfortRating = rating('comfort', 'ComfortRating');
+const TackinessRating = rating('tackiness', 'TackinessRating');
+const AbsorptionRating = rating('absorption', 'AbsorptionRating');
+const DurabilityRating = rating('durability', 'DurabilityRating');
+const GutPowerRating = rating('gutPower', 'GutPowerRating');
+const GutSpinRating = rating('gutSpin', 'GutSpinRating');
+const GutComfortRating = rating('gutComfort', 'GutComfortRating');
+const GutProtectionRating = rating('gutProtection', 'GutProtectionRating');
 
 /** Stiffness bands, softest first. "Med" and "Medium" are both in use until D2 folds them. */
 export const STIFFNESS_BANDS = [
@@ -49,7 +69,6 @@ export const STIFFNESS_BANDS = [
   'Very Firm',
 ] as const;
 const Band = z.enum(STIFFNESS_BANDS);
-const BarWidth = z.int().min(0).max(100);
 const KgPerMm = z.number().min(0.2).max(2);
 
 /**
@@ -167,10 +186,10 @@ export const StringSchema = z
     gauges: z.array(Text).min(1),
     colors: ColorsSchema,
     stiffness: StiffnessSchema,
-    power: BarSchema,
-    spin: BarSchema,
-    control: BarSchema,
-    comfort: BarSchema,
+    power: PowerRating,
+    spin: SpinRating,
+    control: ControlRating,
+    comfort: ComfortRating,
     feelTags: z.array(FeelTagSchema),
     feelSummary: Text,
     feelExpand: Text,
@@ -198,8 +217,8 @@ export const HybridSchema = z
     mains: HybridSideSchema,
     crosses: HybridSideSchema,
     stiffness: HybridStiffnessSchema,
-    power: BarSchema,
-    spin: BarSchema,
+    power: PowerRating,
+    spin: SpinRating,
     feelTags: z.array(FeelTagSchema),
     feelSummary: Text,
     feelExpand: Text,
@@ -214,9 +233,9 @@ export const GripSchema = z
     model: Text,
     modelVariants: z.array(Text).optional(),
     specs: z.array(Text).meta({ description: 'May contain inline HTML (one <em> today).' }),
-    tackiness: BarSchema.optional(),
-    absorption: BarSchema.optional(),
-    durability: BarSchema.optional(),
+    tackiness: TackinessRating.optional(),
+    absorption: AbsorptionRating.optional(),
+    durability: DurabilityRating.optional(),
     feelTags: z.array(FeelTagSchema),
     feelSummary: Text,
     feelExpand: Text,
@@ -256,11 +275,11 @@ export const GutPairingSchema = z
     mains: GutSideSchema,
     crosses: GutSideSchema,
     feelLabel: Text,
-    power: BarSchema,
-    spin: BarSchema,
-    comfort: BarSchema,
+    power: GutPowerRating,
+    spin: GutSpinRating,
+    comfort: GutComfortRating,
     /** null for the gut-crosses pairings. */
-    gutProtection: BarSchema.nullable(),
+    gutProtection: GutProtectionRating.nullable(),
     tension: SplitTension,
     notes: z.string(),
   })

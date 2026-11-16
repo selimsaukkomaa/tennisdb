@@ -10,6 +10,7 @@ import { describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
 import { racquetLabel } from '../../src/core/labels';
 import { tensionLabel } from '../../src/core/pairings';
+import { ratingBar, type Rating } from '../../src/core/ratings';
 import { stiffnessBar } from '../../src/core/stiffness';
 import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
 
@@ -20,6 +21,16 @@ const legacyHtml = readFileSync(
 const legacyJson = legacyHtml.match(
   /<script id="tennis-data" type="application\/json">([\s\S]*?)<\/script>/,
 )![1]!;
+
+/** v0.999 stores a rating as { score, label }; v0.990 had the bar, { label, width }. */
+function withBars<T extends object>(rec: T, fields: readonly string[]): T {
+  const copy = { ...rec } as Record<string, unknown>;
+  for (const field of fields) {
+    const rating = copy[field] as Rating | null | undefined;
+    if (rating) copy[field] = ratingBar(rating);
+  }
+  return copy as T;
+}
 
 /** TENNIS_DB as v0.990 stored it: perRacquet inside each item, gut pairings keyed by racquet. */
 function toV0990(db: TennisDb): unknown {
@@ -39,7 +50,10 @@ function toV0990(db: TennisDb): unknown {
   type V0990GutPairing = Omit<GutPairing, 'racquetId' | 'tension'> & { tension: string };
   const gut: Record<string, V0990GutPairing[]> = {};
   for (const { racquetId, ...p } of db.gutHybrids) {
-    (gut[racquetId] ??= []).push({ ...p, tension: tensionLabel(p.tension) });
+    (gut[racquetId] ??= []).push({
+      ...withBars(p, ['power', 'spin', 'comfort', 'gutProtection']),
+      tension: tensionLabel(p.tension),
+    });
   }
   return {
     ...rest,
@@ -55,17 +69,28 @@ function toV0990(db: TennisDb): unknown {
     })),
     // v0.998 stores stiffness as a band and a figure; v0.990 had the label.
     strings: db.strings.map((s) => ({
-      ...s,
+      ...withBars(s, ['power', 'spin', 'control', 'comfort']),
       stiffness: stiffnessBar(s.stiffness),
       perRacquet: perRacquet(s.id),
     })),
     hybrids: db.hybrids.map((h) => ({
-      ...h,
+      ...withBars(h, ['power', 'spin']),
       stiffness: stiffnessBar(h.stiffness),
       mains: withoutLink(h.mains),
       crosses: withoutLink(h.crosses),
       perRacquet: perRacquet(h.id),
     })),
+    grips: Object.fromEntries(
+      Object.entries(db.grips).map(([brand, byType]) => [
+        brand,
+        Object.fromEntries(
+          Object.entries(byType).map(([type, list]) => [
+            type,
+            list.map((g) => withBars(g, ['tackiness', 'absorption', 'durability'])),
+          ]),
+        ),
+      ]),
+    ),
     gutHybrids: gut,
   };
 }

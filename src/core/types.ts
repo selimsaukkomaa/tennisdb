@@ -11,8 +11,11 @@ export type GripType = (typeof GRIP_TYPES)[number];
 
 export type Racquet = z.infer<typeof S.RacquetSchema>;
 export type Brand = z.infer<typeof S.BrandSchema>;
-/** A labelled bar: `width` is the fill percentage. */
-export type Bar = z.infer<typeof S.BarSchema>;
+/** A labelled bar as the views draw it: `width` is the fill percentage. Derived, not stored. */
+export interface Bar {
+  label: string;
+  width: number;
+}
 export type FeelTag = z.infer<typeof S.FeelTagSchema>;
 export type Tension = z.infer<typeof S.TensionSchema>;
 export type Pairing = z.infer<typeof S.PairingSchema>;

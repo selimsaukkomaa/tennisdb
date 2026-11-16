@@ -6,7 +6,8 @@ Pages (`https://selimsaukkomaa.github.io/tennisdb/`) and as an iOS app (Capacito
 called EquipDB until v0.993.
 
 v0.991 was a parity port of the single-file v0.990 app in `legacy/`: same behaviour, same
-look, same data. v0.992 fixed three v0.990 bugs; v0.993 renamed the app. Release history is in `CHANGELOG.md`;
+look, same data. v0.992 fixed three v0.990 bugs; v0.993 renamed the app. v0.999 is the last
+number of that scheme: the release after it is v1.0. Release history is in `CHANGELOG.md`;
 v0.989 and v0.990 are in `legacy/`.
 
 ## Conventions
@@ -78,7 +79,7 @@ src/styles/        v0.990 CSS split verbatim, imported in cascade order; additio
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
-                   migrate-racquets, migrate-stiffness) are not meant to run again
+                   migrate-racquets, migrate-stiffness, migrate-ratings) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -143,13 +144,15 @@ the same files, so both sides render identical glyphs offline.
 ## Data validation
 
 The Zod schemas in `src/core/schema.ts` run first and own the data's shape: fields, types,
-formats, no unknown keys, the chip token lists. Keep every schema constraint expressible in
+formats, no unknown keys, the chip token lists, the rating words of each axis
+(`src/core/ratings.ts`). Keep every schema constraint expressible in
 JSON Schema (no `.refine`), so the export in `schemas/` stays complete. Then
 `src/core/validate.ts` holds the content and cross-record rules from build_990.py and more:
 neutral text, notes present for every racquet, firm-xor-soft against the stiffness band,
 Crisp chip ⇔ Crisp tag, every feel chip used, grip type ⇔ chip, one colour per tag label
 with CSS for every variant, a filter-header colour for every grip brand, bar-backed claims
-(Mega Tac, Tourna Grip Original), id and reference integrity, no "Connected" vocabulary.
+(Mega Tac, Tourna Grip Original), rating words in the order of their lists, id and reference
+integrity, no "Connected" vocabulary.
 `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in
 source, `index.html`, these two docs or `docs/`. Every rule and each kind of schema check has
 a mutation test in `tests/data/validate.test.ts`; `tests/data/schemas.test.ts` checks that

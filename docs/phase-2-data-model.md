@@ -167,6 +167,17 @@ Low-Mod, Med-Low, Moderate and Medium; spin has both Mod-High and Med-High, and
 checked against an ordered per-axis list of today's words. Unifying the words
 is a later content pass of its own, starting with a sample of five.
 
+**Done in v0.999.** All 458 ratings are `{ score, label }`; the score is the
+number that was the bar's width. The word lists are in `src/core/ratings.ts`,
+one per axis: strings and hybrids share power and spin, the grips have their
+three, and the gut pairings have their own, because they say "Med" where the
+strings say "Medium" and sit higher on the scale. Near-synonyms ("Medium" and
+"Moderate", "Mod-High" and "Med-High") are placed by the lowest score each is
+used at, which is provisional until the word pass. The schema checks the word;
+the `rating-order` rule checks that a word's lowest score never falls below
+that of the word before it. `ratingBar()` gives the views the same bar as
+before.
+
 ### D6. Tension
 
 Strings: 212 ranges (`"22–24"`), 2 maximums (`"max 16"`), 2 prestretch
@@ -241,7 +252,9 @@ Each step is its own release, and each stops for the owner's review.
    hybrid sides linked by id (D7), *done in v0.996*; racquet fields (D4),
    *done in v0.997*;
    stiffness storage with `source: 'legacy'` (D1), *done in v0.998*; ratings as
-   `{ score, label }` (D5), plain-text notes and the structured grip spec (D9).
+   `{ score, label }` (D5), *done in v0.999*; plain-text notes and the
+   structured grip spec (D9), which ships as v1.0 (the owner's call on
+   2026-11-16: v0.999 is the last number of the old scheme).
    The migration script asserts every count and runs on a sample first.
 3. **Visible changes**, one release each, with declared differences:
    - stiffness labels and the 8 Firm/Soft chips (D2, D8);

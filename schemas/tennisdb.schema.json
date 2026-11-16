@@ -238,16 +238,16 @@
           "$ref": "#/$defs/Stiffness"
         },
         "power": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/PowerRating"
         },
         "spin": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/SpinRating"
         },
         "control": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/ControlRating"
         },
         "comfort": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/ComfortRating"
         },
         "feelTags": {
           "type": "array",
@@ -395,25 +395,126 @@
       ],
       "additionalProperties": false
     },
-    "Bar": {
+    "PowerRating": {
       "type": "object",
       "properties": {
-        "label": {
-          "type": "string",
-          "minLength": 1
-        },
-        "width": {
+        "score": {
           "type": "integer",
           "minimum": 0,
           "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Low",
+            "Low-Med",
+            "Med-Low",
+            "Medium",
+            "Med-High",
+            "High",
+            "Very High"
+          ]
         }
       },
       "required": [
-        "label",
-        "width"
+        "score",
+        "label"
       ],
       "additionalProperties": false,
-      "description": "A labelled bar; width is the fill percentage."
+      "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "SpinRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Low",
+            "Low-Med",
+            "Med-Low",
+            "Medium",
+            "Moderate",
+            "Mod-High",
+            "Med-High",
+            "High",
+            "High (Slice)",
+            "Very High",
+            "Elite"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "ControlRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Low-Med",
+            "Moderate",
+            "Good",
+            "Very Good",
+            "Very High",
+            "Excellent",
+            "Outstanding"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "ComfortRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Low",
+            "Low-Mod",
+            "Med-Low",
+            "Moderate",
+            "Medium",
+            "Good",
+            "Med-High",
+            "Very Good",
+            "High",
+            "Very High",
+            "Excellent",
+            "Elite"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
     },
     "FeelTag": {
       "type": "object",
@@ -556,10 +657,10 @@
           "additionalProperties": false
         },
         "power": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/PowerRating"
         },
         "spin": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/SpinRating"
         },
         "feelTags": {
           "type": "array",
@@ -791,13 +892,13 @@
           "description": "May contain inline HTML (one <em> today)."
         },
         "tackiness": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/TackinessRating"
         },
         "absorption": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/AbsorptionRating"
         },
         "durability": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/DurabilityRating"
         },
         "feelTags": {
           "type": "array",
@@ -865,6 +966,89 @@
         "id"
       ],
       "additionalProperties": false
+    },
+    "TackinessRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Low",
+            "Low-Med",
+            "Moderate",
+            "High",
+            "Very High",
+            "Elite"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "AbsorptionRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Low",
+            "Med-Low",
+            "Medium",
+            "Moderate",
+            "High",
+            "Very High",
+            "Excellent",
+            "Elite"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "DurabilityRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Low",
+            "Moderate",
+            "Medium",
+            "Good",
+            "Very Good",
+            "Excellent"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
     },
     "GutString": {
       "type": "object",
@@ -977,18 +1161,18 @@
           "minLength": 1
         },
         "power": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/GutPowerRating"
         },
         "spin": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/GutSpinRating"
         },
         "comfort": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/GutComfortRating"
         },
         "gutProtection": {
           "anyOf": [
             {
-              "$ref": "#/$defs/Bar"
+              "$ref": "#/$defs/GutProtectionRating"
             },
             {
               "type": "null"
@@ -1017,6 +1201,108 @@
         "notes"
       ],
       "additionalProperties": false
+    },
+    "GutPowerRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Med-Low",
+            "Med",
+            "Med-High",
+            "High",
+            "Very High"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "GutSpinRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Med-Low",
+            "Med",
+            "Med-High",
+            "High",
+            "Very High"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "GutComfortRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Very Good",
+            "Excellent",
+            "Outstanding"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "GutProtectionRating": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "label": {
+          "type": "string",
+          "enum": [
+            "Med-Low",
+            "Med",
+            "Med-High",
+            "High",
+            "Very High"
+          ]
+        }
+      },
+      "required": [
+        "score",
+        "label"
+      ],
+      "additionalProperties": false,
+      "description": "A score from 0 to 100 and a word from the list for its axis."
     }
   }
 }

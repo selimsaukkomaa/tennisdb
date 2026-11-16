@@ -20,12 +20,12 @@
       "width": 75
     },
     "power": {
-      "label": "Low-Med",
-      "width": 35
+      "score": 35,
+      "label": "Low-Med"
     },
     "spin": {
-      "label": "Very High",
-      "width": 90
+      "score": 90,
+      "label": "Very High"
     },
     "feelTags": [
       {
@@ -63,12 +63,12 @@
       "width": 58
     },
     "power": {
-      "label": "Medium",
-      "width": 52
+      "score": 52,
+      "label": "Medium"
     },
     "spin": {
-      "label": "Elite",
-      "width": 97
+      "score": 97,
+      "label": "Elite"
     },
     "feelTags": [
       {
@@ -106,12 +106,12 @@
       "width": 70
     },
     "power": {
-      "label": "Medium",
-      "width": 52
+      "score": 52,
+      "label": "Medium"
     },
     "spin": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "feelTags": [
       {
@@ -149,12 +149,12 @@
       "width": 68
     },
     "power": {
-      "label": "Med-High",
-      "width": 62
+      "score": 62,
+      "label": "Med-High"
     },
     "spin": {
-      "label": "High",
-      "width": 78
+      "score": 78,
+      "label": "High"
     },
     "feelTags": [
       {
@@ -192,12 +192,12 @@
       "width": 48
     },
     "power": {
-      "label": "Med-High",
-      "width": 60
+      "score": 60,
+      "label": "Med-High"
     },
     "spin": {
-      "label": "Very High",
-      "width": 90
+      "score": 90,
+      "label": "Very High"
     },
     "feelTags": [
       {
@@ -235,12 +235,12 @@
       "width": 55
     },
     "power": {
-      "label": "Medium",
-      "width": 55
+      "score": 55,
+      "label": "Medium"
     },
     "spin": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "feelTags": [
       {
@@ -278,12 +278,12 @@
       "width": 65
     },
     "power": {
-      "label": "Medium",
-      "width": 48
+      "score": 48,
+      "label": "Medium"
     },
     "spin": {
-      "label": "Elite",
-      "width": 95
+      "score": 95,
+      "label": "Elite"
     },
     "feelTags": [
       {
@@ -321,12 +321,12 @@
       "width": 60
     },
     "power": {
-      "label": "Medium",
-      "width": 52
+      "score": 52,
+      "label": "Medium"
     },
     "spin": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "feelTags": [
       {
@@ -364,12 +364,12 @@
       "width": 68
     },
     "power": {
-      "label": "Low-Med",
-      "width": 40
+      "score": 40,
+      "label": "Low-Med"
     },
     "spin": {
-      "label": "Elite",
-      "width": 95
+      "score": 95,
+      "label": "Elite"
     },
     "feelTags": [
       {
@@ -407,12 +407,12 @@
       "width": 70
     },
     "power": {
-      "label": "Medium",
-      "width": 50
+      "score": 50,
+      "label": "Medium"
     },
     "spin": {
-      "label": "Very High",
-      "width": 88
+      "score": 88,
+      "label": "Very High"
     },
     "feelTags": [
       {

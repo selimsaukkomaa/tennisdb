@@ -13,16 +13,16 @@
           "29mm × 105cm"
         ],
         "tackiness": {
-          "label": "Elite",
-          "width": 97
+          "score": 97,
+          "label": "Elite"
         },
         "absorption": {
-          "label": "Very High",
-          "width": 85
+          "score": 85,
+          "label": "Very High"
         },
         "durability": {
-          "label": "Excellent",
-          "width": 93
+          "score": 93,
+          "label": "Excellent"
         },
         "feelTags": [
           {
@@ -54,16 +54,16 @@
           "29mm × 105cm"
         ],
         "tackiness": {
-          "label": "Elite",
-          "width": 95
+          "score": 95,
+          "label": "Elite"
         },
         "absorption": {
-          "label": "High",
-          "width": 72
+          "score": 72,
+          "label": "High"
         },
         "durability": {
-          "label": "Very Good",
-          "width": 78
+          "score": 78,
+          "label": "Very Good"
         },
         "feelTags": [
           {
@@ -95,16 +95,16 @@
           "29mm × 105cm"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 90
+          "score": 90,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "Excellent",
-          "width": 93
+          "score": 93,
+          "label": "Excellent"
         },
         "durability": {
-          "label": "Very Good",
-          "width": 82
+          "score": 82,
+          "label": "Very Good"
         },
         "feelTags": [
           {
@@ -134,16 +134,16 @@
           "29mm × 105cm"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 88
+          "score": 88,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "High",
-          "width": 78
+          "score": 78,
+          "label": "High"
         },
         "durability": {
-          "label": "Good",
-          "width": 72
+          "score": 72,
+          "label": "Good"
         },
         "feelTags": [
           {
@@ -173,16 +173,16 @@
           "29mm × 105cm"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 88
+          "score": 88,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "Excellent",
-          "width": 90
+          "score": 90,
+          "label": "Excellent"
         },
         "durability": {
-          "label": "Good",
-          "width": 72
+          "score": 72,
+          "label": "Good"
         },
         "feelTags": [
           {
@@ -211,16 +211,16 @@
           "0.50–3.10mm"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 88
+          "score": 88,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "High",
-          "width": 76
+          "score": 76,
+          "label": "High"
         },
         "durability": {
-          "label": "Good",
-          "width": 70
+          "score": 70,
+          "label": "Good"
         },
         "feelTags": [
           {
@@ -252,16 +252,16 @@
           "27mm × 105cm"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 90
+          "score": 90,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "Excellent",
-          "width": 92
+          "score": 92,
+          "label": "Excellent"
         },
         "durability": {
-          "label": "Excellent",
-          "width": 90
+          "score": 90,
+          "label": "Excellent"
         },
         "feelTags": [
           {
@@ -291,16 +291,16 @@
           "27mm × 105cm"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 92
+          "score": 92,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "Excellent",
-          "width": 92
+          "score": 92,
+          "label": "Excellent"
         },
         "durability": {
-          "label": "Excellent",
-          "width": 88
+          "score": 88,
+          "label": "Excellent"
         },
         "feelTags": [
           {
@@ -330,16 +330,16 @@
           "27mm × 105cm"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 88
+          "score": 88,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "High",
-          "width": 80
+          "score": 80,
+          "label": "High"
         },
         "durability": {
-          "label": "Very Good",
-          "width": 82
+          "score": 82,
+          "label": "Very Good"
         },
         "feelTags": [
           {
@@ -371,16 +371,16 @@
           "27mm × 105cm"
         ],
         "tackiness": {
-          "label": "Moderate",
-          "width": 60
+          "score": 60,
+          "label": "Moderate"
         },
         "absorption": {
-          "label": "Medium",
-          "width": 58
+          "score": 58,
+          "label": "Medium"
         },
         "durability": {
-          "label": "Excellent",
-          "width": 92
+          "score": 92,
+          "label": "Excellent"
         },
         "feelTags": [
           {
@@ -414,16 +414,16 @@
           "29mm × 98cm"
         ],
         "tackiness": {
-          "label": "Low",
-          "width": 22
+          "score": 22,
+          "label": "Low"
         },
         "absorption": {
-          "label": "Excellent",
-          "width": 92
+          "score": 92,
+          "label": "Excellent"
         },
         "durability": {
-          "label": "Moderate",
-          "width": 55
+          "score": 55,
+          "label": "Moderate"
         },
         "feelTags": [
           {
@@ -456,16 +456,16 @@
           "29mm × 105cm"
         ],
         "tackiness": {
-          "label": "Low-Med",
-          "width": 35
+          "score": 35,
+          "label": "Low-Med"
         },
         "absorption": {
-          "label": "Excellent",
-          "width": 90
+          "score": 90,
+          "label": "Excellent"
         },
         "durability": {
-          "label": "Excellent",
-          "width": 92
+          "score": 92,
+          "label": "Excellent"
         },
         "feelTags": [
           {
@@ -494,16 +494,16 @@
           "Dry type"
         ],
         "tackiness": {
-          "label": "Low",
-          "width": 25
+          "score": 25,
+          "label": "Low"
         },
         "absorption": {
-          "label": "Very High",
-          "width": 88
+          "score": 88,
+          "label": "Very High"
         },
         "durability": {
-          "label": "Good",
-          "width": 68
+          "score": 68,
+          "label": "Good"
         },
         "feelTags": [
           {
@@ -535,16 +535,16 @@
           "<em style=\"color:#d97706;\">Made in USA</em>"
         ],
         "tackiness": {
-          "label": "Low",
-          "width": 18
+          "score": 18,
+          "label": "Low"
         },
         "absorption": {
-          "label": "Elite",
-          "width": 96
+          "score": 96,
+          "label": "Elite"
         },
         "durability": {
-          "label": "Low",
-          "width": 30
+          "score": 30,
+          "label": "Low"
         },
         "feelTags": [
           {
@@ -691,16 +691,16 @@
           "25mm × 1200mm"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 88
+          "score": 88,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "Very High",
-          "width": 82
+          "score": 82,
+          "label": "Very High"
         },
         "durability": {
-          "label": "Excellent",
-          "width": 90
+          "score": 90,
+          "label": "Excellent"
         },
         "feelTags": [
           {
@@ -730,16 +730,16 @@
           "25mm × 1200mm"
         ],
         "tackiness": {
-          "label": "Elite",
-          "width": 93
+          "score": 93,
+          "label": "Elite"
         },
         "absorption": {
-          "label": "Very High",
-          "width": 82
+          "score": 82,
+          "label": "Very High"
         },
         "durability": {
-          "label": "Excellent",
-          "width": 88
+          "score": 88,
+          "label": "Excellent"
         },
         "feelTags": [
           {
@@ -769,16 +769,16 @@
           "25mm × 1200mm"
         ],
         "tackiness": {
-          "label": "High",
-          "width": 82
+          "score": 82,
+          "label": "High"
         },
         "absorption": {
-          "label": "High",
-          "width": 80
+          "score": 80,
+          "label": "High"
         },
         "durability": {
-          "label": "Very Good",
-          "width": 84
+          "score": 84,
+          "label": "Very Good"
         },
         "feelTags": [
           {
@@ -808,16 +808,16 @@
           "28mm × 1020mm"
         ],
         "tackiness": {
-          "label": "High",
-          "width": 78
+          "score": 78,
+          "label": "High"
         },
         "absorption": {
-          "label": "Moderate",
-          "width": 62
+          "score": 62,
+          "label": "Moderate"
         },
         "durability": {
-          "label": "Good",
-          "width": 68
+          "score": 68,
+          "label": "Good"
         },
         "feelTags": [
           {
@@ -847,16 +847,16 @@
           "25mm × 1200mm"
         ],
         "tackiness": {
-          "label": "High",
-          "width": 83
+          "score": 83,
+          "label": "High"
         },
         "absorption": {
-          "label": "High",
-          "width": 78
+          "score": 78,
+          "label": "High"
         },
         "durability": {
-          "label": "Very Good",
-          "width": 82
+          "score": 82,
+          "label": "Very Good"
         },
         "feelTags": [
           {
@@ -888,16 +888,16 @@
           "25mm × 1200mm"
         ],
         "tackiness": {
-          "label": "Low",
-          "width": 25
+          "score": 25,
+          "label": "Low"
         },
         "absorption": {
-          "label": "Very High",
-          "width": 88
+          "score": 88,
+          "label": "Very High"
         },
         "durability": {
-          "label": "Good",
-          "width": 62
+          "score": 62,
+          "label": "Good"
         },
         "feelTags": [
           {
@@ -930,16 +930,16 @@
           "27mm × 1100mm"
         ],
         "tackiness": {
-          "label": "Moderate",
-          "width": 42
+          "score": 42,
+          "label": "Moderate"
         },
         "absorption": {
-          "label": "Excellent",
-          "width": 92
+          "score": 92,
+          "label": "Excellent"
         },
         "durability": {
-          "label": "Very Good",
-          "width": 78
+          "score": 78,
+          "label": "Very Good"
         },
         "feelTags": [
           {
@@ -1058,16 +1058,16 @@
           "0.55 mm thick"
         ],
         "tackiness": {
-          "label": "High",
-          "width": 80
+          "score": 80,
+          "label": "High"
         },
         "absorption": {
-          "label": "Med-Low",
-          "width": 45
+          "score": 45,
+          "label": "Med-Low"
         },
         "durability": {
-          "label": "Medium",
-          "width": 60
+          "score": 60,
+          "label": "Medium"
         },
         "feelTags": [
           {
@@ -1097,16 +1097,16 @@
           "0.60 mm thick"
         ],
         "tackiness": {
-          "label": "Very High",
-          "width": 92
+          "score": 92,
+          "label": "Very High"
         },
         "absorption": {
-          "label": "Low",
-          "width": 35
+          "score": 35,
+          "label": "Low"
         },
         "durability": {
-          "label": "Medium",
-          "width": 60
+          "score": 60,
+          "label": "Medium"
         },
         "feelTags": [
           {
@@ -1139,16 +1139,16 @@
           "0.45 mm thick"
         ],
         "tackiness": {
-          "label": "Low",
-          "width": 18
+          "score": 18,
+          "label": "Low"
         },
         "absorption": {
-          "label": "Elite",
-          "width": 96
+          "score": 96,
+          "label": "Elite"
         },
         "durability": {
-          "label": "Low",
-          "width": 30
+          "score": 30,
+          "label": "Low"
         },
         "feelTags": [
           {
@@ -1180,16 +1180,16 @@
           "Extra long"
         ],
         "tackiness": {
-          "label": "Low",
-          "width": 18
+          "score": 18,
+          "label": "Low"
         },
         "absorption": {
-          "label": "Elite",
-          "width": 96
+          "score": 96,
+          "label": "Elite"
         },
         "durability": {
-          "label": "Low",
-          "width": 30
+          "score": 30,
+          "label": "Low"
         },
         "feelTags": [
           {
@@ -1220,16 +1220,16 @@
           "0.40 mm thick"
         ],
         "tackiness": {
-          "label": "Low",
-          "width": 18
+          "score": 18,
+          "label": "Low"
         },
         "absorption": {
-          "label": "High",
-          "width": 88
+          "score": 88,
+          "label": "High"
         },
         "durability": {
-          "label": "Low",
-          "width": 30
+          "score": 30,
+          "label": "Low"
         },
         "feelTags": [
           {

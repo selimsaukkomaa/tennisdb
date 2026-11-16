@@ -10,6 +10,7 @@ import {
 } from '../core/compare';
 import type { Bar, RacquetId, TennisDb } from '../core/types';
 import { perRacquet } from '../core/pairings';
+import { ratingBar, type Rating } from '../core/ratings';
 import { stiffnessBar } from '../core/stiffness';
 import { html, join, raw, type SafeHtml } from './html';
 import { state } from './state';
@@ -108,8 +109,8 @@ function cellHtml(row: AttrRow, entry: CompareItem, racquet: RacquetId): SafeHtm
   }
   if (row.key === 'stiffness') return barHtml('stiff', stiffnessBar(entry.item.stiffness));
   if (row.bar) {
-    const item = entry.item as unknown as Record<string, Bar | undefined>;
-    return barHtml(row.bar, item[row.key]);
+    const item = entry.item as unknown as Record<string, Rating | undefined>;
+    return barHtml(row.bar, ratingBar(item[row.key]));
   }
   switch (row.key) {
     case 'shape':
