@@ -3,27 +3,33 @@
     "id": "regna",
     "brand": "Yonex",
     "model": "Regna 100",
-    "headSize": "100 sq in",
-    "pattern": "16×19",
-    "ra": 64,
-    "label": "Yonex Regna 100"
+    "headSizeSqIn": 100,
+    "pattern": {
+      "mains": 16,
+      "crosses": 19
+    },
+    "ra": 64
   },
   {
     "id": "percept",
     "brand": "Yonex",
     "model": "Percept 100D",
-    "headSize": "100 sq in",
-    "pattern": "18×19",
-    "ra": 66,
-    "label": "Yonex Percept 100D"
+    "headSizeSqIn": 100,
+    "pattern": {
+      "mains": 18,
+      "crosses": 19
+    },
+    "ra": 66
   },
   {
     "id": "headpt630",
     "brand": "Head",
     "model": "Pro Tour 630",
-    "headSize": "98 sq in",
-    "pattern": "18×20",
-    "ra": 58,
-    "label": "Head Pro Tour 630"
+    "headSizeSqIn": 98,
+    "pattern": {
+      "mains": 18,
+      "crosses": 20
+    },
+    "ra": 58
   }
 ]

@@ -6,6 +6,82 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v0.997 — Racquet fields as values
+
+**Date:** 2026-11-16
+**Base:** v0.996 (hybrid sides linked)
+**Status:** model release, Phase 2 step 2, third move (`docs/phase-2-data-model.md`,
+D4). Racquets store head size and pattern as numbers. The page renders exactly
+as before; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## 1. The fields
+
+| Field | Was | Now |
+|---|---|---|
+| Head size | `headSize: "100 sq in"` | `headSizeSqIn: 100` |
+| Pattern | `pattern: "16×19"` | `pattern: { mains: 16, crosses: 19 }` |
+| Label | `label: "Yonex Regna 100"` | not stored; derived as brand plus model |
+
+`id`, `brand`, `model` and `ra` are unchanged. Head size stays in square
+inches, the owner's pick for D4. The label was exactly brand plus model in all
+three records; a racquet whose display name isn't would need the field back.
+
+`racquetLabel()` and `racquetSpec()` in `src/core/labels.ts` derive the
+context line's name and its "64 RA · 16×19 · 100 sq in" spec.
+
+## 2. The migration
+
+`scripts/migrate-racquets.ts`, a one-off kept for provenance. With three
+racquets, the sample shown before the run was the full set. Before writing, it
+asserts three racquets and that each record's label and spec line print back
+exactly from the new fields.
+
+## 3. Validation
+
+The schema takes whole numbers within sane bounds (head size 80–140 sq in,
+mains 12–22, crosses 14–24, RA 40–80 as before) and no longer accepts a
+`label` key.
+
+## Declared differences from v0.990 (added in v0.997)
+
+None. The parity suite passed unchanged.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+## Verification
+
+`npm run check` passes: 292 Vitest tests (289 in v0.996), 59 Playwright tests.
+
+- **New tests, 3:** a head size written as text, a pattern written as text, and
+  a stored `label` key are each rejected by the schema.
+- **Against v0.990:** converted back (head size and pattern as text, the label
+  from `racquetLabel`), the data still equals v0.990's value for value.
+- **Parity:** all 15 pixel views at both viewports and all 24 DOM scenarios
+  pass unchanged.
+
+## File size
+
+| | v0.996 | v0.997 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 450,022 | 450,038 | +16 bytes |
+| gzip | 102,549 | 102,556 | +7 bytes |
+
+## Still open
+
+Unchanged from v0.996. Next in Phase 2 step 2: stiffness storage (D1).
+
+---
+
 # v0.996 — Hybrid sides linked to their strings
 
 **Date:** 2026-11-09

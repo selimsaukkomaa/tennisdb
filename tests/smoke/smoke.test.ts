@@ -64,7 +64,7 @@ describe('data', () => {
   });
   test('7 string brands', () => expect(Object.keys(DB.brandsStrings)).toHaveLength(7));
   test('PT630 98 sq in', () =>
-    expect(DB.racquets.find((r) => r.id === 'headpt630')!.headSize).toBe('98 sq in'));
+    expect(DB.racquets.find((r) => r.id === 'headpt630')!.headSizeSqIn).toBe(98));
   test('no topPick keys in data', () => expect(JSON.stringify(DB)).not.toContain('topPick'));
   test('all string+hybrid notes present (≥40 chars)', () => {
     const empty = [...DB.strings, ...DB.hybrids].flatMap((s) =>

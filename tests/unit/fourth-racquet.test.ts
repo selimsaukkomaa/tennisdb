@@ -22,10 +22,9 @@ const FOURTH: Racquet = {
   id: 'test4',
   brand: 'Babolat',
   model: 'Pure Strike 98',
-  headSize: '98 sq in',
-  pattern: '16×19',
+  headSizeSqIn: 98,
+  pattern: { mains: 16, crosses: 19 },
   ra: 62,
-  label: 'Babolat Pure Strike 98',
 };
 
 /** The data plus a fourth racquet, every item strung in it as in the Regna. */

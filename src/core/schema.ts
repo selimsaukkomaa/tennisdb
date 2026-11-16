@@ -1,6 +1,7 @@
 // Zod schemas for TENNIS_DB and the UI copy, describing the data as stored. Phase 2 step 2
 // replaces display strings with values one move at a time (docs/phase-2-data-model.md):
-// tensions are numbers and pairings are their own records since v0.995.
+// tensions are numbers and pairings are their own records since v0.995, hybrid sides link
+// to their strings since v0.996, and racquet fields are values since v0.997.
 //
 // The schemas own the data's shape: required and optional fields, no unknown keys, formats
 // (ids, colours, bar widths) and the token lists the filter chips match. They are written so
@@ -44,12 +45,17 @@ export const RacquetSchema = z
     id: Id,
     brand: Text,
     model: Text,
-    headSize: z.string().regex(/^\d+ sq in$/),
-    pattern: z.string().regex(/^\d+×\d+$/),
+    /** Square inches, the unit printed on frames (the owner's pick; cm² is not stored). */
+    headSizeSqIn: z.int().min(80).max(140),
+    /** String pattern: mains × crosses. */
+    pattern: z.strictObject({ mains: z.int().min(12).max(22), crosses: z.int().min(14).max(24) }),
     ra: z.int().min(40).max(80),
-    label: Text,
   })
-  .meta({ id: 'Racquet' });
+  .meta({
+    id: 'Racquet',
+    description:
+      'Shown as "<brand> <model>" with the spec "<ra> RA · <mains>×<crosses> · <n> sq in".',
+  });
 
 export const BrandSchema = z.strictObject({ name: Text, accent: Hex }).meta({ id: 'Brand' });
 

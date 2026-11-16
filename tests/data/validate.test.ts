@@ -111,6 +111,9 @@ describe('the schemas catch a bad shape, and nothing else runs until it is fixed
     ['a tension kind the item cannot take', 'pairings.toroline-k-pop/regna.tension', (db) => (loose(pairing(db, 'toroline-k-pop', 'regna')).tension = { kind: 'range', minKg: 22, maxKg: 24 })],
     ['a tension written as text', 'pairings.toroline-caviar/regna.tension', (db) => (loose(pairing(db, 'toroline-caviar', 'regna')).tension = '22–24')],
     ['a tension outside 5–40 kg', 'pairings.toroline-caviar/regna.tension', (db) => (pairing(db, 'toroline-caviar', 'regna').tension = { kind: 'max', maxKg: 60 })],
+    ['a head size written as text', 'racquets.regna.headSizeSqIn', (db) => (loose(db.racquets[0]!).headSizeSqIn = '100 sq in')],
+    ['a pattern written as text', 'racquets.regna.pattern', (db) => (loose(db.racquets[0]!).pattern = '16×19')],
+    ['a stored racquet label (derived since v0.997)', 'racquets.regna', (db) => (loose(db.racquets[0]!).label = 'Yonex Regna 100')],
     ['a hybrid side without its link', 'hybrids.toroline-k-pop.mains.stringId', (db) => delete loose(db.hybrids[0]!.mains).stringId],
     ['copy without the gut intro', 'copy: gutIntro', (_db, copy) => delete loose(copy).gutIntro],
   ])('%s', (_name, where, mutate) => {
@@ -122,7 +125,7 @@ describe('the schemas catch a bad shape, and nothing else runs until it is fixed
 
 test('a fourth racquet without notes lists exactly what it is missing', () => {
   const db = structuredClone(base.db);
-  db.racquets.push({ ...db.racquets[0]!, id: 'test4', label: 'Test 4' });
+  db.racquets.push({ ...db.racquets[0]!, id: 'test4', model: 'Test 4' });
   const issues = validateData(db, base.copy, base.css);
   const missing = issues.filter((i) => i.rule === 'notes-present');
   expect(missing).toHaveLength(72 + 10);

@@ -110,34 +110,47 @@
           "type": "string",
           "minLength": 1
         },
-        "headSize": {
-          "type": "string",
-          "pattern": "^\\d+ sq in$"
+        "headSizeSqIn": {
+          "type": "integer",
+          "minimum": 80,
+          "maximum": 140
         },
         "pattern": {
-          "type": "string",
-          "pattern": "^\\d+×\\d+$"
+          "type": "object",
+          "properties": {
+            "mains": {
+              "type": "integer",
+              "minimum": 12,
+              "maximum": 22
+            },
+            "crosses": {
+              "type": "integer",
+              "minimum": 14,
+              "maximum": 24
+            }
+          },
+          "required": [
+            "mains",
+            "crosses"
+          ],
+          "additionalProperties": false
         },
         "ra": {
           "type": "integer",
           "minimum": 40,
           "maximum": 80
-        },
-        "label": {
-          "type": "string",
-          "minLength": 1
         }
       },
       "required": [
         "id",
         "brand",
         "model",
-        "headSize",
+        "headSizeSqIn",
         "pattern",
-        "ra",
-        "label"
+        "ra"
       ],
-      "additionalProperties": false
+      "additionalProperties": false,
+      "description": "Shown as \"<brand> <model>\" with the spec \"<ra> RA · <mains>×<crosses> · <n> sq in\"."
     },
     "Brand": {
       "type": "object",

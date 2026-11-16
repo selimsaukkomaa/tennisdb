@@ -8,6 +8,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
+import { racquetLabel } from '../../src/core/labels';
 import { tensionLabel } from '../../src/core/pairings';
 import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
 
@@ -41,6 +42,16 @@ function toV0990(db: TennisDb): unknown {
   }
   return {
     ...rest,
+    // v0.997 stores head size and pattern as values and derives the label.
+    racquets: db.racquets.map((r) => ({
+      id: r.id,
+      brand: r.brand,
+      model: r.model,
+      headSize: `${r.headSizeSqIn} sq in`,
+      pattern: `${r.pattern.mains}×${r.pattern.crosses}`,
+      ra: r.ra,
+      label: racquetLabel(r),
+    })),
     strings: db.strings.map((s) => ({ ...s, perRacquet: perRacquet(s.id) })),
     hybrids: db.hybrids.map((h) => ({
       ...h,

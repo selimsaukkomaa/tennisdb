@@ -5,5 +5,9 @@ import type { BrandId, Racquet } from './types';
 export const gripBrandLabel = (brand: BrandId): string =>
   brand.charAt(0).toUpperCase() + brand.slice(1);
 
+/** A racquet's full name, e.g. "Yonex Regna 100". */
+export const racquetLabel = (r: Racquet): string => `${r.brand} ${r.model}`;
+
 /** Context-line spec, e.g. "64 RA · 16×19 · 100 sq in". */
-export const racquetSpec = (r: Racquet): string => `${r.ra} RA · ${r.pattern} · ${r.headSize}`;
+export const racquetSpec = (r: Racquet): string =>
+  `${r.ra} RA · ${r.pattern.mains}×${r.pattern.crosses} · ${r.headSizeSqIn} sq in`;

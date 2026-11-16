@@ -20,7 +20,7 @@ import {
   type RacquetId,
   type TennisDb,
 } from '../core/types';
-import { gripBrandLabel, racquetSpec } from '../core/labels';
+import { gripBrandLabel, racquetLabel, racquetSpec } from '../core/labels';
 import { perRacquet } from '../core/pairings';
 import { APP_VERSION } from '../version';
 import { html, raw, type SafeHtml } from './html';
@@ -143,7 +143,7 @@ ${STRING_HEAD}
 function racquetContent(db: TennisDb, copy: Copy, r: Racquet, first: boolean): SafeHtml {
   const brands = Object.keys(db.brandsStrings);
   return html`<div id="${racquetContentId(r.id)}"${first ? '' : raw(' style="display:none;"')}>
-<div class="context-line" data-racquet="${r.id}"><span class="ctx-name">${r.label}</span><span class="ctx-spec">${racquetSpec(r)}</span><span class="ctx-strung" data-ctx-strung></span><span class="filter-all-badge" id="${r.id}-filter-badge">— showing all</span></div>
+<div class="context-line" data-racquet="${r.id}"><span class="ctx-name">${racquetLabel(r)}</span><span class="ctx-spec">${racquetSpec(r)}</span><span class="ctx-strung" data-ctx-strung></span><span class="filter-all-badge" id="${r.id}-filter-badge">— showing all</span></div>
 <div class="switcher" id="${r.id}-switcher" data-nav-switcher="${r.id}">
 ${brands.map((b) => html`<button id="${brandButtonId(r.id, b)}" data-nav-brand="${b}">${db.brandsStrings[b]!.name}</button>\n`)}</div>
 <div class="strips">

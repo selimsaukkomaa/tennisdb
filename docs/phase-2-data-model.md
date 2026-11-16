@@ -121,6 +121,12 @@ and kg/mm; head size is quoted in sq in across the industry.
 unit printed on frames and spec sheets; an exception to the metric rule, which
 covers kg, mm and kg/mm.
 
+**Done in v0.997.** `headSizeSqIn` and `pattern: { mains, crosses }` are
+stored; the `label` field is gone, derived as brand plus model (it was exactly
+that in all three records). `racquetLabel()` and `racquetSpec()` in
+`src/core/labels.ts` print the same text as before. A racquet whose display
+name isn't brand plus model would need a stored label again.
+
 ### D5. Rating vocabulary
 
 Power, spin, control and comfort (and grip tackiness, absorption, durability)
@@ -211,6 +217,7 @@ Each step is its own release, and each stops for the owner's review.
 2. **Moves that render identically**, each checked by the parity suite with no
    new declared difference: tension (D6) and pairings (D7), *done in v0.995*;
    hybrid sides linked by id (D7), *done in v0.996*; racquet fields (D4),
+   *done in v0.997*;
    stiffness storage with `source: 'legacy'` (D1), ratings as
    `{ score, label }` (D5), plain-text notes and the structured grip spec (D9).
    The migration script asserts every count and runs on a sample first.
