@@ -10,6 +10,7 @@ import { describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
 import { racquetLabel } from '../../src/core/labels';
 import { tensionLabel } from '../../src/core/pairings';
+import { stiffnessBar } from '../../src/core/stiffness';
 import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
 
 const legacyHtml = readFileSync(
@@ -52,9 +53,15 @@ function toV0990(db: TennisDb): unknown {
       ra: r.ra,
       label: racquetLabel(r),
     })),
-    strings: db.strings.map((s) => ({ ...s, perRacquet: perRacquet(s.id) })),
+    // v0.998 stores stiffness as a band and a figure; v0.990 had the label.
+    strings: db.strings.map((s) => ({
+      ...s,
+      stiffness: stiffnessBar(s.stiffness),
+      perRacquet: perRacquet(s.id),
+    })),
     hybrids: db.hybrids.map((h) => ({
       ...h,
+      stiffness: stiffnessBar(h.stiffness),
       mains: withoutLink(h.mains),
       crosses: withoutLink(h.crosses),
       perRacquet: perRacquet(h.id),

@@ -30,7 +30,6 @@ export const ABOUT_VERDICT_LANGUAGE = /\byour?\b|\bstrong\b|prefer/i;
 
 /** Stiffness bands: Med-Firm and firmer is Firm, Medium and softer is Soft (v0.990 rule). */
 export const FIRM_BANDS = new Set(['Very Firm', 'Firm', 'Med-Firm']);
-export const SOFT_BANDS = new Set(['Med', 'Medium', 'Med-Soft', 'Soft', 'Very Soft']);
 
 /** One tag label, one colour: v0.990's label -> variant table for strings and hybrids. */
 export const TAG_VARIANTS: Record<string, string> = {
@@ -57,8 +56,7 @@ export const TAG_VARIANTS: Record<string, string> = {
 
 const MIN_NOTE_CHARS = 40;
 
-export const stiffnessBand = (row: StringRec | Hybrid): string =>
-  row.stiffness.label.split(' · ')[0]!.trim();
+export const stiffnessBand = (row: StringRec | Hybrid): string => row.stiffness.band;
 
 export function allGrips(db: TennisDb): (Grip & { brand: string })[] {
   return Object.entries(db.grips).flatMap(([brand, byType]) =>
@@ -201,8 +199,6 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   for (const r of rows) {
     const feel = tokens(r.feelAttr);
     const band = stiffnessBand(r);
-    if (!FIRM_BANDS.has(band) && !SOFT_BANDS.has(band))
-      fail('stiffness-band', r.id, `unknown stiffness band "${band}"`);
     if (feel.includes('firm') === feel.includes('soft'))
       fail('firm-xor-soft', r.id, 'needs exactly one of firm / soft');
     else if (feel.includes('firm') !== FIRM_BANDS.has(band))
@@ -210,6 +206,20 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
     const crispTag = r.feelTags.some((t) => t.label === 'Crisp') || /crisp/i.test(r.feelSummary);
     if (feel.includes('crisp') !== crispTag)
       fail('crisp-tag', r.id, 'Crisp chip and Crisp tag/summary disagree');
+  }
+  // ---- stiffness figures
+  for (const s of db.strings) {
+    const figure = s.stiffness.figure;
+    if (!figure) continue;
+    const k = figure.kgPerMm;
+    if (typeof k !== 'number' && k.min >= k.max)
+      fail('stiffness-range', s.id, `range ${k.min}–${k.max} runs backwards`);
+    if ((figure.source === 'legacy') !== (figure.retrieved === null))
+      fail(
+        'stiffness-provenance',
+        s.id,
+        'a legacy figure has no retrieval date; any other source needs one',
+      );
   }
   for (const chip of FEEL_CHIPS) {
     if (!db.strings.some((s) => tokens(s.feelAttr).includes(chip.value))) {

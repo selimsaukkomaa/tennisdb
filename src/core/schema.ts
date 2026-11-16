@@ -1,7 +1,8 @@
 // Zod schemas for TENNIS_DB and the UI copy, describing the data as stored. Phase 2 step 2
 // replaces display strings with values one move at a time (docs/phase-2-data-model.md):
 // tensions are numbers and pairings are their own records since v0.995, hybrid sides link
-// to their strings since v0.996, and racquet fields are values since v0.997.
+// to their strings since v0.996, racquet fields are values since v0.997, and stiffness is a
+// band plus a figure with its provenance since v0.998.
 //
 // The schemas own the data's shape: required and optional fields, no unknown keys, formats
 // (ids, colours, bar widths) and the token lists the filter chips match. They are written so
@@ -35,6 +36,47 @@ export const TAG_VARIANT_NAMES = ['crisp', 'firm', 'soft', 'round', 'lively', 'p
 export const BarSchema = z
   .strictObject({ label: Text, width: z.int().min(0).max(100) })
   .meta({ id: 'Bar', description: 'A labelled bar; width is the fill percentage.' });
+
+/** Stiffness bands, softest first. "Med" and "Medium" are both in use until D2 folds them. */
+export const STIFFNESS_BANDS = [
+  'Very Soft',
+  'Soft',
+  'Med-Soft',
+  'Med',
+  'Medium',
+  'Med-Firm',
+  'Firm',
+  'Very Firm',
+] as const;
+const Band = z.enum(STIFFNESS_BANDS);
+const BarWidth = z.int().min(0).max(100);
+const KgPerMm = z.number().min(0.2).max(2);
+
+/**
+ * A lab stiffness figure. "legacy" marks the figures carried over from v0.990 without a
+ * recorded source or date; a re-check upgrades one to a named source and a retrieval month
+ * (validate.ts: stiffness-provenance).
+ */
+export const StiffnessFigureSchema = z
+  .strictObject({
+    kgPerMm: z.union([KgPerMm, z.strictObject({ min: KgPerMm, max: KgPerMm })]),
+    /** Shown with a "~". */
+    approx: z.boolean(),
+    source: z.enum(['legacy', 'Racketpedia', 'manufacturer', 'review']),
+    retrieved: z
+      .string()
+      .regex(/^\d{4}-(0[1-9]|1[0-2])$/)
+      .nullable(),
+  })
+  .meta({ id: 'StiffnessFigure' });
+
+/** A string's stiffness; `figure` is null when there is no lab figure and the band is inferred. */
+export const StiffnessSchema = z
+  .strictObject({ band: Band, figure: StiffnessFigureSchema.nullable(), width: BarWidth })
+  .meta({ id: 'Stiffness' });
+
+/** A hybrid's stiffness is a judgement of the bed: a band, never a figure. */
+const HybridStiffnessSchema = z.strictObject({ band: Band, width: BarWidth });
 
 export const FeelTagSchema = z
   .strictObject({ label: Text, variant: z.enum(TAG_VARIANT_NAMES) })
@@ -124,7 +166,7 @@ export const StringSchema = z
     feelAttr: FEEL_TOKENS,
     gauges: z.array(Text).min(1),
     colors: ColorsSchema,
-    stiffness: BarSchema,
+    stiffness: StiffnessSchema,
     power: BarSchema,
     spin: BarSchema,
     control: BarSchema,
@@ -155,7 +197,7 @@ export const HybridSchema = z
     feelAttr: FEEL_TOKENS,
     mains: HybridSideSchema,
     crosses: HybridSideSchema,
-    stiffness: BarSchema,
+    stiffness: HybridStiffnessSchema,
     power: BarSchema,
     spin: BarSchema,
     feelTags: z.array(FeelTagSchema),

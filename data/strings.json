@@ -22,7 +22,13 @@
       "label": "Mint, Neon Green"
     },
     "stiffness": {
-      "label": "Firm · 1.10",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 88
     },
     "power": {
@@ -76,7 +82,13 @@
       "label": "Neon Yellow"
     },
     "stiffness": {
-      "label": "Med-Firm · 1.00",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -124,7 +136,8 @@
       "label": "Latte"
     },
     "stiffness": {
-      "label": "Med",
+      "band": "Med",
+      "figure": null,
       "width": 62
     },
     "power": {
@@ -172,7 +185,8 @@
       "label": "Green"
     },
     "stiffness": {
-      "label": "Med-Firm",
+      "band": "Med-Firm",
+      "figure": null,
       "width": 74
     },
     "power": {
@@ -224,7 +238,13 @@
       "label": "Carbon Gray"
     },
     "stiffness": {
-      "label": "Med · 0.90",
+      "band": "Med",
+      "figure": {
+        "kgPerMm": 0.9,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 60
     },
     "power": {
@@ -272,7 +292,8 @@
       "label": "Infrared"
     },
     "stiffness": {
-      "label": "Med-Soft",
+      "band": "Med-Soft",
+      "figure": null,
       "width": 45
     },
     "power": {
@@ -336,7 +357,13 @@
       "label": "Green, White, Pink, Black, Orange"
     },
     "stiffness": {
-      "label": "Med-Soft · 0.95",
+      "band": "Med-Soft",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 58
     },
     "power": {
@@ -384,7 +411,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Firm · ~1.10",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.1,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 88
     },
     "power": {
@@ -440,7 +473,13 @@
       "label": "Pink, White, Lavender"
     },
     "stiffness": {
-      "label": "Medium · ~0.95",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 58
     },
     "power": {
@@ -492,7 +531,13 @@
       "label": "Black, Mint"
     },
     "stiffness": {
-      "label": "Medium · ~0.95",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 60
     },
     "power": {
@@ -548,7 +593,16 @@
       "label": "Pink, Green, Purple"
     },
     "stiffness": {
-      "label": "Medium · 0.95–1.00",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": {
+          "min": 0.95,
+          "max": 1
+        },
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 65
     },
     "power": {
@@ -605,7 +659,13 @@
       "label": "Pink, Orange, Matcha"
     },
     "stiffness": {
-      "label": "Medium · 0.95",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 58
     },
     "power": {
@@ -663,7 +723,13 @@
       "label": "Carbon, Pink, Matcha"
     },
     "stiffness": {
-      "label": "Med-Soft · 0.90",
+      "band": "Med-Soft",
+      "figure": {
+        "kgPerMm": 0.9,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 50
     },
     "power": {
@@ -711,7 +777,13 @@
       "label": "Lavender"
     },
     "stiffness": {
-      "label": "Soft · 0.85",
+      "band": "Soft",
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 42
     },
     "power": {
@@ -763,7 +835,13 @@
       "label": "Blue, Green"
     },
     "stiffness": {
-      "label": "Med-Soft · 0.90",
+      "band": "Med-Soft",
+      "figure": {
+        "kgPerMm": 0.9,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 50
     },
     "power": {
@@ -811,7 +889,8 @@
       "label": "Purple"
     },
     "stiffness": {
-      "label": "Very Soft",
+      "band": "Very Soft",
+      "figure": null,
       "width": 15
     },
     "power": {
@@ -863,7 +942,8 @@
       "label": "Black, Mint"
     },
     "stiffness": {
-      "label": "Med-Firm",
+      "band": "Med-Firm",
+      "figure": null,
       "width": 72
     },
     "power": {
@@ -912,7 +992,13 @@
       "label": "Silver"
     },
     "stiffness": {
-      "label": "Firm · 1.12",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.12,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 95
     },
     "power": {
@@ -965,7 +1051,13 @@
       "label": "Dark Grey"
     },
     "stiffness": {
-      "label": "Med-Firm · 1.00",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 78
     },
     "power": {
@@ -1016,7 +1108,8 @@
       "label": "Pink"
     },
     "stiffness": {
-      "label": "Medium",
+      "band": "Medium",
+      "figure": null,
       "width": 58
     },
     "power": {
@@ -1065,7 +1158,13 @@
       "label": "Hyper-Green"
     },
     "stiffness": {
-      "label": "Firm · 1.10",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 88
     },
     "power": {
@@ -1118,7 +1217,13 @@
       "label": "Blue"
     },
     "stiffness": {
-      "label": "Med-Soft · 0.85",
+      "band": "Med-Soft",
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 50
     },
     "power": {
@@ -1168,7 +1273,13 @@
       "label": "Silver"
     },
     "stiffness": {
-      "label": "Med-Soft · 0.85",
+      "band": "Med-Soft",
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 50
     },
     "power": {
@@ -1217,7 +1328,13 @@
       "label": "Green"
     },
     "stiffness": {
-      "label": "Medium · 0.95",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 62
     },
     "power": {
@@ -1267,7 +1384,13 @@
       "label": "Blue"
     },
     "stiffness": {
-      "label": "Med-Firm · ~1.00",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 1,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -1316,7 +1439,13 @@
       "label": "Silver"
     },
     "stiffness": {
-      "label": "Medium · ~0.95",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 65
     },
     "power": {
@@ -1369,7 +1498,13 @@
       "label": "Green"
     },
     "stiffness": {
-      "label": "Medium · ~0.95",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 62
     },
     "power": {
@@ -1419,7 +1554,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Medium · ~0.95",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 60
     },
     "power": {
@@ -1473,7 +1614,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Med-Soft · ~0.90",
+      "band": "Med-Soft",
+      "figure": {
+        "kgPerMm": 0.9,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 55
     },
     "power": {
@@ -1523,7 +1670,8 @@
       "label": "Natural"
     },
     "stiffness": {
-      "label": "Soft",
+      "band": "Soft",
+      "figure": null,
       "width": 30
     },
     "power": {
@@ -1576,7 +1724,13 @@
       "label": "Blue, Black"
     },
     "stiffness": {
-      "label": "Firm · 1.08",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.08,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 95
     },
     "power": {
@@ -1638,7 +1792,13 @@
       "label": "Grey, Blue, Black"
     },
     "stiffness": {
-      "label": "Med-Firm · 0.92",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 0.92,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -1692,7 +1852,13 @@
       "label": "Flash Yellow, Blue"
     },
     "stiffness": {
-      "label": "Med-Firm · 1.05",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 1.05,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 82
     },
     "power": {
@@ -1750,7 +1916,16 @@
       "label": "Purple, Orange, White"
     },
     "stiffness": {
-      "label": "Med-Firm · 0.85–0.95",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": {
+          "min": 0.85,
+          "max": 0.95
+        },
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 68
     },
     "power": {
@@ -1800,7 +1975,13 @@
       "label": "Flash Yellow"
     },
     "stiffness": {
-      "label": "Medium · ~0.90",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.9,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 65
     },
     "power": {
@@ -1854,7 +2035,8 @@
       "label": "Ruby Red, Black"
     },
     "stiffness": {
-      "label": "Med-Firm",
+      "band": "Med-Firm",
+      "figure": null,
       "width": 62
     },
     "power": {
@@ -1904,7 +2086,13 @@
       "label": "Red"
     },
     "stiffness": {
-      "label": "Medium · 0.80",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.8,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 52
     },
     "power": {
@@ -1952,7 +2140,13 @@
       "label": "Sky Blue"
     },
     "stiffness": {
-      "label": "Soft · 0.72",
+      "band": "Soft",
+      "figure": {
+        "kgPerMm": 0.72,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 40
     },
     "power": {
@@ -2000,7 +2194,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Med-Soft · 0.77",
+      "band": "Med-Soft",
+      "figure": {
+        "kgPerMm": 0.77,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 48
     },
     "power": {
@@ -2050,7 +2250,8 @@
       "label": "Natural"
     },
     "stiffness": {
-      "label": "Soft",
+      "band": "Soft",
+      "figure": null,
       "width": 28
     },
     "power": {
@@ -2099,7 +2300,13 @@
       "label": "Turquoise"
     },
     "stiffness": {
-      "label": "Firm · 1.05",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.05,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 88
     },
     "power": {
@@ -2152,7 +2359,16 @@
       "label": "Silver"
     },
     "stiffness": {
-      "label": "Med-Firm · 0.85–0.95",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": {
+          "min": 0.85,
+          "max": 0.95
+        },
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 68
     },
     "power": {
@@ -2205,7 +2421,16 @@
       "label": "Sky Blue"
     },
     "stiffness": {
-      "label": "Firm · 1.05–1.10",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": {
+          "min": 1.05,
+          "max": 1.1
+        },
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 90
     },
     "power": {
@@ -2257,7 +2482,13 @@
       "label": "Midnight Black"
     },
     "stiffness": {
-      "label": "Medium · ~0.95",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 65
     },
     "power": {
@@ -2306,7 +2537,13 @@
       "label": "Grey/Silver"
     },
     "stiffness": {
-      "label": "Firm · 1.05",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.05,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 92
     },
     "power": {
@@ -2358,7 +2595,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Firm · ~1.00",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 85
     },
     "power": {
@@ -2407,7 +2650,16 @@
       "label": "Olive Green"
     },
     "stiffness": {
-      "label": "Med-Firm · 0.90–0.95",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": {
+          "min": 0.9,
+          "max": 0.95
+        },
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -2459,7 +2711,13 @@
       "label": "Gold"
     },
     "stiffness": {
-      "label": "Medium · 0.90",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.9,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 65
     },
     "power": {
@@ -2511,7 +2769,13 @@
       "label": "Neon Yellow, Mantis"
     },
     "stiffness": {
-      "label": "Med-Soft · ~0.85",
+      "band": "Med-Soft",
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 58
     },
     "power": {
@@ -2559,7 +2823,13 @@
       "label": "Neon Green"
     },
     "stiffness": {
-      "label": "Medium · ~0.90",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.9,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 65
     },
     "power": {
@@ -2612,7 +2882,13 @@
       "label": "Forest Green, Gold"
     },
     "stiffness": {
-      "label": "Med-Firm · ~0.95",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -2664,7 +2940,13 @@
       "label": "Teal, Silver"
     },
     "stiffness": {
-      "label": "Very Soft · 0.45",
+      "band": "Very Soft",
+      "figure": {
+        "kgPerMm": 0.45,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 25
     },
     "power": {
@@ -2712,7 +2994,8 @@
       "label": "Cream"
     },
     "stiffness": {
-      "label": "Med-Firm",
+      "band": "Med-Firm",
+      "figure": null,
       "width": 68
     },
     "power": {
@@ -2760,7 +3043,13 @@
       "label": "Silver/Grey"
     },
     "stiffness": {
-      "label": "Medium · ~0.85",
+      "band": "Medium",
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": true,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 58
     },
     "power": {
@@ -2811,7 +3100,13 @@
       "label": "Silver"
     },
     "stiffness": {
-      "label": "Firm · 1.05",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.05,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 78
     },
     "power": {
@@ -2863,7 +3158,13 @@
       "label": "Silver"
     },
     "stiffness": {
-      "label": "Firm · 1.05",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.05,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 78
     },
     "power": {
@@ -2915,7 +3216,13 @@
       "label": "Pearl Silver"
     },
     "stiffness": {
-      "label": "Med · 0.85",
+      "band": "Med",
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 55
     },
     "power": {
@@ -2964,7 +3271,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Firm · 1.00",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -3017,7 +3330,13 @@
       "label": "Silver"
     },
     "stiffness": {
-      "label": "Med-Firm · 0.95",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 65
     },
     "power": {
@@ -3066,7 +3385,13 @@
       "label": "Gold"
     },
     "stiffness": {
-      "label": "Very Firm · 1.10",
+      "band": "Very Firm",
+      "figure": {
+        "kgPerMm": 1.1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 84
     },
     "power": {
@@ -3118,7 +3443,13 @@
       "label": "Gold"
     },
     "stiffness": {
-      "label": "Very Firm · 1.10",
+      "band": "Very Firm",
+      "figure": {
+        "kgPerMm": 1.1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 84
     },
     "power": {
@@ -3170,7 +3501,13 @@
       "label": "Light Gold"
     },
     "stiffness": {
-      "label": "Med-Firm · 0.95",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 0.95,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 65
     },
     "power": {
@@ -3223,7 +3560,13 @@
       "label": "Cream"
     },
     "stiffness": {
-      "label": "Med · 0.85",
+      "band": "Med",
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 55
     },
     "power": {
@@ -3276,7 +3619,13 @@
       "label": "Charcoal"
     },
     "stiffness": {
-      "label": "Firm · 1.00",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -3329,7 +3678,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Med · 0.85",
+      "band": "Med",
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 55
     },
     "power": {
@@ -3382,7 +3737,13 @@
       "label": "Eco Green"
     },
     "stiffness": {
-      "label": "Med-Firm · 1.00",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -3432,7 +3793,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Firm · 1.00",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 72
     },
     "power": {
@@ -3485,7 +3852,13 @@
       "label": "Blue"
     },
     "stiffness": {
-      "label": "Firm · 1.05",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 1.05,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 78
     },
     "power": {
@@ -3533,7 +3906,13 @@
       "label": "Silver"
     },
     "stiffness": {
-      "label": "Med-Firm · 0.92",
+      "band": "Med-Firm",
+      "figure": {
+        "kgPerMm": 0.92,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 62
     },
     "power": {
@@ -3581,7 +3960,13 @@
       "label": "Black"
     },
     "stiffness": {
-      "label": "Firm · 0.98",
+      "band": "Firm",
+      "figure": {
+        "kgPerMm": 0.98,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 70
     },
     "power": {
@@ -3629,7 +4014,13 @@
       "label": "Natural"
     },
     "stiffness": {
-      "label": "Soft · 0.65",
+      "band": "Soft",
+      "figure": {
+        "kgPerMm": 0.65,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 38
     },
     "power": {
@@ -3682,7 +4073,13 @@
       "label": "Natural"
     },
     "stiffness": {
-      "label": "Soft · 0.55",
+      "band": "Soft",
+      "figure": {
+        "kgPerMm": 0.55,
+        "approx": false,
+        "source": "legacy",
+        "retrieved": null
+      },
       "width": 30
     },
     "power": {

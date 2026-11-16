@@ -2,6 +2,7 @@
 // whitespace between cells, exactly as the legacy string concatenation produced them.
 import type { Bar, Colors, FeelTag, Grip, Hybrid, HybridSide, StringRec } from '../core/types';
 import type { PerRacquet } from '../core/pairings';
+import { stiffnessBar } from '../core/stiffness';
 import { html, join, raw, type SafeHtml } from './html';
 
 const BR = raw('<br>');
@@ -70,7 +71,7 @@ export function stringRow(s: StringRec, per: PerRacquet | undefined): SafeHtml {
     html`<td>${s.shape}</td>`,
     html`<td>${join(s.gauges ?? [], BR)}</td>`,
     colorsCell(s.colors),
-    barCell('stiff', s.stiffness),
+    barCell('stiff', stiffnessBar(s.stiffness)),
     barCell('power', s.power),
     feelCell(s.feelTags, s.feelSummary, s.feelExpand),
     barCell('spin', s.spin),
@@ -86,7 +87,7 @@ export function hybridRow(h: Hybrid, per: PerRacquet | undefined): SafeHtml {
     nameCell(h.name, h.id),
     hybridSideCell(h.mains),
     hybridSideCell(h.crosses),
-    barCell('stiff', h.stiffness),
+    barCell('stiff', stiffnessBar(h.stiffness)),
     barCell('power', h.power),
     barCell('spin', h.spin),
     feelCell(h.feelTags, h.feelSummary, h.feelExpand),
@@ -172,7 +173,7 @@ export const STRING_HEAD = thead([
   { label: 'Control', sort: 'control' },
   { label: 'Comfort', sort: 'comfort' },
   { label: 'Tension (kg)' },
-  { label: 'Notes for Your Setup' },
+  { label: 'Notes' },
 ]);
 
 export const HYBRID_HEAD = thead([
@@ -184,7 +185,7 @@ export const HYBRID_HEAD = thead([
   { label: 'Spin', sort: 'spin' },
   { label: 'Character' },
   { label: 'Tension (kg)' },
-  { label: 'Notes for Your Setup' },
+  { label: 'Notes' },
 ]);
 
 export const OVERGRIP_HEAD = thead([

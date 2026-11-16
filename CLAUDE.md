@@ -78,7 +78,7 @@ src/styles/        v0.990 CSS split verbatim, imported in cascade order; additio
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
-                   migrate-racquets) are not meant to run again
+                   migrate-racquets, migrate-stiffness) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -132,6 +132,10 @@ A difference is declared in one of three ways, with its reason next to it:
 
 A new pixel view must show its change in more than 0.1% of the screenshot, or the comparison
 can't see it: use `element` (and `hover`) for a close-up, as the search-field view does.
+
+Full-page screenshots are taken from the top of the page (`screenshot()` in
+`tests/visual/support.ts`): fixed elements land wherever the page is scrolled, and
+Playwright's clicks can leave the two pages at different offsets.
 
 Fonts are vendored in `src/assets/fonts`; the tests route legacy's Google Fonts requests to
 the same files, so both sides render identical glyphs offline.

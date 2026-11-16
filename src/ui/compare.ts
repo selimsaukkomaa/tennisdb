@@ -10,6 +10,7 @@ import {
 } from '../core/compare';
 import type { Bar, RacquetId, TennisDb } from '../core/types';
 import { perRacquet } from '../core/pairings';
+import { stiffnessBar } from '../core/stiffness';
 import { html, join, raw, type SafeHtml } from './html';
 import { state } from './state';
 import { feelTagsHtml } from './tables';
@@ -93,7 +94,7 @@ const ATTR_ROWS: readonly AttrRow[] = [
   { label: 'Comfort', key: 'comfort', bar: 'comfort', hybrid: false },
   { label: 'Feel', key: 'feel' },
   { label: 'Tension', key: 'tension' },
-  { label: 'Note', key: 'note' },
+  { label: 'Notes', key: 'note' },
 ];
 
 function cellHtml(row: AttrRow, entry: CompareItem, racquet: RacquetId): SafeHtml {
@@ -105,6 +106,7 @@ function cellHtml(row: AttrRow, entry: CompareItem, racquet: RacquetId): SafeHtm
     const side = entry.item[row.key];
     return html`${side.string} ${side.gauge}${side.shapeFeelLabel ? html`<br><span class="cmp-sub">${side.shapeFeelLabel}</span>` : ''}`;
   }
+  if (row.key === 'stiffness') return barHtml('stiff', stiffnessBar(entry.item.stiffness));
   if (row.bar) {
     const item = entry.item as unknown as Record<string, Bar | undefined>;
     return barHtml(row.bar, item[row.key]);

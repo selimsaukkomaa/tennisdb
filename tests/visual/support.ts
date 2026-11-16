@@ -108,6 +108,12 @@ export async function screenshot(page: Page, opts: ShotOptions = {}): Promise<Bu
     maskColor: '#ff00ff',
   };
   if (opts.element) return page.locator(opts.element).first().screenshot(options);
+  // A full-page capture draws position:fixed elements (the compare panel and bar, the palette)
+  // wherever the page is scrolled to, and Playwright's clicks can leave the two pages at
+  // different offsets (it re-scrolls when the fixed compare bar covers its target). Capture
+  // both from the top, so the comparison never depends on the scroll position.
+  await page.evaluate('window.scrollTo(0, 0)');
+  await settle(page);
   return page.screenshot({ ...options, fullPage: true });
 }
 

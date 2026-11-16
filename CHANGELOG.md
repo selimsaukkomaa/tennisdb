@@ -6,6 +6,118 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v0.998 — Stiffness as values; "strung" title and "Notes" headers
+
+**Date:** 2026-11-16
+**Base:** v0.997 (racquet fields as values)
+**Status:** model release with two small visible changes. Phase 2 step 2,
+fourth move (`docs/phase-2-data-model.md`, D1): stiffness is stored as a band
+plus a figure with its provenance, and renders exactly as before. Separately,
+at the owner's request, the tab title and the notes column headers changed.
+No note content changed; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## 1. Stiffness as values
+
+| | Was | Now |
+|---|---|---|
+| String with a figure | `{ label: "Firm · ~1.10", width: 88 }` | `{ band: "Firm", figure: { kgPerMm: 1.1, approx: true, source: "legacy", retrieved: null }, width: 88 }` |
+| Range | `"Medium · 0.95–1.00"` | `kgPerMm: { min: 0.95, max: 1 }` |
+| String without a figure | `{ label: "Med", width: 62 }` | `{ band: "Med", figure: null, width: 62 }` |
+| Hybrid | `{ label: "Med-Firm", width: 75 }` | `{ band: "Med-Firm", width: 75 }` |
+
+- 62 of the 72 strings have a figure: 15 approximate, 5 ranges. All 62 are
+  marked `source: "legacy"` with no retrieval date, the decision for D1; a
+  later check upgrades each to a named source and a month.
+- The figure is a nested object, a refinement of the D1 sketch (which had its
+  fields flat): the provenance travels with the figure, and the 10 strings
+  without one carry none. Hybrids never have a lab figure and store band and
+  width only.
+- The band and the bar width are still stored. Deriving the band from the
+  figure is D2 and the width D3, each a visible release. "Med" and "Medium"
+  both remain until then.
+- `stiffnessLabel()` in `src/core/stiffness.ts` prints the label as before.
+
+`scripts/migrate-stiffness.ts` (one-off) ran on a sample batch first (one of
+each form and a hybrid). Before writing, it asserts 72 strings (62 with a
+figure, 15 approximate, 5 ranges, 10 without), 10 hybrids, the count in each of
+the eight bands, and that every label prints back exactly.
+
+**Validation.** The schema fixes the band list, so the `stiffness-band` rule
+moved into it. New rules: `stiffness-range` (a range runs forwards) and
+`stiffness-provenance` (a figure has a retrieval date exactly when its source
+isn't `legacy`).
+
+## 2. Tab title and "Notes" headers
+
+- **Tab title:** "strung" (was "Strung — Selim S."). The home-screen name
+  stays "Strung".
+- **Notes column:** the string and hybrid tables' "Notes for Your Setup" is now
+  "Notes", as the grip and gut tables already said; compare's "Note" row is
+  "Notes" too. This closes the "Notes for Your Setup" item under Still open.
+
+## Declared differences from v0.990 (added in v0.998)
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| "Notes" heads the notes column in the string and hybrid tables and in compare | yes | E: the 24 table headers renamed (the patch throws on any other count); compare's header renamed whenever its table is redrawn |
+
+The tab title is not part of the page the parity suite compares.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+## Verification
+
+`npm run check` passes: 299 Vitest tests (292 in v0.997), 59 Playwright tests.
+
+- **New tests, 8:** a backwards range, a non-legacy source without a date, a
+  legacy figure with one; and five shapes the schema rejects (an unknown band,
+  a figure written as text, a stored label, a figure on a hybrid, a retrieval
+  date that isn't a month). One mutation test retired with `stiffness-band`.
+- **Against v0.990:** converted back with `stiffnessBar`, the data still
+  equals v0.990's value for value.
+- **Parity:** all 15 pixel views and 24 DOM scenarios pass. Without patch E,
+  the desktop page view and the compare DOM scenario fail.
+- **A harness weakness found and fixed.** One phone view ("compare open")
+  failed about 1 run in 175 under load. Both pages were right; they had been
+  left at different scroll positions, because Playwright re-scrolls when the
+  fixed compare bar covers the checkbox it is about to click, and a full-page
+  screenshot draws fixed elements wherever the page is scrolled. Full-page
+  captures are now taken from the top of the page. Since then the compare
+  tests passed 280 of 280 runs under load and the full suite 177 of 177.
+
+## File size
+
+| | v0.997 | v0.998 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 450,038 | 454,575 | +4.4 KB (+1.0%) |
+| gzip | 102,556 | 102,842 | +0.3 KB |
+
+## Still open
+
+Unchanged from v0.997, except:
+
+- **Closed:** the "Notes for Your Setup" table header.
+- **New: the gut hybrid section's UX.** The owner finds the Natural Gut / Poly
+  Hybrids strip confusing as it is; how it should work is to be worked out
+  later. Nothing changed here.
+- **Version numbers.** v0.999 is the last number in this scheme, and Phase 2
+  has more releases left than that; the numbering needs a decision before the
+  release after next.
+
+Next in Phase 2 step 2: ratings as `{ score, label }` (D5).
+
+---
+
 # v0.997 — Racquet fields as values
 
 **Date:** 2026-11-16

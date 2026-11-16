@@ -58,6 +58,28 @@ their current band as `inferredBand`. Confirmed after noting that every brand
 footer says "Stiffness (kg/mm) from Racketpedia lab testing": that is a claim
 about a whole brand, not a per-figure source, and there are no retrieval dates.
 
+**Done in v0.998, with the shape refined:** the figure is its own nested
+object, so its provenance travels with it and a string without a figure
+carries none:
+
+```ts
+stiffness: {
+  band: Band;                // stored until D2 derives it from the figure
+  figure: {
+    kgPerMm: number | { min: number; max: number };
+    approx: boolean;
+    source: 'legacy' | 'Racketpedia' | 'manufacturer' | 'review';
+    retrieved: string | null; // 'YYYY-MM'; null exactly when source is 'legacy'
+  } | null;                  // null for the 10 strings without a figure
+  width: number;             // stored until D3 derives it
+}
+```
+
+Hybrids store `{ band, width }` only: a hybrid's stiffness is a judgement of
+the bed, never a lab figure. The stored band of a string without a figure is
+what the sketch called `inferredBand`. `stiffnessLabel()` in
+`src/core/stiffness.ts` prints the same label as before.
+
 ### D2. The stiffness-label rule
 
 Labels derived from the figure (range midpoint) with fixed thresholds; "Med"
@@ -218,7 +240,7 @@ Each step is its own release, and each stops for the owner's review.
    new declared difference: tension (D6) and pairings (D7), *done in v0.995*;
    hybrid sides linked by id (D7), *done in v0.996*; racquet fields (D4),
    *done in v0.997*;
-   stiffness storage with `source: 'legacy'` (D1), ratings as
+   stiffness storage with `source: 'legacy'` (D1), *done in v0.998*; ratings as
    `{ score, label }` (D5), plain-text notes and the structured grip spec (D9).
    The migration script asserts every count and runs on a sample first.
 3. **Visible changes**, one release each, with declared differences:

@@ -235,7 +235,7 @@
           "additionalProperties": false
         },
         "stiffness": {
-          "$ref": "#/$defs/Bar"
+          "$ref": "#/$defs/Stiffness"
         },
         "power": {
           "$ref": "#/$defs/Bar"
@@ -289,6 +289,109 @@
         "feelExpand",
         "id",
         "brand"
+      ],
+      "additionalProperties": false
+    },
+    "Stiffness": {
+      "type": "object",
+      "properties": {
+        "band": {
+          "type": "string",
+          "enum": [
+            "Very Soft",
+            "Soft",
+            "Med-Soft",
+            "Med",
+            "Medium",
+            "Med-Firm",
+            "Firm",
+            "Very Firm"
+          ]
+        },
+        "figure": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/StiffnessFigure"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100
+        }
+      },
+      "required": [
+        "band",
+        "figure",
+        "width"
+      ],
+      "additionalProperties": false
+    },
+    "StiffnessFigure": {
+      "type": "object",
+      "properties": {
+        "kgPerMm": {
+          "anyOf": [
+            {
+              "type": "number",
+              "minimum": 0.2,
+              "maximum": 2
+            },
+            {
+              "type": "object",
+              "properties": {
+                "min": {
+                  "type": "number",
+                  "minimum": 0.2,
+                  "maximum": 2
+                },
+                "max": {
+                  "type": "number",
+                  "minimum": 0.2,
+                  "maximum": 2
+                }
+              },
+              "required": [
+                "min",
+                "max"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "approx": {
+          "type": "boolean"
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "legacy",
+            "Racketpedia",
+            "manufacturer",
+            "review"
+          ]
+        },
+        "retrieved": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^\\d{4}-(0[1-9]|1[0-2])$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "kgPerMm",
+        "approx",
+        "source",
+        "retrieved"
       ],
       "additionalProperties": false
     },
@@ -425,7 +528,32 @@
           "additionalProperties": false
         },
         "stiffness": {
-          "$ref": "#/$defs/Bar"
+          "type": "object",
+          "properties": {
+            "band": {
+              "type": "string",
+              "enum": [
+                "Very Soft",
+                "Soft",
+                "Med-Soft",
+                "Med",
+                "Medium",
+                "Med-Firm",
+                "Firm",
+                "Very Firm"
+              ]
+            },
+            "width": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "band",
+            "width"
+          ],
+          "additionalProperties": false
         },
         "power": {
           "$ref": "#/$defs/Bar"

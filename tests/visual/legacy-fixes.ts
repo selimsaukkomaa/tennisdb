@@ -11,6 +11,9 @@
 //   D. v0.993's rename: the topbar wordmark reads "strung" in heavy DM Sans with a blue line
 //      under it, instead of EQUIP + a dimmed DB in Space Mono. Weight 800 comes from the same
 //      Google Fonts file the tests already route to the bundled copy.
+//   E. v0.998: the notes column is headed "Notes" in the string and hybrid tables (v0.990:
+//      "Notes for Your Setup", 24 headers) and in compare (v0.990: "Note"). Compare redraws its
+//      table on every change, so that header is renamed whenever it appears.
 // The CSS repeats the rules in src/styles/additions.css; a change there must change it here.
 import type { Page } from '@playwright/test';
 
@@ -36,6 +39,22 @@ const LEGACY_FIXES_JS = String.raw`(() => {
 
   // D
   document.querySelector('.topbar-mark').textContent = 'strung';
+
+  // E
+  const setupHeads = [...document.querySelectorAll('th')].filter(
+    (th) => th.textContent === 'Notes for Your Setup',
+  );
+  if (setupHeads.length !== 24) throw new Error('expected 24 notes headers, got ' + setupHeads.length);
+  for (const th of setupHeads) th.textContent = 'Notes';
+  const renameCompareNote = () => {
+    for (const th of document.querySelectorAll('tr.cmp-row-note th.cmp-attr-head')) {
+      if (th.textContent === 'Note') th.textContent = 'Notes';
+    }
+  };
+  new MutationObserver(renameCompareNote).observe(document.getElementById('compare-modal'), {
+    childList: true,
+    subtree: true,
+  });
 
   // A
   const tourna = document.getElementById('grip-tourna-section');
