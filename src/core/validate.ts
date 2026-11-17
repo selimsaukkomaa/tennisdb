@@ -9,6 +9,7 @@
 import { FEEL_CHIPS, tokens } from './chips';
 import { RATING_WORDS, type Rating, type RatingAxis } from './ratings';
 import { CopySchema, TennisDbSchema } from './schema';
+import { feelTokens } from './stiffness';
 import type { Copy, Grip, Hybrid, Pairing, StringRec, TennisDb } from './types';
 import { GRIP_TYPES } from './types';
 
@@ -31,9 +32,6 @@ export const ABOUT_VERDICT_LANGUAGE = /\byour?\b|\bstrong\b|prefer/i;
 
 /** A tag or a character entity, which plain text never holds. A bare "&" is text. */
 export const MARKUP = /<[a-zA-Z/!]|&(#\d+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);/;
-
-/** Stiffness bands: Med-Firm and firmer is Firm, Medium and softer is Soft (v0.990 rule). */
-export const FIRM_BANDS = new Set(['Very Firm', 'Firm', 'Med-Firm']);
 
 /** One tag label, one colour: v0.990's label -> variant table for strings and hybrids. */
 export const TAG_VARIANTS: Record<string, string> = {
@@ -59,8 +57,6 @@ export const TAG_VARIANTS: Record<string, string> = {
 };
 
 const MIN_NOTE_CHARS = 40;
-
-export const stiffnessBand = (row: StringRec | Hybrid): string => row.stiffness.band;
 
 export function allGrips(db: TennisDb): (Grip & { brand: string })[] {
   return Object.entries(db.grips).flatMap(([brand, byType]) =>
@@ -245,13 +241,10 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   }
 
   // ---- feel chips
+  // Firm and Soft come from the band (stiffness.ts: feelTokens), so they always agree with it;
+  // v0.990's firm-xor-soft and firm-soft-band rules hold by construction since v1.1.
   for (const r of rows) {
-    const feel = tokens(r.feelAttr);
-    const band = stiffnessBand(r);
-    if (feel.includes('firm') === feel.includes('soft'))
-      fail('firm-xor-soft', r.id, 'needs exactly one of firm / soft');
-    else if (feel.includes('firm') !== FIRM_BANDS.has(band))
-      fail('firm-soft-band', r.id, `firm/soft contradicts stiffness band "${band}"`);
+    const feel = tokens(feelTokens(r));
     const crispTag = r.feelTags.some((t) => t.label === 'Crisp') || /crisp/i.test(r.feelSummary);
     if (feel.includes('crisp') !== crispTag)
       fail('crisp-tag', r.id, 'Crisp chip and Crisp tag/summary disagree');
@@ -289,7 +282,7 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
     }
   }
   for (const chip of FEEL_CHIPS) {
-    if (!db.strings.some((s) => tokens(s.feelAttr).includes(chip.value))) {
+    if (!db.strings.some((s) => tokens(feelTokens(s)).includes(chip.value))) {
       fail('feel-chip-coverage', chip.value, 'feel chip matches no single string');
     }
   }

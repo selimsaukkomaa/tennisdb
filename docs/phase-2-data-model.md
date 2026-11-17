@@ -109,6 +109,15 @@ its own release with declared differences. Up to 51 texts in 17 of the moved
 rows use the old band word (many as plain description, e.g. "firm feel"); they
 get a separate notes pass, starting with a sample of five.
 
+**Done in v1.1**, with the 32 moves above, Vamos's "Med" folded into
+"Medium", and the 8 chips. A string with a figure stores no band:
+`bandFor()` in `src/core/stiffness.ts` derives it. The 10 strings without a
+figure store their band as an estimate, and the hybrids their judgement; the
+schema allows a stored band exactly when there is no figure. The bar width is
+still stored until D3. The hybrids' side labels ("Hexagonal · Firm") were left
+as written, by the owner's decision on 2026-11-17: 14 of them name a band
+word their string no longer has (8 already did), for the notes pass.
+
 ### D3. Bar scale
 
 Bar widths are set by hand, relative within each brand: 1.05 kg/mm is drawn
@@ -225,6 +234,12 @@ because it isn't in the data.
 **Decision (2026-11-04):** as proposed. The single colour for each grip label
 (Tacky, Firm, Classic, Dry) goes to the owner with screenshots before it ships.
 
+**Firm/Soft done in v1.1:** derived from the band (`feelTokens()` in
+`src/core/stiffness.ts`), so `feelAttr` stores only Crisp, Plush and Lively
+and the firm-xor-soft and firm-soft-band rules hold by construction. Crisp is
+still stored and checked against the tags (crisp-tag); the tag colours come
+with the grip-tag release.
+
 ### D9. Schemas and plain-text notes
 
 A Zod schema per collection (racquets, brands, strings, hybrids, pairings,
@@ -264,7 +279,7 @@ Each step is its own release, and each stops for the owner's review.
    complete.
    The migration script asserts every count and runs on a sample first.
 3. **Visible changes**, one release each, with declared differences:
-   - stiffness labels and the 8 Firm/Soft chips (D2, D8);
+   - stiffness labels and the 8 Firm/Soft chips (D2, D8), *done in v1.1*;
    - the notes that use an old band word, sample of five first (D2);
    - the bar scale and the footers' new wording (D3);
    - one colour per grip tag label, with screenshots first (D8).

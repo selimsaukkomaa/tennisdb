@@ -19,6 +19,7 @@ import { z } from 'zod';
 import { FEEL_CHIPS, SHAPE_CHIPS } from './chips';
 import { MAX_KG, MIN_KG } from './log/tension';
 import { RATING_WORDS, type RatingAxis } from './ratings';
+import { STIFFNESS_BANDS } from './stiffness';
 import { GRIP_TYPES } from './types';
 
 const Id = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/);
@@ -59,17 +60,7 @@ const GutSpinRating = rating('gutSpin', 'GutSpinRating');
 const GutComfortRating = rating('gutComfort', 'GutComfortRating');
 const GutProtectionRating = rating('gutProtection', 'GutProtectionRating');
 
-/** Stiffness bands, softest first. "Med" and "Medium" are both in use until D2 folds them. */
-export const STIFFNESS_BANDS = [
-  'Very Soft',
-  'Soft',
-  'Med-Soft',
-  'Med',
-  'Medium',
-  'Med-Firm',
-  'Firm',
-  'Very Firm',
-] as const;
+/** Stiffness bands, softest first (stiffness.ts; "Med" folded into "Medium" in v1.1). */
 const Band = z.enum(STIFFNESS_BANDS);
 const KgPerMm = z.number().min(0.2).max(2);
 
@@ -91,10 +82,19 @@ export const StiffnessFigureSchema = z
   })
   .meta({ id: 'StiffnessFigure' });
 
-/** A string's stiffness; `figure` is null when there is no lab figure and the band is inferred. */
+/**
+ * A string's stiffness. With a lab figure the band is derived from it (stiffness.ts: bandFor)
+ * and not stored; without one the band is stored, an estimate.
+ */
 export const StiffnessSchema = z
-  .strictObject({ band: Band, figure: StiffnessFigureSchema.nullable(), width: BarWidth })
-  .meta({ id: 'Stiffness' });
+  .union([
+    z.strictObject({ figure: StiffnessFigureSchema, width: BarWidth }),
+    z.strictObject({ band: Band, figure: z.null(), width: BarWidth }),
+  ])
+  .meta({
+    id: 'Stiffness',
+    description: 'A figure (the band is derived from it), or no figure and an estimated band.',
+  });
 
 /** A hybrid's stiffness is a judgement of the bed: a band, never a figure. */
 const HybridStiffnessSchema = z.strictObject({ band: Band, width: BarWidth });
@@ -174,10 +174,16 @@ const SHAPE_TOKENS = tokenList(
   SHAPE_CHIPS.map((c) => c.value),
   'Comma-separated shape tokens matched by the Shape chips.',
 );
-const FEEL_TOKENS = tokenList(
-  FEEL_CHIPS.map((c) => c.value),
-  'Comma-separated feel tokens matched by the Feel chips.',
-);
+// Firm and Soft are derived from the stiffness band since v1.1 (stiffness.ts: feelTokens), so
+// only Crisp, Plush and Lively are stored, and a row may store none.
+const STORED_FEEL = FEEL_CHIPS.map((c) => c.value).filter((v) => v !== 'firm' && v !== 'soft');
+const FEEL_TOKENS = z
+  .string()
+  .regex(new RegExp(`^(${STORED_FEEL.join('|')})?(,(${STORED_FEEL.join('|')}))*$`))
+  .meta({
+    description:
+      'Comma-separated stored feel tokens (crisp, plush, lively), possibly none. Firm and Soft come from the stiffness band.',
+  });
 
 export const StringSchema = z
   .strictObject({

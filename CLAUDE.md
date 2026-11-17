@@ -79,8 +79,8 @@ src/styles/        v0.990 CSS split verbatim, imported in cascade order; additio
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
-                   migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs) are not
-                   meant to run again
+                   migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs,
+                   derive-stiffness-bands) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -121,7 +121,7 @@ The app must render like v0.990. No visual or DOM change without a declared diff
 
 - pixel parity (`tests/visual/parity.spec.ts`): 15 views at 1440×900 and 390×844, threshold
   0.1, at most 0.1% of pixels differing.
-- DOM parity (`tests/visual/dom-parity.spec.ts`): 24 scenarios compared node for node.
+- DOM parity (`tests/visual/dom-parity.spec.ts`): 25 scenarios compared node for node.
 - every declared difference is listed in `CHANGELOG.md`.
 
 A difference is declared in one of three ways, with its reason next to it:
@@ -149,11 +149,12 @@ formats, no unknown keys, the chip token lists, the rating words of each axis
 (`src/core/ratings.ts`). Keep every schema constraint expressible in
 JSON Schema (no `.refine`), so the export in `schemas/` stays complete. Then
 `src/core/validate.ts` holds the content and cross-record rules from build_990.py and more:
-neutral text, notes present for every racquet, firm-xor-soft against the stiffness band,
-Crisp chip ⇔ Crisp tag, every feel chip used, grip type ⇔ chip, one colour per tag label
-with CSS for every variant, a filter-header colour for every grip brand, bar-backed claims
-(Mega Tac, Tourna Grip Original), rating words in the order of their lists, id and reference
-integrity, no "Connected" vocabulary, no tag or entity anywhere in `data/`.
+neutral text, notes present for every racquet, Crisp chip ⇔ Crisp tag, every feel chip used,
+grip type ⇔ chip, one colour per tag label with CSS for every variant, a filter-header colour
+for every grip brand, bar-backed claims (Mega Tac, Tourna Grip Original), rating words in the
+order of their lists, id and reference integrity, no "Connected" vocabulary, no tag or entity
+anywhere in `data/`. Some of v0.990's rules hold by construction instead: the stiffness band
+comes from the figure and Firm/Soft from the band (`src/core/stiffness.ts`).
 `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in
 source, `index.html`, these two docs or `docs/`. Every rule and each kind of schema check has
 a mutation test in `tests/data/validate.test.ts`; `tests/data/schemas.test.ts` checks that

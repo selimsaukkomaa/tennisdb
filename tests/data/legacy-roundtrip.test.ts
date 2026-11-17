@@ -4,6 +4,11 @@
 // every key and every value, arrays in order. (Until v0.994 this was a byte comparison. Key
 // order inside a record can no longer match, because v0.990 put perRacquet mid-record in some
 // records, and key order carries no meaning in JSON.)
+//
+// Since v1.1 the stiffness labels and Firm/Soft chips are derived by a rule that moves 33 labels
+// and 8 chips. The blob is compared with that declared change applied to it, by the same code
+// that patches the legacy page in the parity suite (V0990_STIFFNESS_RULE), so everything else is
+// still checked value for value.
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
@@ -11,9 +16,10 @@ import { assembleDb, copy } from '../../src/core/db';
 import { racquetLabel } from '../../src/core/labels';
 import { tensionLabel } from '../../src/core/pairings';
 import { ratingBar, type Rating } from '../../src/core/ratings';
-import { stiffnessBar } from '../../src/core/stiffness';
 import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
+import { feelTokens, stiffnessBar } from '../../src/core/stiffness';
 import { specHtml } from '../../src/ui/tables';
+import { V0990_STIFFNESS_RULE } from '../visual/legacy-fixes';
 
 const legacyHtml = readFileSync(
   fileURLToPath(new URL('../../legacy/tennis_equipmentdb_v0_990.html', import.meta.url)),
@@ -68,14 +74,17 @@ function toV0990(db: TennisDb): unknown {
       ra: r.ra,
       label: racquetLabel(r),
     })),
-    // v0.998 stores stiffness as a band and a figure; v0.990 had the label.
+    // v0.998 stores stiffness as a figure (v1.1: the band derived from it); v0.990 had the
+    // label. v1.1 derives Firm/Soft from the band; v0.990 stored them with the other tokens.
     strings: db.strings.map((s) => ({
       ...withBars(s, ['power', 'spin', 'control', 'comfort']),
+      feelAttr: feelTokens(s),
       stiffness: stiffnessBar(s.stiffness),
       perRacquet: perRacquet(s.id),
     })),
     hybrids: db.hybrids.map((h) => ({
       ...withBars(h, ['power', 'spin']),
+      feelAttr: feelTokens(h),
       stiffness: stiffnessBar(h.stiffness),
       mains: withoutLink(h.mains),
       crosses: withoutLink(h.crosses),
@@ -100,13 +109,17 @@ function toV0990(db: TennisDb): unknown {
   };
 }
 
+/** The v0.990 blob with v1.1's declared stiffness change applied (33 labels, 8 chips). */
+const applyStiffnessRule = new Function(`return ${V0990_STIFFNESS_RULE}`)() as (db: unknown) => unknown;
+const expected = (): unknown => applyStiffnessRule(JSON.parse(legacyJson));
+
 describe('data/ against legacy v0.990', () => {
-  test('converted back to the v0.990 shape, it equals the embedded blob', () => {
-    expect(toV0990(assembleDb())).toStrictEqual(JSON.parse(legacyJson));
+  test('converted back to the v0.990 shape, it equals the embedded blob with the declared moves', () => {
+    expect(toV0990(assembleDb())).toStrictEqual(expected());
   });
 
   test('and serialises to the same length (no character lost or added)', () => {
-    expect(JSON.stringify(toV0990(assembleDb())).length).toBe(legacyJson.length);
+    expect(JSON.stringify(toV0990(assembleDb())).length).toBe(JSON.stringify(expected()).length);
   });
 
   test('assembleDb returns independent copies', () => {

@@ -188,8 +188,8 @@
         },
         "feelAttr": {
           "type": "string",
-          "pattern": "^(crisp|firm|soft|plush|lively)(,(crisp|firm|soft|plush|lively))*$",
-          "description": "Comma-separated feel tokens matched by the Feel chips."
+          "pattern": "^(crisp|plush|lively)?(,(crisp|plush|lively))*$",
+          "description": "Comma-separated stored feel tokens (crisp, plush, lively), possibly none. Firm and Soft come from the stiffness band."
         },
         "gauges": {
           "minItems": 1,
@@ -293,43 +293,58 @@
       "additionalProperties": false
     },
     "Stiffness": {
-      "type": "object",
-      "properties": {
-        "band": {
-          "type": "string",
-          "enum": [
-            "Very Soft",
-            "Soft",
-            "Med-Soft",
-            "Med",
-            "Medium",
-            "Med-Firm",
-            "Firm",
-            "Very Firm"
-          ]
-        },
-        "figure": {
-          "anyOf": [
-            {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "figure": {
               "$ref": "#/$defs/StiffnessFigure"
             },
-            {
-              "type": "null"
+            "width": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
             }
-          ]
+          },
+          "required": [
+            "figure",
+            "width"
+          ],
+          "additionalProperties": false
         },
-        "width": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
+        {
+          "type": "object",
+          "properties": {
+            "band": {
+              "type": "string",
+              "enum": [
+                "Very Soft",
+                "Soft",
+                "Med-Soft",
+                "Medium",
+                "Med-Firm",
+                "Firm",
+                "Very Firm"
+              ]
+            },
+            "figure": {
+              "type": "null"
+            },
+            "width": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "band",
+            "figure",
+            "width"
+          ],
+          "additionalProperties": false
         }
-      },
-      "required": [
-        "band",
-        "figure",
-        "width"
       ],
-      "additionalProperties": false
+      "description": "A figure (the band is derived from it), or no figure and an estimated band."
     },
     "StiffnessFigure": {
       "type": "object",
@@ -555,8 +570,8 @@
         },
         "feelAttr": {
           "type": "string",
-          "pattern": "^(crisp|firm|soft|plush|lively)(,(crisp|firm|soft|plush|lively))*$",
-          "description": "Comma-separated feel tokens matched by the Feel chips."
+          "pattern": "^(crisp|plush|lively)?(,(crisp|plush|lively))*$",
+          "description": "Comma-separated stored feel tokens (crisp, plush, lively), possibly none. Firm and Soft come from the stiffness band."
         },
         "mains": {
           "type": "object",
@@ -637,7 +652,6 @@
                 "Very Soft",
                 "Soft",
                 "Med-Soft",
-                "Med",
                 "Medium",
                 "Med-Firm",
                 "Firm",

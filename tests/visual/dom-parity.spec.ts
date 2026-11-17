@@ -53,6 +53,11 @@ const SCENARIOS: Scenario[] = [
     steps: ['#btn-filters', chip('shape', 'hexagonal'), chip('feel', 'soft'), '#btn-filters'],
   },
   {
+    // v1.1 derives Firm/Soft from the band and moves 8 strings to Soft (legacy patch F).
+    name: 'Firm chip (v1.1 chips)',
+    steps: ['#btn-filters', chip('feel', 'firm')],
+  },
+  {
     name: 'remove a chip from the summary',
     steps: [
       '#btn-filters',

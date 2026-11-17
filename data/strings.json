@@ -3,7 +3,7 @@
     "name": "O-Toro Tour",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.23 / 17",
       "1.20 / 17+"
@@ -22,7 +22,6 @@
       "label": "Mint, Neon Green"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.1,
         "approx": false,
@@ -66,7 +65,7 @@
     "name": "Caviar",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.16 / 18",
       "1.20 / 17",
@@ -82,7 +81,6 @@
       "label": "Neon Yellow"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 1,
         "approx": false,
@@ -122,7 +120,7 @@
     "name": "Vamos",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "crisp,soft",
+    "feelAttr": "crisp",
     "gauges": [
       "1.23 / 17"
     ],
@@ -136,7 +134,7 @@
       "label": "Latte"
     },
     "stiffness": {
-      "band": "Med",
+      "band": "Medium",
       "figure": null,
       "width": 62
     },
@@ -171,7 +169,7 @@
     "name": "Cash",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 17"
     ],
@@ -224,7 +222,7 @@
     "name": "A5",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,soft",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 17"
     ],
@@ -238,7 +236,6 @@
       "label": "Carbon Gray"
     },
     "stiffness": {
-      "band": "Med",
       "figure": {
         "kgPerMm": 0.9,
         "approx": false,
@@ -278,7 +275,7 @@
     "name": "A5 Infrared",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.20 / 17+"
     ],
@@ -327,7 +324,7 @@
     "name": "O-Toro",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "soft,lively",
+    "feelAttr": "lively",
     "gauges": [
       "1.23 / 17"
     ],
@@ -357,7 +354,6 @@
       "label": "Green, White, Pink, Black, Orange"
     },
     "stiffness": {
-      "band": "Med-Soft",
       "figure": {
         "kgPerMm": 0.95,
         "approx": false,
@@ -397,7 +393,7 @@
     "name": "O-Toro Octa",
     "shape": "Octagonal",
     "shapeAttr": "octagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -411,7 +407,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.1,
         "approx": true,
@@ -451,7 +446,7 @@
     "name": "O-Toro Spin",
     "shape": "Pentagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.23 / 17"
     ],
@@ -473,7 +468,6 @@
       "label": "Pink, White, Lavender"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.95,
         "approx": true,
@@ -513,7 +507,7 @@
     "name": "O-Toro Snap",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -531,7 +525,6 @@
       "label": "Black, Mint"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.95,
         "approx": true,
@@ -571,7 +564,7 @@
     "name": "Wasabi",
     "shape": "Square",
     "shapeAttr": "square",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.23 / 17"
     ],
@@ -593,7 +586,6 @@
       "label": "Pink, Green, Purple"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": {
           "min": 0.95,
@@ -636,7 +628,7 @@
     "name": "Toro Toro",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.23 / 17",
       "1.27 / 16L"
@@ -659,7 +651,6 @@
       "label": "Pink, Orange, Matcha"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.95,
         "approx": false,
@@ -699,7 +690,7 @@
     "name": "Enso Pro (Carbon)",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.24 / 16L",
       "1.25 / 16L",
@@ -723,7 +714,6 @@
       "label": "Carbon, Pink, Matcha"
     },
     "stiffness": {
-      "band": "Med-Soft",
       "figure": {
         "kgPerMm": 0.9,
         "approx": false,
@@ -763,7 +753,7 @@
     "name": "Snapper",
     "shape": "Octagonal",
     "shapeAttr": "octagonal",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.23 / 17"
     ],
@@ -777,7 +767,6 @@
       "label": "Lavender"
     },
     "stiffness": {
-      "band": "Soft",
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
@@ -817,7 +806,7 @@
     "name": "Super Toro",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.23 / 17"
     ],
@@ -835,7 +824,6 @@
       "label": "Blue, Green"
     },
     "stiffness": {
-      "band": "Med-Soft",
       "figure": {
         "kgPerMm": 0.9,
         "approx": false,
@@ -875,7 +863,7 @@
     "name": "Truffle X",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.30 / 16"
     ],
@@ -924,7 +912,7 @@
     "name": "O-Toro Snap Tour Flex",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -977,7 +965,7 @@
     "name": "Tour Bite",
     "shape": "Square",
     "shapeAttr": "square",
-    "feelAttr": "crisp,firm,lively",
+    "feelAttr": "crisp,lively",
     "gauges": [
       "1.05–1.30",
       "(20 to 16)"
@@ -992,7 +980,6 @@
       "label": "Silver"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.12,
         "approx": false,
@@ -1036,7 +1023,7 @@
     "name": "Confidential",
     "shape": "Square",
     "shapeAttr": "square",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.15–1.30",
       "(18 to 16)"
@@ -1051,7 +1038,6 @@
       "label": "Dark Grey"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 1,
         "approx": false,
@@ -1091,7 +1077,7 @@
     "name": "Confidential Soft",
     "shape": "Shaped (4-sided)",
     "shapeAttr": "square",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.15 / 18",
       "1.20 / 17",
@@ -1143,7 +1129,7 @@
     "name": "Hyper-G",
     "shape": "Square",
     "shapeAttr": "square",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.05–1.30",
       "(20 to 16)"
@@ -1158,7 +1144,6 @@
       "label": "Hyper-Green"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.1,
         "approx": false,
@@ -1202,7 +1187,7 @@
     "name": "Mach-10",
     "shape": "Pentagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.15–1.30",
       "(18 to 16)"
@@ -1217,7 +1202,6 @@
       "label": "Blue"
     },
     "stiffness": {
-      "band": "Med-Soft",
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
@@ -1257,7 +1241,7 @@
     "name": "Tour Bite Soft",
     "shape": "Square",
     "shapeAttr": "square",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1273,7 +1257,6 @@
       "label": "Silver"
     },
     "stiffness": {
-      "band": "Med-Soft",
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
@@ -1313,7 +1296,7 @@
     "name": "Hyper-G Soft",
     "shape": "Square",
     "shapeAttr": "square",
-    "feelAttr": "soft,lively",
+    "feelAttr": "lively",
     "gauges": [
       "1.05–1.25",
       "(20 to 16L)"
@@ -1328,7 +1311,6 @@
       "label": "Green"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.95,
         "approx": false,
@@ -1368,7 +1350,7 @@
     "name": "Revolution",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1384,7 +1366,6 @@
       "label": "Blue"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 1,
         "approx": true,
@@ -1424,7 +1405,7 @@
     "name": "TB Diamond Rough",
     "shape": "Square + Textured",
     "shapeAttr": "square",
-    "feelAttr": "crisp,soft",
+    "feelAttr": "crisp",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L"
@@ -1439,7 +1420,6 @@
       "label": "Silver"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.95,
         "approx": true,
@@ -1483,7 +1463,7 @@
     "name": "Hyper-G Round",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,lively",
+    "feelAttr": "lively",
     "gauges": [
       "1.15–1.30",
       "(18 to 16)"
@@ -1498,7 +1478,6 @@
       "label": "Green"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.95,
         "approx": true,
@@ -1538,7 +1517,7 @@
     "name": "Barb Wire",
     "shape": "Twisted",
     "shapeAttr": "twisted",
-    "feelAttr": "crisp,soft",
+    "feelAttr": "crisp",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1554,7 +1533,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.95,
         "approx": true,
@@ -1598,7 +1576,7 @@
     "name": "Outlast",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1614,7 +1592,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Med-Soft",
       "figure": {
         "kgPerMm": 0.9,
         "approx": true,
@@ -1654,7 +1631,7 @@
     "name": "Vanquish (Multi)",
     "shape": "Round (multi)",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1705,7 +1682,7 @@
     "name": "Poly Tour Spin",
     "shape": "Pentagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L"
@@ -1724,7 +1701,6 @@
       "label": "Blue, Black"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.08,
         "approx": false,
@@ -1768,7 +1744,7 @@
     "name": "Poly Tour Strike",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1792,7 +1768,6 @@
       "label": "Grey, Blue, Black"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 0.92,
         "approx": false,
@@ -1832,7 +1807,7 @@
     "name": "Poly Tour Pro",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1852,7 +1827,6 @@
       "label": "Flash Yellow, Blue"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
@@ -1892,7 +1866,7 @@
     "name": "Poly Tour Rev",
     "shape": "Octagonal",
     "shapeAttr": "octagonal",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1916,7 +1890,6 @@
       "label": "Purple, Orange, White"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": {
           "min": 0.85,
@@ -1959,7 +1932,7 @@
     "name": "Poly Tour Drive",
     "shape": "Pentagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "crisp,soft",
+    "feelAttr": "crisp",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -1975,7 +1948,6 @@
       "label": "Flash Yellow"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.9,
         "approx": true,
@@ -2015,7 +1987,7 @@
     "name": "Poly Tour Force",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -2070,7 +2042,7 @@
     "name": "Poly Tour Fire",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,lively",
+    "feelAttr": "lively",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -2086,7 +2058,6 @@
       "label": "Red"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.8,
         "approx": false,
@@ -2126,7 +2097,7 @@
     "name": "Poly Tour Air",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -2140,7 +2111,6 @@
       "label": "Sky Blue"
     },
     "stiffness": {
-      "band": "Soft",
       "figure": {
         "kgPerMm": 0.72,
         "approx": false,
@@ -2180,7 +2150,7 @@
     "name": "Poly Tour Tough",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -2194,7 +2164,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Med-Soft",
       "figure": {
         "kgPerMm": 0.77,
         "approx": false,
@@ -2234,7 +2203,7 @@
     "name": "Tour Super 850 (Multi)",
     "shape": "Round (multi)",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16",
@@ -2285,7 +2254,7 @@
     "name": "Vivo",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.23 / 17",
       "1.28 / 16"
@@ -2300,7 +2269,6 @@
       "label": "Turquoise"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
@@ -2344,7 +2312,7 @@
     "name": "Sync",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.20 / 18",
       "1.25 / 17"
@@ -2359,7 +2327,6 @@
       "label": "Silver"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": {
           "min": 0.85,
@@ -2406,7 +2373,7 @@
     "name": "Zero",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.23 / 17",
       "1.28 / 16"
@@ -2421,7 +2388,6 @@
       "label": "Sky Blue"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": {
           "min": 1.05,
@@ -2468,7 +2434,7 @@
     "name": "SLAP (Ltd. Edition)",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "soft,lively",
+    "feelAttr": "lively",
     "gauges": [
       "1.23 / 17"
     ],
@@ -2482,7 +2448,6 @@
       "label": "Midnight Black"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.95,
         "approx": true,
@@ -2522,7 +2487,7 @@
     "name": "Tour Sniper",
     "shape": "Pentagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16"
@@ -2537,7 +2502,6 @@
       "label": "Grey/Silver"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
@@ -2581,7 +2545,7 @@
     "name": "Soldier",
     "shape": "Heptagonal",
     "shapeAttr": "heptagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -2595,7 +2559,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1,
         "approx": true,
@@ -2635,7 +2598,7 @@
     "name": "Tour M8",
     "shape": "Octagonal",
     "shapeAttr": "octagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16"
@@ -2650,7 +2613,6 @@
       "label": "Olive Green"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": {
           "min": 0.9,
@@ -2697,7 +2659,7 @@
     "name": "Alpha",
     "shape": "Pentagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -2711,7 +2673,6 @@
       "label": "Gold"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.9,
         "approx": false,
@@ -2751,7 +2712,7 @@
     "name": "Aspera Triplum",
     "shape": "Square + Textured",
     "shapeAttr": "square",
-    "feelAttr": "soft,lively",
+    "feelAttr": "lively",
     "gauges": [
       "1.23 / 17"
     ],
@@ -2769,7 +2730,6 @@
       "label": "Neon Yellow, Mantis"
     },
     "stiffness": {
-      "band": "Med-Soft",
       "figure": {
         "kgPerMm": 0.85,
         "approx": true,
@@ -2809,7 +2769,7 @@
     "name": "Game Changer",
     "shape": "Square",
     "shapeAttr": "square",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.20 / 17"
     ],
@@ -2823,7 +2783,6 @@
       "label": "Neon Green"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.9,
         "approx": true,
@@ -2863,7 +2822,7 @@
     "name": "Paradox Pro",
     "shape": "Round (abrasive)",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.26 / 16L",
       "1.29 / 16"
@@ -2882,7 +2841,6 @@
       "label": "Forest Green, Gold"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 0.95,
         "approx": true,
@@ -2922,7 +2880,7 @@
     "name": "Tour Mako",
     "shape": "Round (abrasive)",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush,lively",
+    "feelAttr": "plush,lively",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -2940,7 +2898,6 @@
       "label": "Teal, Silver"
     },
     "stiffness": {
-      "band": "Very Soft",
       "figure": {
         "kgPerMm": 0.45,
         "approx": false,
@@ -2980,7 +2937,7 @@
     "name": "Tour Mako Short Fin",
     "shape": "Hexagonal",
     "shapeAttr": "hexagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 17"
     ],
@@ -3029,7 +2986,7 @@
     "name": "Irukandji",
     "shape": "Rectangular-Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,lively",
+    "feelAttr": "lively",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -3043,7 +3000,6 @@
       "label": "Silver/Grey"
     },
     "stiffness": {
-      "band": "Medium",
       "figure": {
         "kgPerMm": 0.85,
         "approx": true,
@@ -3083,7 +3039,7 @@
     "name": "ALU Power",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.15 / 18",
       "1.20 / 17",
@@ -3100,7 +3056,6 @@
       "label": "Silver"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
@@ -3144,7 +3099,7 @@
     "name": "ALU Power Rough",
     "shape": "Round-Rough",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -3158,7 +3113,6 @@
       "label": "Silver"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
@@ -3202,7 +3156,7 @@
     "name": "ALU Power Soft",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft",
+    "feelAttr": "",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -3216,7 +3170,6 @@
       "label": "Pearl Silver"
     },
     "stiffness": {
-      "band": "Med",
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
@@ -3256,7 +3209,7 @@
     "name": "ALU Power Spin",
     "shape": "Pentagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.23 / 17",
       "1.27 / 16L"
@@ -3271,7 +3224,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1,
         "approx": false,
@@ -3315,7 +3267,7 @@
     "name": "ALU Power Feel",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm,lively",
+    "feelAttr": "crisp,lively",
     "gauges": [
       "1.15 / 18",
       "1.20 / 17"
@@ -3330,7 +3282,6 @@
       "label": "Silver"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 0.95,
         "approx": false,
@@ -3370,7 +3321,7 @@
     "name": "4G",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16"
@@ -3385,7 +3336,6 @@
       "label": "Gold"
     },
     "stiffness": {
-      "band": "Very Firm",
       "figure": {
         "kgPerMm": 1.1,
         "approx": false,
@@ -3429,7 +3379,7 @@
     "name": "4G Rough",
     "shape": "Round-Rough",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -3443,7 +3393,6 @@
       "label": "Gold"
     },
     "stiffness": {
-      "band": "Very Firm",
       "figure": {
         "kgPerMm": 1.1,
         "approx": false,
@@ -3487,7 +3436,7 @@
     "name": "4G Soft",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -3501,7 +3450,6 @@
       "label": "Light Gold"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 0.95,
         "approx": false,
@@ -3545,7 +3493,7 @@
     "name": "Element",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16"
@@ -3560,7 +3508,6 @@
       "label": "Cream"
     },
     "stiffness": {
-      "band": "Med",
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
@@ -3604,7 +3551,7 @@
     "name": "Adrenaline",
     "shape": "Pentagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16"
@@ -3619,7 +3566,6 @@
       "label": "Charcoal"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1,
         "approx": false,
@@ -3663,7 +3609,7 @@
     "name": "M2 Pro",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush,lively",
+    "feelAttr": "plush,lively",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16"
@@ -3678,7 +3624,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Med",
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
@@ -3722,7 +3667,7 @@
     "name": "Eco Power",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16"
@@ -3737,7 +3682,6 @@
       "label": "Eco Green"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 1,
         "approx": false,
@@ -3777,7 +3721,7 @@
     "name": "Big Hitter Black 7",
     "shape": "Heptagonal",
     "shapeAttr": "pentagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "gauges": [
       "1.20 / 17",
       "1.25 / 16L",
@@ -3793,7 +3737,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1,
         "approx": false,
@@ -3837,7 +3780,7 @@
     "name": "Big Hitter Blue Rough",
     "shape": "Round-Rough",
     "shapeAttr": "round",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.25 / 16L",
       "1.30 / 16"
@@ -3852,7 +3795,6 @@
       "label": "Blue"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
@@ -3892,7 +3834,7 @@
     "name": "Big Hitter Silver Rough",
     "shape": "Round-Rough",
     "shapeAttr": "round",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.25 / 16L"
     ],
@@ -3906,7 +3848,6 @@
       "label": "Silver"
     },
     "stiffness": {
-      "band": "Med-Firm",
       "figure": {
         "kgPerMm": 0.92,
         "approx": false,
@@ -3946,7 +3887,7 @@
     "name": "Pro 16",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "gauges": [
       "1.30 / 16"
     ],
@@ -3960,7 +3901,6 @@
       "label": "Black"
     },
     "stiffness": {
-      "band": "Firm",
       "figure": {
         "kgPerMm": 0.98,
         "approx": false,
@@ -4000,7 +3940,7 @@
     "name": "Quasi-Gut Armor",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.30 / 16"
     ],
@@ -4014,7 +3954,6 @@
       "label": "Natural"
     },
     "stiffness": {
-      "band": "Soft",
       "figure": {
         "kgPerMm": 0.65,
         "approx": false,
@@ -4058,7 +3997,7 @@
     "name": "Pro Tour",
     "shape": "Round",
     "shapeAttr": "round",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "gauges": [
       "1.30 / 16",
       "1.35 / 15L"
@@ -4073,7 +4012,6 @@
       "label": "Natural"
     },
     "stiffness": {
-      "band": "Soft",
       "figure": {
         "kgPerMm": 0.55,
         "approx": false,

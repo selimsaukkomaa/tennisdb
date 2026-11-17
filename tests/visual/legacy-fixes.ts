@@ -14,10 +14,62 @@
 //   E. v0.998: the notes column is headed "Notes" in the string and hybrid tables (v0.990:
 //      "Notes for Your Setup", 24 headers) and in compare (v0.990: "Note"). Compare redraws its
 //      table on every change, so that header is renamed whenever it appears.
+//   F. v1.1: stiffness bands by D2's thresholds on the figure (docs/phase-2-data-model.md), "Med"
+//      folded into "Medium", and the Firm/Soft chip following the band: 33 labels and 8 chips
+//      move. V0990_STIFFNESS_RULE applies it to legacy's own data, working from its labels, not
+//      from the app's code; the patch then redraws the label cells and data-feel of the rows
+//      already on the page. Compare reads the data, so it follows.
 // The CSS repeats the rules in src/styles/additions.css; a change there must change it here.
 import type { Page } from '@playwright/test';
 
+/**
+ * v1.1's stiffness rule applied to a v0.990 TENNIS_DB, in place, as JavaScript source: the
+ * legacy page runs it (patch F) and tests/data/legacy-roundtrip.test.ts runs it on the embedded
+ * blob. Throws unless exactly the declared 33 labels and 8 chips move.
+ */
+export const V0990_STIFFNESS_RULE = String.raw`((db) => {
+  const bandFor = (m) =>
+    m < 700 ? 'Very Soft' : m < 850 ? 'Soft' : m < 920 ? 'Med-Soft' : m < 980 ? 'Medium'
+      : m < 1050 ? 'Med-Firm' : m < 1100 ? 'Firm' : 'Very Firm';
+  const FIRM = ['Med-Firm', 'Firm', 'Very Firm'];
+  let labels = 0;
+  let chips = 0;
+  for (const s of db.strings) {
+    const [stored, figure] = s.stiffness.label.split(' · ');
+    let band = stored === 'Med' ? 'Medium' : stored;
+    if (figure) {
+      const n = figure.replace('~', '').split('–').map(Number);
+      band = bandFor(Math.round((n.length === 2 ? (n[0] + n[1]) / 2 : n[0]) * 1000));
+    }
+    const label = figure ? band + ' · ' + figure : band;
+    const chip = FIRM.includes(band) ? 'firm' : 'soft';
+    const feel = s.feelAttr.split(',').map((t) => (t === 'firm' || t === 'soft' ? chip : t)).join(',');
+    if (label !== s.stiffness.label) labels++;
+    if (feel !== s.feelAttr) chips++;
+    s.stiffness.label = label;
+    s.feelAttr = feel;
+  }
+  if (labels !== 33 || chips !== 8)
+    throw new Error('stiffness rule: expected 33 labels and 8 chips, got ' + labels + ' and ' + chips);
+  return db;
+})`;
+
 const LEGACY_FIXES_JS = String.raw`(() => {
+  // F (first, so every other patch sees the new data)
+  (${V0990_STIFFNESS_RULE})(window.TENNIS_DB);
+  const stringsById = new Map(window.TENNIS_DB.strings.map((s) => [s.id, s]));
+  let redrawn = 0;
+  for (const tr of document.querySelectorAll('tr[data-type="string"][data-id]')) {
+    const s = stringsById.get(tr.dataset.id);
+    const label = tr.querySelector('.bar-fill.stiff').closest('.bar-cell').querySelector('.bar-label');
+    if (label.textContent !== s.stiffness.label) {
+      label.textContent = s.stiffness.label;
+      redrawn++;
+    }
+    tr.dataset.feel = s.feelAttr;
+  }
+  if (redrawn !== 99) throw new Error('expected 99 stiffness labels redrawn (33 x 3 racquets), got ' + redrawn);
+
   const css = document.createElement('style');
   css.textContent = [
     '.gfilter-brand-header.gfilter-header-tourna { color: #1e40af; border-left-color: #1e40af; }',

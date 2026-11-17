@@ -13,6 +13,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { beforeAll, describe, expect, test } from 'vitest';
+import { feelTokens } from '../../src/core/stiffness';
 import type { TennisDb } from '../../src/core/types';
 import { APP_VERSION } from '../../src/version';
 
@@ -212,7 +213,9 @@ describe('behaviour', () => {
 // ---------------------------------------------------------------- v0.990 polish checks
 describe('v0.990: shape and feel', () => {
   const strRows = (): HTMLElement[] => $$('#regna-content tr[data-type="string"]');
-  const feelOf = (id: string): string[] => DB.strings.find((s) => s.id === id)!.feelAttr.split(',');
+  // Firm and Soft are derived from the band since v1.1; feelTokens gives all of a row's tokens.
+  const feelOf = (id: string): string[] =>
+    feelTokens(DB.strings.find((s) => s.id === id)!).split(',');
 
   test('no square-textured shapeAttr', () => {
     expect(DB.strings.some((s) => s.shapeAttr === 'square-textured')).toBe(false);
@@ -236,9 +239,10 @@ describe('v0.990: shape and feel', () => {
   });
   test('every string is exactly one of firm/soft', () => {
     expect(
-      DB.strings.every(
-        (s) => s.feelAttr.split(',').includes('firm') !== s.feelAttr.split(',').includes('soft'),
-      ),
+      strRows().every((tr) => {
+        const feel = tr.dataset.feel!.split(',');
+        return feel.includes('firm') !== feel.includes('soft');
+      }),
     ).toBe(true);
   });
   describe.each([

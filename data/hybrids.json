@@ -2,7 +2,7 @@
   {
     "name": "K-Pop",
     "shapeAttr": "hexagonal,square",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "mains": {
       "string": "Wasabi",
       "gauge": "1.23",
@@ -45,7 +45,7 @@
   {
     "name": "K-Pop Spin",
     "shapeAttr": "hexagonal,pentagonal",
-    "feelAttr": "soft,plush,lively",
+    "feelAttr": "plush,lively",
     "mains": {
       "string": "O-Toro Spin",
       "gauge": "1.23",
@@ -88,7 +88,7 @@
   {
     "name": "Dreddy",
     "shapeAttr": "hexagonal,round",
-    "feelAttr": "crisp,firm,lively",
+    "feelAttr": "crisp,lively",
     "mains": {
       "string": "O-Toro Tour",
       "gauge": "1.23",
@@ -131,7 +131,7 @@
   {
     "name": "Stevie",
     "shapeAttr": "hexagonal,round",
-    "feelAttr": "firm,plush",
+    "feelAttr": "plush",
     "mains": {
       "string": "O-Toro Tour",
       "gauge": "1.23",
@@ -174,7 +174,7 @@
   {
     "name": "101",
     "shapeAttr": "hexagonal,round",
-    "feelAttr": "soft,plush,lively",
+    "feelAttr": "plush,lively",
     "mains": {
       "string": "O-Toro",
       "gauge": "1.23",
@@ -217,7 +217,7 @@
   {
     "name": "O-Snap",
     "shapeAttr": "hexagonal,round",
-    "feelAttr": "crisp,soft,lively",
+    "feelAttr": "crisp,lively",
     "mains": {
       "string": "O-Toro",
       "gauge": "1.23",
@@ -260,7 +260,7 @@
   {
     "name": "Wasabi Pro",
     "shapeAttr": "round,square",
-    "feelAttr": "firm",
+    "feelAttr": "",
     "mains": {
       "string": "Wasabi",
       "gauge": "1.23",
@@ -303,7 +303,7 @@
   {
     "name": "What The Hybrid",
     "shapeAttr": "hexagonal,square",
-    "feelAttr": "soft,plush",
+    "feelAttr": "plush",
     "mains": {
       "string": "Wasabi",
       "gauge": "1.23",
@@ -346,7 +346,7 @@
   {
     "name": "Snapaholic",
     "shapeAttr": "octagonal,round",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "mains": {
       "string": "Snapper",
       "gauge": "1.23",
@@ -389,7 +389,7 @@
   {
     "name": "Cole",
     "shapeAttr": "hexagonal",
-    "feelAttr": "crisp,firm",
+    "feelAttr": "crisp",
     "mains": {
       "string": "O-Toro Tour 1.23 Mint",
       "gauge": "",

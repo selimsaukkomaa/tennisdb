@@ -6,6 +6,165 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.1 — Stiffness bands by rule
+
+**Date:** 2026-11-17
+**Base:** v1.0 (plain-text data)
+**Status:** visible release. Phase 2 step 3, first release
+(`docs/phase-2-data-model.md`, D2 and the Firm/Soft part of D8): a string's
+stiffness band is derived from its lab figure by fixed thresholds, and the
+Firm/Soft feel chip from the band. 33 stiffness labels change and 8 strings
+move from the Firm chip to the Soft one. The owner approved the full list on
+2026-11-17 after a preview with screenshots. No note content changed;
+`TENNIS_DB.version` stays `0.990`.
+
+---
+
+## The rule
+
+| Very Soft | Soft | Med-Soft | Medium | Med-Firm | Firm | Very Firm |
+|---|---|---|---|---|---|---|
+| < 0.70 | 0.70–0.84 | 0.85–0.91 | 0.92–0.97 | 0.98–1.04 | 1.05–1.09 | ≥ 1.10 |
+
+On the figure in kg/mm, or a range's midpoint. "Med" folds into "Medium".
+Med-Firm and firmer carry the Firm chip, Medium and softer the Soft one, as
+in v0.990.
+
+- **62 strings with a figure** store no band any more: `bandFor()` in
+  `src/core/stiffness.ts` derives it.
+- **10 strings without a figure** store their band as an estimate, and the
+  hybrids store theirs as a judgement of the bed. Only Vamos changes: "Med"
+  becomes "Medium".
+- **Firm/Soft** is no longer stored in `feelAttr`, which now holds Crisp,
+  Plush and Lively only (25 rows hold none); `feelTokens()` adds Firm or Soft
+  from the band, in v0.990's place, after Crisp.
+- **Bar widths** are unchanged until D3, so a bar can sit out of step with its
+  new label until then (ALU Power Soft reads Med-Soft on its old bar).
+
+## Labels that change (33)
+
+| String | Brand | Was | Now | Chip |
+|---|---|---|---|---|
+| O-Toro Tour | Toroline | Firm · 1.10 | Very Firm · 1.10 | |
+| Vamos | Toroline | Med | Medium | |
+| A5 | Toroline | Med · 0.90 | Med-Soft · 0.90 | |
+| O-Toro | Toroline | Med-Soft · 0.95 | Medium · 0.95 | |
+| O-Toro Octa | Toroline | Firm · ~1.10 | Very Firm · ~1.10 | |
+| Snapper | Toroline | Soft · 0.85 | Med-Soft · 0.85 | |
+| Tour Bite | Solinco | Firm · 1.12 | Very Firm · 1.12 | |
+| Hyper-G | Solinco | Firm · 1.10 | Very Firm · 1.10 | |
+| Poly Tour Strike | Yonex | Med-Firm · 0.92 | Medium · 0.92 | Firm → Soft |
+| Poly Tour Pro | Yonex | Med-Firm · 1.05 | Firm · 1.05 | |
+| Poly Tour Rev | Yonex | Med-Firm · 0.85–0.95 | Med-Soft · 0.85–0.95 | Firm → Soft |
+| Poly Tour Drive | Yonex | Medium · ~0.90 | Med-Soft · ~0.90 | |
+| Poly Tour Fire | Yonex | Medium · 0.80 | Soft · 0.80 | |
+| Poly Tour Tough | Yonex | Med-Soft · 0.77 | Soft · 0.77 | |
+| Sync | ReString | Med-Firm · 0.85–0.95 | Med-Soft · 0.85–0.95 | Firm → Soft |
+| Soldier | Grapplesnake | Firm · ~1.00 | Med-Firm · ~1.00 | |
+| Tour M8 | Grapplesnake | Med-Firm · 0.90–0.95 | Medium · 0.90–0.95 | Firm → Soft |
+| Alpha | Grapplesnake | Medium · 0.90 | Med-Soft · 0.90 | |
+| Game Changer | Grapplesnake | Medium · ~0.90 | Med-Soft · ~0.90 | |
+| Paradox Pro | Grapplesnake | Med-Firm · ~0.95 | Medium · ~0.95 | Firm → Soft |
+| Irukandji | Grapplesnake | Medium · ~0.85 | Med-Soft · ~0.85 | |
+| ALU Power Soft | Luxilon | Med · 0.85 | Med-Soft · 0.85 | |
+| ALU Power Spin | Luxilon | Firm · 1.00 | Med-Firm · 1.00 | |
+| ALU Power Feel | Luxilon | Med-Firm · 0.95 | Medium · 0.95 | Firm → Soft |
+| 4G Soft | Luxilon | Med-Firm · 0.95 | Medium · 0.95 | Firm → Soft |
+| Element | Luxilon | Med · 0.85 | Med-Soft · 0.85 | |
+| Adrenaline | Luxilon | Firm · 1.00 | Med-Firm · 1.00 | |
+| M2 Pro | Luxilon | Med · 0.85 | Med-Soft · 0.85 | |
+| Big Hitter Black 7 | Tourna | Firm · 1.00 | Med-Firm · 1.00 | |
+| Big Hitter Silver Rough | Tourna | Med-Firm · 0.92 | Medium · 0.92 | Firm → Soft |
+| Pro 16 | Tourna | Firm · 0.98 | Med-Firm · 0.98 | |
+| Quasi-Gut Armor | Tourna | Soft · 0.65 | Very Soft · 0.65 | |
+| Pro Tour | Tourna | Soft · 0.55 | Very Soft · 0.55 | |
+
+Of the 32 moves with a figure, 22 go one step softer, 7 one step firmer and 3
+two steps softer; Vamos is the fold. The Firm chip now shows 27 strings
+(was 35) and Soft 45 (was 37). The hybrids' chips don't change.
+
+`scripts/derive-stiffness-bands.ts` (one-off) ran on a sample batch first.
+Before writing, it asserts exactly these moves by id, the fold and the 8
+chips, that every other band and chip comes out as stored, that Firm or Soft
+sat in its usual place in every `feelAttr`, and that 25 rows are left with no
+stored token.
+
+**Validation.** The schema allows a stored band exactly when there is no
+figure, drops "Med", and keeps Firm and Soft out of `feelAttr`. v0.990's
+`firm-xor-soft` and `firm-soft-band` rules are retired: both hold by
+construction.
+
+## Declared differences from v0.990 (added in v1.1)
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| 33 stiffness labels (above) | yes | F: `V0990_STIFFNESS_RULE` applies the rule to legacy's own labels and data (it throws unless exactly 33 labels and 8 chips move); the 99 label cells on the page (33 × 3 racquets) and each row's `data-feel` are redrawn. Compare reads the patched data |
+| 8 strings under Soft instead of Firm | in the Feel filters | F, as above |
+
+The rule in patch F works from v0.990's labels, not from the app's code, and
+`tests/data/legacy-roundtrip.test.ts` compares the data with the same change
+applied to the v0.990 blob, so everything else is still checked value for
+value. A new DOM scenario, "Firm chip", covers the chips.
+
+---
+
+## Data corrections
+
+None. The label changes are the rule's, listed above.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991). Poly Tour Pro moves to Firm at
+1.05; its source conflict stays flagged.
+
+## Verification
+
+`npm run check` passes: 339 Vitest tests (317 in v1.0), 60 Playwright tests
+(59 in v1.0).
+
+- **New tests:** 20 in `tests/unit/stiffness.test.ts` (every band's lower
+  bound and the value below it, range midpoints without floating-point drift,
+  labels, feel tokens and their order, the 8 chips); four shapes the schema
+  rejects (a stored band beside a figure, no figure and no band, "Med", a
+  stored Firm token); the "Firm chip" DOM scenario. Two mutation tests retired
+  with `firm-xor-soft` and `firm-soft-band`.
+- **Against v0.990:** with the declared change applied to the blob, the data
+  equals v0.990's value for value and serialises to the same length.
+- **Parity:** all 15 pixel views and 25 DOM scenarios pass. Without patch F,
+  the load and "Firm chip" DOM scenarios and the phone's default and compare
+  views fail. (On the desktop pixel views the changed labels stay under the
+  0.1% threshold; the DOM scenarios check every label's text.)
+
+## File size
+
+| | v1.0 | v1.1 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 456,362 | 454,826 | −1.5 KB (−0.3%) |
+| gzip | 103,102 | 103,314 | +0.2 KB |
+
+The data loses the 62 derived bands and 82 Firm/Soft tokens; the code adds
+the rule.
+
+## Still open
+
+Unchanged from v1.0, except:
+
+- **New: texts that use an old band word.** 51 texts in 17 of the moved rows
+  (notes, feel summaries and feel texts) still use the old band word, some now
+  at odds with their row: Poly Tour Rev's summary "Firm but dampened" sits
+  under the Soft chip, Tour M8's "Octagonal, medium-firm" beside Medium. They
+  are the next release, the notes pass, starting with a sample of five.
+- **New: hybrid side labels.** 14 of the hybrids' side labels ("Hexagonal ·
+  Firm") name a band word their string no longer has: 8 already did, 6 are
+  new (O-Toro Tour's three, O-Toro's three). Left as written by the owner's
+  decision, for the notes pass.
+
+Next in Phase 2 step 3: the notes that use an old band word (D2), sample of
+five first; then the bar scale and the footers' wording (D3); then one colour
+per grip tag label (D8).
+
+---
+
 # v1.0 — Plain-text data
 
 **Date:** 2026-11-17
