@@ -886,10 +886,8 @@
         "specs": {
           "type": "array",
           "items": {
-            "type": "string",
-            "minLength": 1
-          },
-          "description": "May contain inline HTML (one <em> today)."
+            "$ref": "#/$defs/GripSpec"
+          }
         },
         "tackiness": {
           "$ref": "#/$defs/TackinessRating"
@@ -966,6 +964,24 @@
         "id"
       ],
       "additionalProperties": false
+    },
+    "GripSpec": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "emphasis": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "text",
+        "emphasis"
+      ],
+      "additionalProperties": false,
+      "description": "One line of the specs of a grip; emphasis draws it in amber."
     },
     "TackinessRating": {
       "type": "object",

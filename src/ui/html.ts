@@ -18,8 +18,8 @@ export function esc(s: unknown): string {
 }
 
 /**
- * Marks trusted markup to pass through unescaped. Used for data fields that v0.990 rendered as
- * HTML (notes, grip specs, copy blocks).
+ * Marks trusted markup to pass through unescaped: the views' own fixed markup and the HTML copy
+ * in content/copy.json. Nothing in data/ is HTML since v1.0 (validate.ts: plain-text).
  */
 export function raw(s: string | null | undefined): SafeHtml {
   return new SafeHtml(s ?? '');

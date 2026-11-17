@@ -24,6 +24,7 @@ export type Colors = StringRec['colors'];
 export type Hybrid = z.infer<typeof S.HybridSchema>;
 export type HybridSide = Hybrid['mains'];
 export type Grip = z.infer<typeof S.GripSchema>;
+export type GripSpec = z.infer<typeof S.GripSpecSchema>;
 export type GutString = z.infer<typeof S.GutStringSchema>;
 export type GutPairing = z.infer<typeof S.GutPairingSchema>;
 export type GutSide = GutPairing['mains'];

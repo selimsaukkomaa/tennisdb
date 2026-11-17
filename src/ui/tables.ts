@@ -1,6 +1,15 @@
 // Table markup and row builders, ported from v0.990's tennis-renderer. Rows are built without
 // whitespace between cells, exactly as the legacy string concatenation produced them.
-import type { Bar, Colors, FeelTag, Grip, Hybrid, HybridSide, StringRec } from '../core/types';
+import type {
+  Bar,
+  Colors,
+  FeelTag,
+  Grip,
+  GripSpec,
+  Hybrid,
+  HybridSide,
+  StringRec,
+} from '../core/types';
 import type { PerRacquet } from '../core/pairings';
 import { ratingBar } from '../core/ratings';
 import { stiffnessBar } from '../core/stiffness';
@@ -50,9 +59,9 @@ function tensionCell(tension: string): SafeHtml {
   return html`<td style="white-space:nowrap; font-family:'Space Mono', monospace; font-size:0.78rem; color:#555;">${tension}</td>`;
 }
 
-/** v0.990 notes were extracted as innerHTML and are rendered as HTML. */
+/** Notes are plain text since v1.0 (v0.990 injected them as HTML; none held markup). */
 function notesCell(note: string | undefined): SafeHtml {
-  return html`<td class="notes">${raw(note)}</td>`;
+  return html`<td class="notes">${note}</td>`;
 }
 
 function hybridSideCell(side: HybridSide | undefined): SafeHtml {
@@ -97,10 +106,14 @@ export function hybridRow(h: Hybrid, per: PerRacquet | undefined): SafeHtml {
   ]}</tr>`;
 }
 
-/** Grip specs may carry inline HTML (one <em> today), rendered as-is like v0.990. */
-function specsCell(specs: readonly string[] | undefined): SafeHtml {
+/** A grip spec line; an emphasised one is amber, the markup v0.990 stored in the data. */
+export function specHtml(spec: GripSpec): SafeHtml {
+  return spec.emphasis ? html`<em style="color:#d97706;">${spec.text}</em>` : html`${spec.text}`;
+}
+
+function specsCell(specs: readonly GripSpec[] | undefined): SafeHtml {
   if (!specs?.length) return raw('<td></td>');
-  return html`<td><span style="font-family:'Space Mono',monospace;font-size:0.72rem;">${raw(specs.join('<br>'))}</span></td>`;
+  return html`<td><span style="font-family:'Space Mono',monospace;font-size:0.72rem;">${join(specs.map(specHtml), BR)}</span></td>`;
 }
 
 function colorsPlainCell(colors: string | undefined): SafeHtml {

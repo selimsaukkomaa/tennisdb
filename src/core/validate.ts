@@ -29,6 +29,9 @@ export const GRIP_VERDICT_LANGUAGE =
 /** Grip About boxes (v0.990 smoke suite). */
 export const ABOUT_VERDICT_LANGUAGE = /\byour?\b|\bstrong\b|prefer/i;
 
+/** A tag or a character entity, which plain text never holds. A bare "&" is text. */
+export const MARKUP = /<[a-zA-Z/!]|&(#\d+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);/;
+
 /** Stiffness bands: Med-Firm and firmer is Firm, Medium and softer is Soft (v0.990 rule). */
 export const FIRM_BANDS = new Set(['Very Firm', 'Firm', 'Med-Firm']);
 
@@ -216,6 +219,17 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
       fail('neutral-grip-text', `about/${brand}`, 'verdict language in About box');
     }
   }
+
+  // ---- plain text: since v1.0 nothing in data/ is HTML (the copy in content/ still is)
+  const plainText = (v: unknown, path: PropertyKey[]): void => {
+    if (typeof v === 'string') {
+      if (MARKUP.test(v)) fail('plain-text', describePath(db, path), 'a tag or an entity in text');
+    } else if (v && typeof v === 'object') {
+      for (const [k, x] of Object.entries(v))
+        plainText(x, [...path, Array.isArray(v) ? Number(k) : k]);
+    }
+  };
+  plainText(db, []);
 
   // ---- notes present for every racquet
   for (const r of rows) {

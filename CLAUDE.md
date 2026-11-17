@@ -6,8 +6,8 @@ Pages (`https://selimsaukkomaa.github.io/tennisdb/`) and as an iOS app (Capacito
 called EquipDB until v0.993.
 
 v0.991 was a parity port of the single-file v0.990 app in `legacy/`: same behaviour, same
-look, same data. v0.992 fixed three v0.990 bugs; v0.993 renamed the app. v0.999 is the last
-number of that scheme: the release after it is v1.0. Release history is in `CHANGELOG.md`;
+look, same data. v0.992 fixed three v0.990 bugs; v0.993 renamed the app. v0.999 was the last
+number of that scheme; v1.0 came next. Release history is in `CHANGELOG.md`;
 v0.989 and v0.990 are in `legacy/`.
 
 ## Conventions
@@ -79,7 +79,8 @@ src/styles/        v0.990 CSS split verbatim, imported in cascade order; additio
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
-                   migrate-racquets, migrate-stiffness, migrate-ratings) are not meant to run again
+                   migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs) are not
+                   meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -105,8 +106,8 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
 - `src/core` has no DOM access; ESLint's `no-restricted-globals` enforces it. Keep data and
   logic there so a native SwiftUI app can reuse the model later.
 - `src/ui` renders with the `html` tagged template, which escapes interpolations; `raw()` is
-  only for trusted HTML from `data/` and `content/`. Events go through delegation on `data-*`
-  hooks.
+  only for trusted HTML from `content/`. Everything in `data/` is plain text since v1.0 (the
+  `plain-text` rule). Events go through delegation on `data-*` hooks.
 - Modules talk through `state.ts` (active category and racquet) and its event bus
   (`category`, `racquet`, `filtered`, `log`), not window globals.
 - Racquets are data-driven. A fourth frame needs a `racquets.json` entry, a pairing (tension
@@ -152,7 +153,7 @@ neutral text, notes present for every racquet, firm-xor-soft against the stiffne
 Crisp chip ⇔ Crisp tag, every feel chip used, grip type ⇔ chip, one colour per tag label
 with CSS for every variant, a filter-header colour for every grip brand, bar-backed claims
 (Mega Tac, Tourna Grip Original), rating words in the order of their lists, id and reference
-integrity, no "Connected" vocabulary.
+integrity, no "Connected" vocabulary, no tag or entity anywhere in `data/`.
 `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in
 source, `index.html`, these two docs or `docs/`. Every rule and each kind of schema check has
 a mutation test in `tests/data/validate.test.ts`; `tests/data/schemas.test.ts` checks that

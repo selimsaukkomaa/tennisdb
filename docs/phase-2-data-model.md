@@ -241,6 +241,12 @@ rules stay in `validate.ts` rather than becoming refinements, because JSON
 Schema can't carry code. Plain-text notes and the structured grip spec come in
 step 2.
 
+**Done in v1.0 (plain text):** the one grip spec with markup is
+`{ text: "Made in USA", emphasis: true }`, and all 73 specs take that shape so
+every reader handles one. No note held markup, so no note changed; the views
+now escape notes like any other text. The `plain-text` rule keeps tags and
+entities out of every string in `data/`. The copy in `content/` stays HTML.
+
 ### D10. Order of work
 
 Each step is its own release, and each stops for the owner's review.
@@ -253,8 +259,9 @@ Each step is its own release, and each stops for the owner's review.
    *done in v0.997*;
    stiffness storage with `source: 'legacy'` (D1), *done in v0.998*; ratings as
    `{ score, label }` (D5), *done in v0.999*; plain-text notes and the
-   structured grip spec (D9), which ships as v1.0 (the owner's call on
-   2026-11-16: v0.999 is the last number of the old scheme).
+   structured grip spec (D9), *done in v1.0* (the owner's call on
+   2026-11-16: v0.999 was the last number of the old scheme). Step 2 is
+   complete.
    The migration script asserts every count and runs on a sample first.
 3. **Visible changes**, one release each, with declared differences:
    - stiffness labels and the 8 Firm/Soft chips (D2, D8);

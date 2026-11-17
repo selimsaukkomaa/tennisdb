@@ -6,6 +6,113 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.0 — Plain-text data
+
+**Date:** 2026-11-17
+**Base:** v0.999 (ratings as values)
+**Status:** model release, no visible change. Phase 2 step 2, sixth and last
+move (`docs/phase-2-data-model.md`, D9): nothing in `data/` is HTML any more.
+The one grip spec that held markup is structured, and notes are rendered as
+text. No note content changed; `TENNIS_DB.version` stays `0.990`.
+
+The first release of the new numbering (the owner's decision, 2026-11-16):
+the version tag reads v1.0. The iOS app's own version number was already 1.0.
+
+With this, Phase 2 step 2 is complete: every move that renders identically has
+shipped. Step 3, the visible changes, is next.
+
+---
+
+## Grip specs as values
+
+| | Was | Now |
+|---|---|---|
+| Kimony Tourna, second spec | `"<em style=\"color:#d97706;\">Made in USA</em>"` | `{ text: "Made in USA", emphasis: true }` |
+| Any other spec | `"29mm × 105cm"` | `{ text: "29mm × 105cm", emphasis: false }` |
+
+- All 73 specs on the 35 grips take the same shape, `emphasis` always stated,
+  so every reader handles one shape. Exactly one is emphasised.
+- Tourna Tac's "Made in USA" was plain in v0.990 and stays plain.
+- `specHtml()` in `src/ui/tables.ts` draws an emphasised spec in the same
+  amber `<em>` as before.
+
+## Notes as text
+
+None of the 302 notes (246 pairing notes, 35 grip notes, 21 gut notes) held a
+tag or an entity, so none changed. The string and hybrid tables and compare
+injected them as HTML, as v0.990 did; they now escape them like any other
+text. The grip and gut tables already did. `raw()` is left for the views' own
+markup and the HTML copy in `content/copy.json`.
+
+## Search: a markup quirk fixed
+
+Search read the spec's inline HTML, so searching "d97706" or "style" found
+Kimony Tourna. It now reads the text only. "Made in USA" still finds it. No
+parity view searches for these, so the suite needs no declared difference;
+`tests/unit/search.test.ts` checks both.
+
+`scripts/migrate-specs.ts` (one-off) ran on a sample batch first (Kimony
+Tourna, Hi-Soft EX, Tourna Tac). Before writing, it asserts 35 grips, 73
+specs, exactly one emphasised, that every spec prints back to the string it
+was, that nothing else in `grips.json` changes, and that none of the 4,066
+strings in `data/` holds a tag or an entity.
+
+**Validation.** The schema fixes the spec shape (`GripSpec`). New rule:
+`plain-text`, no string anywhere in `data/` holds a tag or a character
+entity; a bare "&" is text ("Anti-bacterial & deodorizing").
+
+## Declared differences from v0.990
+
+None added.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991).
+
+## Verification
+
+`npm run check` passes: 317 Vitest tests (309 in v0.999), 59 Playwright tests.
+
+- **New tests, 8:** four `plain-text` cases (a tag in a pairing note, an
+  entity in a gut note, a tag in a grip spec, a tag in a string's feel
+  text); two shapes the schema rejects (a spec as a string, a spec without
+  its emphasis flag); a standard JSON Schema validator rejecting a spec as a
+  string; and the search check above.
+- **Against v0.990:** converted back with `specHtml`, the data still equals
+  v0.990's value for value, and serialises to the same length.
+- **Parity:** all 15 pixel views and 24 DOM scenarios pass with no new
+  declared difference. Both the grips view and the compare view draw specs or
+  notes, now through escaping.
+- **Schemas:** `schemas/tennisdb.schema.json` regenerated with a `GripSpec`
+  definition.
+
+## File size
+
+| | v0.999 | v1.0 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 454,685 | 456,362 | +1.7 KB (+0.4%) |
+| gzip | 102,987 | 103,102 | +0.1 KB |
+
+The structured specs add the bytes: `emphasis` on each of the 73.
+
+## Still open
+
+Unchanged from v0.999. Next, Phase 2 step 3, the visible changes, one release
+each with declared differences:
+
+- stiffness labels and the 8 Firm/Soft chips (D2, D8);
+- the notes that use an old band word, sample of five first (D2);
+- the bar scale and the footers' new wording (D3);
+- one colour per grip tag label, with screenshots first (D8).
+
+---
+
 # v0.999 — Ratings as values
 
 **Date:** 2026-11-16

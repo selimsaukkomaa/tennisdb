@@ -9,8 +9,14 @@
           "KGT214 (12pk)"
         ],
         "specs": [
-          "0.50mm",
-          "29mm × 105cm"
+          {
+            "text": "0.50mm",
+            "emphasis": false
+          },
+          {
+            "text": "29mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 97,
@@ -50,8 +56,14 @@
           "KGT133 (3pk)"
         ],
         "specs": [
-          "0.33mm",
-          "29mm × 105cm"
+          {
+            "text": "0.33mm",
+            "emphasis": false
+          },
+          {
+            "text": "29mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 95,
@@ -91,8 +103,14 @@
           "KGT135 (3pk)"
         ],
         "specs": [
-          "0.50mm",
-          "29mm × 105cm"
+          {
+            "text": "0.50mm",
+            "emphasis": false
+          },
+          {
+            "text": "29mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 90,
@@ -130,8 +148,14 @@
         "model": "KGT107",
         "modelVariants": [],
         "specs": [
-          "0.50–3.10mm",
-          "29mm × 105cm"
+          {
+            "text": "0.50–3.10mm",
+            "emphasis": false
+          },
+          {
+            "text": "29mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 88,
@@ -169,8 +193,14 @@
         "model": "KGT109",
         "modelVariants": [],
         "specs": [
-          "0.50–3.10mm",
-          "29mm × 105cm"
+          {
+            "text": "0.50–3.10mm",
+            "emphasis": false
+          },
+          {
+            "text": "29mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 88,
@@ -208,7 +238,10 @@
         "model": "KGT112",
         "modelVariants": [],
         "specs": [
-          "0.50–3.10mm"
+          {
+            "text": "0.50–3.10mm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 88,
@@ -248,8 +281,14 @@
           "KGT137 (3pk)"
         ],
         "specs": [
-          "0.68mm",
-          "27mm × 105cm"
+          {
+            "text": "0.68mm",
+            "emphasis": false
+          },
+          {
+            "text": "27mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 90,
@@ -287,8 +326,14 @@
         "model": "KGT138",
         "modelVariants": [],
         "specs": [
-          "0.68mm",
-          "27mm × 105cm"
+          {
+            "text": "0.68mm",
+            "emphasis": false
+          },
+          {
+            "text": "27mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 92,
@@ -326,8 +371,14 @@
         "model": "KGT140",
         "modelVariants": [],
         "specs": [
-          "0.50mm",
-          "27mm × 105cm"
+          {
+            "text": "0.50mm",
+            "emphasis": false
+          },
+          {
+            "text": "27mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 88,
@@ -367,8 +418,14 @@
           "KGT501 (3pk)"
         ],
         "specs": [
-          "0.68mm",
-          "27mm × 105cm"
+          {
+            "text": "0.68mm",
+            "emphasis": false
+          },
+          {
+            "text": "27mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 60,
@@ -410,8 +467,14 @@
           "KGT142 (3pk)"
         ],
         "specs": [
-          "0.50mm",
-          "29mm × 98cm"
+          {
+            "text": "0.50mm",
+            "emphasis": false
+          },
+          {
+            "text": "29mm × 98cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 22,
@@ -452,8 +515,14 @@
           "KGT215 (12pk)"
         ],
         "specs": [
-          "0.68mm",
-          "29mm × 105cm"
+          {
+            "text": "0.68mm",
+            "emphasis": false
+          },
+          {
+            "text": "29mm × 105cm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 35,
@@ -491,7 +560,10 @@
         "model": "KGT159",
         "modelVariants": [],
         "specs": [
-          "Dry type"
+          {
+            "text": "Dry type",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 25,
@@ -531,8 +603,14 @@
           "KGT147 (30pk)"
         ],
         "specs": [
-          "Dry type",
-          "<em style=\"color:#d97706;\">Made in USA</em>"
+          {
+            "text": "Dry type",
+            "emphasis": false
+          },
+          {
+            "text": "Made in USA",
+            "emphasis": true
+          }
         ],
         "tackiness": {
           "score": 18,
@@ -573,7 +651,10 @@
         "material": "Leather",
         "materialVariant": "leather",
         "specs": [
-          "Replacement grip"
+          {
+            "text": "Replacement grip",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {
@@ -599,8 +680,14 @@
         "material": "Leather",
         "materialVariant": "leather",
         "specs": [
-          "0.80mm · 25mm × 117cm",
-          "~13g"
+          {
+            "text": "0.80mm · 25mm × 117cm",
+            "emphasis": false
+          },
+          {
+            "text": "~13g",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {
@@ -626,8 +713,14 @@
         "material": "Leather",
         "materialVariant": "leather",
         "specs": [
-          "1.50mm · 25mm × 117cm",
-          "~18g"
+          {
+            "text": "1.50mm · 25mm × 117cm",
+            "emphasis": false
+          },
+          {
+            "text": "~18g",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {
@@ -653,8 +746,14 @@
         "material": "Synthetic (PU)",
         "materialVariant": "wet",
         "specs": [
-          "1.70mm · 23mm",
-          "~20g"
+          {
+            "text": "1.70mm · 23mm",
+            "emphasis": false
+          },
+          {
+            "text": "~20g",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {
@@ -687,8 +786,14 @@
           "AC102-60 (60pk)"
         ],
         "specs": [
-          "0.60mm",
-          "25mm × 1200mm"
+          {
+            "text": "0.60mm",
+            "emphasis": false
+          },
+          {
+            "text": "25mm × 1200mm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 88,
@@ -726,8 +831,14 @@
         "model": "AC103",
         "modelVariants": [],
         "specs": [
-          "0.60mm",
-          "25mm × 1200mm"
+          {
+            "text": "0.60mm",
+            "emphasis": false
+          },
+          {
+            "text": "25mm × 1200mm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 93,
@@ -765,8 +876,14 @@
         "model": "AC108",
         "modelVariants": [],
         "specs": [
-          "0.60mm",
-          "25mm × 1200mm"
+          {
+            "text": "0.60mm",
+            "emphasis": false
+          },
+          {
+            "text": "25mm × 1200mm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 82,
@@ -804,8 +921,14 @@
         "model": "AC104",
         "modelVariants": [],
         "specs": [
-          "0.60–2.60mm",
-          "28mm × 1020mm"
+          {
+            "text": "0.60–2.60mm",
+            "emphasis": false
+          },
+          {
+            "text": "28mm × 1020mm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 78,
@@ -843,8 +966,14 @@
         "model": "AC147",
         "modelVariants": [],
         "specs": [
-          "0.60mm",
-          "25mm × 1200mm"
+          {
+            "text": "0.60mm",
+            "emphasis": false
+          },
+          {
+            "text": "25mm × 1200mm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 83,
@@ -884,8 +1013,14 @@
         "model": "AC140",
         "modelVariants": [],
         "specs": [
-          "0.65mm",
-          "25mm × 1200mm"
+          {
+            "text": "0.65mm",
+            "emphasis": false
+          },
+          {
+            "text": "25mm × 1200mm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 25,
@@ -926,8 +1061,14 @@
           "AC149-60 (60pk)"
         ],
         "specs": [
-          "0.45mm",
-          "27mm × 1100mm"
+          {
+            "text": "0.45mm",
+            "emphasis": false
+          },
+          {
+            "text": "27mm × 1100mm",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 42,
@@ -968,8 +1109,14 @@
         "material": "Leather",
         "materialVariant": "leather",
         "specs": [
-          "1.40mm · 27mm × 1000mm",
-          "~37g"
+          {
+            "text": "1.40mm · 27mm × 1000mm",
+            "emphasis": false
+          },
+          {
+            "text": "~37g",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {
@@ -995,7 +1142,10 @@
         "material": "Synthetic (PU)",
         "materialVariant": "wet",
         "specs": [
-          "1.60mm · 25mm × 1200mm"
+          {
+            "text": "1.60mm · 25mm × 1200mm",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {
@@ -1021,7 +1171,10 @@
         "material": "Synthetic (PU)",
         "materialVariant": "wet",
         "specs": [
-          "1.60mm · 25mm × 1200mm"
+          {
+            "text": "1.60mm · 25mm × 1200mm",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {
@@ -1053,9 +1206,18 @@
           "TAC-10 (10-pack)"
         ],
         "specs": [
-          "Wet/tacky",
-          "Made in USA",
-          "0.55 mm thick"
+          {
+            "text": "Wet/tacky",
+            "emphasis": false
+          },
+          {
+            "text": "Made in USA",
+            "emphasis": false
+          },
+          {
+            "text": "0.55 mm thick",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 80,
@@ -1092,9 +1254,18 @@
           "MEGA-10 (10-pack)"
         ],
         "specs": [
-          "Wet/very tacky",
-          "Made in USA",
-          "0.60 mm thick"
+          {
+            "text": "Wet/very tacky",
+            "emphasis": false
+          },
+          {
+            "text": "Made in USA",
+            "emphasis": false
+          },
+          {
+            "text": "0.60 mm thick",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 92,
@@ -1134,9 +1305,18 @@
           "XL-30 (30-pack tour)"
         ],
         "specs": [
-          "Dry",
-          "Made in USA",
-          "0.45 mm thick"
+          {
+            "text": "Dry",
+            "emphasis": false
+          },
+          {
+            "text": "Made in USA",
+            "emphasis": false
+          },
+          {
+            "text": "0.45 mm thick",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 18,
@@ -1174,10 +1354,22 @@
         "model": "TG-XL",
         "modelVariants": [],
         "specs": [
-          "Dry",
-          "Made in USA",
-          "0.45 mm",
-          "Extra long"
+          {
+            "text": "Dry",
+            "emphasis": false
+          },
+          {
+            "text": "Made in USA",
+            "emphasis": false
+          },
+          {
+            "text": "0.45 mm",
+            "emphasis": false
+          },
+          {
+            "text": "Extra long",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 18,
@@ -1215,9 +1407,18 @@
         "model": "TG-PT",
         "modelVariants": [],
         "specs": [
-          "Dry",
-          "Made in USA",
-          "0.40 mm thick"
+          {
+            "text": "Dry",
+            "emphasis": false
+          },
+          {
+            "text": "Made in USA",
+            "emphasis": false
+          },
+          {
+            "text": "0.40 mm thick",
+            "emphasis": false
+          }
         ],
         "tackiness": {
           "score": 18,
@@ -1258,9 +1459,18 @@
         "material": "Leather",
         "materialVariant": "leather",
         "specs": [
-          "Replacement grip",
-          "Made in USA",
-          "Premium calf leather"
+          {
+            "text": "Replacement grip",
+            "emphasis": false
+          },
+          {
+            "text": "Made in USA",
+            "emphasis": false
+          },
+          {
+            "text": "Premium calf leather",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {
@@ -1286,9 +1496,18 @@
         "material": "Synthetic",
         "materialVariant": "synthetic",
         "specs": [
-          "Replacement grip",
-          "~1.6 mm thick",
-          "Cushioned"
+          {
+            "text": "Replacement grip",
+            "emphasis": false
+          },
+          {
+            "text": "~1.6 mm thick",
+            "emphasis": false
+          },
+          {
+            "text": "Cushioned",
+            "emphasis": false
+          }
         ],
         "feelTags": [
           {

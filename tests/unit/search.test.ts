@@ -28,6 +28,13 @@ describe('search index', () => {
     expect(gut.sublabel).toBe('⬆ Gut Mains · Regna 100');
   });
 
+  test('grip specs are searched as text, not as markup (since v1.0)', () => {
+    const ids = (q: string): string[] => searchIndex(q, index).map((i) => i.id);
+    expect(ids('made in usa')).toContain('kimony-tourna');
+    // v0.990 searched the spec's inline HTML, so the colour code found this grip.
+    expect(ids('d97706')).toEqual([]);
+  });
+
   test('log entries are indexed with their tension in the sublabel', () => {
     const withLog = buildSearchIndex(db, [
       {

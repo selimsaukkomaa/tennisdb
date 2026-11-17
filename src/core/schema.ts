@@ -3,10 +3,12 @@
 // tensions are numbers and pairings are their own records since v0.995, hybrid sides link
 // to their strings since v0.996, racquet fields are values since v0.997, stiffness is a band
 // plus a figure with its provenance since v0.998, and ratings are a score plus a word from
-// their axis's list since v0.999.
+// their axis's list since v0.999. Since v1.0 every string here is plain text: the one grip spec
+// that held markup is `{ text, emphasis }`, and validate.ts keeps tags and entities out
+// (plain-text).
 //
 // The schemas own the data's shape: required and optional fields, no unknown keys, formats
-// (ids, colours, bar widths) and the token lists the filter chips match. They are written so
+// (ids, colours, rating scores) and the token lists the filter chips match. They are written so
 // every constraint survives the JSON Schema export (`npm run schemas`), which a native app can
 // build on. Content and cross-record rules (neutral text, a note per racquet, references, CSS
 // coverage) stay in validate.ts, which runs these schemas first.
@@ -227,12 +229,18 @@ export const HybridSchema = z
   })
   .meta({ id: 'Hybrid' });
 
+/** One line of a grip's specs; `emphasis` draws it in amber (v0.990's inline <em>). */
+export const GripSpecSchema = z.strictObject({ text: Text, emphasis: z.boolean() }).meta({
+  id: 'GripSpec',
+  description: 'One line of the specs of a grip; emphasis draws it in amber.',
+});
+
 export const GripSchema = z
   .strictObject({
     name: Text,
     model: Text,
     modelVariants: z.array(Text).optional(),
-    specs: z.array(Text).meta({ description: 'May contain inline HTML (one <em> today).' }),
+    specs: z.array(GripSpecSchema),
     tackiness: TackinessRating.optional(),
     absorption: AbsorptionRating.optional(),
     durability: DurabilityRating.optional(),

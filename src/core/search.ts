@@ -123,7 +123,7 @@ export function buildSearchIndex(db: TennisDb, log: readonly LogSearchEntry[] = 
             gripBrandLabel(brand),
             g.model || '',
             (g.modelVariants ?? []).join(' '),
-            (g.specs ?? []).join(' '),
+            (g.specs ?? []).map((s) => s.text).join(' '),
             (g.feelTags ?? []).map((t) => t.label).join(' '),
             g.feelSummary,
             g.feelExpand,

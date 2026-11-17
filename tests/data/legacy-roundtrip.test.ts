@@ -13,6 +13,7 @@ import { tensionLabel } from '../../src/core/pairings';
 import { ratingBar, type Rating } from '../../src/core/ratings';
 import { stiffnessBar } from '../../src/core/stiffness';
 import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
+import { specHtml } from '../../src/ui/tables';
 
 const legacyHtml = readFileSync(
   fileURLToPath(new URL('../../legacy/tennis_equipmentdb_v0_990.html', import.meta.url)),
@@ -86,7 +87,11 @@ function toV0990(db: TennisDb): unknown {
         Object.fromEntries(
           Object.entries(byType).map(([type, list]) => [
             type,
-            list.map((g) => withBars(g, ['tackiness', 'absorption', 'durability'])),
+            list.map((g) => ({
+              ...withBars(g, ['tackiness', 'absorption', 'durability']),
+              // v1.0 stores a spec as { text, emphasis }; v0.990 had the markup the page draws.
+              specs: g.specs.map((s) => specHtml(s).value),
+            })),
           ]),
         ),
       ]),

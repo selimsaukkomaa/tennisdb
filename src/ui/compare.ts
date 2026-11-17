@@ -132,7 +132,7 @@ function cellHtml(row: AttrRow, entry: CompareItem, racquet: RacquetId): SafeHtm
     case 'tension':
       return per?.tension ? html`<span class="cmp-tension">${per.tension}</span>` : DASH;
     case 'note':
-      return per?.note ? html`<div class="cmp-note">${raw(per.note)}</div>` : DASH;
+      return per?.note ? html`<div class="cmp-note">${per.note}</div>` : DASH;
   }
   return raw('');
 }
