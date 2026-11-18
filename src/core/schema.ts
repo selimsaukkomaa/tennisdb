@@ -18,7 +18,6 @@
 import { z } from 'zod';
 import { FEEL_CHIPS, SHAPE_CHIPS } from './chips';
 import { MAX_KG, MIN_KG } from './log/tension';
-import { RATING_WORDS, type RatingAxis } from './ratings';
 import { STIFFNESS_BANDS } from './stiffness';
 import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS, tagLabels } from './tags';
 import { GRIP_TYPES } from './types';
@@ -39,24 +38,11 @@ function tokenList(values: readonly string[], description: string): z.ZodString 
 const BarWidth = z.int().min(0).max(100);
 
 /**
- * A rating: a score from 0 to 100, drawn as the bar's fill, and a label from the axis's list of
- * words (ratings.ts). validate.ts checks that the words keep their order (rating-order).
+ * A rating is its score from 0 to 100, drawn as the bar's fill; the word beside it comes from
+ * the score on the axis's scale (ratings.ts: ratingLabel), since v1.6.
  */
-const rating = <A extends RatingAxis>(axis: A, id: string) =>
-  z
-    .strictObject({ score: BarWidth, label: z.enum(RATING_WORDS[axis]) })
-    .meta({ id, description: 'A score from 0 to 100 and a word from the list for its axis.' });
-const PowerRating = rating('power', 'PowerRating');
-const SpinRating = rating('spin', 'SpinRating');
-const ControlRating = rating('control', 'ControlRating');
-const ComfortRating = rating('comfort', 'ComfortRating');
-const TackinessRating = rating('tackiness', 'TackinessRating');
-const AbsorptionRating = rating('absorption', 'AbsorptionRating');
-const DurabilityRating = rating('durability', 'DurabilityRating');
-const GutPowerRating = rating('gutPower', 'GutPowerRating');
-const GutSpinRating = rating('gutSpin', 'GutSpinRating');
-const GutComfortRating = rating('gutComfort', 'GutComfortRating');
-const GutProtectionRating = rating('gutProtection', 'GutProtectionRating');
+const Score = (axis: string) =>
+  BarWidth.meta({ description: `The ${axis} score, 0-100; ratings.ts derives its word.` });
 
 /** Stiffness bands, softest first (stiffness.ts; "Med" folded into "Medium" in v1.1). */
 const Band = z.enum(STIFFNESS_BANDS);
@@ -219,10 +205,10 @@ export const StringSchema = z
     gauges: z.array(Text).min(1),
     colors: ColorsSchema,
     stiffness: StiffnessSchema,
-    power: PowerRating,
-    spin: SpinRating,
-    control: ControlRating,
-    comfort: ComfortRating,
+    power: Score('power'),
+    spin: Score('spin'),
+    control: Score('control'),
+    comfort: Score('comfort'),
     feelTags: z.array(StringTagSchema),
     feelSummary: Text,
     feelExpand: Text,
@@ -250,8 +236,8 @@ export const HybridSchema = z
     mains: HybridSideSchema,
     crosses: HybridSideSchema,
     stiffness: HybridStiffnessSchema,
-    power: PowerRating,
-    spin: SpinRating,
+    power: Score('power'),
+    spin: Score('spin'),
     feelTags: z.array(StringTagSchema),
     feelSummary: Text,
     feelExpand: Text,
@@ -272,9 +258,9 @@ export const GripSchema = z
     model: Text,
     modelVariants: z.array(Text).optional(),
     specs: z.array(GripSpecSchema),
-    tackiness: TackinessRating.optional(),
-    absorption: AbsorptionRating.optional(),
-    durability: DurabilityRating.optional(),
+    tackiness: Score('tackiness').optional(),
+    absorption: Score('absorption').optional(),
+    durability: Score('durability').optional(),
     feelTags: z.array(GripTagSchema),
     feelSummary: Text,
     feelExpand: Text,
@@ -314,11 +300,11 @@ export const GutPairingSchema = z
     mains: GutSideSchema,
     crosses: GutSideSchema,
     feelLabel: Text,
-    power: GutPowerRating,
-    spin: GutSpinRating,
-    comfort: GutComfortRating,
+    power: Score('power'),
+    spin: Score('spin'),
+    comfort: Score('comfort'),
     /** null for the gut-crosses pairings. */
-    gutProtection: GutProtectionRating.nullable(),
+    gutProtection: Score('gut protection').nullable(),
     tension: SplitTension,
     notes: z.string(),
   })

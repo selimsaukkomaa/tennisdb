@@ -14,22 +14,10 @@
       "stringId": "luxilon-alu-power"
     },
     "feelLabel": "Plush · Powerful",
-    "power": {
-      "score": 88,
-      "label": "Very High"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Med"
-    },
-    "comfort": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "gutProtection": {
-      "score": 82,
-      "label": "High"
-    },
+    "power": 88,
+    "spin": 60,
+    "comfort": 90,
+    "gutProtection": 82,
     "tension": {
       "kind": "split",
       "mainsKg": 26,
@@ -52,22 +40,10 @@
       "stringId": "toroline-caviar"
     },
     "feelLabel": "Med-Firm · Lively",
-    "power": {
-      "score": 80,
-      "label": "High"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "comfort": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "gutProtection": {
-      "score": 50,
-      "label": "Med-Low"
-    },
+    "power": 80,
+    "spin": 78,
+    "comfort": 90,
+    "gutProtection": 50,
     "tension": {
       "kind": "split",
       "mainsKg": 26,
@@ -90,22 +66,10 @@
       "stringId": "luxilon-alu-power-soft"
     },
     "feelLabel": "Plush · Soft",
-    "power": {
-      "score": 90,
-      "label": "Very High"
-    },
-    "spin": {
-      "score": 50,
-      "label": "Med-Low"
-    },
-    "comfort": {
-      "score": 85,
-      "label": "Very Good"
-    },
-    "gutProtection": {
-      "score": 88,
-      "label": "Very High"
-    },
+    "power": 90,
+    "spin": 50,
+    "comfort": 85,
+    "gutProtection": 88,
     "tension": {
       "kind": "split",
       "mainsKg": 25,
@@ -128,18 +92,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Med-Firm · Crisp",
-    "power": {
-      "score": 70,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "comfort": {
-      "score": 85,
-      "label": "Very Good"
-    },
+    "power": 70,
+    "spin": 78,
+    "comfort": 85,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -163,18 +118,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Firm · Crisp",
-    "power": {
-      "score": 62,
-      "label": "Med"
-    },
-    "spin": {
-      "score": 72,
-      "label": "Med-High"
-    },
-    "comfort": {
-      "score": 90,
-      "label": "Excellent"
-    },
+    "power": 62,
+    "spin": 72,
+    "comfort": 90,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -198,18 +144,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Very Firm · Stable",
-    "power": {
-      "score": 55,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Med"
-    },
-    "comfort": {
-      "score": 95,
-      "label": "Outstanding"
-    },
+    "power": 55,
+    "spin": 60,
+    "comfort": 95,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -233,18 +170,9 @@
       "stringId": "gut-wilson-natural"
     },
     "feelLabel": "Firm · Lively",
-    "power": {
-      "score": 60,
-      "label": "Med"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
-    "comfort": {
-      "score": 80,
-      "label": "Very Good"
-    },
+    "power": 60,
+    "spin": 88,
+    "comfort": 80,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -268,22 +196,10 @@
       "stringId": "luxilon-alu-power-soft"
     },
     "feelLabel": "Plush · Round",
-    "power": {
-      "score": 92,
-      "label": "Very High"
-    },
-    "spin": {
-      "score": 58,
-      "label": "Med"
-    },
-    "comfort": {
-      "score": 92,
-      "label": "Excellent"
-    },
-    "gutProtection": {
-      "score": 88,
-      "label": "Very High"
-    },
+    "power": 92,
+    "spin": 58,
+    "comfort": 92,
+    "gutProtection": 88,
     "tension": {
       "kind": "split",
       "mainsKg": 24,
@@ -306,22 +222,10 @@
       "stringId": "toroline-caviar"
     },
     "feelLabel": "Med-Firm · Lively",
-    "power": {
-      "score": 82,
-      "label": "High"
-    },
-    "spin": {
-      "score": 72,
-      "label": "Med-High"
-    },
-    "comfort": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "gutProtection": {
-      "score": 50,
-      "label": "Med-Low"
-    },
+    "power": 82,
+    "spin": 72,
+    "comfort": 90,
+    "gutProtection": 50,
     "tension": {
       "kind": "split",
       "mainsKg": 24,
@@ -344,22 +248,10 @@
       "stringId": "luxilon-alu-power"
     },
     "feelLabel": "Plush · Crisp",
-    "power": {
-      "score": 80,
-      "label": "High"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Med"
-    },
-    "comfort": {
-      "score": 85,
-      "label": "Very Good"
-    },
-    "gutProtection": {
-      "score": 80,
-      "label": "High"
-    },
+    "power": 80,
+    "spin": 60,
+    "comfort": 85,
+    "gutProtection": 80,
     "tension": {
       "kind": "split",
       "mainsKg": 24,
@@ -382,18 +274,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Med-Firm · Crisp",
-    "power": {
-      "score": 70,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 75,
-      "label": "Med-High"
-    },
-    "comfort": {
-      "score": 85,
-      "label": "Very Good"
-    },
+    "power": 70,
+    "spin": 75,
+    "comfort": 85,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -417,18 +300,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Firm · Shaped",
-    "power": {
-      "score": 62,
-      "label": "Med"
-    },
-    "spin": {
-      "score": 80,
-      "label": "High"
-    },
-    "comfort": {
-      "score": 82,
-      "label": "Very Good"
-    },
+    "power": 62,
+    "spin": 80,
+    "comfort": 82,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -452,18 +326,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Firm · Crisp",
-    "power": {
-      "score": 60,
-      "label": "Med"
-    },
-    "spin": {
-      "score": 72,
-      "label": "Med-High"
-    },
-    "comfort": {
-      "score": 88,
-      "label": "Excellent"
-    },
+    "power": 60,
+    "spin": 72,
+    "comfort": 88,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -487,18 +352,9 @@
       "stringId": "gut-wilson-natural"
     },
     "feelLabel": "Very Firm · Stable",
-    "power": {
-      "score": 52,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 58,
-      "label": "Med"
-    },
-    "comfort": {
-      "score": 95,
-      "label": "Outstanding"
-    },
+    "power": 52,
+    "spin": 58,
+    "comfort": 95,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -522,22 +378,10 @@
       "stringId": "toroline-caviar"
     },
     "feelLabel": "Plush · Hex Bite",
-    "power": {
-      "score": 80,
-      "label": "High"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "comfort": {
-      "score": 95,
-      "label": "Outstanding"
-    },
-    "gutProtection": {
-      "score": 60,
-      "label": "Med"
-    },
+    "power": 80,
+    "spin": 78,
+    "comfort": 95,
+    "gutProtection": 60,
     "tension": {
       "kind": "split",
       "mainsKg": 22,
@@ -560,22 +404,10 @@
       "stringId": "luxilon-alu-power-spin"
     },
     "feelLabel": "Plush · Shaped",
-    "power": {
-      "score": 78,
-      "label": "High"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "comfort": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "gutProtection": {
-      "score": 70,
-      "label": "Med-High"
-    },
+    "power": 78,
+    "spin": 78,
+    "comfort": 90,
+    "gutProtection": 70,
     "tension": {
       "kind": "split",
       "mainsKg": 22,
@@ -598,22 +430,10 @@
       "stringId": "luxilon-alu-power-rough"
     },
     "feelLabel": "Plush · Textured",
-    "power": {
-      "score": 88,
-      "label": "Very High"
-    },
-    "spin": {
-      "score": 70,
-      "label": "Med-High"
-    },
-    "comfort": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "gutProtection": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 88,
+    "spin": 70,
+    "comfort": 90,
+    "gutProtection": 78,
     "tension": {
       "kind": "split",
       "mainsKg": 22,
@@ -636,18 +456,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Med-Firm · Crisp",
-    "power": {
-      "score": 60,
-      "label": "Med"
-    },
-    "spin": {
-      "score": 72,
-      "label": "Med-High"
-    },
-    "comfort": {
-      "score": 85,
-      "label": "Very Good"
-    },
+    "power": 60,
+    "spin": 72,
+    "comfort": 85,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -671,18 +482,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Very Firm · Stable",
-    "power": {
-      "score": 52,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Med"
-    },
-    "comfort": {
-      "score": 95,
-      "label": "Outstanding"
-    },
+    "power": 52,
+    "spin": 60,
+    "comfort": 95,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -706,18 +508,9 @@
       "stringId": "gut-babolat-vs-touch"
     },
     "feelLabel": "Firm · Sharp",
-    "power": {
-      "score": 60,
-      "label": "Med"
-    },
-    "spin": {
-      "score": 80,
-      "label": "High"
-    },
-    "comfort": {
-      "score": 82,
-      "label": "Very Good"
-    },
+    "power": 60,
+    "spin": 80,
+    "comfort": 82,
     "gutProtection": null,
     "tension": {
       "kind": "split",
@@ -741,18 +534,9 @@
       "stringId": "gut-wilson-natural"
     },
     "feelLabel": "Firm · Crisp",
-    "power": {
-      "score": 60,
-      "label": "Med"
-    },
-    "spin": {
-      "score": 70,
-      "label": "Med-High"
-    },
-    "comfort": {
-      "score": 88,
-      "label": "Excellent"
-    },
+    "power": 60,
+    "spin": 70,
+    "comfort": 88,
     "gutProtection": null,
     "tension": {
       "kind": "split",

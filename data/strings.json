@@ -32,22 +32,10 @@
         ]
       }
     },
-    "power": {
-      "score": 38,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 92,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 95,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 55,
-      "label": "Moderate"
-    },
+    "power": 38,
+    "spin": 92,
+    "control": 95,
+    "comfort": 55,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -87,22 +75,10 @@
         ]
       }
     },
-    "power": {
-      "score": 30,
-      "label": "Low"
-    },
-    "spin": {
-      "score": 80,
-      "label": "High"
-    },
-    "control": {
-      "score": 92,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 55,
-      "label": "Moderate"
-    },
+    "power": 30,
+    "spin": 80,
+    "control": 92,
+    "comfort": 55,
     "feelTags": [
       "Crisp"
     ],
@@ -132,22 +108,10 @@
       "band": "Medium",
       "figure": null
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 85,
-      "label": "Very High"
-    },
-    "comfort": {
-      "score": 62,
-      "label": "Good"
-    },
+    "power": 55,
+    "spin": 88,
+    "control": 85,
+    "comfort": 62,
     "feelTags": [
       "Crisp"
     ],
@@ -177,22 +141,10 @@
       "band": "Med-Firm",
       "figure": null
     },
-    "power": {
-      "score": 35,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "control": {
-      "score": 92,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 50,
-      "label": "Moderate"
-    },
+    "power": 35,
+    "spin": 55,
+    "control": 92,
+    "comfort": 50,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -230,22 +182,10 @@
         ]
       }
     },
-    "power": {
-      "score": 52,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "control": {
-      "score": 82,
-      "label": "Very High"
-    },
-    "comfort": {
-      "score": 65,
-      "label": "Good"
-    },
+    "power": 52,
+    "spin": 78,
+    "control": 82,
+    "comfort": 65,
     "feelTags": [
       "Crisp"
     ],
@@ -275,22 +215,10 @@
       "band": "Med-Soft",
       "figure": null
     },
-    "power": {
-      "score": 65,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 75,
-      "label": "High"
-    },
-    "control": {
-      "score": 68,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 78,
-      "label": "Very Good"
-    },
+    "power": 65,
+    "spin": 75,
+    "control": 68,
+    "comfort": 78,
     "feelTags": [
       "Soft"
     ],
@@ -343,22 +271,10 @@
         ]
       }
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 95,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 72,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 82,
-      "label": "High"
-    },
+    "power": 55,
+    "spin": 95,
+    "control": 72,
+    "comfort": 82,
     "feelTags": [
       "Elastic"
     ],
@@ -392,22 +308,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 42,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 82,
-      "label": "High"
-    },
-    "control": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 52,
-      "label": "Moderate"
-    },
+    "power": 42,
+    "spin": 82,
+    "control": 90,
+    "comfort": 52,
     "feelTags": [
       "Crisp"
     ],
@@ -449,22 +353,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 52,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 93,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 75,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 68,
-      "label": "Good"
-    },
+    "power": 52,
+    "spin": 93,
+    "control": 75,
+    "comfort": 68,
     "feelTags": [
       "Moderate"
     ],
@@ -502,22 +394,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 62,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 68,
-      "label": "Mod-High"
-    },
-    "control": {
-      "score": 82,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 65,
-      "label": "Good"
-    },
+    "power": 62,
+    "spin": 68,
+    "control": 82,
+    "comfort": 65,
     "feelTags": [
       "Smooth"
     ],
@@ -566,22 +446,10 @@
         ]
       }
     },
-    "power": {
-      "score": 35,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 85,
-      "label": "High"
-    },
-    "control": {
-      "score": 78,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 72,
-      "label": "Good"
-    },
+    "power": 35,
+    "spin": 85,
+    "control": 78,
+    "comfort": 72,
     "feelTags": [
       "Moderate"
     ],
@@ -627,22 +495,10 @@
         ]
       }
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 84,
-      "label": "High"
-    },
-    "control": {
-      "score": 76,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 55,
+    "spin": 84,
+    "control": 76,
+    "comfort": 78,
     "feelTags": [
       "Softer"
     ],
@@ -689,22 +545,10 @@
         ]
       }
     },
-    "power": {
-      "score": 50,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Moderate"
-    },
-    "control": {
-      "score": 70,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 82,
-      "label": "High"
-    },
+    "power": 50,
+    "spin": 60,
+    "control": 70,
+    "comfort": 82,
     "feelTags": [
       "Smooth"
     ],
@@ -741,22 +585,10 @@
         ]
       }
     },
-    "power": {
-      "score": 60,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 90,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 62,
-      "label": "Moderate"
-    },
-    "comfort": {
-      "score": 85,
-      "label": "High"
-    },
+    "power": 60,
+    "spin": 90,
+    "control": 62,
+    "comfort": 85,
     "feelTags": [
       "Soft"
     ],
@@ -797,22 +629,10 @@
         ]
       }
     },
-    "power": {
-      "score": 28,
-      "label": "Low"
-    },
-    "spin": {
-      "score": 82,
-      "label": "High"
-    },
-    "control": {
-      "score": 68,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 80,
-      "label": "High"
-    },
+    "power": 28,
+    "spin": 82,
+    "control": 68,
+    "comfort": 80,
     "feelTags": [
       "Soft"
     ],
@@ -850,22 +670,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 78,
-      "label": "High"
-    },
-    "spin": {
-      "score": 45,
-      "label": "Low-Med"
-    },
-    "control": {
-      "score": 40,
-      "label": "Low-Med"
-    },
-    "comfort": {
-      "score": 98,
-      "label": "Elite"
-    },
+    "power": 78,
+    "spin": 45,
+    "control": 40,
+    "comfort": 98,
     "feelTags": [
       "Plush"
     ],
@@ -899,22 +707,10 @@
       "band": "Med-Firm",
       "figure": null
     },
-    "power": {
-      "score": 38,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "control": {
-      "score": 85,
-      "label": "Very High"
-    },
-    "comfort": {
-      "score": 50,
-      "label": "Moderate"
-    },
+    "power": 38,
+    "spin": 78,
+    "control": 85,
+    "comfort": 50,
     "feelTags": [
       "Firm"
     ],
@@ -952,22 +748,10 @@
         ]
       }
     },
-    "power": {
-      "score": 38,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 94,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 95,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 38,
-      "label": "Low"
-    },
+    "power": 38,
+    "spin": 94,
+    "control": 95,
+    "comfort": 38,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -1006,22 +790,10 @@
         ]
       }
     },
-    "power": {
-      "score": 40,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 85,
-      "label": "High"
-    },
-    "control": {
-      "score": 96,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 52,
-      "label": "Moderate"
-    },
+    "power": 40,
+    "spin": 85,
+    "control": 96,
+    "comfort": 52,
     "feelTags": [
       "Crisp"
     ],
@@ -1061,22 +833,10 @@
         ]
       }
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 80,
-      "label": "High"
-    },
-    "control": {
-      "score": 70,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 55,
+    "spin": 80,
+    "control": 70,
+    "comfort": 78,
     "feelTags": [
       "Softer"
     ],
@@ -1114,22 +874,10 @@
         ]
       }
     },
-    "power": {
-      "score": 50,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 92,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 93,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 45,
-      "label": "Low-Mod"
-    },
+    "power": 50,
+    "spin": 92,
+    "control": 93,
+    "comfort": 45,
     "feelTags": [
       "Muted",
       "Firm"
@@ -1168,22 +916,10 @@
         ]
       }
     },
-    "power": {
-      "score": 65,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 82,
-      "label": "High"
-    },
-    "control": {
-      "score": 72,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 80,
-      "label": "High"
-    },
+    "power": 65,
+    "spin": 82,
+    "control": 72,
+    "comfort": 80,
     "feelTags": [
       "Soft"
     ],
@@ -1222,22 +958,10 @@
         ]
       }
     },
-    "power": {
-      "score": 50,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 82,
-      "label": "High"
-    },
-    "control": {
-      "score": 70,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 50,
+    "spin": 82,
+    "control": 70,
+    "comfort": 78,
     "feelTags": [
       "Softer"
     ],
@@ -1280,22 +1004,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 60,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 84,
-      "label": "High"
-    },
-    "control": {
-      "score": 72,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 80,
-      "label": "High"
-    },
+    "power": 60,
+    "spin": 84,
+    "control": 72,
+    "comfort": 80,
     "feelTags": [
       "Lively"
     ],
@@ -1339,22 +1051,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 52,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 80,
-      "label": "High"
-    },
-    "control": {
-      "score": 78,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 60,
-      "label": "Good"
-    },
+    "power": 52,
+    "spin": 80,
+    "control": 78,
+    "comfort": 60,
     "feelTags": [
       "Crisp"
     ],
@@ -1397,22 +1097,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 38,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 90,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 75,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 55,
-      "label": "Moderate"
-    },
+    "power": 38,
+    "spin": 90,
+    "control": 75,
+    "comfort": 55,
     "feelTags": [
       "Crisp",
       "Softer"
@@ -1451,22 +1139,10 @@
         ]
       }
     },
-    "power": {
-      "score": 62,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 70,
-      "label": "Mod-High"
-    },
-    "control": {
-      "score": 82,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 65,
-      "label": "Good"
-    },
+    "power": 62,
+    "spin": 70,
+    "control": 82,
+    "comfort": 65,
     "feelTags": [
       "Smooth"
     ],
@@ -1505,22 +1181,10 @@
         ]
       }
     },
-    "power": {
-      "score": 35,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High (Slice)"
-    },
-    "control": {
-      "score": 75,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 65,
-      "label": "Good"
-    },
+    "power": 35,
+    "spin": 78,
+    "control": 75,
+    "comfort": 65,
     "feelTags": [
       "Crisp",
       "Soft"
@@ -1565,22 +1229,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 58,
-      "label": "Moderate"
-    },
-    "control": {
-      "score": 72,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 55,
+    "spin": 58,
+    "control": 72,
+    "comfort": 78,
     "feelTags": [
       "Smooth"
     ],
@@ -1623,22 +1275,10 @@
         ]
       }
     },
-    "power": {
-      "score": 78,
-      "label": "High"
-    },
-    "spin": {
-      "score": 35,
-      "label": "Low"
-    },
-    "control": {
-      "score": 55,
-      "label": "Moderate"
-    },
-    "comfort": {
-      "score": 92,
-      "label": "Very High"
-    },
+    "power": 78,
+    "spin": 35,
+    "control": 55,
+    "comfort": 92,
     "feelTags": [
       "Soft"
     ],
@@ -1680,22 +1320,10 @@
         ]
       }
     },
-    "power": {
-      "score": 38,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 92,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 95,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 42,
-      "label": "Low-Mod"
-    },
+    "power": 38,
+    "spin": 92,
+    "control": 95,
+    "comfort": 42,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -1743,22 +1371,10 @@
         ]
       }
     },
-    "power": {
-      "score": 30,
-      "label": "Low"
-    },
-    "spin": {
-      "score": 62,
-      "label": "Moderate"
-    },
-    "control": {
-      "score": 94,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 52,
-      "label": "Moderate"
-    },
+    "power": 30,
+    "spin": 62,
+    "control": 94,
+    "comfort": 52,
     "feelTags": [
       "Crisp"
     ],
@@ -1802,22 +1418,10 @@
         ]
       }
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 55,
-      "label": "Moderate"
-    },
-    "control": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 65,
-      "label": "Good"
-    },
+    "power": 55,
+    "spin": 55,
+    "control": 90,
+    "comfort": 65,
     "feelTags": [
       "Moderate"
     ],
@@ -1869,22 +1473,10 @@
         ]
       }
     },
-    "power": {
-      "score": 62,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 90,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 92,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 50,
-      "label": "Moderate"
-    },
+    "power": 62,
+    "spin": 90,
+    "control": 92,
+    "comfort": 50,
     "feelTags": [
       "Muted"
     ],
@@ -1928,22 +1520,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 65,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 85,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 62,
-      "label": "Good"
-    },
+    "power": 65,
+    "spin": 88,
+    "control": 85,
+    "comfort": 62,
     "feelTags": [
       "Crisp"
     ],
@@ -1979,22 +1559,10 @@
       "band": "Med-Firm",
       "figure": null
     },
-    "power": {
-      "score": 68,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 58,
-      "label": "Moderate"
-    },
-    "control": {
-      "score": 70,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 68,
-      "label": "Good"
-    },
+    "power": 68,
+    "spin": 58,
+    "control": 70,
+    "comfort": 68,
     "feelTags": [
       "Responsive"
     ],
@@ -2033,22 +1601,10 @@
         ]
       }
     },
-    "power": {
-      "score": 75,
-      "label": "High"
-    },
-    "spin": {
-      "score": 68,
-      "label": "Mod-High"
-    },
-    "control": {
-      "score": 72,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 68,
-      "label": "Good"
-    },
+    "power": 75,
+    "spin": 68,
+    "control": 72,
+    "comfort": 68,
     "feelTags": [
       "Lively"
     ],
@@ -2085,22 +1641,10 @@
         ]
       }
     },
-    "power": {
-      "score": 68,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "control": {
-      "score": 70,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 90,
-      "label": "Very High"
-    },
+    "power": 68,
+    "spin": 78,
+    "control": 70,
+    "comfort": 90,
     "feelTags": [
       "Soft"
     ],
@@ -2137,22 +1681,10 @@
         ]
       }
     },
-    "power": {
-      "score": 40,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 55,
-      "label": "Moderate"
-    },
-    "control": {
-      "score": 75,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 60,
-      "label": "Good"
-    },
+    "power": 40,
+    "spin": 55,
+    "control": 75,
+    "comfort": 60,
     "feelTags": [
       "Smooth"
     ],
@@ -2184,22 +1716,10 @@
       "band": "Soft",
       "figure": null
     },
-    "power": {
-      "score": 85,
-      "label": "Very High"
-    },
-    "spin": {
-      "score": 35,
-      "label": "Low"
-    },
-    "control": {
-      "score": 58,
-      "label": "Moderate"
-    },
-    "comfort": {
-      "score": 92,
-      "label": "Very High"
-    },
+    "power": 85,
+    "spin": 35,
+    "control": 58,
+    "comfort": 92,
     "feelTags": [
       "Soft"
     ],
@@ -2237,22 +1757,10 @@
         ]
       }
     },
-    "power": {
-      "score": 42,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 92,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 92,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 52,
-      "label": "Moderate"
-    },
+    "power": 42,
+    "spin": 92,
+    "control": 92,
+    "comfort": 52,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -2295,22 +1803,10 @@
         ]
       }
     },
-    "power": {
-      "score": 52,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 72,
-      "label": "Mod-High"
-    },
-    "control": {
-      "score": 95,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 65,
-      "label": "Good"
-    },
+    "power": 52,
+    "spin": 72,
+    "control": 95,
+    "comfort": 65,
     "feelTags": [
       "Crisp",
       "Smooth"
@@ -2353,22 +1849,10 @@
         ]
       }
     },
-    "power": {
-      "score": 65,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 98,
-      "label": "Elite"
-    },
-    "control": {
-      "score": 75,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 55,
-      "label": "Moderate"
-    },
+    "power": 65,
+    "spin": 98,
+    "control": 75,
+    "comfort": 55,
     "feelTags": [
       "Muted",
       "Firm"
@@ -2411,22 +1895,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 90,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 65,
-      "label": "Moderate"
-    },
-    "comfort": {
-      "score": 62,
-      "label": "Good"
-    },
+    "power": 55,
+    "spin": 90,
+    "control": 65,
+    "comfort": 62,
     "feelTags": [
       "Lively"
     ],
@@ -2464,22 +1936,10 @@
         ]
       }
     },
-    "power": {
-      "score": 38,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 65,
-      "label": "Moderate"
-    },
-    "control": {
-      "score": 96,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 45,
-      "label": "Low-Mod"
-    },
+    "power": 38,
+    "spin": 65,
+    "control": 96,
+    "comfort": 45,
     "feelTags": [
       "Muted",
       "Firm"
@@ -2514,22 +1974,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 36,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 90,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 93,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 50,
-      "label": "Moderate"
-    },
+    "power": 36,
+    "spin": 90,
+    "control": 93,
+    "comfort": 50,
     "feelTags": [
       "Crisp"
     ],
@@ -2571,22 +2019,10 @@
         ]
       }
     },
-    "power": {
-      "score": 48,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 82,
-      "label": "High"
-    },
-    "control": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 62,
-      "label": "Good"
-    },
+    "power": 48,
+    "spin": 82,
+    "control": 90,
+    "comfort": 62,
     "feelTags": [
       "Crisp",
       "Smooth"
@@ -2624,22 +2060,10 @@
         ]
       }
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 80,
-      "label": "High"
-    },
-    "control": {
-      "score": 82,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 82,
-      "label": "High"
-    },
+    "power": 55,
+    "spin": 80,
+    "control": 82,
+    "comfort": 82,
     "feelTags": [
       "Soft"
     ],
@@ -2685,22 +2109,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 62,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 96,
-      "label": "Elite"
-    },
-    "control": {
-      "score": 72,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 62,
+    "spin": 96,
+    "control": 72,
+    "comfort": 78,
     "feelTags": [
       "Soft"
     ],
@@ -2734,22 +2146,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 40,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 92,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 75,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 68,
-      "label": "Good"
-    },
+    "power": 40,
+    "spin": 92,
+    "control": 75,
+    "comfort": 68,
     "feelTags": [
       "Moderate"
     ],
@@ -2796,22 +2196,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 52,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "control": {
-      "score": 85,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 65,
-      "label": "Good"
-    },
+    "power": 52,
+    "spin": 78,
+    "control": 85,
+    "comfort": 65,
     "feelTags": [
       "Crisp"
     ],
@@ -2852,22 +2240,10 @@
         ]
       }
     },
-    "power": {
-      "score": 60,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 70,
-      "label": "Mod-High"
-    },
-    "control": {
-      "score": 60,
-      "label": "Moderate"
-    },
-    "comfort": {
-      "score": 92,
-      "label": "Very High"
-    },
+    "power": 60,
+    "spin": 70,
+    "control": 60,
+    "comfort": 92,
     "feelTags": [
       "Very Soft"
     ],
@@ -2897,22 +2273,10 @@
       "band": "Med-Firm",
       "figure": null
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 82,
-      "label": "Very High"
-    },
-    "comfort": {
-      "score": 55,
-      "label": "Moderate"
-    },
+    "power": 55,
+    "spin": 88,
+    "control": 82,
+    "comfort": 55,
     "feelTags": [
       "Crisp"
     ],
@@ -2954,22 +2318,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 62,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 72,
-      "label": "Mod-High"
-    },
-    "control": {
-      "score": 72,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 70,
-      "label": "Good"
-    },
+    "power": 62,
+    "spin": 72,
+    "control": 72,
+    "comfort": 70,
     "feelTags": [
       "Smooth"
     ],
@@ -3014,22 +2366,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 50,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "control": {
-      "score": 88,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 50,
-      "label": "Med-Low"
-    },
+    "power": 50,
+    "spin": 60,
+    "control": 88,
+    "comfort": 50,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -3072,22 +2412,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 48,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "control": {
-      "score": 88,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 45,
-      "label": "Low-Mod"
-    },
+    "power": 48,
+    "spin": 78,
+    "control": 88,
+    "comfort": 45,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -3130,22 +2458,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "control": {
-      "score": 80,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 70,
-      "label": "Med-High"
-    },
+    "power": 60,
+    "spin": 60,
+    "control": 80,
+    "comfort": 70,
     "feelTags": [
       "Softer"
     ],
@@ -3188,22 +2504,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 50,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 90,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 50,
-      "label": "Med-Low"
-    },
+    "power": 50,
+    "spin": 88,
+    "control": 90,
+    "comfort": 50,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -3247,22 +2551,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 72,
-      "label": "Med-High"
-    },
-    "control": {
-      "score": 82,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 60,
-      "label": "Medium"
-    },
+    "power": 60,
+    "spin": 72,
+    "control": 82,
+    "comfort": 60,
     "feelTags": [
       "Crisp"
     ],
@@ -3300,22 +2592,10 @@
         ]
       }
     },
-    "power": {
-      "score": 38,
-      "label": "Low"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "control": {
-      "score": 95,
-      "label": "Outstanding"
-    },
-    "comfort": {
-      "score": 42,
-      "label": "Low-Mod"
-    },
+    "power": 38,
+    "spin": 60,
+    "control": 95,
+    "comfort": 42,
     "feelTags": [
       "Firm",
       "Crisp"
@@ -3358,22 +2638,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 36,
-      "label": "Low"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "control": {
-      "score": 95,
-      "label": "Outstanding"
-    },
-    "comfort": {
-      "score": 40,
-      "label": "Low-Mod"
-    },
+    "power": 36,
+    "spin": 78,
+    "control": 95,
+    "comfort": 40,
     "feelTags": [
       "Firm",
       "Crisp"
@@ -3416,22 +2684,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 58,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "control": {
-      "score": 88,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 60,
-      "label": "Medium"
-    },
+    "power": 58,
+    "spin": 60,
+    "control": 88,
+    "comfort": 60,
     "feelTags": [
       "Softer",
       "Crisp"
@@ -3470,22 +2726,10 @@
         ]
       }
     },
-    "power": {
-      "score": 70,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 50,
-      "label": "Med-Low"
-    },
-    "control": {
-      "score": 70,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 70,
+    "spin": 50,
+    "control": 70,
+    "comfort": 78,
     "feelTags": [
       "Soft",
       "Moderate"
@@ -3529,22 +2773,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 48,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 86,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 88,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 50,
-      "label": "Med-Low"
-    },
+    "power": 48,
+    "spin": 86,
+    "control": 88,
+    "comfort": 50,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -3580,22 +2812,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 58,
-      "label": "Medium"
-    },
-    "control": {
-      "score": 72,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 60,
+    "spin": 58,
+    "control": 72,
+    "comfort": 78,
     "feelTags": [
       "Soft",
       "Elastic"
@@ -3639,22 +2859,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 48,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "control": {
-      "score": 82,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 58,
-      "label": "Medium"
-    },
+    "power": 48,
+    "spin": 60,
+    "control": 82,
+    "comfort": 58,
     "feelTags": [
       "Crisp"
     ],
@@ -3698,22 +2906,10 @@
         "retrieved": "2026-11"
       }
     },
-    "power": {
-      "score": 50,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
-    "control": {
-      "score": 88,
-      "label": "Excellent"
-    },
-    "comfort": {
-      "score": 48,
-      "label": "Med-Low"
-    },
+    "power": 50,
+    "spin": 88,
+    "control": 88,
+    "comfort": 48,
     "feelTags": [
       "Crisp",
       "Firm"
@@ -3749,22 +2945,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 48,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "control": {
-      "score": 85,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 45,
-      "label": "Low-Mod"
-    },
+    "power": 48,
+    "spin": 78,
+    "control": 85,
+    "comfort": 45,
     "feelTags": [
       "Firm"
     ],
@@ -3798,22 +2982,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
-    "control": {
-      "score": 80,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 60,
-      "label": "Medium"
-    },
+    "power": 60,
+    "spin": 78,
+    "control": 80,
+    "comfort": 60,
     "feelTags": [
       "Softer"
     ],
@@ -3847,22 +3019,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 50,
-      "label": "Med-Low"
-    },
-    "spin": {
-      "score": 60,
-      "label": "Medium"
-    },
-    "control": {
-      "score": 80,
-      "label": "Very Good"
-    },
-    "comfort": {
-      "score": 50,
-      "label": "Med-Low"
-    },
+    "power": 50,
+    "spin": 60,
+    "control": 80,
+    "comfort": 50,
     "feelTags": [
       "Firm"
     ],
@@ -3896,22 +3056,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 80,
-      "label": "High"
-    },
-    "spin": {
-      "score": 35,
-      "label": "Low"
-    },
-    "control": {
-      "score": 65,
-      "label": "Good"
-    },
-    "comfort": {
-      "score": 92,
-      "label": "Excellent"
-    },
+    "power": 80,
+    "spin": 35,
+    "control": 65,
+    "comfort": 92,
     "feelTags": [
       "Very Soft",
       "Plush"
@@ -3947,22 +3095,10 @@
         "retrieved": null
       }
     },
-    "power": {
-      "score": 80,
-      "label": "High"
-    },
-    "spin": {
-      "score": 32,
-      "label": "Low"
-    },
-    "control": {
-      "score": 55,
-      "label": "Moderate"
-    },
-    "comfort": {
-      "score": 80,
-      "label": "High"
-    },
+    "power": 80,
+    "spin": 32,
+    "control": 55,
+    "comfort": 80,
     "feelTags": [
       "Soft"
     ],

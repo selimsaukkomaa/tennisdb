@@ -212,6 +212,16 @@ the `rating-order` rule checks that a word's lowest score never falls below
 that of the word before it. `ratingBar()` gives the views the same bar as
 before.
 
+**Words unified in v1.6** (option c, approved on 2026-11-18 after a sample of
+five and before-and-after screenshots): a rating is stored as its score, and
+the word comes from the score on one of two scales in `src/core/ratings.ts`.
+Amount (power, spin, tackiness, absorption, gut protection): Low, Low-Med 35,
+Medium 45, Med-High 60, High 75, Very High 85, Elite 95. Quality (control,
+comfort, durability): Low, Moderate 45, Good 60, Very Good 78, Excellent 88,
+Outstanding 95. The cut-offs change the fewest of today's words: 137 of 458.
+Gut pairings use the same scales. The per-axis word lists and the
+`rating-order` rule are retired.
+
 ### D6. Tension
 
 Strings: 212 ranges (`"22–24"`), 2 maximums (`"max 16"`), 2 prestretch
@@ -319,7 +329,9 @@ Each step is its own release, and each stops for the owner's review.
    - one colour per grip tag label, with screenshots first (D8), *done in v1.4*.
    Step 3 is complete.
 4. **Later, separately:** re-verifying the 62 legacy figures (D1), *done in
-   v1.5*, and unifying the rating words (D5).
+   v1.5*, and unifying the rating words (D5), *done in v1.6*.
+
+With v1.6 every step of this plan is done.
 
 Out of scope, as before: the feel taxonomy (Medium band, damping axis,
 Bite/Snapback chip), the Poly Tour Pro and Eco Power conflicts, the grip Thin

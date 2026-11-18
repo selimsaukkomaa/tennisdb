@@ -38,12 +38,12 @@ describe('a standard JSON Schema validator agrees with the Zod schemas', () => {
     expect(check('tennisdb.schema.json', bad).some((e) => e.startsWith('/grips/kimony/dry/0/specs/0'))).toBe(true);
   });
 
-  test('it rejects a rating word from another list and a rating in the old bar shape', () => {
-    const bad = structuredClone(db);
-    (bad.strings[0]!.power as { label: string }).label = 'Med';
-    (bad.strings[1] as unknown as Record<string, unknown>).spin = { label: 'High', width: 80 };
+  test('it rejects a rating stored with its word, and a score over 100', () => {
+    const bad = structuredClone(db) as unknown as { strings: Record<string, unknown>[] };
+    bad.strings[0]!.power = { score: 38, label: 'Low-Med' };
+    bad.strings[1]!.spin = 120;
     const errors = check('tennisdb.schema.json', bad);
-    expect(errors.some((e) => e.startsWith('/strings/0/power/label'))).toBe(true);
+    expect(errors.some((e) => e.startsWith('/strings/0/power'))).toBe(true);
     expect(errors.some((e) => e.startsWith('/strings/1/spin'))).toBe(true);
   });
 

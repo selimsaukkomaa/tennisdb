@@ -1,65 +1,57 @@
-// Ratings: a score from 0 to 100 and a label from the axis's list of words. The bar the views
-// draw is derived here; the score is its fill.
-//
-// The lists hold the words in use today, lowest first (docs/phase-2-data-model.md, D5). They
-// are not unified yet: "Medium" and "Moderate", "Med-High" and "Mod-High" stand side by side,
-// placed by the lowest score each is used at, until a content pass of its own settles them.
+// Ratings: a score from 0 to 100, drawn as the bar's fill. The word beside the bar is derived
+// from the score on one of two scales (docs/phase-2-data-model.md, D5; since v1.6), so a word
+// always agrees with its bar: an amount scale for what a string or grip has more or less of,
+// and a quality scale for how good it is at something.
 import type { Bar } from './types';
 
-/** Gut pairings are rated on their own scale, with "Med" where the strings say "Medium". */
-const GUT_SCALE = ['Med-Low', 'Med', 'Med-High', 'High', 'Very High'] as const;
+/** Each word from its lowest score; a scale's first word starts at 0. */
+type Scale = readonly (readonly [word: string, from: number])[];
 
-export const RATING_WORDS = {
-  // strings and hybrids
-  power: ['Low', 'Low-Med', 'Med-Low', 'Medium', 'Med-High', 'High', 'Very High'],
-  spin: [
-    'Low',
-    'Low-Med',
-    'Med-Low',
-    'Medium',
-    'Moderate',
-    'Mod-High',
-    'Med-High',
-    'High',
-    'High (Slice)',
-    'Very High',
-    'Elite',
-  ],
-  // strings
-  control: ['Low-Med', 'Moderate', 'Good', 'Very Good', 'Very High', 'Excellent', 'Outstanding'],
-  comfort: [
-    'Low',
-    'Low-Mod',
-    'Med-Low',
-    'Moderate',
-    'Medium',
-    'Good',
-    'Med-High',
-    'Very Good',
-    'High',
-    'Very High',
-    'Excellent',
-    'Elite',
-  ],
-  // grips
-  tackiness: ['Low', 'Low-Med', 'Moderate', 'High', 'Very High', 'Elite'],
-  absorption: ['Low', 'Med-Low', 'Medium', 'Moderate', 'High', 'Very High', 'Excellent', 'Elite'],
-  durability: ['Low', 'Moderate', 'Medium', 'Good', 'Very Good', 'Excellent'],
-  // gut pairings
-  gutPower: GUT_SCALE,
-  gutSpin: GUT_SCALE,
-  gutComfort: ['Very Good', 'Excellent', 'Outstanding'],
-  gutProtection: GUT_SCALE,
+/** Power, spin, tackiness, absorption, gut protection. */
+export const AMOUNT_WORDS: Scale = [
+  ['Low', 0],
+  ['Low-Med', 35],
+  ['Medium', 45],
+  ['Med-High', 60],
+  ['High', 75],
+  ['Very High', 85],
+  ['Elite', 95],
+];
+
+/** Control, comfort, durability. */
+export const QUALITY_WORDS: Scale = [
+  ['Low', 0],
+  ['Moderate', 45],
+  ['Good', 60],
+  ['Very Good', 78],
+  ['Excellent', 88],
+  ['Outstanding', 95],
+];
+
+/** Gut pairings use the same scales: their power and spin are amounts, comfort a quality. */
+export const RATING_SCALES = {
+  power: AMOUNT_WORDS,
+  spin: AMOUNT_WORDS,
+  tackiness: AMOUNT_WORDS,
+  absorption: AMOUNT_WORDS,
+  gutProtection: AMOUNT_WORDS,
+  control: QUALITY_WORDS,
+  comfort: QUALITY_WORDS,
+  durability: QUALITY_WORDS,
 } as const;
 
-export type RatingAxis = keyof typeof RATING_WORDS;
+export type RatingAxis = keyof typeof RATING_SCALES;
 
-export interface Rating {
-  score: number;
-  label: string;
+/** The word for a score: the last on the axis's scale whose lowest score it reaches. */
+export function ratingLabel(axis: RatingAxis, score: number): string {
+  let word = RATING_SCALES[axis][0]![0];
+  for (const [w, from] of RATING_SCALES[axis]) if (score >= from) word = w;
+  return word;
 }
 
 /** The rating as the labelled bar the tables, compare and the gut table draw. */
-export function ratingBar(r: Rating | null | undefined): Bar | undefined {
-  return r ? { label: r.label, width: r.score } : undefined;
+export function ratingBar(axis: RatingAxis, score: number | null | undefined): Bar | undefined {
+  return score === null || score === undefined
+    ? undefined
+    : { label: ratingLabel(axis, score), width: score };
 }

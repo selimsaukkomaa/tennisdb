@@ -18,14 +18,8 @@
     "stiffness": {
       "band": "Med-Firm"
     },
-    "power": {
-      "score": 35,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 90,
-      "label": "Very High"
-    },
+    "power": 35,
+    "spin": 90,
     "feelTags": [
       "Crisp",
       "Controlled"
@@ -54,14 +48,8 @@
     "stiffness": {
       "band": "Medium"
     },
-    "power": {
-      "score": 52,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 97,
-      "label": "Elite"
-    },
+    "power": 52,
+    "spin": 97,
     "feelTags": [
       "Pocketing",
       "Lively"
@@ -90,14 +78,8 @@
     "stiffness": {
       "band": "Med-Firm"
     },
-    "power": {
-      "score": 52,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
+    "power": 52,
+    "spin": 88,
     "feelTags": [
       "Crisp",
       "Explosive"
@@ -126,14 +108,8 @@
     "stiffness": {
       "band": "Med-Firm"
     },
-    "power": {
-      "score": 62,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 78,
-      "label": "High"
-    },
+    "power": 62,
+    "spin": 78,
     "feelTags": [
       "Plush",
       "Precise"
@@ -162,14 +138,8 @@
     "stiffness": {
       "band": "Med-Soft"
     },
-    "power": {
-      "score": 60,
-      "label": "Med-High"
-    },
-    "spin": {
-      "score": 90,
-      "label": "Very High"
-    },
+    "power": 60,
+    "spin": 90,
     "feelTags": [
       "Comfortable",
       "Lively"
@@ -198,14 +168,8 @@
     "stiffness": {
       "band": "Medium"
     },
-    "power": {
-      "score": 55,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
+    "power": 55,
+    "spin": 88,
     "feelTags": [
       "Crisp",
       "Responsive"
@@ -234,14 +198,8 @@
     "stiffness": {
       "band": "Med-Firm"
     },
-    "power": {
-      "score": 48,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 95,
-      "label": "Elite"
-    },
+    "power": 48,
+    "spin": 95,
     "feelTags": [
       "Aggressive",
       "Bite"
@@ -270,14 +228,8 @@
     "stiffness": {
       "band": "Medium"
     },
-    "power": {
-      "score": 52,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
+    "power": 52,
+    "spin": 88,
     "feelTags": [
       "Pocketing",
       "Bite"
@@ -306,14 +258,8 @@
     "stiffness": {
       "band": "Med-Firm"
     },
-    "power": {
-      "score": 40,
-      "label": "Low-Med"
-    },
-    "spin": {
-      "score": 95,
-      "label": "Elite"
-    },
+    "power": 40,
+    "spin": 95,
     "feelTags": [
       "Crisp",
       "Bite"
@@ -342,14 +288,8 @@
     "stiffness": {
       "band": "Med-Firm"
     },
-    "power": {
-      "score": 50,
-      "label": "Medium"
-    },
-    "spin": {
-      "score": 88,
-      "label": "Very High"
-    },
+    "power": 50,
+    "spin": 88,
     "feelTags": [
       "Precise",
       "Crisp"

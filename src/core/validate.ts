@@ -7,7 +7,6 @@
 // the topPick key and "square-textured"). If the shape is wrong only those issues are
 // reported; the rules below are content and cross-record checks on well-formed data.
 import { FEEL_CHIPS, tokens } from './chips';
-import { RATING_WORDS, type Rating, type RatingAxis } from './ratings';
 import { CopySchema, TennisDbSchema } from './schema';
 import { feelTokens, stiffnessBand } from './stiffness';
 import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from './tags';
@@ -42,40 +41,6 @@ export function allGrips(db: TennisDb): (Grip & { brand: string })[] {
   );
 }
 
-interface Rated {
-  where: string;
-  rating: Rating;
-}
-
-/** Every rating in the data, by the axis whose word list it uses. */
-export function ratingsByAxis(db: TennisDb): Record<RatingAxis, Rated[]> {
-  const by = Object.fromEntries(Object.keys(RATING_WORDS).map((a) => [a, []])) as unknown as Record<
-    RatingAxis,
-    Rated[]
-  >;
-  const add = (axis: RatingAxis, id: string, field: string, rating?: Rating | null): void => {
-    if (rating) by[axis].push({ where: `${id}/${field}`, rating });
-  };
-  for (const s of db.strings) {
-    for (const axis of ['power', 'spin', 'control', 'comfort'] as const)
-      add(axis, s.id, axis, s[axis]);
-  }
-  for (const h of db.hybrids) {
-    for (const axis of ['power', 'spin'] as const) add(axis, h.id, axis, h[axis]);
-  }
-  for (const g of allGrips(db)) {
-    for (const axis of ['tackiness', 'absorption', 'durability'] as const)
-      add(axis, g.id, axis, g[axis]);
-  }
-  for (const p of db.gutHybrids) {
-    add('gutPower', p.id, 'power', p.power);
-    add('gutSpin', p.id, 'spin', p.spin);
-    add('gutComfort', p.id, 'comfort', p.comfort);
-    add('gutProtection', p.id, 'gutProtection', p.gutProtection);
-  }
-  return by;
-}
-
 /** Notes that state a fact the grip bars must back up; checked whenever the text is present. */
 interface BarClaim {
   grip: string;
@@ -83,8 +48,8 @@ interface BarClaim {
   holds: (db: TennisDb) => boolean;
 }
 
-const tack = (g: Grip): number => g.tackiness?.score ?? 0;
-const absorb = (g: Grip): number => g.absorption?.score ?? 0;
+const tack = (g: Grip): number => g.tackiness ?? 0;
+const absorb = (g: Grip): number => g.absorption ?? 0;
 
 export const BAR_CLAIMS: readonly BarClaim[] = [
   {
@@ -246,24 +211,6 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
         s.id,
         'a Racketpedia figure names its pages; no other figure has any',
       );
-  }
-  // ---- ratings: along each axis's list, a word's lowest score never falls below that of the
-  // word before it (the scores of neighbouring words overlap, so nothing stricter holds)
-  for (const [axis, ratings] of Object.entries(ratingsByAxis(db)) as [RatingAxis, Rated[]][]) {
-    let floor: { word: string; score: number } | undefined;
-    for (const word of RATING_WORDS[axis]) {
-      const lowest = ratings
-        .filter((r) => r.rating.label === word)
-        .sort((a, b) => a.rating.score - b.rating.score)[0];
-      if (!lowest) continue;
-      if (floor && lowest.rating.score < floor.score)
-        fail(
-          'rating-order',
-          lowest.where,
-          `"${word}" at ${lowest.rating.score} is below "${floor.word}", which starts at ${floor.score}`,
-        );
-      else floor = { word, score: lowest.rating.score };
-    }
   }
   for (const chip of FEEL_CHIPS) {
     if (!db.strings.some((s) => tokens(feelTokens(s)).includes(chip.value))) {

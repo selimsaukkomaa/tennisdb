@@ -6,6 +6,156 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.6 — Rating words from the score
+
+**Date:** 2026-11-18
+**Base:** v1.5 (stiffness figures re-checked)
+**Status:** visible release. Phase 2 step 4, second half
+(`docs/phase-2-data-model.md`, D5): every rating is stored as its score, and
+the word beside its bar is derived from the score on one of two scales, so a
+word always agrees with its bar. The owner chose this (option A) on
+2026-11-18 after a sample of five and before-and-after screenshots. No score
+and no bar changes; `TENNIS_DB.version` stays `0.990`.
+
+With this release, Phase 2 is complete.
+
+---
+
+## The scales
+
+| Scale | Ratings | Words, from the score shown |
+|---|---|---|
+| Amount | power, spin, tackiness, absorption, gut protection | Low · Low-Med 35 · Medium 45 · Med-High 60 · High 75 · Very High 85 · Elite 95 |
+| Quality | control, comfort, durability | Low · Moderate 45 · Good 60 · Very Good 78 · Excellent 88 · Outstanding 95 |
+
+- Gut pairings use the same scales (their power and spin are amounts, comfort
+  a quality); their own words ("Med" and the rest) are gone.
+- The cut-offs were chosen to change the fewest of today's words (a search over
+  cut-offs in steps of 5; for quality, 78 and 88 fit today's words better than
+  80 and 85): **137 of the 458 ratings change**, 15 of them only in
+  spelling ("Mod-High" → "Med-High", "Med" → "Medium" and so on). Where two
+  neighbouring words used to share scores, the score now decides.
+- `ratingLabel()` and `ratingBar()` in `src/core/ratings.ts` derive the
+  word and bar; the data stores `power: 38`, not `{ score: 38, label: "Low-Med" }`.
+- Longer words ("Outstanding", "Very Good") widen some rating columns a
+  little, so a few rows wrap one more line of notes.
+- One spin rating loses a note: "High (Slice)" is now "High".
+
+## Words that change (137)
+
+| Rows | Rating | Was → now | Ratings | e.g. (score) |
+|---|---|---|---:|---|
+| Strings | Control | Excellent → Outstanding | 6 | O-Toro Tour 95, Tour Bite 95, Confidential 96 |
+| Strings | Control | Very High → Very Good | 4 | Vamos 85, A5 82, O-Toro Snap Tour Flex 85 |
+| Strings | Spin | Very High → Elite | 1 | O-Toro 95 |
+| Strings | Comfort | High → Very Good | 15 | O-Toro 82, Toro Toro 78, Enso Pro (Carbon) 82 |
+| Strings | Power | Med-Low → Low-Med | 2 | O-Toro Octa 42, Vivo 42 |
+| Strings | Spin | Mod-High → Med-High | 6 | O-Toro Snap 68, Hyper-G Round 70, Poly Tour Fire 68 |
+| Strings | Spin | High → Very High | 2 | Wasabi 85, Confidential 85 |
+| Strings | Control | Good → Very Good | 2 | Wasabi 78, Revolution 78 |
+| Strings | Spin | Moderate → Med-High | 3 | Enso Pro (Carbon) 60, Poly Tour Strike 62, Tour Sniper 65 |
+| Strings | Control | Moderate → Good | 3 | Snapper 62, SLAP (Ltd. Edition) 65, Tour Mako 60 |
+| Strings | Spin | Low-Med → Medium | 1 | Truffle X 45 |
+| Strings | Control | Low-Med → Low | 1 | Truffle X 40 |
+| Strings | Comfort | Elite → Outstanding | 1 | Truffle X 98 |
+| Strings | Comfort | Low-Mod → Moderate | 4 | Hyper-G 45, Tour Sniper 45, ALU Power Rough 45 |
+| Strings | Spin | High (Slice) → High | 1 | Barb Wire 78 |
+| Strings | Spin | Moderate → Medium | 4 | Outlast 58, Poly Tour Pro 55, Poly Tour Force 58 |
+| Strings | Spin | Low → Low-Med | 3 | Vanquish (Multi) 35, Tour Super 850 (Multi) 35, Quasi-Gut Armor 35 |
+| Strings | Comfort | Very High → Excellent | 4 | Vanquish (Multi) 92, Poly Tour Air 90, Tour Super 850 (Multi) 92 |
+| Strings | Comfort | Low-Mod → Low | 3 | Poly Tour Spin 42, 4G 42, 4G Rough 40 |
+| Strings | Power | Med-Low → Medium | 8 | ALU Power 50, ALU Power Rough 48, ALU Power Spin 50 |
+| Strings | Spin | Medium → Med-High | 6 | ALU Power 60, ALU Power Soft 60, 4G 60 |
+| Strings | Comfort | Med-Low → Moderate | 5 | ALU Power 50, ALU Power Spin 50, Adrenaline 50 |
+| Strings | Power | Medium → Med-High | 4 | ALU Power Soft 60, ALU Power Feel 60, M2 Pro 60 |
+| Strings | Comfort | Med-High → Good | 1 | ALU Power Soft 70 |
+| Strings | Comfort | Medium → Good | 3 | ALU Power Feel 60, 4G Soft 60, Big Hitter Silver Rough 60 |
+| Strings | Power | Low → Low-Med | 2 | 4G 38, 4G Rough 36 |
+| Strings | Spin | Med-Low → Medium | 1 | Element 50 |
+| Strings | Comfort | Medium → Moderate | 1 | Eco Power 58 |
+| Grips | Absorption | High → Med-High | 1 | Hi-Soft EX Ultra-Thin 72 |
+| Grips | Absorption | Excellent → Very High | 7 | Punch (Perforated) 93, Ana Spiral 90, Legend 92 |
+| Grips | Tackiness | Moderate → Med-High | 1 | Forte 60 |
+| Grips | Absorption | Very High → High | 2 | Wet Super Grap 82, Wet Super Grap (JP) 82 |
+| Grips | Tackiness | Elite → Very High | 1 | Wet Super Grap (JP) 93 |
+| Grips | Absorption | Moderate → Med-High | 1 | Wave Grap 62 |
+| Grips | Tackiness | Moderate → Low-Med | 1 | Dry Super Grap 42 |
+| Grips | Absorption | Med-Low → Medium | 1 | Tac 45 |
+| Grips | Durability | Medium → Good | 2 | Tac 60, Mega Tac 60 |
+| Grips | Absorption | Low → Low-Med | 1 | Mega Tac 35 |
+| Grips | Absorption | High → Very High | 1 | Tourna Grip Pro Thin 88 |
+| Gut pairings | Spin | Med → Med-High | 4 | gh-regna-1 60, gh-regna-6 60, gh-percept-3 60 |
+| Gut pairings | Gut protection | Med-Low → Medium | 2 | gh-regna-2 50, gh-percept-2 50 |
+| Gut pairings | Spin | Med-Low → Medium | 1 | gh-regna-3 50 |
+| Gut pairings | Power | Med → Med-High | 7 | gh-regna-5 62, gh-regna-7 60, gh-percept-5 62 |
+| Gut pairings | Power | Med-Low → Medium | 3 | gh-regna-6 55, gh-percept-7 52, gh-pt630-5 52 |
+| Gut pairings | Spin | Med → Medium | 2 | gh-percept-1 58, gh-percept-7 58 |
+| Gut pairings | Spin | Med-High → High | 1 | gh-percept-4 75 |
+| Gut pairings | Gut protection | Med → Med-High | 1 | gh-pt630-1 60 |
+
+`scripts/derive-rating-words.ts` (one-off) ran on a sample batch first (the
+five the owner saw). Before writing, it asserts 458 ratings, 137 words that
+change, 15 of them only in spelling, and each sample change.
+
+**Validation.** The schema stores a whole score from 0 to 100 and nothing
+else; a stored word fails it. The per-axis word lists and the `rating-order`
+rule are retired: a derived word can't be out of order.
+
+## Declared differences from v0.990 (added in v1.6)
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| 137 rating words derived from their scores | yes | K: `V0990_RATING_WORDS` derives legacy's words from its own bar widths (it throws unless 137 change), and the 310 words beside the rating bars on the page follow (strings and hybrids in three racquets, grips once). Compare and the gut table draw from the data |
+
+The round-trip test applies the same function to the v0.990 blob.
+
+---
+
+## Data corrections
+
+None: the words follow the scores, which are unchanged.
+
+## Flags left open
+
+Unchanged since v1.5.
+
+## Verification
+
+`npm run check` passes: 372 Vitest tests (352 in v1.5), 62 Playwright tests.
+
+- **New tests:** 26 in `tests/unit/ratings.test.ts` (each word's first score
+  and the one below it on both scales, the bar, a missing rating); schema
+  checks for a score that isn't whole, a stored word on a string and on a gut
+  pairing, and a JSON Schema check for a stored word. Four `rating-order`
+  tests and five word-list schema tests are retired.
+- **Against v0.990:** with every declared change applied to the blob, the data
+  equals v0.990's value for value and serialises to the same length.
+- **Parity:** all 16 pixel views and 25 DOM scenarios pass. Without patch K,
+  33 of them fail.
+
+## File size
+
+| | v1.5 | v1.6 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 455,640 | 443,775 | −11.9 KB (−2.6%) |
+| gzip | 104,075 | 103,424 | −0.7 KB |
+
+The data no longer stores a word with each of the 458 ratings.
+
+## Still open
+
+Unchanged from v1.5, except:
+
+- **Closed:** the rating words (D5). Phase 2 has no step left.
+
+What remains is listed above (the disputed stiffness figures, the unclear
+Racketpedia entries) and under v1.5 and earlier: the gut hybrid section's
+layout, the 15 ranking-style notes, the phone grip cards, iOS input zoom and
+date width, the palette hint on phones, the feel taxonomy, the grip Thin chip,
+the Wasabi X record.
+
+---
+
 # v1.5 — Stiffness figures re-checked
 
 **Date:** 2026-11-18

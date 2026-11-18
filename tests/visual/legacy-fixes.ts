@@ -36,6 +36,10 @@
 //      measured, no longer "~"); V0990_STIFFNESS_SCALE redraws their bars (4 change), and the
 //      cells already on the page follow. Its two text corrections (scripts/recheck-stiffness.ts:
 //      RECHECK_TEXT_EDITS) go through G with v1.2's.
+//   K. v1.6: every rating's word derived from its score on two scales (src/core/ratings.ts):
+//      V0990_RATING_WORDS sets legacy's words from its own bar widths (137 change), and the
+//      words beside the rating bars already on the page follow (310: strings and hybrids in three
+//      racquets, grips once). Compare and the gut table draw from the data.
 // The CSS repeats the rules in src/styles/additions.css; a change there must change it here.
 import type { Page } from '@playwright/test';
 import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
@@ -138,6 +142,37 @@ export const V0990_RECHECK_LABELS: readonly [string, string, string][] = [
 /** All text edits applied to legacy since v1.2: the stiffness words, then the re-check's. */
 export const V0990_ALL_TEXT_EDITS = [...STIFFNESS_WORD_EDITS, ...RECHECK_TEXT_EDITS];
 
+/**
+ * v1.6's rating words, derived from a v0.990 TENNIS_DB's own scores (the bar widths), in place,
+ * as JavaScript source: patch K runs it on the legacy page and the round-trip test on the blob.
+ * Returns how many words changed (137).
+ */
+export const V0990_RATING_SCALES = String.raw`(() => {
+  const AMOUNT = [['Low', 0], ['Low-Med', 35], ['Medium', 45], ['Med-High', 60], ['High', 75], ['Very High', 85], ['Elite', 95]];
+  const QUALITY = [['Low', 0], ['Moderate', 45], ['Good', 60], ['Very Good', 78], ['Excellent', 88], ['Outstanding', 95]];
+  const SCALE = { power: AMOUNT, spin: AMOUNT, tackiness: AMOUNT, absorption: AMOUNT, gutProtection: AMOUNT, 'gut-protection': AMOUNT, control: QUALITY, comfort: QUALITY, durability: QUALITY };
+  return (axis, score) => [...SCALE[axis]].reverse().find(([, from]) => score >= from)[0];
+})()`;
+
+export const V0990_RATING_WORDS = String.raw`((db) => {
+  const word = ${V0990_RATING_SCALES};
+  let changed = 0;
+  const set = (rows, fields) => {
+    for (const r of rows) for (const f of fields) {
+      const bar = r[f];
+      if (!bar) continue;
+      const w = word(f, bar.width);
+      if (w !== bar.label) changed++;
+      bar.label = w;
+    }
+  };
+  set(db.strings, ['power', 'spin', 'control', 'comfort']);
+  set(db.hybrids, ['power', 'spin']);
+  set(Object.values(db.grips).flatMap((t) => Object.values(t).flat()), ['tackiness', 'absorption', 'durability']);
+  set(Object.values(db.gutHybrids).flat(), ['power', 'spin', 'comfort', 'gutProtection']);
+  return changed;
+})`;
+
 const LEGACY_FIXES_JS = String.raw`(() => {
   // F (first, so every other patch sees the new data)
   (${V0990_STIFFNESS_RULE})(window.TENNIS_DB);
@@ -202,6 +237,23 @@ const LEGACY_FIXES_JS = String.raw`(() => {
     }
   }
   if (rechecked !== 15) throw new Error('expected 15 re-checked rows (5 x 3 racquets), got ' + rechecked);
+
+  // K
+  const words = (${V0990_RATING_WORDS})(window.TENNIS_DB);
+  if (words !== 137) throw new Error('expected 137 rating words to change, got ' + words);
+  const ratingWord = ${V0990_RATING_SCALES};
+  let reworded = 0;
+  for (const fill of document.querySelectorAll('.bar-fill')) {
+    const axis = [...fill.classList].find((c) => c !== 'bar-fill' && c !== 'stiff');
+    if (!axis) continue;
+    const label = fill.closest('.bar-cell').querySelector('.bar-label');
+    const w = ratingWord(axis, parseFloat(fill.style.width));
+    if (label.textContent !== w) {
+      label.textContent = w;
+      reworded++;
+    }
+  }
+  if (reworded !== 310) throw new Error('expected 310 rating words redrawn, got ' + reworded);
 
   // I
   const allGrips = Object.values(window.TENNIS_DB.grips).flatMap((t) => Object.values(t).flat());

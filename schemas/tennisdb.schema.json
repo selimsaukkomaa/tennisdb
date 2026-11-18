@@ -238,16 +238,28 @@
           "$ref": "#/$defs/Stiffness"
         },
         "power": {
-          "$ref": "#/$defs/PowerRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The power score, 0-100; ratings.ts derives its word."
         },
         "spin": {
-          "$ref": "#/$defs/SpinRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The spin score, 0-100; ratings.ts derives its word."
         },
         "control": {
-          "$ref": "#/$defs/ControlRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The control score, 0-100; ratings.ts derives its word."
         },
         "comfort": {
-          "$ref": "#/$defs/ComfortRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The comfort score, 0-100; ratings.ts derives its word."
         },
         "feelTags": {
           "type": "array",
@@ -449,127 +461,6 @@
       ],
       "additionalProperties": false
     },
-    "PowerRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Low",
-            "Low-Med",
-            "Med-Low",
-            "Medium",
-            "Med-High",
-            "High",
-            "Very High"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
-    "SpinRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Low",
-            "Low-Med",
-            "Med-Low",
-            "Medium",
-            "Moderate",
-            "Mod-High",
-            "Med-High",
-            "High",
-            "High (Slice)",
-            "Very High",
-            "Elite"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
-    "ControlRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Low-Med",
-            "Moderate",
-            "Good",
-            "Very Good",
-            "Very High",
-            "Excellent",
-            "Outstanding"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
-    "ComfortRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Low",
-            "Low-Mod",
-            "Med-Low",
-            "Moderate",
-            "Medium",
-            "Good",
-            "Med-High",
-            "Very Good",
-            "High",
-            "Very High",
-            "Excellent",
-            "Elite"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
     "StringTag": {
       "type": "string",
       "enum": [
@@ -704,10 +595,16 @@
           "additionalProperties": false
         },
         "power": {
-          "$ref": "#/$defs/PowerRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The power score, 0-100; ratings.ts derives its word."
         },
         "spin": {
-          "$ref": "#/$defs/SpinRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The spin score, 0-100; ratings.ts derives its word."
         },
         "feelTags": {
           "type": "array",
@@ -937,13 +834,22 @@
           }
         },
         "tackiness": {
-          "$ref": "#/$defs/TackinessRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The tackiness score, 0-100; ratings.ts derives its word."
         },
         "absorption": {
-          "$ref": "#/$defs/AbsorptionRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The absorption score, 0-100; ratings.ts derives its word."
         },
         "durability": {
-          "$ref": "#/$defs/DurabilityRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The durability score, 0-100; ratings.ts derives its word."
         },
         "feelTags": {
           "type": "array",
@@ -1029,89 +935,6 @@
       ],
       "additionalProperties": false,
       "description": "One line of the specs of a grip; emphasis draws it in amber."
-    },
-    "TackinessRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Low",
-            "Low-Med",
-            "Moderate",
-            "High",
-            "Very High",
-            "Elite"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
-    "AbsorptionRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Low",
-            "Med-Low",
-            "Medium",
-            "Moderate",
-            "High",
-            "Very High",
-            "Excellent",
-            "Elite"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
-    "DurabilityRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Low",
-            "Moderate",
-            "Medium",
-            "Good",
-            "Very Good",
-            "Excellent"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
     },
     "GripTag": {
       "type": "string",
@@ -1257,18 +1080,30 @@
           "minLength": 1
         },
         "power": {
-          "$ref": "#/$defs/GutPowerRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The power score, 0-100; ratings.ts derives its word."
         },
         "spin": {
-          "$ref": "#/$defs/GutSpinRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The spin score, 0-100; ratings.ts derives its word."
         },
         "comfort": {
-          "$ref": "#/$defs/GutComfortRating"
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "The comfort score, 0-100; ratings.ts derives its word."
         },
         "gutProtection": {
           "anyOf": [
             {
-              "$ref": "#/$defs/GutProtectionRating"
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 100,
+              "description": "The gut protection score, 0-100; ratings.ts derives its word."
             },
             {
               "type": "null"
@@ -1297,108 +1132,6 @@
         "notes"
       ],
       "additionalProperties": false
-    },
-    "GutPowerRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Med-Low",
-            "Med",
-            "Med-High",
-            "High",
-            "Very High"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
-    "GutSpinRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Med-Low",
-            "Med",
-            "Med-High",
-            "High",
-            "Very High"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
-    "GutComfortRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Very Good",
-            "Excellent",
-            "Outstanding"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
-    },
-    "GutProtectionRating": {
-      "type": "object",
-      "properties": {
-        "score": {
-          "type": "integer",
-          "minimum": 0,
-          "maximum": 100
-        },
-        "label": {
-          "type": "string",
-          "enum": [
-            "Med-Low",
-            "Med",
-            "Med-High",
-            "High",
-            "Very High"
-          ]
-        }
-      },
-      "required": [
-        "score",
-        "label"
-      ],
-      "additionalProperties": false,
-      "description": "A score from 0 to 100 and a word from the list for its axis."
     }
   }
 }

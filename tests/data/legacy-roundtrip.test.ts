@@ -17,7 +17,7 @@ import { describe, expect, test } from 'vitest';
 import { assembleDb, copy } from '../../src/core/db';
 import { racquetLabel } from '../../src/core/labels';
 import { tensionLabel } from '../../src/core/pairings';
-import { ratingBar, type Rating } from '../../src/core/ratings';
+import { ratingBar, type RatingAxis } from '../../src/core/ratings';
 import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
 import { feelTokens, stiffnessBar } from '../../src/core/stiffness';
 import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from '../../src/core/tags';
@@ -27,6 +27,7 @@ import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
 import {
   V0990_ALL_TEXT_EDITS,
+  V0990_RATING_WORDS,
   V0990_RECHECK_LABELS,
   V0990_STIFFNESS_RULE,
   V0990_STIFFNESS_SCALE,
@@ -41,12 +42,12 @@ const legacyJson = legacyHtml.match(
   /<script id="tennis-data" type="application\/json">([\s\S]*?)<\/script>/,
 )![1]!;
 
-/** v0.999 stores a rating as { score, label }; v0.990 had the bar, { label, width }. */
-function withBars<T extends object>(rec: T, fields: readonly string[]): T {
+/** v1.6 stores a rating as its score (v0.999-v1.5: { score, label }); v0.990 had the bar. */
+function withBars<T extends object>(rec: T, fields: readonly RatingAxis[]): T {
   const copy = { ...rec } as Record<string, unknown>;
   for (const field of fields) {
-    const rating = copy[field] as Rating | null | undefined;
-    if (rating) copy[field] = ratingBar(rating);
+    const score = copy[field] as number | null | undefined;
+    if (score !== null && score !== undefined) copy[field] = ratingBar(field, score);
   }
   return copy as T;
 }
@@ -139,6 +140,7 @@ const applyStiffnessScale = new Function(`return ${V0990_STIFFNESS_SCALE}`)() as
   db: unknown,
   expected?: number,
 ) => unknown;
+const applyRatingWords = new Function(`return ${V0990_RATING_WORDS}`)() as (db: unknown) => number;
 const expected = (): unknown => {
   const db = applyStiffnessScale(applyStiffnessRule(JSON.parse(legacyJson))) as {
     strings: { id: string; stiffness: { label: string } }[];
@@ -150,6 +152,8 @@ const expected = (): unknown => {
     s.stiffness.label = now;
   }
   applyStiffnessScale(db, 4);
+  // v1.6: every rating's word from its score (patch K).
+  expect(applyRatingWords(db)).toBe(137);
   expect(applyTextEdits(db, V0990_ALL_TEXT_EDITS)).toHaveLength(39);
   // v1.4: the five grip tags that took their label's majority colour (patch I).
   type V0990Grip = { id: string; feelTags: { label: string; variant: string }[] };

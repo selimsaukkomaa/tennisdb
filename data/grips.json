@@ -18,18 +18,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 97,
-          "label": "Elite"
-        },
-        "absorption": {
-          "score": 85,
-          "label": "Very High"
-        },
-        "durability": {
-          "score": 93,
-          "label": "Excellent"
-        },
+        "tackiness": 97,
+        "absorption": 85,
+        "durability": 93,
         "feelTags": [
           "Smooth",
           "Ultra-Tacky"
@@ -59,18 +50,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 95,
-          "label": "Elite"
-        },
-        "absorption": {
-          "score": 72,
-          "label": "High"
-        },
-        "durability": {
-          "score": 78,
-          "label": "Very Good"
-        },
+        "tackiness": 95,
+        "absorption": 72,
+        "durability": 78,
         "feelTags": [
           "Thin",
           "Tacky"
@@ -100,18 +82,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 90,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 93,
-          "label": "Excellent"
-        },
-        "durability": {
-          "score": 82,
-          "label": "Very Good"
-        },
+        "tackiness": 90,
+        "absorption": 93,
+        "durability": 82,
         "feelTags": [
           "Ventilated",
           "Tacky"
@@ -139,18 +112,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 88,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 78,
-          "label": "High"
-        },
-        "durability": {
-          "score": 72,
-          "label": "Good"
-        },
+        "tackiness": 88,
+        "absorption": 78,
+        "durability": 72,
         "feelTags": [
           "Cushioned",
           "Dual Ridge"
@@ -178,18 +142,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 88,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 90,
-          "label": "Excellent"
-        },
-        "durability": {
-          "score": 72,
-          "label": "Good"
-        },
+        "tackiness": 88,
+        "absorption": 90,
+        "durability": 72,
         "feelTags": [
           "Ridged",
           "Ventilated"
@@ -213,18 +168,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 88,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 76,
-          "label": "High"
-        },
-        "durability": {
-          "score": 70,
-          "label": "Good"
-        },
+        "tackiness": 88,
+        "absorption": 76,
+        "durability": 70,
         "feelTags": [
           "Tapered",
           "Tacky"
@@ -254,18 +200,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 90,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 92,
-          "label": "Excellent"
-        },
-        "durability": {
-          "score": 90,
-          "label": "Excellent"
-        },
+        "tackiness": 90,
+        "absorption": 92,
+        "durability": 90,
         "feelTags": [
           "Textured",
           "Plush"
@@ -293,18 +230,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 92,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 92,
-          "label": "Excellent"
-        },
-        "durability": {
-          "score": 88,
-          "label": "Excellent"
-        },
+        "tackiness": 92,
+        "absorption": 92,
+        "durability": 88,
         "feelTags": [
           "Aggressive",
           "Tracked"
@@ -332,18 +260,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 88,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 80,
-          "label": "High"
-        },
-        "durability": {
-          "score": 82,
-          "label": "Very Good"
-        },
+        "tackiness": 88,
+        "absorption": 80,
+        "durability": 82,
         "feelTags": [
           "Textured",
           "Decorative"
@@ -373,18 +292,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 60,
-          "label": "Moderate"
-        },
-        "absorption": {
-          "score": 58,
-          "label": "Medium"
-        },
-        "durability": {
-          "score": 92,
-          "label": "Excellent"
-        },
+        "tackiness": 60,
+        "absorption": 58,
+        "durability": 92,
         "feelTags": [
           "Firm",
           "Substantial"
@@ -416,18 +326,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 22,
-          "label": "Low"
-        },
-        "absorption": {
-          "score": 92,
-          "label": "Excellent"
-        },
-        "durability": {
-          "score": 55,
-          "label": "Moderate"
-        },
+        "tackiness": 22,
+        "absorption": 92,
+        "durability": 55,
         "feelTags": [
           "Dry",
           "Absorbent"
@@ -458,18 +359,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 35,
-          "label": "Low-Med"
-        },
-        "absorption": {
-          "score": 90,
-          "label": "Excellent"
-        },
-        "durability": {
-          "score": 92,
-          "label": "Excellent"
-        },
+        "tackiness": 35,
+        "absorption": 90,
+        "durability": 92,
         "feelTags": [
           "Dry",
           "Durable"
@@ -493,18 +385,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 25,
-          "label": "Low"
-        },
-        "absorption": {
-          "score": 88,
-          "label": "Very High"
-        },
-        "durability": {
-          "score": 68,
-          "label": "Good"
-        },
+        "tackiness": 25,
+        "absorption": 88,
+        "durability": 68,
         "feelTags": [
           "Dry",
           "Ridged"
@@ -534,18 +417,9 @@
             "emphasis": true
           }
         ],
-        "tackiness": {
-          "score": 18,
-          "label": "Low"
-        },
-        "absorption": {
-          "score": 96,
-          "label": "Elite"
-        },
-        "durability": {
-          "score": 30,
-          "label": "Low"
-        },
+        "tackiness": 18,
+        "absorption": 96,
+        "durability": 30,
         "feelTags": [
           "Dry",
           "Classic"
@@ -687,18 +561,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 88,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 82,
-          "label": "Very High"
-        },
-        "durability": {
-          "score": 90,
-          "label": "Excellent"
-        },
+        "tackiness": 88,
+        "absorption": 82,
+        "durability": 90,
         "feelTags": [
           "Smooth",
           "Tacky"
@@ -726,18 +591,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 93,
-          "label": "Elite"
-        },
-        "absorption": {
-          "score": 82,
-          "label": "Very High"
-        },
-        "durability": {
-          "score": 88,
-          "label": "Excellent"
-        },
+        "tackiness": 93,
+        "absorption": 82,
+        "durability": 88,
         "feelTags": [
           "Smooth",
           "Ultra-Tacky"
@@ -765,18 +621,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 82,
-          "label": "High"
-        },
-        "absorption": {
-          "score": 80,
-          "label": "High"
-        },
-        "durability": {
-          "score": 84,
-          "label": "Very Good"
-        },
+        "tackiness": 82,
+        "absorption": 80,
+        "durability": 84,
         "feelTags": [
           "Smooth",
           "Tacky"
@@ -804,18 +651,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 78,
-          "label": "High"
-        },
-        "absorption": {
-          "score": 62,
-          "label": "Moderate"
-        },
-        "durability": {
-          "score": 68,
-          "label": "Good"
-        },
+        "tackiness": 78,
+        "absorption": 62,
+        "durability": 68,
         "feelTags": [
           "Cushioned",
           "Ribbed"
@@ -843,18 +681,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 83,
-          "label": "High"
-        },
-        "absorption": {
-          "score": 78,
-          "label": "High"
-        },
-        "durability": {
-          "score": 82,
-          "label": "Very Good"
-        },
+        "tackiness": 83,
+        "absorption": 78,
+        "durability": 82,
         "feelTags": [
           "Smooth",
           "Tacky"
@@ -884,18 +713,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 25,
-          "label": "Low"
-        },
-        "absorption": {
-          "score": 88,
-          "label": "Very High"
-        },
-        "durability": {
-          "score": 62,
-          "label": "Good"
-        },
+        "tackiness": 25,
+        "absorption": 88,
+        "durability": 62,
         "feelTags": [
           "Dry",
           "Absorbent"
@@ -926,18 +746,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 42,
-          "label": "Moderate"
-        },
-        "absorption": {
-          "score": 92,
-          "label": "Excellent"
-        },
-        "durability": {
-          "score": 78,
-          "label": "Very Good"
-        },
+        "tackiness": 42,
+        "absorption": 92,
+        "durability": 78,
         "feelTags": [
           "Thin",
           "Dry-Tacky"
@@ -1051,18 +862,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 80,
-          "label": "High"
-        },
-        "absorption": {
-          "score": 45,
-          "label": "Med-Low"
-        },
-        "durability": {
-          "score": 60,
-          "label": "Medium"
-        },
+        "tackiness": 80,
+        "absorption": 45,
+        "durability": 60,
         "feelTags": [
           "Tacky"
         ],
@@ -1096,18 +898,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 92,
-          "label": "Very High"
-        },
-        "absorption": {
-          "score": 35,
-          "label": "Low"
-        },
-        "durability": {
-          "score": 60,
-          "label": "Medium"
-        },
+        "tackiness": 92,
+        "absorption": 35,
+        "durability": 60,
         "feelTags": [
           "Very Tacky"
         ],
@@ -1144,18 +937,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 18,
-          "label": "Low"
-        },
-        "absorption": {
-          "score": 96,
-          "label": "Elite"
-        },
-        "durability": {
-          "score": 30,
-          "label": "Low"
-        },
+        "tackiness": 18,
+        "absorption": 96,
+        "durability": 30,
         "feelTags": [
           "Dry",
           "Classic"
@@ -1191,18 +975,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 18,
-          "label": "Low"
-        },
-        "absorption": {
-          "score": 96,
-          "label": "Elite"
-        },
-        "durability": {
-          "score": 30,
-          "label": "Low"
-        },
+        "tackiness": 18,
+        "absorption": 96,
+        "durability": 30,
         "feelTags": [
           "Dry",
           "Long"
@@ -1234,18 +1009,9 @@
             "emphasis": false
           }
         ],
-        "tackiness": {
-          "score": 18,
-          "label": "Low"
-        },
-        "absorption": {
-          "score": 88,
-          "label": "High"
-        },
-        "durability": {
-          "score": 30,
-          "label": "Low"
-        },
+        "tackiness": 18,
+        "absorption": 88,
+        "durability": 30,
         "feelTags": [
           "Dry",
           "Thin"

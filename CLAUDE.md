@@ -83,7 +83,8 @@ scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
                    migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs,
                    derive-stiffness-bands, stiffness-words, derive-stiffness-widths,
-                   derive-tag-colours, recheck-stiffness) are not meant to run again
+                   derive-tag-colours, recheck-stiffness, derive-rating-words) are not meant
+                   to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -151,17 +152,17 @@ the same files, so both sides render identical glyphs offline.
 ## Data validation
 
 The Zod schemas in `src/core/schema.ts` run first and own the data's shape: fields, types,
-formats, no unknown keys, the chip token lists, the rating words of each axis
-(`src/core/ratings.ts`). Keep every schema constraint expressible in
+formats, no unknown keys, the chip token lists, rating scores from 0 to 100. Keep every
+schema constraint expressible in
 JSON Schema (no `.refine`), so the export in `schemas/` stays complete. Then
 `src/core/validate.ts` holds the content and cross-record rules from build_990.py and more:
 neutral text, notes present for every racquet, Crisp chip ⇔ Crisp tag, every feel chip used,
 grip type ⇔ chip, CSS for every tag colour, a filter-header colour for every grip brand,
 bar-backed claims (Mega Tac, Tourna Grip Original), hybrid side labels that name their
-string's band, rating words in the order of their lists, id and reference integrity, no
-"Connected" vocabulary, no tag or entity anywhere in `data/`. Some of v0.990's rules hold by
-construction instead: the stiffness band comes from the figure, Firm/Soft from the band
-(`src/core/stiffness.ts`), and a tag's colour from its label (`src/core/tags.ts`).
+string's band, id and reference integrity, no "Connected" vocabulary, no tag or entity
+anywhere in `data/`. Some of v0.990's rules hold by construction instead: the stiffness band
+comes from the figure, Firm/Soft from the band (`src/core/stiffness.ts`), a tag's colour from
+its label (`src/core/tags.ts`), and a rating's word from its score (`src/core/ratings.ts`).
 `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in
 source, `index.html`, these two docs or `docs/`. Every rule and each kind of schema check has
 a mutation test in `tests/data/validate.test.ts`; `tests/data/schemas.test.ts` checks that
