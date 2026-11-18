@@ -10,6 +10,7 @@ import { FEEL_CHIPS, tokens } from './chips';
 import { RATING_WORDS, type Rating, type RatingAxis } from './ratings';
 import { CopySchema, TennisDbSchema } from './schema';
 import { feelTokens, stiffnessBand } from './stiffness';
+import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from './tags';
 import type { Copy, Grip, Hybrid, Pairing, StringRec, TennisDb } from './types';
 import { GRIP_TYPES } from './types';
 
@@ -32,29 +33,6 @@ export const ABOUT_VERDICT_LANGUAGE = /\byour?\b|\bstrong\b|prefer/i;
 
 /** A tag or a character entity, which plain text never holds. A bare "&" is text. */
 export const MARKUP = /<[a-zA-Z/!]|&(#\d+|#x[0-9a-fA-F]+|[a-zA-Z][a-zA-Z0-9]*);/;
-
-/** One tag label, one colour: v0.990's label -> variant table for strings and hybrids. */
-export const TAG_VARIANTS: Record<string, string> = {
-  Crisp: 'crisp',
-  Firm: 'firm',
-  Precise: 'firm',
-  Controlled: 'firm',
-  Aggressive: 'firm',
-  Soft: 'soft',
-  Softer: 'soft',
-  'Very Soft': 'soft',
-  Moderate: 'soft',
-  Muted: 'soft',
-  Smooth: 'round',
-  Bite: 'round',
-  Lively: 'lively',
-  Elastic: 'lively',
-  Explosive: 'lively',
-  Responsive: 'lively',
-  Plush: 'plush',
-  Pocketing: 'plush',
-  Comfortable: 'plush',
-};
 
 const MIN_NOTE_CHARS = 40;
 
@@ -245,7 +223,7 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   // v0.990's firm-xor-soft and firm-soft-band rules hold by construction since v1.1.
   for (const r of rows) {
     const feel = tokens(feelTokens(r));
-    const crispTag = r.feelTags.some((t) => t.label === 'Crisp') || /crisp/i.test(r.feelSummary);
+    const crispTag = r.feelTags.includes('Crisp') || /crisp/i.test(r.feelSummary);
     if (feel.includes('crisp') !== crispTag)
       fail('crisp-tag', r.id, 'Crisp chip and Crisp tag/summary disagree');
   }
@@ -304,20 +282,12 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
     }
   }
 
-  // ---- tag colours
-  const seen = new Map<string, string>();
-  for (const r of rows) {
-    for (const t of r.feelTags) {
-      const expected = TAG_VARIANTS[t.label];
-      if (!expected) fail('tag-variant', r.id, `tag "${t.label}" has no entry in the colour table`);
-      else if (t.variant !== expected)
-        fail('tag-variant', r.id, `tag "${t.label}" is ${t.variant}, expected ${expected}`);
-      if (seen.has(t.label) && seen.get(t.label) !== t.variant)
-        fail('tag-variant', r.id, `tag "${t.label}" coloured two ways`);
-      seen.set(t.label, t.variant);
-    }
-  }
-  const variants = new Set([...rows, ...grips].flatMap((r) => r.feelTags.map((t) => t.variant)));
+  // ---- tag colours: tags.ts gives each label one colour (the schema allows only its labels,
+  // which retired v0.990's tag-variant rule in v1.4); every colour needs its CSS rule
+  const variants = new Set([
+    ...Object.values(STRING_TAG_COLOURS),
+    ...Object.values(GRIP_TAG_COLOURS),
+  ]);
   for (const v of variants) {
     if (!new RegExp(String.raw`\.tag-${v}\s*\{`).test(css))
       fail('tag-css', v, `no CSS rule for .tag-${v}`);

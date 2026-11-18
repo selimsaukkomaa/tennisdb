@@ -16,7 +16,6 @@ export interface Bar {
   label: string;
   width: number;
 }
-export type FeelTag = z.infer<typeof S.FeelTagSchema>;
 export type Tension = z.infer<typeof S.TensionSchema>;
 export type Pairing = z.infer<typeof S.PairingSchema>;
 export type StringRec = z.infer<typeof S.StringSchema>;

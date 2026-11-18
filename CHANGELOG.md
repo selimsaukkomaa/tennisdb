@@ -6,6 +6,110 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.4 — One colour per tag label
+
+**Date:** 2026-11-18
+**Base:** v1.3 (one stiffness scale)
+**Status:** visible release. Phase 2 step 3, fourth and last release
+(`docs/phase-2-data-model.md`, D8): a feel tag stores its label, and its
+colour comes from a table, so one label always has one colour. On the grips
+four labels had two colours; the owner chose scheme A on 2026-11-18, after
+screenshots: each label takes the colour most grips already used, and five
+grip tags change. No note content changed; `TENNIS_DB.version` stays
+`0.990`.
+
+With this, Phase 2 step 3 is complete.
+
+---
+
+## Tag colours
+
+| Label | Was | Now | Tags that change |
+|---|---|---|---|
+| Tacky | red ×8, amber ×1 | red | Tourna Tac |
+| Dry | indigo ×7, amber ×1 | indigo | Yonex Dry Grap |
+| Firm | amber ×5, red ×1 | amber | Kimony Forte |
+| Classic | red ×3, amber ×2 | red | Kimony Tourna, Tourna Grip Original |
+
+The leather replacement grips look as before (Firm amber, Classic red).
+Every other grip label already had one colour and keeps it.
+
+- **Two tables** in `src/core/tags.ts`: strings and hybrids use v0.990's
+  (unchanged; no string or hybrid tag changes colour), grips their own. A
+  grip's "Smooth" (amber) and a string's "Smooth" (indigo) stay different, as
+  in v0.990: they sit on different pages and describe different things. Mega
+  Tac's "Very Tacky" is its own label and stays amber.
+- **The data stores the label only:** `feelTags: ["Crisp", "Firm"]`, no
+  colour. `feelTagsHtml()` looks the colour up.
+
+`scripts/derive-tag-colours.ts` (one-off) ran on a sample batch first. Before
+writing, it asserts that each of the 182 tags has its table's colour except
+exactly the five above.
+
+**Validation.** The schema allows only a table's labels: a tag with no colour,
+a grip tag on a string and a string tag on a grip all fail it. v0.990's
+`tag-variant` rule is retired; `tag-css` now checks every colour in the
+tables has its CSS rule.
+
+## Declared differences from v0.990 (added in v1.4)
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| Five grip tags in their label's colour | yes | I: the five changes (`GRIP_TAG_CHANGES`) applied to legacy's data and to the tags on the page; it throws unless exactly five are recoloured |
+
+**A limit of the pixel comparison, found here.** Pale amber and pale red tags
+are within the colour threshold (0.1) of each other, so no pixel view can see
+four of the five changes, however close up. A new close-up view of Yonex Dry
+Grap's row, whose tag goes from amber to indigo, sees the fifth; the DOM
+scenarios see all five through the tags' classes. `CLAUDE.md` records the
+limit next to the 0.1% rule.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v1.2.
+
+## Verification
+
+`npm run check` passes: 349 Vitest tests (348 in v1.3), 62 Playwright tests
+(60 in v1.3).
+
+- **New tests:** three shapes the schema rejects (a label with no colour, a
+  grip tag on a string, a string tag on a grip) and a stored colour; the
+  close-up pixel view at both viewports. Two `tag-variant` mutation tests and
+  the schema test for an unknown colour retired. The smoke check "each tag
+  label has one colour" now reads the rendered tags.
+- **Against v0.990:** with the five changes applied to the blob, the data
+  equals v0.990's value for value and serialises to the same length.
+- **Parity:** all 16 pixel views and 25 DOM scenarios pass. Without patch I,
+  all 25 DOM scenarios and the new close-up fail.
+
+## File size
+
+| | v1.3 | v1.4 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 455,235 | 451,116 | −4.0 KB (−0.9%) |
+| gzip | 103,327 | 103,328 | 0.0 KB |
+
+The data no longer repeats a colour with each of the 182 tags.
+
+## Still open
+
+Unchanged from v1.3, except:
+
+- **Closed:** grip tag colours.
+
+Phase 2 step 4 is what remains of the plan, later and separately: re-checking
+the 62 stiffness figures against named sources with dates (D1), and unifying
+the rating words (D5), sample of five first.
+
+---
+
 # v1.3 — One stiffness scale
 
 **Date:** 2026-11-18

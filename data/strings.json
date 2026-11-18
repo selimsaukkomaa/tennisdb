@@ -46,14 +46,8 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Firm, high-feedback",
     "feelExpand": "Firm hexagonal co-poly with high feedback transmission and a low, flat launch.",
@@ -104,10 +98,7 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Direct, precise",
     "feelExpand": "Tight, low-powered response with a narrow launch window and predictable placement.",
@@ -152,10 +143,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Shaped A5, higher launch",
     "feelExpand": "Hexagonal profile over the A5 polymer — added edge bite and a higher launch angle than the round base string.",
@@ -200,14 +188,8 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Solid, direct, round",
     "feelExpand": "Firm round co-poly with clear feedback; spin from snapback rather than edge bite.",
@@ -256,10 +238,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Round, snapback-driven",
     "feelExpand": "Round profile relying on snapback rather than edge bite; clear feedback with a predictable launch angle.",
@@ -304,10 +283,7 @@
       "label": "Very Good"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Plusher A5, more pop",
     "feelExpand": "Softened 1.20 version of the A5 polymer — deeper pocketing and more launch, less of A5's firmness.",
@@ -372,10 +348,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Elastic",
-        "variant": "lively"
-      }
+      "Elastic"
     ],
     "feelSummary": "More muted than Tour",
     "feelExpand": "Dampened response compared to the Tour variant, with less vibration at contact.",
@@ -424,10 +397,7 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Octagonal, lower launch",
     "feelExpand": "Sharper ball response than the standard version, with less energy absorption on contact.",
@@ -484,10 +454,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Moderate",
-        "variant": "soft"
-      }
+      "Moderate"
     ],
     "feelSummary": "More ball grip",
     "feelExpand": "Increased string-to-ball friction for higher spin rates and better bite on the ball.",
@@ -540,10 +507,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Smooth",
-        "variant": "round"
-      }
+      "Smooth"
     ],
     "feelSummary": "Round, slick, medium",
     "feelExpand": "Ultra-slick round co-poly built for snapback; medium stiffness, flat trajectory.",
@@ -603,10 +567,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Moderate",
-        "variant": "soft"
-      }
+      "Moderate"
     ],
     "feelSummary": "Soft for a shaped string",
     "feelExpand": "Unusually comfortable for a string with angular cross-section.",
@@ -664,10 +625,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Softer",
-        "variant": "soft"
-      }
+      "Softer"
     ],
     "feelSummary": "More pocketing",
     "feelExpand": "Deeper ball dwell time than the standard version in this lineup.",
@@ -726,10 +684,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Smooth",
-        "variant": "round"
-      }
+      "Smooth"
     ],
     "feelSummary": "Carbon firmer than pink",
     "feelExpand": "The carbon-coloured version plays noticeably firmer and more direct than the pink variant.",
@@ -778,10 +733,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Octagonal, soft, high spin",
     "feelExpand": "Octagonal profile at low stiffness — bite-driven spin with a soft, damped contact.",
@@ -834,10 +786,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Softer hex, entry-level",
     "feelExpand": "Budget hex co-poly with a softer formula and a simpler construction than the O-Toro family.",
@@ -882,10 +831,7 @@
       "label": "Elite"
     },
     "feelTags": [
-      {
-        "label": "Plush",
-        "variant": "plush"
-      }
+      "Plush"
     ],
     "feelSummary": "Ultra-soft PEEK polymer",
     "feelExpand": "Advanced polymer material with exceptionally low stiffness.",
@@ -934,10 +880,7 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Firm"
     ],
     "feelSummary": "Firm, controlled, slick",
     "feelExpand": "Stiff, low-friction surface that keeps shots predictable with a muted, efficient response.",
@@ -987,14 +930,8 @@
       "label": "Low"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Firm, lively",
     "feelExpand": "Responsive feel with energy return and clear ball feedback.",
@@ -1044,10 +981,7 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Controlled, precise",
     "feelExpand": "Predictable response with excellent directional accuracy.",
@@ -1095,10 +1029,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Softer",
-        "variant": "soft"
-      }
+      "Softer"
     ],
     "feelSummary": "More pocketing, forgiving",
     "feelExpand": "Deeper ball dwell time than the stiffer version, with a more arm-friendly response.",
@@ -1148,14 +1079,8 @@
       "label": "Low-Mod"
     },
     "feelTags": [
-      {
-        "label": "Muted",
-        "variant": "soft"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Muted",
+      "Firm"
     ],
     "feelSummary": "Firm, heavily damped",
     "feelExpand": "Square co-poly with strong vibration damping; feedback through the handle is quieter than its stiffness suggests.",
@@ -1205,10 +1130,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Pocketing, slightly muted",
     "feelExpand": "Ball sits in the stringbed briefly; feedback is softened.",
@@ -1259,10 +1181,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Softer",
-        "variant": "soft"
-      }
+      "Softer"
     ],
     "feelSummary": "More pocketing",
     "feelExpand": "Deeper ball dwell time than the standard version in this lineup.",
@@ -1312,10 +1231,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Lively",
-        "variant": "lively"
-      }
+      "Lively"
     ],
     "feelSummary": "Softer, more elastic",
     "feelExpand": "Lower stiffness than the standard version; more ball pocketing.",
@@ -1366,10 +1282,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Firmer, plastic-like",
     "feelExpand": "Hexagonal co-poly with a harder contact than typical polyester; snappy response with minimal pocketing.",
@@ -1419,14 +1332,8 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Softer",
-        "variant": "soft"
-      }
+      "Crisp",
+      "Softer"
     ],
     "feelSummary": "Textured grab",
     "feelExpand": "String surface texture grips the ball for enhanced spin generation.",
@@ -1476,10 +1383,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Smooth",
-        "variant": "round"
-      }
+      "Smooth"
     ],
     "feelSummary": "Elastic, more pocketing",
     "feelExpand": "Stretchy stringbed that holds the ball longer on contact for added dwell time.",
@@ -1530,14 +1434,8 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Crisp",
+      "Soft"
     ],
     "feelSummary": "Twisted, high-friction",
     "feelExpand": "Twisted construction with very high surface friction; medium stiffness.",
@@ -1588,10 +1486,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Smooth",
-        "variant": "round"
-      }
+      "Smooth"
     ],
     "feelSummary": "Round, durable",
     "feelExpand": "Consistent, predictable stringbed response with no surprises across the full swing range.",
@@ -1638,10 +1533,7 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Plush, powerful",
     "feelExpand": "Soft stringbed that absorbs and returns energy for comfortable power.",
@@ -1695,14 +1587,8 @@
       "label": "Low-Mod"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Pentagonal, low launch",
     "feelExpand": "Flat trajectory with a firm, penetrating response.",
@@ -1761,10 +1647,7 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Controlled, precise",
     "feelExpand": "Round co-poly with a penetrating response and the best tension hold in the Yonex range.",
@@ -1819,10 +1702,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Moderate",
-        "variant": "soft"
-      }
+      "Moderate"
     ],
     "feelSummary": "Pocketing, predictable",
     "feelExpand": "Reliable dwell time on the ball for consistent shotmaking.",
@@ -1884,10 +1764,7 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Muted",
-        "variant": "soft"
-      }
+      "Muted"
     ],
     "feelSummary": "Octagonal, damped",
     "feelExpand": "Medium-soft stringbed with muted vibration and reduced feedback.",
@@ -1938,10 +1815,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Pentagonal, medium-soft",
     "feelExpand": "Medium-soft pentagonal co-poly with clear feedback, sold at an entry-level price.",
@@ -1992,10 +1866,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Responsive",
-        "variant": "lively"
-      }
+      "Responsive"
     ],
     "feelSummary": "Power-leaning, responsive",
     "feelExpand": "More powerful than average while still transmitting ball feedback.",
@@ -2046,10 +1917,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Lively",
-        "variant": "lively"
-      }
+      "Lively"
     ],
     "feelSummary": "Silicone-infused power",
     "feelExpand": "Silicone coating adds power and dampening to the stringbed.",
@@ -2098,10 +1966,7 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Plush, comfortable",
     "feelExpand": "Softest Yonex poly — cushioned contact, high arc over the net.",
@@ -2150,10 +2015,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Smooth",
-        "variant": "round"
-      }
+      "Smooth"
     ],
     "feelSummary": "Low-powered, muted",
     "feelExpand": "Durability-oriented round co-poly: low static stiffness, low energy return — absorbs pace rather than adding it.",
@@ -2200,10 +2062,7 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Plush, arm-friendly",
     "feelExpand": "Soft, cushioned feel designed to reduce impact shock and protect the arm.",
@@ -2253,14 +2112,8 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Firm hex, holds tension",
     "feelExpand": "Firm hexagonal co-poly with clear feedback; 100/100 tension maintenance on Racketpedia.",
@@ -2313,14 +2166,8 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Smooth",
-        "variant": "round"
-      }
+      "Crisp",
+      "Smooth"
     ],
     "feelSummary": "Smooth, precise",
     "feelExpand": "Excellent feedback for shot placement with a controlled feel.",
@@ -2373,14 +2220,8 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Muted",
-        "variant": "soft"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Muted",
+      "Firm"
     ],
     "feelSummary": "Firm but dampened",
     "feelExpand": "Stiff stringbed with muted vibration and reduced feedback.",
@@ -2429,10 +2270,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Lively",
-        "variant": "lively"
-      }
+      "Lively"
     ],
     "feelSummary": "Lively, elastic Zero variant",
     "feelExpand": "Zero-based formula with a livelier, softer profile. Limited edition.",
@@ -2482,14 +2320,8 @@
       "label": "Low-Mod"
     },
     "feelTags": [
-      {
-        "label": "Muted",
-        "variant": "soft"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Muted",
+      "Firm"
     ],
     "feelSummary": "Muted, precise",
     "feelExpand": "Pre-stretched pentagonal co-poly; damped, control-oriented feel with minimal break-in.",
@@ -2538,10 +2370,7 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Heptagonal, textured, slow break-in",
     "feelExpand": "Seven-sided profile with a micro-particle abrasive surface; requires 2–3 sessions before snapback settles in.",
@@ -2594,14 +2423,8 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Smooth",
-        "variant": "round"
-      }
+      "Crisp",
+      "Smooth"
     ],
     "feelSummary": "Octagonal, medium stiffness",
     "feelExpand": "Sits between Alpha and Tour Sniper in stiffness; a coating that gives a distinctive, loud contact sound.",
@@ -2650,10 +2473,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Plush, comfortable",
     "feelExpand": "Soft, cushioned feel that prioritizes arm comfort.",
@@ -2706,10 +2526,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Lively, communicative",
     "feelExpand": "Triple-spin construction: square shape, abrasive surface and diamond indentations, on a soft formula.",
@@ -2758,10 +2575,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Moderate",
-        "variant": "soft"
-      }
+      "Moderate"
     ],
     "feelSummary": "Powerful, spin-focused",
     "feelExpand": "Combines power with above-average spin generation.",
@@ -2815,10 +2629,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Vintage, solid, precise",
     "feelExpand": "Classic co-poly character with a solid, traditional feel.",
@@ -2871,10 +2682,7 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Very Soft",
-        "variant": "soft"
-      }
+      "Very Soft"
     ],
     "feelSummary": "Powerful, elastic",
     "feelExpand": "Very soft (0.45 kg/mm) round co-poly with an abrasive surface and non-metallic additives.",
@@ -2919,10 +2727,7 @@
       "label": "Moderate"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Hex bite + abrasive surface",
     "feelExpand": "Hexagonal edges combined with a rough coating for aggressive ball-grabbing spin.",
@@ -2971,10 +2776,7 @@
       "label": "Good"
     },
     "feelTags": [
-      {
-        "label": "Smooth",
-        "variant": "round"
-      }
+      "Smooth"
     ],
     "feelSummary": "Slippery, elastic",
     "feelExpand": "Rectangular-round cross string built to add snapback without notching the mains.",
@@ -3026,14 +2828,8 @@
       "label": "Med-Low"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Predictable, firm, round",
     "feelExpand": "Aluminum-coated polyester. The benchmark control-oriented co-poly — the ATP standard for two decades. Smooth response, exceptional consistency.",
@@ -3082,14 +2878,8 @@
       "label": "Low-Mod"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Crisp with bite",
     "feelExpand": "ALU Power with a textured surface. Same 1.05 kg/mm stiffness and tension stability, with notably more spin potential.",
@@ -3138,10 +2928,7 @@
       "label": "Med-High"
     },
     "feelTags": [
-      {
-        "label": "Softer",
-        "variant": "soft"
-      }
+      "Softer"
     ],
     "feelSummary": "More dwell, still predictable",
     "feelExpand": "Lower-stiffness sister to ALU Power. Notable dwell time without going fully soft. For arms that find standard ALU Power too direct.",
@@ -3191,14 +2978,8 @@
       "label": "Med-Low"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Direct with grip",
     "feelExpand": "Pentagonal-shaped sister to ALU Power. Slightly less smooth feel, much more spin access. The shape engages the ball positively at contact.",
@@ -3248,10 +3029,7 @@
       "label": "Medium"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Direct with feel",
     "feelExpand": "Thinner-gauge ALU Power tuned for added feel and spin response. Slightly more lively than the standard line.",
@@ -3301,14 +3079,8 @@
       "label": "Low-Mod"
     },
     "feelTags": [
-      {
-        "label": "Firm",
-        "variant": "firm"
-      },
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Firm",
+      "Crisp"
     ],
     "feelSummary": "Direct, lockdown control",
     "feelExpand": "Stiffer than ALU Power with exceptional tension maintenance — the longest-lasting playability of any Luxilon. For pros who want the firmest possible reference response.",
@@ -3357,14 +3129,8 @@
       "label": "Low-Mod"
     },
     "feelTags": [
-      {
-        "label": "Firm",
-        "variant": "firm"
-      },
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Firm",
+      "Crisp"
     ],
     "feelSummary": "Lockdown with bite",
     "feelExpand": "4G with surface texture for spin. Same exceptional tension maintenance, with significantly more grip on the ball.",
@@ -3413,14 +3179,8 @@
       "label": "Medium"
     },
     "feelTags": [
-      {
-        "label": "Softer",
-        "variant": "soft"
-      },
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Softer",
+      "Crisp"
     ],
     "feelSummary": "Control with comfort",
     "feelExpand": "4G's tension stability with reduced stiffness. Sits between ALU Power Soft and standard 4G in feel.",
@@ -3470,14 +3230,8 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      },
-      {
-        "label": "Moderate",
-        "variant": "soft"
-      }
+      "Soft",
+      "Moderate"
     ],
     "feelSummary": "Plush, controlled",
     "feelExpand": "IRIS-fiber co-poly. The most comfort-oriented Luxilon mainline string — designed for players who want poly control without the bite.",
@@ -3527,14 +3281,8 @@
       "label": "Med-Low"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Sharp, shaped",
     "feelExpand": "Pentagonal cross-section optimized for spin without sacrificing the firm Luxilon response. Plays similarly to ALU Power Spin with slightly more aggressive shape.",
@@ -3584,14 +3332,8 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      },
-      {
-        "label": "Elastic",
-        "variant": "lively"
-      }
+      "Soft",
+      "Elastic"
     ],
     "feelSummary": "Plush, lively",
     "feelExpand": "Multifilament-like response in a co-poly construction. Aimed at players transitioning from natural gut or syn-gut who want some control without losing comfort.",
@@ -3641,10 +3383,7 @@
       "label": "Medium"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Crisp"
     ],
     "feelSummary": "Bio-based, medium-firm",
     "feelExpand": "Bio-sourced polyester (~60% renewable feedstock). Similar playability to ALU Power Soft in a more sustainable construction. Marketed as a bridge between performance and environmental responsibility.",
@@ -3695,14 +3434,8 @@
       "label": "Med-Low"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Firm"
     ],
     "feelSummary": "Sharp, shaped, spinny",
     "feelExpand": "Heptagonal (7-sided) co-poly. The most distinctive spin profile in the Tourna line — sharper edges than typical pentagonals. A favorite among NCAA and lower-tour pros.",
@@ -3752,10 +3485,7 @@
       "label": "Low-Mod"
     },
     "feelTags": [
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Firm"
     ],
     "feelSummary": "Textured, firm",
     "feelExpand": "Textured polyester aimed at competitive juniors and college players. A blue alternative to ALU Power Rough at a friendlier price point.",
@@ -3804,10 +3534,7 @@
       "label": "Medium"
     },
     "feelTags": [
-      {
-        "label": "Softer",
-        "variant": "soft"
-      }
+      "Softer"
     ],
     "feelSummary": "Softer, textured",
     "feelExpand": "A softer-formula sister to Big Hitter Black 7. Same brand, friendlier feel — for arms that find typical co-polys too direct.",
@@ -3856,10 +3583,7 @@
       "label": "Med-Low"
     },
     "feelTags": [
-      {
-        "label": "Firm",
-        "variant": "firm"
-      }
+      "Firm"
     ],
     "feelSummary": "Basic, predictable",
     "feelExpand": "No-frills round co-poly. Tournament-grade durability at an entry-level price. Workhorse string for high-school and club players.",
@@ -3908,14 +3632,8 @@
       "label": "Excellent"
     },
     "feelTags": [
-      {
-        "label": "Very Soft",
-        "variant": "soft"
-      },
-      {
-        "label": "Plush",
-        "variant": "plush"
-      }
+      "Very Soft",
+      "Plush"
     ],
     "feelSummary": "Plush, gut-like",
     "feelExpand": "Multifilament with armored coating for durability. Aimed at recreational players who want gut-like comfort without the cost or maintenance.",
@@ -3965,10 +3683,7 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Soft",
-        "variant": "soft"
-      }
+      "Soft"
     ],
     "feelSummary": "Soft synthetic",
     "feelExpand": "Nylon synthetic gut with wrap construction — very soft, beginner-oriented; occasionally used as a budget cross.",

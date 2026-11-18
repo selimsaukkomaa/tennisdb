@@ -20,6 +20,7 @@ import { FEEL_CHIPS, SHAPE_CHIPS } from './chips';
 import { MAX_KG, MIN_KG } from './log/tension';
 import { RATING_WORDS, type RatingAxis } from './ratings';
 import { STIFFNESS_BANDS } from './stiffness';
+import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS, tagLabels } from './tags';
 import { GRIP_TYPES } from './types';
 
 const Id = z.string().regex(/^[a-z0-9]+(-[a-z0-9]+)*$/);
@@ -34,9 +35,6 @@ function tokenList(values: readonly string[], description: string): z.ZodString 
     .regex(new RegExp(`^${one}(,${one})*$`))
     .meta({ description });
 }
-
-/** Tag colours; each has a `.tag-<variant>` rule in the stylesheet (checked by validate.ts). */
-export const TAG_VARIANT_NAMES = ['crisp', 'firm', 'soft', 'round', 'lively', 'plush'] as const;
 
 const BarWidth = z.int().min(0).max(100);
 
@@ -100,9 +98,17 @@ export const StiffnessSchema = z
 /** A hybrid's stiffness is a judgement of the bed: a band, never a figure; its bar sits at the band's midpoint. */
 const HybridStiffnessSchema = z.strictObject({ band: Band });
 
-export const FeelTagSchema = z
-  .strictObject({ label: Text, variant: z.enum(TAG_VARIANT_NAMES) })
-  .meta({ id: 'FeelTag' });
+/**
+ * A feel tag is its label; the colour comes from the table in tags.ts, so one label has one
+ * colour (since v1.4). Strings and hybrids share one table, grips have their own.
+ */
+export const StringTagSchema = z.enum(tagLabels(STRING_TAG_COLOURS)).meta({
+  id: 'StringTag',
+  description: 'A feel tag of a string or hybrid; tags.ts gives its colour.',
+});
+export const GripTagSchema = z
+  .enum(tagLabels(GRIP_TAG_COLOURS))
+  .meta({ id: 'GripTag', description: 'A feel tag of a grip; tags.ts gives its colour.' });
 
 export const RacquetSchema = z
   .strictObject({
@@ -199,7 +205,7 @@ export const StringSchema = z
     spin: SpinRating,
     control: ControlRating,
     comfort: ComfortRating,
-    feelTags: z.array(FeelTagSchema),
+    feelTags: z.array(StringTagSchema),
     feelSummary: Text,
     feelExpand: Text,
     id: Id,
@@ -228,7 +234,7 @@ export const HybridSchema = z
     stiffness: HybridStiffnessSchema,
     power: PowerRating,
     spin: SpinRating,
-    feelTags: z.array(FeelTagSchema),
+    feelTags: z.array(StringTagSchema),
     feelSummary: Text,
     feelExpand: Text,
     id: Id,
@@ -251,7 +257,7 @@ export const GripSchema = z
     tackiness: TackinessRating.optional(),
     absorption: AbsorptionRating.optional(),
     durability: DurabilityRating.optional(),
-    feelTags: z.array(FeelTagSchema),
+    feelTags: z.array(GripTagSchema),
     feelSummary: Text,
     feelExpand: Text,
     colors: Text,

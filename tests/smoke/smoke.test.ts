@@ -281,20 +281,19 @@ describe('v0.990: shape and feel', () => {
       rows.every(
         (r) =>
           r.feelAttr.split(',').includes('crisp') ===
-          (r.feelTags.some((x) => x.label === 'Crisp') || /crisp/i.test(r.feelSummary)),
+          (r.feelTags.includes('Crisp') || /crisp/i.test(r.feelSummary)),
       ),
     ).toBe(true);
   });
   test('each tag label has one colour', () => {
-    const lv: Record<string, string> = {};
-    let one = true;
-    for (const r of [...DB.strings, ...DB.hybrids]) {
-      for (const x of r.feelTags) {
-        if (lv[x.label] && lv[x.label] !== x.variant) one = false;
-        lv[x.label] = x.variant;
-      }
+    // Since v1.4 the colour comes from the label (core/tags.ts), so a label shows one colour.
+    const colours = new Map<string, Set<string>>();
+    for (const span of $$<HTMLElement>('#regna-content tr[data-id] .tag')) {
+      const set = colours.get(span.textContent!) ?? new Set<string>();
+      set.add(span.className);
+      colours.set(span.textContent!, set);
     }
-    expect(one).toBe(true);
+    expect([...colours.values()].every((s) => s.size === 1)).toBe(true);
   });
 });
 

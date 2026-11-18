@@ -80,8 +80,8 @@ schemas/          JSON Schema exported from the Zod schemas (generated: npm run 
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
                    migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs,
-                   derive-stiffness-bands, stiffness-words, derive-stiffness-widths) are not
-                   meant to run again
+                   derive-stiffness-bands, stiffness-words, derive-stiffness-widths,
+                   derive-tag-colours) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -120,7 +120,7 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
 
 The app must render like v0.990. No visual or DOM change without a declared difference:
 
-- pixel parity (`tests/visual/parity.spec.ts`): 15 views at 1440×900 and 390×844, threshold
+- pixel parity (`tests/visual/parity.spec.ts`): 16 views at 1440×900 and 390×844, threshold
   0.1, at most 0.1% of pixels differing.
 - DOM parity (`tests/visual/dom-parity.spec.ts`): 25 scenarios compared node for node.
 - every declared difference is listed in `CHANGELOG.md`.
@@ -134,7 +134,10 @@ A difference is declared in one of three ways, with its reason next to it:
   so the rest of each view is still checked. Its CSS must match `src/styles/additions.css`.
 
 A new pixel view must show its change in more than 0.1% of the screenshot, or the comparison
-can't see it: use `element` (and `hover`) for a close-up, as the search-field view does.
+can't see it: use `element` (and `hover`) for a close-up, as the search-field view does. A
+colour change must also exceed the per-pixel threshold: the pale amber and red tags
+(`.tag-crisp`, `.tag-firm`) are within 0.1 of each other, so only the DOM scenarios see a
+change between them.
 
 Full-page screenshots are taken from the top of the page (`screenshot()` in
 `tests/visual/support.ts`): fixed elements land wherever the page is scrolled, and
@@ -151,11 +154,12 @@ formats, no unknown keys, the chip token lists, the rating words of each axis
 JSON Schema (no `.refine`), so the export in `schemas/` stays complete. Then
 `src/core/validate.ts` holds the content and cross-record rules from build_990.py and more:
 neutral text, notes present for every racquet, Crisp chip ⇔ Crisp tag, every feel chip used,
-grip type ⇔ chip, one colour per tag label with CSS for every variant, a filter-header colour
-for every grip brand, bar-backed claims (Mega Tac, Tourna Grip Original), hybrid side labels
-that name their string's band, rating words in the order of their lists, id and reference
-integrity, no "Connected" vocabulary, no tag or entity anywhere in `data/`. Some of v0.990's rules hold by construction instead: the stiffness band
-comes from the figure and Firm/Soft from the band (`src/core/stiffness.ts`).
+grip type ⇔ chip, CSS for every tag colour, a filter-header colour for every grip brand,
+bar-backed claims (Mega Tac, Tourna Grip Original), hybrid side labels that name their
+string's band, rating words in the order of their lists, id and reference integrity, no
+"Connected" vocabulary, no tag or entity anywhere in `data/`. Some of v0.990's rules hold by
+construction instead: the stiffness band comes from the figure, Firm/Soft from the band
+(`src/core/stiffness.ts`), and a tag's colour from its label (`src/core/tags.ts`).
 `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in
 source, `index.html`, these two docs or `docs/`. Every rule and each kind of schema check has
 a mutation test in `tests/data/validate.test.ts`; `tests/data/schemas.test.ts` checks that

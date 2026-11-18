@@ -31,14 +31,8 @@
           "label": "Excellent"
         },
         "feelTags": [
-          {
-            "label": "Smooth",
-            "variant": "crisp"
-          },
-          {
-            "label": "Ultra-Tacky",
-            "variant": "firm"
-          }
+          "Smooth",
+          "Ultra-Tacky"
         ],
         "feelSummary": "Premium PU, soft yet durable",
         "feelExpand": "Kimony's flagship polyurethane formula delivers elite tackiness with a soft hand feel that outlasts most competitors.",
@@ -78,14 +72,8 @@
           "label": "Very Good"
         },
         "feelTags": [
-          {
-            "label": "Thin",
-            "variant": "crisp"
-          },
-          {
-            "label": "Tacky",
-            "variant": "firm"
-          }
+          "Thin",
+          "Tacky"
         ],
         "feelSummary": "Barely changes grip size",
         "feelExpand": "At just 0.33mm, adds virtually no bulk — useful at the top of a grip-size range.",
@@ -125,14 +113,8 @@
           "label": "Very Good"
         },
         "feelTags": [
-          {
-            "label": "Ventilated",
-            "variant": "crisp"
-          },
-          {
-            "label": "Tacky",
-            "variant": "firm"
-          }
+          "Ventilated",
+          "Tacky"
         ],
         "feelSummary": "Perforations for airflow",
         "feelExpand": "Punched holes enhance ventilation and sweat evaporation while maintaining a tacky feel.",
@@ -170,14 +152,8 @@
           "label": "Good"
         },
         "feelTags": [
-          {
-            "label": "Cushioned",
-            "variant": "soft"
-          },
-          {
-            "label": "Dual Ridge",
-            "variant": "firm"
-          }
+          "Cushioned",
+          "Dual Ridge"
         ],
         "feelSummary": "Double-spiral sponge",
         "feelExpand": "Two intertwining foam ridges cushion the hand and absorb shock on every impact.",
@@ -215,14 +191,8 @@
           "label": "Good"
         },
         "feelTags": [
-          {
-            "label": "Ridged",
-            "variant": "soft"
-          },
-          {
-            "label": "Ventilated",
-            "variant": "crisp"
-          }
+          "Ridged",
+          "Ventilated"
         ],
         "feelSummary": "Foam ridge + perforations",
         "feelExpand": "Combines spiral cushioning with punched holes for both comfort and moisture management.",
@@ -256,14 +226,8 @@
           "label": "Good"
         },
         "feelTags": [
-          {
-            "label": "Tapered",
-            "variant": "crisp"
-          },
-          {
-            "label": "Tacky",
-            "variant": "firm"
-          }
+          "Tapered",
+          "Tacky"
         ],
         "feelSummary": "Thicker at butt cap",
         "feelExpand": "Graduated thickness facilitates wrist snap for topspin while keeping the handle end thin.",
@@ -303,14 +267,8 @@
           "label": "Excellent"
         },
         "feelTags": [
-          {
-            "label": "Textured",
-            "variant": "crisp"
-          },
-          {
-            "label": "Plush",
-            "variant": "soft"
-          }
+          "Textured",
+          "Plush"
         ],
         "feelSummary": "Floral pattern, extra tacky",
         "feelExpand": "Engraved surface pattern adds subtle texture and visual flair with maximum tackiness.",
@@ -348,14 +306,8 @@
           "label": "Excellent"
         },
         "feelTags": [
-          {
-            "label": "Aggressive",
-            "variant": "crisp"
-          },
-          {
-            "label": "Tracked",
-            "variant": "firm"
-          }
+          "Aggressive",
+          "Tracked"
         ],
         "feelSummary": "Cross-notch anti-slip",
         "feelExpand": "Aggressive cross-hatched grooves provide the strongest grip security in the lineup.",
@@ -393,14 +345,8 @@
           "label": "Very Good"
         },
         "feelTags": [
-          {
-            "label": "Textured",
-            "variant": "crisp"
-          },
-          {
-            "label": "Decorative",
-            "variant": "firm"
-          }
+          "Textured",
+          "Decorative"
         ],
         "feelSummary": "Star pattern engraved",
         "feelExpand": "Decorative surface engraving adds a light texture without changing the overall grip feel.",
@@ -440,14 +386,8 @@
           "label": "Excellent"
         },
         "feelTags": [
-          {
-            "label": "Firm",
-            "variant": "firm"
-          },
-          {
-            "label": "Substantial",
-            "variant": "crisp"
-          }
+          "Firm",
+          "Substantial"
         ],
         "feelSummary": "Harder feel, very durable",
         "feelExpand": "Firmer PU construction trades softness for the longest lifespan of any Kimony overgrip.",
@@ -489,14 +429,8 @@
           "label": "Moderate"
         },
         "feelTags": [
-          {
-            "label": "Dry",
-            "variant": "round"
-          },
-          {
-            "label": "Absorbent",
-            "variant": "soft"
-          }
+          "Dry",
+          "Absorbent"
         ],
         "feelSummary": "Felt-like, moisture-wicking",
         "feelExpand": "Dry-type surface pulls sweat away from the hand and gets grippier as it absorbs.",
@@ -537,14 +471,8 @@
           "label": "Excellent"
         },
         "feelTags": [
-          {
-            "label": "Dry",
-            "variant": "round"
-          },
-          {
-            "label": "Durable",
-            "variant": "firm"
-          }
+          "Dry",
+          "Durable"
         ],
         "feelSummary": "Slight tack within dry feel",
         "feelExpand": "Bridges wet and dry grip styles with a subtle tackiness that persists through sweat.",
@@ -578,14 +506,8 @@
           "label": "Good"
         },
         "feelTags": [
-          {
-            "label": "Dry",
-            "variant": "round"
-          },
-          {
-            "label": "Ridged",
-            "variant": "soft"
-          }
+          "Dry",
+          "Ridged"
         ],
         "feelSummary": "Spiral sponge + dry surface",
         "feelExpand": "Pairs the cushioning ridge design with a moisture-wicking dry surface layer.",
@@ -625,14 +547,8 @@
           "label": "Low"
         },
         "feelTags": [
-          {
-            "label": "Dry",
-            "variant": "round"
-          },
-          {
-            "label": "Classic",
-            "variant": "crisp"
-          }
+          "Dry",
+          "Classic"
         ],
         "feelSummary": "World-famous Tourna feel",
         "feelExpand": "The classic papery dry grip feel that has been a tour staple for decades.",
@@ -657,14 +573,8 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Firm",
-            "variant": "crisp"
-          },
-          {
-            "label": "Classic",
-            "variant": "firm"
-          }
+          "Firm",
+          "Classic"
         ],
         "feelSummary": "Reference leather grip",
         "feelExpand": "Premium cowhide with thin profile for maximum bevel feel and ball feedback.",
@@ -690,14 +600,8 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Crisp",
-            "variant": "crisp"
-          },
-          {
-            "label": "Precise",
-            "variant": "firm"
-          }
+          "Crisp",
+          "Precise"
         ],
         "feelSummary": "Thinnest leather available",
         "feelExpand": "At 0.80mm and 13g, reduces grip size by nearly one full size versus synthetic replacements.",
@@ -723,14 +627,8 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Firm",
-            "variant": "crisp"
-          },
-          {
-            "label": "Cushioned",
-            "variant": "soft"
-          }
+          "Firm",
+          "Cushioned"
         ],
         "feelSummary": "Traditional leather feel",
         "feelExpand": "Thicker leather construction for players who want classic feel with more cushioning.",
@@ -756,14 +654,8 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Tacky",
-            "variant": "firm"
-          },
-          {
-            "label": "Cushioned",
-            "variant": "soft"
-          }
+          "Tacky",
+          "Cushioned"
         ],
         "feelSummary": "Premium synthetic, soft",
         "feelExpand": "Highest-grade Japanese PU replacement with a soft, tacky feel and strong grip power.",
@@ -808,14 +700,8 @@
           "label": "Excellent"
         },
         "feelTags": [
-          {
-            "label": "Smooth",
-            "variant": "crisp"
-          },
-          {
-            "label": "Tacky",
-            "variant": "firm"
-          }
+          "Smooth",
+          "Tacky"
         ],
         "feelSummary": "Cushioned, comfortable",
         "feelExpand": "Thicker PU construction with a soft feel that absorbs vibration and impact shock.",
@@ -853,14 +739,8 @@
           "label": "Excellent"
         },
         "feelTags": [
-          {
-            "label": "Smooth",
-            "variant": "crisp"
-          },
-          {
-            "label": "Ultra-Tacky",
-            "variant": "firm"
-          }
+          "Smooth",
+          "Ultra-Tacky"
         ],
         "feelSummary": "Made in Japan",
         "feelExpand": "Japan-manufactured version with enhanced tackiness over the standard Indonesian production.",
@@ -898,14 +778,8 @@
           "label": "Very Good"
         },
         "feelTags": [
-          {
-            "label": "Smooth",
-            "variant": "crisp"
-          },
-          {
-            "label": "Tacky",
-            "variant": "firm"
-          }
+          "Smooth",
+          "Tacky"
         ],
         "feelSummary": "Absorbent, comfortable",
         "feelExpand": "Good moisture management with a cushioned, comfortable hand feel.",
@@ -943,14 +817,8 @@
           "label": "Good"
         },
         "feelTags": [
-          {
-            "label": "Cushioned",
-            "variant": "soft"
-          },
-          {
-            "label": "Ribbed",
-            "variant": "firm"
-          }
+          "Cushioned",
+          "Ribbed"
         ],
         "feelSummary": "Natural rubber center strip",
         "feelExpand": "Raised rubber ridge spirals down the grip for added cushioning and contoured feel.",
@@ -988,14 +856,8 @@
           "label": "Very Good"
         },
         "feelTags": [
-          {
-            "label": "Smooth",
-            "variant": "crisp"
-          },
-          {
-            "label": "Tacky",
-            "variant": "firm"
-          }
+          "Smooth",
+          "Tacky"
         ],
         "feelSummary": "Anti-bacterial & deodorizing",
         "feelExpand": "Antibacterial agent reduces bacteria by 90% while maintaining the standard Super Grap feel.",
@@ -1035,14 +897,8 @@
           "label": "Good"
         },
         "feelTags": [
-          {
-            "label": "Dry",
-            "variant": "crisp"
-          },
-          {
-            "label": "Absorbent",
-            "variant": "soft"
-          }
+          "Dry",
+          "Absorbent"
         ],
         "feelSummary": "Smooth, soft dry feel",
         "feelExpand": "PU dry-type surface provides sweat absorption without the papery texture of felt grips.",
@@ -1083,14 +939,8 @@
           "label": "Very Good"
         },
         "feelTags": [
-          {
-            "label": "Thin",
-            "variant": "crisp"
-          },
-          {
-            "label": "Dry-Tacky",
-            "variant": "firm"
-          }
+          "Thin",
+          "Dry-Tacky"
         ],
         "feelSummary": "Maintains tack when wet",
         "feelExpand": "Retains impressive grip security even during heavy perspiration.",
@@ -1119,14 +969,8 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Firm",
-            "variant": "crisp"
-          },
-          {
-            "label": "Classic",
-            "variant": "firm"
-          }
+          "Firm",
+          "Classic"
         ],
         "feelSummary": "Premium 100% leather",
         "feelExpand": "Thin, firm cowhide for direct racquet feedback and precise grip changes.",
@@ -1148,14 +992,8 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Firm",
-            "variant": "crisp"
-          },
-          {
-            "label": "Leather-like",
-            "variant": "soft"
-          }
+          "Firm",
+          "Leather-like"
         ],
         "feelSummary": "Mimics leather feel",
         "feelExpand": "Synthetic PU engineered to replicate leather's firm bevel feel with better moisture handling.",
@@ -1177,14 +1015,8 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Tacky",
-            "variant": "firm"
-          },
-          {
-            "label": "Cushioned",
-            "variant": "soft"
-          }
+          "Tacky",
+          "Cushioned"
         ],
         "feelSummary": "Dimpled surface texture",
         "feelExpand": "Raised dots increase hand contact area for improved grip security under pressure.",
@@ -1232,10 +1064,7 @@
           "label": "Medium"
         },
         "feelTags": [
-          {
-            "label": "Tacky",
-            "variant": "crisp"
-          }
+          "Tacky"
         ],
         "feelSummary": "Wet/tacky overgrip",
         "feelExpand": "Tourna's wet/tacky overgrip, similar in profile to Kimony Hi-Soft EX and Punch.",
@@ -1280,10 +1109,7 @@
           "label": "Medium"
         },
         "feelTags": [
-          {
-            "label": "Very Tacky",
-            "variant": "crisp"
-          }
+          "Very Tacky"
         ],
         "feelSummary": "Maximum stickiness",
         "feelExpand": "Tourna's highest-tack grip, at the cost of easy grip changes.",
@@ -1331,14 +1157,8 @@
           "label": "Low"
         },
         "feelTags": [
-          {
-            "label": "Dry",
-            "variant": "round"
-          },
-          {
-            "label": "Classic",
-            "variant": "crisp"
-          }
+          "Dry",
+          "Classic"
         ],
         "feelSummary": "Reference dry grip",
         "feelExpand": "The original 1970s blue dry grip. The most copied overgrip in tennis. Highest raw absorption in the category, but designed to be replaced frequently — typical tour pro changes it every match.",
@@ -1384,14 +1204,8 @@
           "label": "Low"
         },
         "feelTags": [
-          {
-            "label": "Dry",
-            "variant": "round"
-          },
-          {
-            "label": "Long",
-            "variant": "crisp"
-          }
+          "Dry",
+          "Long"
         ],
         "feelSummary": "Original, longer",
         "feelExpand": "Same blue Tourna formula but longer to fit oversize handles or to add coverage on butt cap. Identical playing characteristics.",
@@ -1433,14 +1247,8 @@
           "label": "Low"
         },
         "feelTags": [
-          {
-            "label": "Dry",
-            "variant": "round"
-          },
-          {
-            "label": "Thin",
-            "variant": "crisp"
-          }
+          "Dry",
+          "Thin"
         ],
         "feelSummary": "Pro thin variant",
         "feelExpand": "Thinner version of the original. Passes more bevel feel through from the underlying grip while keeping Tourna's dry surface.",
@@ -1473,14 +1281,8 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Firm",
-            "variant": "crisp"
-          },
-          {
-            "label": "Classic",
-            "variant": "firm"
-          }
+          "Firm",
+          "Classic"
         ],
         "feelSummary": "Premium leather",
         "feelExpand": "Tourna's answer to Babolat VS Original and Fairway Leather. Calf leather construction with a slightly more textured surface than Fairway.",
@@ -1510,10 +1312,7 @@
           }
         ],
         "feelTags": [
-          {
-            "label": "Cushioned",
-            "variant": "soft"
-          }
+          "Cushioned"
         ],
         "feelSummary": "Cushioned PU",
         "feelExpand": "Polyurethane synthetic replacement grip. Soft cushion-feel, similar to Wilson Pro Performance or Head HydroSorb.",

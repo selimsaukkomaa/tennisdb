@@ -1,17 +1,9 @@
 // Table markup and row builders, ported from v0.990's tennis-renderer. Rows are built without
 // whitespace between cells, exactly as the legacy string concatenation produced them.
-import type {
-  Bar,
-  Colors,
-  FeelTag,
-  Grip,
-  GripSpec,
-  Hybrid,
-  HybridSide,
-  StringRec,
-} from '../core/types';
+import type { Bar, Colors, Grip, GripSpec, Hybrid, HybridSide, StringRec } from '../core/types';
 import type { PerRacquet } from '../core/pairings';
 import { ratingBar } from '../core/ratings';
+import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from '../core/tags';
 import { feelTokens, stiffnessBar } from '../core/stiffness';
 import { html, join, raw, type SafeHtml } from './html';
 
@@ -32,19 +24,29 @@ function colorsCell(colors: Colors | undefined): SafeHtml {
   return html`<td><div class="colors">${dots}</div><span class="color-label">${colors.label || ''}</span></td>`;
 }
 
-export function feelTagsHtml(tags: readonly FeelTag[], sep = ''): SafeHtml {
+/** Feel tags, each in its table's colour: strings and hybrids by default, grips by GRIP_TAG_COLOURS. */
+export function feelTagsHtml(
+  tags: readonly string[],
+  sep = '',
+  colours: Readonly<Record<string, string>> = STRING_TAG_COLOURS,
+): SafeHtml {
   return join(
-    (tags ?? []).map((t) => html`<span class="tag tag-${t.variant}">${t.label}</span>`),
+    (tags ?? []).map((t) => html`<span class="tag tag-${colours[t]}">${t}</span>`),
     raw(sep),
   );
 }
 
-function feelCell(tags: readonly FeelTag[], summary: string, expand: string): SafeHtml {
+function feelCell(
+  tags: readonly string[],
+  summary: string,
+  expand: string,
+  colours: Readonly<Record<string, string>> = STRING_TAG_COLOURS,
+): SafeHtml {
   const text =
     summary || expand
       ? html`<br>${summary || ''}${expand ? html`<span class="feel-expand"> ${expand}</span>` : ''}`
       : '';
-  return html`<td>${feelTagsHtml(tags)}${text}</td>`;
+  return html`<td>${feelTagsHtml(tags, '', colours)}${text}</td>`;
 }
 
 /** Name cell; strings and hybrids get a compare checkbox, grips don't. */
@@ -135,7 +137,7 @@ export function overgripRow(g: Grip): SafeHtml {
     barCell('tackiness', ratingBar(g.tackiness)),
     barCell('absorption', ratingBar(g.absorption)),
     barCell('durability', ratingBar(g.durability)),
-    feelCell(g.feelTags, g.feelSummary, g.feelExpand),
+    feelCell(g.feelTags, g.feelSummary, g.feelExpand, GRIP_TAG_COLOURS),
     colorsPlainCell(g.colors),
     html`<td>${g.packSizes || ''}</td>`,
     notesCell(g.notes),
@@ -151,7 +153,7 @@ export function replacementRow(g: Grip): SafeHtml {
     html`<td>${g.model}</td>`,
     material,
     specsCell(g.specs),
-    feelCell(g.feelTags, g.feelSummary, g.feelExpand),
+    feelCell(g.feelTags, g.feelSummary, g.feelExpand, GRIP_TAG_COLOURS),
     colorsPlainCell(g.colors),
     notesCell(g.notes),
   ]}</tr>`;

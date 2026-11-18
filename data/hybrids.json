@@ -27,14 +27,8 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Controlled",
-        "variant": "firm"
-      }
+      "Crisp",
+      "Controlled"
     ],
     "feelSummary": "Square bite, hex control",
     "feelExpand": "Wasabi's square edges grip the ball; Caviar crosses hold tension and keep the response tight and flat.",
@@ -69,14 +63,8 @@
       "label": "Elite"
     },
     "feelTags": [
-      {
-        "label": "Pocketing",
-        "variant": "plush"
-      },
-      {
-        "label": "Lively",
-        "variant": "lively"
-      }
+      "Pocketing",
+      "Lively"
     ],
     "feelSummary": "Ball dives into court",
     "feelExpand": "Pentagonal mains with the highest string-to-ball friction over hex crosses with the lowest string-to-string friction.",
@@ -111,14 +99,8 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Explosive",
-        "variant": "lively"
-      }
+      "Crisp",
+      "Explosive"
     ],
     "feelSummary": "Bite + snapback",
     "feelExpand": "Sharp string-to-ball grip on contact with fast string return for spin.",
@@ -153,14 +135,8 @@
       "label": "High"
     },
     "feelTags": [
-      {
-        "label": "Plush",
-        "variant": "plush"
-      },
-      {
-        "label": "Precise",
-        "variant": "firm"
-      }
+      "Plush",
+      "Precise"
     ],
     "feelSummary": "Tour control + comfort",
     "feelExpand": "Firm hex mains over non-polyester PEEK crosses — control from the mains, dwell and comfort from the crosses.",
@@ -195,14 +171,8 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Comfortable",
-        "variant": "plush"
-      },
-      {
-        "label": "Lively",
-        "variant": "lively"
-      }
+      "Comfortable",
+      "Lively"
     ],
     "feelSummary": "Spin + comfort",
     "feelExpand": "Good spin generation with a softer, more forgiving response.",
@@ -237,14 +207,8 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Responsive",
-        "variant": "lively"
-      }
+      "Crisp",
+      "Responsive"
     ],
     "feelSummary": "Faster snapback",
     "feelExpand": "O-Toro hex mains over the firmer Snap TF cross — a soft/firm contrast that speeds snapback and adds definition.",
@@ -279,14 +243,8 @@
       "label": "Elite"
     },
     "feelTags": [
-      {
-        "label": "Aggressive",
-        "variant": "firm"
-      },
-      {
-        "label": "Bite",
-        "variant": "round"
-      }
+      "Aggressive",
+      "Bite"
     ],
     "feelSummary": "Pure spin machine",
     "feelExpand": "Square Wasabi mains for maximum edge bite over slick round Wasabi X crosses for maximum snapback.",
@@ -321,14 +279,8 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Pocketing",
-        "variant": "plush"
-      },
-      {
-        "label": "Bite",
-        "variant": "round"
-      }
+      "Pocketing",
+      "Bite"
     ],
     "feelSummary": "Wasabi bite + Toro feel",
     "feelExpand": "Square Wasabi mains for bite with Toro Toro's softer hex crosses for pocketing and feel.",
@@ -363,14 +315,8 @@
       "label": "Elite"
     },
     "feelTags": [
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      },
-      {
-        "label": "Bite",
-        "variant": "round"
-      }
+      "Crisp",
+      "Bite"
     ],
     "feelSummary": "Shaped mains + slick crosses",
     "feelExpand": "Textured mains bite the ball; smooth crosses snap back quickly.",
@@ -405,14 +351,8 @@
       "label": "Very High"
     },
     "feelTags": [
-      {
-        "label": "Precise",
-        "variant": "firm"
-      },
-      {
-        "label": "Crisp",
-        "variant": "crisp"
-      }
+      "Precise",
+      "Crisp"
     ],
     "feelSummary": "Control mains + spin crosses",
     "feelExpand": "Two hex profiles: O-Toro Tour mains for control and tension hold, O-Toro crosses for spin and softer contact.",

@@ -29,9 +29,12 @@
 //      footers' sentence about bars (OLD_BAR_SENTENCE -> NEW_BAR_SENTENCE in
 //      scripts/derive-stiffness-widths.ts), 15 footers on the page. V0990_STIFFNESS_SCALE works
 //      from legacy's labels after F; the patch redraws the bars already on the page.
+//   I. v1.4: one colour per grip tag label; five grip tags take their label's majority colour
+//      (scripts/derive-tag-colours.ts: GRIP_TAG_CHANGES), in legacy's data and on the page.
 // The CSS repeats the rules in src/styles/additions.css; a change there must change it here.
 import type { Page } from '@playwright/test';
 import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
+import { GRIP_TAG_CHANGES } from '../../scripts/derive-tag-colours';
 import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 
 /**
@@ -161,6 +164,22 @@ const LEGACY_FIXES_JS = String.raw`(() => {
     }
   }
   if (footers !== 15) throw new Error('expected 15 footers (5 brands x 3 racquets), got ' + footers);
+
+  // I
+  const allGrips = Object.values(window.TENNIS_DB.grips).flatMap((t) => Object.values(t).flat());
+  let recoloured = 0;
+  for (const c of ${JSON.stringify(GRIP_TAG_CHANGES)}) {
+    const tag = allGrips.find((g) => g.id === c.gripId).feelTags.find((t) => t.label === c.label);
+    if (!tag || tag.variant !== c.from) throw new Error('patch I: ' + c.gripId + ' has no ' + c.from + ' ' + c.label);
+    tag.variant = c.to;
+    for (const span of document.querySelectorAll('tr[data-id="' + c.gripId + '"] .tag.tag-' + c.from)) {
+      if (span.textContent === c.label) {
+        span.className = 'tag tag-' + c.to;
+        recoloured++;
+      }
+    }
+  }
+  if (recoloured !== 5) throw new Error('expected 5 grip tags recoloured, got ' + recoloured);
 
   // G
   const swapText = (root, from, to) => {

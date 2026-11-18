@@ -252,7 +252,7 @@
         "feelTags": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/FeelTag"
+            "$ref": "#/$defs/StringTag"
           }
         },
         "feelSummary": {
@@ -519,30 +519,30 @@
       "additionalProperties": false,
       "description": "A score from 0 to 100 and a word from the list for its axis."
     },
-    "FeelTag": {
-      "type": "object",
-      "properties": {
-        "label": {
-          "type": "string",
-          "minLength": 1
-        },
-        "variant": {
-          "type": "string",
-          "enum": [
-            "crisp",
-            "firm",
-            "soft",
-            "round",
-            "lively",
-            "plush"
-          ]
-        }
-      },
-      "required": [
-        "label",
-        "variant"
+    "StringTag": {
+      "type": "string",
+      "enum": [
+        "Crisp",
+        "Firm",
+        "Precise",
+        "Controlled",
+        "Aggressive",
+        "Soft",
+        "Softer",
+        "Very Soft",
+        "Moderate",
+        "Muted",
+        "Smooth",
+        "Bite",
+        "Lively",
+        "Elastic",
+        "Explosive",
+        "Responsive",
+        "Plush",
+        "Pocketing",
+        "Comfortable"
       ],
-      "additionalProperties": false
+      "description": "A feel tag of a string or hybrid; tags.ts gives its colour."
     },
     "Hybrid": {
       "type": "object",
@@ -661,7 +661,7 @@
         "feelTags": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/FeelTag"
+            "$ref": "#/$defs/StringTag"
           }
         },
         "feelSummary": {
@@ -897,7 +897,7 @@
         "feelTags": {
           "type": "array",
           "items": {
-            "$ref": "#/$defs/FeelTag"
+            "$ref": "#/$defs/GripTag"
           }
         },
         "feelSummary": {
@@ -1061,6 +1061,39 @@
       ],
       "additionalProperties": false,
       "description": "A score from 0 to 100 and a word from the list for its axis."
+    },
+    "GripTag": {
+      "type": "string",
+      "enum": [
+        "Crisp",
+        "Firm",
+        "Smooth",
+        "Thin",
+        "Ventilated",
+        "Tapered",
+        "Textured",
+        "Aggressive",
+        "Substantial",
+        "Very Tacky",
+        "Long",
+        "Tacky",
+        "Ultra-Tacky",
+        "Dry-Tacky",
+        "Classic",
+        "Precise",
+        "Durable",
+        "Dual Ridge",
+        "Ribbed",
+        "Tracked",
+        "Decorative",
+        "Cushioned",
+        "Absorbent",
+        "Ridged",
+        "Plush",
+        "Leather-like",
+        "Dry"
+      ],
+      "description": "A feel tag of a grip; tags.ts gives its colour."
     },
     "GutString": {
       "type": "object",

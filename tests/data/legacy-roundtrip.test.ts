@@ -20,7 +20,9 @@ import { tensionLabel } from '../../src/core/pairings';
 import { ratingBar, type Rating } from '../../src/core/ratings';
 import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
 import { feelTokens, stiffnessBar } from '../../src/core/stiffness';
+import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from '../../src/core/tags';
 import { specHtml } from '../../src/ui/tables';
+import { GRIP_TAG_CHANGES } from '../../scripts/derive-tag-colours';
 import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
 import {
@@ -87,12 +89,15 @@ function toV0990(db: TennisDb): unknown {
     strings: db.strings.map((s) => ({
       ...withBars(s, ['power', 'spin', 'control', 'comfort']),
       feelAttr: feelTokens(s),
+      // v1.4 stores a tag's label; the colour comes from the table.
+      feelTags: s.feelTags.map((label) => ({ label, variant: STRING_TAG_COLOURS[label] })),
       stiffness: stiffnessBar(s.stiffness),
       perRacquet: perRacquet(s.id),
     })),
     hybrids: db.hybrids.map((h) => ({
       ...withBars(h, ['power', 'spin']),
       feelAttr: feelTokens(h),
+      feelTags: h.feelTags.map((label) => ({ label, variant: STRING_TAG_COLOURS[label] })),
       stiffness: stiffnessBar(h.stiffness),
       mains: withoutLink(h.mains),
       crosses: withoutLink(h.crosses),
@@ -108,6 +113,7 @@ function toV0990(db: TennisDb): unknown {
               ...withBars(g, ['tackiness', 'absorption', 'durability']),
               // v1.0 stores a spec as { text, emphasis }; v0.990 had the markup the page draws.
               specs: g.specs.map((s) => specHtml(s).value),
+              feelTags: g.feelTags.map((label) => ({ label, variant: GRIP_TAG_COLOURS[label] })),
             })),
           ]),
         ),
@@ -119,7 +125,8 @@ function toV0990(db: TennisDb): unknown {
 
 /**
  * The v0.990 blob with the declared changes applied: v1.1's stiffness rule (33 labels, 8 chips)
- * v1.2's stiffness words (23 texts, 14 hybrid side labels) and v1.3's scale (78 bars).
+ * v1.2's stiffness words (23 texts, 14 hybrid side labels), v1.3's scale (78 bars) and v1.4's
+ * grip tag colours (5 tags).
  */
 const applyStiffnessRule = new Function(`return ${V0990_STIFFNESS_RULE}`)() as (db: unknown) => unknown;
 const applyTextEdits = new Function(`return ${V0990_TEXT_EDITS}`)() as (
@@ -130,6 +137,15 @@ const applyStiffnessScale = new Function(`return ${V0990_STIFFNESS_SCALE}`)() as
 const expected = (): unknown => {
   const db = applyStiffnessScale(applyStiffnessRule(JSON.parse(legacyJson)));
   expect(applyTextEdits(db, STIFFNESS_WORD_EDITS)).toHaveLength(37);
+  // v1.4: the five grip tags that took their label's majority colour (patch I).
+  type V0990Grip = { id: string; feelTags: { label: string; variant: string }[] };
+  const grips = Object.values((db as { grips: Record<string, Record<string, V0990Grip[]>> }).grips)
+    .flatMap((byType) => Object.values(byType).flat());
+  for (const c of GRIP_TAG_CHANGES) {
+    const tag = grips.find((g) => g.id === c.gripId)!.feelTags.find((t) => t.label === c.label)!;
+    expect(tag.variant).toBe(c.from);
+    tag.variant = c.to;
+  }
   return db;
 };
 

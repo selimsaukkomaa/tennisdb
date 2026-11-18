@@ -49,6 +49,14 @@ const VIEWS: View[] = [
   { name: 'filters open, Hex active', clicks: ['#btn-filters', HEX] },
   { name: 'grip filters open, Dry active', clicks: ['#btn-cat-grips', '#btn-filters', GRIP_DRY] },
   {
+    // Close up, so one recoloured tag is more than a rounding error (v1.4, patch I). Dry Grap's
+    // Dry tag goes from amber to indigo; the other four go between amber and red, which are
+    // within PIXEL_THRESHOLD of each other, so only the DOM scenarios can see those.
+    name: 'Yonex Dry Grap row, Dry tag',
+    clicks: ['#btn-cat-grips', '#btn-grip-yonex'],
+    element: 'tr[data-id="yonex-dry-grap"]',
+  },
+  {
     name: 'compare open (2 strings + 1 hybrid)',
     clicks: [
       compareBox('toroline-o-toro-tour'),

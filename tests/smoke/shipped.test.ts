@@ -6,7 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { build } from 'vite';
 import { afterAll, beforeAll, describe, expect, test } from 'vitest';
-import { assembleDb } from '../../src/core/db';
+import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from '../../src/core/tags';
 
 let outDir = '';
 let shipped = '';
@@ -62,12 +62,12 @@ describe('dead code gone from the shipped app', () => {
   });
 });
 
-describe('every tag variant has CSS', () => {
-  const db = assembleDb();
+describe('every tag colour has CSS', () => {
+  // Since v1.4 a tag stores its label and the colour comes from the tables in core/tags.ts.
   const variants = [
-    ...new Set([...db.strings, ...db.hybrids].flatMap((r) => r.feelTags.map((t) => t.variant))),
+    ...new Set([...Object.values(STRING_TAG_COLOURS), ...Object.values(GRIP_TAG_COLOURS)]),
   ];
-  test('six variants in use', () => expect(variants).toHaveLength(6));
+  test('six colours in use', () => expect(variants).toHaveLength(6));
   test.each(variants)('.tag-%s', (v) => {
     expect(shippedCss).toContain(`.tag-${v} {`);
   });

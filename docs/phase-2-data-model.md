@@ -256,6 +256,14 @@ and the firm-xor-soft and firm-soft-band rules hold by construction. Crisp is
 still stored and checked against the tags (crisp-tag); the tag colours come
 with the grip-tag release.
 
+**Tag colours done in v1.4**, approved on 2026-11-18 (scheme A, after
+screenshots): a tag stores its label and the colour comes from a table in
+`src/core/tags.ts`, so one label has one colour by construction. Strings and
+hybrids use v0.990's table; grips have their own, each label in the colour
+most grips already used, which changed five grip tags (Forte's Firm, Kimony
+Tourna's and Tourna Grip Original's Classic, Dry Grap's Dry, Tac's Tacky).
+The schema allows only a table's labels, which retired the tag-variant rule.
+
 ### D9. Schemas and plain-text notes
 
 A Zod schema per collection (racquets, brands, strings, hybrids, pairings,
@@ -299,7 +307,8 @@ Each step is its own release, and each stops for the owner's review.
    - the notes that use an old band word, sample of five first (D2), *done in
      v1.2*;
    - the bar scale and the footers' new wording (D3), *done in v1.3*;
-   - one colour per grip tag label, with screenshots first (D8).
+   - one colour per grip tag label, with screenshots first (D8), *done in v1.4*.
+   Step 3 is complete.
 4. **Later, separately:** re-verifying the 62 legacy figures (D1) and unifying
    the rating words (D5).
 
