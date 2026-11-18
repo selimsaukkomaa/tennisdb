@@ -67,18 +67,36 @@ const KgPerMm = z.number().min(0.2).max(2);
  * recorded source or date; a re-check upgrades one to a named source and a retrieval month
  * (validate.ts: stiffness-provenance).
  */
+const Month = z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/);
+/** Racketpedia's page for a string in one colour and gauge, e.g. "toroline-caviar-neon-yellow-124". */
+const RacketpediaPage = Id.meta({
+  description: 'A racketpedia.com/en-GB/tennis-string/<page> slug.',
+});
+
 export const StiffnessFigureSchema = z
   .strictObject({
     kgPerMm: z.union([KgPerMm, z.strictObject({ min: KgPerMm, max: KgPerMm })]),
     /** Shown with a "~". */
     approx: z.boolean(),
     source: z.enum(['legacy', 'Racketpedia', 'manufacturer', 'review']),
-    retrieved: z
-      .string()
-      .regex(/^\d{4}-(0[1-9]|1[0-2])$/)
-      .nullable(),
+    retrieved: Month.nullable(),
+    /** The Racketpedia pages (colour and gauge) a Racketpedia figure comes from; a range spans them. */
+    pages: z.array(RacketpediaPage).min(1).optional(),
   })
   .meta({ id: 'StiffnessFigure' });
+
+/**
+ * A reading that disagrees with the figure shown, kept in the data and the changelog but not in
+ * the notes (since v1.5; the owner's call: the reader doesn't need the disclaimer).
+ */
+export const DisputedReadingSchema = z
+  .strictObject({
+    source: z.enum(['Racketpedia']),
+    kgPerMm: KgPerMm,
+    pages: z.array(RacketpediaPage).min(1),
+    retrieved: Month,
+  })
+  .meta({ id: 'DisputedReading' });
 
 /**
  * A string's stiffness. With a lab figure the band is derived from it (stiffness.ts: bandFor)
@@ -87,8 +105,8 @@ export const StiffnessFigureSchema = z
  */
 export const StiffnessSchema = z
   .union([
-    z.strictObject({ figure: StiffnessFigureSchema }),
-    z.strictObject({ band: Band, figure: z.null() }),
+    z.strictObject({ figure: StiffnessFigureSchema, disputed: DisputedReadingSchema.optional() }),
+    z.strictObject({ band: Band, figure: z.null(), disputed: DisputedReadingSchema.optional() }),
   ])
   .meta({
     id: 'Stiffness',

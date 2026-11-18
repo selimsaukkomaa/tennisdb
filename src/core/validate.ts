@@ -240,6 +240,12 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
         s.id,
         'a legacy figure has no retrieval date; any other source needs one',
       );
+    if ((figure.source === 'Racketpedia') !== (figure.pages !== undefined))
+      fail(
+        'stiffness-provenance',
+        s.id,
+        'a Racketpedia figure names its pages; no other figure has any',
+      );
   }
   // ---- ratings: along each axis's list, a word's lowest score never falls below that of the
   // word before it (the scores of neighbouring words overlap, so nothing stricter holds)

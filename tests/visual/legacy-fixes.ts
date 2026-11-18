@@ -31,10 +31,16 @@
 //      from legacy's labels after F; the patch redraws the bars already on the page.
 //   I. v1.4: one colour per grip tag label; five grip tags take their label's majority colour
 //      (scripts/derive-tag-colours.ts: GRIP_TAG_CHANGES), in legacy's data and on the page.
+//   J. v1.5: the stiffness re-check against Racketpedia changes five labels (V0990_RECHECK_LABELS:
+//      4G 1.18, Barb Wire 0.90, Confidential Soft 0.85, Vanquish 0.55–0.65 and Hyper-G Round
+//      measured, no longer "~"); V0990_STIFFNESS_SCALE redraws their bars (4 change), and the
+//      cells already on the page follow. Its two text corrections (scripts/recheck-stiffness.ts:
+//      RECHECK_TEXT_EDITS) go through G with v1.2's.
 // The CSS repeats the rules in src/styles/additions.css; a change there must change it here.
 import type { Page } from '@playwright/test';
 import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
 import { GRIP_TAG_CHANGES } from '../../scripts/derive-tag-colours';
+import { RECHECK_TEXT_EDITS } from '../../scripts/recheck-stiffness';
 import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 
 /**
@@ -98,7 +104,7 @@ export const V0990_TEXT_EDITS = String.raw`((db, edits) => {
  * place, as JavaScript source: patch H runs it on the legacy page and the round-trip test on the
  * embedded blob. Throws unless exactly 78 bars change (68 strings, 10 hybrids).
  */
-export const V0990_STIFFNESS_SCALE = String.raw`((db) => {
+export const V0990_STIFFNESS_SCALE = String.raw`((db, expected = 78) => {
   const MIDPOINT = { 'Very Soft': 650, Soft: 780, 'Med-Soft': 880, Medium: 950, 'Med-Firm': 1010, Firm: 1070, 'Very Firm': 1120 };
   const widthOf = (label) => {
     const [band, figure] = label.split(' · ');
@@ -115,9 +121,22 @@ export const V0990_STIFFNESS_SCALE = String.raw`((db) => {
     if (w !== r.stiffness.width) changed++;
     r.stiffness.width = w;
   }
-  if (changed !== 78) throw new Error('stiffness scale: expected 78 bars to change, got ' + changed);
+  if (changed !== expected)
+    throw new Error('stiffness scale: expected ' + expected + ' bars to change, got ' + changed);
   return db;
 })`;
+
+/** v1.5's declared label changes (patch J), as v0.990 labels after F: [id, was, now]. */
+export const V0990_RECHECK_LABELS: readonly [string, string, string][] = [
+  ['luxilon-4g', 'Very Firm · 1.10', 'Very Firm · 1.18'],
+  ['solinco-barb-wire', 'Medium · ~0.95', 'Med-Soft · 0.90'],
+  ['solinco-confidential-soft', 'Medium', 'Med-Soft · 0.85'],
+  ['solinco-vanquish-multi', 'Soft', 'Very Soft · 0.55–0.65'],
+  ['solinco-hyper-g-round', 'Medium · ~0.95', 'Medium · 0.95'],
+];
+
+/** All text edits applied to legacy since v1.2: the stiffness words, then the re-check's. */
+export const V0990_ALL_TEXT_EDITS = [...STIFFNESS_WORD_EDITS, ...RECHECK_TEXT_EDITS];
 
 const LEGACY_FIXES_JS = String.raw`(() => {
   // F (first, so every other patch sees the new data)
@@ -165,6 +184,25 @@ const LEGACY_FIXES_JS = String.raw`(() => {
   }
   if (footers !== 15) throw new Error('expected 15 footers (5 brands x 3 racquets), got ' + footers);
 
+  // J (after H, so the scale redraws exactly the re-checked bars)
+  for (const [id, was, now] of ${JSON.stringify(V0990_RECHECK_LABELS)}) {
+    const s = window.TENNIS_DB.strings.find((x) => x.id === id);
+    if (s.stiffness.label !== was) throw new Error('patch J: ' + id + ' reads ' + s.stiffness.label);
+    s.stiffness.label = now;
+  }
+  (${V0990_STIFFNESS_SCALE})(window.TENNIS_DB, 4);
+  let rechecked = 0;
+  for (const [id] of ${JSON.stringify(V0990_RECHECK_LABELS)}) {
+    const s = window.TENNIS_DB.strings.find((x) => x.id === id);
+    for (const tr of document.querySelectorAll('tr[data-type="string"][data-id="' + id + '"]')) {
+      const fill = tr.querySelector('.bar-fill.stiff');
+      fill.closest('.bar-cell').querySelector('.bar-label').textContent = s.stiffness.label;
+      fill.setAttribute('style', 'width:' + s.stiffness.width + '%');
+      rechecked++;
+    }
+  }
+  if (rechecked !== 15) throw new Error('expected 15 re-checked rows (5 x 3 racquets), got ' + rechecked);
+
   // I
   const allGrips = Object.values(window.TENNIS_DB.grips).flatMap((t) => Object.values(t).flat());
   let recoloured = 0;
@@ -193,8 +231,8 @@ const LEGACY_FIXES_JS = String.raw`(() => {
     }
     return n;
   };
-  const changes = (${V0990_TEXT_EDITS})(window.TENNIS_DB, ${JSON.stringify(STIFFNESS_WORD_EDITS)});
-  if (changes.length !== 37) throw new Error('expected 37 changed texts and labels, got ' + changes.length);
+  const changes = (${V0990_TEXT_EDITS})(window.TENNIS_DB, ${JSON.stringify(V0990_ALL_TEXT_EDITS)});
+  if (changes.length !== 39) throw new Error('expected 39 changed texts and labels, got ' + changes.length);
   for (const c of changes) {
     let n = 0;
     let expected = 3;

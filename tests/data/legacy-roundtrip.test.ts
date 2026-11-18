@@ -26,6 +26,8 @@ import { GRIP_TAG_CHANGES } from '../../scripts/derive-tag-colours';
 import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
 import {
+  V0990_ALL_TEXT_EDITS,
+  V0990_RECHECK_LABELS,
   V0990_STIFFNESS_RULE,
   V0990_STIFFNESS_SCALE,
   V0990_TEXT_EDITS,
@@ -133,13 +135,27 @@ const applyTextEdits = new Function(`return ${V0990_TEXT_EDITS}`)() as (
   db: unknown,
   edits: typeof STIFFNESS_WORD_EDITS,
 ) => unknown[];
-const applyStiffnessScale = new Function(`return ${V0990_STIFFNESS_SCALE}`)() as (db: unknown) => unknown;
+const applyStiffnessScale = new Function(`return ${V0990_STIFFNESS_SCALE}`)() as (
+  db: unknown,
+  expected?: number,
+) => unknown;
 const expected = (): unknown => {
-  const db = applyStiffnessScale(applyStiffnessRule(JSON.parse(legacyJson)));
-  expect(applyTextEdits(db, STIFFNESS_WORD_EDITS)).toHaveLength(37);
+  const db = applyStiffnessScale(applyStiffnessRule(JSON.parse(legacyJson))) as {
+    strings: { id: string; stiffness: { label: string } }[];
+  };
+  // v1.5: the re-check's five labels, then their bars on the scale.
+  for (const [id, was, now] of V0990_RECHECK_LABELS) {
+    const s = db.strings.find((x) => x.id === id)!;
+    expect(s.stiffness.label).toBe(was);
+    s.stiffness.label = now;
+  }
+  applyStiffnessScale(db, 4);
+  expect(applyTextEdits(db, V0990_ALL_TEXT_EDITS)).toHaveLength(39);
   // v1.4: the five grip tags that took their label's majority colour (patch I).
   type V0990Grip = { id: string; feelTags: { label: string; variant: string }[] };
-  const grips = Object.values((db as { grips: Record<string, Record<string, V0990Grip[]>> }).grips)
+  const grips = Object.values(
+    (db as unknown as { grips: Record<string, Record<string, V0990Grip[]>> }).grips,
+  )
     .flatMap((byType) => Object.values(byType).flat());
   for (const c of GRIP_TAG_CHANGES) {
     const tag = grips.find((g) => g.id === c.gripId)!.feelTags.find((t) => t.label === c.label)!;

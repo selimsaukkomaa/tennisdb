@@ -299,6 +299,9 @@
           "properties": {
             "figure": {
               "$ref": "#/$defs/StiffnessFigure"
+            },
+            "disputed": {
+              "$ref": "#/$defs/DisputedReading"
             }
           },
           "required": [
@@ -323,6 +326,9 @@
             },
             "figure": {
               "type": "null"
+            },
+            "disputed": {
+              "$ref": "#/$defs/DisputedReading"
             }
           },
           "required": [
@@ -388,12 +394,57 @@
               "type": "null"
             }
           ]
+        },
+        "pages": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "A racketpedia.com/en-GB/tennis-string/<page> slug."
+          }
         }
       },
       "required": [
         "kgPerMm",
         "approx",
         "source",
+        "retrieved"
+      ],
+      "additionalProperties": false
+    },
+    "DisputedReading": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "enum": [
+            "Racketpedia"
+          ]
+        },
+        "kgPerMm": {
+          "type": "number",
+          "minimum": 0.2,
+          "maximum": 2
+        },
+        "pages": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+            "description": "A racketpedia.com/en-GB/tennis-string/<page> slug."
+          }
+        },
+        "retrieved": {
+          "type": "string",
+          "pattern": "^\\d{4}-(0[1-9]|1[0-2])$"
+        }
+      },
+      "required": [
+        "source",
+        "kgPerMm",
+        "pages",
         "retrieved"
       ],
       "additionalProperties": false

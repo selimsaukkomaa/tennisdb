@@ -30,7 +30,9 @@ These are the owner's rules. Follow them exactly.
 
 - Data corrections are never silent. The corrected note carries a one-line parenthetical
   pointing to the old error, and the changelog lists it.
-- Unresolved source conflicts are stated as flags in the note and in the changelog.
+- Unresolved source conflicts are stated as flags in the changelog and kept in the data
+  (`stiffness.disputed` for a stiffness figure), not in the note text: the owner's call
+  (2026-11-18), a disclaimer is irrelevant to the reader.
 - Every bulk transform asserts its expected match count. Run a small sample batch and show it
   before running the full set.
 - Data changes go through the validators (`npm run validate`). A rule that a change breaks is
@@ -81,7 +83,7 @@ scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
                    migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs,
                    derive-stiffness-bands, stiffness-words, derive-stiffness-widths,
-                   derive-tag-colours) are not meant to run again
+                   derive-tag-colours, recheck-stiffness) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)

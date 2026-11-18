@@ -6,6 +6,155 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.5 — Stiffness figures re-checked
+
+**Date:** 2026-11-18
+**Base:** v1.4 (one colour per tag label)
+**Status:** data release with four visible figure changes. Phase 2 step 4,
+first half (`docs/phase-2-data-model.md`, D1): every stiffness figure checked
+against Racketpedia, with a second lab as tie-breaker where the two disagree.
+The owner approved the method after a sample of five, the classification
+after the full comparison, and the handling of the disagreements after the
+second-lab check, all on 2026-11-18. `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## Method
+
+- **Racketpedia**, the lab the footers cite, read from its brand listings for
+  all seven brands (163 entries; average static stiffness in kg/mm, per colour
+  and gauge). Each string was matched by name, colour and gauge: the 1.25
+  gauge or the nearest one sold, or the gauge whose figure we already store.
+- **Where the two disagree**, Tennis Warehouse University's string database
+  (`twu.tennis-warehouse.com`) was the tie-breaker. It measures dynamic
+  stiffness in lb/in, a different property: on the 22 string-and-gauge pairs
+  where Racketpedia agrees with our data, it explains only a third of the
+  variation (r = 0.57, about ±0.09 kg/mm), so it can rank but not supply a
+  figure. No manufacturer publishes stiffness for these strings.
+- **Racketpedia's own figures vary**: ALU Power at 1.25 reads 0.78 in Silver
+  and up to 1.05 in other colours; Outlast's 1.25 sits above its 1.20 and 1.30;
+  Hyper-G Soft's 1.30 page reads "105 kg/mm".
+
+## Results
+
+| | Strings | |
+|---|---:|---|
+| Confirmed | 30 | Our figure equals Racketpedia's; now `source: "Racketpedia"`, `retrieved: "2026-11"` and the `pages` it comes from. Six match at a gauge other than 1.25 (Mach-10 and Element at 1.30, Hyper-G Round at 1.20; Sync, Zero and Tour M8 store a range across two gauges). Hyper-G Round's "~" goes: the figure is a measurement now |
+| Adopted | 4 | Below |
+| Disputed, ours kept | 20 | Below |
+| Not on Racketpedia | 15 | Vamos, Cash, A5 Infrared, O-Toro Octa, O-Toro Spin, O-Toro Snap, O-Toro Snap Tour Flex, Poly Tour Force, Soldier, Game Changer, Tour Mako Short Fin, M2 Pro, Pro 16, Quasi-Gut Armor, Pro Tour |
+| Unclear entry | 3 | "Big Hitter Rough" names no colour (our Blue Rough or Silver Rough); "Tour Super 850 Pro" may not be our Tour Super 850 |
+
+**Adopted (visible):**
+
+| String | Was | Now | Why |
+|---|---|---|---|
+| 4G | Very Firm · 1.10 | Very Firm · 1.18 | TWU ranks 4G clearly stiffest (259 lb/in) |
+| Barb Wire | Medium · ~0.95 | Med-Soft · 0.90 | TWU sides with Racketpedia (183 lb/in) |
+| Confidential Soft | Medium (no figure) | Med-Soft · 0.85 | a figure where we had none; 0.85–0.90 across three gauges |
+| Vanquish (Multi) | Soft (no figure) | Very Soft · 0.55–0.65 | a figure where we had none; no 1.25 tested, so 1.20 and 1.30 |
+
+No Firm/Soft chip moves. Bars follow the scale: 4G 93% → 100%, Barb Wire
+70% → 63%, Confidential Soft 70% → 55%, Vanquish 45% → 18%.
+
+**Disputed: Racketpedia's reading kept in the data, ours shown.** Where TWU
+sides with our figure, or there is no second source, or Racketpedia's reading
+looks wrong, our figure stays (`source: "legacy"`), and the reading is
+stored as `stiffness.disputed` with its page. By the owner's decision the notes
+say nothing of it: the disclaimer is irrelevant to the reader.
+
+| String | Brand | Shown | Racketpedia | TWU (lb/in, 1.25) | Why ours stays |
+|---|---|---|---|---:|---|
+| ALU Power | Luxilon | Firm · 1.05 | 0.78 at 1.25 | 209 | sides with ours |
+| ALU Power Rough | Luxilon | Firm · 1.05 | 0.72 at 1.25 | 209 | sides with ours |
+| ALU Power Soft | Luxilon | Med-Soft · 0.85 | 0.73 at 1.25 | 198 | sides with ours |
+| ALU Power Spin | Luxilon | Med-Firm · 1.00 | 0.83 at 1.27 | 214 (1.27) | sides with ours |
+| ALU Power Feel | Luxilon | Medium · 0.95 | 0.78 at 1.20 | 187 (1.20) | sides with ours |
+| 4G Rough | Luxilon | Very Firm · 1.10 | 0.83 at 1.25 | 216 | sides with ours |
+| 4G Soft | Luxilon | Medium · 0.95 | 1.13 at 1.25 | 217 | sides with ours |
+| Adrenaline | Luxilon | Med-Firm · 1.00 | 0.77 at 1.25 | 203 | sides with ours |
+| Eco Power | Luxilon | Med-Firm · 1.00 | 1.05 at 1.25 | 195 | sides with ours |
+| Big Hitter Black 7 | Tourna | Med-Firm · 1.00 | 0.77 at 1.25 | 223 | sides with ours |
+| Revolution | Solinco | Med-Firm · ~1.00 | 1.15 at 1.25 | 213 | sides with ours |
+| TB Diamond Rough | Solinco | Medium · ~0.95 | 0.55 at 1.25 | 192 | sides with ours |
+| Poly Tour Drive | Yonex | Med-Soft · ~0.90 | 0.60 at 1.25 | 196 | sides with ours |
+| Outlast | Solinco | Med-Soft · ~0.90 | 1.08 at 1.25 | 208 | between the two |
+| SLAP (Ltd. Edition) | ReString | Medium · ~0.95 | 0.75 at 1.23 | — | no data |
+| Paradox Pro | Grapplesnake | Medium · ~0.95 | 0.70 at 1.29 | — | no data |
+| Aspera Triplum | Grapplesnake | Med-Soft · ~0.85 | 0.50 at 1.19 | — | no data |
+| Irukandji | Grapplesnake | Med-Soft · ~0.85 | 0.60 at 1.17 | — | no data |
+| Hyper-G Soft | Solinco | Medium · 0.95 | 1.10 at 1.25 | 172 | as stiff as Hyper-G; its 1.30 page reads "105" |
+| Truffle X | Toroline | Very Soft | 0.20 at 1.30 | — | a third of natural gut (0.55) |
+
+## Declared differences from v0.990 (added in v1.5)
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| Five stiffness labels and four bars (the adopted figures, Hyper-G Round's "~") | yes | J: the labels set on legacy's data (it throws unless each reads as expected), `V0990_STIFFNESS_SCALE` redraws exactly four bars, and the 15 rows on the page follow |
+| Two text corrections (below) | yes | G, with v1.2's edits (39 changed texts now) |
+
+---
+
+## Data corrections
+
+- **4G:** 1.10 → 1.18 kg/mm (Racketpedia, 1.25 Gold). Its Regna note gave
+  1.10; it now reads "Firmer than ALU Power (1.18 kg/mm)" and ends with
+  "(Earlier notes gave 1.10 kg/mm.)".
+- **Barb Wire:** ~0.95 → 0.90 kg/mm (Racketpedia, 1.25 Black), so Medium →
+  Med-Soft; its feel text "medium stiffness" now reads "medium-soft
+  stiffness".
+- **Confidential Soft** 0.85 and **Vanquish** 0.55–0.65: figures where the
+  band was an estimate (Medium → Med-Soft, Soft → Very Soft).
+
+## Flags left open
+
+- **The 20 disputed figures** above, in the data and here, not in the notes.
+- **The 3 unclear entries** (Big Hitter Blue Rough and Silver Rough, Tour
+  Super 850).
+- From v0.989, unchanged: Poly Tour Pro's figure (now confirmed by
+  Racketpedia at 1.05) against its softer reported feel, still flagged in its
+  note; Eco Power's conflict is now this release's dispute (Racketpedia 1.05,
+  ours 1.00, TWU sides with ours).
+
+## Verification
+
+`npm run check` passes: 352 Vitest tests (349 in v1.4), 62 Playwright tests.
+
+- **New tests, 3:** `stiffness-provenance` fires on a Racketpedia figure
+  without its pages and on a legacy figure with some; the schema rejects a
+  disputed reading without its page. The rule's first case now uses a legacy
+  figure, since Caviar is Racketpedia's.
+- **Against v0.990:** with every declared change applied to the blob (v1.1's
+  rule, v1.3's scale, this release's labels and bars, the text edits, v1.4's
+  grip tags), the data equals v0.990's value for value and serialises to the
+  same length.
+- **Parity:** all 16 pixel views and 25 DOM scenarios pass. Without patch J,
+  all 25 DOM scenarios fail. `scripts/recheck-stiffness.ts` (one-off) asserts
+  that each confirmed figure equals the stored one, the 30 / 4 / 20 split, 34
+  Racketpedia figures in all, and that each text edit's text occurs once.
+
+## File size
+
+| | v1.4 | v1.5 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 451,116 | 455,640 | +4.4 KB (+1.0%) |
+| gzip | 103,328 | 104,075 | +0.7 KB |
+
+The provenance (pages, month) and the 20 disputed readings add the bytes.
+
+## Still open
+
+Unchanged from v1.4, except:
+
+- **The footers** still say "Stiffness (kg/mm) from Racketpedia lab testing".
+  34 figures now are, the 20 disputed ones are earlier figures, and 15 strings
+  are not on Racketpedia; by the owner's decision no caveat is added.
+- **Closed:** re-verifying the legacy stiffness figures (D1).
+
+Next in Phase 2 step 4: unifying the rating words (D5), sample of five first.
+
+---
+
 # v1.4 — One colour per tag label
 
 **Date:** 2026-11-18

@@ -80,6 +80,15 @@ the bed, never a lab figure. The stored band of a string without a figure is
 what the sketch called `inferredBand`. `stiffnessLabel()` in
 `src/core/stiffness.ts` prints the same label as before.
 
+**Re-checked in v1.5** (step 4) against Racketpedia, read on 2026-11-18 from
+its brand listings: 30 figures confirmed and 4 adopted, now `source:
+"Racketpedia"` with the pages (colour and gauge) they come from. For 20 the
+reading disagrees; Tennis Warehouse University's impact tests, a different
+measure that can only rank, were the tie-breaker. Our figure stays, still
+`legacy`, and Racketpedia's reading is kept in `stiffness.disputed` and the
+changelog, not in the notes (the owner's call). 15 strings are not on
+Racketpedia and 3 entries could not be told apart.
+
 ### D2. The stiffness-label rule
 
 Labels derived from the figure (range midpoint) with fixed thresholds; "Med"
@@ -309,8 +318,8 @@ Each step is its own release, and each stops for the owner's review.
    - the bar scale and the footers' new wording (D3), *done in v1.3*;
    - one colour per grip tag label, with screenshots first (D8), *done in v1.4*.
    Step 3 is complete.
-4. **Later, separately:** re-verifying the 62 legacy figures (D1) and unifying
-   the rating words (D5).
+4. **Later, separately:** re-verifying the 62 legacy figures (D1), *done in
+   v1.5*, and unifying the rating words (D5).
 
 Out of scope, as before: the feel taxonomy (Medium band, damping axis,
 Bite/Snapback chip), the Poly Tour Pro and Eco Power conflicts, the grip Thin

@@ -25,8 +25,11 @@
       "figure": {
         "kgPerMm": 1.1,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-o-toro-tour-neon-mint-123"
+        ]
       }
     },
     "power": {
@@ -77,8 +80,11 @@
       "figure": {
         "kgPerMm": 1,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-caviar-neon-yellow-124"
+        ]
       }
     },
     "power": {
@@ -217,8 +223,11 @@
       "figure": {
         "kgPerMm": 0.9,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-a5-carbon-gray-125"
+        ]
       }
     },
     "power": {
@@ -327,8 +336,11 @@
       "figure": {
         "kgPerMm": 0.95,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-o-toro-fluo-green-123"
+        ]
       }
     },
     "power": {
@@ -546,8 +558,12 @@
           "max": 1
         },
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-wasabi-neon-green-123",
+          "toroline-wasabi-pomegranate-red-123"
+        ]
       }
     },
     "power": {
@@ -604,8 +620,11 @@
       "figure": {
         "kgPerMm": 0.95,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-toro-toro-neon-pink-123"
+        ]
       }
     },
     "power": {
@@ -663,8 +682,11 @@
       "figure": {
         "kgPerMm": 0.9,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-enso-pro-carbon-125"
+        ]
       }
     },
     "power": {
@@ -712,8 +734,11 @@
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-snapper-lavender-123"
+        ]
       }
     },
     "power": {
@@ -765,8 +790,11 @@
       "figure": {
         "kgPerMm": 0.9,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "toroline-super-toro-blue-123"
+        ]
       }
     },
     "power": {
@@ -812,7 +840,15 @@
     },
     "stiffness": {
       "band": "Very Soft",
-      "figure": null
+      "figure": null,
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.2,
+        "pages": [
+          "toroline-truffle-x-purple-130"
+        ],
+        "retrieved": "2026-11"
+      }
     },
     "power": {
       "score": 78,
@@ -909,8 +945,11 @@
       "figure": {
         "kgPerMm": 1.12,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-tour-bite-grey-125"
+        ]
       }
     },
     "power": {
@@ -960,8 +999,11 @@
       "figure": {
         "kgPerMm": 1,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-confidential-black-125"
+        ]
       }
     },
     "power": {
@@ -1009,8 +1051,15 @@
       "label": "Pink"
     },
     "stiffness": {
-      "band": "Medium",
-      "figure": null
+      "figure": {
+        "kgPerMm": 0.85,
+        "approx": false,
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-confidential-soft-pink-125"
+        ]
+      }
     },
     "power": {
       "score": 55,
@@ -1058,8 +1107,11 @@
       "figure": {
         "kgPerMm": 1.1,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-hyper-g-green-125"
+        ]
       }
     },
     "power": {
@@ -1109,8 +1161,11 @@
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-mach-10-cyan-130"
+        ]
       }
     },
     "power": {
@@ -1160,8 +1215,11 @@
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-tour-bite-soft-grey-125"
+        ]
       }
     },
     "power": {
@@ -1212,6 +1270,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 1.1,
+        "pages": [
+          "solinco-hyper-g-soft-green-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -1263,6 +1329,14 @@
         "approx": true,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 1.15,
+        "pages": [
+          "solinco-revolution-blue-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -1313,6 +1387,14 @@
         "approx": true,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.55,
+        "pages": [
+          "solinco-tour-bite-diamond-rough-grey-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -1361,9 +1443,12 @@
     "stiffness": {
       "figure": {
         "kgPerMm": 0.95,
-        "approx": true,
-        "source": "legacy",
-        "retrieved": null
+        "approx": false,
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-hyper-g-round-green-120"
+        ]
       }
     },
     "power": {
@@ -1411,10 +1496,13 @@
     },
     "stiffness": {
       "figure": {
-        "kgPerMm": 0.95,
-        "approx": true,
-        "source": "legacy",
-        "retrieved": null
+        "kgPerMm": 0.9,
+        "approx": false,
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-barb-wire-black-125"
+        ]
       }
     },
     "power": {
@@ -1438,7 +1526,7 @@
       "Soft"
     ],
     "feelSummary": "Twisted, high-friction",
-    "feelExpand": "Twisted construction with very high surface friction; medium stiffness.",
+    "feelExpand": "Twisted construction with very high surface friction; medium-soft stiffness.",
     "id": "solinco-barb-wire",
     "brand": "solinco"
   },
@@ -1467,6 +1555,14 @@
         "approx": true,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 1.08,
+        "pages": [
+          "solinco-outlast-red-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -1513,8 +1609,19 @@
       "label": "Natural"
     },
     "stiffness": {
-      "band": "Soft",
-      "figure": null
+      "figure": {
+        "kgPerMm": {
+          "min": 0.55,
+          "max": 0.65
+        },
+        "approx": false,
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "solinco-vanquish-natural-120",
+          "solinco-vanquish-natural-130"
+        ]
+      }
     },
     "power": {
       "score": 78,
@@ -1566,8 +1673,11 @@
       "figure": {
         "kgPerMm": 1.08,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "yonex-poly-tour-spin-blue-125"
+        ]
       }
     },
     "power": {
@@ -1626,8 +1736,11 @@
       "figure": {
         "kgPerMm": 0.92,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "yonex-poly-tour-strike-grey-125"
+        ]
       }
     },
     "power": {
@@ -1681,8 +1794,12 @@
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "yonex-poly-tour-pro-yellow-125",
+          "yonex-poly-tour-pro-blue-blue-125"
+        ]
       }
     },
     "power": {
@@ -1743,8 +1860,13 @@
           "max": 0.95
         },
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "yonex-poly-tour-rev-purple-125",
+          "yonex-poly-tour-rev-orange-125",
+          "yonex-poly-tour-rev-white-125"
+        ]
       }
     },
     "power": {
@@ -1796,6 +1918,14 @@
         "approx": true,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.6,
+        "pages": [
+          "yonex-poly-tour-drive-silver-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -1896,8 +2026,11 @@
       "figure": {
         "kgPerMm": 0.8,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "yonex-poly-tour-fire-red-125"
+        ]
       }
     },
     "power": {
@@ -1945,8 +2078,11 @@
       "figure": {
         "kgPerMm": 0.72,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "yonex-poly-tour-air-azur-125"
+        ]
       }
     },
     "power": {
@@ -1994,8 +2130,11 @@
       "figure": {
         "kgPerMm": 0.77,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "yonex-poly-tour-tough-black-125"
+        ]
       }
     },
     "power": {
@@ -2091,8 +2230,11 @@
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "restring-vivo-blue-123"
+        ]
       }
     },
     "power": {
@@ -2145,8 +2287,12 @@
           "max": 0.95
         },
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "restring-sync-silver-120",
+          "restring-sync-silver-125"
+        ]
       }
     },
     "power": {
@@ -2199,8 +2345,12 @@
           "max": 1.1
         },
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "restring-zero-sky-blue-123",
+          "restring-zero-sky-blue-128"
+        ]
       }
     },
     "power": {
@@ -2251,6 +2401,14 @@
         "approx": true,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.75,
+        "pages": [
+          "restring-slap-black-123"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -2299,8 +2457,11 @@
       "figure": {
         "kgPerMm": 1.05,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "grapplesnake-tour-sniper-metallic-grey-125"
+        ]
       }
     },
     "power": {
@@ -2402,8 +2563,12 @@
           "max": 0.95
         },
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "grapplesnake-tour-m8-olive-green-125",
+          "grapplesnake-tour-m8-olive-green-130"
+        ]
       }
     },
     "power": {
@@ -2452,8 +2617,11 @@
       "figure": {
         "kgPerMm": 0.9,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "grapplesnake-alpha-yellow-125"
+        ]
       }
     },
     "power": {
@@ -2507,6 +2675,14 @@
         "approx": true,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.5,
+        "pages": [
+          "grapplesnake-aspera-triplum-lime-yellow-119"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -2610,6 +2786,14 @@
         "approx": true,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.7,
+        "pages": [
+          "grapplesnake-paradox-pro-forest-green-129"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -2661,8 +2845,11 @@
       "figure": {
         "kgPerMm": 0.45,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "grapplesnake-tour-mako-green-125"
+        ]
       }
     },
     "power": {
@@ -2757,6 +2944,14 @@
         "approx": true,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.6,
+        "pages": [
+          "grapplesnake-irukandji-silver-117"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -2809,6 +3004,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.78,
+        "pages": [
+          "luxilon-alu-power-silver-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -2859,6 +3062,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.72,
+        "pages": [
+          "luxilon-alu-power-rough-silver-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -2909,6 +3120,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.73,
+        "pages": [
+          "luxilon-alu-power-soft-silver-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -2959,6 +3178,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.83,
+        "pages": [
+          "luxilon-alu-power-spin-silver-127"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -3010,6 +3237,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.78,
+        "pages": [
+          "luxilon-alu-power-feel-silver-120"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -3056,10 +3291,13 @@
     },
     "stiffness": {
       "figure": {
-        "kgPerMm": 1.1,
+        "kgPerMm": 1.18,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "luxilon-4g-gold-125"
+        ]
       }
     },
     "power": {
@@ -3110,6 +3348,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.83,
+        "pages": [
+          "luxilon-4g-rough-gold-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -3160,6 +3406,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 1.13,
+        "pages": [
+          "luxilon-4g-soft-gold-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -3209,8 +3463,11 @@
       "figure": {
         "kgPerMm": 0.85,
         "approx": false,
-        "source": "legacy",
-        "retrieved": null
+        "source": "Racketpedia",
+        "retrieved": "2026-11",
+        "pages": [
+          "luxilon-element-bronze-130"
+        ]
       }
     },
     "power": {
@@ -3262,6 +3519,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.77,
+        "pages": [
+          "luxilon-adrenaline-silver-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -3364,6 +3629,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 1.05,
+        "pages": [
+          "luxilon-eco-power-green-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {
@@ -3415,6 +3688,14 @@
         "approx": false,
         "source": "legacy",
         "retrieved": null
+      },
+      "disputed": {
+        "source": "Racketpedia",
+        "kgPerMm": 0.77,
+        "pages": [
+          "tourna-big-hitter-black-7-black-125"
+        ],
+        "retrieved": "2026-11"
       }
     },
     "power": {

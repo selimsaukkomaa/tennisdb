@@ -1953,7 +1953,7 @@
       "minKg": 22,
       "maxKg": 23
     },
-    "note": "Firmer than ALU Power (1.10 kg/mm) with the best tension maintenance in the Luxilon mainline — stays playable 12+ hours. Full bed in the 64 RA frame: very firm, low power, lockdown control, minimal dwell; round, so spin is snapback-driven in the open 16×19. The narrow 22–23 band reflects how firm the bed already is."
+    "note": "Firmer than ALU Power (1.18 kg/mm) with the best tension maintenance in the Luxilon mainline — stays playable 12+ hours. Full bed in the 64 RA frame: very firm, low power, lockdown control, minimal dwell; round, so spin is snapback-driven in the open 16×19. The narrow 22–23 band reflects how firm the bed already is. (Earlier notes gave 1.10 kg/mm.)"
   },
   {
     "itemId": "luxilon-4g",
