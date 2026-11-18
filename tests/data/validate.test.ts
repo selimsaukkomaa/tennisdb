@@ -73,6 +73,8 @@ describe('each rule fires on broken data', () => {
     ['gut-string-refs', (db) => (gutOf(db, 'regna').crosses.stringId = 'luxilon-nope')],
     ['hybrid-string-refs', (db) => (db.hybrids[0]!.mains.stringId = 'toroline-nope')],
     ['hybrid-string-refs', (db) => (db.hybrids[0]!.crosses.stringId = 'toroline-k-pop-spin')],
+    ['hybrid-side-band', (db) => (db.hybrids[0]!.mains.shapeFeelLabel = 'Square · Firm')],
+    ['hybrid-side-band', (db) => (str(db, 'toroline-wasabi').stiffness.figure!.kgPerMm = 1.1)],
     ['copy-refs', (_db, copy) => (copy.brandFooters.toroline!.byRacquet = { nope: '<p>x</p>' })],
     ['copy-refs', (_db, copy) => (copy.gripAbout.wilson = 'About Wilson')],
     ['retired', (db) => (str(db, 'toroline-caviar').feelSummary = 'Connected, direct')],

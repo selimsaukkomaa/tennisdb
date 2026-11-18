@@ -118,6 +118,14 @@ still stored until D3. The hybrids' side labels ("Hexagonal · Firm") were left
 as written, by the owner's decision on 2026-11-17: 14 of them name a band
 word their string no longer has (8 already did), for the notes pass.
 
+**Notes pass done in v1.2**, approved on 2026-11-18 after a sample of five. Of
+the 51 texts the word count found, most stay true (a Very Firm string is
+firm) or describe the strung bed in a given frame. 23 texts in 11 strings
+changed: a word naming the string's own band that is now wrong, or a
+firm-side word on one of the 8 strings moved to Soft; only those words, the
+rest verbatim. Each hybrid side label now names its string's band (14
+labels), and validate.ts keeps it so (hybrid-side-band).
+
 ### D3. Bar scale
 
 Bar widths are set by hand, relative within each brand: 1.05 kg/mm is drawn
@@ -280,7 +288,8 @@ Each step is its own release, and each stops for the owner's review.
    The migration script asserts every count and runs on a sample first.
 3. **Visible changes**, one release each, with declared differences:
    - stiffness labels and the 8 Firm/Soft chips (D2, D8), *done in v1.1*;
-   - the notes that use an old band word, sample of five first (D2);
+   - the notes that use an old band word, sample of five first (D2), *done in
+     v1.2*;
    - the bar scale and the footers' new wording (D3);
    - one colour per grip tag label, with screenshots first (D8).
 4. **Later, separately:** re-verifying the 62 legacy figures (D1) and unifying

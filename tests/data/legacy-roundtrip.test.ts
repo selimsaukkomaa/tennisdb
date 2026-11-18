@@ -8,7 +8,8 @@
 // Since v1.1 the stiffness labels and Firm/Soft chips are derived by a rule that moves 33 labels
 // and 8 chips. The blob is compared with that declared change applied to it, by the same code
 // that patches the legacy page in the parity suite (V0990_STIFFNESS_RULE), so everything else is
-// still checked value for value.
+// still checked value for value. v1.2's edits to the stiffness words in 23 texts and 14 hybrid
+// side labels are applied the same way (V0990_TEXT_EDITS, patch G).
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
@@ -19,7 +20,8 @@ import { ratingBar, type Rating } from '../../src/core/ratings';
 import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
 import { feelTokens, stiffnessBar } from '../../src/core/stiffness';
 import { specHtml } from '../../src/ui/tables';
-import { V0990_STIFFNESS_RULE } from '../visual/legacy-fixes';
+import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
+import { V0990_STIFFNESS_RULE, V0990_TEXT_EDITS } from '../visual/legacy-fixes';
 
 const legacyHtml = readFileSync(
   fileURLToPath(new URL('../../legacy/tennis_equipmentdb_v0_990.html', import.meta.url)),
@@ -109,9 +111,20 @@ function toV0990(db: TennisDb): unknown {
   };
 }
 
-/** The v0.990 blob with v1.1's declared stiffness change applied (33 labels, 8 chips). */
+/**
+ * The v0.990 blob with the declared changes applied: v1.1's stiffness rule (33 labels, 8 chips)
+ * and v1.2's stiffness words (23 texts, 14 hybrid side labels).
+ */
 const applyStiffnessRule = new Function(`return ${V0990_STIFFNESS_RULE}`)() as (db: unknown) => unknown;
-const expected = (): unknown => applyStiffnessRule(JSON.parse(legacyJson));
+const applyTextEdits = new Function(`return ${V0990_TEXT_EDITS}`)() as (
+  db: unknown,
+  edits: typeof STIFFNESS_WORD_EDITS,
+) => unknown[];
+const expected = (): unknown => {
+  const db = applyStiffnessRule(JSON.parse(legacyJson));
+  expect(applyTextEdits(db, STIFFNESS_WORD_EDITS)).toHaveLength(37);
+  return db;
+};
 
 describe('data/ against legacy v0.990', () => {
   test('converted back to the v0.990 shape, it equals the embedded blob with the declared moves', () => {

@@ -19,8 +19,14 @@
 //      move. V0990_STIFFNESS_RULE applies it to legacy's own data, working from its labels, not
 //      from the app's code; the patch then redraws the label cells and data-feel of the rows
 //      already on the page. Compare reads the data, so it follows.
+//   G. v1.2: the stiffness words in 23 texts and 14 hybrid side labels
+//      (scripts/stiffness-words.ts: STIFFNESS_WORD_EDITS). V0990_TEXT_EDITS applies the same
+//      edits to legacy's data, each text found exactly once; the patch then swaps the old text
+//      for the new in the cells already on the page: a feel text and a side label in each
+//      racquet's row, a note in its racquet's row.
 // The CSS repeats the rules in src/styles/additions.css; a change there must change it here.
 import type { Page } from '@playwright/test';
+import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 
 /**
  * v1.1's stiffness rule applied to a v0.990 TENNIS_DB, in place, as JavaScript source: the
@@ -54,6 +60,30 @@ export const V0990_STIFFNESS_RULE = String.raw`((db) => {
   return db;
 })`;
 
+/**
+ * v1.2's text edits applied to a v0.990 TENNIS_DB, in place, as JavaScript source: patch G runs
+ * it on the legacy page and the round-trip test on the embedded blob. Each edit's text must
+ * occur exactly once in its field. Returns each changed field with its old and new text.
+ */
+export const V0990_TEXT_EDITS = String.raw`((db, edits) => {
+  const changes = new Map();
+  for (const e of edits) {
+    const item = db.strings.find((s) => s.id === e.id) || db.hybrids.find((h) => h.id === e.id);
+    const holder =
+      e.field === 'note' ? item.perRacquet[e.racquet]
+        : e.field === 'mains' || e.field === 'crosses' ? item[e.field]
+        : item;
+    const key = e.field === 'note' ? 'note' : e.field === 'mains' || e.field === 'crosses' ? 'shapeFeelLabel' : e.field;
+    const n = holder[key].split(e.from).length - 1;
+    if (n !== 1) throw new Error('text edit ' + e.id + ' ' + e.field + ': "' + e.from + '" occurs ' + n + ' times');
+    const k = e.id + '|' + e.field + '|' + (e.racquet || '');
+    if (!changes.has(k)) changes.set(k, { id: e.id, field: e.field, racquet: e.racquet, before: holder[key] });
+    holder[key] = holder[key].replace(e.from, () => e.to);
+    changes.get(k).after = holder[key];
+  }
+  return [...changes.values()];
+})`;
+
 const LEGACY_FIXES_JS = String.raw`(() => {
   // F (first, so every other patch sees the new data)
   (${V0990_STIFFNESS_RULE})(window.TENNIS_DB);
@@ -69,6 +99,40 @@ const LEGACY_FIXES_JS = String.raw`(() => {
     tr.dataset.feel = s.feelAttr;
   }
   if (redrawn !== 99) throw new Error('expected 99 stiffness labels redrawn (33 x 3 racquets), got ' + redrawn);
+
+  // G
+  const swapText = (root, from, to) => {
+    let n = 0;
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+      if (node.nodeValue === from) {
+        node.nodeValue = to;
+        n++;
+      }
+    }
+    return n;
+  };
+  const changes = (${V0990_TEXT_EDITS})(window.TENNIS_DB, ${JSON.stringify(STIFFNESS_WORD_EDITS)});
+  if (changes.length !== 37) throw new Error('expected 37 changed texts and labels, got ' + changes.length);
+  for (const c of changes) {
+    let n = 0;
+    let expected = 3;
+    if (c.field === 'note') {
+      expected = 1;
+      for (const tr of document.querySelectorAll('#' + c.racquet + '-content tr[data-id="' + c.id + '"]'))
+        n += swapText(tr.querySelector('td.notes'), c.before, c.after);
+    } else if (c.field === 'mains' || c.field === 'crosses') {
+      for (const tr of document.querySelectorAll('tr[data-type="hybrid"][data-id="' + c.id + '"]'))
+        n += swapText(tr.children[c.field === 'mains' ? 1 : 2], c.before, c.after);
+    } else {
+      // legacy writes the feel text as a text node, the expand after a space in its own span
+      const pad = c.field === 'feelExpand' ? ' ' : '';
+      for (const tr of document.querySelectorAll('tr[data-type="string"][data-id="' + c.id + '"]'))
+        n += swapText(tr, pad + c.before, pad + c.after);
+    }
+    if (n !== expected)
+      throw new Error('patch G: ' + c.id + ' ' + c.field + ' swapped ' + n + ' times, expected ' + expected);
+  }
 
   const css = document.createElement('style');
   css.textContent = [

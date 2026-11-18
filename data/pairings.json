@@ -1029,7 +1029,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Best tension maintenance in the Yonex lineup — stays playable 10+ hours. Round, 0.92 kg/mm: firm, penetrating, low launch, with snapback-driven spin the open 16×19 supports. Full bed in the 64 RA frame is firm and clear without being sharp. Used by Shapovalov, Osaka and Shelton. Three gauges."
+    "note": "Best tension maintenance in the Yonex lineup — stays playable 10+ hours. Round, 0.92 kg/mm: penetrating, low launch, with snapback-driven spin the open 16×19 supports. Full bed in the 64 RA frame: medium stiffness, clear without being sharp. Used by Shapovalov, Osaka and Shelton. Three gauges."
   },
   {
     "itemId": "yonex-poly-tour-strike",
@@ -1051,7 +1051,7 @@
       "minKg": 19,
       "maxKg": 22
     },
-    "note": "Outstanding tension maintenance in a dense 18×20 that loses tension faster and is tedious to restring. Round profile limits spin — no edges, pinned snapback — but the controlled, low-launch response matches the frame's own precision. 0.92 kg/mm in the 58 RA frame plays mid-firm and stable. 2–3 kg below the Regna."
+    "note": "Outstanding tension maintenance in a dense 18×20 that loses tension faster and is tedious to restring. Round profile limits spin — no edges, pinned snapback — but the controlled, low-launch response matches the frame's own precision. 0.92 kg/mm in the 58 RA frame plays medium and stable. 2–3 kg below the Regna."
   },
   {
     "itemId": "yonex-poly-tour-pro",
@@ -1128,7 +1128,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Pentagonal at ~0.90 kg/mm, retailing under $10 — Yonex's budget shaped string. Full bed in the 64 RA frame: five-edge bite plus snapback in the open 16×19, moderate pocketing, medium-firm feedback that stays clear without harshness. Three gauges. Yonex describes it as \"comfortably firm\" with sharp edges."
+    "note": "Pentagonal at ~0.90 kg/mm, retailing under $10 — Yonex's budget shaped string. Full bed in the 64 RA frame: five-edge bite plus snapback in the open 16×19, moderate pocketing, feedback that stays clear without harshness. Three gauges. Yonex describes it as \"comfortably firm\" with sharp edges."
   },
   {
     "itemId": "yonex-poly-tour-drive",
@@ -1139,7 +1139,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Pentagonal edges do the spin work in the 18×19 where snapback is limited, and the string's medium stiffness plus the frame's extra crosses give a firm, low-launch bed. Slightly more pocketing than Spin, less lockdown. The price makes it the cheap way to run a shaped poly in this pattern. 1 kg below the Regna."
+    "note": "Pentagonal edges do the spin work in the 18×19 where snapback is limited, and the string's medium-soft stiffness plus the frame's extra crosses give a firm, low-launch bed. Slightly more pocketing than Spin, less lockdown. The price makes it the cheap way to run a shaped poly in this pattern. 1 kg below the Regna."
   },
   {
     "itemId": "yonex-poly-tour-drive",
@@ -1150,7 +1150,7 @@
       "minKg": 19,
       "maxKg": 22
     },
-    "note": "Shaped, medium-firm and inexpensive — pentagonal edges supply spin in the 18×20 and the 58 RA flex softens the ~0.90 stiffness into a comfortable, medium-dwell bed. (Earlier notes here described Drive as a round power poly; that was Poly Tour Force's profile.) 2–3 kg below the Regna."
+    "note": "Shaped, medium-soft and inexpensive — pentagonal edges supply spin in the 18×20 and the 58 RA flex softens the ~0.90 stiffness into a comfortable, medium-dwell bed. (Earlier notes here described Drive as a round power poly; that was Poly Tour Force's profile.) 2–3 kg below the Regna."
   },
   {
     "itemId": "yonex-poly-tour-force",
@@ -1381,7 +1381,7 @@
       "minKg": 19,
       "maxKg": 22
     },
-    "note": "Round in the 18×20 is the least spin-friendly combination in this database — no edge bite, and snapback is pinned by the dense crosses. What remains: smooth, quiet contact, low launch, a very stable feel with the frame's flex softening the string's firmness. The natural role is crosses under a shaped main. 2–3 kg below the Regna."
+    "note": "Round in the 18×20 is the least spin-friendly combination in this database — no edge bite, and snapback is pinned by the dense crosses. What remains: smooth, quiet contact, low launch, a very stable feel with the frame's flex softening the string's stiffness. The natural role is crosses under a shaped main. 2–3 kg below the Regna."
   },
   {
     "itemId": "restring-zero",
@@ -1524,7 +1524,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Positioned between Alpha and Tour Sniper (0.90–0.95 kg/mm), octagonal. Exceptional tension maintenance. The coating produces a distinctive, loud contact — acoustically the most present Grapplesnake. Full bed in the 64 RA frame: medium-firm, good pocketing and dwell, eight-edge bite plus snapback in the open 16×19."
+    "note": "Positioned between Alpha and Tour Sniper (0.90–0.95 kg/mm), octagonal. Exceptional tension maintenance. The coating produces a distinctive, loud contact — acoustically the most present Grapplesnake. Full bed in the 64 RA frame: medium stiffness, good pocketing and dwell, eight-edge bite plus snapback in the open 16×19."
   },
   {
     "itemId": "grapplesnake-tour-m8",
@@ -1535,7 +1535,7 @@
       "minKg": 21,
       "maxKg": 23
     },
-    "note": "Octagonal edges cover spin in the 18×19 where snapback is limited. Medium-firm stiffness through the extra crosses gives a firm bed with more pocketing than Tour Sniper. The loud contact is unchanged by the frame. Tension hold suits a dense pattern. 1 kg below the Regna."
+    "note": "Octagonal edges cover spin in the 18×19 where snapback is limited. Medium stiffness through the extra crosses gives a firm bed with more pocketing than Tour Sniper. The loud contact is unchanged by the frame. Tension hold suits a dense pattern. 1 kg below the Regna."
   },
   {
     "itemId": "grapplesnake-tour-m8",
@@ -1623,7 +1623,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Sharp square edges for spin, on a formula that's more powerful and comfortable than typical square polys (~0.90 kg/mm). Full bed in the 64 RA frame: strong bite plus snapback in the open 16×19, medium stiffness, more launch than the firm Grapplesnakes. Reviewers report an erratic contact in stiff frames — the Regna is firm enough to show it."
+    "note": "Sharp square edges for spin, on a formula that's more powerful and comfortable than typical square polys (~0.90 kg/mm). Full bed in the 64 RA frame: strong bite plus snapback in the open 16×19, medium-soft stiffness, more launch than the firm Grapplesnakes. Reviewers report an erratic contact in stiff frames — the Regna is firm enough to show it."
   },
   {
     "itemId": "grapplesnake-game-changer",
@@ -1656,7 +1656,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Metal-infused round poly with an abrasive surface — a category of its own. Solid, old-school contact (~0.95 kg/mm) with more spin than a round profile normally gives, from surface friction plus snapback in the open 16×19. Durable. Full bed in the 64 RA frame: medium-firm, low launch, consistent."
+    "note": "Metal-infused round poly with an abrasive surface — a category of its own. Solid, old-school contact (~0.95 kg/mm) with more spin than a round profile normally gives, from surface friction plus snapback in the open 16×19. Durable. Full bed in the 64 RA frame: medium stiffness, low launch, consistent."
   },
   {
     "itemId": "grapplesnake-paradox-pro",
@@ -1678,7 +1678,7 @@
       "minKg": 19,
       "maxKg": 22
     },
-    "note": "The abrasive surface adds some spin access in the 18×20, though less than a shaped string. The vintage, solid contact suits the frame's old-school character, and the 58 RA flex softens the metal-infused firmness. Good control and durability in a pattern that's tedious to restring. 2–3 kg below the Regna."
+    "note": "The abrasive surface adds some spin access in the 18×20, though less than a shaped string. The vintage, solid contact suits the frame's old-school character, and the 58 RA flex softens the metal-infused string. Good control and durability in a pattern that's tedious to restring. 2–3 kg below the Regna."
   },
   {
     "itemId": "grapplesnake-tour-mako",
@@ -1942,7 +1942,7 @@
       "minKg": 20,
       "maxKg": 22
     },
-    "note": "Thin gauge helps a round string in the 18×20 a little, but no edges means spin access remains limited; Rough and Spin address the pattern more directly. Medium-firm bed in the 58 RA frame with more feel than standard ALU. 2–3 kg below the Regna."
+    "note": "Thin gauge helps a round string in the 18×20 a little, but no edges means spin access remains limited; Rough and Spin address the pattern more directly. Medium bed in the 58 RA frame with more feel than standard ALU. 2–3 kg below the Regna."
   },
   {
     "itemId": "luxilon-4g",
@@ -2019,7 +2019,7 @@
       "minKg": 23,
       "maxKg": 24
     },
-    "note": "4G's tension stability at reduced stiffness (0.95 kg/mm) — sits between ALU Power Soft and standard 4G. Full bed in the 64 RA frame: medium-firm, more dwell than 4G, slightly muted contact, snapback-driven spin in the open 16×19. Long playable life. 23–24 kg."
+    "note": "4G's tension stability at reduced stiffness (0.95 kg/mm) — sits between ALU Power Soft and standard 4G. Full bed in the 64 RA frame: medium stiffness, more dwell than 4G, slightly muted contact, snapback-driven spin in the open 16×19. Long playable life. 23–24 kg."
   },
   {
     "itemId": "luxilon-4g-soft",
@@ -2030,7 +2030,7 @@
       "minKg": 22,
       "maxKg": 23
     },
-    "note": "Medium-firm round poly in a control frame: low launch, controlled response, moderate spin from restricted snapback. Slightly muted versus ALU Power Soft, with a longer playable window. 22–23 kg, 1 kg below the Regna."
+    "note": "Medium-stiffness round poly in a control frame: low launch, controlled response, moderate spin from restricted snapback. Slightly muted versus ALU Power Soft, with a longer playable window. 22–23 kg, 1 kg below the Regna."
   },
   {
     "itemId": "luxilon-4g-soft",
@@ -2250,7 +2250,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Softer-formula sister to Big Hitter Black 7 (0.92 kg/mm), textured round. Full bed in the 64 RA frame: medium-firm, more dwell and comfort than Blue Rough, texture-driven spin plus snapback in the open 16×19. Trades some of the brand's firmness for arm-friendliness."
+    "note": "Softer-formula sister to Big Hitter Black 7 (0.92 kg/mm), textured round. Full bed in the 64 RA frame: medium stiffness, more dwell and comfort than Blue Rough, texture-driven spin plus snapback in the open 16×19. Trades some of the brand's firmness for arm-friendliness."
   },
   {
     "itemId": "tourna-big-hitter-silver-rough",

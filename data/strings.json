@@ -1799,7 +1799,7 @@
       }
     ],
     "feelSummary": "Controlled, precise",
-    "feelExpand": "Round co-poly with a firm, penetrating response and the best tension hold in the Yonex range.",
+    "feelExpand": "Round co-poly with a penetrating response and the best tension hold in the Yonex range.",
     "id": "yonex-poly-tour-strike",
     "brand": "yonex"
   },
@@ -1923,8 +1923,8 @@
         "variant": "soft"
       }
     ],
-    "feelSummary": "Firm but dampened",
-    "feelExpand": "Stiff stringbed with muted vibration and reduced feedback.",
+    "feelSummary": "Octagonal, damped",
+    "feelExpand": "Medium-soft stringbed with muted vibration and reduced feedback.",
     "id": "yonex-poly-tour-rev",
     "brand": "yonex"
   },
@@ -1978,8 +1978,8 @@
         "variant": "crisp"
       }
     ],
-    "feelSummary": "Pentagonal, medium-firm",
-    "feelExpand": "Medium-firm pentagonal co-poly with clear feedback, sold at an entry-level price.",
+    "feelSummary": "Pentagonal, medium-soft",
+    "feelExpand": "Medium-soft pentagonal co-poly with clear feedback, sold at an entry-level price.",
     "id": "yonex-poly-tour-drive",
     "brand": "yonex"
   },
@@ -2194,7 +2194,7 @@
         "variant": "round"
       }
     ],
-    "feelSummary": "Low-powered, firm",
+    "feelSummary": "Low-powered, muted",
     "feelExpand": "Durability-oriented round co-poly: low static stiffness, low energy return — absorbs pace rather than adding it.",
     "id": "yonex-poly-tour-tough",
     "brand": "yonex"
@@ -2650,7 +2650,7 @@
         "variant": "round"
       }
     ],
-    "feelSummary": "Octagonal, medium-firm",
+    "feelSummary": "Octagonal, medium stiffness",
     "feelExpand": "Sits between Alpha and Tour Sniper in stiffness; a coating that gives a distinctive, loud contact sound.",
     "id": "grapplesnake-tour-m8",
     "brand": "grapplesnake"
@@ -2872,7 +2872,7 @@
       }
     ],
     "feelSummary": "Vintage, solid, precise",
-    "feelExpand": "Classic co-poly character with firm, traditional feel.",
+    "feelExpand": "Classic co-poly character with a solid, traditional feel.",
     "id": "grapplesnake-paradox-pro",
     "brand": "grapplesnake"
   },

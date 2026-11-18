@@ -80,7 +80,7 @@ schemas/          JSON Schema exported from the Zod schemas (generated: npm run 
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
                    migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs,
-                   derive-stiffness-bands) are not meant to run again
+                   derive-stiffness-bands, stiffness-words) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -151,9 +151,9 @@ JSON Schema (no `.refine`), so the export in `schemas/` stays complete. Then
 `src/core/validate.ts` holds the content and cross-record rules from build_990.py and more:
 neutral text, notes present for every racquet, Crisp chip ⇔ Crisp tag, every feel chip used,
 grip type ⇔ chip, one colour per tag label with CSS for every variant, a filter-header colour
-for every grip brand, bar-backed claims (Mega Tac, Tourna Grip Original), rating words in the
-order of their lists, id and reference integrity, no "Connected" vocabulary, no tag or entity
-anywhere in `data/`. Some of v0.990's rules hold by construction instead: the stiffness band
+for every grip brand, bar-backed claims (Mega Tac, Tourna Grip Original), hybrid side labels
+that name their string's band, rating words in the order of their lists, id and reference
+integrity, no "Connected" vocabulary, no tag or entity anywhere in `data/`. Some of v0.990's rules hold by construction instead: the stiffness band
 comes from the figure and Firm/Soft from the band (`src/core/stiffness.ts`).
 `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in
 source, `index.html`, these two docs or `docs/`. Every rule and each kind of schema check has

@@ -9,7 +9,7 @@
 import { FEEL_CHIPS, tokens } from './chips';
 import { RATING_WORDS, type Rating, type RatingAxis } from './ratings';
 import { CopySchema, TennisDbSchema } from './schema';
-import { feelTokens } from './stiffness';
+import { feelTokens, stiffnessBand } from './stiffness';
 import type { Copy, Grip, Hybrid, Pairing, StringRec, TennisDb } from './types';
 import { GRIP_TYPES } from './types';
 
@@ -379,6 +379,13 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
     for (const side of [h.mains, h.crosses]) {
       if (side.stringId !== null && !singleStringIds.has(side.stringId))
         fail('hybrid-string-refs', h.id, `unknown stringId "${side.stringId}"`);
+      else if (side.stringId !== null) {
+        // Since v1.2 a side's label names its string's band ("Hexagonal · Very Firm").
+        const linked = db.strings.find((s) => s.id === side.stringId)!;
+        const band = stiffnessBand(linked.stiffness);
+        if (side.shapeFeelLabel.split(' · ')[1] !== band)
+          fail('hybrid-side-band', h.id, `"${side.shapeFeelLabel}": ${linked.name} is ${band}`);
+      }
     }
   }
   for (const p of gutPairings) {

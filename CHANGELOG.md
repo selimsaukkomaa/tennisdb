@@ -6,6 +6,160 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.2 — Stiffness words in the notes
+
+**Date:** 2026-11-18
+**Base:** v1.1 (stiffness bands by rule)
+**Status:** content release. Phase 2 step 3, second release
+(`docs/phase-2-data-model.md`, D2): the texts that still used a stiffness word
+v1.1's bands no longer support, and the hybrids' side labels. Approved by the
+owner on 2026-11-18 after a sample of five. Each edit changes only the
+stiffness words; the rest of every text is verbatim. `TENNIS_DB.version` stays
+`0.990`.
+
+---
+
+## Scope
+
+v1.1 counted 51 texts in 17 moved rows that use their old band word. Read one
+by one, most stay true and are unchanged:
+
+- "firm" on a string now Very Firm or Med-Firm, "soft" on one now Very Soft or
+  Med-Soft: still the right side and still accurate;
+- descriptions of the strung bed in a given frame ("the extra crosses firm up
+  the 0.90 stiffness into a medium bed");
+- relative claims backed by the figures ("softer and more elastic than Tour")
+  and quotes (Yonex's "comfortably firm").
+
+What changed: **23 texts in 11 strings**, where a word named the string's own
+band and is now wrong ("medium-firm" on a string now Medium or Med-Soft), or a
+firm-side word sat on one of the 8 strings v1.1 moved to Soft; and **14 hybrid
+side labels**, whose stiffness word now names the band of the string they link
+to.
+
+## Texts (23, in 24 edits)
+
+| String | Text | Was | Now |
+|---|---|---|---|
+| Poly Tour Strike | feel text | with a firm, penetrating response | with a penetrating response |
+| Poly Tour Strike | note, Regna 100 | 0.92 kg/mm: firm, penetrating | 0.92 kg/mm: penetrating |
+| Poly Tour Strike | note, Regna 100 | Full bed in the 64 RA frame is firm and clear without being sharp | Full bed in the 64 RA frame: medium stiffness, clear without being sharp |
+| Poly Tour Strike | note, Pro Tour 630 | plays mid-firm and stable | plays medium and stable |
+| Poly Tour Rev | feel summary | Firm but dampened | Octagonal, damped |
+| Poly Tour Rev | feel text | Stiff stringbed | Medium-soft stringbed |
+| Sync | note, Pro Tour 630 | softening the string's firmness | softening the string's stiffness |
+| Tour M8 | feel summary | Octagonal, medium-firm | Octagonal, medium stiffness |
+| Tour M8 | note, Regna 100 | frame: medium-firm, good pocketing | frame: medium stiffness, good pocketing |
+| Tour M8 | note, Percept 100D | Medium-firm stiffness through the extra crosses | Medium stiffness through the extra crosses |
+| Paradox Pro | feel text | with firm, traditional feel | with a solid, traditional feel |
+| Paradox Pro | note, Regna 100 | frame: medium-firm, low launch | frame: medium stiffness, low launch |
+| Paradox Pro | note, Pro Tour 630 | softens the metal-infused firmness | softens the metal-infused string |
+| ALU Power Feel | note, Pro Tour 630 | Medium-firm bed in the 58 RA frame | Medium bed in the 58 RA frame |
+| 4G Soft | note, Regna 100 | frame: medium-firm, more dwell | frame: medium stiffness, more dwell |
+| 4G Soft | note, Percept 100D | Medium-firm round poly | Medium-stiffness round poly |
+| Big Hitter Silver Rough | note, Regna 100 | frame: medium-firm, more dwell | frame: medium stiffness, more dwell |
+| Poly Tour Drive | feel summary | Pentagonal, medium-firm | Pentagonal, medium-soft |
+| Poly Tour Drive | feel text | Medium-firm pentagonal co-poly | Medium-soft pentagonal co-poly |
+| Poly Tour Drive | note, Regna 100 | moderate pocketing, medium-firm feedback that stays clear | moderate pocketing, feedback that stays clear |
+| Poly Tour Drive | note, Percept 100D | the string's medium stiffness | the string's medium-soft stiffness |
+| Poly Tour Drive | note, Pro Tour 630 | Shaped, medium-firm and inexpensive | Shaped, medium-soft and inexpensive |
+| Poly Tour Tough | feel summary | Low-powered, firm | Low-powered, muted |
+| Game Changer | note, Regna 100 | medium stiffness, more launch | medium-soft stiffness, more launch |
+
+## Hybrid side labels (14)
+
+| Hybrid | Side | Was | Now |
+|---|---|---|---|
+| K-Pop | mains (Wasabi) | Square · Firm | Square · Medium |
+| K-Pop Spin | mains (O-Toro Spin) | Pentagonal · Med | Pentagonal · Medium |
+| K-Pop Spin | crosses (O-Toro) | Hexagonal · Med-Soft | Hexagonal · Medium |
+| Dreddy | mains (O-Toro Tour) | Hexagonal · Firm | Hexagonal · Very Firm |
+| Dreddy | crosses (O-Toro Snap) | Round · Soft | Round · Medium |
+| Stevie | mains (O-Toro Tour) | Hexagonal · Firm | Hexagonal · Very Firm |
+| 101 | mains (O-Toro) | Hexagonal · Med-Soft | Hexagonal · Medium |
+| 101 | crosses (O-Toro Snap) | Round · Soft | Round · Medium |
+| O-Snap | mains (O-Toro) | Hexagonal · Med-Soft | Hexagonal · Medium |
+| Wasabi Pro | mains (Wasabi) | Square · Firm | Square · Medium |
+| What The Hybrid | mains (Wasabi) | Square · Firm | Square · Medium |
+| What The Hybrid | crosses (Toro Toro) | Hexagonal · Med-Soft | Hexagonal · Medium |
+| Snapaholic | mains (Snapper) | Octagonal · Firm | Octagonal · Med-Soft |
+| Cole | mains (O-Toro Tour 1.23 Mint) | Hexagonal · Firm | Hexagonal · Very Firm |
+
+Wasabi Pro's crosses (Wasabi X) has no record and keeps "Round · Med-Soft".
+The new rule `hybrid-side-band` keeps every linked label's word equal to its
+string's band, so a future change to a figure flags the labels it affects.
+
+`scripts/stiffness-words.ts` (one-off) holds the edits and ran on a sample
+batch first (the five the owner saw). Before writing, it asserts that each
+edit's text occurs exactly once where it is listed, 23 texts in 11 strings, 14
+labels, and that every linked label then names its string's band.
+
+## Declared differences from v0.990 (added in v1.2)
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| The 23 texts and 14 labels above | yes | G: `V0990_TEXT_EDITS` applies the same edits (`STIFFNESS_WORD_EDITS`) to legacy's data, each text found exactly once, and swaps the old text for the new in the cells already on the page (a feel text and a side label in each racquet's row, a note in its racquet's row). Compare reads the data |
+
+`tests/data/legacy-roundtrip.test.ts` applies the same edits to the v0.990
+blob, after v1.1's rule.
+
+---
+
+## Data corrections
+
+Two feel summaries were already at odds with their band in v1.0, before v1.1's
+rule:
+
+- **Poly Tour Drive:** "Pentagonal, medium-firm" on a Medium string with the
+  Soft chip; now "Pentagonal, medium-soft" (Med-Soft since v1.1). Its feel
+  text and three notes said "medium-firm" too.
+- **Poly Tour Tough:** "Low-powered, firm" on a Med-Soft string with the Soft
+  chip; now "Low-powered, muted", the word its Regna note uses ("muted rather
+  than soft").
+
+No note carries a parenthetical for these: the owner's call for this pass is
+that the changelog lists each change, before and after.
+
+## Flags left open
+
+Unchanged since v0.989 (listed under v0.991), plus one stated here: Poly Tour
+Rev's Regna note says "Firmer than Pro", which the figures contradict (Rev
+0.85–0.95, Pro 1.05). It reports feel, and it is the same conflict Poly Tour
+Pro's note already flags ("flagged, not resolved"); left as written.
+
+## Verification
+
+`npm run check` passes: 341 Vitest tests (339 in v1.1), 60 Playwright tests.
+
+- **New tests, 2:** `hybrid-side-band` fires on a side label naming the wrong
+  band, and on a figure change that moves a linked string's band.
+- **Against v0.990:** with v1.1's rule and these edits applied to the blob, the
+  data equals v0.990's value for value and serialises to the same length.
+- **Parity:** all 15 pixel views and 25 DOM scenarios pass. Without patch G,
+  25 DOM scenarios and the desktop "filters open, Hex active" view fail.
+
+## File size
+
+| | v1.1 | v1.2 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 454,826 | 454,870 | +0.0 KB |
+| gzip | 103,314 | 103,312 | 0.0 KB |
+
+## Still open
+
+Unchanged from v1.1, except:
+
+- **Closed:** the texts that use an old band word, and the hybrid side labels.
+- The wording these edits left alone is unchanged, including the ranking-style
+  phrases already listed (Strike's "Best tension maintenance in the Yonex
+  lineup").
+
+Next in Phase 2 step 3: the bar scale and the footers' new wording (D3), the
+wording to the owner first; then one colour per grip tag label (D8), with
+screenshots first.
+
+---
+
 # v1.1 — Stiffness bands by rule
 
 **Date:** 2026-11-17
