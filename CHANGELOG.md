@@ -6,6 +6,204 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.3 — One stiffness scale
+
+**Date:** 2026-11-18
+**Base:** v1.2 (stiffness words in the notes)
+**Status:** visible release. Phase 2 step 3, third release
+(`docs/phase-2-data-model.md`, D3): every stiffness bar is drawn on one scale
+for every brand, derived, no longer stored, and the brand footers say so. The
+owner approved the scale on 2026-11-04 and the preview, the footer wording (A)
+and hybrids at their band's midpoint on 2026-11-18. No note content changed;
+`TENNIS_DB.version` stays `0.990`.
+
+---
+
+## The scale
+
+- **0.55 kg/mm is drawn at 10% and 1.15 kg/mm at 100%**, linear, rounded to a
+  whole percent (a half up), never below 4%: Tour Mako (0.45) sits at 4%.
+  A range is drawn at its midpoint.
+- **Without a figure** a bar sits at its band's midpoint, an estimate: Very Soft
+  0.65, Soft 0.78, Med-Soft 0.88, Medium 0.95, Med-Firm 1.01, Firm 1.07, Very
+  Firm 1.12. That covers the 10 strings without a figure and **all 10 hybrids**,
+  so a hybrid's bar matches its label and the strings beside it. The
+  differences set by hand within a band are gone: Stevie (68), Wasabi Pro (65)
+  and K-Pop (75), all Med-Firm, are all at 79.
+- `stiffnessWidth()` in `src/core/stiffness.ts` derives every bar; the data
+  stores no width. Sorting by stiffness follows the scale.
+
+Before, bars were set by hand within each brand: 1.05 kg/mm was drawn at 78,
+82, 88 and 92 depending on the brand. Now it is 85 everywhere.
+
+**68 of the 72 string bars and all 10 hybrid bars change.** Unchanged: ALU
+Power Soft, Element, M2 Pro and Confidential.
+
+| String | Brand | Stiffness | Was | Now |
+|---|---|---|---:|---:|
+| O-Toro Tour | Toroline | Very Firm · 1.10 | 88 | 93 |
+| Caviar | Toroline | Med-Firm · 1.00 | 72 | 78 |
+| Vamos | Toroline | Medium (midpoint) | 62 | 70 |
+| Cash | Toroline | Med-Firm (midpoint) | 74 | 79 |
+| A5 | Toroline | Med-Soft · 0.90 | 60 | 63 |
+| A5 Infrared | Toroline | Med-Soft (midpoint) | 45 | 60 |
+| O-Toro | Toroline | Medium · 0.95 | 58 | 70 |
+| O-Toro Octa | Toroline | Very Firm · ~1.10 | 88 | 93 |
+| O-Toro Spin | Toroline | Medium · ~0.95 | 58 | 70 |
+| O-Toro Snap | Toroline | Medium · ~0.95 | 60 | 70 |
+| Wasabi | Toroline | Medium · 0.95–1.00 | 65 | 74 |
+| Toro Toro | Toroline | Medium · 0.95 | 58 | 70 |
+| Enso Pro (Carbon) | Toroline | Med-Soft · 0.90 | 50 | 63 |
+| Snapper | Toroline | Med-Soft · 0.85 | 42 | 55 |
+| Super Toro | Toroline | Med-Soft · 0.90 | 50 | 63 |
+| Truffle X | Toroline | Very Soft (midpoint) | 15 | 25 |
+| O-Toro Snap Tour Flex | Toroline | Med-Firm (midpoint) | 72 | 79 |
+| Tour Bite | Solinco | Very Firm · 1.12 | 95 | 96 |
+| Confidential | Solinco | Med-Firm · 1.00 | 78 | 78 |
+| Confidential Soft | Solinco | Medium (midpoint) | 58 | 70 |
+| Hyper-G | Solinco | Very Firm · 1.10 | 88 | 93 |
+| Mach-10 | Solinco | Med-Soft · 0.85 | 50 | 55 |
+| Tour Bite Soft | Solinco | Med-Soft · 0.85 | 50 | 55 |
+| Hyper-G Soft | Solinco | Medium · 0.95 | 62 | 70 |
+| Revolution | Solinco | Med-Firm · ~1.00 | 72 | 78 |
+| TB Diamond Rough | Solinco | Medium · ~0.95 | 65 | 70 |
+| Hyper-G Round | Solinco | Medium · ~0.95 | 62 | 70 |
+| Barb Wire | Solinco | Medium · ~0.95 | 60 | 70 |
+| Outlast | Solinco | Med-Soft · ~0.90 | 55 | 63 |
+| Vanquish (Multi) | Solinco | Soft (midpoint) | 30 | 45 |
+| Poly Tour Spin | Yonex | Firm · 1.08 | 95 | 90 |
+| Poly Tour Strike | Yonex | Medium · 0.92 | 72 | 66 |
+| Poly Tour Pro | Yonex | Firm · 1.05 | 82 | 85 |
+| Poly Tour Rev | Yonex | Med-Soft · 0.85–0.95 | 68 | 63 |
+| Poly Tour Drive | Yonex | Med-Soft · ~0.90 | 65 | 63 |
+| Poly Tour Force | Yonex | Med-Firm (midpoint) | 62 | 79 |
+| Poly Tour Fire | Yonex | Soft · 0.80 | 52 | 48 |
+| Poly Tour Air | Yonex | Soft · 0.72 | 40 | 36 |
+| Poly Tour Tough | Yonex | Soft · 0.77 | 48 | 43 |
+| Tour Super 850 (Multi) | Yonex | Soft (midpoint) | 28 | 45 |
+| Vivo | ReString | Firm · 1.05 | 88 | 85 |
+| Sync | ReString | Med-Soft · 0.85–0.95 | 68 | 63 |
+| Zero | ReString | Firm · 1.05–1.10 | 90 | 89 |
+| SLAP (Ltd. Edition) | ReString | Medium · ~0.95 | 65 | 70 |
+| Tour Sniper | Grapplesnake | Firm · 1.05 | 92 | 85 |
+| Soldier | Grapplesnake | Med-Firm · ~1.00 | 85 | 78 |
+| Tour M8 | Grapplesnake | Medium · 0.90–0.95 | 72 | 66 |
+| Alpha | Grapplesnake | Med-Soft · 0.90 | 65 | 63 |
+| Aspera Triplum | Grapplesnake | Med-Soft · ~0.85 | 58 | 55 |
+| Game Changer | Grapplesnake | Med-Soft · ~0.90 | 65 | 63 |
+| Paradox Pro | Grapplesnake | Medium · ~0.95 | 72 | 70 |
+| Tour Mako | Grapplesnake | Very Soft · 0.45 | 25 | 4 |
+| Tour Mako Short Fin | Grapplesnake | Med-Firm (midpoint) | 68 | 79 |
+| Irukandji | Grapplesnake | Med-Soft · ~0.85 | 58 | 55 |
+| ALU Power | Luxilon | Firm · 1.05 | 78 | 85 |
+| ALU Power Rough | Luxilon | Firm · 1.05 | 78 | 85 |
+| ALU Power Soft | Luxilon | Med-Soft · 0.85 | 55 | 55 |
+| ALU Power Spin | Luxilon | Med-Firm · 1.00 | 72 | 78 |
+| ALU Power Feel | Luxilon | Medium · 0.95 | 65 | 70 |
+| 4G | Luxilon | Very Firm · 1.10 | 84 | 93 |
+| 4G Rough | Luxilon | Very Firm · 1.10 | 84 | 93 |
+| 4G Soft | Luxilon | Medium · 0.95 | 65 | 70 |
+| Element | Luxilon | Med-Soft · 0.85 | 55 | 55 |
+| Adrenaline | Luxilon | Med-Firm · 1.00 | 72 | 78 |
+| M2 Pro | Luxilon | Med-Soft · 0.85 | 55 | 55 |
+| Eco Power | Luxilon | Med-Firm · 1.00 | 72 | 78 |
+| Big Hitter Black 7 | Tourna | Med-Firm · 1.00 | 72 | 78 |
+| Big Hitter Blue Rough | Tourna | Firm · 1.05 | 78 | 85 |
+| Big Hitter Silver Rough | Tourna | Medium · 0.92 | 62 | 66 |
+| Pro 16 | Tourna | Med-Firm · 0.98 | 70 | 75 |
+| Quasi-Gut Armor | Tourna | Very Soft · 0.65 | 38 | 25 |
+| Pro Tour | Tourna | Very Soft · 0.55 | 30 | 10 |
+| K-Pop | hybrid | Med-Firm (midpoint) | 75 | 79 |
+| K-Pop Spin | hybrid | Medium (midpoint) | 58 | 70 |
+| Dreddy | hybrid | Med-Firm (midpoint) | 70 | 79 |
+| Stevie | hybrid | Med-Firm (midpoint) | 68 | 79 |
+| 101 | hybrid | Med-Soft (midpoint) | 48 | 60 |
+| O-Snap | hybrid | Medium (midpoint) | 55 | 70 |
+| Wasabi Pro | hybrid | Med-Firm (midpoint) | 65 | 79 |
+| What The Hybrid | hybrid | Medium (midpoint) | 60 | 70 |
+| Snapaholic | hybrid | Med-Firm (midpoint) | 68 | 79 |
+| Cole | hybrid | Med-Firm (midpoint) | 70 | 79 |
+
+Six of these are one point wider than the preview the owner saw (A5 Infrared,
+Poly Tour Rev, Poly Tour Air, Sync, Pro 16, 101): their exact value ends in a
+half, which the preview's floating-point arithmetic rounded down and the
+release rounds up.
+
+## Footers
+
+In each of the 7 brand footers (5 brands, 2 with a Pro Tour 630 variant):
+
+- **Was:** Bars are relative within the Toroline lineup.
+- **Now:** Stiffness bars share one scale across every brand, 0.55 to 1.15
+  kg/mm; a string without a figure is drawn at its band's midpoint. The rating
+  bars are relative within the Toroline lineup.
+
+Luxilon and Tourna have no footer, as before.
+
+`scripts/derive-stiffness-widths.ts` (one-off) ran on a sample batch first.
+Before writing, it asserts that 68 string bars and 10 hybrid bars change and
+which four don't, the ends of the scale (Pro Tour at 10%, Tour Mako at 4%),
+Poly Tour Force at Med-Firm's midpoint, 1.05 kg/mm at 85% in four brands, and
+that each of the 7 footers holds its sentence exactly once.
+
+**Validation.** The schema stores no stiffness width for strings or hybrids.
+
+## Declared differences from v0.990 (added in v1.3)
+
+| Difference | Visible? | Legacy patch |
+|---|---|---|
+| 78 stiffness bars on one scale | yes | H: `V0990_STIFFNESS_SCALE` sets legacy's widths from its labels after F (it throws unless exactly 78 change); the 234 bars on the page (78 × 3 racquets) are redrawn. Compare and sorting read the patched data and bars |
+| The footers' sentence about bars | yes | H: the old sentence is swapped for the new in the 15 footers on the page (5 brands × 3 racquets) |
+
+`tests/data/legacy-roundtrip.test.ts` applies the scale to the v0.990 blob
+after v1.1's rule, and checks every footer against v0.990 with the declared
+sentence swapped back.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v1.2.
+
+## Verification
+
+`npm run check` passes: 348 Vitest tests (341 in v1.2), 60 Playwright tests.
+
+- **New tests, 7:** five in `tests/unit/stiffness.test.ts` (the scale's
+  points, a half rounding up, the 4% floor, 1.05 kg/mm at one width in every
+  brand, band midpoints for strings and hybrids); two shapes the schema
+  rejects (a stored width on a string and on a hybrid).
+- **Against v0.990:** with v1.1's rule, v1.2's edits and this scale applied to
+  the blob, the data equals v0.990's value for value and serialises to the
+  same length; the footers equal v0.990's but for the declared sentence.
+- **Parity:** all 15 pixel views and 25 DOM scenarios pass, sorting by
+  stiffness included. Without patch H, 25 DOM scenarios and 10 pixel views
+  fail.
+
+## File size
+
+| | v1.2 | v1.3 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 454,870 | 455,235 | +0.4 KB (+0.1%) |
+| gzip | 103,312 | 103,327 | 0.0 KB |
+
+## Still open
+
+Unchanged from v1.2, except:
+
+- **Closed:** the bar scale and the footers' wording.
+- The footers still say "Stiffness (kg/mm) from Racketpedia lab testing";
+  every figure is marked `source: "legacy"` until the re-check (D1, step 4).
+
+Next in Phase 2 step 3: one colour per grip tag label (D8), with screenshots
+first. That is the last of step 3.
+
+---
+
 # v1.2 — Stiffness words in the notes
 
 **Date:** 2026-11-18

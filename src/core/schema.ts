@@ -84,20 +84,21 @@ export const StiffnessFigureSchema = z
 
 /**
  * A string's stiffness. With a lab figure the band is derived from it (stiffness.ts: bandFor)
- * and not stored; without one the band is stored, an estimate.
+ * and not stored; without one the band is stored, an estimate. The bar is derived from either
+ * (stiffness.ts: stiffnessWidth), on one scale for every brand since v1.3.
  */
 export const StiffnessSchema = z
   .union([
-    z.strictObject({ figure: StiffnessFigureSchema, width: BarWidth }),
-    z.strictObject({ band: Band, figure: z.null(), width: BarWidth }),
+    z.strictObject({ figure: StiffnessFigureSchema }),
+    z.strictObject({ band: Band, figure: z.null() }),
   ])
   .meta({
     id: 'Stiffness',
     description: 'A figure (the band is derived from it), or no figure and an estimated band.',
   });
 
-/** A hybrid's stiffness is a judgement of the bed: a band, never a figure. */
-const HybridStiffnessSchema = z.strictObject({ band: Band, width: BarWidth });
+/** A hybrid's stiffness is a judgement of the bed: a band, never a figure; its bar sits at the band's midpoint. */
+const HybridStiffnessSchema = z.strictObject({ band: Band });
 
 export const FeelTagSchema = z
   .strictObject({ label: Text, variant: z.enum(TAG_VARIANT_NAMES) })

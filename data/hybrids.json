@@ -16,8 +16,7 @@
       "stringId": "toroline-caviar"
     },
     "stiffness": {
-      "band": "Med-Firm",
-      "width": 75
+      "band": "Med-Firm"
     },
     "power": {
       "score": 35,
@@ -59,8 +58,7 @@
       "stringId": "toroline-o-toro"
     },
     "stiffness": {
-      "band": "Medium",
-      "width": 58
+      "band": "Medium"
     },
     "power": {
       "score": 52,
@@ -102,8 +100,7 @@
       "stringId": "toroline-o-toro-snap"
     },
     "stiffness": {
-      "band": "Med-Firm",
-      "width": 70
+      "band": "Med-Firm"
     },
     "power": {
       "score": 52,
@@ -145,8 +142,7 @@
       "stringId": "toroline-truffle-x"
     },
     "stiffness": {
-      "band": "Med-Firm",
-      "width": 68
+      "band": "Med-Firm"
     },
     "power": {
       "score": 62,
@@ -188,8 +184,7 @@
       "stringId": "toroline-o-toro-snap"
     },
     "stiffness": {
-      "band": "Med-Soft",
-      "width": 48
+      "band": "Med-Soft"
     },
     "power": {
       "score": 60,
@@ -231,8 +226,7 @@
       "stringId": "toroline-o-toro-snap-tour-flex"
     },
     "stiffness": {
-      "band": "Medium",
-      "width": 55
+      "band": "Medium"
     },
     "power": {
       "score": 55,
@@ -274,8 +268,7 @@
       "stringId": null
     },
     "stiffness": {
-      "band": "Med-Firm",
-      "width": 65
+      "band": "Med-Firm"
     },
     "power": {
       "score": 48,
@@ -317,8 +310,7 @@
       "stringId": "toroline-toro-toro"
     },
     "stiffness": {
-      "band": "Medium",
-      "width": 60
+      "band": "Medium"
     },
     "power": {
       "score": 52,
@@ -360,8 +352,7 @@
       "stringId": "toroline-o-toro-snap-tour-flex"
     },
     "stiffness": {
-      "band": "Med-Firm",
-      "width": 68
+      "band": "Med-Firm"
     },
     "power": {
       "score": 40,
@@ -403,8 +394,7 @@
       "stringId": "toroline-o-toro"
     },
     "stiffness": {
-      "band": "Med-Firm",
-      "width": 70
+      "band": "Med-Firm"
     },
     "power": {
       "score": 50,

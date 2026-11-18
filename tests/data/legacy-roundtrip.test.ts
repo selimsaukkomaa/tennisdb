@@ -9,7 +9,8 @@
 // and 8 chips. The blob is compared with that declared change applied to it, by the same code
 // that patches the legacy page in the parity suite (V0990_STIFFNESS_RULE), so everything else is
 // still checked value for value. v1.2's edits to the stiffness words in 23 texts and 14 hybrid
-// side labels are applied the same way (V0990_TEXT_EDITS, patch G).
+// side labels are applied the same way (V0990_TEXT_EDITS, patch G), and v1.3's stiffness scale
+// (V0990_STIFFNESS_SCALE, patch H), which also changes one sentence in the brand footers.
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
@@ -21,7 +22,12 @@ import type { GutPairing, Hybrid, TennisDb } from '../../src/core/types';
 import { feelTokens, stiffnessBar } from '../../src/core/stiffness';
 import { specHtml } from '../../src/ui/tables';
 import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
-import { V0990_STIFFNESS_RULE, V0990_TEXT_EDITS } from '../visual/legacy-fixes';
+import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
+import {
+  V0990_STIFFNESS_RULE,
+  V0990_STIFFNESS_SCALE,
+  V0990_TEXT_EDITS,
+} from '../visual/legacy-fixes';
 
 const legacyHtml = readFileSync(
   fileURLToPath(new URL('../../legacy/tennis_equipmentdb_v0_990.html', import.meta.url)),
@@ -113,15 +119,16 @@ function toV0990(db: TennisDb): unknown {
 
 /**
  * The v0.990 blob with the declared changes applied: v1.1's stiffness rule (33 labels, 8 chips)
- * and v1.2's stiffness words (23 texts, 14 hybrid side labels).
+ * v1.2's stiffness words (23 texts, 14 hybrid side labels) and v1.3's scale (78 bars).
  */
 const applyStiffnessRule = new Function(`return ${V0990_STIFFNESS_RULE}`)() as (db: unknown) => unknown;
 const applyTextEdits = new Function(`return ${V0990_TEXT_EDITS}`)() as (
   db: unknown,
   edits: typeof STIFFNESS_WORD_EDITS,
 ) => unknown[];
+const applyStiffnessScale = new Function(`return ${V0990_STIFFNESS_SCALE}`)() as (db: unknown) => unknown;
 const expected = (): unknown => {
-  const db = applyStiffnessRule(JSON.parse(legacyJson));
+  const db = applyStiffnessScale(applyStiffnessRule(JSON.parse(legacyJson)));
   expect(applyTextEdits(db, STIFFNESS_WORD_EDITS)).toHaveLength(37);
   return db;
 };
@@ -143,10 +150,15 @@ describe('data/ against legacy v0.990', () => {
 });
 
 describe('content/copy.json against legacy v0.990', () => {
-  const footers = Object.values(copy.brandFooters).flatMap((f) => [
-    f.default,
-    ...Object.values(f.byRacquet ?? {}),
-  ]);
+  // v1.3 changed one sentence in every footer; the rest must still be v0.990's, verbatim.
+  const db = assembleDb();
+  const footers = Object.entries(copy.brandFooters).flatMap(([brand, f]) => {
+    const name = db.brandsStrings[brand]!.name;
+    return [f.default, ...Object.values(f.byRacquet ?? {})].map((text) => {
+      expect(text).toContain(NEW_BAR_SENTENCE(name));
+      return text.replace(NEW_BAR_SENTENCE(name), () => OLD_BAR_SENTENCE(name));
+    });
+  });
   const cards = Object.values(copy.hybridCards).flatMap((c) => [c.heading, c.intro]);
   const legendText = [...copy.legends.strings, ...copy.legends.grips].flatMap((l) => [
     l.swatch,

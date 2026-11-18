@@ -24,8 +24,14 @@
 //      edits to legacy's data, each text found exactly once; the patch then swaps the old text
 //      for the new in the cells already on the page: a feel text and a side label in each
 //      racquet's row, a note in its racquet's row.
+//   H. v1.3: stiffness bars on one scale for every brand (0.55 kg/mm at 10%, 1.15 at 100%, at
+//      least 4%; without a figure, and for hybrids, at the band's midpoint), 78 bars, and the
+//      footers' sentence about bars (OLD_BAR_SENTENCE -> NEW_BAR_SENTENCE in
+//      scripts/derive-stiffness-widths.ts), 15 footers on the page. V0990_STIFFNESS_SCALE works
+//      from legacy's labels after F; the patch redraws the bars already on the page.
 // The CSS repeats the rules in src/styles/additions.css; a change there must change it here.
 import type { Page } from '@playwright/test';
+import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
 import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 
 /**
@@ -84,6 +90,32 @@ export const V0990_TEXT_EDITS = String.raw`((db, edits) => {
   return [...changes.values()];
 })`;
 
+/**
+ * v1.3's stiffness scale applied to a v0.990 TENNIS_DB whose labels v1.1's rule already set, in
+ * place, as JavaScript source: patch H runs it on the legacy page and the round-trip test on the
+ * embedded blob. Throws unless exactly 78 bars change (68 strings, 10 hybrids).
+ */
+export const V0990_STIFFNESS_SCALE = String.raw`((db) => {
+  const MIDPOINT = { 'Very Soft': 650, Soft: 780, 'Med-Soft': 880, Medium: 950, 'Med-Firm': 1010, Firm: 1070, 'Very Firm': 1120 };
+  const widthOf = (label) => {
+    const [band, figure] = label.split(' · ');
+    let m = MIDPOINT[band];
+    if (figure) {
+      const n = figure.replace('~', '').split('–').map(Number);
+      m = Math.round((n.length === 2 ? (n[0] + n[1]) / 2 : n[0]) * 1000);
+    }
+    return Math.min(100, Math.max(4, Math.round((200 + 3 * (m - 550)) / 20)));
+  };
+  let changed = 0;
+  for (const r of [...db.strings, ...db.hybrids]) {
+    const w = widthOf(r.stiffness.label);
+    if (w !== r.stiffness.width) changed++;
+    r.stiffness.width = w;
+  }
+  if (changed !== 78) throw new Error('stiffness scale: expected 78 bars to change, got ' + changed);
+  return db;
+})`;
+
 const LEGACY_FIXES_JS = String.raw`(() => {
   // F (first, so every other patch sees the new data)
   (${V0990_STIFFNESS_RULE})(window.TENNIS_DB);
@@ -99,6 +131,36 @@ const LEGACY_FIXES_JS = String.raw`(() => {
     tr.dataset.feel = s.feelAttr;
   }
   if (redrawn !== 99) throw new Error('expected 99 stiffness labels redrawn (33 x 3 racquets), got ' + redrawn);
+
+  // H (the bars follow F's labels)
+  (${V0990_STIFFNESS_SCALE})(window.TENNIS_DB);
+  const rowsById = new Map([...window.TENNIS_DB.strings, ...window.TENNIS_DB.hybrids].map((r) => [r.id, r]));
+  let resized = 0;
+  for (const tr of document.querySelectorAll('tr[data-id]')) {
+    const r = rowsById.get(tr.dataset.id);
+    const fill = r && tr.querySelector('.bar-fill.stiff');
+    if (!fill) continue;
+    const style = 'width:' + r.stiffness.width + '%';
+    if (fill.getAttribute('style') !== style) {
+      fill.setAttribute('style', style);
+      resized++;
+    }
+  }
+  if (resized !== 234) throw new Error('expected 234 stiffness bars redrawn (78 x 3 racquets), got ' + resized);
+  const brandNames = Object.values(window.TENNIS_DB.brandsStrings).map((b) => b.name);
+  const oldSentence = ${OLD_BAR_SENTENCE.toString()};
+  const newSentence = ${NEW_BAR_SENTENCE.toString()};
+  let footers = 0;
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+    for (const name of brandNames) {
+      if (node.nodeValue.includes(oldSentence(name))) {
+        node.nodeValue = node.nodeValue.replace(oldSentence(name), () => newSentence(name));
+        footers++;
+      }
+    }
+  }
+  if (footers !== 15) throw new Error('expected 15 footers (5 brands x 3 racquets), got ' + footers);
 
   // G
   const swapText = (root, from, to) => {

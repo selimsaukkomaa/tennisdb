@@ -137,6 +137,8 @@ describe('the schemas catch a bad shape, and nothing else runs until it is fixed
     ['a stiffness figure written as text', 'strings.toroline-caviar.stiffness', (db) => (loose(str(db, 'toroline-caviar').stiffness.figure!).kgPerMm = '1.00')],
     ['a stored stiffness label (derived since v0.998)', 'strings.toroline-caviar.stiffness', (db) => (loose(str(db, 'toroline-caviar').stiffness).label = 'Med-Firm · 1.00')],
     ['a figure on a hybrid', 'hybrids.toroline-k-pop.stiffness', (db) => (loose(db.hybrids[0]!.stiffness).figure = null)],
+    ['a stored stiffness width (derived since v1.3)', 'strings.toroline-caviar.stiffness', (db) => (loose(str(db, 'toroline-caviar').stiffness).width = 72)],
+    ['a stored hybrid stiffness width (derived since v1.3)', 'hybrids.toroline-k-pop.stiffness', (db) => (loose(db.hybrids[0]!.stiffness).width = 75)],
     ['a retrieval date that is not a month', 'strings.toroline-caviar.stiffness.figure.retrieved', (db) => (str(db, 'toroline-caviar').stiffness.figure!.retrieved = 'last year')],
     ['a grip spec as a string (structured since v1.0)', 'grips.kimony.dry.kimony-tourna.specs.0', (db) => (loose(grip(db, 'Tourna')).specs = ['Dry type', 'Made in USA'])],
     ['a grip spec without its emphasis flag', 'grips.kimony.dry.kimony-tourna.specs.1.emphasis', (db) => delete loose(grip(db, 'Tourna').specs[1]!).emphasis],

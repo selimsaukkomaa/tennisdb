@@ -1,7 +1,7 @@
 // The stiffness rule (docs/phase-2-data-model.md, D2) and the feel tokens derived from it (D8).
 import { describe, expect, test } from 'vitest';
 import { assembleDb } from '../../src/core/db';
-import { bandFor, feelTokens, stiffnessLabel } from '../../src/core/stiffness';
+import { bandFor, feelTokens, stiffnessLabel, stiffnessWidth } from '../../src/core/stiffness';
 
 const db = assembleDb();
 const str = (id: string) => db.strings.find((s) => s.id === id)!;
@@ -29,6 +29,38 @@ describe('bandFor: each band starts at its lower bound', () => {
     expect(bandFor({ min: 0.9, max: 0.95 })).toBe('Medium'); // 0.925
     expect(bandFor({ min: 0.95, max: 1 })).toBe('Medium'); // 0.975
     expect(bandFor({ min: 1.05, max: 1.1 })).toBe('Firm'); // 1.075
+  });
+});
+
+describe('stiffnessWidth: one scale for every brand', () => {
+  test('0.55 kg/mm at 10%, 1.15 at 100%, linear', () => {
+    expect(stiffnessWidth(str('tourna-pro-tour').stiffness)).toBe(10); // 0.55
+    expect(stiffnessWidth(str('solinco-tour-bite').stiffness)).toBe(96); // 1.12
+    expect(stiffnessWidth(str('luxilon-element').stiffness)).toBe(55); // 0.85
+  });
+  test('a half rounds up, in exact arithmetic', () => {
+    expect(stiffnessWidth(str('toroline-caviar').stiffness)).toBe(78); // 1.00 -> 77.5
+    expect(stiffnessWidth(str('yonex-poly-tour-air').stiffness)).toBe(36); // 0.72 -> 35.5
+  });
+  test('no less than 4%', () => {
+    expect(stiffnessWidth(str('grapplesnake-tour-mako').stiffness)).toBe(4); // 0.45
+  });
+  test('the same figure draws the same bar in every brand', () => {
+    const at105 = db.strings.filter((s) => s.stiffness.figure?.kgPerMm === 1.05);
+    expect(at105.map((s) => s.brand).sort()).toEqual([
+      'grapplesnake',
+      'luxilon',
+      'luxilon',
+      'restring',
+      'tourna',
+      'yonex',
+    ]);
+    expect(new Set(at105.map((s) => stiffnessWidth(s.stiffness)))).toEqual(new Set([85]));
+  });
+  test("without a figure, and for a hybrid, at the band's midpoint", () => {
+    expect(stiffnessWidth(str('yonex-poly-tour-force').stiffness)).toBe(79); // Med-Firm, 1.01
+    expect(stiffnessWidth(str('toroline-truffle-x').stiffness)).toBe(25); // Very Soft, 0.65
+    expect(stiffnessWidth(db.hybrids.find((h) => h.id === 'toroline-101')!.stiffness)).toBe(60); // Med-Soft, 0.88
   });
 });
 

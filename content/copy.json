@@ -1,25 +1,25 @@
 {
   "brandFooters": {
     "toroline": {
-      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, and Toroline product descriptions. Bars are relative within the Toroline lineup. All sets come as two half-sets (hybrid-ready).</p>",
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, and Toroline product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Toroline lineup. All sets come as two half-sets (hybrid-ready).</p>",
       "byRacquet": {
-        "headpt630": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, and Toroline product descriptions. Bars are relative within the Toroline lineup. All sets come as two half-sets (hybrid-ready). Tension ranges are 2–3 kg lower than Regna to account for the dense 18×20 pattern.</p>"
+        "headpt630": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, and Toroline product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Toroline lineup. All sets come as two half-sets (hybrid-ready). Tension ranges are 2–3 kg lower than Regna to account for the dense 18×20 pattern.</p>"
       }
     },
     "solinco": {
-      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Evoke Tennis, and Solinco product descriptions. Bars are relative within the Solinco lineup. Gauge range is industry-leading (15L–20 for Tour Bite &amp; Hyper-G).</p>",
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Evoke Tennis, and Solinco product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Solinco lineup. Gauge range is industry-leading (15L–20 for Tour Bite &amp; Hyper-G).</p>",
       "byRacquet": {
-        "headpt630": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Evoke Tennis, and Solinco product descriptions. Bars are relative within the Solinco lineup. Gauge range is industry-leading (15L–20 for Tour Bite &amp; Hyper-G). String 2–3 kg lower than Regna for the dense 18×20.</p>"
+        "headpt630": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Evoke Tennis, and Solinco product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Solinco lineup. Gauge range is industry-leading (15L–20 for Tour Bite &amp; Hyper-G). String 2–3 kg lower than Regna for the dense 18×20.</p>"
       }
     },
     "yonex": {
-      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Tennispro, and Yonex product descriptions. Bars are relative within the Yonex lineup. All Polytour polys are pre-stretched at controlled temperatures for improved tension maintenance.</p>"
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Tennispro, and Yonex product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Yonex lineup. All Polytour polys are pre-stretched at controlled temperatures for improved tension maintenance.</p>"
     },
     "restring": {
-      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TennCom, Tennisnerd, Prostrung, and ReString product descriptions. Bars are relative within the ReString lineup. All strings feature a lubricated coating for enhanced snapback and durability.</p>"
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TennCom, Tennisnerd, Prostrung, and ReString product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the ReString lineup. All strings feature a lubricated coating for enhanced snapback and durability.</p>"
     },
     "grapplesnake": {
-      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing where available. Subjective ratings from TW playtests, Tennisnerd, TennCom, and Grapplesnake product descriptions. Bars are relative within the Grapplesnake lineup. Made in Germany.</p>"
+      "default": "<p>Stiffness (kg/mm) from Racketpedia lab testing where available. Subjective ratings from TW playtests, Tennisnerd, TennCom, and Grapplesnake product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Grapplesnake lineup. Made in Germany.</p>"
     }
   },
   "hybridCards": {

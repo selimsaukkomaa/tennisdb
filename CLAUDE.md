@@ -80,7 +80,8 @@ schemas/          JSON Schema exported from the Zod schemas (generated: npm run 
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
                    migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs,
-                   derive-stiffness-bands, stiffness-words) are not meant to run again
+                   derive-stiffness-bands, stiffness-words, derive-stiffness-widths) are not
+                   meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)

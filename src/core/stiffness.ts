@@ -1,7 +1,7 @@
 // Stiffness: for most strings a lab figure in kg/mm with its provenance, from which the band is
 // derived by fixed thresholds (docs/phase-2-data-model.md, D2). A string without a figure, and
 // every hybrid, stores its band. The label and bar the views show are derived here, and so is
-// the Firm/Soft feel chip (D8). The bar width is still stored until D3 derives it.
+// the Firm/Soft feel chip (D8). The bar is drawn on one scale for every brand (D3).
 import type { Bar, Hybrid, StringRec } from './types';
 
 /** Stiffness bands, softest first. */
@@ -20,12 +20,18 @@ type AnyStiffness = StringRec['stiffness'] | Hybrid['stiffness'];
 type KgPerMm = number | { min: number; max: number };
 
 /**
+ * A figure, or a range's midpoint, in thousandths of a kg/mm: integers, so a midpoint such as
+ * (0.85 + 0.95) / 2 lands exactly on 900 and the thresholds below compare exactly.
+ */
+const thousandths = (k: KgPerMm): number =>
+  Math.round((typeof k === 'number' ? k : (k.min + k.max) / 2) * 1000);
+
+/**
  * D2's rule: the band of a figure, or of a range's midpoint. Each band starts at its lower
  * bound: Soft 0.70, Med-Soft 0.85, Medium 0.92, Med-Firm 0.98, Firm 1.05, Very Firm 1.10.
  */
 export function bandFor(k: KgPerMm): Band {
-  // In thousandths, so a midpoint such as (0.85 + 0.95) / 2 lands exactly on 900.
-  const m = Math.round((typeof k === 'number' ? k : (k.min + k.max) / 2) * 1000);
+  const m = thousandths(k);
   if (m < 700) return 'Very Soft';
   if (m < 850) return 'Soft';
   if (m < 920) return 'Med-Soft';
@@ -56,10 +62,34 @@ export function stiffnessLabel(s: AnyStiffness): string {
   return `${band} · ${figure.approx ? '~' : ''}${text}`;
 }
 
+/** Where a band's bar is drawn without a figure (a string without one, every hybrid): an estimate. */
+export const BAND_MIDPOINTS: Readonly<Record<Band, number>> = {
+  'Very Soft': 0.65,
+  Soft: 0.78,
+  'Med-Soft': 0.88,
+  Medium: 0.95,
+  'Med-Firm': 1.01,
+  Firm: 1.07,
+  'Very Firm': 1.12,
+};
+
+/**
+ * D3's scale, the same for every brand: 0.55 kg/mm is drawn at 10% and 1.15 kg/mm at 100%,
+ * linear, rounded to a whole percent, no less than 4% (Tour Mako, 0.45) and no more than 100%.
+ */
+export function stiffnessWidth(s: AnyStiffness): number {
+  const m =
+    'figure' in s && s.figure
+      ? thousandths(s.figure.kgPerMm)
+      : thousandths(BAND_MIDPOINTS[stiffnessBand(s)]);
+  // 10 + (m - 550) / 600 * 90, kept in integers so a half rounds up exactly (1.00 -> 77.5 -> 78).
+  return Math.min(100, Math.max(4, Math.round((200 + 3 * (m - 550)) / 20)));
+}
+
 /** The stiffness as the labelled bar the tables and compare draw. */
 export const stiffnessBar = (s: AnyStiffness): Bar => ({
   label: stiffnessLabel(s),
-  width: s.width,
+  width: stiffnessWidth(s),
 });
 
 /**

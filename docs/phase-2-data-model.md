@@ -145,6 +145,14 @@ relative within the … lineup" needs new wording, which goes to the owner
 first. Compared before deciding: today, 0.40–1.20, and 0.55–1.15, on the
 Toroline, Yonex and Luxilon tables.
 
+**Done in v1.3**, approved on 2026-11-18 after a preview: footer wording A, and
+hybrids drawn at their band's midpoint like the strings without a figure.
+`stiffnessWidth()` in `src/core/stiffness.ts` derives every bar (rounded in
+exact arithmetic, a half up); no width is stored. 68 of the 72 string bars and
+all 10 hybrid bars changed. Each footer's "Bars are relative within the …
+lineup" now says the stiffness bars share one scale and the rating bars stay
+relative within the lineup.
+
 ### D4. Racquet fields and the head-size unit
 
 Today: `headSize: "100 sq in"`, `pattern: "16×19"`, `ra: 64`. Proposal:
@@ -290,7 +298,7 @@ Each step is its own release, and each stops for the owner's review.
    - stiffness labels and the 8 Firm/Soft chips (D2, D8), *done in v1.1*;
    - the notes that use an old band word, sample of five first (D2), *done in
      v1.2*;
-   - the bar scale and the footers' new wording (D3);
+   - the bar scale and the footers' new wording (D3), *done in v1.3*;
    - one colour per grip tag label, with screenshots first (D8).
 4. **Later, separately:** re-verifying the 62 legacy figures (D1) and unifying
    the rating words (D5).

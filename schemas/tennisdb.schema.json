@@ -299,16 +299,10 @@
           "properties": {
             "figure": {
               "$ref": "#/$defs/StiffnessFigure"
-            },
-            "width": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 100
             }
           },
           "required": [
-            "figure",
-            "width"
+            "figure"
           ],
           "additionalProperties": false
         },
@@ -329,17 +323,11 @@
             },
             "figure": {
               "type": "null"
-            },
-            "width": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 100
             }
           },
           "required": [
             "band",
-            "figure",
-            "width"
+            "figure"
           ],
           "additionalProperties": false
         }
@@ -657,16 +645,10 @@
                 "Firm",
                 "Very Firm"
               ]
-            },
-            "width": {
-              "type": "integer",
-              "minimum": 0,
-              "maximum": 100
             }
           },
           "required": [
-            "band",
-            "width"
+            "band"
           ],
           "additionalProperties": false
         },
