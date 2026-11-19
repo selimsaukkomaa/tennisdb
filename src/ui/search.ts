@@ -12,6 +12,7 @@ import type { BrandId, RacquetId, TennisDb } from '../core/types';
 import { esc, html, raw } from './html';
 import { showBrand, showCategory, showGripBrand, showRacquet } from './nav';
 import { GUT } from './shell';
+import { state } from './state';
 
 const DEBOUNCE_MS = 120;
 const MAX_PER_GROUP = 6;
@@ -23,8 +24,9 @@ let results: SearchItem[] = [];
 let keyNavIndex = -1;
 const byId = (id: string): HTMLElement => document.getElementById(id)!;
 
+/** Rebuilds the index for the racquet on screen, where every result opens (since v1.10). */
 export function rebuildIndex(): SearchItem[] {
-  index = buildSearchIndex(db);
+  index = buildSearchIndex(db, state.racquet);
   return index;
 }
 
@@ -93,7 +95,7 @@ function flash(el: Element | null): void {
 function goToString(id: string, racquet: RacquetId, brand: BrandId): void {
   showCategory('strings');
   showRacquet(racquet);
-  showBrand(racquet, brand);
+  showBrand(brand);
   setTimeout(() => flash(document.querySelector(`#${racquet}-content tr[data-id="${id}"]`)), 50);
 }
 
@@ -107,16 +109,23 @@ function goToGrip(id: string, brand: BrandId): void {
 function goToGut(racquet: RacquetId, id: string): void {
   showCategory('strings');
   showRacquet(racquet);
-  showBrand(racquet, GUT);
+  showBrand(GUT);
   setTimeout(
     () => flash(document.querySelector(`.gut-view[data-racquet="${racquet}"] tr[data-id="${id}"]`)),
     80,
   );
 }
 
+function goToRacquet(racquet: RacquetId): void {
+  showCategory('strings');
+  showRacquet(racquet);
+}
+
 function navigate(item: SearchItem): void {
   const racquet = item.racquet!;
   switch (item.type) {
+    case 'racquet':
+      return goToRacquet(racquet);
     case 'string':
     case 'hybrid':
       return goToString(item.id, racquet, item.brand!);
@@ -201,5 +210,5 @@ export function initSearch(data: TennisDb): void {
   });
 }
 
-/** v0.990's test hook: search against the current index. */
-export const searchNow = (q: string): SearchItem[] => searchIndex(q, index);
+/** v0.990's test hook: search the index for the racquet on screen. */
+export const searchNow = (q: string): SearchItem[] => searchIndex(q, rebuildIndex());

@@ -19,20 +19,24 @@ const gripChip = (group: string, value: string): string =>
 const box = (racquet: string, id: string): string =>
   `#${racquet}-content input[data-compare-id="${id}"]`;
 
-/** The racquet row's button for `to`, in the card of the racquet `from` that is showing. */
-const racquet = (from: string, to: string): string => `#${from}-content [data-nav-racquet="${to}"]`;
+/** Clicks that pick the racquet `to` in a racquet menu: open it, then the option (v1.10). */
+const pick = (menu: 'card' | 'compare', to: string): string[] => [
+  `[data-rpick="${menu}"] [data-rpick-toggle]`,
+  `[data-rpick="${menu}"] [data-rpick-value="${to}"]`,
+];
+const racquet = (to: string): string[] => pick('card', to);
 
 const SCENARIOS: Scenario[] = [
   { name: 'load', steps: [] },
   // navigation and sorting
   {
     name: 'Percept, Yonex tab',
-    steps: [racquet('regna', 'percept'), '#percept-switcher button:nth-child(3)'],
+    steps: [...racquet('percept'), '#strings-switcher button:nth-child(3)'],
   },
   {
     name: 'Pro Tour 630, sort by stiffness twice',
     steps: [
-      racquet('regna', 'headpt630'),
+      ...racquet('headpt630'),
       '#headpt630-content .brand-section.active th[data-col="stiffness"]',
       '#headpt630-content .brand-section.active th[data-col="stiffness"]',
     ],
@@ -40,6 +44,24 @@ const SCENARIOS: Scenario[] = [
   {
     name: 'Grips, Tourna, sort by tackiness',
     steps: ['#btn-cat-grips', '#btn-grip-tourna', '#grip-tourna-section th[data-col="tackiness"]'],
+  },
+  // the racket menu (v1.10)
+  {
+    // Opens on the racket on screen; Up moves to the Percept, Enter picks it.
+    name: 'racket menu by keyboard',
+    steps: ['[data-rpick="card"] [data-rpick-toggle]', { key: 'ArrowUp' }, { key: 'Enter' }],
+  },
+  {
+    name: 'racket menu open',
+    steps: ['[data-rpick="card"] [data-rpick-toggle]'],
+  },
+  {
+    name: 'strings carry over on a racket switch',
+    steps: ['#btn-yonex', ...racquet('headpt630')],
+  },
+  {
+    name: 'remembered racket and strings after a reload',
+    steps: [...racquet('percept'), '#btn-solinco', { reload: true }],
   },
   // filters
   {
@@ -68,9 +90,9 @@ const SCENARIOS: Scenario[] = [
     steps: [
       '#btn-filters',
       chip('shape', 'hexagonal'),
-      racquet('regna', 'percept'),
+      ...racquet('percept'),
       '#filter-clear',
-      racquet('percept', 'regna'),
+      ...racquet('regna'),
     ],
   },
   {
@@ -83,13 +105,13 @@ const SCENARIOS: Scenario[] = [
   },
   // compare
   {
-    name: 'compare 2 strings + hybrid, Percept tab',
+    name: 'compare 2 strings + hybrid, Percept',
     steps: [
       box('regna', 'toroline-o-toro-tour'),
       box('regna', 'toroline-caviar'),
       box('regna', 'toroline-k-pop'),
       '#compare-open',
-      '.cmp-racquet-tab[data-cmp-racquet="percept"]',
+      ...pick('compare', 'percept'),
     ],
   },
   {
@@ -110,19 +132,14 @@ const SCENARIOS: Scenario[] = [
   },
   // gut
   {
+    // Since v1.10 the strings choice carries over, so one click shows gut on every racquet.
     name: 'Natural gut on all racquets',
-    steps: [
-      '#regna-btn-gut',
-      racquet('regna', 'percept'),
-      '#percept-btn-gut',
-      racquet('percept', 'headpt630'),
-      '#headpt630-btn-gut',
-    ],
+    steps: ['#btn-gut', ...racquet('percept'), ...racquet('headpt630')],
   },
   {
     // Filters span every brand, so the gut view steps aside; clearing them brings it back.
     name: 'Natural gut, filter, clear',
-    steps: ['#regna-btn-gut', '#btn-filters', chip('shape', 'hexagonal'), '#filter-clear'],
+    steps: ['#btn-gut', '#btn-filters', chip('shape', 'hexagonal'), '#filter-clear'],
   },
   // search and palette
   {
@@ -139,12 +156,19 @@ const SCENARIOS: Scenario[] = [
     steps: ['#btn-palette', { type: ['#search-input', 'k-pop spin'] }, { key: 'Enter' }],
   },
   {
+    // The Rackets group comes first (v1.10); Enter switches to the racket.
+    name: 'search Enter switches to a racket',
+    steps: ['#btn-palette', { type: ['#search-input', 'pro tour'] }, { key: 'Enter' }],
+  },
+  {
     name: 'search jumps to a grip',
     steps: ['#btn-palette', { type: ['#search-input', 'mega tac'] }, '.search-result'],
   },
   {
+    // Since v1.10 search lists the gut pairings of the racquet on screen.
     name: 'search jumps to a gut pairing',
     steps: [
+      ...racquet('percept'),
       '#btn-palette',
       { type: ['#search-input', 'vs touch'] },
       '.search-result[data-result-key^="guthybrid:gh-percept"]',

@@ -1,21 +1,62 @@
 import { describe, expect, test } from 'vitest';
 import { assembleDb } from '../../src/core/db';
-import { buildSearchIndex, resultKey, searchIndex, type SearchItem } from '../../src/core/search';
+import { perRacquet } from '../../src/core/pairings';
+import {
+  RACQUET_ICON,
+  SEARCH_GROUPS,
+  buildSearchIndex,
+  resultKey,
+  searchIndex,
+  type SearchItem,
+} from '../../src/core/search';
 
 const db = assembleDb();
-const index = buildSearchIndex(db);
+const index = buildSearchIndex(db, 'regna');
+const percept = buildSearchIndex(db, 'percept');
 
 describe('search index', () => {
-  test('one entry per string and hybrid per racquet, plus grips and gut pairings', () => {
+  test('for the racquet on screen: each string and hybrid once, its gut pairings, every racquet', () => {
     const count = (type: SearchItem['type']): number => index.filter((i) => i.type === type).length;
-    expect(count('string')).toBe(72 * 3);
-    expect(count('hybrid')).toBe(10 * 3);
+    expect(count('racquet')).toBe(3);
+    expect(count('string')).toBe(72);
+    expect(count('hybrid')).toBe(10);
     expect(count('grip')).toBe(35);
-    expect(count('guthybrid')).toBe(21);
+    expect(count('guthybrid')).toBe(7);
+    const opensIn = (items: SearchItem[]): (string | undefined)[] => [
+      ...new Set(
+        items.filter((i) => i.type !== 'grip' && i.type !== 'racquet').map((i) => i.racquet),
+      ),
+    ];
+    expect(opensIn(index)).toEqual(['regna']);
+    expect(opensIn(percept)).toEqual(['percept']);
+  });
+
+  test("a string matches the racquet on screen's note, not another racquet's", () => {
+    const id = 'toroline-caviar';
+    const regnaNote = perRacquet(db, id, 'regna')!.note;
+    const perceptNote = perRacquet(db, id, 'percept')!.note;
+    expect(regnaNote).not.toBe(perceptNote);
+    const inPercept = percept.find((i) => i.id === id)!;
+    expect(inPercept.sourceText).toContain(perceptNote);
+    expect(inPercept.sourceText).not.toContain(regnaNote);
+  });
+
+  test('racquets come first, labelled by model with brand and spec', () => {
+    expect(SEARCH_GROUPS[0]).toEqual({ type: 'racquet', label: 'Rackets' });
+    const regna = index.find((i) => i.type === 'racquet' && i.id === 'regna')!;
+    expect(regna).toMatchObject({
+      label: 'Regna 100',
+      sublabel: 'Yonex · 64 RA · 16×19 · 100 sq in',
+      racquet: 'regna',
+      icon: RACQUET_ICON,
+    });
+    expect(regna.brand).toBeUndefined();
+    expect(searchIndex('regna', index)[0]).toBe(regna);
+    expect(searchIndex('yonex percept', index)[0]!.id).toBe('percept');
   });
 
   test('labels and sublabels follow v0.990', () => {
-    const caviar = index.find((i) => i.id === 'toroline-caviar' && i.racquet === 'percept')!;
+    const caviar = percept.find((i) => i.id === 'toroline-caviar')!;
     expect(caviar.sublabel).toBe('Toroline · Percept 100D');
     const kpop = index.find((i) => i.id === 'toroline-k-pop')!;
     expect(kpop.label).toBe('K-Pop (hybrid)');
@@ -61,7 +102,9 @@ describe('scoring', () => {
   });
 
   test('result keys are unique', () => {
-    const keys = index.map(resultKey);
-    expect(new Set(keys).size).toBe(keys.length);
+    for (const items of [index, percept]) {
+      const keys = items.map(resultKey);
+      expect(new Set(keys).size).toBe(keys.length);
+    }
   });
 });

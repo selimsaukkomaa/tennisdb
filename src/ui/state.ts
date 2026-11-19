@@ -8,8 +8,11 @@ export type Category = 'strings' | 'grips';
 export const state = {
   category: 'strings' as Category,
   racquet: '' as RacquetId,
-  /** The brand tab selected in each racquet view. */
-  brandByRacquet: {} as Record<RacquetId, BrandId>,
+  /**
+   * The strings shown: a string brand, or the natural gut hybrids. Since v1.10 one choice for
+   * every racquet, so it carries over when the racquet switches (v1.9 kept one per racquet).
+   */
+  brand: '' as BrandId,
   gripBrand: '' as BrandId,
 };
 
@@ -18,6 +21,10 @@ interface Events {
   category: Category;
   /** After showRacquet switched the visible racquet. */
   racquet: RacquetId;
+  /** After a racquet's page was built: once per racquet, the first time it is shown. */
+  page: RacquetId;
+  /** A racquet picked in a racquet menu (picker.ts); `menu` names which. */
+  pick: { menu: string; racquet: RacquetId };
   /** After a string or grip filter pass changed what is visible. */
   filtered: Category;
 }

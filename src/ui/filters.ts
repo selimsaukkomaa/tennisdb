@@ -34,13 +34,10 @@ const all = <T extends Element = HTMLElement>(sel: string, root: ParentNode = do
 
 export const isFilterActive = (): boolean => isStringFilterActive(filterState);
 
-function updateSwitcherState(rid: RacquetId, active: boolean): void {
-  document.getElementById(`${rid}-switcher`)?.classList.toggle('filter-all-brands', active);
-  document.getElementById(`${rid}-filter-badge`)?.classList.toggle('badge-show', active);
-  // Filters match strings and hybrids only, so the gut view steps aside while they span every brand.
-  document
-    .querySelector(`.gut-view[data-racquet="${rid}"]`)
-    ?.classList.toggle('filter-hidden', active);
+/** The card's strings row and badge, shared by every racquet since v1.10. */
+function updateSwitcherState(active: boolean): void {
+  byId('strings-switcher').classList.toggle('filter-all-brands', active);
+  byId('filter-badge').classList.toggle('badge-show', active);
 }
 
 function updateFilterStatus(visible: number, total: number): void {
@@ -50,15 +47,17 @@ function updateFilterStatus(visible: number, total: number): void {
 }
 
 /**
- * One filter state applies to every racquet, so each pass covers them all and the active one
- * last (its counts go in the status). v0.990 filtered only the active racquet, which left a
- * racquet switched away from with stale hidden rows once the filters were cleared elsewhere.
+ * One filter state applies to every racquet, so each pass covers every page built so far and
+ * the active one last (its counts go in the status). v0.990 filtered only the active racquet,
+ * which left a racquet switched away from with stale hidden rows once the filters were cleared
+ * elsewhere. A page built later is filtered when it is shown (the 'racquet' listener below).
  */
 export function applyFilters(): void {
   const active = isFilterActive();
   byId('filter-clear').classList.toggle('has-filters', active);
-  const others = all('[data-nav-switcher]')
-    .map((s) => s.dataset.navSwitcher!)
+  updateSwitcherState(active);
+  const others = all('[data-racquet-page]')
+    .map((p) => p.dataset.racquetPage!)
     .filter((rid) => rid !== state.racquet);
   for (const rid of others) applyToRacquet(rid, active);
   const { visible, total } = applyToRacquet(state.racquet, active);
@@ -70,6 +69,8 @@ function applyToRacquet(rid: RacquetId, active: boolean): { visible: number; tot
   const container = byId(racquetContentId(rid));
   const rows = all('tr[data-shape]', container);
   const sections = all('.brand-section', container);
+  // Filters match strings and hybrids only, so the gut view steps aside while they span every brand.
+  container.querySelector('.gut-view')?.classList.toggle('filter-hidden', active);
 
   if (!active) {
     rows.forEach((r) => r.classList.remove('filter-hidden'));
@@ -78,14 +79,12 @@ function applyToRacquet(rid: RacquetId, active: boolean): { visible: number; tot
     all('.table-wrap.filter-no-results', container).forEach((tw) =>
       tw.classList.remove('filter-no-results'),
     );
-    showBrand(rid, state.brandByRacquet[rid]!);
-    updateSwitcherState(rid, false);
+    if (rid === state.racquet) showBrand(state.brand);
     return { visible: rows.length, total: rows.length };
   }
 
   // Filters span every brand: force all sections visible, with their headers.
   sections.forEach((s) => s.classList.add('filter-force-show'));
-  updateSwitcherState(rid, true);
   all('.filter-brand-header', container).forEach((h) => h.classList.add('filter-show'));
 
   let visible = 0;
@@ -286,7 +285,7 @@ export function initFilters(): void {
     if (cat !== 'strings') clearAllFilters();
     if (cat !== 'grips') clearGripFilters();
   });
-  // Every racquet is already filtered; re-applying puts the new racquet's counts in the status.
+  // Re-applying filters a page built just now and puts the new racquet's counts in the status.
   on('racquet', () => {
     if (isFilterActive()) applyFilters();
   });

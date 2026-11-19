@@ -82,21 +82,32 @@ describe('A: grip filters cover every brand', () => {
   });
 });
 
+// Since v1.10 a racquet's page is built the first time it is shown, so "every racquet" is every
+// page built so far, and a page built while a filter is on is filtered when it appears.
 describe('B: one string filter state for every racquet', () => {
   const hex = (): HTMLElement => $('[data-filter-group="shape"][data-filter-value="hexagonal"]');
   const hiddenRows = (rid: string): number =>
     $$(`#${rid}-content tr[data-shape].filter-hidden`).length;
+  const filtered = (rid: string): void => {
+    const rows = $$(`#${rid}-content tr[data-shape]`);
+    const visible = rows.filter((tr) => !tr.classList.contains('filter-hidden'));
+    expect(visible.length).toBeGreaterThan(0);
+    expect(visible.every((tr) => tr.dataset.shape!.split(',').includes('hexagonal'))).toBe(true);
+  };
 
   test('a filter applies to every racquet, not only the one on screen', () => {
+    showRacquet('percept');
     showRacquet('regna');
     hex().click();
-    for (const r of DB.racquets) {
-      const rows = $$(`#${r.id}-content tr[data-shape]`);
-      const visible = rows.filter((tr) => !tr.classList.contains('filter-hidden'));
-      expect(visible.length).toBeGreaterThan(0);
-      expect(visible.every((tr) => tr.dataset.shape!.split(',').includes('hexagonal'))).toBe(true);
-      expect($(`#${r.id}-switcher`).classList.contains('filter-all-brands')).toBe(true);
-    }
+    for (const rid of ['regna', 'percept']) filtered(rid);
+    expect($('#strings-switcher').classList.contains('filter-all-brands')).toBe(true);
+    expect($('#filter-badge').classList.contains('badge-show')).toBe(true);
+  });
+
+  test('a racquet first shown while it is on is filtered too', () => {
+    expect(document.getElementById('headpt630-content')).toBeNull();
+    showRacquet('headpt630');
+    filtered('headpt630');
   });
 
   test('the status counts the racquet on screen', () => {
@@ -114,9 +125,9 @@ describe('B: one string filter state for every racquet', () => {
       expect(hiddenRows(r.id)).toBe(0);
       expect($$('.filter-force-show, .filter-all-hidden', content)).toHaveLength(0);
       expect($$('.filter-brand-header.filter-show', content)).toHaveLength(0);
-      expect($(`#${r.id}-switcher`).classList.contains('filter-all-brands')).toBe(false);
-      expect($(`#${r.id}-filter-badge`).classList.contains('badge-show')).toBe(false);
     }
+    expect($('#strings-switcher').classList.contains('filter-all-brands')).toBe(false);
+    expect($('#filter-badge').classList.contains('badge-show')).toBe(false);
   });
 });
 

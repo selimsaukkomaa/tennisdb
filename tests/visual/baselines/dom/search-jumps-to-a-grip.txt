@@ -60,7 +60,7 @@
       <h2>
         "Compare"
       " "
-      <div class="compare-racquet-tabs" id="compare-racquet-tabs">
+      <div class="compare-racquet" id="compare-racquet">
       " "
       <button aria-label="Close" class="compare-modal-close" id="compare-modal-close">
         "✕"

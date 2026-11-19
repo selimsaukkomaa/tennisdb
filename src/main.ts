@@ -8,6 +8,7 @@ import { initFilters } from './ui/filters';
 import { initGut } from './ui/gut';
 import { initNav } from './ui/nav';
 import { initPalette } from './ui/palette';
+import { initPickers } from './ui/picker';
 import { initPlaceholders } from './ui/placeholders';
 import { initSearch } from './ui/search';
 import { renderShell } from './ui/shell';
@@ -16,12 +17,14 @@ import { renderShell } from './ui/shell';
 export const db = assembleDb();
 
 renderShell(db, copy);
-// Modules subscribe to nav events before initNav applies the start state.
+// Modules subscribe to nav events before initNav applies the start state and builds the start
+// racquet's page.
 initFilters();
-initNav(db);
-initFilterPanel();
-initCompare(db);
+initPickers();
 initGut(db, copy);
+initCompare(db);
+initNav(db, copy);
+initFilterPanel();
 // Search before the palette: a result click navigates first, then the palette closes.
 initSearch(db);
 initPalette();

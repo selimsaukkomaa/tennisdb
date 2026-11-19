@@ -191,29 +191,8 @@ tbody tr.selected-for-compare:hover {
   font-weight: 700;
   letter-spacing: 0.02em;
 }
-.compare-racquet-tabs {
-  display: flex;
-  gap: 4px;
-  flex-grow: 1;
-  flex-wrap: wrap;
-}
-.cmp-racquet-tab {
-  background: #fff;
-  border: 1px solid #d4d4d0;
-  border-radius: 6px;
-  padding: 5px 12px;
-  font-size: 0.75rem;
-  cursor: pointer;
-  font-family: inherit;
-  color: #525252;
-  transition: all 0.1s;
-}
-.cmp-racquet-tab:hover { background: #eef4ff; border-color: #2563eb; }
-.cmp-racquet-tab.active {
-  background: #1a1a1a;
-  color: #fff;
-  border-color: #1a1a1a;
-}
+/* The racket menu (picker.ts; a tab per racket until v1.10), styled in additions.css. */
+.compare-racquet { flex-grow: 1; }
 .compare-modal-close {
   background: transparent;
   border: none;
@@ -364,7 +343,6 @@ body.cmp-no-scroll { overflow: hidden; }
     padding: 12px 14px;
   }
   .compare-modal-header h2 { font-size: 0.9rem; }
-  .cmp-racquet-tab { padding: 4px 9px; font-size: 0.72rem; }
   .compare-modal-body { padding: 12px 10px 20px; }
   .cmp-table { font-size: 0.72rem; }
   .cmp-table th, .cmp-table td { padding: 8px 9px; }

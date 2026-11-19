@@ -1,6 +1,7 @@
 // Normalised DOM snapshots of the app, shared by tests/visual/dom.spec.ts (the DOM baselines)
 // and scripts/dom-snapshot.ts.
 import type { Page } from '@playwright/test';
+import { settle } from './support';
 
 /**
  * Runs in the page; plain JS in a string because tsx would inject helpers the page lacks.
@@ -55,7 +56,9 @@ export type Step =
   | string
   | { type: [selector: string, text: string] }
   | { select: [selector: string, value: string] }
-  | { key: string };
+  | { key: string }
+  /** Reloads the page, keeping what it stored (the remembered racquet and strings, v1.10). */
+  | { reload: true };
 
 /**
  * Types into a field. The palette focuses its field and selects the text 10 ms after opening
@@ -69,7 +72,7 @@ export async function typeInto(page: Page, selector: string, text: string): Prom
   await page.locator(selector).first().pressSequentially(text);
 }
 
-/** Clicks, typing (then waits out the 120-150 ms debounces), option picks and key presses. */
+/** Clicks, typing (then waits out the 120-150 ms debounces), option picks, key presses, reloads. */
 export async function runSteps(page: Page, steps: readonly Step[]): Promise<void> {
   for (const step of steps) {
     if (typeof step === 'string') {
@@ -81,6 +84,9 @@ export async function runSteps(page: Page, steps: readonly Step[]): Promise<void
     } else if ('select' in step) {
       await page.locator(step.select[0]).first().selectOption(step.select[1]);
       await page.waitForTimeout(150);
+    } else if ('reload' in step) {
+      await page.reload();
+      await settle(page);
     } else {
       await page.keyboard.press(step.key);
       await page.waitForTimeout(150);

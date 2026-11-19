@@ -243,39 +243,6 @@
   .footer { margin-top: 18px; font-size: 0.72rem; color: #bbb; line-height: 1.55; font-family: 'Space Mono', monospace; }
   .version-tag { display: inline-block; color: #ccc; font-family: 'Space Mono', monospace; font-size: 0.68rem; margin-top: 4px; }
 
-  /* Racquet Switcher */
-  .racquet-switcher {
-    display: flex;
-    gap: 0;
-    margin-bottom: 12px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    width: fit-content;
-  }
-  .racquet-switcher button {
-    font-family: 'Space Mono', monospace;
-    font-size: 0.78rem;
-    font-weight: 700;
-    padding: 10px 22px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    letter-spacing: 0.3px;
-    position: relative;
-  }
-  .racquet-switcher button.racquet-active {
-    background: #2563eb;
-    color: #fff;
-  }
-  .racquet-switcher button.racquet-inactive {
-    background: #fff;
-    color: #999;
-  }
-  .racquet-switcher button.racquet-inactive:hover {
-    background: #f5f5f0;
-    color: #555;
-  }
   .racquet-label {
     font-family: 'Space Mono', monospace;
     font-size: 0.72rem;

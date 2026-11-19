@@ -79,9 +79,10 @@ content/copy.json  UI copy that lived in v0.990's markup and JS (HTML strings, v
 src/core/          no DOM: data schemas (schema.ts; types.ts infers the types from them), db
                    assembly, chips, filter predicates, compare, gut, search index and scoring,
                    pairings, stiffness, ratings, tags, validators
-src/ui/            DOM layer: shell, tables, nav, filters, filter panel, compare, gut, search,
-                   palette, placeholders (short ones on phones); html`` / raw() escaping
-                   helpers
+src/ui/            DOM layer: shell, tables, nav, picker (the racket menu, card and compare),
+                   prefs (the remembered racket and strings), filters, filter panel, compare,
+                   gut, search, palette, placeholders (short ones on phones); html`` / raw()
+                   escaping helpers
 src/platform/      native check (the service worker registers only on the web)
 src/styles/        v0.990 CSS split verbatim, imported in cascade order; additions.css last
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
@@ -118,12 +119,18 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
 - `src/ui` renders with the `html` tagged template, which escapes interpolations; `raw()` is
   only for trusted HTML from `content/`. Everything in `data/` is plain text since v1.0 (the
   `plain-text` rule). Events go through delegation on `data-*` hooks.
-- Modules talk through `state.ts` (active category and racquet) and its event bus
-  (`category`, `racquet`, `filtered`), not window globals.
-- Racquets are data-driven. A fourth frame needs a `racquets.json` entry, a pairing (tension
+- Modules talk through `state.ts` (active category, racquet and strings) and its event bus
+  (`category`, `racquet`, `page`, `pick`, `filtered`), not window globals.
+- One card (`#selector`) sits at the top of the Strings page for every racket. A racket's page
+  (`[data-racquet-page]`: its tables and gut view) is built the first time it is shown and
+  kept (`page` fires), so code that acts on pages covers the ones built so far, and a page
+  built later must pick up the current strings choice, filters and compare ticks.
+- Racquets are data-driven. A new frame needs a `racquets.json` entry, a pairing (tension
   and note) in `pairings.json` for every string and hybrid, and optionally gut pairings;
-  `tests/unit/fourth-racquet.test.ts` proves the UI follows. Brand colours are per brand in
-  CSS and need nothing. Views read pairings through `src/core/pairings.ts`, never directly.
+  `tests/unit/ten-rackets.test.ts` proves the UI follows for ten (seven placeholders). The
+  menu orders brands A–Z, then models A–Z (`racquetGroups`); the first in `racquets.json` is
+  where a first visit opens. Brand colours are per brand in CSS and need nothing. Views read
+  pairings through `src/core/pairings.ts`, never directly.
 
 ## Visual baselines
 
@@ -131,13 +138,14 @@ Until v1.6 every view was compared with the v0.990 page; that comparison was ret
 redesign in v1.7. The app is now checked against its own approved baselines
 (`tests/visual/baselines`):
 
-- pixel baselines (`tests/visual/views.spec.ts`): 16 views at 1440×900 and 390×844, the first
+- pixel baselines (`tests/visual/views.spec.ts`): 17 views at 1440×900 and 390×844, the first
   screen or a close-up, threshold 0.1, at most 0.1% of pixels differing. Made on macOS and run
   only there: CI runs Linux, which renders text differently. Run `npm run check` on the Mac
   before every release.
-- DOM baselines (`tests/visual/dom.spec.ts`): 20 scenarios, the rendered DOM normalised to
+- DOM baselines (`tests/visual/dom.spec.ts`): 25 scenarios, the rendered DOM normalised to
   text (`tests/visual/dom.ts`; elements that don't render are left out). Run everywhere, CI
-  included.
+  included. Steps click, type, pick an option, press a key or reload (which keeps what the page
+  stored); each test starts with empty storage.
 - a visible change is shown to the owner with screenshots first; once approved, the baselines
   are updated on purpose (`npx playwright test --update-snapshots`) in the same commit, and the
   changelog says so.

@@ -6,6 +6,142 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.10 — A racket menu
+
+**Date:** 2026-11-19
+**Base:** v1.9 (phones and iOS)
+**Status:** visible release, the first step of the owner's new to-do (common rackets, see Still
+open): a UI that takes about ten rackets before any is added. The owner's picks on 2026-11-19: a
+racket menu with specs, grouped by brand, in the card and in the compare window; search lists
+each string once, for the racket on screen; the strings choice carries over when the racket
+switches; the last racket and strings are remembered; rackets are searchable. No data changed;
+`TENNIS_DB.version` stays `0.990`.
+
+---
+
+## The racket menu
+
+- **One button in the Racket row:** it names the racket on screen ("Regna 100 ▾") and opens a list
+  of every racket, grouped by brand: brands A–Z, then models A–Z (Head: Pro Tour 630; Yonex:
+  Percept 100D, Regna 100), each with its spec ("64 RA · 16×19 · 100 sq in"). The racket on
+  screen is ticked. A first visit still opens on Regna 100, the first in `racquets.json`.
+- **Why:** the row held the three names side by side, and on phones it scrolled sideways once a
+  fourth didn't fit. The menu was checked with ten, seven placeholder rackets injected in the
+  browser only (nothing in `data/` changed).
+- **Keyboard:** a listbox. ↑ ↓ Home End move, Enter or Space picks, Escape closes and puts focus
+  back on the button; Tab or a click elsewhere closes it.
+- **Phones:** the list spans the card and scrolls past 70% of the screen height.
+- **The compare window** uses the same menu in place of its three tabs, and still opens on the
+  racket on screen. Escape closes the menu, not the window.
+
+## The strings choice carries over
+
+- **Switching racket keeps the strings on screen:** Yonex on the Regna 100 stays Yonex on the Pro
+  Tour 630, and Natural gut stays Natural gut (a racket with no gut pairings shows its message).
+  Until now each racket kept its own choice.
+- **Remembered:** the app opens on the last racket and strings, in the browser and in the iOS app
+  (`localStorage`, key `strung.choice`). A first visit opens on Regna 100 × Toroline. A racket or
+  brand the data no longer has falls back to the first, and storage that refuses (a private
+  window) is survived: the app opens as on a first visit.
+
+## Search
+
+- **Each string once:** results list each string and hybrid once, matched against its own fields
+  and the racket on screen's tension and note, and open in that racket. Until now each string
+  came once per racket (three "Caviar" results). Gut pairings are the racket on screen's (7 on
+  the Regna 100, was 21).
+- **Rackets come first:** a new group, the model with brand and spec under it and a racket icon;
+  choosing one switches to it ("pro tour" finds the Pro Tour 630).
+- **Placeholder:** "Rackets, strings, grips… (try 'caviar', 'gut', 'hex')", and on phones "Search
+  rackets, strings, grips…" (were "Search strings, grips, gut pairings…" with and without the
+  hint).
+
+## Under the hood
+
+- **One card:** the card, its strings row and the filter badge exist once, at the top of the
+  Strings page; each racket's page had its own. The legend and the version line come once, after
+  the pages.
+- **Pages built on first show:** a racket's page (its tables and its gut view) is built the first
+  time it is shown and kept. At load the page holds 124 table rows (117 + 7 gut), was 302 (281 +
+  21). Filters cover every page built so far, and a page built while a filter is on is filtered
+  when it is shown; the compare ticks follow onto a new page.
+- **Code:** `src/ui/picker.ts` (the menu, card and compare window) and `src/ui/prefs.ts` (the
+  remembered choice) are new; the order comes from `racquetGroups` in `src/core/labels.ts` (no
+  DOM), the index from `buildSearchIndex(db, racquet)`. `state.brand` replaces the per-racket
+  choice; the bus gains `page` (a page was built) and `pick` (a menu choice). The CSS for the
+  racket row and the compare tabs is gone.
+- **Ten rackets proved from data:** `tests/unit/fourth-racquet.test.ts` became
+  `ten-rackets.test.ts`. Seven placeholder rackets (Pure Drive, Pure Aero, Speed MP, Blade 98,
+  Clash 100, Pro Staff 97, EZONE 100) with the Regna 100's pairings: the menu, the pages, the
+  carry-over, the remembered choice, filters, compare and search follow.
+
+## Baselines updated
+
+Approved with screenshots on 2026-11-19 (the menu, with three rackets and with ten, and the
+placeholder), then `--update-snapshots=all`:
+
+- **Pixel views:** 17 (was 16). New: the racket menu, open. "compare modal panel, Percept tab"
+  became "compare modal panel, Percept", picked from the menu. Changed: the default view, Percept
+  100D, Pro Tour 630, the card, filters open, Natural gut (Regna), Natural gut table (Pro Tour
+  630), compare open (the card), the search palette (each string once) and the gut search
+  results (one racket's pairings): 20 files. Unchanged: topbar, Grips, grip filters, the Yonex
+  grip row and the search field; two of them (grip filters and the search field, desktop) came
+  out different only below the per-pixel threshold and were restored.
+- **DOM scenarios:** 25 (was 20). New: racket menu by keyboard, racket menu open, strings carry
+  over on a racket switch, remembered racket and strings after a reload (a new `reload` step in
+  `tests/visual/dom.ts`), and search Enter switches to a racket. "compare 2 strings + hybrid,
+  Percept tab" became "…, Percept"; "search jumps to a gut pairing" switches to the Percept 100D
+  first, since search lists the racket on screen's pairings. All 19 that kept their name changed,
+  since each holds the compare window's header.
+- **The offline check** counts 124 rows (was 302) and switches racket through the menu.
+- 3.4 MB of pixel baselines and 1.4 MB of DOM baselines.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v1.5.
+
+## Verification
+
+`npm run check` passes: 357 Vitest tests (339 in v1.9: the ten-rackets test has 14, the
+fourth-racquet test had 11; the remembered choice, 9; the racket order, 2; search, 2 more, the
+racket on screen's note and the Rackets group; and two smoke tests, no other page built at load
+and a page first shown under a filter is filtered) and the browser suite, 62 passed and 26
+skipped on the Mac. On CI the pixel views are skipped as well.
+
+- **iOS:** `npm run build:ios` synced, `xcodebuild` for the simulator succeeds, and in the
+  Simulator the menu switches racket and the choice survives quitting and reopening the app.
+
+## File size
+
+| | v1.9 | v1.10 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 335,502 | 341,878 | +6.4 KB (+1.9%) |
+| gzip | 74,828 | 76,955 | +2.1 KB |
+
+The menu and the remembered choice, and the menu's styles with their comments (CSS isn't
+minified). The page builds less at load (124 rows, was 302).
+
+## Still open
+
+Unchanged from v1.9, except:
+
+- **New: common rackets.** The owner's to-do (2026-11-19): 5–7 commonly used rackets beside the
+  three, so the app is useful to other players. Proposed: Babolat Pure Drive, Babolat Pure Aero,
+  Head Speed MP, Wilson Blade 98 and Yonex EZONE 100, then Wilson Clash 100 and Wilson Pro Staff
+  97. Each needs a `racquets.json` entry and a pairing (tension and note) for all 82 strings and
+  hybrids, gut pairings optional: about 4,300 words and +9.4 KB gzip per racket. In order:
+  1. the specs check: generation, RA, pattern and head size against a spec source;
+  2. the tension rule: how a frame's tension band follows from its specs, to the owner first;
+  3. the first racket with a sample of five notes, then one or two rackets per release.
+
+---
+
 # v1.9 — Phones and iOS
 
 **Date:** 2026-11-19

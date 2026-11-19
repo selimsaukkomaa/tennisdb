@@ -1,0 +1,866 @@
+" "
+<div id="topbar">
+  " "
+  <div class="topbar-inner">
+    " "
+    <h1 class="topbar-mark">
+      "strung"
+    " "
+    <span class="topbar-div">
+    " "
+    <div class="category-switcher" id="topbar-cats">
+      " "
+      <button class="cat-active" data-nav-category="strings" id="btn-cat-strings">
+        "Strings"
+      " "
+      <button class="cat-inactive" data-nav-category="grips" id="btn-cat-grips">
+        "Grips"
+      " "
+    <span class="topbar-spacer">
+    " "
+    <button aria-label="Search everything" class="topbar-btn" id="btn-palette" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "🔍"
+      <span class="topbar-btn-label">
+        "Search"
+      <kbd id="palette-kbd">
+        "⌘K"
+      " "
+    <button aria-expanded="false" class="topbar-btn" id="btn-filters" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "⚙"
+      <span class="topbar-btn-label">
+        "Filters"
+      " "
+<div aria-live="polite" class="compare-bar hidden" id="compare-bar">
+  " "
+  <div class="compare-bar-inner">
+    " "
+    <span class="compare-count" id="compare-count">
+      "0 / 4"
+    " "
+    <div class="compare-chips" id="compare-chips">
+    " "
+    <button class="compare-btn-primary" disabled="" id="compare-open">
+      "Select 2 more"
+    " "
+    <button class="compare-btn-secondary" id="compare-clear">
+      "Clear"
+    " "
+<div aria-label="Compare strings" aria-modal="true" class="compare-modal hidden" id="compare-modal" role="dialog">
+  " "
+  <div class="compare-modal-backdrop">
+  " "
+  <div class="compare-modal-panel">
+    " "
+    <div class="compare-modal-header">
+      " "
+      <h2>
+        "Compare"
+      " "
+      <div class="compare-racquet" id="compare-racquet">
+      " "
+      <button aria-label="Close" class="compare-modal-close" id="compare-modal-close">
+        "✕"
+      " "
+    <div class="compare-modal-body" id="compare-modal-body">
+    " "
+<div class="container">
+  " "
+  <div class="cat-visible category-content" id="strings-content" style="display: block;">
+    " "
+    <div class="selector" id="selector">
+      " "
+      <div class="sel-title">
+        <span class="sel-racquet" data-sel-racquet="">
+          "Percept 100D"
+        <span class="sel-x">
+          "×"
+        <span class="sel-strings" data-sel-strings="">
+          "Solinco"
+      " "
+      <div class="sel-spec">
+        <span class="sel-spec-text" data-sel-spec="">
+          "Yonex · 66 RA · 18×19 · 100 sq in"
+      " "
+      <div class="sel-row">
+        <span class="sel-label">
+          "Racket"
+        <div class="rpick" data-rpick="card">
+          <button aria-controls="rpick-card-list" aria-expanded="false" aria-haspopup="listbox" class="rpick-button" data-rpick-toggle="" type="button">
+            <span class="rpick-current" data-rpick-current="">
+              "Percept 100D"
+            <span aria-hidden="true" class="rpick-caret">
+              "▾"
+      " "
+      <div class="sel-row">
+        <span class="sel-label">
+          "Strings"
+        <div class="switcher" id="strings-switcher">
+          " "
+          <button class="inactive" data-nav-brand="toroline" id="btn-toroline">
+            "Toroline"
+          " "
+          <button class="active-solinco" data-nav-brand="solinco" id="btn-solinco">
+            "Solinco"
+          " "
+          <button class="inactive" data-nav-brand="yonex" id="btn-yonex">
+            "Yonex"
+          " "
+          <button class="inactive" data-nav-brand="restring" id="btn-restring">
+            "ReString"
+          " "
+          <button class="inactive" data-nav-brand="grapplesnake" id="btn-grapplesnake">
+            "Grapplesnake"
+          " "
+          <button class="inactive" data-nav-brand="luxilon" id="btn-luxilon">
+            "Luxilon"
+          " "
+          <button class="inactive" data-nav-brand="tourna" id="btn-tourna">
+            "Tourna"
+          " "
+          <button class="gut-choice inactive" data-nav-brand="gut" id="btn-gut">
+            "Natural gut"
+          " "
+    <div id="racquet-pages">
+      <div data-racquet-page="percept" id="percept-content" style="display: block;">
+        " "
+        <div class="active brand-section solinco-view" id="percept-solinco-section">
+          " "
+          <div class="table-wrap">
+            " "
+            <table data-brand="solinco" data-racquet="percept" data-render="strings">
+              " "
+              <thead>
+                " "
+                <tr>
+                  " "
+                  <th class="sortable" data-col="string">
+                    "String"
+                  " "
+                  <th>
+                    "Shape"
+                  " "
+                  <th>
+                    "Gauge"
+                  " "
+                  <th>
+                    "Colors"
+                  " "
+                  <th class="sortable" data-col="stiffness">
+                    "Stiffness"
+                  " "
+                  <th class="sortable" data-col="power">
+                    "Power"
+                  " "
+                  <th>
+                    "Feel"
+                  " "
+                  <th class="sortable" data-col="spin">
+                    "Spin"
+                  " "
+                  <th class="sortable" data-col="control">
+                    "Control"
+                  " "
+                  <th class="sortable" data-col="comfort">
+                    "Comfort"
+                  " "
+                  <th>
+                    "Tension (kg)"
+                  " "
+                  <th>
+                    "Notes"
+                  " "
+              <tbody>
+                <tr data-feel="crisp,firm,lively" data-id="solinco-tour-bite" data-shape="square" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-tour-bite" type="checkbox">
+                    "Tour Bite"
+                  <td>
+                    "Square"
+                  <td>
+                    "1.05–1.30"
+                    <br>
+                    "(20 to 16)"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(192, 192, 192);" title="Silver/Grey">
+                    <span class="color-label">
+                      "Silver"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Firm · 1.12"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 96%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low-Med"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 38%;">
+                  <td>
+                    <span class="tag tag-crisp">
+                      "Crisp"
+                    <span class="tag tag-firm">
+                      "Firm"
+                    <br>
+                    "Firm, lively"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 94%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Outstanding"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 95%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 38%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "Firmest Solinco in the firmest frame here: launch is very low and the bed stays firm through the 18×19's extra crosses — hence 1 kg below the Regna. Square edges supply spin where snapback is limited. Feedback is sharp; the 66 RA doesn't filter much. Gauge is the lever — 1.30 pulls bed stiffness down without changing tension."
+                <tr data-feel="crisp,firm" data-id="solinco-confidential" data-shape="square" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-confidential" type="checkbox">
+                    "Confidential"
+                  <td>
+                    "Square"
+                  <td>
+                    "1.15–1.30"
+                    <br>
+                    "(18 to 16)"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(85, 85, 85);" title="Dark Grey / Gun Metal">
+                    <span class="color-label">
+                      "Dark Grey"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Firm · 1.00"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 78%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low-Med"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 40%;">
+                  <td>
+                    <span class="tag tag-crisp">
+                      "Crisp"
+                    <br>
+                    "Controlled, precise"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 85%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Outstanding"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 96%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Moderate"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 52%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "Low launch on top of a low-launch frame — flat, penetrating ball flight in the 18×19. The square profile supplies spin where snapback is constrained. Its tension hold is worth more here: a denser bed shows tension loss early and is slow to restring. Firm but less sharp than Tour Bite. 1 kg below the Regna."
+                <tr data-feel="soft" data-id="solinco-confidential-soft" data-shape="square" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-confidential-soft" type="checkbox">
+                    "Confidential Soft"
+                  <td>
+                    "Shaped (4-sided)"
+                  <td>
+                    "1.15 / 18"
+                    <br>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(236, 72, 153);" title="Pink">
+                    <span class="color-label">
+                      "Pink"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Soft · 0.85"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 55%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 55%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Softer"
+                    <br>
+                    "More pocketing, forgiving"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 80%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 70%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 78%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "The Percept's 66 RA and dense 18×19 give the softer formula structure: launch stays controlled, the bed stays firm enough, and the pocketing takes the edge off a frame that can play board-like with firm square polys. Four-sided profile supplies spin. String at 21–22 kg — 1 kg below the Regna."
+                <tr data-feel="firm" data-id="solinco-hyper-g" data-shape="square" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-hyper-g" type="checkbox">
+                    "Hyper-G"
+                  <td>
+                    "Square"
+                  <td>
+                    "1.05–1.30"
+                    <br>
+                    "(20 to 16)"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(57, 255, 20);" title="Neon Green (Hyper-Green)">
+                    <span class="color-label">
+                      "Hyper-Green"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Firm · 1.10"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 93%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 50%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Muted"
+                    <span class="tag tag-firm">
+                      "Firm"
+                    <br>
+                    "Firm, heavily damped"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 92%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Excellent"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 93%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Moderate"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 45%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "The string's damping adds to the frame's own — the long flex shaft already softens the impulse — so the combined feel is quiet and low-feedback with a firm bed underneath. The square profile earns its keep in the 18×19, where edge bite matters more because snapback is constrained. String 1 kg below the Regna."
+                <tr data-feel="soft" data-id="solinco-mach-10" data-shape="pentagonal" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-mach-10" type="checkbox">
+                    "Mach-10"
+                  <td>
+                    "Pentagonal"
+                  <td>
+                    "1.15–1.30"
+                    <br>
+                    "(18 to 16)"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(56, 189, 248);" title="Blue (Cyan)">
+                    <span class="color-label">
+                      "Blue"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Soft · 0.85"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 55%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 65%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Soft"
+                    <br>
+                    "Pocketing, slightly muted"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 82%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 72%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 80%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "The Percept is a low-powered frame and Mach-10 adds energy — pocketing and launch in a pattern that flattens both. The pentagonal profile supplies spin in the 18×19. Softer feel than the Big Three Solincos; the extra crosses firm the bed up somewhat. 22–23 kg is the reported starting range, 1 kg below the Regna."
+                <tr data-feel="soft" data-id="solinco-tour-bite-soft" data-shape="square" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-tour-bite-soft" type="checkbox">
+                    "Tour Bite Soft"
+                  <td>
+                    "Square"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(212, 212, 212);" title="Silver">
+                    <span class="color-label">
+                      "Silver"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Soft · 0.85"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 55%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 50%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Softer"
+                    <br>
+                    "More pocketing"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 82%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 70%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 78%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "The 18×19's extra crosses firm up a soft square poly and hold its launch down, so the drop from standard Tour Bite feels smaller here than in the Regna. Square edges supply spin where snapback is limited. The faster tension loss shows earlier in a dense pattern. 1 kg below the Regna."
+                <tr data-feel="soft,lively" data-id="solinco-hyper-g-soft" data-shape="square" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-hyper-g-soft" type="checkbox">
+                    "Hyper-G Soft"
+                  <td>
+                    "Square"
+                  <td>
+                    "1.05–1.25"
+                    <br>
+                    "(20 to 16L)"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(57, 255, 20);" title="Green">
+                    <span class="color-label">
+                      "Green"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium · 0.95"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 70%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 60%;">
+                  <td>
+                    <span class="tag tag-lively">
+                      "Lively"
+                    <br>
+                    "Softer, more elastic"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 84%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 72%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 80%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "The 18×19's extra crosses contain the liveliness that runs loose in the Regna, and the low-powered frame absorbs the energy return usefully. Square edges supply spin where snapback is limited. Quieter than standard Hyper-G's heavy damping but still muted by Solinco standards. 1 kg below the Regna."
+                <tr data-feel="crisp,firm" data-id="solinco-revolution" data-shape="hexagonal" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-revolution" type="checkbox">
+                    "Revolution"
+                  <td>
+                    "Hexagonal"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(59, 130, 246);" title="Blue">
+                    <span class="color-label">
+                      "Blue"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Firm · ~1.00"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 78%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 52%;">
+                  <td>
+                    <span class="tag tag-crisp">
+                      "Crisp"
+                    <br>
+                    "Firmer, plastic-like"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 80%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 78%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 60%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "Hex edges supply spin in the 18×19 where snapback is limited, and the string's easy power offsets some of the frame's low output. The Percept's shaft flex softens the plastic-like contact reported in stiff frames. Firm, low-launch bed. 1 kg below the Regna."
+                <tr data-feel="crisp,soft" data-id="solinco-tb-diamond-rough" data-shape="square" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-tb-diamond-rough" type="checkbox">
+                    "TB Diamond Rough"
+                  <td>
+                    "Square + Textured"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(192, 192, 192);" title="Silver">
+                    <span class="color-label">
+                      "Silver"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium · ~0.95"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 70%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low-Med"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 38%;">
+                  <td>
+                    <span class="tag tag-crisp">
+                      "Crisp"
+                    <span class="tag tag-soft">
+                      "Softer"
+                    <br>
+                    "Textured grab"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 90%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 75%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Moderate"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 55%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "Texture plus square edges give the 18×19 the friction-driven spin it can't get from snapback. Low launch in a low-launch frame. The weaker tension stability shows earlier in a dense pattern and restrings are more frequent as a result. 1 kg below the Regna."
+                <tr data-feel="soft,lively" data-id="solinco-hyper-g-round" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-hyper-g-round" type="checkbox">
+                    "Hyper-G Round"
+                  <td>
+                    "Round"
+                  <td>
+                    "1.15–1.30"
+                    <br>
+                    "(18 to 16)"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(57, 255, 20);" title="Green">
+                    <span class="color-label">
+                      "Green"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium · 0.95"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 70%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 62%;">
+                  <td>
+                    <span class="tag tag-round">
+                      "Smooth"
+                    <br>
+                    "Elastic, more pocketing"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 70%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 82%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 65%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "Round in the 18×19 limits snapback, so full-bed spin is modest and launch is very low in a frame that already flies flat. As crosses under square mains it holds tension and lets the mains slide. Excellent tension maintenance suits a pattern that shows loss early. 1 kg below the Regna."
+                <tr data-feel="crisp,soft" data-id="solinco-barb-wire" data-shape="twisted" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-barb-wire" type="checkbox">
+                    "Barb Wire"
+                  <td>
+                    "Twisted"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-label">
+                      "Black"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Soft · 0.90"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 63%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low-Med"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 35%;">
+                  <td>
+                    <span class="tag tag-crisp">
+                      "Crisp"
+                    <span class="tag tag-soft">
+                      "Soft"
+                    <br>
+                    "Twisted, high-friction"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 78%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 75%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 65%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "Snapback is already limited by the 18×19, so Barb Wire's friction penalty costs less here than in an open pattern — bite is the primary spin source either way. Launch stays low. In a control-oriented frame the texture adds grip without adding power. Expect faster cross wear where the twisted mains cross. 1 kg below the Regna."
+                <tr data-feel="soft" data-id="solinco-outlast" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-outlast" type="checkbox">
+                    "Outlast"
+                  <td>
+                    "Round"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-label">
+                      "Black"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Soft · ~0.90"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 63%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 55%;">
+                  <td>
+                    <span class="tag tag-round">
+                      "Smooth"
+                    <br>
+                    "Round, durable"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 58%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 72%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 78%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "Round in the 18×19 limits snapback, so full-bed spin is modest; launch is low and controlled. The softer formula takes a little edge off a firm frame while the extra crosses keep the bed from feeling loose. Durability shows well in a pattern that's slow to restring. 1 kg below the Regna."
+                <tr data-feel="soft,plush" data-id="solinco-vanquish-multi" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-vanquish-multi" type="checkbox">
+                    "Vanquish (Multi)"
+                  <td>
+                    "Round (multi)"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(245, 240, 224);" title="Natural">
+                    <span class="color-label">
+                      "Natural"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Soft · 0.55–0.65"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 18%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 78%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Soft"
+                    <br>
+                    "Plush, powerful"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low-Med"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 35%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Moderate"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 55%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Excellent"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 92%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "23–25"
+                  <td class="notes">
+                    "As crosses in the 18×19 the dense pattern limits cross movement, so the multi contributes comfort and a little power without much snapback. Combined with the Percept's flexing shaft the hybrid plays noticeably softer than a full poly bed. Full bed: high launch and power with the 18×19 pulling launch down; control drops. 1 kg below the Regna."
+              " "
+          <div class="footer">
+            " "
+            <p>
+              "Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Evoke Tennis, and Solinco product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Solinco lineup. Gauge range is industry-leading (15L–20 for Tour Bite & Hyper-G)."
+            " "
+    <div class="legend">
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(148, 163, 184), rgb(71, 85, 105));">
+        "Stiffness (higher = firmer)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(251, 146, 60), rgb(220, 38, 38));">
+        "Power (higher = more power)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
+        "Spin potential"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(167, 139, 250), rgb(124, 58, 237));">
+        "Control"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(96, 165, 250), rgb(129, 140, 248));">
+        "Comfort"
+      " "
+    <div class="version-tag">
+      "v*"
+    " "

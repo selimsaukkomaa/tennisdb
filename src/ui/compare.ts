@@ -1,6 +1,7 @@
 // Compare mode, ported from v0.990's tennis-compare: pick 2-4 strings or hybrids with the row
-// checkboxes, see them side by side in a modal with a tab per racquet. The selection is
-// global (by id); the modal shows per-racquet tension and notes.
+// checkboxes, see them side by side in a modal. The selection is global (by id); the modal shows
+// one racquet's tension and notes, chosen with the racquet menu (picker.ts; a tab per racquet
+// until v1.10).
 import {
   CompareSelection,
   MAX_COMPARE,
@@ -13,12 +14,13 @@ import { perRacquet } from '../core/pairings';
 import { ratingBar, type RatingAxis } from '../core/ratings';
 import { stiffnessBar } from '../core/stiffness';
 import { html, join, raw, type SafeHtml } from './html';
-import { state } from './state';
+import { pickerHtml } from './picker';
+import { on, state } from './state';
 import { feelTagsHtml } from './tables';
 
 let db: TennisDb;
 const selection = new CompareSelection();
-/** Racquet tab chosen in the modal; null follows the racquet shown on the page. */
+/** Racquet chosen in the modal; null follows the racquet shown on the page. */
 let modalRacquet: RacquetId | null = null;
 
 const byId = (id: string): HTMLElement => document.getElementById(id)!;
@@ -146,13 +148,7 @@ function rowShown(row: AttrRow, entries: CompareItem[]): boolean {
 
 function renderModal(): void {
   const racquet = modalRacquet ?? state.racquet;
-  byId('compare-racquet-tabs').innerHTML = join(
-    db.racquets.map(
-      (r) =>
-        html`<button class="cmp-racquet-tab${r.id === racquet ? ' active' : ''}" data-cmp-racquet="${r.id}">${r.model}</button>`,
-    ),
-    raw(''),
-  ).value;
+  byId('compare-racquet').innerHTML = pickerHtml(db, 'compare', racquet).value;
 
   const body = byId('compare-modal-body');
   if (selection.selected.length === 0) {
@@ -214,14 +210,16 @@ export function initCompare(data: TennisDb): void {
     if (t.closest('#compare-modal-close') || t.classList.contains('compare-modal-backdrop')) {
       return closeModal();
     }
-    const tab = t.closest<HTMLElement>('.cmp-racquet-tab');
-    if (tab) {
-      modalRacquet = tab.dataset.cmpRacquet!;
-      renderModal();
-    }
+  });
+  on('pick', ({ menu, racquet }) => {
+    if (menu !== 'compare') return;
+    modalRacquet = racquet;
+    renderModal();
   });
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modalIsOpen()) closeModal();
   });
+  // A racquet page built after the selection was made shows it too (pages build on first show).
+  on('page', syncCheckboxes);
   syncUI();
 }

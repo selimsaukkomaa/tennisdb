@@ -9,6 +9,9 @@
 //   - window globals (TENNIS_DB, showRacquet, ...) are module imports
 //   - version tags show the app version; the data keeps its own (0.990)
 //   - the GLOBAL_SEARCH_API check, skipped in v0.990 because the global never existed, runs
+//   - since v1.10 the racquet + strings card, the strings legend and the version tag are shared,
+//     and a racquet's page is built the first time it is shown: counts that v0.990 took over
+//     three racquet pages at load are taken over the start racquet's
 // Checks run in order and share page state, as they did in the legacy script.
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -105,7 +108,7 @@ describe('chrome', () => {
   test('no ★ Top Pick legend item', () => {
     expect($$('.legend-item').some((el) => /Top Pick/.test(el.textContent!))).toBe(false);
   });
-  test('legends still present (4)', () => expect($$('.legend')).toHaveLength(4));
+  test('legends still present (2: strings, grips)', () => expect($$('.legend')).toHaveLength(2));
   test('no toppick filter chip', () => {
     expect($$('[data-filter-group="toppick"], [data-gfilter-group="toppick"]')).toHaveLength(0);
   });
@@ -128,7 +131,7 @@ describe('chrome', () => {
   });
   test(`version tags say v${APP_VERSION}`, () => {
     const tags = $$('.version-tag');
-    expect(tags).toHaveLength(3);
+    expect(tags).toHaveLength(1);
     expect(tags.every((v) => v.textContent!.trim() === `v${APP_VERSION}`)).toBe(true);
   });
   test('no v0.989 residue', () =>
@@ -137,10 +140,13 @@ describe('chrome', () => {
 
 // ---------------------------------------------------------------- rendering
 describe('rendering', () => {
-  test('281 rendered rows', () =>
-    expect($$('tr[data-id]').filter((tr) => !tr.closest('.gut-view'))).toHaveLength(281));
-  // Since v1.8 the gut tables render at load, behind the "Natural gut" choice.
-  test('21 gut rows rendered at load', () => expect($$('.gut-view tr[data-id]')).toHaveLength(21));
+  // The start racquet's 82 string and hybrid rows and the 35 grips (v0.990: 281 over three).
+  test('117 rendered rows', () =>
+    expect($$('tr[data-id]').filter((tr) => !tr.closest('.gut-view'))).toHaveLength(117));
+  test('no other racquet page built at load', () =>
+    expect($$('[data-racquet-page]').map((p) => p.id)).toEqual(['regna-content']));
+  // Since v1.8 the gut tables render with their page, behind the "Natural gut" choice.
+  test('7 gut rows rendered at load', () => expect($$('.gut-view tr[data-id]')).toHaveLength(7));
   test('no ★ Top Pick tags rendered', () => expect($$('.tag-top')).toHaveLength(0));
   test('no highlight rows', () => expect($$('tr.highlight')).toHaveLength(0));
   test('no data-toppick="1"', () =>
@@ -151,23 +157,19 @@ describe('rendering', () => {
   });
   test('context line present', () => expect($$('.context-line').length).toBeGreaterThanOrEqual(1));
   test('the selector card names the racquet and its strings', () => {
-    expect($('#regna-content .sel-racquet')?.textContent).toBe('Regna 100');
-    expect($('#regna-content [data-sel-strings]')?.textContent).toBe('Toroline');
-    expect($('#regna-content .sel-spec-text')?.textContent).toBe(
-      'Yonex · 64 RA · 16×19 · 100 sq in',
-    );
+    expect($('#selector .sel-racquet')?.textContent).toBe('Regna 100');
+    expect($('#selector [data-sel-strings]')?.textContent).toBe('Toroline');
+    expect($('#selector .sel-spec-text')?.textContent).toBe('Yonex · 64 RA · 16×19 · 100 sq in');
   });
-  test('"Natural gut" is the last strings choice on every racquet', () => {
-    for (const r of DB.racquets) {
-      const last = $(`#${r.id}-switcher button:last-child`);
-      expect(last?.id).toBe(`${r.id}-btn-gut`);
-      expect(last?.textContent).toBe('Natural gut');
-    }
+  test('"Natural gut" is the last strings choice', () => {
+    const last = $('#strings-switcher button:last-child');
+    expect(last?.id).toBe('btn-gut');
+    expect(last?.textContent).toBe('Natural gut');
   });
   test('no gut-toppick badges', () => expect($$('.gut-toppick-badge')).toHaveLength(0));
   // Since v1.8 the app says "racket"; data/ and content/ are held to it by the `racket` rule.
   test('no "racquet" anywhere on the page', () => {
-    expect($('#regna-content .sel-label')?.textContent).toBe('Racket');
+    expect($('#selector .sel-label')?.textContent).toBe('Racket');
     expect(document.body.textContent).not.toMatch(/racquet/i);
     expect(document.title).not.toMatch(/racquet/i);
   });
@@ -198,9 +200,8 @@ describe('behaviour', () => {
   });
   test('"Natural gut" names the card and steps aside while filters are on', () => {
     const view = $('#regna-gut-section')!;
-    const title = (): string | null | undefined =>
-      $('#regna-content [data-sel-strings]')?.textContent;
-    $<HTMLElement>('#regna-btn-gut')!.click();
+    const title = (): string | null | undefined => $('#selector [data-sel-strings]')?.textContent;
+    $<HTMLElement>('#btn-gut')!.click();
     expect(view.classList.contains('active')).toBe(true);
     expect(title()).toBe('Natural gut');
     hexChip().click();
@@ -208,7 +209,7 @@ describe('behaviour', () => {
     hexChip().click();
     expect(view.classList.contains('filter-hidden')).toBe(false);
     expect(view.classList.contains('active')).toBe(true);
-    $<HTMLElement>('#regna-switcher [data-nav-brand="toroline"]')!.click();
+    $<HTMLElement>('#strings-switcher [data-nav-brand="toroline"]')!.click();
     expect(view.classList.contains('active')).toBe(false);
     expect(title()).toBe('Toroline');
   });
@@ -337,7 +338,7 @@ describe('v0.990: order and search', () => {
     expect(order).toEqual(DB.hybrids.map((h) => h.id));
   });
   test('gut rows: mains before crosses', () => {
-    $<HTMLElement>('#regna-btn-gut')!.click();
+    $<HTMLElement>('#btn-gut')!.click();
     const cfg = $$('#regna-gut-section tr[data-config]').map((tr) => tr.dataset.config!);
     expect(cfg).toHaveLength(7);
     expect(cfg).toEqual(

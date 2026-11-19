@@ -60,7 +60,7 @@
       <h2>
         "Compare"
       " "
-      <div class="compare-racquet-tabs" id="compare-racquet-tabs">
+      <div class="compare-racquet" id="compare-racquet">
       " "
       <button aria-label="Close" class="compare-modal-close" id="compare-modal-close">
         "✕"
@@ -71,646 +71,647 @@
   " "
   <div class="cat-visible category-content" id="strings-content" style="display: block;">
     " "
-    <div id="percept-content" style="display: block;">
+    <div class="selector" id="selector">
       " "
-      <div class="selector" data-racquet="percept">
-        " "
-        <div class="sel-title">
-          <span class="sel-racquet">
-            "Percept 100D"
-          <span class="sel-x">
-            "×"
-          <span class="sel-strings" data-sel-strings="">
-            "Yonex"
-        " "
-        <div class="sel-spec">
-          <span class="sel-spec-text">
-            "Yonex · 66 RA · 18×19 · 100 sq in"
-        " "
-        <div class="sel-row">
-          <span class="sel-label">
-            "Racket"
-          <div class="racquet-switcher sel-racquets">
-            <button class="racquet-inactive" data-nav-racquet="regna">
-              "Regna 100"
-            <button class="racquet-active" data-nav-racquet="percept">
+      <div class="sel-title">
+        <span class="sel-racquet" data-sel-racquet="">
+          "Percept 100D"
+        <span class="sel-x">
+          "×"
+        <span class="sel-strings" data-sel-strings="">
+          "Yonex"
+      " "
+      <div class="sel-spec">
+        <span class="sel-spec-text" data-sel-spec="">
+          "Yonex · 66 RA · 18×19 · 100 sq in"
+      " "
+      <div class="sel-row">
+        <span class="sel-label">
+          "Racket"
+        <div class="rpick" data-rpick="card">
+          <button aria-controls="rpick-card-list" aria-expanded="false" aria-haspopup="listbox" class="rpick-button" data-rpick-toggle="" type="button">
+            <span class="rpick-current" data-rpick-current="">
               "Percept 100D"
-            <button class="racquet-inactive" data-nav-racquet="headpt630">
-              "Pro Tour 630"
-        " "
-        <div class="sel-row">
-          <span class="sel-label">
-            "Strings"
-          <div class="switcher" data-nav-switcher="percept" id="percept-switcher">
-            " "
-            <button class="inactive" data-nav-brand="toroline" id="percept-btn-toroline">
-              "Toroline"
-            " "
-            <button class="inactive" data-nav-brand="solinco" id="percept-btn-solinco">
-              "Solinco"
-            " "
-            <button class="active-yonex" data-nav-brand="yonex" id="percept-btn-yonex">
-              "Yonex"
-            " "
-            <button class="inactive" data-nav-brand="restring" id="percept-btn-restring">
-              "ReString"
-            " "
-            <button class="inactive" data-nav-brand="grapplesnake" id="percept-btn-grapplesnake">
-              "Grapplesnake"
-            " "
-            <button class="inactive" data-nav-brand="luxilon" id="percept-btn-luxilon">
-              "Luxilon"
-            " "
-            <button class="inactive" data-nav-brand="tourna" id="percept-btn-tourna">
-              "Tourna"
-            " "
-            <button class="gut-choice inactive" data-nav-brand="gut" id="percept-btn-gut">
-              "Natural gut"
-            " "
-      <div class="active brand-section yonex-view" id="percept-yonex-section">
-        " "
-        <div class="table-wrap">
-          " "
-          <table data-brand="yonex" data-racquet="percept" data-render="strings">
-            " "
-            <thead>
-              " "
-              <tr>
-                " "
-                <th class="sortable" data-col="string">
-                  "String"
-                " "
-                <th>
-                  "Shape"
-                " "
-                <th>
-                  "Gauge"
-                " "
-                <th>
-                  "Colors"
-                " "
-                <th class="sortable" data-col="stiffness">
-                  "Stiffness"
-                " "
-                <th class="sortable" data-col="power">
-                  "Power"
-                " "
-                <th>
-                  "Feel"
-                " "
-                <th class="sortable" data-col="spin">
-                  "Spin"
-                " "
-                <th class="sortable" data-col="control">
-                  "Control"
-                " "
-                <th class="sortable" data-col="comfort">
-                  "Comfort"
-                " "
-                <th>
-                  "Tension (kg)"
-                " "
-                <th>
-                  "Notes"
-                " "
-            <tbody>
-              <tr data-feel="crisp,firm" data-id="yonex-poly-tour-spin" data-shape="pentagonal" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-spin" type="checkbox">
-                  "Poly Tour Spin"
-                <td>
-                  "Pentagonal"
-                <td>
-                  "1.20 / 17"
-                  <br>
-                  "1.25 / 16L"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(59, 130, 246);" title="Blue">
-                    <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
-                  <span class="color-label">
-                    "Blue, Black"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Firm · 1.08"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 90%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Low-Med"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 38%;">
-                <td>
-                  <span class="tag tag-crisp">
-                    "Crisp"
-                  <span class="tag tag-firm">
-                    "Firm"
-                  <br>
-                  "Pentagonal, low launch"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Very High"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 92%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Outstanding"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 95%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Low"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 42%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "21–23"
-                <td class="notes">
-                  "Low launch on a low-launch frame: the flattest Yonex-on-Yonex combination here. Pentagonal edges supply spin in the 18×19 where snapback is limited. Firm bed at 21–23 kg with feedback the 66 RA passes through clearly. Same 1.08 stiffness, 1 kg below the Regna because the extra crosses raise effective bed stiffness."
-              <tr data-feel="crisp,soft" data-id="yonex-poly-tour-strike" data-shape="round" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-strike" type="checkbox">
-                  "Poly Tour Strike"
-                <td>
-                  "Round"
-                <td>
-                  "1.20 / 17"
-                  <br>
-                  "1.25 / 16L"
-                  <br>
-                  "1.30 / 16"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(85, 85, 85);" title="Grey">
-                    <span class="color-dot" style="background: rgb(59, 130, 246);" title="Blue">
-                    <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
-                  <span class="color-label">
-                    "Grey, Blue, Black"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Medium · 0.92"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 66%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Low"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 30%;">
-                <td>
-                  <span class="tag tag-crisp">
-                    "Crisp"
-                  <br>
-                  "Controlled, precise"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-High"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 62%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Excellent"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 94%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Moderate"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 52%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "21–23"
-                <td class="notes">
-                  "Round in the 18×19 limits snapback, so spin is moderate and launch is very low in a frame that already flies flat — a control-first, penetrating bed. Its tension hold matters more here: a dense pattern shows tension loss early and is slow to restring. Firm feedback through the 66 RA. 1 kg below the Regna."
-              <tr data-feel="firm" data-id="yonex-poly-tour-pro" data-shape="round" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-pro" type="checkbox">
-                  "Poly Tour Pro"
-                <td>
-                  "Round"
-                <td>
-                  "1.20 / 17"
-                  <br>
-                  "1.25 / 16L"
-                  <br>
-                  "1.30 / 16"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(255, 224, 51);" title="Flash Yellow">
-                    <span class="color-dot" style="background: rgb(59, 130, 246);" title="Blue">
-                  <span class="color-label">
-                    "Flash Yellow, Blue"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Firm · 1.05"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 85%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Medium"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 55%;">
-                <td>
-                  <span class="tag tag-soft">
-                    "Moderate"
-                  <br>
-                  "Pocketing, predictable"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Medium"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 55%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Excellent"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 90%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 65%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "22–24"
-                <td class="notes">
-                  "Round in the 18×19 restricts snapback, so full-bed spin is on the low side and launch is low. The pocketing takes the edge off a firm, low-powered frame. Yonex ships demo 100Ds strung with Poly Tour Pro 1.25. Faster tension loss than Strike shows earlier in a dense pattern. 1 kg below the Regna."
-              <tr data-feel="soft" data-id="yonex-poly-tour-rev" data-shape="octagonal" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-rev" type="checkbox">
-                  "Poly Tour Rev"
-                <td>
-                  "Octagonal"
-                <td>
-                  "1.20 / 17"
-                  <br>
-                  "1.25 / 16L"
-                  <br>
-                  "1.30 / 16"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(147, 51, 234);" title="Purple">
-                    <span class="color-dot" style="background: rgb(255, 140, 0);" title="Orange">
-                    <span class="color-dot" style="background: rgb(255, 255, 255);" title="White">
-                  <span class="color-label">
-                    "Purple, Orange, White"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-Soft · 0.85–0.95"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 63%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-High"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 62%;">
-                <td>
-                  <span class="tag tag-soft">
-                    "Muted"
-                  <br>
-                  "Octagonal, damped"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Very High"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 90%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Excellent"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 92%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Moderate"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 50%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "21–23"
-                <td class="notes">
-                  "Eight edges supply spin in the 18×19 where snapback is limited; the silicone slickness recovers a little of the cross movement the pattern takes away. Muted feedback through a firm frame, medium-firm bed. More energy than Strike, useful in a low-powered hoop. 1 kg below the Regna."
-              <tr data-feel="crisp,soft" data-id="yonex-poly-tour-drive" data-shape="pentagonal" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-drive" type="checkbox">
-                  "Poly Tour Drive"
-                <td>
-                  "Pentagonal"
-                <td>
-                  "1.20 / 17"
-                  <br>
-                  "1.25 / 16L"
-                  <br>
-                  "1.30 / 16"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(255, 224, 51);" title="Flash Yellow">
-                  <span class="color-label">
-                    "Flash Yellow"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-Soft · ~0.90"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 63%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-High"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 65%;">
-                <td>
-                  <span class="tag tag-crisp">
-                    "Crisp"
-                  <br>
-                  "Pentagonal, medium-soft"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Very High"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 88%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Very Good"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 85%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 62%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "22–24"
-                <td class="notes">
-                  "Pentagonal edges do the spin work in the 18×19 where snapback is limited, and the string's medium-soft stiffness plus the frame's extra crosses give a firm, low-launch bed. Slightly more pocketing than Spin, less lockdown. The price makes it the cheap way to run a shaped poly in this pattern. 1 kg below the Regna."
-              <tr data-feel="firm" data-id="yonex-poly-tour-force" data-shape="round" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-force" type="checkbox">
-                  "Poly Tour Force"
-                <td>
-                  "Round"
-                <td>
-                  "1.20 / 17"
-                  <br>
-                  "1.25 / 16L"
-                  <br>
-                  "1.30 / 16"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(220, 38, 38);" title="Ruby Red">
-                    <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
-                  <span class="color-label">
-                    "Ruby Red, Black"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-Firm"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 79%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-High"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 68%;">
-                <td>
-                  <span class="tag tag-lively">
-                    "Responsive"
-                  <br>
-                  "Power-leaning, responsive"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Medium"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 58%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 70%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 68%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "21–23"
-                <td class="notes">
-                  "The Percept is a low-powered frame, and the 18×19 lowers launch further — Force's extra energy return offsets both. Round profile: spin is snapback-driven, and the dense crosses limit it, so spin is moderate. Reported tension hold suits a pattern that shows loss early. Stiffness still unmeasured. 1 kg below the Regna."
-              <tr data-feel="soft,lively" data-id="yonex-poly-tour-fire" data-shape="round" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-fire" type="checkbox">
-                  "Poly Tour Fire"
-                <td>
-                  "Round"
-                <td>
-                  "1.20 / 17"
-                  <br>
-                  "1.25 / 16L"
-                  <br>
-                  "1.30 / 16"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(239, 68, 68);" title="Red">
-                  <span class="color-label">
-                    "Red"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Soft · 0.80"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 48%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "High"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 75%;">
-                <td>
-                  <span class="tag tag-lively">
-                    "Lively"
-                  <br>
-                  "Silicone-infused power"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-High"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 68%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 72%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 68%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "22–24"
-                <td class="notes">
-                  "A power poly in a low-powered frame: the energy return and higher launch offset what the 18×19 takes away, and the extra crosses contain the liveliness. Round, so spin is snapback-driven — the silicone slickness helps the mains move in the dense pattern. Medium-soft, lively bed. 1 kg below the Regna."
-              <tr data-feel="soft,plush" data-id="yonex-poly-tour-air" data-shape="round" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-air" type="checkbox">
-                  "Poly Tour Air"
-                <td>
-                  "Round"
-                <td>
-                  "1.25 / 16L"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(96, 165, 250);" title="Sky Blue">
-                  <span class="color-label">
-                    "Sky Blue"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Soft · 0.72"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 36%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Med-High"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 68%;">
-                <td>
-                  <span class="tag tag-soft">
-                    "Soft"
-                  <br>
-                  "Plush, comfortable"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "High"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 78%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 70%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Excellent"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 90%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "23–25"
-                <td class="notes">
-                  "Very soft round poly in a firm, low-launch frame: the 18×19's extra crosses firm the bed and pull the high arc down, so the string's character is more contained here than in the Regna. Spin is modest — round profile, restricted snapback. Plush contact through a 66 RA frame. 1 kg below the Regna."
-              <tr data-feel="soft" data-id="yonex-poly-tour-tough" data-shape="round" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-tough" type="checkbox">
-                  "Poly Tour Tough"
-                <td>
-                  "Round"
-                <td>
-                  "1.25 / 16L"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
-                  <span class="color-label">
-                    "Black"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Soft · 0.77"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 43%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Low-Med"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 40%;">
-                <td>
-                  <span class="tag tag-round">
-                    "Smooth"
-                  <br>
-                  "Low-powered, muted"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Medium"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 55%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 75%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Good"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 60%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "21–23"
-                <td class="notes">
-                  "Low-powered string in a low-powered frame: the least energetic Yonex combination here — very flat, very controlled, muted contact. Round profile with restricted snapback in the 18×19 gives modest spin. Durability shows well in a pattern that's slow to restring. 1 kg below the Regna."
-              <tr data-feel="soft,plush" data-id="yonex-tour-super-850-multi" data-shape="round" data-type="string">
-                <td class="string-name">
-                  <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-tour-super-850-multi" type="checkbox">
-                  "Tour Super 850 (Multi)"
-                <td>
-                  "Round (multi)"
-                <td>
-                  "1.25 / 16L"
-                  <br>
-                  "1.30 / 16"
-                  <br>
-                  "1.32 / 16"
-                <td>
-                  <div class="colors">
-                    <span class="color-dot" style="background: rgb(245, 240, 224);" title="Natural">
-                  <span class="color-label">
-                    "Natural"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Soft"
-                  <div class="bar">
-                    <div class="bar-fill stiff" style="width: 45%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Very High"
-                  <div class="bar">
-                    <div class="bar-fill power" style="width: 85%;">
-                <td>
-                  <span class="tag tag-soft">
-                    "Soft"
-                  <br>
-                  "Plush, arm-friendly"
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Low-Med"
-                  <div class="bar">
-                    <div class="bar-fill spin" style="width: 35%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Moderate"
-                  <div class="bar">
-                    <div class="bar-fill control" style="width: 58%;">
-                <td class="bar-cell">
-                  <span class="bar-label">
-                    "Excellent"
-                  <div class="bar">
-                    <div class="bar-fill comfort" style="width: 92%;">
-                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
-                  "23–25"
-                <td class="notes">
-                  "As crosses in the 18×19 the dense pattern limits cross movement, so the multi contributes comfort and power without much snapback; under Spin or Strike mains the hybrid plays softer than a full poly bed while launch stays controlled. Full bed: high launch and power with the 18×19 pulling launch down. 1 kg below the Regna."
-            " "
-        <div class="footer">
-          " "
-          <p>
-            "Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Tennispro, and Yonex product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Yonex lineup. All Polytour polys are pre-stretched at controlled temperatures for improved tension maintenance."
-          " "
-      <div class="legend">
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(148, 163, 184), rgb(71, 85, 105));">
-          "Stiffness (higher = firmer)"
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(251, 146, 60), rgb(220, 38, 38));">
-          "Power (higher = more power)"
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
-          "Spin potential"
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(167, 139, 250), rgb(124, 58, 237));">
-          "Control"
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(96, 165, 250), rgb(129, 140, 248));">
-          "Comfort"
-        " "
-      <div class="version-tag">
-        "v*"
+            <span aria-hidden="true" class="rpick-caret">
+              "▾"
       " "
+      <div class="sel-row">
+        <span class="sel-label">
+          "Strings"
+        <div class="switcher" id="strings-switcher">
+          " "
+          <button class="inactive" data-nav-brand="toroline" id="btn-toroline">
+            "Toroline"
+          " "
+          <button class="inactive" data-nav-brand="solinco" id="btn-solinco">
+            "Solinco"
+          " "
+          <button class="active-yonex" data-nav-brand="yonex" id="btn-yonex">
+            "Yonex"
+          " "
+          <button class="inactive" data-nav-brand="restring" id="btn-restring">
+            "ReString"
+          " "
+          <button class="inactive" data-nav-brand="grapplesnake" id="btn-grapplesnake">
+            "Grapplesnake"
+          " "
+          <button class="inactive" data-nav-brand="luxilon" id="btn-luxilon">
+            "Luxilon"
+          " "
+          <button class="inactive" data-nav-brand="tourna" id="btn-tourna">
+            "Tourna"
+          " "
+          <button class="gut-choice inactive" data-nav-brand="gut" id="btn-gut">
+            "Natural gut"
+          " "
+    <div id="racquet-pages">
+      " "
+      <div data-racquet-page="percept" id="percept-content" style="display: block;">
+        " "
+        <div class="active brand-section yonex-view" id="percept-yonex-section">
+          " "
+          <div class="table-wrap">
+            " "
+            <table data-brand="yonex" data-racquet="percept" data-render="strings">
+              " "
+              <thead>
+                " "
+                <tr>
+                  " "
+                  <th class="sortable" data-col="string">
+                    "String"
+                  " "
+                  <th>
+                    "Shape"
+                  " "
+                  <th>
+                    "Gauge"
+                  " "
+                  <th>
+                    "Colors"
+                  " "
+                  <th class="sortable" data-col="stiffness">
+                    "Stiffness"
+                  " "
+                  <th class="sortable" data-col="power">
+                    "Power"
+                  " "
+                  <th>
+                    "Feel"
+                  " "
+                  <th class="sortable" data-col="spin">
+                    "Spin"
+                  " "
+                  <th class="sortable" data-col="control">
+                    "Control"
+                  " "
+                  <th class="sortable" data-col="comfort">
+                    "Comfort"
+                  " "
+                  <th>
+                    "Tension (kg)"
+                  " "
+                  <th>
+                    "Notes"
+                  " "
+              <tbody>
+                <tr data-feel="crisp,firm" data-id="yonex-poly-tour-spin" data-shape="pentagonal" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-spin" type="checkbox">
+                    "Poly Tour Spin"
+                  <td>
+                    "Pentagonal"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(59, 130, 246);" title="Blue">
+                      <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-label">
+                      "Blue, Black"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Firm · 1.08"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 90%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low-Med"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 38%;">
+                  <td>
+                    <span class="tag tag-crisp">
+                      "Crisp"
+                    <span class="tag tag-firm">
+                      "Firm"
+                    <br>
+                    "Pentagonal, low launch"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 92%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Outstanding"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 95%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 42%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "Low launch on a low-launch frame: the flattest Yonex-on-Yonex combination here. Pentagonal edges supply spin in the 18×19 where snapback is limited. Firm bed at 21–23 kg with feedback the 66 RA passes through clearly. Same 1.08 stiffness, 1 kg below the Regna because the extra crosses raise effective bed stiffness."
+                <tr data-feel="crisp,soft" data-id="yonex-poly-tour-strike" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-strike" type="checkbox">
+                    "Poly Tour Strike"
+                  <td>
+                    "Round"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(85, 85, 85);" title="Grey">
+                      <span class="color-dot" style="background: rgb(59, 130, 246);" title="Blue">
+                      <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-label">
+                      "Grey, Blue, Black"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium · 0.92"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 66%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 30%;">
+                  <td>
+                    <span class="tag tag-crisp">
+                      "Crisp"
+                    <br>
+                    "Controlled, precise"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 62%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Excellent"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 94%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Moderate"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 52%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "Round in the 18×19 limits snapback, so spin is moderate and launch is very low in a frame that already flies flat — a control-first, penetrating bed. Its tension hold matters more here: a dense pattern shows tension loss early and is slow to restring. Firm feedback through the 66 RA. 1 kg below the Regna."
+                <tr data-feel="firm" data-id="yonex-poly-tour-pro" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-pro" type="checkbox">
+                    "Poly Tour Pro"
+                  <td>
+                    "Round"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(255, 224, 51);" title="Flash Yellow">
+                      <span class="color-dot" style="background: rgb(59, 130, 246);" title="Blue">
+                    <span class="color-label">
+                      "Flash Yellow, Blue"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Firm · 1.05"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 85%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 55%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Moderate"
+                    <br>
+                    "Pocketing, predictable"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 55%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Excellent"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 90%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 65%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "Round in the 18×19 restricts snapback, so full-bed spin is on the low side and launch is low. The pocketing takes the edge off a firm, low-powered frame. Yonex ships demo 100Ds strung with Poly Tour Pro 1.25. Faster tension loss than Strike shows earlier in a dense pattern. 1 kg below the Regna."
+                <tr data-feel="soft" data-id="yonex-poly-tour-rev" data-shape="octagonal" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-rev" type="checkbox">
+                    "Poly Tour Rev"
+                  <td>
+                    "Octagonal"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(147, 51, 234);" title="Purple">
+                      <span class="color-dot" style="background: rgb(255, 140, 0);" title="Orange">
+                      <span class="color-dot" style="background: rgb(255, 255, 255);" title="White">
+                    <span class="color-label">
+                      "Purple, Orange, White"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Soft · 0.85–0.95"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 63%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 62%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Muted"
+                    <br>
+                    "Octagonal, damped"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 90%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Excellent"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 92%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Moderate"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 50%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "Eight edges supply spin in the 18×19 where snapback is limited; the silicone slickness recovers a little of the cross movement the pattern takes away. Muted feedback through a firm frame, medium-firm bed. More energy than Strike, useful in a low-powered hoop. 1 kg below the Regna."
+                <tr data-feel="crisp,soft" data-id="yonex-poly-tour-drive" data-shape="pentagonal" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-drive" type="checkbox">
+                    "Poly Tour Drive"
+                  <td>
+                    "Pentagonal"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(255, 224, 51);" title="Flash Yellow">
+                    <span class="color-label">
+                      "Flash Yellow"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Soft · ~0.90"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 63%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 65%;">
+                  <td>
+                    <span class="tag tag-crisp">
+                      "Crisp"
+                    <br>
+                    "Pentagonal, medium-soft"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 88%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 85%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 62%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "Pentagonal edges do the spin work in the 18×19 where snapback is limited, and the string's medium-soft stiffness plus the frame's extra crosses give a firm, low-launch bed. Slightly more pocketing than Spin, less lockdown. The price makes it the cheap way to run a shaped poly in this pattern. 1 kg below the Regna."
+                <tr data-feel="firm" data-id="yonex-poly-tour-force" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-force" type="checkbox">
+                    "Poly Tour Force"
+                  <td>
+                    "Round"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(220, 38, 38);" title="Ruby Red">
+                      <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-label">
+                      "Ruby Red, Black"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-Firm"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 79%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 68%;">
+                  <td>
+                    <span class="tag tag-lively">
+                      "Responsive"
+                    <br>
+                    "Power-leaning, responsive"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 58%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 70%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 68%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "The Percept is a low-powered frame, and the 18×19 lowers launch further — Force's extra energy return offsets both. Round profile: spin is snapback-driven, and the dense crosses limit it, so spin is moderate. Reported tension hold suits a pattern that shows loss early. Stiffness still unmeasured. 1 kg below the Regna."
+                <tr data-feel="soft,lively" data-id="yonex-poly-tour-fire" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-fire" type="checkbox">
+                    "Poly Tour Fire"
+                  <td>
+                    "Round"
+                  <td>
+                    "1.20 / 17"
+                    <br>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(239, 68, 68);" title="Red">
+                    <span class="color-label">
+                      "Red"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Soft · 0.80"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 48%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 75%;">
+                  <td>
+                    <span class="tag tag-lively">
+                      "Lively"
+                    <br>
+                    "Silicone-infused power"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 68%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 72%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 68%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "22–24"
+                  <td class="notes">
+                    "A power poly in a low-powered frame: the energy return and higher launch offset what the 18×19 takes away, and the extra crosses contain the liveliness. Round, so spin is snapback-driven — the silicone slickness helps the mains move in the dense pattern. Medium-soft, lively bed. 1 kg below the Regna."
+                <tr data-feel="soft,plush" data-id="yonex-poly-tour-air" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-air" type="checkbox">
+                    "Poly Tour Air"
+                  <td>
+                    "Round"
+                  <td>
+                    "1.25 / 16L"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(96, 165, 250);" title="Sky Blue">
+                    <span class="color-label">
+                      "Sky Blue"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Soft · 0.72"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 36%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Med-High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 68%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Soft"
+                    <br>
+                    "Plush, comfortable"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "High"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 78%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 70%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Excellent"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 90%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "23–25"
+                  <td class="notes">
+                    "Very soft round poly in a firm, low-launch frame: the 18×19's extra crosses firm the bed and pull the high arc down, so the string's character is more contained here than in the Regna. Spin is modest — round profile, restricted snapback. Plush contact through a 66 RA frame. 1 kg below the Regna."
+                <tr data-feel="soft" data-id="yonex-poly-tour-tough" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-tough" type="checkbox">
+                    "Poly Tour Tough"
+                  <td>
+                    "Round"
+                  <td>
+                    "1.25 / 16L"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-label">
+                      "Black"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Soft · 0.77"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 43%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low-Med"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 40%;">
+                  <td>
+                    <span class="tag tag-round">
+                      "Smooth"
+                    <br>
+                    "Low-powered, muted"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Medium"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 55%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 75%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Good"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 60%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "21–23"
+                  <td class="notes">
+                    "Low-powered string in a low-powered frame: the least energetic Yonex combination here — very flat, very controlled, muted contact. Round profile with restricted snapback in the 18×19 gives modest spin. Durability shows well in a pattern that's slow to restring. 1 kg below the Regna."
+                <tr data-feel="soft,plush" data-id="yonex-tour-super-850-multi" data-shape="round" data-type="string">
+                  <td class="string-name">
+                    <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-tour-super-850-multi" type="checkbox">
+                    "Tour Super 850 (Multi)"
+                  <td>
+                    "Round (multi)"
+                  <td>
+                    "1.25 / 16L"
+                    <br>
+                    "1.30 / 16"
+                    <br>
+                    "1.32 / 16"
+                  <td>
+                    <div class="colors">
+                      <span class="color-dot" style="background: rgb(245, 240, 224);" title="Natural">
+                    <span class="color-label">
+                      "Natural"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Soft"
+                    <div class="bar">
+                      <div class="bar-fill stiff" style="width: 45%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Very High"
+                    <div class="bar">
+                      <div class="bar-fill power" style="width: 85%;">
+                  <td>
+                    <span class="tag tag-soft">
+                      "Soft"
+                    <br>
+                    "Plush, arm-friendly"
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Low-Med"
+                    <div class="bar">
+                      <div class="bar-fill spin" style="width: 35%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Moderate"
+                    <div class="bar">
+                      <div class="bar-fill control" style="width: 58%;">
+                  <td class="bar-cell">
+                    <span class="bar-label">
+                      "Excellent"
+                    <div class="bar">
+                      <div class="bar-fill comfort" style="width: 92%;">
+                  <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                    "23–25"
+                  <td class="notes">
+                    "As crosses in the 18×19 the dense pattern limits cross movement, so the multi contributes comfort and power without much snapback; under Spin or Strike mains the hybrid plays softer than a full poly bed while launch stays controlled. Full bed: high launch and power with the 18×19 pulling launch down. 1 kg below the Regna."
+              " "
+          <div class="footer">
+            " "
+            <p>
+              "Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, Tennispro, and Yonex product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Yonex lineup. All Polytour polys are pre-stretched at controlled temperatures for improved tension maintenance."
+            " "
+    <div class="legend">
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(148, 163, 184), rgb(71, 85, 105));">
+        "Stiffness (higher = firmer)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(251, 146, 60), rgb(220, 38, 38));">
+        "Power (higher = more power)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
+        "Spin potential"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(167, 139, 250), rgb(124, 58, 237));">
+        "Control"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(96, 165, 250), rgb(129, 140, 248));">
+        "Comfort"
+      " "
+    <div class="version-tag">
+      "v*"
+    " "

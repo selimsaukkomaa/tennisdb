@@ -1,6 +1,9 @@
-// Builds the page body from data: one container per racquet (the racquet + strings card, one
-// section per string brand, the natural gut view) and the grips category. v0.990 had this
-// markup written out three times with per-racquet ids; here a fourth racquet needs only data.
+// Builds the page body from data: the racquet + strings card, the racquet pages (one section
+// per string brand and the natural gut view) and the grips category. v0.990 had this markup
+// written out three times with per-racquet ids; here a fourth racquet needs only data.
+//
+// Since v1.10 the card is shared by every racquet and a racquet's page is built the first time
+// it is shown (nav.ts), so ten racquets don't put ten pages of tables in the DOM at load.
 //
 // Markup mirrors v0.990 line for line: elements sit on their own lines (the whitespace between
 // them matters wherever they render inline) and attribute values are the legacy ones.
@@ -24,6 +27,7 @@ import { gripBrandLabel, racquetSpec } from '../core/labels';
 import { perRacquet } from '../core/pairings';
 import { APP_VERSION } from '../version';
 import { html, raw, type SafeHtml } from './html';
+import { pickerHtml } from './picker';
 import {
   HYBRID_HEAD,
   OVERGRIP_HEAD,
@@ -39,35 +43,30 @@ import {
 
 export const racquetContentId = (rid: RacquetId): string => `${rid}-content`;
 export const brandSectionId = (rid: RacquetId, brand: BrandId): string => `${rid}-${brand}-section`;
-export const brandButtonId = (rid: RacquetId, brand: BrandId): string => `${rid}-btn-${brand}`;
+/** The card's strings choices, shared by every racquet since v1.10. */
+export const brandButtonId = (brand: BrandId): string => `btn-${brand}`;
 const brandHeaderId = (rid: RacquetId, brand: BrandId): string => `fh-${rid}-${brand}-section`;
 export const gripSectionId = (brand: BrandId): string => `grip-${brand}-section`;
 
-/** The natural gut hybrids are one more choice in each racquet's strings row (since v1.8). */
+/** The natural gut hybrids are one more choice in the strings row (since v1.8). */
 export const GUT = 'gut';
 
 // ---------------------------------------------------------------- the racquet + strings card
 
-/** One racquet's choice of racquet: every racquet, this one marked. */
-function racquetChoice(db: TennisDb, current: Racquet): SafeHtml {
-  return html`<div class="racquet-switcher sel-racquets">${db.racquets.map(
-    (r) =>
-      html`<button class="${r.id === current.id ? 'racquet-active' : 'racquet-inactive'}" data-nav-racquet="${r.id}">${r.model}</button>`,
-  )}</div>`;
-}
-
 /**
- * The card at the top of a racquet's page: "Regna 100 × Toroline", the racquet's spec, then the
- * racquet and the strings to choose from. nav.ts keeps the title's strings name current.
+ * The card above the racquet pages: "Regna 100 × Toroline", the racquet's spec, then the racquet
+ * menu (picker.ts, since v1.10) and the strings to choose from. It is written for the first
+ * racquet and brand; nav.ts keeps the title, spec and choices current.
  */
-function selector(db: TennisDb, r: Racquet): SafeHtml {
+function selector(db: TennisDb): SafeHtml {
+  const r = db.racquets[0]!;
   const brands = Object.keys(db.brandsStrings);
-  return html`<div class="selector" data-racquet="${r.id}">
-<div class="sel-title"><span class="sel-racquet">${r.model}</span><span class="sel-x">×</span><span class="sel-strings" data-sel-strings>${db.brandsStrings[brands[0]!]!.name}</span></div>
-<div class="sel-spec"><span class="sel-spec-text">${r.brand} · ${racquetSpec(r)}</span><span class="filter-all-badge" id="${r.id}-filter-badge">— showing all</span></div>
-<div class="sel-row"><span class="sel-label">Racket</span>${racquetChoice(db, r)}</div>
-<div class="sel-row"><span class="sel-label">Strings</span><div class="switcher" id="${r.id}-switcher" data-nav-switcher="${r.id}">
-${brands.map((b) => html`<button id="${brandButtonId(r.id, b)}" data-nav-brand="${b}">${db.brandsStrings[b]!.name}</button>\n`)}<button class="gut-choice" id="${brandButtonId(r.id, GUT)}" data-nav-brand="${GUT}">Natural gut</button>
+  return html`<div class="selector" id="selector">
+<div class="sel-title"><span class="sel-racquet" data-sel-racquet>${r.model}</span><span class="sel-x">×</span><span class="sel-strings" data-sel-strings>${db.brandsStrings[brands[0]!]!.name}</span></div>
+<div class="sel-spec"><span class="sel-spec-text" data-sel-spec>${r.brand} · ${racquetSpec(r)}</span><span class="filter-all-badge" id="filter-badge">— showing all</span></div>
+<div class="sel-row"><span class="sel-label">Racket</span>${pickerHtml(db, 'card', r.id)}</div>
+<div class="sel-row"><span class="sel-label">Strings</span><div class="switcher" id="strings-switcher">
+${brands.map((b) => html`<button id="${brandButtonId(b)}" data-nav-brand="${b}">${db.brandsStrings[b]!.name}</button>\n`)}<button class="gut-choice" id="${brandButtonId(GUT)}" data-nav-brand="${GUT}">Natural gut</button>
 </div></div>
 </div>`;
 }
@@ -160,21 +159,26 @@ ${STRING_HEAD}
 `;
 }
 
-function racquetContent(db: TennisDb, copy: Copy, r: Racquet, first: boolean): SafeHtml {
+/** A racquet's page: a section per string brand and the natural gut view (filled by gut.ts). */
+export function racquetPage(db: TennisDb, copy: Copy, r: Racquet): SafeHtml {
   const brands = Object.keys(db.brandsStrings);
-  return html`<div id="${racquetContentId(r.id)}"${first ? '' : raw(' style="display:none;"')}>
-${selector(db, r)}
+  return html`<div id="${racquetContentId(r.id)}" data-racquet-page="${r.id}">
 ${brands.map((b) => brandSection(db, copy, r, b))}<div class="gut-view" id="${brandSectionId(r.id, GUT)}" data-racquet="${r.id}"></div>
-${legend(copy.legends.strings)}
-<div class="version-tag">v${APP_VERSION}</div>
 </div>
 `;
 }
 
+/** The racquet pages go here as they are built. */
+export const RACQUET_PAGES_ID = 'racquet-pages';
+
 function stringsCategory(db: TennisDb, copy: Copy): SafeHtml {
   return html`<div class="category-content cat-visible" id="strings-content">
 ${stringFilterBar()}
-${db.racquets.map((r, i) => racquetContent(db, copy, r, i === 0))}</div>
+${selector(db)}
+<div id="${RACQUET_PAGES_ID}"></div>
+${legend(copy.legends.strings)}
+<div class="version-tag">v${APP_VERSION}</div>
+</div>
 `;
 }
 

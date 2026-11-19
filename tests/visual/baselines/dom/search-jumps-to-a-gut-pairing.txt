@@ -60,7 +60,7 @@
       <h2>
         "Compare"
       " "
-      <div class="compare-racquet-tabs" id="compare-racquet-tabs">
+      <div class="compare-racquet" id="compare-racquet">
       " "
       <button aria-label="Close" class="compare-modal-close" id="compare-modal-close">
         "✕"
@@ -71,463 +71,464 @@
   " "
   <div class="cat-visible category-content" id="strings-content" style="display: block;">
     " "
-    <div id="percept-content" style="display: block;">
+    <div class="selector" id="selector">
       " "
-      <div class="selector" data-racquet="percept">
-        " "
-        <div class="sel-title">
-          <span class="sel-racquet">
-            "Percept 100D"
-          <span class="sel-x">
-            "×"
-          <span class="sel-strings" data-sel-strings="">
-            "Natural gut"
-        " "
-        <div class="sel-spec">
-          <span class="sel-spec-text">
-            "Yonex · 66 RA · 18×19 · 100 sq in"
-        " "
-        <div class="sel-row">
-          <span class="sel-label">
-            "Racket"
-          <div class="racquet-switcher sel-racquets">
-            <button class="racquet-inactive" data-nav-racquet="regna">
-              "Regna 100"
-            <button class="racquet-active" data-nav-racquet="percept">
+      <div class="sel-title">
+        <span class="sel-racquet" data-sel-racquet="">
+          "Percept 100D"
+        <span class="sel-x">
+          "×"
+        <span class="sel-strings" data-sel-strings="">
+          "Natural gut"
+      " "
+      <div class="sel-spec">
+        <span class="sel-spec-text" data-sel-spec="">
+          "Yonex · 66 RA · 18×19 · 100 sq in"
+      " "
+      <div class="sel-row">
+        <span class="sel-label">
+          "Racket"
+        <div class="rpick" data-rpick="card">
+          <button aria-controls="rpick-card-list" aria-expanded="false" aria-haspopup="listbox" class="rpick-button" data-rpick-toggle="" type="button">
+            <span class="rpick-current" data-rpick-current="">
               "Percept 100D"
-            <button class="racquet-inactive" data-nav-racquet="headpt630">
-              "Pro Tour 630"
-        " "
-        <div class="sel-row">
-          <span class="sel-label">
-            "Strings"
-          <div class="switcher" data-nav-switcher="percept" id="percept-switcher">
-            " "
-            <button class="inactive" data-nav-brand="toroline" id="percept-btn-toroline">
-              "Toroline"
-            " "
-            <button class="inactive" data-nav-brand="solinco" id="percept-btn-solinco">
-              "Solinco"
-            " "
-            <button class="inactive" data-nav-brand="yonex" id="percept-btn-yonex">
-              "Yonex"
-            " "
-            <button class="inactive" data-nav-brand="restring" id="percept-btn-restring">
-              "ReString"
-            " "
-            <button class="inactive" data-nav-brand="grapplesnake" id="percept-btn-grapplesnake">
-              "Grapplesnake"
-            " "
-            <button class="inactive" data-nav-brand="luxilon" id="percept-btn-luxilon">
-              "Luxilon"
-            " "
-            <button class="inactive" data-nav-brand="tourna" id="percept-btn-tourna">
-              "Tourna"
-            " "
-            <button class="active-gut gut-choice" data-nav-brand="gut" id="percept-btn-gut">
-              "Natural gut"
-            " "
-      <div class="active gut-view" data-racquet="percept" id="percept-gut-section">
-        <div class="gut-intro">
-          <div class="gut-intro-blurb">
-            "Natural gut is made from cow serosa fibers — the most elastic, comfortable, and powerful string material available. Two configurations are practical:"
-            <strong>
-              "⬆ gut mains"
-            "(max power & feel; the Federer setup) or"
-            <strong>
-              "⬇ gut crosses"
-            "(max spin & control; the Djokovic setup, with longer gut life since crosses move less)."
-          <div class="gut-intro-cards">
-            <div class="gut-intro-card" data-brand="gut">
-              <div class="gut-intro-title">
-                "Babolat VS Touch"
-              <div class="gut-intro-gauges">
-                "1.30 / 16 · 1.35 / 15L"
-              <div class="gut-intro-desc">
-                "The reference natural gut since 1925. BT7 Thermogut coating for moisture resistance. Premium feel and exceptional tension stability."
-              <div class="gut-intro-price">
-                "~€42-50/set"
-            <div class="gut-intro-card" data-brand="gut">
-              <div class="gut-intro-title">
-                "Wilson Natural Gut"
-              <div class="gut-intro-gauges">
-                "1.25 / 17 · 1.30 / 16"
-              <div class="gut-intro-desc">
-                "Historically manufactured by Babolat for Wilson. Often plays similarly to VS Touch with a different coating. 17 gauge is the thinnest mainstream gut available."
-              <div class="gut-intro-price">
-                "~€35-42/set"
-        <div class="gut-table-wrap">
-          <table class="gut-table">
-            <thead>
-              <tr>
-                <th>
-                  "Config"
-                <th>
-                  "Mains"
-                <th>
-                  "Crosses"
-                <th>
-                  "Feel"
-                <th>
-                  "Power"
-                <th>
-                  "Spin"
-                <th>
-                  "Comfort"
-                <th title="How well the cross protects gut mains; only applies to gut-mains config">
-                  "Gut Protection"
-                <th>
-                  "Tension (M/X)"
-                <th>
-                  "Notes"
-            <tbody>
-              <tr class="search-flash" data-config="gut-mains" data-id="gh-percept-1">
-                <td class="gut-config-cell gut-config-mains">
-                  <span class="gut-config-icon">
-                    "⬆"
-                  <span class="gut-config-label">
-                    "Gut Mains"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="gut">
-                    <span class="gut-string-name">
-                      "Babolat VS Touch"
-                    <span class="gut-string-gauge">
-                      "1.30 / 16"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="luxilon">
-                    <span class="gut-string-name">
-                      "ALU Power Soft"
-                    <span class="gut-string-gauge">
-                      "1.25 / 16L"
-                <td class="gut-feel-cell">
-                  "Plush · Round"
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Very High"
-                    <div class="bar">
-                      <div class="bar-fill power" style="width: 92%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Medium"
-                    <div class="bar">
-                      <div class="bar-fill spin" style="width: 58%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Excellent"
-                    <div class="bar">
-                      <div class="bar-fill comfort" style="width: 92%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Very High"
-                    <div class="bar">
-                      <div class="bar-fill gut-protection" style="width: 88%;">
-                <td class="gut-tension-cell">
-                  "24/22"
-                <td class="gut-notes-cell">
-                  "Gut mains over ALU Power Soft crosses: maximum dwell in a firm, low-powered frame — the gut adds power and the soft cross keeps the bed from firming up through the 18×19. ALU Power Soft is gentle on the gut. Two round strings, so spin relies on what the pattern allows. Plush, powerful."
-              <tr data-config="gut-mains" data-id="gh-percept-2">
-                <td class="gut-config-cell gut-config-mains">
-                  <span class="gut-config-icon">
-                    "⬆"
-                  <span class="gut-config-label">
-                    "Gut Mains"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="gut">
-                    <span class="gut-string-name">
-                      "Babolat VS Touch"
-                    <span class="gut-string-gauge">
-                      "1.30 / 16"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="toroline">
-                    <span class="gut-string-name">
-                      "Caviar"
-                    <span class="gut-string-gauge">
-                      "1.20 / 17"
-                <td class="gut-feel-cell">
-                  "Med-Firm · Lively"
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "High"
-                    <div class="bar">
-                      <div class="bar-fill power" style="width: 82%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Med-High"
-                    <div class="bar">
-                      <div class="bar-fill spin" style="width: 72%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Excellent"
-                    <div class="bar">
-                      <div class="bar-fill comfort" style="width: 90%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Medium"
-                    <div class="bar">
-                      <div class="bar-fill gut-protection" style="width: 50%;">
-                <td class="gut-tension-cell">
-                  "24/21"
-                <td class="gut-notes-cell">
-                  "Gut mains over Caviar hex crosses: the hex edges give the 18×19 the bite two round strings can't, at the cost of gut life — plan on 7–9 hours. Firmer, livelier contact than the ALU Power Soft version. The spin-forward gut-mains option on this frame."
-              <tr data-config="gut-mains" data-id="gh-percept-3">
-                <td class="gut-config-cell gut-config-mains">
-                  <span class="gut-config-icon">
-                    "⬆"
-                  <span class="gut-config-label">
-                    "Gut Mains"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="gut">
-                    <span class="gut-string-name">
-                      "Wilson Natural Gut"
-                    <span class="gut-string-gauge">
-                      "1.25 / 17"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="luxilon">
-                    <span class="gut-string-name">
-                      "ALU Power"
-                    <span class="gut-string-gauge">
-                      "1.25 / 16L"
-                <td class="gut-feel-cell">
-                  "Plush · Crisp"
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "High"
-                    <div class="bar">
-                      <div class="bar-fill power" style="width: 80%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Med-High"
-                    <div class="bar">
-                      <div class="bar-fill spin" style="width: 60%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Very Good"
-                    <div class="bar">
-                      <div class="bar-fill comfort" style="width: 85%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "High"
-                    <div class="bar">
-                      <div class="bar-fill gut-protection" style="width: 80%;">
-                <td class="gut-tension-cell">
-                  "24/22"
-                <td class="gut-notes-cell">
-                  "Wilson 17 gut mains over ALU Power crosses: thinner, livelier gut than VS Touch 16, with a firmer cross than ALU Power Soft. The bed sits between the plush ALU Soft pairing and the poly-mains configurations — more definition, less dwell. Round-on-round; spin from the pattern only."
-              <tr data-config="gut-crosses" data-id="gh-percept-4">
-                <td class="gut-config-cell gut-config-crosses">
-                  <span class="gut-config-icon">
-                    "⬇"
-                  <span class="gut-config-label">
-                    "Gut Crosses"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="toroline">
-                    <span class="gut-string-name">
-                      "Caviar"
-                    <span class="gut-string-gauge">
-                      "1.24 / 16L"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="gut">
-                    <span class="gut-string-name">
-                      "Babolat VS Touch"
-                    <span class="gut-string-gauge">
-                      "1.30 / 16"
-                <td class="gut-feel-cell">
-                  "Med-Firm · Crisp"
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Med-High"
-                    <div class="bar">
-                      <div class="bar-fill power" style="width: 70%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "High"
-                    <div class="bar">
-                      <div class="bar-fill spin" style="width: 75%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Very Good"
-                    <div class="bar">
-                      <div class="bar-fill comfort" style="width: 85%;">
-                <td>
-                  <span class="gut-dash">
-                    "—"
-                <td class="gut-tension-cell">
-                  "23/25"
-                <td class="gut-notes-cell">
-                  "Caviar mains over gut crosses: the hex mains handle the 18×19's spin tax, gut crosses add power and feel a low-powered frame can use. Crosses move less than mains, so gut life is long. A firmer, lower-launch bed than any gut-mains pairing here."
-              <tr data-config="gut-crosses" data-id="gh-percept-5">
-                <td class="gut-config-cell gut-config-crosses">
-                  <span class="gut-config-icon">
-                    "⬇"
-                  <span class="gut-config-label">
-                    "Gut Crosses"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="luxilon">
-                    <span class="gut-string-name">
-                      "ALU Power Spin"
-                    <span class="gut-string-gauge">
-                      "1.27 / 16L"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="gut">
-                    <span class="gut-string-name">
-                      "Babolat VS Touch"
-                    <span class="gut-string-gauge">
-                      "1.30 / 16"
-                <td class="gut-feel-cell">
-                  "Firm · Shaped"
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Med-High"
-                    <div class="bar">
-                      <div class="bar-fill power" style="width: 62%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "High"
-                    <div class="bar">
-                      <div class="bar-fill spin" style="width: 80%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Very Good"
-                    <div class="bar">
-                      <div class="bar-fill comfort" style="width: 82%;">
-                <td>
-                  <span class="gut-dash">
-                    "—"
-                <td class="gut-tension-cell">
-                  "22/24"
-                <td class="gut-notes-cell">
-                  "ALU Power Spin pentagonal mains over gut crosses: sharper edge bite than the Caviar version for the dense pattern, with gut supplying dwell and feel. Both materials hold tension well, so this is a long-life setup. Firm-launching, medium contact through the 66 RA."
-              <tr data-config="gut-crosses" data-id="gh-percept-6">
-                <td class="gut-config-cell gut-config-crosses">
-                  <span class="gut-config-icon">
-                    "⬇"
-                  <span class="gut-config-label">
-                    "Gut Crosses"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="toroline">
-                    <span class="gut-string-name">
-                      "O-Toro Tour"
-                    <span class="gut-string-gauge">
-                      "1.25 / 16L"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="gut">
-                    <span class="gut-string-name">
-                      "Babolat VS Touch"
-                    <span class="gut-string-gauge">
-                      "1.30 / 16"
-                <td class="gut-feel-cell">
-                  "Firm · Crisp"
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Med-High"
-                    <div class="bar">
-                      <div class="bar-fill power" style="width: 60%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Med-High"
-                    <div class="bar">
-                      <div class="bar-fill spin" style="width: 72%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Excellent"
-                    <div class="bar">
-                      <div class="bar-fill comfort" style="width: 88%;">
-                <td>
-                  <span class="gut-dash">
-                    "—"
-                <td class="gut-tension-cell">
-                  "22/24"
-                <td class="gut-notes-cell">
-                  "O-Toro Tour hex mains over gut crosses: the mains' tension stability and the gut's slow elasticity decline both hold up over time — a pairing that changes little across its life. Firm, low launch, hex bite for the 18×19, gut dwell in the crosses."
-              <tr data-config="gut-crosses" data-id="gh-percept-7">
-                <td class="gut-config-cell gut-config-crosses">
-                  <span class="gut-config-icon">
-                    "⬇"
-                  <span class="gut-config-label">
-                    "Gut Crosses"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="luxilon">
-                    <span class="gut-string-name">
-                      "4G"
-                    <span class="gut-string-gauge">
-                      "1.30 / 16"
-                <td class="gut-string-cell">
-                  <div class="gut-string-pill" data-brand="gut">
-                    <span class="gut-string-name">
-                      "Wilson Natural Gut"
-                    <span class="gut-string-gauge">
-                      "1.25 / 17"
-                <td class="gut-feel-cell">
-                  "Very Firm · Stable"
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Medium"
-                    <div class="bar">
-                      <div class="bar-fill power" style="width: 52%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Medium"
-                    <div class="bar">
-                      <div class="bar-fill spin" style="width: 58%;">
-                <td>
-                  <div class="gut-bar-wrap">
-                    <span class="gut-bar-label">
-                      "Outstanding"
-                    <div class="bar">
-                      <div class="bar-fill comfort" style="width: 95%;">
-                <td>
-                  <span class="gut-dash">
-                    "—"
-                <td class="gut-tension-cell">
-                  "21/23"
-                <td class="gut-notes-cell">
-                  "4G mains over Wilson 17 gut crosses: maximum tension lockdown from 4G plus gut's elastic recovery — one of the longest-lasting hybrids available. Round, very firm mains in a low-powered frame make this the lowest-powered gut pairing on the Percept; the gut adds comfort, not pace."
+            <span aria-hidden="true" class="rpick-caret">
+              "▾"
       " "
-      <div class="legend">
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(148, 163, 184), rgb(71, 85, 105));">
-          "Stiffness (higher = firmer)"
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(251, 146, 60), rgb(220, 38, 38));">
-          "Power (higher = more power)"
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
-          "Spin potential"
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(167, 139, 250), rgb(124, 58, 237));">
-          "Control"
-        " "
-        <div class="legend-item">
-          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(96, 165, 250), rgb(129, 140, 248));">
-          "Comfort"
-        " "
-      <div class="version-tag">
-        "v*"
+      <div class="sel-row">
+        <span class="sel-label">
+          "Strings"
+        <div class="switcher" id="strings-switcher">
+          " "
+          <button class="inactive" data-nav-brand="toroline" id="btn-toroline">
+            "Toroline"
+          " "
+          <button class="inactive" data-nav-brand="solinco" id="btn-solinco">
+            "Solinco"
+          " "
+          <button class="inactive" data-nav-brand="yonex" id="btn-yonex">
+            "Yonex"
+          " "
+          <button class="inactive" data-nav-brand="restring" id="btn-restring">
+            "ReString"
+          " "
+          <button class="inactive" data-nav-brand="grapplesnake" id="btn-grapplesnake">
+            "Grapplesnake"
+          " "
+          <button class="inactive" data-nav-brand="luxilon" id="btn-luxilon">
+            "Luxilon"
+          " "
+          <button class="inactive" data-nav-brand="tourna" id="btn-tourna">
+            "Tourna"
+          " "
+          <button class="active-gut gut-choice" data-nav-brand="gut" id="btn-gut">
+            "Natural gut"
+          " "
+    <div id="racquet-pages">
       " "
+      <div data-racquet-page="percept" id="percept-content" style="display: block;">
+        " "
+        <div class="active gut-view" data-racquet="percept" id="percept-gut-section">
+          <div class="gut-intro">
+            <div class="gut-intro-blurb">
+              "Natural gut is made from cow serosa fibers — the most elastic, comfortable, and powerful string material available. Two configurations are practical:"
+              <strong>
+                "⬆ gut mains"
+              "(max power & feel; the Federer setup) or"
+              <strong>
+                "⬇ gut crosses"
+              "(max spin & control; the Djokovic setup, with longer gut life since crosses move less)."
+            <div class="gut-intro-cards">
+              <div class="gut-intro-card" data-brand="gut">
+                <div class="gut-intro-title">
+                  "Babolat VS Touch"
+                <div class="gut-intro-gauges">
+                  "1.30 / 16 · 1.35 / 15L"
+                <div class="gut-intro-desc">
+                  "The reference natural gut since 1925. BT7 Thermogut coating for moisture resistance. Premium feel and exceptional tension stability."
+                <div class="gut-intro-price">
+                  "~€42-50/set"
+              <div class="gut-intro-card" data-brand="gut">
+                <div class="gut-intro-title">
+                  "Wilson Natural Gut"
+                <div class="gut-intro-gauges">
+                  "1.25 / 17 · 1.30 / 16"
+                <div class="gut-intro-desc">
+                  "Historically manufactured by Babolat for Wilson. Often plays similarly to VS Touch with a different coating. 17 gauge is the thinnest mainstream gut available."
+                <div class="gut-intro-price">
+                  "~€35-42/set"
+          <div class="gut-table-wrap">
+            <table class="gut-table">
+              <thead>
+                <tr>
+                  <th>
+                    "Config"
+                  <th>
+                    "Mains"
+                  <th>
+                    "Crosses"
+                  <th>
+                    "Feel"
+                  <th>
+                    "Power"
+                  <th>
+                    "Spin"
+                  <th>
+                    "Comfort"
+                  <th title="How well the cross protects gut mains; only applies to gut-mains config">
+                    "Gut Protection"
+                  <th>
+                    "Tension (M/X)"
+                  <th>
+                    "Notes"
+              <tbody>
+                <tr class="search-flash" data-config="gut-mains" data-id="gh-percept-1">
+                  <td class="gut-config-cell gut-config-mains">
+                    <span class="gut-config-icon">
+                      "⬆"
+                    <span class="gut-config-label">
+                      "Gut Mains"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="gut">
+                      <span class="gut-string-name">
+                        "Babolat VS Touch"
+                      <span class="gut-string-gauge">
+                        "1.30 / 16"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="luxilon">
+                      <span class="gut-string-name">
+                        "ALU Power Soft"
+                      <span class="gut-string-gauge">
+                        "1.25 / 16L"
+                  <td class="gut-feel-cell">
+                    "Plush · Round"
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Very High"
+                      <div class="bar">
+                        <div class="bar-fill power" style="width: 92%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Medium"
+                      <div class="bar">
+                        <div class="bar-fill spin" style="width: 58%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Excellent"
+                      <div class="bar">
+                        <div class="bar-fill comfort" style="width: 92%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Very High"
+                      <div class="bar">
+                        <div class="bar-fill gut-protection" style="width: 88%;">
+                  <td class="gut-tension-cell">
+                    "24/22"
+                  <td class="gut-notes-cell">
+                    "Gut mains over ALU Power Soft crosses: maximum dwell in a firm, low-powered frame — the gut adds power and the soft cross keeps the bed from firming up through the 18×19. ALU Power Soft is gentle on the gut. Two round strings, so spin relies on what the pattern allows. Plush, powerful."
+                <tr data-config="gut-mains" data-id="gh-percept-2">
+                  <td class="gut-config-cell gut-config-mains">
+                    <span class="gut-config-icon">
+                      "⬆"
+                    <span class="gut-config-label">
+                      "Gut Mains"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="gut">
+                      <span class="gut-string-name">
+                        "Babolat VS Touch"
+                      <span class="gut-string-gauge">
+                        "1.30 / 16"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="toroline">
+                      <span class="gut-string-name">
+                        "Caviar"
+                      <span class="gut-string-gauge">
+                        "1.20 / 17"
+                  <td class="gut-feel-cell">
+                    "Med-Firm · Lively"
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "High"
+                      <div class="bar">
+                        <div class="bar-fill power" style="width: 82%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Med-High"
+                      <div class="bar">
+                        <div class="bar-fill spin" style="width: 72%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Excellent"
+                      <div class="bar">
+                        <div class="bar-fill comfort" style="width: 90%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Medium"
+                      <div class="bar">
+                        <div class="bar-fill gut-protection" style="width: 50%;">
+                  <td class="gut-tension-cell">
+                    "24/21"
+                  <td class="gut-notes-cell">
+                    "Gut mains over Caviar hex crosses: the hex edges give the 18×19 the bite two round strings can't, at the cost of gut life — plan on 7–9 hours. Firmer, livelier contact than the ALU Power Soft version. The spin-forward gut-mains option on this frame."
+                <tr data-config="gut-mains" data-id="gh-percept-3">
+                  <td class="gut-config-cell gut-config-mains">
+                    <span class="gut-config-icon">
+                      "⬆"
+                    <span class="gut-config-label">
+                      "Gut Mains"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="gut">
+                      <span class="gut-string-name">
+                        "Wilson Natural Gut"
+                      <span class="gut-string-gauge">
+                        "1.25 / 17"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="luxilon">
+                      <span class="gut-string-name">
+                        "ALU Power"
+                      <span class="gut-string-gauge">
+                        "1.25 / 16L"
+                  <td class="gut-feel-cell">
+                    "Plush · Crisp"
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "High"
+                      <div class="bar">
+                        <div class="bar-fill power" style="width: 80%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Med-High"
+                      <div class="bar">
+                        <div class="bar-fill spin" style="width: 60%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Very Good"
+                      <div class="bar">
+                        <div class="bar-fill comfort" style="width: 85%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "High"
+                      <div class="bar">
+                        <div class="bar-fill gut-protection" style="width: 80%;">
+                  <td class="gut-tension-cell">
+                    "24/22"
+                  <td class="gut-notes-cell">
+                    "Wilson 17 gut mains over ALU Power crosses: thinner, livelier gut than VS Touch 16, with a firmer cross than ALU Power Soft. The bed sits between the plush ALU Soft pairing and the poly-mains configurations — more definition, less dwell. Round-on-round; spin from the pattern only."
+                <tr data-config="gut-crosses" data-id="gh-percept-4">
+                  <td class="gut-config-cell gut-config-crosses">
+                    <span class="gut-config-icon">
+                      "⬇"
+                    <span class="gut-config-label">
+                      "Gut Crosses"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="toroline">
+                      <span class="gut-string-name">
+                        "Caviar"
+                      <span class="gut-string-gauge">
+                        "1.24 / 16L"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="gut">
+                      <span class="gut-string-name">
+                        "Babolat VS Touch"
+                      <span class="gut-string-gauge">
+                        "1.30 / 16"
+                  <td class="gut-feel-cell">
+                    "Med-Firm · Crisp"
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Med-High"
+                      <div class="bar">
+                        <div class="bar-fill power" style="width: 70%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "High"
+                      <div class="bar">
+                        <div class="bar-fill spin" style="width: 75%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Very Good"
+                      <div class="bar">
+                        <div class="bar-fill comfort" style="width: 85%;">
+                  <td>
+                    <span class="gut-dash">
+                      "—"
+                  <td class="gut-tension-cell">
+                    "23/25"
+                  <td class="gut-notes-cell">
+                    "Caviar mains over gut crosses: the hex mains handle the 18×19's spin tax, gut crosses add power and feel a low-powered frame can use. Crosses move less than mains, so gut life is long. A firmer, lower-launch bed than any gut-mains pairing here."
+                <tr data-config="gut-crosses" data-id="gh-percept-5">
+                  <td class="gut-config-cell gut-config-crosses">
+                    <span class="gut-config-icon">
+                      "⬇"
+                    <span class="gut-config-label">
+                      "Gut Crosses"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="luxilon">
+                      <span class="gut-string-name">
+                        "ALU Power Spin"
+                      <span class="gut-string-gauge">
+                        "1.27 / 16L"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="gut">
+                      <span class="gut-string-name">
+                        "Babolat VS Touch"
+                      <span class="gut-string-gauge">
+                        "1.30 / 16"
+                  <td class="gut-feel-cell">
+                    "Firm · Shaped"
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Med-High"
+                      <div class="bar">
+                        <div class="bar-fill power" style="width: 62%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "High"
+                      <div class="bar">
+                        <div class="bar-fill spin" style="width: 80%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Very Good"
+                      <div class="bar">
+                        <div class="bar-fill comfort" style="width: 82%;">
+                  <td>
+                    <span class="gut-dash">
+                      "—"
+                  <td class="gut-tension-cell">
+                    "22/24"
+                  <td class="gut-notes-cell">
+                    "ALU Power Spin pentagonal mains over gut crosses: sharper edge bite than the Caviar version for the dense pattern, with gut supplying dwell and feel. Both materials hold tension well, so this is a long-life setup. Firm-launching, medium contact through the 66 RA."
+                <tr data-config="gut-crosses" data-id="gh-percept-6">
+                  <td class="gut-config-cell gut-config-crosses">
+                    <span class="gut-config-icon">
+                      "⬇"
+                    <span class="gut-config-label">
+                      "Gut Crosses"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="toroline">
+                      <span class="gut-string-name">
+                        "O-Toro Tour"
+                      <span class="gut-string-gauge">
+                        "1.25 / 16L"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="gut">
+                      <span class="gut-string-name">
+                        "Babolat VS Touch"
+                      <span class="gut-string-gauge">
+                        "1.30 / 16"
+                  <td class="gut-feel-cell">
+                    "Firm · Crisp"
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Med-High"
+                      <div class="bar">
+                        <div class="bar-fill power" style="width: 60%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Med-High"
+                      <div class="bar">
+                        <div class="bar-fill spin" style="width: 72%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Excellent"
+                      <div class="bar">
+                        <div class="bar-fill comfort" style="width: 88%;">
+                  <td>
+                    <span class="gut-dash">
+                      "—"
+                  <td class="gut-tension-cell">
+                    "22/24"
+                  <td class="gut-notes-cell">
+                    "O-Toro Tour hex mains over gut crosses: the mains' tension stability and the gut's slow elasticity decline both hold up over time — a pairing that changes little across its life. Firm, low launch, hex bite for the 18×19, gut dwell in the crosses."
+                <tr data-config="gut-crosses" data-id="gh-percept-7">
+                  <td class="gut-config-cell gut-config-crosses">
+                    <span class="gut-config-icon">
+                      "⬇"
+                    <span class="gut-config-label">
+                      "Gut Crosses"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="luxilon">
+                      <span class="gut-string-name">
+                        "4G"
+                      <span class="gut-string-gauge">
+                        "1.30 / 16"
+                  <td class="gut-string-cell">
+                    <div class="gut-string-pill" data-brand="gut">
+                      <span class="gut-string-name">
+                        "Wilson Natural Gut"
+                      <span class="gut-string-gauge">
+                        "1.25 / 17"
+                  <td class="gut-feel-cell">
+                    "Very Firm · Stable"
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Medium"
+                      <div class="bar">
+                        <div class="bar-fill power" style="width: 52%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Medium"
+                      <div class="bar">
+                        <div class="bar-fill spin" style="width: 58%;">
+                  <td>
+                    <div class="gut-bar-wrap">
+                      <span class="gut-bar-label">
+                        "Outstanding"
+                      <div class="bar">
+                        <div class="bar-fill comfort" style="width: 95%;">
+                  <td>
+                    <span class="gut-dash">
+                      "—"
+                  <td class="gut-tension-cell">
+                    "21/23"
+                  <td class="gut-notes-cell">
+                    "4G mains over Wilson 17 gut crosses: maximum tension lockdown from 4G plus gut's elastic recovery — one of the longest-lasting hybrids available. Round, very firm mains in a low-powered frame make this the lowest-powered gut pairing on the Percept; the gut adds comfort, not pace."
+        " "
+    <div class="legend">
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(148, 163, 184), rgb(71, 85, 105));">
+        "Stiffness (higher = firmer)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(251, 146, 60), rgb(220, 38, 38));">
+        "Power (higher = more power)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
+        "Spin potential"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(167, 139, 250), rgb(124, 58, 237));">
+        "Control"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(96, 165, 250), rgb(129, 140, 248));">
+        "Comfort"
+      " "
+    <div class="version-tag">
+      "v*"
+    " "

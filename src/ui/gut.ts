@@ -1,11 +1,13 @@
 // Natural gut / poly hybrids, ported from v0.990's tennis-gut. Since v1.8 "Natural gut" is the
-// last choice in each racquet's strings row; its view holds the gut intro (blurb from
+// last choice in the strings row; a racquet's gut view holds the gut intro (blurb from
 // content/copy.json, one card per gut string) and a table of pairings, gut-mains configs first.
+// Since v1.10 a view is filled when its racquet's page is built.
 import { brandOfStringId, orderedPairings } from '../core/gut';
 import { tensionLabel } from '../core/pairings';
 import { ratingBar } from '../core/ratings';
 import type { Bar, Copy, GutPairing, GutSide, RacquetId, TennisDb } from '../core/types';
 import { html, join, raw, type SafeHtml } from './html';
+import { on } from './state';
 
 let db: TennisDb;
 let copy: Copy;
@@ -45,13 +47,14 @@ function table(racquet: RacquetId): SafeHtml {
 }
 
 /** Fills a racquet's gut view: the intro, then the pairings table. Shown when "Natural gut" is picked. */
-function renderView(racquet: RacquetId): void {
+export function renderView(racquet: RacquetId): void {
   const view = document.querySelector(`.gut-view[data-racquet="${racquet}"]`);
   if (view) view.innerHTML = intro().value + table(racquet).value;
 }
 
+/** Subscribes before initNav builds the start racquet's page. */
 export function initGut(data: TennisDb, content: Copy): void {
   db = data;
   copy = content;
-  for (const r of db.racquets) renderView(r.id);
+  on('page', renderView);
 }
