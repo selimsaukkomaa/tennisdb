@@ -10,6 +10,9 @@ export const APP_URL = `http://localhost:${APP_PORT}/`;
 /** Fixed "now", so anything time-based renders the same. */
 const FIXED_NOW = new Date('2026-10-22T10:00:00Z');
 
+/** What navigator.platform reports in every test. */
+const PLATFORM = 'MacIntel';
+
 /** Waits for load, the app's data-ready signal, web fonts and two frames. */
 export async function settle(page: Page): Promise<void> {
   await page.waitForLoadState('load');
@@ -49,6 +52,11 @@ export const test = base.extend({
       (route) => route.abort(),
     );
     await context.clock.setFixedTime(FIXED_NOW);
+    // The palette shows its shortcut as "⌘K" on a Mac and "Ctrl K" elsewhere; pin the platform
+    // so the DOM baselines read the same on the Mac and on CI's Linux.
+    await context.addInitScript((platform) => {
+      Object.defineProperty(Navigator.prototype, 'platform', { get: () => platform });
+    }, PLATFORM);
     await use(context);
   },
 });

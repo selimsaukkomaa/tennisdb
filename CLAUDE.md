@@ -145,6 +145,8 @@ click the view tests pause 150 ms: panels focus their fields 10 ms after opening
 click must not race that timer.
 
 Fonts are vendored in `src/assets/fonts`, and the tests block every request that isn't local.
+They also pin `navigator.platform` to a Mac (`tests/visual/support.ts`): the palette's shortcut
+hint reads "⌘K" there and "Ctrl K" elsewhere, and the DOM baselines must read the same on CI.
 
 The data is still compared with v0.990's (`tests/data/legacy-roundtrip.test.ts`): converted back
 to the v0.990 shape, with every declared data change applied to the v0.990 blob

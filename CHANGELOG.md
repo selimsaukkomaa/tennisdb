@@ -62,6 +62,10 @@ itself (`tests/visual/baselines`):
   in 40). Since then 60 of 60 runs of that view and 208 of 208 of the suite passed under load.
 - **Checked that they catch changes:** a changed word (a rating cut-off moved) fails 12 DOM
   baselines; a changed colour (the wordmark line) fails the desktop topbar view.
+- **The first CI run failed, and was fixed before deploying:** the DOM baselines include the
+  palette's shortcut hint, which reads "⌘K" on a Mac and "Ctrl K" on Linux. The harness now pins
+  `navigator.platform` to a Mac in every test; with Linux pinned locally, all 19 DOM baselines
+  fail the same way CI did.
 
 ---
 
