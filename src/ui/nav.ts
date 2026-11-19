@@ -1,7 +1,7 @@
 // Category, racquet and brand switching plus column sorting, ported from v0.990's main script.
 // One showBrand(racquet, brand) replaces showBrand / showPerceptBrand / showHeadBrand.
 import type { BrandId, RacquetId, TennisDb } from '../core/types';
-import { brandButtonId, brandSectionId, gripSectionId, racquetContentId } from './shell';
+import { GUT, brandButtonId, brandSectionId, gripSectionId, racquetContentId } from './shell';
 import { emit, state, type Category } from './state';
 
 let db: TennisDb;
@@ -10,21 +10,25 @@ export function showRacquet(rid: RacquetId): void {
   for (const r of db.racquets) {
     const on = r.id === rid;
     document.getElementById(racquetContentId(r.id))!.style.display = on ? 'block' : 'none';
-    document.getElementById(`btn-racquet-${r.id}`)!.className = on
-      ? 'racquet-active'
-      : 'racquet-inactive';
   }
   state.racquet = rid;
   emit('racquet', rid);
 }
 
+/** Shows one string brand's tables, or the natural gut hybrids (GUT), in a racquet's page. */
 export function showBrand(rid: RacquetId, brand: BrandId): void {
-  for (const b of Object.keys(db.brandsStrings)) {
+  for (const b of [...Object.keys(db.brandsStrings), GUT]) {
     document.getElementById(brandSectionId(rid, b))!.classList.remove('active');
-    document.getElementById(brandButtonId(rid, b))!.className = 'inactive';
+    document.getElementById(brandButtonId(rid, b))!.className =
+      b === GUT ? 'gut-choice inactive' : 'inactive';
   }
   document.getElementById(brandSectionId(rid, brand))!.classList.add('active');
-  document.getElementById(brandButtonId(rid, brand))!.className = `active-${brand}`;
+  document.getElementById(brandButtonId(rid, brand))!.className =
+    brand === GUT ? 'gut-choice active-gut' : `active-${brand}`;
+  const title = document.querySelector(`.selector[data-racquet="${rid}"] [data-sel-strings]`);
+  if (title) {
+    title.textContent = brand === GUT ? 'Natural gut' : db.brandsStrings[brand]!.name;
+  }
   state.brandByRacquet[rid] = brand;
 }
 
@@ -37,7 +41,6 @@ export function showCategory(cat: Category): void {
     content.style.display = c === cat ? 'block' : 'none';
     document.getElementById(`btn-cat-${c}`)!.className = c === cat ? 'cat-active' : 'cat-inactive';
   }
-  document.getElementById('topbar-racquets')!.classList.toggle('cat-hidden', cat !== 'strings');
   state.category = cat;
   emit('category', cat);
 }

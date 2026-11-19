@@ -784,7 +784,7 @@
           "Classic"
         ],
         "feelSummary": "Premium 100% leather",
-        "feelExpand": "Thin, firm cowhide for direct racquet feedback and precise grip changes.",
+        "feelExpand": "Thin, firm cowhide for direct racket feedback and precise grip changes.",
         "colors": "Brown, Black",
         "notes": "Yonex's premium 100% leather replacement grip. Thin at 1.40mm for excellent bevel feel and direct feedback. At 37g, adds useful weight to the handle for a more headlight balance. A thin, firm leather base that transmits frame feedback directly; commonly used under an overgrip such as Super Grap.",
         "gripType": "replacement",
@@ -832,7 +832,7 @@
         "feelSummary": "Dimpled surface texture",
         "feelExpand": "Raised dots increase hand contact area for improved grip security under pressure.",
         "colors": "Black, White",
-        "notes": "Extra-firm synthetic replacement grip with a dimpled surface for maximized gripping performance. PU construction at 1.60mm provides good cushioning while maintaining feedback. The dimpled texture increases surface area contact for better hold. Comes pre-installed on many Yonex racquets. The standard Yonex replacement grip – reliable and widely available.",
+        "notes": "Extra-firm synthetic replacement grip with a dimpled surface for maximized gripping performance. PU construction at 1.60mm provides good cushioning while maintaining feedback. The dimpled texture increases surface area contact for better hold. Comes pre-installed on many Yonex rackets. The standard Yonex replacement grip – reliable and widely available.",
         "gripType": "replacement",
         "gripFeelAttr": "synthetic,tacky,cushioned",
         "id": "yonex-synthetic-leather-excel-grip"
@@ -986,7 +986,7 @@
         "feelExpand": "Same blue Tourna formula but longer to fit oversize handles or to add coverage on butt cap. Identical playing characteristics.",
         "colors": "Blue",
         "packSizes": "1 / 3 / 10",
-        "notes": "For longer handles (16″ extended-length racquets), or for extra overlap and cushion when wrapping. Otherwise identical to the Original.",
+        "notes": "For longer handles (16″ extended-length rackets), or for extra overlap and cushion when wrapping. Otherwise identical to the Original.",
         "gripType": "dry",
         "gripFeelAttr": "dry,absorbent",
         "id": "tourna-tourna-grip-xl"
@@ -1083,7 +1083,7 @@
         "feelSummary": "Cushioned PU",
         "feelExpand": "Polyurethane synthetic replacement grip. Soft cushion-feel, similar to Wilson Pro Performance or Head HydroSorb.",
         "colors": "Black",
-        "notes": "Conventional cushioned synthetic. Most players already get this from their racquet manufacturer (Yonex Excel Pro, etc.); the Tourna version is competitive but not distinctive.",
+        "notes": "Conventional cushioned synthetic. Most players already get this from their racket manufacturer (Yonex Excel Pro, etc.); the Tourna version is competitive but not distinctive.",
         "gripType": "replacement",
         "gripFeelAttr": "synthetic,cushioned",
         "id": "tourna-synthetic-pro"

@@ -3,83 +3,6 @@
    Natural Gut / Poly Hybrids styles (v0.985)
    ========================================================================= */
 
-.gut-section {
-  margin: 8px 0 20px;
-}
-
-/* --- header bar (always visible) --- */
-.gut-status {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #fffbeb;
-  border: 1px solid #fde68a;
-  border-left: 4px solid #d4a843;
-  border-radius: 8px;
-  padding: 10px 14px;
-  font-size: 0.82rem;
-  flex-wrap: wrap;
-  cursor: default;
-}
-.gut-status-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
-  min-width: 0;
-  flex-wrap: wrap;
-}
-.gut-status-icon {
-  font-size: 1.05rem;
-  line-height: 1;
-}
-.gut-status-label {
-  font-weight: 700;
-  color: #78350f;
-  letter-spacing: 0.01em;
-}
-.gut-status-count {
-  font-size: 0.7rem;
-  color: #92400e;
-  font-family: 'Space Mono', monospace;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-}
-
-/* --- toggle button --- */
-.gut-toggle {
-  background: #1a1a1a;
-  color: #fef3c7;
-  border: none;
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-size: 0.78rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-family: inherit;
-  white-space: nowrap;
-  transition: background 0.12s;
-}
-.gut-toggle:hover { background: #2a2a2a; }
-.gut-toggle-caret { font-size: 0.7rem; opacity: 0.8; }
-
-/* --- expandable panel --- */
-.gut-panel {
-  display: none;
-  margin-top: 8px;
-}
-.gut-section.gut-expanded .gut-panel {
-  display: block;
-  animation: gut-fade-in 0.14s ease-out;
-}
-@keyframes gut-fade-in {
-  from { opacity: 0; transform: translateY(-3px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
 /* --- intro card --- */
 .gut-intro {
   background: #fff;
@@ -278,10 +201,6 @@
 
 /* --- mobile --- */
 @media (max-width: 900px) {
-  .gut-status { padding: 9px 12px; font-size: 0.78rem; }
-  .gut-status-label { font-size: 0.84rem; }
-  .gut-status-count { display: block; flex-basis: 100%; }
-  .gut-toggle { padding: 5px 10px; font-size: 0.74rem; }
   .gut-intro { padding: 12px 12px; }
   .gut-intro-cards { grid-template-columns: 1fr; }
   .gut-table { font-size: 0.74rem; }

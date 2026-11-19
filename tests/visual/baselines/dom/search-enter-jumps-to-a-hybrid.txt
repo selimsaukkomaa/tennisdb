@@ -16,17 +16,6 @@
       <button class="cat-inactive" data-nav-category="grips" id="btn-cat-grips">
         "Grips"
       " "
-    <div class="racquet-switcher" id="topbar-racquets">
-      " "
-      <button class="racquet-active" data-nav-racquet="regna" id="btn-racquet-regna">
-        "Regna 100"
-      " "
-      <button class="racquet-inactive" data-nav-racquet="percept" id="btn-racquet-percept">
-        "Percept 100D"
-      " "
-      <button class="racquet-inactive" data-nav-racquet="headpt630" id="btn-racquet-headpt630">
-        "Pro Tour 630"
-      " "
     <span class="topbar-spacer">
     " "
     <button aria-label="Search everything" class="topbar-btn" id="btn-palette" type="button">
@@ -84,53 +73,60 @@
     " "
     <div id="regna-content" style="display: block;">
       " "
-      <div class="context-line" data-racquet="regna">
-        <span class="ctx-name">
-          "Yonex Regna 100"
-        <span class="ctx-spec">
-          "64 RA · 16×19 · 100 sq in"
-      " "
-      <div class="switcher" data-nav-switcher="regna" id="regna-switcher">
+      <div class="selector" data-racquet="regna">
         " "
-        <button class="active-toroline" data-nav-brand="toroline" id="regna-btn-toroline">
-          "Toroline"
+        <div class="sel-title">
+          <span class="sel-racquet">
+            "Regna 100"
+          <span class="sel-x">
+            "×"
+          <span class="sel-strings" data-sel-strings="">
+            "Toroline"
         " "
-        <button class="inactive" data-nav-brand="solinco" id="regna-btn-solinco">
-          "Solinco"
+        <div class="sel-spec">
+          <span class="sel-spec-text">
+            "Yonex · 64 RA · 16×19 · 100 sq in"
         " "
-        <button class="inactive" data-nav-brand="yonex" id="regna-btn-yonex">
-          "Yonex"
+        <div class="sel-row">
+          <span class="sel-label">
+            "Racket"
+          <div class="racquet-switcher sel-racquets">
+            <button class="racquet-active" data-nav-racquet="regna">
+              "Regna 100"
+            <button class="racquet-inactive" data-nav-racquet="percept">
+              "Percept 100D"
+            <button class="racquet-inactive" data-nav-racquet="headpt630">
+              "Pro Tour 630"
         " "
-        <button class="inactive" data-nav-brand="restring" id="regna-btn-restring">
-          "ReString"
-        " "
-        <button class="inactive" data-nav-brand="grapplesnake" id="regna-btn-grapplesnake">
-          "Grapplesnake"
-        " "
-        <button class="inactive" data-nav-brand="luxilon" id="regna-btn-luxilon">
-          "Luxilon"
-        " "
-        <button class="inactive" data-nav-brand="tourna" id="regna-btn-tourna">
-          "Tourna"
-        " "
-      <div class="strips">
-        " "
-        <div class="gut-section" data-racquet="regna">
-          " "
-          <div class="gut-status">
-            <div class="gut-status-left">
-              <span class="gut-status-icon">
-                "🎻"
-              <span class="gut-status-label">
-                "Natural Gut / Poly Hybrids"
-              <span class="gut-status-count">
-                "7 pairings"
-            <button aria-expanded="false" class="gut-toggle" data-gut-toggle="regna">
-              <span class="gut-toggle-label">
-                "Show"
-              <span class="gut-toggle-caret">
-                "▾"
-          " "
+        <div class="sel-row">
+          <span class="sel-label">
+            "Strings"
+          <div class="switcher" data-nav-switcher="regna" id="regna-switcher">
+            " "
+            <button class="active-toroline" data-nav-brand="toroline" id="regna-btn-toroline">
+              "Toroline"
+            " "
+            <button class="inactive" data-nav-brand="solinco" id="regna-btn-solinco">
+              "Solinco"
+            " "
+            <button class="inactive" data-nav-brand="yonex" id="regna-btn-yonex">
+              "Yonex"
+            " "
+            <button class="inactive" data-nav-brand="restring" id="regna-btn-restring">
+              "ReString"
+            " "
+            <button class="inactive" data-nav-brand="grapplesnake" id="regna-btn-grapplesnake">
+              "Grapplesnake"
+            " "
+            <button class="inactive" data-nav-brand="luxilon" id="regna-btn-luxilon">
+              "Luxilon"
+            " "
+            <button class="inactive" data-nav-brand="tourna" id="regna-btn-tourna">
+              "Tourna"
+            " "
+            <button class="gut-choice inactive" data-nav-brand="gut" id="regna-btn-gut">
+              "Natural gut"
+            " "
       <div class="active brand-section toroline-view" id="regna-toroline-section">
         " "
         <div class="table-wrap">

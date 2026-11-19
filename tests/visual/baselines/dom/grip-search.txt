@@ -392,7 +392,7 @@
                 <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
                   "Black, White"
               <td class="notes">
-                "Extra-firm synthetic replacement grip with a dimpled surface for maximized gripping performance. PU construction at 1.60mm provides good cushioning while maintaining feedback. The dimpled texture increases surface area contact for better hold. Comes pre-installed on many Yonex racquets. The standard Yonex replacement grip – reliable and widely available."
+                "Extra-firm synthetic replacement grip with a dimpled surface for maximized gripping performance. PU construction at 1.60mm provides good cushioning while maintaining feedback. The dimpled texture increases surface area contact for better hold. Comes pre-installed on many Yonex rackets. The standard Yonex replacement grip – reliable and widely available."
           " "
     <div class="gfilter-brand-header gfilter-header-tourna gfilter-show" id="gfh-tourna">
       "Tourna"

@@ -11,6 +11,8 @@
 // still checked value for value. v1.2's edits to the stiffness words in 23 texts and 14 hybrid
 // side labels are applied the same way (V0990_TEXT_EDITS, patch G), and v1.3's stiffness scale
 // (V0990_STIFFNESS_SCALE, patch H), which also changes one sentence in the brand footers.
+// v1.8's "racket" for "racquet" (scripts/racket-spelling.ts) changes one note, four grip texts
+// and the Yonex About box; each is applied here, or undone on the copy, phrase by phrase.
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
@@ -23,6 +25,7 @@ import { feelTokens, stiffnessBar } from '../../src/core/stiffness';
 import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from '../../src/core/tags';
 import { specHtml } from '../../src/ui/tables';
 import { GRIP_TAG_CHANGES } from '../../scripts/derive-tag-colours';
+import { RACKET_ABOUT_EDITS, RACKET_GRIP_EDITS } from '../../scripts/racket-spelling';
 import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
 import {
@@ -154,7 +157,8 @@ const expected = (): unknown => {
   applyStiffnessScale(db, 4);
   // v1.6: every rating's word from its score (patch K).
   expect(applyRatingWords(db)).toBe(137);
-  expect(applyTextEdits(db, V0990_ALL_TEXT_EDITS)).toHaveLength(39);
+  // 39 fields until v1.7; v1.8's "racket" adds Revolution's Regna note.
+  expect(applyTextEdits(db, V0990_ALL_TEXT_EDITS)).toHaveLength(40);
   // v1.4: the five grip tags that took their label's majority colour (patch I).
   type V0990Grip = { id: string; feelTags: { label: string; variant: string }[] };
   const grips = Object.values(
@@ -165,6 +169,12 @@ const expected = (): unknown => {
     const tag = grips.find((g) => g.id === c.gripId)!.feelTags.find((t) => t.label === c.label)!;
     expect(tag.variant).toBe(c.from);
     tag.variant = c.to;
+  }
+  // v1.8: "racket" in four grip texts.
+  for (const e of RACKET_GRIP_EDITS) {
+    const g = grips.find((x) => x.id === e.gripId) as unknown as Record<string, string>;
+    expect(g[e.field]!.split(e.from)).toHaveLength(2);
+    g[e.field] = g[e.field]!.replace(e.from, () => e.to);
   }
   return db;
 };
@@ -201,7 +211,15 @@ describe('content/copy.json against legacy v0.990', () => {
     l.label,
   ]);
 
-  test.each([...footers, ...cards, ...Object.values(copy.gripAbout), ...legendText])(
+  // v1.8 changed "racquet" to "racket" in one About box; undone here, the rest is v0.990's.
+  const about = Object.entries(copy.gripAbout).map(([brand, text]) =>
+    RACKET_ABOUT_EDITS.filter((e) => e.brand === brand).reduce((t, e) => {
+      expect(t.split(e.to)).toHaveLength(2);
+      return t.replace(e.to, () => e.from);
+    }, text),
+  );
+
+  test.each([...footers, ...cards, ...about, ...legendText])(
     'appears verbatim in the legacy source: %s',
     (text) => {
       expect(legacyHtml.includes(text)).toBe(true);

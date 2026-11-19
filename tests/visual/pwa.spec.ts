@@ -20,7 +20,8 @@ test('works offline after the first visit', async ({ context }, testInfo) => {
   await context.setOffline(true);
   await page.reload();
   await page.locator('html[data-ready="1"]').waitFor({ state: 'attached' });
-  await expect(page.locator('tr[data-id]')).toHaveCount(281);
+  // 281 string, hybrid and grip rows, and since v1.8 the 21 gut rows behind "Natural gut".
+  await expect(page.locator('tr[data-id]')).toHaveCount(302);
   const fonts = await page.evaluate(async () => {
     await document.fonts.ready;
     return [...document.fonts].filter((f) => f.status === 'loaded').map((f) => f.family);
@@ -29,7 +30,7 @@ test('works offline after the first visit', async ({ context }, testInfo) => {
   expect(fonts.join(',')).toMatch(/Space Mono/);
 
   // Navigating offline still works: the filters and search run on the cached bundle.
-  await page.locator('#btn-racquet-percept').click();
+  await page.locator('#regna-content [data-nav-racquet="percept"]').click();
   await expect(page.locator('#percept-content')).toBeVisible();
   await context.setOffline(false);
 });

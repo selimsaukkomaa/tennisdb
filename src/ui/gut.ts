@@ -1,8 +1,8 @@
-// Natural gut / poly hybrids, ported from v0.990's tennis-gut: a collapsible strip per racquet
-// with the gut intro (blurb from content/copy.json, one card per gut string) and a table of
-// pairings, gut-mains configs first.
+// Natural gut / poly hybrids, ported from v0.990's tennis-gut. Since v1.8 "Natural gut" is the
+// last choice in each racquet's strings row; its view holds the gut intro (blurb from
+// content/copy.json, one card per gut string) and a table of pairings, gut-mains configs first.
 import { brandOfStringId, orderedPairings } from '../core/gut';
-import { gutPairingsFor, tensionLabel } from '../core/pairings';
+import { tensionLabel } from '../core/pairings';
 import { ratingBar } from '../core/ratings';
 import type { Bar, Copy, GutPairing, GutSide, RacquetId, TennisDb } from '../core/types';
 import { html, join, raw, type SafeHtml } from './html';
@@ -39,34 +39,19 @@ function row(p: GutPairing): SafeHtml {
 function table(racquet: RacquetId): SafeHtml {
   const pairings = orderedPairings(db, racquet);
   if (pairings.length === 0) {
-    return raw('<div class="gut-empty">No gut hybrid pairings configured for this racquet.</div>');
+    return raw('<div class="gut-empty">No gut hybrid pairings configured for this racket.</div>');
   }
   return html`<div class="gut-table-wrap"><table class="gut-table"><thead><tr><th>Config</th><th>Mains</th><th>Crosses</th><th>Feel</th><th>Power</th><th>Spin</th><th>Comfort</th><th title="How well the cross protects gut mains; only applies to gut-mains config">Gut Protection</th><th>Tension (M/X)</th><th>Notes</th></tr></thead><tbody>${pairings.map(row)}</tbody></table></div>`;
 }
 
-function renderSection(racquet: RacquetId): void {
-  const section = document.querySelector(`.gut-section[data-racquet="${racquet}"]`);
-  if (!section) return;
-  const count = gutPairingsFor(db, racquet).length;
-  const expanded = section.classList.contains('gut-expanded');
-  section.querySelector('.gut-status')!.innerHTML =
-    html`<div class="gut-status-left"><span class="gut-status-icon">🎻</span><span class="gut-status-label">Natural Gut / Poly Hybrids</span><span class="gut-status-count">${count} pairings</span></div><button class="gut-toggle" data-gut-toggle="${racquet}" aria-expanded="${String(expanded)}"><span class="gut-toggle-label">${expanded ? 'Hide' : 'Show'}</span><span class="gut-toggle-caret">${expanded ? '▴' : '▾'}</span></button>`.value;
-  section.querySelector('.gut-panel')!.innerHTML = expanded
-    ? intro().value + table(racquet).value
-    : '';
+/** Fills a racquet's gut view: the intro, then the pairings table. Shown when "Natural gut" is picked. */
+function renderView(racquet: RacquetId): void {
+  const view = document.querySelector(`.gut-view[data-racquet="${racquet}"]`);
+  if (view) view.innerHTML = intro().value + table(racquet).value;
 }
 
 export function initGut(data: TennisDb, content: Copy): void {
   db = data;
   copy = content;
-  document.addEventListener('click', (e) => {
-    const toggle = (e.target as Element).closest<HTMLElement>('[data-gut-toggle]');
-    if (!toggle) return;
-    const racquet = toggle.dataset.gutToggle!;
-    document
-      .querySelector(`.gut-section[data-racquet="${racquet}"]`)
-      ?.classList.toggle('gut-expanded');
-    renderSection(racquet);
-  });
-  for (const r of db.racquets) renderSection(r.id);
+  for (const r of db.racquets) renderView(r.id);
 }

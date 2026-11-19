@@ -16,17 +16,6 @@
       <button class="cat-inactive" data-nav-category="grips" id="btn-cat-grips">
         "Grips"
       " "
-    <div class="racquet-switcher" id="topbar-racquets">
-      " "
-      <button class="racquet-inactive" data-nav-racquet="regna" id="btn-racquet-regna">
-        "Regna 100"
-      " "
-      <button class="racquet-inactive" data-nav-racquet="percept" id="btn-racquet-percept">
-        "Percept 100D"
-      " "
-      <button class="racquet-active" data-nav-racquet="headpt630" id="btn-racquet-headpt630">
-        "Pro Tour 630"
-      " "
     <span class="topbar-spacer">
     " "
     <button aria-label="Search everything" class="topbar-btn" id="btn-palette" type="button">
@@ -84,53 +73,60 @@
     " "
     <div id="headpt630-content" style="display: block;">
       " "
-      <div class="context-line" data-racquet="headpt630">
-        <span class="ctx-name">
-          "Head Pro Tour 630"
-        <span class="ctx-spec">
-          "58 RA · 18×20 · 98 sq in"
-      " "
-      <div class="switcher" data-nav-switcher="headpt630" id="headpt630-switcher">
+      <div class="selector" data-racquet="headpt630">
         " "
-        <button class="active-toroline" data-nav-brand="toroline" id="headpt630-btn-toroline">
-          "Toroline"
+        <div class="sel-title">
+          <span class="sel-racquet">
+            "Pro Tour 630"
+          <span class="sel-x">
+            "×"
+          <span class="sel-strings" data-sel-strings="">
+            "Toroline"
         " "
-        <button class="inactive" data-nav-brand="solinco" id="headpt630-btn-solinco">
-          "Solinco"
+        <div class="sel-spec">
+          <span class="sel-spec-text">
+            "Head · 58 RA · 18×20 · 98 sq in"
         " "
-        <button class="inactive" data-nav-brand="yonex" id="headpt630-btn-yonex">
-          "Yonex"
+        <div class="sel-row">
+          <span class="sel-label">
+            "Racket"
+          <div class="racquet-switcher sel-racquets">
+            <button class="racquet-inactive" data-nav-racquet="regna">
+              "Regna 100"
+            <button class="racquet-inactive" data-nav-racquet="percept">
+              "Percept 100D"
+            <button class="racquet-active" data-nav-racquet="headpt630">
+              "Pro Tour 630"
         " "
-        <button class="inactive" data-nav-brand="restring" id="headpt630-btn-restring">
-          "ReString"
-        " "
-        <button class="inactive" data-nav-brand="grapplesnake" id="headpt630-btn-grapplesnake">
-          "Grapplesnake"
-        " "
-        <button class="inactive" data-nav-brand="luxilon" id="headpt630-btn-luxilon">
-          "Luxilon"
-        " "
-        <button class="inactive" data-nav-brand="tourna" id="headpt630-btn-tourna">
-          "Tourna"
-        " "
-      <div class="strips">
-        " "
-        <div class="gut-section" data-racquet="headpt630">
-          " "
-          <div class="gut-status">
-            <div class="gut-status-left">
-              <span class="gut-status-icon">
-                "🎻"
-              <span class="gut-status-label">
-                "Natural Gut / Poly Hybrids"
-              <span class="gut-status-count">
-                "7 pairings"
-            <button aria-expanded="false" class="gut-toggle" data-gut-toggle="headpt630">
-              <span class="gut-toggle-label">
-                "Show"
-              <span class="gut-toggle-caret">
-                "▾"
-          " "
+        <div class="sel-row">
+          <span class="sel-label">
+            "Strings"
+          <div class="switcher" data-nav-switcher="headpt630" id="headpt630-switcher">
+            " "
+            <button class="active-toroline" data-nav-brand="toroline" id="headpt630-btn-toroline">
+              "Toroline"
+            " "
+            <button class="inactive" data-nav-brand="solinco" id="headpt630-btn-solinco">
+              "Solinco"
+            " "
+            <button class="inactive" data-nav-brand="yonex" id="headpt630-btn-yonex">
+              "Yonex"
+            " "
+            <button class="inactive" data-nav-brand="restring" id="headpt630-btn-restring">
+              "ReString"
+            " "
+            <button class="inactive" data-nav-brand="grapplesnake" id="headpt630-btn-grapplesnake">
+              "Grapplesnake"
+            " "
+            <button class="inactive" data-nav-brand="luxilon" id="headpt630-btn-luxilon">
+              "Luxilon"
+            " "
+            <button class="inactive" data-nav-brand="tourna" id="headpt630-btn-tourna">
+              "Tourna"
+            " "
+            <button class="gut-choice inactive" data-nav-brand="gut" id="headpt630-btn-gut">
+              "Natural gut"
+            " "
       <div class="active brand-section toroline-view" id="headpt630-toroline-section">
         " "
         <div class="table-wrap">

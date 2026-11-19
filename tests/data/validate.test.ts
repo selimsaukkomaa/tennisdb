@@ -74,6 +74,9 @@ describe('each rule fires on broken data', () => {
     ['copy-refs', (_db, copy) => (copy.brandFooters.toroline!.byRacquet = { nope: '<p>x</p>' })],
     ['copy-refs', (_db, copy) => (copy.gripAbout.wilson = 'About Wilson')],
     ['retired', (db) => (str(db, 'toroline-caviar').feelSummary = 'Connected, direct')],
+    ['racket', (db) => (pairing(db, 'toroline-caviar', 'regna').note += ' Racquet-head speed matters.')],
+    ['racket', (db) => (grip(db, 'Tac').notes += ' Fits any racquet.')],
+    ['racket', (_db, copy) => (copy.gripAbout.kimony += ' Racquet sports.')],
   ])('%s', (rule, mutate) => {
     expect(rulesAfter(mutate)).toContain(rule);
   });

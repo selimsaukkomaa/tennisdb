@@ -37,6 +37,10 @@ export const isFilterActive = (): boolean => isStringFilterActive(filterState);
 function updateSwitcherState(rid: RacquetId, active: boolean): void {
   document.getElementById(`${rid}-switcher`)?.classList.toggle('filter-all-brands', active);
   document.getElementById(`${rid}-filter-badge`)?.classList.toggle('badge-show', active);
+  // Filters match strings and hybrids only, so the gut view steps aside while they span every brand.
+  document
+    .querySelector(`.gut-view[data-racquet="${rid}"]`)
+    ?.classList.toggle('filter-hidden', active);
 }
 
 function updateFilterStatus(visible: number, total: number): void {

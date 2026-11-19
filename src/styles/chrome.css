@@ -37,8 +37,7 @@
 .topbar-div { width: 1px; height: 20px; background: #dedcd5; }
 .topbar-spacer { flex: 1 1 auto; }
 
-#topbar .category-switcher,
-#topbar .racquet-switcher {
+#topbar .category-switcher {
   display: flex;
   gap: 0;
   width: auto;
@@ -52,13 +51,6 @@
   padding: 7px 15px;
   letter-spacing: 0.4px;
 }
-#topbar .racquet-switcher button {
-  font-size: 0.72rem;
-  padding: 7px 14px;
-  letter-spacing: 0.2px;
-  text-transform: none;
-}
-#topbar-racquets.cat-hidden { display: none; }
 
 .topbar-btn {
   display: inline-flex;
@@ -243,19 +235,6 @@
   color: #a8a49a;
   letter-spacing: 0.2px;
 }
-/* ── the gut strip's row ─────────────────────────────────────────── */
-.strips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  align-items: flex-start;
-  margin: 0 0 20px 0;
-}
-.strips > .gut-section { margin: 0; flex: 0 1 auto; max-width: 100%; }
-.strips > .gut-section.gut-expanded { flex: 1 0 100%; }
-.strips .gut-status { padding: 6px 11px; font-size: 0.76rem; gap: 9px; }
-.strips .gut-status-label { font-weight: 600; }
-
 /* ── brand switcher as a pill row ───────────────────────────────────── */
 .switcher {
   width: auto;
@@ -294,9 +273,7 @@
 }
 @media (max-width: 600px) {
   .topbar-mark, .topbar-div { display: none; }
-  #topbar .category-switcher button,
-  #topbar .racquet-switcher button { font-size: 0.66rem; padding: 6px 9px; }
+  #topbar .category-switcher button { font-size: 0.66rem; padding: 6px 9px; }
   .ctx-name { font-size: 0.92rem; }
-  .strips .gut-status-count { display: none; }
 }
 

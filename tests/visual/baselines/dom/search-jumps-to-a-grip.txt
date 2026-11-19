@@ -371,7 +371,7 @@
               <td>
                 "1 / 3 / 10"
               <td class="notes">
-                "For longer handles (16″ extended-length racquets), or for extra overlap and cushion when wrapping. Otherwise identical to the Original."
+                "For longer handles (16″ extended-length rackets), or for extra overlap and cushion when wrapping. Otherwise identical to the Original."
             <tr data-grip-feel="dry,absorbent,thin" data-grip-type="dry" data-id="tourna-tourna-grip-pro-thin">
               <td class="string-name">
                 "Tourna Grip Pro Thin"
@@ -498,7 +498,7 @@
                 <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
                   "Black"
               <td class="notes">
-                "Conventional cushioned synthetic. Most players already get this from their racquet manufacturer (Yonex Excel Pro, etc.); the Tourna version is competitive but not distinctive."
+                "Conventional cushioned synthetic. Most players already get this from their racket manufacturer (Yonex Excel Pro, etc.); the Tourna version is competitive but not distinctive."
           " "
     <div class="legend">
       " "

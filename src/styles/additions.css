@@ -48,3 +48,72 @@
   border-radius: 2px;
   background: #1f4fff;
 }
+
+/* ── v1.8: the racquet + strings card ─────────────────────────────────
+   One card at the top of each racquet's page: "Regna 100 × Toroline", the spec, then the
+   racquet and the strings to choose from. The racquet tabs left the top bar for it. */
+.selector {
+  background: #fff;
+  border: 1px solid #e3e0d8;
+  border-radius: 16px;
+  padding: 18px 22px 20px;
+  margin: 4px 0 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.sel-title {
+  font: 800 30px/1.1 'DM Sans', sans-serif;
+  letter-spacing: -0.02em;
+  color: #111;
+}
+.sel-x { color: #c0bdb5; font-weight: 500; margin: 0 10px; }
+.sel-spec {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 6px;
+}
+.sel-spec-text {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.72rem;
+  color: #888;
+  letter-spacing: 0.2px;
+}
+.sel-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 12px; }
+.sel-label {
+  font: 700 10.5px/1 'Space Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  min-width: 74px;
+}
+.selector .switcher,
+.selector .racquet-switcher { margin: 0; }
+
+/* Natural gut, the last choice in the strings row, in the gut section's amber */
+.switcher button.gut-choice.inactive { background: #fef9e7; color: #92400e; border-color: #f3d27a; }
+.switcher button.gut-choice.inactive:hover { background: #fdf1cc; color: #78350f; border-color: #e9b949; }
+.switcher button.active-gut { background: #92400e; color: #fde68a; border-color: #92400e; }
+/* While filters span every brand, the row greys out as one, gut included */
+.switcher.filter-all-brands button.gut-choice.inactive { border-color: #dedcd5; }
+
+/* The gut view takes a brand section's place when "Natural gut" is picked; it steps aside
+   while filters span every brand (filters.ts). */
+.gut-view { display: none; }
+.gut-view.active { display: block; }
+.gut-view.filter-hidden { display: none; }
+
+@media (max-width: 600px) {
+  .selector { padding: 14px 14px 16px; border-radius: 14px; }
+  .sel-title { font-size: 23px; }
+  .sel-label { min-width: 0; width: 100%; }
+  .sel-row { gap: 8px; margin-top: 10px; }
+  /* Racquet names stay on one line; the row scrolls sideways rather than wrap a fourth frame. */
+  .selector .racquet-switcher { width: 100%; overflow-x: auto; }
+  .selector .racquet-switcher button {
+    flex: 1 1 auto;
+    padding: 9px 8px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+}

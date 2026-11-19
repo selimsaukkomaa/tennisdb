@@ -6,6 +6,119 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.8 — Racket + strings at the centre
+
+**Date:** 2026-11-19
+**Base:** v1.7 (the stringing log removed)
+**Status:** visible release, the second of the redesign: the racket + string choice in one card
+at the top of the page, natural gut as one more choice of strings, and "racket" wherever the app
+speaks (the owner's calls on 2026-11-19). Six phrases in the data changed spelling and nothing
+else; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## The card
+
+- **One card at the top of each racket's page:** the title names the pair, "Regna 100 ×
+  Toroline", in large type; under it the brand and spec ("Yonex · 64 RA · 16×19 · 100 sq in"),
+  then a Racket row and a Strings row. The title follows the choice. While filters span every
+  brand, "— showing all" sits on the spec line.
+- **Out of the top bar:** the racket tabs. The top bar now holds Strings / Grips, Search and
+  Filters, the same on every page. The "Yonex Regna 100 · 64 RA · …" line above the tables went
+  into the card; the Grips page keeps its own line.
+- **Phone:** the card is tighter and the racket names stay on one line; the row scrolls sideways
+  if a fourth frame doesn't fit.
+
+## Natural gut as a choice of strings
+
+- **"Natural gut"** is the last choice in every racket's Strings row, in the gut amber. Picking it
+  shows what the strip held (the gut intro, the two gut cards and the pairings table, gut mains
+  first), and the title reads "Regna 100 × Natural gut".
+- **Gone:** the collapsible gut strip at the top of each page, with its toggle and pairing count.
+- **Filters** match strings and hybrids only, so while they span every brand the gut view steps
+  aside and its button greys out with the rest; clearing them brings back whatever was picked,
+  natural gut included.
+- **Search:** a gut pairing result opens that racket's Natural gut view and flashes the row (it
+  expanded the strip before).
+- **At load:** the gut tables now render with the page instead of on first expand, so the page
+  holds 302 table rows (281 + 21).
+
+## "Racket", never "racquet"
+
+The owner's call: the app says "racket" in everything a reader sees.
+
+- **UI:** the card's row label, and the message a racket without gut pairings shows.
+- **Data and copy:** six phrases changed spelling and nothing else, by
+  `scripts/racket-spelling.ts` (one-off; it asserts each phrase occurs once where listed and that
+  no "racquet" is left in any text of `data/` or `content/`):
+  - Revolution, Regna note: "lower racket-head speeds";
+  - Ultimum Leather, feel: "direct racket feedback";
+  - Synthetic Leather Excel Grip: "pre-installed on many Yonex rackets";
+  - Tourna Grip XL: "16″ extended-length rackets";
+  - Synthetic Pro (Tourna): "from their racket manufacturer";
+  - the Yonex About box: "the world's largest racket sports manufacturer".
+- **Kept that way:** a validator rule, `racket`, fails on "racquet" in any text of `data/` or
+  `content/` (three mutation tests), and a smoke test checks the rendered page. Code names
+  (`racquets.json`, `racquetId`, `data-racquet`, CSS classes) keep the old spelling: nobody
+  reads them. CLAUDE.md records the convention.
+- **Against v0.990:** the six phrases are declared changes in the round trip: the note joins the
+  text edits (40 fields, was 39), the four grip texts are applied to v0.990's grips, and the About
+  box is changed back before its verbatim check.
+
+## Baselines updated
+
+Approved with screenshots on 2026-11-19, then `npx playwright test --update-snapshots`:
+
+- **Pixel views:** 16 (was 15). New: the card, close up. "gut hybrids expanded" and "gut strip
+  expanded (Pro Tour 630)" became "Natural gut (Regna)" and "Natural gut table (Pro Tour 630)",
+  a close-up of the gut view. Changed: the default view, topbar, Percept 100D, Pro Tour 630,
+  filters open, the search palette, compare open (desktop) and the search field (phone): 14 files.
+  Unchanged: Grips, grip filters, the Yonex grip row, the compare panel and the gut search
+  results.
+- **DOM scenarios:** 20 (was 19). "gut strips expanded on all racquets" became "Natural gut on all
+  racquets", and "Natural gut, filter, clear" is new; the other 18 changed too, since each holds
+  the top of the page.
+- **The offline check** counts 302 rows (was 281).
+- 3.1 MB of pixel baselines and 1.1 MB of DOM baselines.
+
+---
+
+## Data corrections
+
+None. The six spelling changes above correct nothing.
+
+## Flags left open
+
+Unchanged since v1.5.
+
+## Verification
+
+`npm run check` passes: 337 Vitest tests (330 in v1.7: the card, the Natural gut choice on every
+racket and under filters, the gut rows at load, no "racquet" on the page, and the `racket` rule's
+three mutation tests; the gut strip's pairing-count test is gone, and its other tests now open
+the Natural gut view) and the browser
+suite, 55 passed and 21 skipped on the Mac (the DOM scenarios and the offline check run at one
+viewport). On CI the pixel views are skipped as well.
+
+- **Against v0.990:** the data equals v0.990's value for value, with the six declared phrases.
+
+## File size
+
+| | v1.7 | v1.8 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 334,676 | 334,138 | −0.5 KB (−0.2%) |
+| gzip | 74,159 | 74,333 | +0.2 KB |
+
+The gut strip's styles and toggle went; the card's styles came.
+
+## Still open
+
+Unchanged from v1.7, except:
+
+- **Closed:** the card and the Natural gut choice (decided in v1.7).
+
+---
+
 # v1.7 — The stringing log removed
 
 **Date:** 2026-11-19

@@ -11,6 +11,7 @@ import {
 import type { BrandId, RacquetId, TennisDb } from '../core/types';
 import { esc, html, raw } from './html';
 import { showBrand, showCategory, showGripBrand, showRacquet } from './nav';
+import { GUT } from './shell';
 
 const DEBOUNCE_MS = 120;
 const MAX_PER_GROUP = 6;
@@ -102,15 +103,15 @@ function goToGrip(id: string, brand: BrandId): void {
   setTimeout(() => flash(document.querySelector(`#grip-${brand}-section tr[data-id="${id}"]`)), 50);
 }
 
-/** Opens a racquet's gut strip (if collapsed) and flashes a target inside it. */
-function goToStrip(racquet: RacquetId, kind: 'gut', target: () => Element | null): void {
+/** Opens a racquet's natural gut view and flashes the pairing's row. */
+function goToGut(racquet: RacquetId, id: string): void {
   showCategory('strings');
   showRacquet(racquet);
-  const section = document.querySelector(`.${kind}-section[data-racquet="${racquet}"]`);
-  if (section && !section.classList.contains(`${kind}-expanded`)) {
-    section.querySelector<HTMLElement>(`[data-${kind}-toggle]`)?.click();
-  }
-  setTimeout(() => flash(target()), 80);
+  showBrand(racquet, GUT);
+  setTimeout(
+    () => flash(document.querySelector(`.gut-view[data-racquet="${racquet}"] tr[data-id="${id}"]`)),
+    80,
+  );
 }
 
 function navigate(item: SearchItem): void {
@@ -122,9 +123,7 @@ function navigate(item: SearchItem): void {
     case 'grip':
       return goToGrip(item.id, item.brand!);
     case 'guthybrid':
-      return goToStrip(racquet, 'gut', () =>
-        document.querySelector(`.gut-section[data-racquet="${racquet}"] tr[data-id="${item.id}"]`),
-      );
+      return goToGut(racquet, item.id);
   }
 }
 

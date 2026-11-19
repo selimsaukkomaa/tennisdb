@@ -137,7 +137,10 @@ describe('chrome', () => {
 
 // ---------------------------------------------------------------- rendering
 describe('rendering', () => {
-  test('281 rendered rows', () => expect($$('tr[data-id]')).toHaveLength(281));
+  test('281 rendered rows', () =>
+    expect($$('tr[data-id]').filter((tr) => !tr.closest('.gut-view'))).toHaveLength(281));
+  // Since v1.8 the gut tables render at load, behind the "Natural gut" choice.
+  test('21 gut rows rendered at load', () => expect($$('.gut-view tr[data-id]')).toHaveLength(21));
   test('no ★ Top Pick tags rendered', () => expect($$('.tag-top')).toHaveLength(0));
   test('no highlight rows', () => expect($$('tr.highlight')).toHaveLength(0));
   test('no data-toppick="1"', () =>
@@ -147,12 +150,27 @@ describe('rendering', () => {
     expect(document.body.textContent).toContain('markedly more vibration damping');
   });
   test('context line present', () => expect($$('.context-line').length).toBeGreaterThanOrEqual(1));
-  test('gut status count has no "top picks"', () => {
-    const count = $('.gut-status-count');
-    expect(count).toBeTruthy();
-    expect(count!.textContent).not.toMatch(/top pick/i);
+  test('the selector card names the racquet and its strings', () => {
+    expect($('#regna-content .sel-racquet')?.textContent).toBe('Regna 100');
+    expect($('#regna-content [data-sel-strings]')?.textContent).toBe('Toroline');
+    expect($('#regna-content .sel-spec-text')?.textContent).toBe(
+      'Yonex · 64 RA · 16×19 · 100 sq in',
+    );
+  });
+  test('"Natural gut" is the last strings choice on every racquet', () => {
+    for (const r of DB.racquets) {
+      const last = $(`#${r.id}-switcher button:last-child`);
+      expect(last?.id).toBe(`${r.id}-btn-gut`);
+      expect(last?.textContent).toBe('Natural gut');
+    }
   });
   test('no gut-toppick badges', () => expect($$('.gut-toppick-badge')).toHaveLength(0));
+  // Since v1.8 the app says "racket"; data/ and content/ are held to it by the `racket` rule.
+  test('no "racquet" anywhere on the page', () => {
+    expect($('#regna-content .sel-label')?.textContent).toBe('Racket');
+    expect(document.body.textContent).not.toMatch(/racquet/i);
+    expect(document.title).not.toMatch(/racquet/i);
+  });
 });
 
 // ---------------------------------------------------------------- behaviour
@@ -177,6 +195,22 @@ describe('behaviour', () => {
   test('hex filter clears', () => {
     hexChip().click();
     expect(regnaRows().filter(visible)).toHaveLength(regnaRows().length);
+  });
+  test('"Natural gut" names the card and steps aside while filters are on', () => {
+    const view = $('#regna-gut-section')!;
+    const title = (): string | null | undefined =>
+      $('#regna-content [data-sel-strings]')?.textContent;
+    $<HTMLElement>('#regna-btn-gut')!.click();
+    expect(view.classList.contains('active')).toBe(true);
+    expect(title()).toBe('Natural gut');
+    hexChip().click();
+    expect(view.classList.contains('filter-hidden')).toBe(true);
+    hexChip().click();
+    expect(view.classList.contains('filter-hidden')).toBe(false);
+    expect(view.classList.contains('active')).toBe(true);
+    $<HTMLElement>('#regna-switcher [data-nav-brand="toroline"]')!.click();
+    expect(view.classList.contains('active')).toBe(false);
+    expect(title()).toBe('Toroline');
   });
   test('PT630 view active', () => {
     showRacquet('headpt630');
@@ -303,10 +337,8 @@ describe('v0.990: order and search', () => {
     expect(order).toEqual(DB.hybrids.map((h) => h.id));
   });
   test('gut rows: mains before crosses', () => {
-    $<HTMLElement>('[data-gut-toggle="regna"]')!.click();
-    const cfg = $$('.gut-section[data-racquet="regna"] tr[data-config]').map(
-      (tr) => tr.dataset.config!,
-    );
+    $<HTMLElement>('#regna-btn-gut')!.click();
+    const cfg = $$('#regna-gut-section tr[data-config]').map((tr) => tr.dataset.config!);
     expect(cfg).toHaveLength(7);
     expect(cfg).toEqual(
       [...cfg].sort((a, b) => (a === 'gut-mains' ? 0 : 1) - (b === 'gut-mains' ? 0 : 1)),

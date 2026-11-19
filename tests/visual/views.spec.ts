@@ -25,18 +25,23 @@ interface View {
   hover?: string;
 }
 
+/** The racquet row's button for `to`, in the card of the racquet `from` that is showing. */
+const racquet = (from: string, to: string): string => `#${from}-content [data-nav-racquet="${to}"]`;
+
 const VIEWS: View[] = [
   { name: 'default (Strings / Regna / Toroline)', clicks: [] },
   // Close up, so a change to the wordmark is more than a rounding error.
   { name: 'topbar', clicks: [], element: '#topbar' },
-  { name: 'Percept 100D', clicks: ['#btn-racquet-percept'] },
-  { name: 'Pro Tour 630', clicks: ['#btn-racquet-headpt630'] },
+  // Close up: the racquet + strings card, the centre of the page.
+  { name: 'selector card', clicks: [], element: '#regna-content .selector' },
+  { name: 'Percept 100D', clicks: [racquet('regna', 'percept')] },
+  { name: 'Pro Tour 630', clicks: [racquet('regna', 'headpt630')] },
   { name: 'Grips', clicks: ['#btn-cat-grips'] },
-  { name: 'gut hybrids expanded', clicks: ['[data-gut-toggle="regna"]'] },
+  { name: 'Natural gut (Regna)', clicks: ['#regna-btn-gut'] },
   {
-    name: 'gut strip expanded (Pro Tour 630)',
-    clicks: ['#btn-racquet-headpt630', '[data-gut-toggle="headpt630"]'],
-    element: '.gut-section[data-racquet="headpt630"]',
+    name: 'Natural gut table (Pro Tour 630)',
+    clicks: [racquet('regna', 'headpt630'), '#headpt630-btn-gut'],
+    element: '#headpt630-gut-section',
   },
   { name: 'filters open, Hex active', clicks: ['#btn-filters', HEX] },
   { name: 'grip filters open, Dry active', clicks: ['#btn-cat-grips', '#btn-filters', GRIP_DRY] },

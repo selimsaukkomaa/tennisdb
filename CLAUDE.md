@@ -1,8 +1,8 @@
 # Strung
 
 Strung (this repo is `tennisdb`) is a tennis equipment database: how strings, hybrids, gut
-pairings and grips play in three racquets, so a racquet + string combination can be judged
-without searching around. The racquet + string choice is the centre of the app. It ships as a
+pairings and grips play in three rackets, so a racket + string combination can be judged
+without searching around. The racket + string choice is the centre of the app. It ships as a
 PWA on GitHub Pages (`https://selimsaukkomaa.github.io/tennisdb/`) and as an iOS app
 (Capacitor). It was called EquipDB until v0.993, and was a personal tool with a stringing log
 until v1.6; the owner removed the log in v1.7 (it may come back).
@@ -27,6 +27,9 @@ These are the owner's rules. Follow them exactly.
 - About 50 words. No second person, no verdicts, no ranking, no stroke-specific ranking.
 - Never change note content without asking. For any content rewrite, show a sample batch of
   about five first.
+- "Racket", never "racquet", in anything the app shows: UI words, notes, copy (the owner's
+  call, v1.8; the `racket` rule and a smoke test hold it). Code names keep the old spelling
+  (`racquets.json`, `racquetId`, `data-racquet`): nobody reads them.
 
 ### Data changes
 
@@ -85,8 +88,8 @@ scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-
                    provenance (extract-legacy, migrate-pairings, link-hybrid-sides,
                    migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs,
                    derive-stiffness-bands, stiffness-words, derive-stiffness-widths,
-                   derive-tag-colours, recheck-stiffness, derive-rating-words) are not meant
-                   to run again
+                   derive-tag-colours, recheck-stiffness, derive-rating-words,
+                   racket-spelling) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright, with baselines/)
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
@@ -127,11 +130,11 @@ Until v1.6 every view was compared with the v0.990 page; that comparison was ret
 redesign in v1.7. The app is now checked against its own approved baselines
 (`tests/visual/baselines`):
 
-- pixel baselines (`tests/visual/views.spec.ts`): 15 views at 1440×900 and 390×844, the first
+- pixel baselines (`tests/visual/views.spec.ts`): 16 views at 1440×900 and 390×844, the first
   screen or a close-up, threshold 0.1, at most 0.1% of pixels differing. Made on macOS and run
   only there: CI runs Linux, which renders text differently. Run `npm run check` on the Mac
   before every release.
-- DOM baselines (`tests/visual/dom.spec.ts`): 19 scenarios, the rendered DOM normalised to
+- DOM baselines (`tests/visual/dom.spec.ts`): 20 scenarios, the rendered DOM normalised to
   text (`tests/visual/dom.ts`; elements that don't render are left out). Run everywhere, CI
   included.
 - a visible change is shown to the owner with screenshots first; once approved, the baselines
@@ -162,8 +165,8 @@ JSON Schema (no `.refine`), so the export in `schemas/` stays complete. Then
 neutral text, notes present for every racquet, Crisp chip ⇔ Crisp tag, every feel chip used,
 grip type ⇔ chip, CSS for every tag colour, a filter-header colour for every grip brand,
 bar-backed claims (Mega Tac, Tourna Grip Original), hybrid side labels that name their
-string's band, id and reference integrity, no "Connected" vocabulary, no tag or entity
-anywhere in `data/`. Some of v0.990's rules hold by construction instead: the stiffness band
+string's band, id and reference integrity, no "Connected" vocabulary, no "racquet" in any
+text of `data/` or `content/`, no tag or entity anywhere in `data/`. Some of v0.990's rules hold by construction instead: the stiffness band
 comes from the figure, Firm/Soft from the band (`src/core/stiffness.ts`), a tag's colour from
 its label (`src/core/tags.ts`), and a rating's word from its score (`src/core/ratings.ts`).
 `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in

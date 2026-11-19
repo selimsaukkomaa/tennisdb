@@ -336,6 +336,20 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
       fail('copy-refs', `about/${brand}`, 'About box for an unknown grip brand');
   }
 
+  // ---- "racket", never "racquet", in anything a reader sees (since v1.8). Keys are code
+  // (racquetId, byRacquet) and keep the old spelling.
+  const spelling = (v: unknown, path: PropertyKey[], where: (p: PropertyKey[]) => string): void => {
+    if (typeof v === 'string') {
+      if (/racquet/i.test(v))
+        fail('racket', where(path), '"racquet" in text; the app says "racket"');
+    } else if (v && typeof v === 'object') {
+      for (const [k, x] of Object.entries(v))
+        spelling(x, [...path, Array.isArray(v) ? Number(k) : k], where);
+    }
+  };
+  spelling(db, [], (p) => describePath(db, p));
+  spelling(copy, [], (p) => ['copy', ...p].join('.'));
+
   // ---- retired in v0.989 (a topPick key or "square-textured" now fails the schemas)
   if (/[Cc]onnected/.test(JSON.stringify(db)))
     fail('retired', 'data', '"Connected" vocabulary present');

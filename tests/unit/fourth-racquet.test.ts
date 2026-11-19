@@ -54,16 +54,21 @@ beforeAll(() => {
 });
 
 describe('fourth racquet from data alone', () => {
-  test('topbar gets a button', () => {
-    expect(document.getElementById('btn-racquet-test4')?.textContent).toBe('Pure Strike 98');
-    expect(document.querySelectorAll('#topbar-racquets button')).toHaveLength(4);
+  test('every racquet row gets a button for it', () => {
+    for (const r of db.racquets) {
+      const row = document.querySelectorAll(`#${r.id}-content .sel-racquets button`);
+      expect(row).toHaveLength(4);
+      expect(row[3]?.textContent).toBe('Pure Strike 98');
+    }
   });
 
-  test('a hidden container with the derived context line', () => {
+  test('a hidden container with the derived selector card', () => {
     const content = document.getElementById('test4-content')!;
     expect(content.style.display).toBe('none');
-    expect(content.querySelector('.ctx-name')?.textContent).toBe('Babolat Pure Strike 98');
-    expect(content.querySelector('.ctx-spec')?.textContent).toBe('62 RA · 16×19 · 98 sq in');
+    expect(content.querySelector('.sel-racquet')?.textContent).toBe('Pure Strike 98');
+    expect(content.querySelector('.sel-spec-text')?.textContent).toBe(
+      'Babolat · 62 RA · 16×19 · 98 sq in',
+    );
   });
 
   test('every brand section with all rows and its notes', () => {
@@ -75,15 +80,17 @@ describe('fourth racquet from data alone', () => {
     expect(row.querySelector('.notes')?.textContent).toBe(pairingIn4(db, db.strings[0]!.id).note);
   });
 
-  test('the gut strip exists for it', () => {
-    expect(document.querySelector('.gut-section[data-racquet="test4"]')).not.toBeNull();
+  test('it gets a "Natural gut" choice and a gut view', () => {
+    expect(document.getElementById('test4-btn-gut')?.textContent).toBe('Natural gut');
+    expect(document.getElementById('test4-gut-section')).not.toBeNull();
   });
 
   test('showRacquet switches to it and back', () => {
     showRacquet('test4');
     expect(document.getElementById('test4-content')!.style.display).toBe('block');
     expect(document.getElementById('regna-content')!.style.display).toBe('none');
-    expect(document.getElementById('btn-racquet-test4')!.className).toBe('racquet-active');
+    const own = '#test4-content [data-nav-racquet="test4"]';
+    expect(document.querySelector(own)!.className).toBe('racquet-active');
     showRacquet('regna');
     expect(document.getElementById('test4-content')!.style.display).toBe('none');
   });
@@ -156,16 +163,16 @@ describe('compare on the fourth racquet', () => {
   });
 });
 
-describe('gut strip on the fourth racquet', () => {
-  test('shows no pairings and the empty message when expanded', () => {
-    const section = document.querySelector('.gut-section[data-racquet="test4"]')!;
-    expect(section.querySelector('.gut-status-count')?.textContent).toBe('0 pairings');
-    section.querySelector<HTMLElement>('[data-gut-toggle="test4"]')!.click();
-    expect(section.querySelector('.gut-empty')?.textContent).toBe(
-      'No gut hybrid pairings configured for this racquet.',
+describe('natural gut on the fourth racquet', () => {
+  test('shows the empty message when picked', () => {
+    document.getElementById('test4-btn-gut')!.click();
+    const view = document.getElementById('test4-gut-section')!;
+    expect(view.classList.contains('active')).toBe(true);
+    expect(view.querySelector('.gut-empty')?.textContent).toBe(
+      'No gut hybrid pairings configured for this racket.',
     );
-    section.querySelector<HTMLElement>('[data-gut-toggle="test4"]')!.click();
-    expect(section.querySelector('.gut-panel')!.innerHTML).toBe('');
+    document.querySelector<HTMLElement>('#test4-switcher [data-nav-brand="toroline"]')!.click();
+    expect(view.classList.contains('active')).toBe(false);
   });
 });
 

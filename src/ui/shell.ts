@@ -1,5 +1,5 @@
-// Builds the page body from data: one container per racquet (context line, brand switcher,
-// the gut strip, one section per string brand) and the grips category. v0.990 had this
+// Builds the page body from data: one container per racquet (the racquet + strings card, one
+// section per string brand, the natural gut view) and the grips category. v0.990 had this
 // markup written out three times with per-racquet ids; here a fourth racquet needs only data.
 //
 // Markup mirrors v0.990 line for line: elements sit on their own lines (the whitespace between
@@ -20,7 +20,7 @@ import {
   type RacquetId,
   type TennisDb,
 } from '../core/types';
-import { gripBrandLabel, racquetLabel, racquetSpec } from '../core/labels';
+import { gripBrandLabel, racquetSpec } from '../core/labels';
 import { perRacquet } from '../core/pairings';
 import { APP_VERSION } from '../version';
 import { html, raw, type SafeHtml } from './html';
@@ -43,13 +43,33 @@ export const brandButtonId = (rid: RacquetId, brand: BrandId): string => `${rid}
 const brandHeaderId = (rid: RacquetId, brand: BrandId): string => `fh-${rid}-${brand}-section`;
 export const gripSectionId = (brand: BrandId): string => `grip-${brand}-section`;
 
-// ---------------------------------------------------------------- topbar
+/** The natural gut hybrids are one more choice in each racquet's strings row (since v1.8). */
+export const GUT = 'gut';
 
-export function racquetButtons(db: TennisDb): SafeHtml {
-  return html`${db.racquets.map(
-    (r, i) =>
-      html`\n<button class="${i === 0 ? 'racquet-active' : 'racquet-inactive'}" id="btn-racquet-${r.id}" data-nav-racquet="${r.id}">${r.model}</button>`,
-  )}\n`;
+// ---------------------------------------------------------------- the racquet + strings card
+
+/** One racquet's choice of racquet: every racquet, this one marked. */
+function racquetChoice(db: TennisDb, current: Racquet): SafeHtml {
+  return html`<div class="racquet-switcher sel-racquets">${db.racquets.map(
+    (r) =>
+      html`<button class="${r.id === current.id ? 'racquet-active' : 'racquet-inactive'}" data-nav-racquet="${r.id}">${r.model}</button>`,
+  )}</div>`;
+}
+
+/**
+ * The card at the top of a racquet's page: "Regna 100 × Toroline", the racquet's spec, then the
+ * racquet and the strings to choose from. nav.ts keeps the title's strings name current.
+ */
+function selector(db: TennisDb, r: Racquet): SafeHtml {
+  const brands = Object.keys(db.brandsStrings);
+  return html`<div class="selector" data-racquet="${r.id}">
+<div class="sel-title"><span class="sel-racquet">${r.model}</span><span class="sel-x">×</span><span class="sel-strings" data-sel-strings>${db.brandsStrings[brands[0]!]!.name}</span></div>
+<div class="sel-spec"><span class="sel-spec-text">${r.brand} · ${racquetSpec(r)}</span><span class="filter-all-badge" id="${r.id}-filter-badge">— showing all</span></div>
+<div class="sel-row"><span class="sel-label">Racket</span>${racquetChoice(db, r)}</div>
+<div class="sel-row"><span class="sel-label">Strings</span><div class="switcher" id="${r.id}-switcher" data-nav-switcher="${r.id}">
+${brands.map((b) => html`<button id="${brandButtonId(r.id, b)}" data-nav-brand="${b}">${db.brandsStrings[b]!.name}</button>\n`)}<button class="gut-choice" id="${brandButtonId(r.id, GUT)}" data-nav-brand="${GUT}">Natural gut</button>
+</div></div>
+</div>`;
 }
 
 // ---------------------------------------------------------------- filter bars
@@ -143,16 +163,9 @@ ${STRING_HEAD}
 function racquetContent(db: TennisDb, copy: Copy, r: Racquet, first: boolean): SafeHtml {
   const brands = Object.keys(db.brandsStrings);
   return html`<div id="${racquetContentId(r.id)}"${first ? '' : raw(' style="display:none;"')}>
-<div class="context-line" data-racquet="${r.id}"><span class="ctx-name">${racquetLabel(r)}</span><span class="ctx-spec">${racquetSpec(r)}</span><span class="filter-all-badge" id="${r.id}-filter-badge">— showing all</span></div>
-<div class="switcher" id="${r.id}-switcher" data-nav-switcher="${r.id}">
-${brands.map((b) => html`<button id="${brandButtonId(r.id, b)}" data-nav-brand="${b}">${db.brandsStrings[b]!.name}</button>\n`)}</div>
-<div class="strips">
-<div class="gut-section" data-racquet="${r.id}">
-<div class="gut-status"></div>
-<div class="gut-panel"></div>
-</div>
-</div>
-${brands.map((b) => brandSection(db, copy, r, b))}${legend(copy.legends.strings)}
+${selector(db, r)}
+${brands.map((b) => brandSection(db, copy, r, b))}<div class="gut-view" id="${brandSectionId(r.id, GUT)}" data-racquet="${r.id}"></div>
+${legend(copy.legends.strings)}
 <div class="version-tag">v${APP_VERSION}</div>
 </div>
 `;
@@ -226,7 +239,6 @@ ${brands.map((b) => gripBrandSection(db, copy, b))}${legend(copy.legends.grips)}
 // ---------------------------------------------------------------- mount
 
 export function renderShell(db: TennisDb, copy: Copy): void {
-  document.getElementById('topbar-racquets')!.innerHTML = racquetButtons(db).value;
   document.querySelector('.container')!.innerHTML =
     '\n' + stringsCategory(db, copy).value + gripsCategory(db, copy).value;
 }
