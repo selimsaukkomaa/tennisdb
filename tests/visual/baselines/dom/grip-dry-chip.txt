@@ -96,7 +96,7 @@
       " "
       <div class="filter-search-row">
         " "
-        <input class="filter-search" id="grip-filter-search" placeholder="Search grips by name, model, notes..." type="text">
+        <input class="filter-search" data-short-placeholder="Search by name, model, notes…" id="grip-filter-search" placeholder="Search grips by name, model, notes..." type="text">
         " "
         <button class="filter-clear-btn has-filters" id="grip-filter-clear">
           "Clear filters"

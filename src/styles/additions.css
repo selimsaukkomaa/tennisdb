@@ -117,3 +117,15 @@
     white-space: nowrap;
   }
 }
+
+/* ── v1.9: phones and touch screens ───────────────────────────────────
+   iOS zooms the page into a text field under 16px when it gets focus, so the search fields are
+   16px wherever a finger is the pointer or the screen is phone-sized. The palette's keyboard
+   hints ("Esc to close · ↑↓ to navigate") mean little without a keyboard; search.css hid them
+   below 900px, but the palette's own rule in chrome.css showed them again, and they ran off the
+   edge. */
+@media (max-width: 900px), (pointer: coarse) {
+  #palette #search-input,
+  .filter-search { font-size: 16px; }
+  #palette .search-hint { display: none; }
+}

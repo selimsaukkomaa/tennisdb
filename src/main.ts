@@ -8,6 +8,7 @@ import { initFilters } from './ui/filters';
 import { initGut } from './ui/gut';
 import { initNav } from './ui/nav';
 import { initPalette } from './ui/palette';
+import { initPlaceholders } from './ui/placeholders';
 import { initSearch } from './ui/search';
 import { renderShell } from './ui/shell';
 
@@ -24,6 +25,7 @@ initGut(db, copy);
 // Search before the palette: a result click navigates first, then the palette closes.
 initSearch(db);
 initPalette();
+initPlaceholders();
 
 document.documentElement.dataset.ready = '1';
 

@@ -45,7 +45,7 @@
       <span class="search-icon">
         "🔍"
       " "
-      <input autocomplete="off" id="search-input" placeholder="Search strings, grips, gut pairings… (try 'caviar', 'gut', 'hex')" type="search">
+      <input autocomplete="off" data-short-placeholder="Search strings, grips, gut pairings…" id="search-input" placeholder="Search strings, grips, gut pairings… (try 'caviar', 'gut', 'hex')" type="search">
       " "
       <button aria-label="Clear search" class="search-clear-visible" id="search-clear">
         "✕"

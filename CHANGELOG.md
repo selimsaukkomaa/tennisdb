@@ -6,6 +6,96 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.9 — Phones and iOS
+
+**Date:** 2026-11-19
+**Base:** v1.8 (racket + strings at the centre)
+**Status:** visible release, phones and touch screens only: three items from Still open (the
+phone grip cards, iOS zooming into text fields, the palette hint on phones), picked by the owner
+on 2026-11-19. Desktop looks as it did. No data changed; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## Grip cards on phones
+
+- **Model and specs each get a line:** "MODEL: KGT100" (with the pack variants under it), then
+  "SPECS: 0.50mm / 29mm × 105cm". Until now the two cells shared a line with no gap, so the specs
+  ran straight into the model ("KGT1010.33mm"), and the separator dot landed after the last pack
+  variant. The replacement grip cards already had a "Specs:" line and are unchanged.
+
+## No zoom into text fields on iOS
+
+- **16px on phones and touch screens:** iOS zooms the page into any text field under 16px when it
+  gets focus. The search palette's field was 15.7px and the two filter searches 13.6px; all
+  three are now 16px wherever the screen is at most 900px wide or the pointer is a finger (an
+  iPad too). Pinch zoom is untouched: the fix is the font size, not a viewport limit.
+- **Checked in the iOS app** (Simulator, iPhone 18 Pro): tapping the filter search and typing
+  "caviar", and tapping the palette's field, leave the page at its width and scale.
+
+## The palette on phones
+
+- **The keyboard hint is hidden** ("Esc to close · ↑↓ to navigate") on the same screens: it means
+  little without a keyboard, and it ran off the right edge. `search.css` already hid it below
+  900px, but the palette's own rule in `chrome.css` showed it again.
+- **Shorter placeholders** on the same screens, since at 16px the desktop ones were cut off
+  ("…gut pairings… (tr"): "Search strings, grips, gut pairings…", "Search by name, shape,
+  notes…" and "Search by name, model, notes…". Each field names its short text in
+  `data-short-placeholder`; `src/ui/placeholders.ts` swaps it in and back as the screen changes.
+  Desktop keeps "… (try 'caviar', 'gut', 'hex')" and the rest as they were.
+
+## Baselines updated
+
+Approved with screenshots on 2026-11-19:
+
+- **Pixel views, phone only:** Grips, grip filters, the Yonex grip row (the card), filters open
+  (the placeholder), the search field and the search palette (the hint): 6 files.
+- **DOM scenarios:** 6 of 20 show a search field, which now carries `data-short-placeholder`.
+- **A gap found on the way:** `--update-snapshots` rewrites only the views that fail, and the
+  hint was 277 pixels of the phone palette view, under the 0.1% tolerance, so its old baseline
+  still passed. The baselines were rewritten with `--update-snapshots=all`; four views that came
+  out different only below the per-pixel threshold (anti-aliasing, 0 pixels over it) were
+  restored. CLAUDE.md now says so.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v1.5.
+
+## Verification
+
+`npm run check` passes: 339 Vitest tests (337 in v1.8, plus two for the placeholders: short on a
+small screen and back when it widens, untouched on a large one) and the browser suite, 55 passed
+and 21 skipped on the Mac. On CI the pixel views are skipped as well.
+
+- **iOS:** `npm run build:ios` synced, `xcodebuild` for the simulator succeeds, and the app was
+  checked in the Simulator as above.
+- **Desktop:** the field sizes (15.7px and 13.6px), the hint and the placeholders are unchanged.
+
+## File size
+
+| | v1.8 | v1.9 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 334,138 | 335,502 | +1.4 KB (+0.4%) |
+| gzip | 74,333 | 74,828 | +0.5 KB |
+
+The new rules with their comments (CSS isn't minified), the placeholders module and the three
+short placeholders.
+
+## Still open
+
+Unchanged from v1.8, except:
+
+- **Closed:** the phone grip cards, iOS zooming into text fields, and the palette hint on phones.
+- **Still open from the iOS item:** tapping the status bar to scroll to the top can't be checked
+  in the Simulator; it needs a device.
+
+---
+
 # v1.8 — Racket + strings at the centre
 
 **Date:** 2026-11-19

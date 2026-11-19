@@ -1,7 +1,7 @@
 {
   "name": "tennisdb",
   "private": true,
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Personal tennis equipment database: strings, hybrids, gut pairings, grips and a stringing log.",
   "type": "module",
   "scripts": {

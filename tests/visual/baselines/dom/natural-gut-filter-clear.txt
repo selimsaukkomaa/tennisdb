@@ -75,7 +75,7 @@
       " "
       <div class="filter-search-row">
         " "
-        <input class="filter-search" id="filter-search" placeholder="Search strings by name, shape, notes..." type="text">
+        <input class="filter-search" data-short-placeholder="Search by name, shape, notes…" id="filter-search" placeholder="Search strings by name, shape, notes..." type="text">
         " "
         <div class="filter-status" id="filter-status">
         " "

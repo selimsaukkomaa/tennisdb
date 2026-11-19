@@ -80,7 +80,8 @@ src/core/          no DOM: data schemas (schema.ts; types.ts infers the types fr
                    assembly, chips, filter predicates, compare, gut, search index and scoring,
                    pairings, stiffness, ratings, tags, validators
 src/ui/            DOM layer: shell, tables, nav, filters, filter panel, compare, gut, search,
-                   palette; html`` / raw() escaping helpers
+                   palette, placeholders (short ones on phones); html`` / raw() escaping
+                   helpers
 src/platform/      native check (the service worker registers only on the web)
 src/styles/        v0.990 CSS split verbatim, imported in cascade order; additions.css last
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
@@ -143,7 +144,11 @@ redesign in v1.7. The app is now checked against its own approved baselines
 
 A close-up (`element`, `hover`) makes a small change more than 0.1% of the screenshot. A colour
 change must also exceed the per-pixel threshold: the pale amber and red tags (`.tag-crisp`,
-`.tag-firm`) are within 0.1 of each other, so only the DOM baselines tell them apart. After each
+`.tag-firm`) are within 0.1 of each other, so only the DOM baselines tell them apart.
+`--update-snapshots` rewrites only the views that fail, so an approved change under 0.1% stays
+out of its baseline (v1.9's palette hint, 277 pixels of the phone palette view): after it, run
+`--update-snapshots=all` and restore the views whose new image differs from the old only below
+the per-pixel threshold (anti-aliasing), so they don't churn. After each
 click the view tests pause 150 ms: panels focus their fields 10 ms after opening, and a later
 click must not race that timer.
 

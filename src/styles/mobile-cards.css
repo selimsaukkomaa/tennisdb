@@ -288,24 +288,24 @@
     /* ────────────────────────────────────────────────────
        GRIP OVERGRIP CARDS
        DOM: 1:Grip 2:Model 3:Specs 4:Tackiness 5:Absorption 6:Durability 7:Feel 8:Colors 9:Pack 10:Notes
-       Card: Name → Feel(7) → Model(2) + Specs(3) → Colors(8) → Bars(4,5,6) → Pack(9) → Notes(10)
+       Card: Name → Feel(7) → Model(2) → Specs(3) → Colors(8) → Bars(4,5,6) → Pack(9) → Notes(10)
        ──────────────────────────────────────────────────── */
-    
+
     /* Grip Feel (col 7) — order 2 */
     #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(7) {
       order: 2;
       padding: 4px 0 6px;
     }
-    
-    /* Grip Model (col 2) — order 3, labeled */
+
+    /* Grip Model (col 2) — order 3, labeled, a line of its own. Until v1.9 it shared a line with
+       the specs, which ran straight into the model ("KGT1010.33mm"). */
     #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(2) {
       order: 3;
-      display: inline-block;
-      width: auto;
       font-size: 0.75rem;
       color: #777;
     }
-    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(2)::before {
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(2)::before,
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(3)::before {
       content: 'Model: ';
       font-family: 'Space Mono', monospace;
       font-size: 0.65rem;
@@ -314,16 +314,13 @@
       text-transform: uppercase;
       letter-spacing: 0.3px;
     }
-    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(2)::after {
-      content: '  ·  ';
-      color: #ddd;
+    #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(3)::before {
+      content: 'Specs: ';
     }
-    
-    /* Grip Specs (col 3) — order 4, inline with model */
+
+    /* Grip Specs (col 3) — order 4, labeled, under the model */
     #grips-content .table-wrap > table:not(.grip-replacement-table) tbody td:nth-child(3) {
       order: 4;
-      display: inline-block;
-      width: auto;
       font-size: 0.75rem;
       color: #666;
       margin-bottom: 4px;

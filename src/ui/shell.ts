@@ -89,7 +89,7 @@ function stringFilterBar(): SafeHtml {
   return html`<div class="filter-summary" id="filter-summary"></div>
 <div class="filter-bar filter-visible" id="filter-bar">
 <div class="filter-search-row">
-<input class="filter-search" id="filter-search" placeholder="Search strings by name, shape, notes..." type="text"/>
+<input class="filter-search" id="filter-search" data-short-placeholder="Search by name, shape, notes…" placeholder="Search strings by name, shape, notes..." type="text"/>
 <button class="filter-clear-btn" id="filter-clear">Clear filters</button>
 <div class="filter-status" id="filter-status"></div>
 </div>
@@ -105,7 +105,7 @@ function gripFilterBar(): SafeHtml {
   return html`<div class="filter-summary" id="grip-filter-summary"></div>
 <div class="filter-bar grip-filter-bar" id="grip-filter-bar">
 <div class="filter-search-row">
-<input class="filter-search" id="grip-filter-search" placeholder="Search grips by name, model, notes..." type="text"/>
+<input class="filter-search" id="grip-filter-search" data-short-placeholder="Search by name, model, notes…" placeholder="Search grips by name, model, notes..." type="text"/>
 <button class="filter-clear-btn" id="grip-filter-clear">Clear filters</button>
 <div class="filter-status" id="grip-filter-status"></div>
 </div>
