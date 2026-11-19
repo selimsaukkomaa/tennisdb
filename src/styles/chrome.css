@@ -243,25 +243,7 @@
   color: #a8a49a;
   letter-spacing: 0.2px;
 }
-.ctx-strung {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 7px;
-  font-size: 0.78rem;
-  color: #6b6760;
-}
-.ctx-strung-label {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.62rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #a8a49a;
-}
-.ctx-strung-name { font-weight: 600; color: #111; }
-.ctx-strung-meta { color: #8b8780; }
-.ctx-strung-empty { font-size: 0.76rem; color: #b3afa4; font-style: italic; }
-
-/* ── log + gut strips as one chip row ───────────────────────────────── */
+/* ── the gut strip's row ─────────────────────────────────────────── */
 .strips {
   display: flex;
   flex-wrap: wrap;
@@ -269,15 +251,9 @@
   align-items: flex-start;
   margin: 0 0 20px 0;
 }
-.strips > .log-section,
 .strips > .gut-section { margin: 0; flex: 0 1 auto; max-width: 100%; }
-.strips > .log-section.log-expanded,
 .strips > .gut-section.gut-expanded { flex: 1 0 100%; }
-.strips .log-status,
 .strips .gut-status { padding: 6px 11px; font-size: 0.76rem; gap: 9px; }
-/* "currently strung" now lives in the context line, so the collapsed log
-   strip is just its toggle */
-.strips .log-section:not(.log-expanded) .log-status-left { display: none; }
 .strips .gut-status-label { font-weight: 600; }
 
 /* ── brand switcher as a pill row ───────────────────────────────────── */

@@ -6,6 +6,105 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.7 — The stringing log removed
+
+**Date:** 2026-11-19
+**Base:** v1.6 (rating words from the score)
+**Status:** visible release, the first of the redesign. The owner's decisions on 2026-11-19:
+Strung is now for telling how racquet + string combinations play, not a personal tool, so the
+stringing log goes (it may come back later); the racquet + string choice becomes the centre of
+the page, with the gut hybrids as one more choice in the strings row (the next release); and the
+pixel and DOM comparison with v0.990's page is retired, since the redesign changes every view.
+No data changed; `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## The log removed
+
+- **Gone from the page:** the Log strip and panel in every racquet (adding, editing, pinning,
+  "Clear all", rating stars), the Export / Import backups, the "Strung … @ 23/24 kg" or "nothing
+  logged yet" slot in the racquet line, and log entries in search results. The search field's
+  placeholder now reads "Search strings, grips, gut pairings…" (was "…log entries…").
+- **Gone from the code:** `src/core/log` (schema, model, merge, store, tension parser),
+  `src/ui/log.ts` and `src/ui/context-line.ts`, `src/platform/storage.ts` and `files.ts`,
+  `src/styles/log.css` and the log rules in `chrome.css` and `additions.css`, the `log`
+  event, and `schemas/stringing-log.schema.json`. The tension limits (5–40 kg) moved into the
+  data schema, their only user now.
+- **iOS:** `@capacitor/preferences`, `@capacitor/filesystem` and `@capacitor/share` were used
+  only by the log and are uninstalled; the iOS project is synced and builds for the simulator.
+- **Logs already saved** in a browser (`localStorage`, key `tennis_log_v2`) or in the iOS app
+  (Preferences) are left where they are, unread: nothing deletes them, so a returning log can
+  pick them up.
+
+## The comparison with v0.990 retired
+
+Until v1.6 every release was checked against v0.990's page, view by view (15 pixel views at two
+sizes, 25 DOM scenarios), with each visible change reproduced on the old page by a patch. The
+redesign changes the top of every page, so that comparison is replaced by baselines of the app
+itself (`tests/visual/baselines`):
+
+- **Pixel baselines:** the same 15 views, the first screen or a close-up, at 1440×900 and
+  390×844, threshold 0.1 and at most 0.1% of pixels differing. Made on macOS; they run only
+  there, because CI runs Linux, which renders text differently. 3.2 MB.
+- **DOM baselines:** 19 of the 25 scenarios (the six log ones went with the log), the rendered
+  DOM as normalised text; elements that don't render are left out, which keeps them to 1.2 MB
+  instead of 15 MB. They run everywhere, CI included.
+- **Updating them** is deliberate: a visible change is approved with screenshots first, then
+  `npx playwright test --update-snapshots` in the same commit.
+- **Kept:** the data round trip against v0.990 (`tests/data/legacy-roundtrip.test.ts`); the
+  functions that apply the declared data changes moved from `tests/visual/legacy-fixes.ts` to
+  `tests/data/v0990-changes.ts`.
+- **Retired:** `legacy-fixes.ts` (patches A–K), the legacy static server, the CSS split test
+  (`tests/data/legacy-css.test.ts`), the DOM-difference unit test, and the backup test.
+- **A harness fix found on the way:** the view tests now pause 150 ms after each click. The filter
+  panel focuses its search field 10 ms after opening; under load the next click sometimes came
+  first, and the field kept its focus ring only sometimes ("filters open, Hex active" failed 1 run
+  in 40). Since then 60 of 60 runs of that view and 208 of 208 of the suite passed under load.
+- **Checked that they catch changes:** a changed word (a rating cut-off moved) fails 12 DOM
+  baselines; a changed colour (the wordmark line) fails the desktop topbar view.
+
+---
+
+## Data corrections
+
+None.
+
+## Flags left open
+
+Unchanged since v1.5.
+
+## Verification
+
+`npm run check` passes: 330 Vitest tests (372 in v1.6: the log's unit tests, its fourth-racquet
+and search cases, the CSS split test and the DOM-difference test are gone) and the browser suite,
+52 passed and 20 skipped on the Mac (the DOM scenarios run at one viewport). On CI the pixel
+views are skipped as well.
+
+- **Against v0.990:** the data equals v0.990's value for value, as before.
+- **iOS:** `npm run build:ios` synced, and `xcodebuild` for the simulator succeeds without the
+  three plugins.
+
+## File size
+
+| | v1.6 | v1.7 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 443,775 | 334,676 | −109.1 KB (−24.6%) |
+| gzip | 103,424 | 74,159 | −29.3 KB |
+
+The log validated its backups with Zod at run time; without it the bundle carries no Zod at all,
+and the three plugins' web code is gone too.
+
+## Still open
+
+Unchanged from v1.6, except:
+
+- **Next (decided):** the racquet + string choice in one card at the top ("Regna 100 ×
+  Toroline", a Racquet row and a Strings row, the racquet tabs out of the top bar), and the gut
+  hybrids as "Natural gut", one more choice in the Strings row, instead of the strip at the top.
+- **Closed:** the log's open items (the iOS date-field width; the log itself).
+
+---
+
 # v1.6 — Rating words from the score
 
 **Date:** 2026-11-18

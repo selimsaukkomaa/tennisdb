@@ -1,6 +1,6 @@
-// Dev aid for the port: writes a normalised dump of a page's live DOM after its scripts ran,
-// so the legacy page and the new build can be compared with `diff -u`. The automated version
-// of this comparison is tests/visual/dom-parity.spec.ts.
+// Dev aid: writes a normalised dump of a page's live DOM after its scripts ran, so two builds
+// (or a build and a baseline in tests/visual/baselines/dom) can be compared with `diff -u`. The
+// automated version is tests/visual/dom.spec.ts.
 //
 //   tsx scripts/dom-snapshot.ts <url> <out.txt> [steps]
 //

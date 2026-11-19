@@ -1,9 +1,11 @@
 # Strung
 
-Strung (this repo is `tennisdb`) is a personal tennis equipment database: strings, hybrids,
-gut pairings and grips for three racquets, plus a stringing log. It ships as a PWA on GitHub
-Pages (`https://selimsaukkomaa.github.io/tennisdb/`) and as an iOS app (Capacitor). It was
-called EquipDB until v0.993.
+Strung (this repo is `tennisdb`) is a tennis equipment database: how strings, hybrids, gut
+pairings and grips play in three racquets, so a racquet + string combination can be judged
+without searching around. The racquet + string choice is the centre of the app. It ships as a
+PWA on GitHub Pages (`https://selimsaukkomaa.github.io/tennisdb/`) and as an iOS app
+(Capacitor). It was called EquipDB until v0.993, and was a personal tool with a stringing log
+until v1.6; the owner removed the log in v1.7 (it may come back).
 
 v0.991 was a parity port of the single-file v0.990 app in `legacy/`: same behaviour, same
 look, same data. v0.992 fixed three v0.990 bugs; v0.993 renamed the app. v0.999 was the last
@@ -73,10 +75,10 @@ data/              TENNIS_DB, one JSON file per collection (meta, racquets, bran
 content/copy.json  UI copy that lived in v0.990's markup and JS (HTML strings, verbatim)
 src/core/          no DOM: data schemas (schema.ts; types.ts infers the types from them), db
                    assembly, chips, filter predicates, compare, gut, search index and scoring,
-                   validators, log/ (schema, model, merge, store, tension)
+                   pairings, stiffness, ratings, tags, validators
 src/ui/            DOM layer: shell, tables, nav, filters, filter panel, compare, gut, search,
-                   palette, log, context line; html`` / raw() escaping helpers
-src/platform/      native check, storage backends, file save/pick (share sheet on iOS)
+                   palette; html`` / raw() escaping helpers
+src/platform/      native check (the service worker registers only on the web)
 src/styles/        v0.990 CSS split verbatim, imported in cascade order; additions.css last
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
 scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-offs kept for
@@ -85,7 +87,7 @@ scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-
                    derive-stiffness-bands, stiffness-words, derive-stiffness-widths,
                    derive-tag-colours, recheck-stiffness, derive-rating-words) are not meant
                    to run again
-tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright); fixtures/
+tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright, with baselines/)
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)
 ```
@@ -100,7 +102,7 @@ npm run schemas      # regenerate schemas/ after changing a Zod schema
 npm run typecheck
 npm run lint
 npm test             # Vitest: data, unit, smoke
-npm run test:visual  # Playwright: pixel and DOM parity with legacy, backups, offline
+npm run test:visual  # Playwright: pixel and DOM baselines, offline
 npm run build        # dist/ (BASE_PATH=/tennisdb/ for Pages; default '/')
 npm run build:ios    # build + cap sync ios; then npm run ios:open or run from Xcode
 ```
@@ -113,41 +115,40 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
   only for trusted HTML from `content/`. Everything in `data/` is plain text since v1.0 (the
   `plain-text` rule). Events go through delegation on `data-*` hooks.
 - Modules talk through `state.ts` (active category and racquet) and its event bus
-  (`category`, `racquet`, `filtered`, `log`), not window globals.
+  (`category`, `racquet`, `filtered`), not window globals.
 - Racquets are data-driven. A fourth frame needs a `racquets.json` entry, a pairing (tension
   and note) in `pairings.json` for every string and hybrid, and optionally gut pairings;
   `tests/unit/fourth-racquet.test.ts` proves the UI follows. Brand colours are per brand in
   CSS and need nothing. Views read pairings through `src/core/pairings.ts`, never directly.
 
-## Parity
+## Visual baselines
 
-The app must render like v0.990. No visual or DOM change without a declared difference:
+Until v1.6 every view was compared with the v0.990 page; that comparison was retired with the
+redesign in v1.7. The app is now checked against its own approved baselines
+(`tests/visual/baselines`):
 
-- pixel parity (`tests/visual/parity.spec.ts`): 16 views at 1440×900 and 390×844, threshold
-  0.1, at most 0.1% of pixels differing.
-- DOM parity (`tests/visual/dom-parity.spec.ts`): 25 scenarios compared node for node.
-- every declared difference is listed in `CHANGELOG.md`.
+- pixel baselines (`tests/visual/views.spec.ts`): 15 views at 1440×900 and 390×844, the first
+  screen or a close-up, threshold 0.1, at most 0.1% of pixels differing. Made on macOS and run
+  only there: CI runs Linux, which renders text differently. Run `npm run check` on the Mac
+  before every release.
+- DOM baselines (`tests/visual/dom.spec.ts`): 19 scenarios, the rendered DOM normalised to
+  text (`tests/visual/dom.ts`; elements that don't render are left out). Run everywhere, CI
+  included.
+- a visible change is shown to the owner with screenshots first; once approved, the baselines
+  are updated on purpose (`npx playwright test --update-snapshots`) in the same commit, and the
+  changelog says so.
 
-A difference is declared in one of three ways, with its reason next to it:
+A close-up (`element`, `hover`) makes a small change more than 0.1% of the screenshot. A colour
+change must also exceed the per-pixel threshold: the pale amber and red tags (`.tag-crisp`,
+`.tag-firm`) are within 0.1 of each other, so only the DOM baselines tell them apart. After each
+click the view tests pause 150 ms: panels focus their fields 10 ms after opening, and a later
+click must not race that timer.
 
-- a mask over a region that differs (`masks` in `parity.spec.ts`);
-- an erasure from the DOM snapshots (`eraseDeclaredDifferences` in `tests/visual/dom.ts`);
-- for a change in behaviour, a patch that applies the same change to the legacy page before
-  it is compared (`tests/visual/legacy-fixes.ts`, using legacy's own functions where it can),
-  so the rest of each view is still checked. Its CSS must match `src/styles/additions.css`.
+Fonts are vendored in `src/assets/fonts`, and the tests block every request that isn't local.
 
-A new pixel view must show its change in more than 0.1% of the screenshot, or the comparison
-can't see it: use `element` (and `hover`) for a close-up, as the search-field view does. A
-colour change must also exceed the per-pixel threshold: the pale amber and red tags
-(`.tag-crisp`, `.tag-firm`) are within 0.1 of each other, so only the DOM scenarios see a
-change between them.
-
-Full-page screenshots are taken from the top of the page (`screenshot()` in
-`tests/visual/support.ts`): fixed elements land wherever the page is scrolled, and
-Playwright's clicks can leave the two pages at different offsets.
-
-Fonts are vendored in `src/assets/fonts`; the tests route legacy's Google Fonts requests to
-the same files, so both sides render identical glyphs offline.
+The data is still compared with v0.990's (`tests/data/legacy-roundtrip.test.ts`): converted back
+to the v0.990 shape, with every declared data change applied to the v0.990 blob
+(`tests/data/v0990-changes.ts`), it must equal v0.990's value for value.
 
 ## Data validation
 
@@ -168,19 +169,10 @@ source, `index.html`, these two docs or `docs/`. Every rule and each kind of sch
 a mutation test in `tests/data/validate.test.ts`; `tests/data/schemas.test.ts` checks that
 `schemas/` is current and that a standard JSON Schema validator agrees with Zod.
 
-## Stringing log
-
-- Schema v2 (`src/core/log/schema.ts`, Zod): UUID ids, `createdAt`/`updatedAt`, `deletedAt`
-  tombstones, `pins: { racquetId: entryId }`, tension `{ mainsKg, crossesKg | null }`.
-- `LogStore` over a key-value backend: localStorage on the web, Capacitor Preferences on iOS.
-  Key `tennis_log_v2`. Unreadable data is moved aside to `tennis_log_v2.unreadable-<ts>`,
-  never overwritten.
-- Import merges by id: newer `updatedAt` wins, tombstones are respected, the local pin wins.
-
 ## iOS
 
 - App id `com.selimsaukkomaa.tennisdb`, display name Strung, iOS 15+. The display name can
-  change freely; the app id stays, so installed copies update in place and keep their log.
+  change freely; the app id stays, so installed copies update in place.
 - `BridgeViewController` (`ios/App/App/SceneDelegate.swift`) adds a #f0efeb strip behind the
   status bar; `contentInset: 'automatic'` keeps the page below it.
 - The service worker registers only on the web (`!isNative()`).

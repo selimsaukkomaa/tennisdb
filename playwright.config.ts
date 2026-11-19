@@ -1,10 +1,11 @@
 import { defineConfig } from '@playwright/test';
 
-export const LEGACY_PORT = 4301;
 export const APP_PORT = 4300;
 
-// Parity suite: every view is rendered by the legacy v0.990 page and by the new build in the
-// same browser and viewport, then compared pixel by pixel (tests/visual/support.ts).
+// Browser suite: the app's key views against approved baselines in tests/visual/baselines
+// (pixels on macOS, DOM everywhere; see views.spec.ts and dom.spec.ts), and offline support.
+// Update the baselines on purpose, after a change is approved: `npx playwright test
+// --update-snapshots`.
 export default defineConfig({
   testDir: 'tests/visual',
   outputDir: 'test-results',
@@ -12,6 +13,15 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   // On CI, 'github' turns each failure into an annotation, readable without signing in.
   reporter: process.env.CI ? [['github'], ['list'], ['html', { open: 'never' }]] : 'list',
+  // DOM baselines (text) have no platform in their path; pixel baselines do (below).
+  snapshotPathTemplate: '{testDir}/baselines/{arg}{ext}',
+  expect: {
+    toHaveScreenshot: {
+      pathTemplate: '{testDir}/baselines/pixels/{arg}-{projectName}-{platform}{ext}',
+      threshold: 0.1,
+      maxDiffPixelRatio: 0.001,
+    },
+  },
   use: {
     browserName: 'chromium',
     colorScheme: 'light',
@@ -31,11 +41,6 @@ export default defineConfig({
     },
   ],
   webServer: [
-    {
-      command: `npx tsx tests/visual/serve-static.ts legacy ${LEGACY_PORT}`,
-      port: LEGACY_PORT,
-      reuseExistingServer: !process.env.CI,
-    },
     {
       command: `npx vite build && npx vite preview --port ${APP_PORT} --strictPort`,
       port: APP_PORT,

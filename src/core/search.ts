@@ -1,10 +1,10 @@
 // Global search, ported from v0.990's tennis-search: an index over strings and hybrids (one
-// entry per racquet), grips, gut pairings and stringing-log entries, and the v0.990 scoring.
+// entry per racquet), grips and gut pairings, and the v0.990 scoring.
 import { gripBrandLabel } from './labels';
 import { perRacquet, tensionLabel } from './pairings';
 import { GRIP_TYPES, type BrandId, type GripType, type RacquetId, type TennisDb } from './types';
 
-export type SearchType = 'string' | 'hybrid' | 'guthybrid' | 'grip' | 'log';
+export type SearchType = 'string' | 'hybrid' | 'guthybrid' | 'grip';
 
 export interface SearchItem {
   type: SearchType;
@@ -20,23 +20,12 @@ export interface SearchItem {
   sourceText: string;
 }
 
-/** What the index needs from a stringing-log entry. */
-export interface LogSearchEntry {
-  id: string;
-  racquet: RacquetId;
-  date: string;
-  stringName: string;
-  tension: string;
-  note: string;
-}
-
 /** Group order and headings in the results panel. */
 export const SEARCH_GROUPS: readonly { type: SearchType; label: string }[] = [
   { type: 'string', label: 'Strings' },
   { type: 'hybrid', label: 'Hybrid sets' },
   { type: 'guthybrid', label: 'Natural gut hybrids' },
   { type: 'grip', label: 'Grips' },
-  { type: 'log', label: 'Stringing log' },
 ];
 
 /** Joins like v0.990's Array.join: null and undefined become empty strings. */
@@ -49,7 +38,7 @@ const GRIP_SECTION_LABELS: Record<GripType, string> = {
   replacement: 'Replacement Grip',
 };
 
-export function buildSearchIndex(db: TennisDb, log: readonly LogSearchEntry[] = []): SearchItem[] {
+export function buildSearchIndex(db: TennisDb): SearchItem[] {
   const items: SearchItem[] = [];
   const racquetLabel = (rid: RacquetId): string =>
     db.racquets.find((r) => r.id === rid)?.model ?? rid;
@@ -155,18 +144,6 @@ export function buildSearchIndex(db: TennisDb, log: readonly LogSearchEntry[] = 
         tensionLabel(p.tension),
         configLabel,
       ]),
-    });
-  }
-
-  for (const e of log) {
-    items.push({
-      type: 'log',
-      icon: '📋',
-      id: `log-${e.id}`,
-      label: e.stringName,
-      sublabel: `Logged on ${e.date} · ${racquetLabel(e.racquet)}${e.tension ? ` @ ${e.tension}` : ''}`,
-      racquet: e.racquet,
-      sourceText: joinText([e.stringName, e.tension, e.note, e.date]),
     });
   }
 

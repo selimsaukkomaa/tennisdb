@@ -20,8 +20,6 @@ interface Events {
   racquet: RacquetId;
   /** After a string or grip filter pass changed what is visible. */
   filtered: Category;
-  /** After the stringing log changed. */
-  log: void;
 }
 
 type Handler<T> = (payload: T) => void;

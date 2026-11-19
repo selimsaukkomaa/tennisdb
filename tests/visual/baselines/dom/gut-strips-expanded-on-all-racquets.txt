@@ -1,0 +1,1864 @@
+" "
+<div id="topbar">
+  " "
+  <div class="topbar-inner">
+    " "
+    <h1 class="topbar-mark">
+      "strung"
+    " "
+    <span class="topbar-div">
+    " "
+    <div class="category-switcher" id="topbar-cats">
+      " "
+      <button class="cat-active" data-nav-category="strings" id="btn-cat-strings">
+        "Strings"
+      " "
+      <button class="cat-inactive" data-nav-category="grips" id="btn-cat-grips">
+        "Grips"
+      " "
+    <div class="racquet-switcher" id="topbar-racquets">
+      " "
+      <button class="racquet-inactive" data-nav-racquet="regna" id="btn-racquet-regna">
+        "Regna 100"
+      " "
+      <button class="racquet-inactive" data-nav-racquet="percept" id="btn-racquet-percept">
+        "Percept 100D"
+      " "
+      <button class="racquet-active" data-nav-racquet="headpt630" id="btn-racquet-headpt630">
+        "Pro Tour 630"
+      " "
+    <span class="topbar-spacer">
+    " "
+    <button aria-label="Search everything" class="topbar-btn" id="btn-palette" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "🔍"
+      <span class="topbar-btn-label">
+        "Search"
+      <kbd id="palette-kbd">
+        "⌘K"
+      " "
+    <button aria-expanded="false" class="topbar-btn" id="btn-filters" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "⚙"
+      <span class="topbar-btn-label">
+        "Filters"
+      " "
+<div aria-live="polite" class="compare-bar hidden" id="compare-bar">
+  " "
+  <div class="compare-bar-inner">
+    " "
+    <span class="compare-count" id="compare-count">
+      "0 / 4"
+    " "
+    <div class="compare-chips" id="compare-chips">
+    " "
+    <button class="compare-btn-primary" disabled="" id="compare-open">
+      "Select 2 more"
+    " "
+    <button class="compare-btn-secondary" id="compare-clear">
+      "Clear"
+    " "
+<div aria-label="Compare strings" aria-modal="true" class="compare-modal hidden" id="compare-modal" role="dialog">
+  " "
+  <div class="compare-modal-backdrop">
+  " "
+  <div class="compare-modal-panel">
+    " "
+    <div class="compare-modal-header">
+      " "
+      <h2>
+        "Compare"
+      " "
+      <div class="compare-racquet-tabs" id="compare-racquet-tabs">
+      " "
+      <button aria-label="Close" class="compare-modal-close" id="compare-modal-close">
+        "✕"
+      " "
+    <div class="compare-modal-body" id="compare-modal-body">
+    " "
+<div class="container">
+  " "
+  <div class="cat-visible category-content" id="strings-content" style="display: block;">
+    " "
+    <div id="headpt630-content" style="display: block;">
+      " "
+      <div class="context-line" data-racquet="headpt630">
+        <span class="ctx-name">
+          "Head Pro Tour 630"
+        <span class="ctx-spec">
+          "58 RA · 18×20 · 98 sq in"
+      " "
+      <div class="switcher" data-nav-switcher="headpt630" id="headpt630-switcher">
+        " "
+        <button class="active-toroline" data-nav-brand="toroline" id="headpt630-btn-toroline">
+          "Toroline"
+        " "
+        <button class="inactive" data-nav-brand="solinco" id="headpt630-btn-solinco">
+          "Solinco"
+        " "
+        <button class="inactive" data-nav-brand="yonex" id="headpt630-btn-yonex">
+          "Yonex"
+        " "
+        <button class="inactive" data-nav-brand="restring" id="headpt630-btn-restring">
+          "ReString"
+        " "
+        <button class="inactive" data-nav-brand="grapplesnake" id="headpt630-btn-grapplesnake">
+          "Grapplesnake"
+        " "
+        <button class="inactive" data-nav-brand="luxilon" id="headpt630-btn-luxilon">
+          "Luxilon"
+        " "
+        <button class="inactive" data-nav-brand="tourna" id="headpt630-btn-tourna">
+          "Tourna"
+        " "
+      <div class="strips">
+        " "
+        <div class="gut-expanded gut-section" data-racquet="headpt630">
+          " "
+          <div class="gut-status">
+            <div class="gut-status-left">
+              <span class="gut-status-icon">
+                "🎻"
+              <span class="gut-status-label">
+                "Natural Gut / Poly Hybrids"
+              <span class="gut-status-count">
+                "7 pairings"
+            <button aria-expanded="true" class="gut-toggle" data-gut-toggle="headpt630">
+              <span class="gut-toggle-label">
+                "Hide"
+              <span class="gut-toggle-caret">
+                "▴"
+          " "
+          <div class="gut-panel">
+            <div class="gut-intro">
+              <div class="gut-intro-blurb">
+                "Natural gut is made from cow serosa fibers — the most elastic, comfortable, and powerful string material available. Two configurations are practical:"
+                <strong>
+                  "⬆ gut mains"
+                "(max power & feel; the Federer setup) or"
+                <strong>
+                  "⬇ gut crosses"
+                "(max spin & control; the Djokovic setup, with longer gut life since crosses move less)."
+              <div class="gut-intro-cards">
+                <div class="gut-intro-card" data-brand="gut">
+                  <div class="gut-intro-title">
+                    "Babolat VS Touch"
+                  <div class="gut-intro-gauges">
+                    "1.30 / 16 · 1.35 / 15L"
+                  <div class="gut-intro-desc">
+                    "The reference natural gut since 1925. BT7 Thermogut coating for moisture resistance. Premium feel and exceptional tension stability."
+                  <div class="gut-intro-price">
+                    "~€42-50/set"
+                <div class="gut-intro-card" data-brand="gut">
+                  <div class="gut-intro-title">
+                    "Wilson Natural Gut"
+                  <div class="gut-intro-gauges">
+                    "1.25 / 17 · 1.30 / 16"
+                  <div class="gut-intro-desc">
+                    "Historically manufactured by Babolat for Wilson. Often plays similarly to VS Touch with a different coating. 17 gauge is the thinnest mainstream gut available."
+                  <div class="gut-intro-price">
+                    "~€35-42/set"
+            <div class="gut-table-wrap">
+              <table class="gut-table">
+                <thead>
+                  <tr>
+                    <th>
+                      "Config"
+                    <th>
+                      "Mains"
+                    <th>
+                      "Crosses"
+                    <th>
+                      "Feel"
+                    <th>
+                      "Power"
+                    <th>
+                      "Spin"
+                    <th>
+                      "Comfort"
+                    <th title="How well the cross protects gut mains; only applies to gut-mains config">
+                      "Gut Protection"
+                    <th>
+                      "Tension (M/X)"
+                    <th>
+                      "Notes"
+                <tbody>
+                  <tr data-config="gut-mains" data-id="gh-pt630-1">
+                    <td class="gut-config-cell gut-config-mains">
+                      <span class="gut-config-icon">
+                        "⬆"
+                      <span class="gut-config-label">
+                        "Gut Mains"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="gut">
+                        <span class="gut-string-name">
+                          "Babolat VS Touch"
+                        <span class="gut-string-gauge">
+                          "1.30 / 16"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="toroline">
+                        <span class="gut-string-name">
+                          "Caviar"
+                        <span class="gut-string-gauge">
+                          "1.20 / 17"
+                    <td class="gut-feel-cell">
+                      "Plush · Hex Bite"
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "High"
+                        <div class="bar">
+                          <div class="bar-fill power" style="width: 80%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "High"
+                        <div class="bar">
+                          <div class="bar-fill spin" style="width: 78%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Outstanding"
+                        <div class="bar">
+                          <div class="bar-fill comfort" style="width: 95%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill gut-protection" style="width: 60%;">
+                    <td class="gut-tension-cell">
+                      "22/19"
+                    <td class="gut-notes-cell">
+                      "Gut mains over Caviar hex crosses: the hex crosses supply the edge bite the 18×20 can't get elsewhere, and the 58 RA frame absorbs enough of the edges' aggression that gut life runs longer than the Regna equivalent (~9–11 hours). Twaron damping plus gut makes a very quiet, high-dwell bed."
+                  <tr data-config="gut-mains" data-id="gh-pt630-2">
+                    <td class="gut-config-cell gut-config-mains">
+                      <span class="gut-config-icon">
+                        "⬆"
+                      <span class="gut-config-label">
+                        "Gut Mains"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="gut">
+                        <span class="gut-string-name">
+                          "Babolat VS Touch"
+                        <span class="gut-string-gauge">
+                          "1.30 / 16"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="luxilon">
+                        <span class="gut-string-name">
+                          "ALU Power Spin"
+                        <span class="gut-string-gauge">
+                          "1.27 / 16L"
+                    <td class="gut-feel-cell">
+                      "Plush · Shaped"
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "High"
+                        <div class="bar">
+                          <div class="bar-fill power" style="width: 78%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "High"
+                        <div class="bar">
+                          <div class="bar-fill spin" style="width: 78%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Excellent"
+                        <div class="bar">
+                          <div class="bar-fill comfort" style="width: 90%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill gut-protection" style="width: 70%;">
+                    <td class="gut-tension-cell">
+                      "22/19"
+                    <td class="gut-notes-cell">
+                      "Gut mains over ALU Power Spin pentagonal crosses: slightly gentler on the gut than Caviar's hex edges while still giving the 18×20 a shaped cross. A touch more power and forgiveness than the Caviar version, with the same plush gut contact."
+                  <tr data-config="gut-mains" data-id="gh-pt630-3">
+                    <td class="gut-config-cell gut-config-mains">
+                      <span class="gut-config-icon">
+                        "⬆"
+                      <span class="gut-config-label">
+                        "Gut Mains"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="gut">
+                        <span class="gut-string-name">
+                          "Babolat VS Touch"
+                        <span class="gut-string-gauge">
+                          "1.35 / 15L"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="luxilon">
+                        <span class="gut-string-name">
+                          "ALU Power Rough"
+                        <span class="gut-string-gauge">
+                          "1.25 / 16L"
+                    <td class="gut-feel-cell">
+                      "Plush · Textured"
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Very High"
+                        <div class="bar">
+                          <div class="bar-fill power" style="width: 88%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill spin" style="width: 70%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Excellent"
+                        <div class="bar">
+                          <div class="bar-fill comfort" style="width: 90%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "High"
+                        <div class="bar">
+                          <div class="bar-fill gut-protection" style="width: 78%;">
+                    <td class="gut-tension-cell">
+                      "22/19"
+                    <td class="gut-notes-cell">
+                      "Thicker 15L gut mains over ALU Power Rough crosses: the 1.35 gauge maximises gut durability, the main concern in a dense pattern, and the textured round cross adds friction where a smooth cross would leave the 18×20 spin-poor. More power, a little less spin than the shaped-cross versions."
+                  <tr data-config="gut-crosses" data-id="gh-pt630-4">
+                    <td class="gut-config-cell gut-config-crosses">
+                      <span class="gut-config-icon">
+                        "⬇"
+                      <span class="gut-config-label">
+                        "Gut Crosses"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="toroline">
+                        <span class="gut-string-name">
+                          "Caviar"
+                        <span class="gut-string-gauge">
+                          "1.24 / 16L"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="gut">
+                        <span class="gut-string-name">
+                          "Babolat VS Touch"
+                        <span class="gut-string-gauge">
+                          "1.30 / 16"
+                    <td class="gut-feel-cell">
+                      "Med-Firm · Crisp"
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill power" style="width: 60%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill spin" style="width: 72%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Very Good"
+                        <div class="bar">
+                          <div class="bar-fill comfort" style="width: 85%;">
+                    <td>
+                      <span class="gut-dash">
+                        "—"
+                    <td class="gut-tension-cell">
+                      "21/23"
+                    <td class="gut-notes-cell">
+                      "The Murray PT57A configuration: Caviar mains over gut crosses. Hex mains handle the dense pattern's spin demand and hold launch low; gut crosses add the power a low-RA frame lacks. Crosses move less, so gut life is long — the economical gut option on this frame."
+                  <tr data-config="gut-crosses" data-id="gh-pt630-5">
+                    <td class="gut-config-cell gut-config-crosses">
+                      <span class="gut-config-icon">
+                        "⬇"
+                      <span class="gut-config-label">
+                        "Gut Crosses"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="luxilon">
+                        <span class="gut-string-name">
+                          "4G"
+                        <span class="gut-string-gauge">
+                          "1.30 / 16"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="gut">
+                        <span class="gut-string-name">
+                          "Babolat VS Touch"
+                        <span class="gut-string-gauge">
+                          "1.30 / 16"
+                    <td class="gut-feel-cell">
+                      "Very Firm · Stable"
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Medium"
+                        <div class="bar">
+                          <div class="bar-fill power" style="width: 52%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill spin" style="width: 60%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Outstanding"
+                        <div class="bar">
+                          <div class="bar-fill comfort" style="width: 95%;">
+                    <td>
+                      <span class="gut-dash">
+                        "—"
+                    <td class="gut-tension-cell">
+                      "20/22"
+                    <td class="gut-notes-cell">
+                      "4G mains over gut crosses in the 58 RA frame: the flex softens 4G's very firm response, and the gut crosses add the dwell a dense pattern otherwise lacks. Exceptional tension stability from both materials. Round mains leave the 18×20 with limited spin access."
+                  <tr data-config="gut-crosses" data-id="gh-pt630-6">
+                    <td class="gut-config-cell gut-config-crosses">
+                      <span class="gut-config-icon">
+                        "⬇"
+                      <span class="gut-config-label">
+                        "Gut Crosses"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="luxilon">
+                        <span class="gut-string-name">
+                          "Adrenaline"
+                        <span class="gut-string-gauge">
+                          "1.25 / 16L"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="gut">
+                        <span class="gut-string-name">
+                          "Babolat VS Touch"
+                        <span class="gut-string-gauge">
+                          "1.30 / 16"
+                    <td class="gut-feel-cell">
+                      "Firm · Sharp"
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill power" style="width: 60%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "High"
+                        <div class="bar">
+                          <div class="bar-fill spin" style="width: 80%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Very Good"
+                        <div class="bar">
+                          <div class="bar-fill comfort" style="width: 82%;">
+                    <td>
+                      <span class="gut-dash">
+                        "—"
+                    <td class="gut-tension-cell">
+                      "20/22"
+                    <td class="gut-notes-cell">
+                      "Adrenaline pentagonal mains over gut crosses: sharper edges than the Caviar version for more aggressive bite in the 18×20. Gut crosses bring power and dwell against the firm mains. Firm-launching, medium contact after the 58 RA flex does its work."
+                  <tr data-config="gut-crosses" data-id="gh-pt630-7">
+                    <td class="gut-config-cell gut-config-crosses">
+                      <span class="gut-config-icon">
+                        "⬇"
+                      <span class="gut-config-label">
+                        "Gut Crosses"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="toroline">
+                        <span class="gut-string-name">
+                          "O-Toro Tour"
+                        <span class="gut-string-gauge">
+                          "1.25 / 16L"
+                    <td class="gut-string-cell">
+                      <div class="gut-string-pill" data-brand="gut">
+                        <span class="gut-string-name">
+                          "Wilson Natural Gut"
+                        <span class="gut-string-gauge">
+                          "1.25 / 17"
+                    <td class="gut-feel-cell">
+                      "Firm · Crisp"
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill power" style="width: 60%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Med-High"
+                        <div class="bar">
+                          <div class="bar-fill spin" style="width: 70%;">
+                    <td>
+                      <div class="gut-bar-wrap">
+                        <span class="gut-bar-label">
+                          "Excellent"
+                        <div class="bar">
+                          <div class="bar-fill comfort" style="width: 88%;">
+                    <td>
+                      <span class="gut-dash">
+                        "—"
+                    <td class="gut-tension-cell">
+                      "20/22"
+                    <td class="gut-notes-cell">
+                      "O-Toro Tour hex mains over Wilson 17 gut crosses: the thinner gut adds slightly more elasticity than VS Touch 16 in the dense pattern; the mains' tension stability pairs with gut's slow decline. A lower-cost gut option — Wilson runs cheaper than VS Touch."
+          " "
+      <div class="active brand-section toroline-view" id="headpt630-toroline-section">
+        " "
+        <div class="table-wrap">
+          " "
+          <table data-brand="toroline" data-racquet="headpt630" data-render="strings">
+            " "
+            <thead>
+              " "
+              <tr>
+                " "
+                <th class="sortable" data-col="string">
+                  "String"
+                " "
+                <th>
+                  "Shape"
+                " "
+                <th>
+                  "Gauge"
+                " "
+                <th>
+                  "Colors"
+                " "
+                <th class="sortable" data-col="stiffness">
+                  "Stiffness"
+                " "
+                <th class="sortable" data-col="power">
+                  "Power"
+                " "
+                <th>
+                  "Feel"
+                " "
+                <th class="sortable" data-col="spin">
+                  "Spin"
+                " "
+                <th class="sortable" data-col="control">
+                  "Control"
+                " "
+                <th class="sortable" data-col="comfort">
+                  "Comfort"
+                " "
+                <th>
+                  "Tension (kg)"
+                " "
+                <th>
+                  "Notes"
+                " "
+            <tbody>
+              <tr data-feel="crisp,firm" data-id="toroline-o-toro-tour" data-shape="hexagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-toro-tour" type="checkbox">
+                  "O-Toro Tour"
+                <td>
+                  "Hexagonal"
+                <td>
+                  "1.23 / 17"
+                  <br>
+                  "1.20 / 17+"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(62, 230, 138);" title="Mint">
+                    <span class="color-dot" style="background: rgb(57, 255, 20);" title="Neon Green">
+                  <span class="color-label">
+                    "Mint, Neon Green"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Firm · 1.10"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 93%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low-Med"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 38%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <span class="tag tag-firm">
+                    "Firm"
+                  <br>
+                  "Firm, high-feedback"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 92%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Outstanding"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 95%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Moderate"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 55%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–21"
+                <td class="notes">
+                  "Firm string in the most flexible frame here. The 58 RA layup spreads the impact impulse and the Twaron damps post-impact vibration, so the same 1.10 kg/mm string plays softer and quieter than in either Yonex while keeping short dwell and low launch. Hex bite is the main spin source in the 18×20. Run 2–3 kg below the Regna — dense pattern and smaller hoop both raise effective bed stiffness."
+              <tr data-feel="crisp,firm" data-id="toroline-caviar" data-shape="hexagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-caviar" type="checkbox">
+                  "Caviar"
+                <td>
+                  "Hexagonal"
+                <td>
+                  "1.16 / 18"
+                  <br>
+                  "1.20 / 17"
+                  <br>
+                  "1.24 / 16L"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(255, 224, 51);" title="Neon Yellow">
+                  <span class="color-label">
+                    "Neon Yellow"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm · 1.00"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 78%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 30%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <br>
+                  "Direct, precise"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 80%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Excellent"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 92%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Moderate"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 55%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "1.00 kg/mm in the 58 RA frame lands mid-range: the flex and Twaron layup soften the impact, while the string keeps the bed from going loose. Hex bite is the main spin source in the 18×20. Tension hold matters in a pattern that's tedious to restring. Run 2–3 kg below the Regna."
+              <tr data-feel="crisp,soft" data-id="toroline-vamos" data-shape="hexagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-vamos" type="checkbox">
+                  "Vamos"
+                <td>
+                  "Hexagonal"
+                <td>
+                  "1.23 / 17"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(200, 169, 126);" title="Latte">
+                  <span class="color-label">
+                    "Latte"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 55%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <br>
+                  "Shaped A5, higher launch"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 88%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 85%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 62%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–21"
+                <td class="notes">
+                  "The 58 RA frame softens Vamos further, and the hex shape gives the 18×20 its spin. The extra launch is partly cancelled by the dense pattern's flattening. The open question is stiffness: if Vamos really sits near 0.90 kg/mm, the frame's own compliance plus the string's makes a soft, high-dwell bed. No lab data yet. 2–3 kg below the Regna."
+              <tr data-feel="crisp,firm" data-id="toroline-cash" data-shape="round" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-cash" type="checkbox">
+                  "Cash"
+                <td>
+                  "Round"
+                <td>
+                  "1.25 / 17"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(34, 197, 94);" title="Green">
+                  <span class="color-label">
+                    "Green"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 79%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low-Med"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 35%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <span class="tag tag-firm">
+                    "Firm"
+                  <br>
+                  "Solid, direct, round"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 55%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Excellent"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 92%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Moderate"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 50%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–21"
+                <td class="notes">
+                  "Round plus 18×20 is the least spin-friendly combination in this database: no edge bite, snapback pinned. Firm and control-oriented suits the frame's low power — a flat, penetrating ball with good directional stability — and the 58 RA flex takes the edge off the firmness. Slice and net play are where a firm round string in this frame shows best. 2–3 kg below the Regna."
+              <tr data-feel="crisp,soft" data-id="toroline-a5" data-shape="round" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-a5" type="checkbox">
+                  "A5"
+                <td>
+                  "Round"
+                <td>
+                  "1.25 / 17"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(107, 114, 128);" title="Carbon Gray">
+                  <span class="color-label">
+                    "Carbon Gray"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Soft · 0.90"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 63%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 52%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <br>
+                  "Round, snapback-driven"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 78%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 82%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 65%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20–22"
+                <td class="notes">
+                  "If the 0.90 figure holds, A5 sits on the soft side for a frame already supplying compliance through 58 RA and Twaron: higher dwell, quieter feedback, more launch than the firm options. Round plus 18×20 is the low end for spin here — snapback and edge bite are both limited. The top of the band firms the bed. 2–3 kg below the Regna."
+              <tr data-feel="soft,plush" data-id="toroline-a5-infrared" data-shape="round" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-a5-infrared" type="checkbox">
+                  "A5 Infrared"
+                <td>
+                  "Round"
+                <td>
+                  "1.20 / 17+"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(255, 45, 32);" title="Infrared">
+                  <span class="color-label">
+                    "Infrared"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Soft"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 60%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-High"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 65%;">
+                <td>
+                  <span class="tag tag-soft">
+                    "Soft"
+                  <br>
+                  "Plusher A5, more pop"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 75%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 68%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 78%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20–22"
+                <td class="notes">
+                  "Toroline's soft, high-launch A5 variant in the lowest-RA frame here. The frame already supplies compliance through 58 RA and Twaron, so this stacks compliance on compliance: deep pocketing, high launch, reduced high-frequency feedback. Whether that's useful depends on wanting the PT630 to play softer than stock. As crosses under a firm shaped main, the 18×20 limits how much comes through."
+              <tr data-feel="soft,lively" data-id="toroline-o-toro" data-shape="hexagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-toro" type="checkbox">
+                  "O-Toro"
+                <td>
+                  "Hexagonal"
+                <td>
+                  "1.23 / 17"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(57, 255, 20);" title="Neon Green">
+                    <span class="color-dot" style="background: rgb(255, 255, 255);" title="White">
+                    <span class="color-dot" style="background: rgb(255, 105, 180);" title="Neon Pink">
+                    <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-dot" style="background: rgb(255, 140, 0);" title="Orange">
+                  <span class="color-label">
+                    "Green, White, Pink, Black, Orange"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium · 0.95"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 55%;">
+                <td>
+                  <span class="tag tag-lively">
+                    "Elastic"
+                  <br>
+                  "More muted than Tour"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Elite"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 95%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 72%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 82%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "More pocketing than O-Toro Tour in a frame that supplies little energy of its own — the string, not the frame, provides the elasticity. 0.95 kg/mm in the 58 RA frame: medium dwell, damped feedback, hex bite doing the spin work in the 18×20. Sits between Tour and the soft Toroline options on this frame. 2–3 kg below the Regna."
+              <tr data-feel="crisp,firm" data-id="toroline-o-toro-octa" data-shape="octagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-toro-octa" type="checkbox">
+                  "O-Toro Octa"
+                <td>
+                  "Octagonal"
+                <td>
+                  "1.25 / 16L"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                  <span class="color-label">
+                    "Black"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Firm · ~1.10"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 93%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low-Med"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 42%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <br>
+                  "Octagonal, lower launch"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 82%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Excellent"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 90%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Moderate"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 52%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "Octagonal profile maximises edge contact — useful in the 18×20 where edge bite is the only spin mechanism available. The PT630's flex softens the ~1.10 stiffness and damps the harshness sharp-edged polys can produce in stiffer hoops. Low launch on top of a dense pattern gives a very flat ball. 2–3 kg below the Regna."
+              <tr data-feel="soft" data-id="toroline-o-toro-spin" data-shape="pentagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-toro-spin" type="checkbox">
+                  "O-Toro Spin"
+                <td>
+                  "Pentagonal"
+                <td>
+                  "1.23 / 17"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(255, 105, 180);" title="Neon Pink">
+                    <span class="color-dot" style="background: rgb(255, 255, 255);" title="White">
+                    <span class="color-dot" style="background: rgb(196, 181, 253);" title="Lavender">
+                  <span class="color-label">
+                    "Pink, White, Lavender"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium · ~0.95"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 52%;">
+                <td>
+                  <span class="tag tag-soft">
+                    "Moderate"
+                  <br>
+                  "More ball grip"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 93%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 75%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 68%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "Highest string-to-ball friction in the lineup, in a pattern where friction is the only spin mechanism. The 58 RA frame keeps the pentagonal edges from feeling harsh. More spin access than O-Toro Tour, a higher launch than the dense pattern usually gives, less directional precision. 2–3 kg below the Regna."
+              <tr data-feel="soft" data-id="toroline-o-toro-snap" data-shape="round" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-toro-snap" type="checkbox">
+                  "O-Toro Snap"
+                <td>
+                  "Round"
+                <td>
+                  "1.25 / 16L"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-dot" style="background: rgb(62, 230, 138);" title="Mint">
+                  <span class="color-label">
+                    "Black, Mint"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium · ~0.95"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-High"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 62%;">
+                <td>
+                  <span class="tag tag-round">
+                    "Smooth"
+                  <br>
+                  "Round, slick, medium"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 68%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 82%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 65%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "No edge geometry, and the 18×20 pins the snapback its slick surface is built for — a low-spin combination as a full bed. The frame's flex softens it further; the ball comes out flat and controlled. As crosses under shaped mains the slickness helps the mains move in the dense pattern. 2–3 kg below the Regna."
+              <tr data-feel="soft" data-id="toroline-wasabi" data-shape="square" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-wasabi" type="checkbox">
+                  "Wasabi"
+                <td>
+                  "Square"
+                <td>
+                  "1.23 / 17"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(255, 105, 180);" title="Neon Pink">
+                    <span class="color-dot" style="background: rgb(57, 255, 20);" title="Neon Green">
+                    <span class="color-dot" style="background: rgb(147, 51, 234);" title="Grape Purple">
+                  <span class="color-label">
+                    "Pink, Green, Purple"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium · 0.95–1.00"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 74%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low-Med"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 35%;">
+                <td>
+                  <span class="tag tag-soft">
+                    "Moderate"
+                  <br>
+                  "Soft for a shaped string"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 85%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 78%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 72%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "Square edges deliver maximum bite, which the 18×20 needs — spin here is edge-driven or nothing. The PT630's deep flex absorbs the harshness square polys can produce, and the string's medium stiffness adds some power to a low-powered frame. Expect faster notching at the crossings than with a round string. 2–3 kg below the Regna."
+              <tr data-feel="soft" data-id="toroline-toro-toro" data-shape="hexagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-toro-toro" type="checkbox">
+                  "Toro Toro"
+                <td>
+                  "Hexagonal"
+                <td>
+                  "1.23 / 17"
+                  <br>
+                  "1.27 / 16L"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(255, 105, 180);" title="Neon Pink">
+                    <span class="color-dot" style="background: rgb(255, 140, 0);" title="Neon Orange">
+                    <span class="color-dot" style="background: rgb(139, 195, 74);" title="Matcha Green">
+                  <span class="color-label">
+                    "Pink, Orange, Matcha"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium · 0.95"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 55%;">
+                <td>
+                  <span class="tag tag-soft">
+                    "Softer"
+                  <br>
+                  "More pocketing"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 84%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 76%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 78%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20–22"
+                <td class="notes">
+                  "Medium-soft hex in the lowest-RA frame here: frame flex and string compliance add up to a high-dwell, damped bed. Hex edges provide the spin the 18×20 can't get from snapback. Softer feel than O-Toro; Toro Toro's pocketing shows most clearly in this frame. 2–3 kg below the Regna."
+              <tr data-feel="soft" data-id="toroline-enso-pro-carbon" data-shape="round" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-enso-pro-carbon" type="checkbox">
+                  "Enso Pro (Carbon)"
+                <td>
+                  "Round"
+                <td>
+                  "1.24 / 16L"
+                  <br>
+                  "1.25 / 16L"
+                  <br>
+                  "1.27 / 16"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(85, 85, 85);" title="Carbon Grey">
+                    <span class="color-dot" style="background: rgb(255, 105, 180);" title="Neon Pink">
+                    <span class="color-dot" style="background: rgb(139, 195, 74);" title="Matcha Green">
+                  <span class="color-label">
+                    "Carbon, Pink, Matcha"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Soft · 0.90"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 63%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 50%;">
+                <td>
+                  <span class="tag tag-round">
+                    "Smooth"
+                  <br>
+                  "Carbon firmer than pink"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 60%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 82%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "max 16"
+                <td class="notes">
+                  "A PEEK polymer in the lowest-RA frame: as a full bed the compliance stacks — very high dwell, high launch, little high-frequency feedback — and the 16 kg knot ceiling means tension can't compensate. As crosses under O-Toro Tour or Caviar mains, the 18×20 contains the softness and the bed stays firm-launching with lower shock. Do not exceed 16 kg when tying knots."
+              <tr data-feel="soft" data-id="toroline-snapper" data-shape="octagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-snapper" type="checkbox">
+                  "Snapper"
+                <td>
+                  "Octagonal"
+                <td>
+                  "1.23 / 17"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(196, 181, 253);" title="Lavender">
+                  <span class="color-label">
+                    "Lavender"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Soft · 0.85"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 55%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-High"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 60%;">
+                <td>
+                  <span class="tag tag-soft">
+                    "Soft"
+                  <br>
+                  "Octagonal, soft, high spin"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 90%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 62%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 85%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "Octagonal bite gives the 18×20 aggressive edge-driven spin. At 0.85 kg/mm in the 58 RA frame the compliance stacks: soft, high-dwell, damped bed with more launch than the dense pattern usually gives. An alternative to O-Toro Octa with the same edge count and a considerably softer formula. 2–3 kg below the Regna."
+              <tr data-feel="soft" data-id="toroline-super-toro" data-shape="hexagonal" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-super-toro" type="checkbox">
+                  "Super Toro"
+                <td>
+                  "Hexagonal"
+                <td>
+                  "1.23 / 17"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(59, 130, 246);" title="Blue">
+                    <span class="color-dot" style="background: rgb(57, 255, 20);" title="Green">
+                  <span class="color-label">
+                    "Blue, Green"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Soft · 0.90"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 63%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 28%;">
+                <td>
+                  <span class="tag tag-soft">
+                    "Soft"
+                  <br>
+                  "Softer hex, entry-level"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 82%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 68%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 80%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "Medium-soft hex in the 58 RA frame: damped, moderate-to-high dwell bed with the hex edges doing the spin work in the 18×20. The simpler construction's weaker tension hold is more noticeable in a pattern that's slow to restring. Close to O-Toro in character with a shorter playable life. 2–3 kg below the Regna."
+              <tr data-feel="soft,plush" data-id="toroline-truffle-x" data-shape="round" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-truffle-x" type="checkbox">
+                  "Truffle X"
+                <td>
+                  "Round"
+                <td>
+                  "1.30 / 16"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(147, 51, 234);" title="Purple">
+                  <span class="color-label">
+                    "Purple"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Soft"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 25%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 78%;">
+                <td>
+                  <span class="tag tag-plush">
+                    "Plush"
+                  <br>
+                  "Ultra-soft PEEK polymer"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 45%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 40%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Outstanding"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 98%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "max 16"
+                <td class="notes">
+                  "Lowest-stiffness string in this database in the lowest-RA frame. As a full bed the two compound: maximum dwell, high launch, very little high-frequency feedback, and the knot ceiling means the bed can't be tightened to compensate. As crosses under a firm shaped main, the 18×20's tight spacing contains the softness — a slightly softer, more forgiving bed with the mains still defining launch and spin."
+              <tr data-feel="firm" data-id="toroline-o-toro-snap-tour-flex" data-shape="round" data-type="string">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-toro-snap-tour-flex" type="checkbox">
+                  "O-Toro Snap Tour Flex"
+                <td>
+                  "Round"
+                <td>
+                  "1.25 / 16L"
+                <td>
+                  <div class="colors">
+                    <span class="color-dot" style="background: rgb(34, 34, 34);" title="Black">
+                    <span class="color-dot" style="background: rgb(62, 180, 137);" title="Mint">
+                  <span class="color-label">
+                    "Black, Mint"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 79%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low-Med"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 38%;">
+                <td>
+                  <span class="tag tag-firm">
+                    "Firm"
+                  <br>
+                  "Firm, controlled, slick"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 78%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very Good"
+                  <div class="bar">
+                    <div class="bar-fill control" style="width: 85%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Moderate"
+                  <div class="bar">
+                    <div class="bar-fill comfort" style="width: 50%;">
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "19–22"
+                <td class="notes">
+                  "Firmer than standard Snap; the added stiffness keeps the bed firm in a frame that softens everything. Round in the 18×20 means limited spin — no edges, pinned snapback — and a flat, controlled ball. Its natural role here is crosses under a shaped main, where slickness helps the mains slide. 2–3 kg below the Regna."
+            " "
+        <div class="card" style="margin-top: 1rem;">
+          " "
+          <h3 style="color: rgb(125, 211, 252); margin-bottom: 0.5rem;">
+            "⚡ Toroline Hybrids"
+          " "
+          <p style="font-size: 0.85rem; color: rgb(148, 163, 184); margin-bottom: 0.75rem;">
+            "Toroline's OMAKASE blends — poly/poly hybrids designed to be strung together. All sets come as two half-sets. String mains 1–1.5 kg lower than crosses for optimal balance."
+          " "
+          <table class="hybrid-table" data-brand="toroline" data-racquet="headpt630" data-render="hybrid">
+            " "
+            <thead>
+              " "
+              <tr>
+                " "
+                <th class="sortable" data-col="string">
+                  "Hybrid Name"
+                " "
+                <th>
+                  "Mains"
+                " "
+                <th>
+                  "Crosses"
+                " "
+                <th class="sortable" data-col="stiffness">
+                  "Stiffness"
+                " "
+                <th class="sortable" data-col="power">
+                  "Power"
+                " "
+                <th class="sortable" data-col="spin">
+                  "Spin"
+                " "
+                <th>
+                  "Character"
+                " "
+                <th>
+                  "Tension (kg)"
+                " "
+                <th>
+                  "Notes"
+                " "
+            <tbody>
+              <tr data-feel="crisp,firm" data-id="toroline-k-pop" data-shape="hexagonal,square" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-k-pop" type="checkbox">
+                  "K-Pop"
+                <td>
+                  "Wasabi 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Square · Medium"
+                <td>
+                  "Caviar 1.24"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Med-Firm"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 79%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low-Med"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 35%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 90%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <span class="tag tag-firm">
+                    "Controlled"
+                  <br>
+                  "Square bite, hex control"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "Square mains give the 18×20 maximum edge bite and Caviar crosses add controlled snapback and tension hold. The PT630's flex absorbs the harshness square mains can produce in stiffer hoops. High spin, low launch, low power — the most control-oriented Toroline hybrid on this frame. 20/19 kg."
+              <tr data-feel="soft,plush,lively" data-id="toroline-k-pop-spin" data-shape="hexagonal,pentagonal" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-k-pop-spin" type="checkbox">
+                  "K-Pop Spin"
+                <td>
+                  "O-Toro Spin 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Pentagonal · Medium"
+                <td>
+                  "O-Toro 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Medium"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 52%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Elite"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 97%;">
+                <td>
+                  <span class="tag tag-plush">
+                    "Pocketing"
+                  <span class="tag tag-lively">
+                    "Lively"
+                  <br>
+                  "Ball dives into court"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "Pentagonal mains are the spin source in the 18×20, where friction is all that's available; slick crosses help the mains move. Two ~0.95 strings in the 58 RA frame make a medium-soft, high-dwell bed with more launch than the dense pattern usually allows. The PT630's mass keeps it stable. 20/19 kg."
+              <tr data-feel="crisp,firm,lively" data-id="toroline-dreddy" data-shape="hexagonal,round" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-dreddy" type="checkbox">
+                  "Dreddy"
+                <td>
+                  "O-Toro Tour 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Very Firm"
+                <td>
+                  "O-Toro Snap 1.25"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Round · Medium"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 79%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 52%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 88%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <span class="tag tag-lively">
+                    "Explosive"
+                  <br>
+                  "Bite + snapback"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "O-Toro Tour mains supply edge bite in the 18×20 and hold launch low; Snap's slick round crosses help the mains move in a pattern that pins snapback. The 58 RA flex softens the firm mains. Firm-launching bed with softer contact than a full Tour bed. (Earlier notes here described a Caviar/O-Toro pairing — that is the Cole recipe.) 20/19 kg."
+              <tr data-feel="firm,plush" data-id="toroline-stevie" data-shape="hexagonal,round" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-stevie" type="checkbox">
+                  "Stevie"
+                <td>
+                  "O-Toro Tour 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Very Firm"
+                <td>
+                  "Truffle X 1.30"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Round · Very Soft"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 79%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-High"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 62%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 78%;">
+                <td>
+                  <span class="tag tag-plush">
+                    "Plush"
+                  <span class="tag tag-firm">
+                    "Precise"
+                  <br>
+                  "Tour control + comfort"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/16"
+                <td class="notes">
+                  "Firm hex mains for spin and launch in the 18×20, ultra-soft PEEK crosses for power in a low-powered frame. The 58 RA flex plus soft crosses stacks compliance — high dwell, quiet contact, mains still defining trajectory. Keep Truffle X at or below 16 kg. 20/16 kg."
+              <tr data-feel="soft,plush,lively" data-id="toroline-101" data-shape="hexagonal,round" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-101" type="checkbox">
+                  "101"
+                <td>
+                  "O-Toro 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Medium"
+                <td>
+                  "O-Toro Snap 1.25"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Round · Medium"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Soft"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 60%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-High"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 60%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 90%;">
+                <td>
+                  <span class="tag tag-plush">
+                    "Comfortable"
+                  <span class="tag tag-lively">
+                    "Lively"
+                  <br>
+                  "Spin + comfort"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "Medium-soft on medium-soft in the 58 RA frame: compliance stacks into a plush, high-dwell bed. Hex mains still supply edge bite in the 18×20, and slick crosses help them move. The softest-contact Toroline poly hybrid on this frame. (Earlier notes here described Toro Toro mains — 101 uses O-Toro.) 20/19 kg."
+              <tr data-feel="crisp,soft,lively" data-id="toroline-o-snap" data-shape="hexagonal,round" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-snap" type="checkbox">
+                  "O-Snap"
+                <td>
+                  "O-Toro 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Medium"
+                <td>
+                  "O-Toro Snap TF 1.25"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Round · Med-Firm"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 55%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 88%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <span class="tag tag-lively">
+                    "Responsive"
+                  <br>
+                  "Faster snapback"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "Hex mains give the 18×20 its edge bite; firm slick crosses keep the bed defined in a frame that softens everything and help the mains move in a dense pattern. Medium bed in the 58 RA frame — more control than the 101, less bite than K-Pop. 20/19 kg."
+              <tr data-feel="firm" data-id="toroline-wasabi-pro" data-shape="round,square" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-wasabi-pro" type="checkbox">
+                  "Wasabi Pro"
+                <td>
+                  "Wasabi 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Square · Medium"
+                <td>
+                  "Wasabi X 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Round · Med-Soft"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 79%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 48%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Elite"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 95%;">
+                <td>
+                  <span class="tag tag-firm">
+                    "Aggressive"
+                  <span class="tag tag-round">
+                    "Bite"
+                  <br>
+                  "Pure spin machine"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "Square mains give the 18×20 maximum edge bite; slick crosses help them move in a pattern that pins snapback. The 58 RA flex absorbs the square edges' harshness. (Earlier notes here described Wasabi/Caviar — that is K-Pop.) Med-firm, lively, high-spin bed. 20/19 kg."
+              <tr data-feel="soft,plush" data-id="toroline-what-the-hybrid" data-shape="hexagonal,square" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-what-the-hybrid" type="checkbox">
+                  "What The Hybrid"
+                <td>
+                  "Wasabi 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Square · Medium"
+                <td>
+                  "Toro Toro 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Medium"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 70%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 52%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 88%;">
+                <td>
+                  <span class="tag tag-plush">
+                    "Pocketing"
+                  <span class="tag tag-round">
+                    "Bite"
+                  <br>
+                  "Wasabi bite + Toro feel"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "Square mains for edge bite in the 18×20; softer hex crosses for dwell in a frame that already supplies compliance — a damped, medium-soft bed. Snapback is doubly limited (hex-on-square, dense pattern), so spin is what the edges give. (Earlier notes here described Snapper/O-Toro — that is not this recipe.) 20/19 kg."
+              <tr data-feel="crisp,firm" data-id="toroline-snapaholic" data-shape="octagonal,round" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-snapaholic" type="checkbox">
+                  "Snapaholic"
+                <td>
+                  "Snapper 1.23"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Octagonal · Med-Soft"
+                <td>
+                  "O-Toro Snap TF 1.25"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Round · Med-Firm"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 79%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Low-Med"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 40%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Elite"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 95%;">
+                <td>
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <span class="tag tag-round">
+                    "Bite"
+                  <br>
+                  "Shaped mains + slick crosses"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "Octagonal mains give the 18×20 aggressive edge bite; the firm slick cross keeps a soft main defined in the 58 RA frame and helps it move in a dense pattern. Med-firm, elastic bed with high spin. (Earlier notes here described O-Toro Tour/Snap — that is Dreddy.) 20/19 kg."
+              <tr data-feel="crisp,firm" data-id="toroline-cole" data-shape="hexagonal" data-type="hybrid">
+                <td class="string-name">
+                  <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-cole" type="checkbox">
+                  "Cole"
+                <td>
+                  "O-Toro Tour 1.23 Mint"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Very Firm"
+                <td>
+                  "O-Toro 1.23 Green"
+                  <br>
+                  <span style="color: rgb(148, 163, 184); font-size: 0.8rem;">
+                    "Hexagonal · Medium"
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Med-Firm"
+                  <div class="bar">
+                    <div class="bar-fill stiff" style="width: 79%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Medium"
+                  <div class="bar">
+                    <div class="bar-fill power" style="width: 50%;">
+                <td class="bar-cell">
+                  <span class="bar-label">
+                    "Very High"
+                  <div class="bar">
+                    <div class="bar-fill spin" style="width: 88%;">
+                <td>
+                  <span class="tag tag-firm">
+                    "Precise"
+                  <span class="tag tag-crisp">
+                    "Crisp"
+                  <br>
+                  "Control mains + spin crosses"
+                <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
+                  "20/19"
+                <td class="notes">
+                  "Hex mains and hex crosses both contribute edge bite in the 18×20 — the shape-on-shape recipe for a pattern with no snapback to speak of. O-Toro Tour mains hold launch low and tension steady; O-Toro crosses soften contact in a frame the 58 RA already softens. Clean, precise, medium-firm bed. 20/19 kg."
+            " "
+        <div class="footer">
+          " "
+          <p>
+            "Stiffness (kg/mm) from Racketpedia lab testing. Subjective ratings from TW playtests, Tennisnerd, and Toroline product descriptions. Stiffness bars share one scale across every brand, 0.55 to 1.15 kg/mm; a string without a figure is drawn at its band's midpoint. The rating bars are relative within the Toroline lineup. All sets come as two half-sets (hybrid-ready). Tension ranges are 2–3 kg lower than Regna to account for the dense 18×20 pattern."
+          " "
+      <div class="legend">
+        " "
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(148, 163, 184), rgb(71, 85, 105));">
+          "Stiffness (higher = firmer)"
+        " "
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(251, 146, 60), rgb(220, 38, 38));">
+          "Power (higher = more power)"
+        " "
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
+          "Spin potential"
+        " "
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(167, 139, 250), rgb(124, 58, 237));">
+          "Control"
+        " "
+        <div class="legend-item">
+          <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(96, 165, 250), rgb(129, 140, 248));">
+          "Comfort"
+        " "
+      <div class="version-tag">
+        "v*"
+      " "

@@ -12,7 +12,6 @@ describe('search index', () => {
     expect(count('hybrid')).toBe(10 * 3);
     expect(count('grip')).toBe(35);
     expect(count('guthybrid')).toBe(21);
-    expect(count('log')).toBe(0);
   });
 
   test('labels and sublabels follow v0.990', () => {
@@ -33,22 +32,6 @@ describe('search index', () => {
     expect(ids('made in usa')).toContain('kimony-tourna');
     // v0.990 searched the spec's inline HTML, so the colour code found this grip.
     expect(ids('d97706')).toEqual([]);
-  });
-
-  test('log entries are indexed with their tension in the sublabel', () => {
-    const withLog = buildSearchIndex(db, [
-      {
-        id: 'a1',
-        racquet: 'regna',
-        date: '2026-10-01',
-        stringName: 'Caviar',
-        tension: '23/24',
-        note: '',
-      },
-    ]);
-    const entry = withLog.find((i) => i.type === 'log')!;
-    expect(entry.id).toBe('log-a1');
-    expect(entry.sublabel).toBe('Logged on 2026-10-01 · Regna 100 @ 23/24');
   });
 });
 

@@ -6,7 +6,6 @@ import {
   buildSearchIndex,
   resultKey,
   searchIndex,
-  type LogSearchEntry,
   type SearchItem,
 } from '../core/search';
 import type { BrandId, RacquetId, TennisDb } from '../core/types';
@@ -21,17 +20,10 @@ let db: TennisDb;
 let index: SearchItem[] = [];
 let results: SearchItem[] = [];
 let keyNavIndex = -1;
-/** Stringing-log entries for the index; the log module supplies them (step 3). */
-let logEntries: () => readonly LogSearchEntry[] = () => [];
-
-export function setLogSearchSource(source: () => readonly LogSearchEntry[]): void {
-  logEntries = source;
-}
-
 const byId = (id: string): HTMLElement => document.getElementById(id)!;
 
 export function rebuildIndex(): SearchItem[] {
-  index = buildSearchIndex(db, logEntries());
+  index = buildSearchIndex(db);
   return index;
 }
 
@@ -82,7 +74,7 @@ function renderResults(query: string): void {
 }
 
 function doSearch(query: string): void {
-  rebuildIndex(); // cheap, and picks up log changes
+  rebuildIndex(); // cheap
   results = searchIndex(query, index);
   keyNavIndex = -1;
   renderResults(query);
@@ -110,8 +102,8 @@ function goToGrip(id: string, brand: BrandId): void {
   setTimeout(() => flash(document.querySelector(`#grip-${brand}-section tr[data-id="${id}"]`)), 50);
 }
 
-/** Opens a racquet's gut or log strip (if collapsed) and flashes a target inside it. */
-function goToStrip(racquet: RacquetId, kind: 'gut' | 'log', target: () => Element | null): void {
+/** Opens a racquet's gut strip (if collapsed) and flashes a target inside it. */
+function goToStrip(racquet: RacquetId, kind: 'gut', target: () => Element | null): void {
   showCategory('strings');
   showRacquet(racquet);
   const section = document.querySelector(`.${kind}-section[data-racquet="${racquet}"]`);
@@ -132,10 +124,6 @@ function navigate(item: SearchItem): void {
     case 'guthybrid':
       return goToStrip(racquet, 'gut', () =>
         document.querySelector(`.gut-section[data-racquet="${racquet}"] tr[data-id="${item.id}"]`),
-      );
-    case 'log':
-      return goToStrip(racquet, 'log', () =>
-        document.querySelector(`.log-section[data-racquet="${racquet}"]`),
       );
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "tennisdb",
   "private": true,
-  "version": "1.6.0",
+  "version": "1.7.0",
   "description": "Personal tennis equipment database: strings, hybrids, gut pairings, grips and a stringing log.",
   "type": "module",
   "scripts": {
@@ -45,10 +45,7 @@
   },
   "dependencies": {
     "@capacitor/core": "^8.5.3",
-    "@capacitor/filesystem": "^8.1.5",
     "@capacitor/ios": "^8.5.3",
-    "@capacitor/preferences": "^8.0.1",
-    "@capacitor/share": "^8.0.3",
     "workbox-window": "^7.4.1",
     "zod": "^4.6.7"
   }

@@ -17,7 +17,6 @@
 // never loads this module.
 import { z } from 'zod';
 import { FEEL_CHIPS, SHAPE_CHIPS } from './chips';
-import { MAX_KG, MIN_KG } from './log/tension';
 import { STIFFNESS_BANDS } from './stiffness';
 import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS, tagLabels } from './tags';
 import { GRIP_TYPES } from './types';
@@ -138,7 +137,8 @@ const ColorsSchema = z.strictObject({
   label: Text,
 });
 
-const Kg = z.number().min(MIN_KG).max(MAX_KG);
+/** Plausible stringing tensions; anything outside is a typo. */
+const Kg = z.number().min(5).max(40);
 const RangeTension = z.strictObject({ kind: z.literal('range'), minKg: Kg, maxKg: Kg });
 const MaxTension = z.strictObject({ kind: z.literal('max'), maxKg: Kg });
 const PrestretchTension = z.strictObject({

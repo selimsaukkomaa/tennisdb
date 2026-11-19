@@ -1,0 +1,692 @@
+" "
+<div id="topbar">
+  " "
+  <div class="topbar-inner">
+    " "
+    <h1 class="topbar-mark">
+      "strung"
+    " "
+    <span class="topbar-div">
+    " "
+    <div class="category-switcher" id="topbar-cats">
+      " "
+      <button class="cat-inactive" data-nav-category="strings" id="btn-cat-strings">
+        "Strings"
+      " "
+      <button class="cat-active" data-nav-category="grips" id="btn-cat-grips">
+        "Grips"
+      " "
+    <span class="topbar-spacer">
+    " "
+    <button aria-label="Search everything" class="topbar-btn" id="btn-palette" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "🔍"
+      <span class="topbar-btn-label">
+        "Search"
+      <kbd id="palette-kbd">
+        "⌘K"
+      " "
+    <button aria-expanded="true" class="is-on topbar-btn" id="btn-filters" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "⚙"
+      <span class="topbar-btn-label">
+        "Filters"
+      <span class="count-on filters-count" id="filters-count">
+        "1"
+      " "
+<div aria-live="polite" class="compare-bar hidden" id="compare-bar">
+  " "
+  <div class="compare-bar-inner">
+    " "
+    <span class="compare-count" id="compare-count">
+      "0 / 4"
+    " "
+    <div class="compare-chips" id="compare-chips">
+    " "
+    <button class="compare-btn-primary" disabled="" id="compare-open">
+      "Select 2 more"
+    " "
+    <button class="compare-btn-secondary" id="compare-clear">
+      "Clear"
+    " "
+<div aria-label="Compare strings" aria-modal="true" class="compare-modal hidden" id="compare-modal" role="dialog">
+  " "
+  <div class="compare-modal-backdrop">
+  " "
+  <div class="compare-modal-panel">
+    " "
+    <div class="compare-modal-header">
+      " "
+      <h2>
+        "Compare"
+      " "
+      <div class="compare-racquet-tabs" id="compare-racquet-tabs">
+      " "
+      <button aria-label="Close" class="compare-modal-close" id="compare-modal-close">
+        "✕"
+      " "
+    <div class="compare-modal-body" id="compare-modal-body">
+    " "
+<div class="container">
+  " "
+  <div class="cat-visible category-content" id="grips-content" style="display: block;">
+    " "
+    <div class="context-line" data-grips="">
+      <span class="ctx-name">
+        "Grips"
+      <span class="ctx-spec">
+        "Overgrips · replacement grips · 3 brands"
+      <span class="badge-show gfilter-all-badge" id="grip-filter-badge">
+        "— showing all"
+    " "
+    <div class="gfilter-all-brands switcher" id="grip-switcher">
+      " "
+      <button class="active-kimony" data-nav-grip-brand="kimony" id="btn-grip-kimony">
+        "Kimony"
+      " "
+      <button class="inactive" data-nav-grip-brand="yonex" id="btn-grip-yonex">
+        "Yonex"
+      " "
+      <button class="inactive" data-nav-grip-brand="tourna" id="btn-grip-tourna">
+        "Tourna"
+      " "
+    <div class="filter-bar filters-open gfilter-visible grip-filter-bar" id="grip-filter-bar">
+      " "
+      <div class="filter-search-row">
+        " "
+        <input class="filter-search" id="grip-filter-search" placeholder="Search grips by name, model, notes..." type="text">
+        " "
+        <button class="filter-clear-btn has-filters" id="grip-filter-clear">
+          "Clear filters"
+        " "
+        <div class="filter-status" id="grip-filter-status">
+          <span class="count-highlight">
+            "9"
+          "of 35 grips"
+        " "
+      <div class="filter-groups">
+        " "
+        <div class="filter-group">
+          " "
+          <span class="filter-group-label">
+            "Type"
+          " "
+          <button class="filter-chip" data-gfilter-group="type" data-gfilter-value="wet">
+            "Wet"
+          " "
+          <button class="filter-chip" data-gfilter-group="type" data-gfilter-value="dry">
+            "Dry"
+          " "
+          <button class="filter-chip" data-gfilter-group="type" data-gfilter-value="replacement">
+            "Replacement"
+          " "
+        <div class="filter-divider">
+        " "
+        <div class="filter-group">
+          " "
+          <span class="filter-group-label">
+            "Feel"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="tacky">
+            "Tacky"
+          " "
+          <button class="chip-active filter-chip" data-gfilter-group="feel" data-gfilter-value="dry">
+            "Dry"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="cushioned">
+            "Cushioned"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="thin">
+            "Thin"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="firm">
+            "Firm"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="leather">
+            "Leather"
+          " "
+    <div class="gfilter-brand-header gfilter-header-kimony gfilter-show" id="gfh-kimony">
+      "Kimony"
+    " "
+    <div class="active brand-section gfilter-force-show" id="grip-kimony-section" style="display: block;">
+      " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin: 20px 0px 12px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Overgrips (Dry)"
+      " "
+      <div class="table-wrap">
+        " "
+        <table data-grip-brand="kimony" data-grip-section="dry" data-grip-table="overgrip" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th class="sortable" data-col="tackiness">
+                "Tackiness"
+              " "
+              <th class="sortable" data-col="absorption">
+                "Absorption"
+              " "
+              <th class="sortable" data-col="durability">
+                "Durability"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Pack Sizes"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="dry,absorbent" data-grip-type="dry" data-id="kimony-neo-dry">
+              <td class="string-name">
+                "Neo-Dry"
+              <td>
+                "KGT143"
+                <br>
+                <span style="color: rgb(148, 163, 184); font-size: 0.75rem;">
+                  "KGT142 (3pk)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "0.50mm"
+                  <br>
+                  "29mm × 98cm"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 22%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 92%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Moderate"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 55%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-soft">
+                  "Absorbent"
+                <br>
+                "Felt-like, moisture-wicking"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, Blue, White"
+              <td>
+                "1 / 3"
+              <td class="notes">
+                "Kimony's proprietary dry-type overgrip. Used by world-class touring professionals. Gets grippier when wet (opposite of tacky grips). Slightly shorter tape (98cm vs 105cm) – overlap less when wrapping. Designed for heavy sweat without a sticky surface."
+            <tr data-grip-feel="dry,durable" data-grip-type="dry" data-id="kimony-last-dry">
+              <td class="string-name">
+                "Last Dry"
+              <td>
+                "KGT150"
+                <br>
+                <span style="color: rgb(148, 163, 184); font-size: 0.75rem;">
+                  "KGT151 (3pk)"
+                  <br>
+                  "KGT215 (12pk)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "0.68mm"
+                  <br>
+                  "29mm × 105cm"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low-Med"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 35%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 90%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Excellent"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 92%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-firm">
+                  "Durable"
+                <br>
+                "Slight tack within dry feel"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, White, Peach Pink, Red, Fluoro Yellow, Blue"
+              <td>
+                "1 / 3 / 12"
+              <td class="notes">
+                "Outstanding durability for a dry grip – surface resists peeling and feel doesn't change after absorbing sweat. Has a subtle tackiness within its dry feel that fits the hand well. At 0.68mm, softer and more comfortable than typical papery dry grips. The name plays on \"lasting\" and on being the last dry grip a player needs. Improved materials for superior abrasion resistance."
+            <tr data-grip-feel="dry,cushioned" data-grip-type="dry" data-id="kimony-dry-spiral">
+              <td class="string-name">
+                "Dry Spiral"
+              <td>
+                "KGT159"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry type"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 25%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 88%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Good"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 68%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-soft">
+                  "Ridged"
+                <br>
+                "Spiral sponge + dry surface"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Multiple colors"
+              <td>
+                "1"
+              <td class="notes">
+                "Dry-type overgrip with spiral foam ridge design (similar to Ana Spiral) for added cushioning and grip stability, combined with a dry surface feel. Brings the spiral sponge ridge to a dry-type surface. One of Kimony's newer additions."
+            <tr data-grip-feel="dry,absorbent" data-grip-type="dry" data-id="kimony-tourna">
+              <td class="string-name">
+                "Tourna"
+              <td>
+                "KGT141"
+                <br>
+                <span style="color: rgb(148, 163, 184); font-size: 0.75rem;">
+                  "KGT147 (30pk)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry type"
+                  <br>
+                  <em style="color: rgb(217, 119, 6);">
+                    "Made in USA"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 18%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Elite"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 96%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 30%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-firm">
+                  "Classic"
+                <br>
+                "World-famous Tourna feel"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Blue"
+              <td>
+                "1 / 30"
+              <td class="notes">
+                "The classic US-made Tourna Grip, distributed by Kimony in Japan. World-famous dry-feel overgrip renowned for exceptional sweat absorption. Used by many touring pros. The only non-Japan-made grip in the Kimony catalog. Maximum absorption but lowest durability – designed to be replaced frequently."
+          " "
+    <div class="gfilter-brand-header gfilter-header-yonex gfilter-show" id="gfh-yonex">
+      "Yonex"
+    " "
+    <div class="brand-section gfilter-force-show" id="grip-yonex-section" style="display: block;">
+      " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin: 20px 0px 12px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Overgrips (Dry)"
+      " "
+      <div class="table-wrap">
+        " "
+        <table data-grip-brand="yonex" data-grip-section="dry" data-grip-table="overgrip" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th class="sortable" data-col="tackiness">
+                "Tackiness"
+              " "
+              <th class="sortable" data-col="absorption">
+                "Absorption"
+              " "
+              <th class="sortable" data-col="durability">
+                "Durability"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Pack Sizes"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="dry,absorbent" data-grip-type="dry" data-id="yonex-dry-grap">
+              <td class="string-name">
+                "Dry Grap"
+              <td>
+                "AC140"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "0.65mm"
+                  <br>
+                  "25mm × 1200mm"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 25%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 88%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Good"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 62%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-soft">
+                  "Absorbent"
+                <br>
+                "Smooth, soft dry feel"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, White, Coral Red, Citrus Green"
+              <td>
+                "3"
+              <td class="notes">
+                "Yonex's original dry-type overgrip. PU construction provides a smooth, dry surface with excellent sweat absorption. At 0.65mm, slightly thicker than the standard Super Grap. Gets grippier as it absorbs moisture. Designed for heavy sweat without a tacky surface. Comparable to Tourna Grip's concept but with a smoother, softer surface feel."
+            <tr data-grip-feel="dry,thin" data-grip-type="dry" data-id="yonex-dry-super-grap">
+              <td class="string-name">
+                "Dry Super Grap"
+              <td>
+                "AC149"
+                <br>
+                <span style="color: rgb(148, 163, 184); font-size: 0.75rem;">
+                  "AC149-30 (30pk)"
+                  <br>
+                  "AC149-60 (60pk)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "0.45mm"
+                  <br>
+                  "27mm × 1100mm"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low-Med"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 42%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 92%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very Good"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 78%;">
+              <td>
+                <span class="tag tag-crisp">
+                  "Thin"
+                <span class="tag tag-firm">
+                  "Dry-Tacky"
+                <br>
+                "Maintains tack when wet"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "White, Black"
+              <td>
+                "3 / 30 / 60"
+              <td class="notes">
+                "The premium dry overgrip in the Yonex lineup. At just 0.45mm, it's one of the thinnest overgrips available – minimal grip size increase with excellent bevel feel. Wider at 27mm but shorter at 1100mm than the standard grips. Maintains impressive tack even during extreme perspiration. The Yonex dry grip that keeps the most tack under heavy sweat."
+          " "
+    <div class="gfilter-brand-header gfilter-header-tourna gfilter-show" id="gfh-tourna">
+      "Tourna"
+    " "
+    <div class="brand-section gfilter-force-show" id="grip-tourna-section" style="display: block;">
+      " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; margin-top: 32px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Overgrips (Dry)"
+      " "
+      <div class="table-wrap">
+        " "
+        <table data-grip-brand="tourna" data-grip-section="dry" data-grip-table="overgrip" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th class="sortable" data-col="tackiness">
+                "Tackiness"
+              " "
+              <th class="sortable" data-col="absorption">
+                "Absorption"
+              " "
+              <th class="sortable" data-col="durability">
+                "Durability"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Pack Sizes"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="dry,absorbent" data-grip-type="dry" data-id="tourna-tourna-grip-original">
+              <td class="string-name">
+                "Tourna Grip Original"
+              <td>
+                "XL-1 (single)"
+                <br>
+                <span style="color: rgb(148, 163, 184); font-size: 0.75rem;">
+                  "XL-3 (3-pack)"
+                  <br>
+                  "XL-10 (10-pack)"
+                  <br>
+                  "XL-30 (30-pack tour)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.45 mm thick"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 18%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Elite"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 96%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 30%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-firm">
+                  "Classic"
+                <br>
+                "Reference dry grip"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Blue"
+              <td>
+                "1 / 3 / 10 / 30"
+              <td class="notes">
+                "The reference dry overgrip, with the highest absorption rating in the database. Trade-off: durability is intentionally low (the absorption mechanism wears the surface). For comparison: Kimony Last Dry has subtle tackiness and ~3x the durability; Yonex Dry Grap is similar to Tourna but slightly less absorbent."
+            <tr data-grip-feel="dry,absorbent" data-grip-type="dry" data-id="tourna-tourna-grip-xl">
+              <td class="string-name">
+                "Tourna Grip XL"
+              <td>
+                "TG-XL"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.45 mm"
+                  <br>
+                  "Extra long"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 18%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Elite"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 96%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 30%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-crisp">
+                  "Long"
+                <br>
+                "Original, longer"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Blue"
+              <td>
+                "1 / 3 / 10"
+              <td class="notes">
+                "For longer handles (16″ extended-length racquets), or for extra overlap and cushion when wrapping. Otherwise identical to the Original."
+            <tr data-grip-feel="dry,absorbent,thin" data-grip-type="dry" data-id="tourna-tourna-grip-pro-thin">
+              <td class="string-name">
+                "Tourna Grip Pro Thin"
+              <td>
+                "TG-PT"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.40 mm thick"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 18%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 88%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 30%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-crisp">
+                  "Thin"
+                <br>
+                "Pro thin variant"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Blue, White"
+              <td>
+                "1 / 3 / 10"
+              <td class="notes">
+                "Slightly less absorbent than the Original because of the thinner construction. Passes more bevel definition through from the base grip — most noticeable over a fresh leather grip."
+          " "
+    <div class="legend">
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(245, 158, 11), rgb(217, 119, 6));">
+        "Tackiness (higher = stickier)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(6, 182, 212), rgb(8, 145, 178));">
+        "Absorption (higher = more moisture-wicking)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
+        "Durability (higher = longer-lasting)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(139, 92, 246), rgb(109, 40, 217));">
+        "Thickness"
+      " "

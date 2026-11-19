@@ -32,7 +32,7 @@ import {
   V0990_STIFFNESS_RULE,
   V0990_STIFFNESS_SCALE,
   V0990_TEXT_EDITS,
-} from '../visual/legacy-fixes';
+} from './v0990-changes';
 
 const legacyHtml = readFileSync(
   fileURLToPath(new URL('../../legacy/tennis_equipmentdb_v0_990.html', import.meta.url)),

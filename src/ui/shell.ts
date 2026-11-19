@@ -1,5 +1,5 @@
 // Builds the page body from data: one container per racquet (context line, brand switcher,
-// log and gut strips, one section per string brand) and the grips category. v0.990 had this
+// the gut strip, one section per string brand) and the grips category. v0.990 had this
 // markup written out three times with per-racquet ids; here a fourth racquet needs only data.
 //
 // Markup mirrors v0.990 line for line: elements sit on their own lines (the whitespace between
@@ -143,14 +143,10 @@ ${STRING_HEAD}
 function racquetContent(db: TennisDb, copy: Copy, r: Racquet, first: boolean): SafeHtml {
   const brands = Object.keys(db.brandsStrings);
   return html`<div id="${racquetContentId(r.id)}"${first ? '' : raw(' style="display:none;"')}>
-<div class="context-line" data-racquet="${r.id}"><span class="ctx-name">${racquetLabel(r)}</span><span class="ctx-spec">${racquetSpec(r)}</span><span class="ctx-strung" data-ctx-strung></span><span class="filter-all-badge" id="${r.id}-filter-badge">— showing all</span></div>
+<div class="context-line" data-racquet="${r.id}"><span class="ctx-name">${racquetLabel(r)}</span><span class="ctx-spec">${racquetSpec(r)}</span><span class="filter-all-badge" id="${r.id}-filter-badge">— showing all</span></div>
 <div class="switcher" id="${r.id}-switcher" data-nav-switcher="${r.id}">
 ${brands.map((b) => html`<button id="${brandButtonId(r.id, b)}" data-nav-brand="${b}">${db.brandsStrings[b]!.name}</button>\n`)}</div>
 <div class="strips">
-<div class="log-section" data-racquet="${r.id}">
-<div class="log-status"></div>
-<div class="log-panel"></div>
-</div>
 <div class="gut-section" data-racquet="${r.id}">
 <div class="gut-status"></div>
 <div class="gut-panel"></div>

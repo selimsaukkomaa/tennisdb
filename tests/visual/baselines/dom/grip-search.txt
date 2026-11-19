@@ -1,0 +1,564 @@
+" "
+<div id="topbar">
+  " "
+  <div class="topbar-inner">
+    " "
+    <h1 class="topbar-mark">
+      "strung"
+    " "
+    <span class="topbar-div">
+    " "
+    <div class="category-switcher" id="topbar-cats">
+      " "
+      <button class="cat-inactive" data-nav-category="strings" id="btn-cat-strings">
+        "Strings"
+      " "
+      <button class="cat-active" data-nav-category="grips" id="btn-cat-grips">
+        "Grips"
+      " "
+    <span class="topbar-spacer">
+    " "
+    <button aria-label="Search everything" class="topbar-btn" id="btn-palette" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "🔍"
+      <span class="topbar-btn-label">
+        "Search"
+      <kbd id="palette-kbd">
+        "⌘K"
+      " "
+    <button aria-expanded="true" class="is-on topbar-btn" id="btn-filters" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "⚙"
+      <span class="topbar-btn-label">
+        "Filters"
+      <span class="count-on filters-count" id="filters-count">
+        "1"
+      " "
+<div aria-live="polite" class="compare-bar hidden" id="compare-bar">
+  " "
+  <div class="compare-bar-inner">
+    " "
+    <span class="compare-count" id="compare-count">
+      "0 / 4"
+    " "
+    <div class="compare-chips" id="compare-chips">
+    " "
+    <button class="compare-btn-primary" disabled="" id="compare-open">
+      "Select 2 more"
+    " "
+    <button class="compare-btn-secondary" id="compare-clear">
+      "Clear"
+    " "
+<div aria-label="Compare strings" aria-modal="true" class="compare-modal hidden" id="compare-modal" role="dialog">
+  " "
+  <div class="compare-modal-backdrop">
+  " "
+  <div class="compare-modal-panel">
+    " "
+    <div class="compare-modal-header">
+      " "
+      <h2>
+        "Compare"
+      " "
+      <div class="compare-racquet-tabs" id="compare-racquet-tabs">
+      " "
+      <button aria-label="Close" class="compare-modal-close" id="compare-modal-close">
+        "✕"
+      " "
+    <div class="compare-modal-body" id="compare-modal-body">
+    " "
+<div class="container">
+  " "
+  <div class="cat-visible category-content" id="grips-content" style="display: block;">
+    " "
+    <div class="context-line" data-grips="">
+      <span class="ctx-name">
+        "Grips"
+      <span class="ctx-spec">
+        "Overgrips · replacement grips · 3 brands"
+      <span class="badge-show gfilter-all-badge" id="grip-filter-badge">
+        "— showing all"
+    " "
+    <div class="gfilter-all-brands switcher" id="grip-switcher">
+      " "
+      <button class="active-kimony" data-nav-grip-brand="kimony" id="btn-grip-kimony">
+        "Kimony"
+      " "
+      <button class="inactive" data-nav-grip-brand="yonex" id="btn-grip-yonex">
+        "Yonex"
+      " "
+      <button class="inactive" data-nav-grip-brand="tourna" id="btn-grip-tourna">
+        "Tourna"
+      " "
+    <div class="filter-bar filters-open gfilter-visible grip-filter-bar" id="grip-filter-bar">
+      " "
+      <div class="filter-search-row">
+        " "
+        <input class="filter-search" id="grip-filter-search" placeholder="Search grips by name, model, notes..." type="text">
+        " "
+        <button class="filter-clear-btn has-filters" id="grip-filter-clear">
+          "Clear filters"
+        " "
+        <div class="filter-status" id="grip-filter-status">
+          <span class="count-highlight">
+            "9"
+          "of 35 grips"
+        " "
+      <div class="filter-groups">
+        " "
+        <div class="filter-group">
+          " "
+          <span class="filter-group-label">
+            "Type"
+          " "
+          <button class="filter-chip" data-gfilter-group="type" data-gfilter-value="wet">
+            "Wet"
+          " "
+          <button class="filter-chip" data-gfilter-group="type" data-gfilter-value="dry">
+            "Dry"
+          " "
+          <button class="filter-chip" data-gfilter-group="type" data-gfilter-value="replacement">
+            "Replacement"
+          " "
+        <div class="filter-divider">
+        " "
+        <div class="filter-group">
+          " "
+          <span class="filter-group-label">
+            "Feel"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="tacky">
+            "Tacky"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="dry">
+            "Dry"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="cushioned">
+            "Cushioned"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="thin">
+            "Thin"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="firm">
+            "Firm"
+          " "
+          <button class="filter-chip" data-gfilter-group="feel" data-gfilter-value="leather">
+            "Leather"
+          " "
+    <div class="gfilter-brand-header gfilter-header-kimony gfilter-show" id="gfh-kimony">
+      "Kimony"
+    " "
+    <div class="active brand-section gfilter-force-show" id="grip-kimony-section" style="display: block;">
+      " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin: 20px 0px 12px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Replacement Grips"
+      " "
+      <div class="table-wrap">
+        " "
+        <table class="grip-replacement-table" data-grip-brand="kimony" data-grip-section="replacement" data-grip-table="replacement" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Material"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="leather,firm" data-grip-type="replacement" data-id="kimony-fairway-leather">
+              <td class="string-name">
+                "Fairway Leather"
+              <td>
+                "KGL152"
+              <td>
+                <span class="grip-leather grip-type-tag">
+                  "Leather"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Replacement grip"
+              <td>
+                <span class="tag tag-crisp">
+                  "Firm"
+                <span class="tag tag-firm">
+                  "Classic"
+                <br>
+                "Reference leather grip"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, Brown"
+              <td class="notes">
+                "Long regarded as the reference leather replacement grip. Thin profile; leather transmits more frame feedback than synthetic, and the bevels are sharply defined for grip changes. Adds weight for a more headlight balance."
+            <tr data-grip-feel="leather,thin,firm" data-grip-type="replacement" data-id="kimony-expert-techni-leather">
+              <td class="string-name">
+                "Expert Techni Leather"
+              <td>
+                "KGL164"
+              <td>
+                <span class="grip-leather grip-type-tag">
+                  "Leather"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "0.80mm · 25mm × 117cm"
+                  <br>
+                  "~13g"
+              <td>
+                <span class="tag tag-crisp">
+                  "Crisp"
+                <span class="tag tag-firm">
+                  "Precise"
+                <br>
+                "Thinnest leather available"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, Wine, Brown"
+              <td class="notes">
+                "The thinnest leather replacement grip available. Premium cowhide, manufactured and processed in Japan. At 0.80mm and 13g, reduces grip size by about one size vs synthetic replacements without adding weight. Superior bevel feel for precise grip changes. Upgraded from the discontinued KGL161 Techni Leather."
+            <tr data-grip-feel="leather,cushioned" data-grip-type="replacement" data-id="kimony-pro-leather">
+              <td class="string-name">
+                "Pro Leather"
+              <td>
+                "KGL165"
+              <td>
+                <span class="grip-leather grip-type-tag">
+                  "Leather"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "1.50mm · 25mm × 117cm"
+                  <br>
+                  "~18g"
+              <td>
+                <span class="tag tag-crisp">
+                  "Firm"
+                <span class="tag tag-soft">
+                  "Cushioned"
+                <br>
+                "Traditional leather feel"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black"
+              <td class="notes">
+                "Thicker leather replacement for players who want leather feel with more cushioning. Higher-grade natural leather remodeled from the original line. Standard thickness comparable to other premium leather grips (Fairway, Wilson). Available in Black only."
+            <tr data-grip-feel="synthetic,tacky,cushioned" data-grip-type="replacement" data-id="kimony-hi-soft-super-saikyo">
+              <td class="string-name">
+                "Hi-Soft Super Saikyo"
+              <td>
+                "KGL170"
+              <td>
+                <span class="grip-type-tag grip-wet">
+                  "Synthetic (PU)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "1.70mm · 23mm"
+                  <br>
+                  "~20g"
+              <td>
+                <span class="tag tag-firm">
+                  "Tacky"
+                <span class="tag tag-soft">
+                  "Cushioned"
+                <br>
+                "Premium synthetic, soft"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black"
+              <td class="notes">
+                "Japan's highest-grade synthetic replacement grip. \"最強\" (Saikyo) means \"strongest.\" Soft feel with high grip power and excellent durability. Polyurethane construction. A premium synthetic alternative for players who want cushioning and tackiness in their base grip without leather's firmness. At 1.70mm and 23mm width, thicker and narrower than leather options."
+          " "
+    <div class="gfilter-brand-header gfilter-header-yonex gfilter-show" id="gfh-yonex">
+      "Yonex"
+    " "
+    <div class="brand-section gfilter-force-show" id="grip-yonex-section" style="display: block;">
+      " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin: 20px 0px 12px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Replacement Grips"
+      " "
+      <div class="table-wrap">
+        " "
+        <table class="grip-replacement-table" data-grip-brand="yonex" data-grip-section="replacement" data-grip-table="replacement" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Material"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="leather,firm" data-grip-type="replacement" data-id="yonex-ultimum-leather">
+              <td class="string-name">
+                "Ultimum Leather"
+              <td>
+                "AC221"
+              <td>
+                <span class="grip-leather grip-type-tag">
+                  "Leather"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "1.40mm · 27mm × 1000mm"
+                  <br>
+                  "~37g"
+              <td>
+                <span class="tag tag-crisp">
+                  "Firm"
+                <span class="tag tag-firm">
+                  "Classic"
+                <br>
+                "Premium 100% leather"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Brown, Black"
+              <td class="notes">
+                "Yonex's premium 100% leather replacement grip. Thin at 1.40mm for excellent bevel feel and direct feedback. At 37g, adds useful weight to the handle for a more headlight balance. A thin, firm leather base that transmits frame feedback directly; commonly used under an overgrip such as Super Grap."
+            <tr data-grip-feel="synthetic,firm" data-grip-type="replacement" data-id="yonex-synthetic-leather-tour-grip">
+              <td class="string-name">
+                "Synthetic Leather Tour Grip"
+              <td>
+                "AC126"
+              <td>
+                <span class="grip-type-tag grip-wet">
+                  "Synthetic (PU)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "1.60mm · 25mm × 1200mm"
+              <td>
+                <span class="tag tag-crisp">
+                  "Firm"
+                <span class="tag tag-soft">
+                  "Leather-like"
+                <br>
+                "Mimics leather feel"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black"
+              <td class="notes">
+                "Designed to mimic natural leather feel with the benefits of synthetic PU – better sweat absorption and a slightly softer touch. At 1.60mm, one of the thinnest synthetic grips available. Great for players who want leather-like bevel feel with improved moisture management. A compromise between leather's firm feedback and synthetic's cushioned response."
+            <tr data-grip-feel="synthetic,tacky,cushioned" data-grip-type="replacement" data-id="yonex-synthetic-leather-excel-grip">
+              <td class="string-name">
+                "Synthetic Leather Excel Grip"
+              <td>
+                "AC117"
+              <td>
+                <span class="grip-type-tag grip-wet">
+                  "Synthetic (PU)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "1.60mm · 25mm × 1200mm"
+              <td>
+                <span class="tag tag-firm">
+                  "Tacky"
+                <span class="tag tag-soft">
+                  "Cushioned"
+                <br>
+                "Dimpled surface texture"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, White"
+              <td class="notes">
+                "Extra-firm synthetic replacement grip with a dimpled surface for maximized gripping performance. PU construction at 1.60mm provides good cushioning while maintaining feedback. The dimpled texture increases surface area contact for better hold. Comes pre-installed on many Yonex racquets. The standard Yonex replacement grip – reliable and widely available."
+          " "
+    <div class="gfilter-brand-header gfilter-header-tourna gfilter-show" id="gfh-tourna">
+      "Tourna"
+    " "
+    <div class="brand-section gfilter-force-show" id="grip-tourna-section" style="display: block;">
+      " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; margin-top: 32px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Overgrips (Dry)"
+      " "
+      <div class="table-wrap">
+        " "
+        <table data-grip-brand="tourna" data-grip-section="dry" data-grip-table="overgrip" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th class="sortable" data-col="tackiness">
+                "Tackiness"
+              " "
+              <th class="sortable" data-col="absorption">
+                "Absorption"
+              " "
+              <th class="sortable" data-col="durability">
+                "Durability"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Pack Sizes"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="dry,absorbent,thin" data-grip-type="dry" data-id="tourna-tourna-grip-pro-thin">
+              <td class="string-name">
+                "Tourna Grip Pro Thin"
+              <td>
+                "TG-PT"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.40 mm thick"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 18%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 88%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 30%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-crisp">
+                  "Thin"
+                <br>
+                "Pro thin variant"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Blue, White"
+              <td>
+                "1 / 3 / 10"
+              <td class="notes">
+                "Slightly less absorbent than the Original because of the thinner construction. Passes more bevel definition through from the base grip — most noticeable over a fresh leather grip."
+          " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; margin-top: 32px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Replacement Grips"
+      " "
+      <div class="table-wrap">
+        " "
+        <table class="grip-replacement-table" data-grip-brand="tourna" data-grip-section="replacement" data-grip-table="replacement" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Material"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="leather,firm" data-grip-type="replacement" data-id="tourna-pro-tour-leather">
+              <td class="string-name">
+                "Pro Tour Leather"
+              <td>
+                "TLEATH-1"
+              <td>
+                <span class="grip-leather grip-type-tag">
+                  "Leather"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Replacement grip"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "Premium calf leather"
+              <td>
+                <span class="tag tag-crisp">
+                  "Firm"
+                <span class="tag tag-firm">
+                  "Classic"
+                <br>
+                "Premium leather"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, Brown"
+              <td class="notes">
+                "An alternative to Kimony's Fairway Leather: slightly more textured surface, bevels a touch sharper. Less widely stocked than Fairway. Pricing typically €18-22 vs Fairway's €25-30."
+          " "
+    <div class="legend">
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(245, 158, 11), rgb(217, 119, 6));">
+        "Tackiness (higher = stickier)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(6, 182, 212), rgb(8, 145, 178));">
+        "Absorption (higher = more moisture-wicking)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
+        "Durability (higher = longer-lasting)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(139, 92, 246), rgb(109, 40, 217));">
+        "Thickness"
+      " "

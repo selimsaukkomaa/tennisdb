@@ -1,0 +1,520 @@
+" "
+<div id="topbar">
+  " "
+  <div class="topbar-inner">
+    " "
+    <h1 class="topbar-mark">
+      "strung"
+    " "
+    <span class="topbar-div">
+    " "
+    <div class="category-switcher" id="topbar-cats">
+      " "
+      <button class="cat-inactive" data-nav-category="strings" id="btn-cat-strings">
+        "Strings"
+      " "
+      <button class="cat-active" data-nav-category="grips" id="btn-cat-grips">
+        "Grips"
+      " "
+    <span class="topbar-spacer">
+    " "
+    <button aria-label="Search everything" class="topbar-btn" id="btn-palette" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "🔍"
+      <span class="topbar-btn-label">
+        "Search"
+      <kbd id="palette-kbd">
+        "⌘K"
+      " "
+    <button aria-expanded="false" class="topbar-btn" id="btn-filters" type="button">
+      " "
+      <span class="topbar-btn-icon">
+        "⚙"
+      <span class="topbar-btn-label">
+        "Filters"
+      " "
+<div aria-live="polite" class="compare-bar hidden" id="compare-bar">
+  " "
+  <div class="compare-bar-inner">
+    " "
+    <span class="compare-count" id="compare-count">
+      "0 / 4"
+    " "
+    <div class="compare-chips" id="compare-chips">
+    " "
+    <button class="compare-btn-primary" disabled="" id="compare-open">
+      "Select 2 more"
+    " "
+    <button class="compare-btn-secondary" id="compare-clear">
+      "Clear"
+    " "
+<div aria-label="Compare strings" aria-modal="true" class="compare-modal hidden" id="compare-modal" role="dialog">
+  " "
+  <div class="compare-modal-backdrop">
+  " "
+  <div class="compare-modal-panel">
+    " "
+    <div class="compare-modal-header">
+      " "
+      <h2>
+        "Compare"
+      " "
+      <div class="compare-racquet-tabs" id="compare-racquet-tabs">
+      " "
+      <button aria-label="Close" class="compare-modal-close" id="compare-modal-close">
+        "✕"
+      " "
+    <div class="compare-modal-body" id="compare-modal-body">
+    " "
+<div class="container">
+  " "
+  <div class="cat-visible category-content" id="grips-content" style="display: block;">
+    " "
+    <div class="context-line" data-grips="">
+      <span class="ctx-name">
+        "Grips"
+      <span class="ctx-spec">
+        "Overgrips · replacement grips · 3 brands"
+    " "
+    <div class="switcher" id="grip-switcher">
+      " "
+      <button class="inactive" data-nav-grip-brand="kimony" id="btn-grip-kimony">
+        "Kimony"
+      " "
+      <button class="inactive" data-nav-grip-brand="yonex" id="btn-grip-yonex">
+        "Yonex"
+      " "
+      <button class="active-tourna" data-nav-grip-brand="tourna" id="btn-grip-tourna">
+        "Tourna"
+      " "
+    <div class="active brand-section" id="grip-tourna-section" style="display: block;">
+      " "
+      <div class="rec-box">
+        " "
+        <strong>
+          "About Tourna:"
+        "Tourna built its reputation on the original blue dry overgrip — the most copied grip in tennis."
+        <span class="pick">
+          "Tourna Grip Original (XL-1)"
+        "is the reference for sweat absorption (though with intentionally low durability — typical pro changes it every match)."
+        <span class="pick">
+          "Tac"
+        "and"
+        <span class="pick">
+          "Mega Tac"
+        "are the wet/tacky alternatives."
+        <span class="pick">
+          "Pro Tour Leather"
+        "is the leather replacement grip, slightly more textured than Fairway Leather. For comparison: Kimony Last Dry has subtle tackiness and 3× the durability of Tourna Original; Yonex Dry Grap is similar to Tourna but slightly less absorbent."
+      " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Overgrips (Wet)"
+      " "
+      <div class="table-wrap">
+        " "
+        <table data-grip-brand="tourna" data-grip-section="wet" data-grip-table="overgrip" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th class="sort-asc sortable" data-col="tackiness">
+                "Tackiness"
+              " "
+              <th class="sortable" data-col="absorption">
+                "Absorption"
+              " "
+              <th class="sortable" data-col="durability">
+                "Durability"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Pack Sizes"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="tacky" data-grip-type="wet" data-id="tourna-tac">
+              <td class="string-name">
+                "Tac"
+              <td>
+                "TAC-1"
+                <br>
+                <span style="color: rgb(148, 163, 184); font-size: 0.75rem;">
+                  "TAC-3 (3-pack)"
+                  <br>
+                  "TAC-10 (10-pack)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Wet/tacky"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.55 mm thick"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "High"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 80%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Medium"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 45%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Good"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 60%;">
+              <td>
+                <span class="tag tag-firm">
+                  "Tacky"
+                <br>
+                "Wet/tacky overgrip"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, White, Blue, Pink"
+              <td>
+                "1 / 3 / 10"
+              <td class="notes">
+                "Conventional wet/tacky overgrip in the same class as Kimony Hi-Soft EX / Punch and Yonex Wet Super Grap. Tourna's reputation rests on its dry grip; Tac is the brand's tacky option."
+            <tr data-grip-feel="tacky" data-grip-type="wet" data-id="tourna-mega-tac">
+              <td class="string-name">
+                "Mega Tac"
+              <td>
+                "MEGA-1"
+                <br>
+                <span style="color: rgb(148, 163, 184); font-size: 0.75rem;">
+                  "MEGA-3 (3-pack)"
+                  <br>
+                  "MEGA-10 (10-pack)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Wet/very tacky"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.60 mm thick"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 92%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low-Med"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 35%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Good"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 60%;">
+              <td>
+                <span class="tag tag-crisp">
+                  "Very Tacky"
+                <br>
+                "Maximum stickiness"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, White, Blue, Pink"
+              <td>
+                "1 / 3 / 10"
+              <td class="notes">
+                "Tourna's highest-tack grip, with low absorption. The level of stick makes mid-point grip changes noticeably harder; it is aimed at very dry hands. (Earlier notes said it out-grips every wet grip here - the tackiness data puts Kimony Hi-Soft EX and Yonex Super Grap JP higher.)"
+          " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; margin-top: 32px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Overgrips (Dry)"
+      " "
+      <div class="table-wrap">
+        " "
+        <table data-grip-brand="tourna" data-grip-section="dry" data-grip-table="overgrip" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th class="sortable" data-col="tackiness">
+                "Tackiness"
+              " "
+              <th class="sortable" data-col="absorption">
+                "Absorption"
+              " "
+              <th class="sortable" data-col="durability">
+                "Durability"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Pack Sizes"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="dry,absorbent" data-grip-type="dry" data-id="tourna-tourna-grip-original">
+              <td class="string-name">
+                "Tourna Grip Original"
+              <td>
+                "XL-1 (single)"
+                <br>
+                <span style="color: rgb(148, 163, 184); font-size: 0.75rem;">
+                  "XL-3 (3-pack)"
+                  <br>
+                  "XL-10 (10-pack)"
+                  <br>
+                  "XL-30 (30-pack tour)"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.45 mm thick"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 18%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Elite"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 96%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 30%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-firm">
+                  "Classic"
+                <br>
+                "Reference dry grip"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Blue"
+              <td>
+                "1 / 3 / 10 / 30"
+              <td class="notes">
+                "The reference dry overgrip, with the highest absorption rating in the database. Trade-off: durability is intentionally low (the absorption mechanism wears the surface). For comparison: Kimony Last Dry has subtle tackiness and ~3x the durability; Yonex Dry Grap is similar to Tourna but slightly less absorbent."
+            <tr data-grip-feel="dry,absorbent" data-grip-type="dry" data-id="tourna-tourna-grip-xl">
+              <td class="string-name">
+                "Tourna Grip XL"
+              <td>
+                "TG-XL"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.45 mm"
+                  <br>
+                  "Extra long"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 18%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Elite"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 96%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 30%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-crisp">
+                  "Long"
+                <br>
+                "Original, longer"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Blue"
+              <td>
+                "1 / 3 / 10"
+              <td class="notes">
+                "For longer handles (16″ extended-length racquets), or for extra overlap and cushion when wrapping. Otherwise identical to the Original."
+            <tr data-grip-feel="dry,absorbent,thin" data-grip-type="dry" data-id="tourna-tourna-grip-pro-thin">
+              <td class="string-name">
+                "Tourna Grip Pro Thin"
+              <td>
+                "TG-PT"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Dry"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "0.40 mm thick"
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill tackiness" style="width: 18%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Very High"
+                <div class="bar">
+                  <div class="absorption bar-fill" style="width: 88%;">
+              <td class="bar-cell">
+                <span class="bar-label">
+                  "Low"
+                <div class="bar">
+                  <div class="bar-fill durability" style="width: 30%;">
+              <td>
+                <span class="tag tag-round">
+                  "Dry"
+                <span class="tag tag-crisp">
+                  "Thin"
+                <br>
+                "Pro thin variant"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Blue, White"
+              <td>
+                "1 / 3 / 10"
+              <td class="notes">
+                "Slightly less absorbent than the Original because of the thinner construction. Passes more bevel definition through from the base grip — most noticeable over a fresh leather grip."
+          " "
+      <h3 class="grip-subheading" style="font-family: \"Space Mono\", monospace; font-size: 0.9rem; font-weight: 700; margin-bottom: 12px; margin-top: 32px; color: rgb(17, 17, 17); letter-spacing: -0.3px;">
+        "Replacement Grips"
+      " "
+      <div class="table-wrap">
+        " "
+        <table class="grip-replacement-table" data-grip-brand="tourna" data-grip-section="replacement" data-grip-table="replacement" data-render="grips">
+          " "
+          <thead>
+            " "
+            <tr>
+              " "
+              <th class="sortable" data-col="string">
+                "Grip"
+              " "
+              <th>
+                "Model"
+              " "
+              <th>
+                "Material"
+              " "
+              <th>
+                "Specs"
+              " "
+              <th>
+                "Feel"
+              " "
+              <th>
+                "Colors"
+              " "
+              <th>
+                "Notes"
+              " "
+          <tbody>
+            <tr data-grip-feel="leather,firm" data-grip-type="replacement" data-id="tourna-pro-tour-leather">
+              <td class="string-name">
+                "Pro Tour Leather"
+              <td>
+                "TLEATH-1"
+              <td>
+                <span class="grip-leather grip-type-tag">
+                  "Leather"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Replacement grip"
+                  <br>
+                  "Made in USA"
+                  <br>
+                  "Premium calf leather"
+              <td>
+                <span class="tag tag-crisp">
+                  "Firm"
+                <span class="tag tag-firm">
+                  "Classic"
+                <br>
+                "Premium leather"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black, Brown"
+              <td class="notes">
+                "An alternative to Kimony's Fairway Leather: slightly more textured surface, bevels a touch sharper. Less widely stocked than Fairway. Pricing typically €18-22 vs Fairway's €25-30."
+            <tr data-grip-feel="synthetic,cushioned" data-grip-type="replacement" data-id="tourna-synthetic-pro">
+              <td class="string-name">
+                "Synthetic Pro"
+              <td>
+                "TSYN-1"
+              <td>
+                <span class="grip-synthetic grip-type-tag">
+                  "Synthetic"
+              <td>
+                <span style="font-family: \"Space Mono\", monospace; font-size: 0.72rem;">
+                  "Replacement grip"
+                  <br>
+                  "~1.6 mm thick"
+                  <br>
+                  "Cushioned"
+              <td>
+                <span class="tag tag-soft">
+                  "Cushioned"
+                <br>
+                "Cushioned PU"
+              <td>
+                <span style="font-size: 0.72rem; color: rgb(136, 136, 136);">
+                  "Black"
+              <td class="notes">
+                "Conventional cushioned synthetic. Most players already get this from their racquet manufacturer (Yonex Excel Pro, etc.); the Tourna version is competitive but not distinctive."
+          " "
+    <div class="legend">
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(245, 158, 11), rgb(217, 119, 6));">
+        "Tackiness (higher = stickier)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(6, 182, 212), rgb(8, 145, 178));">
+        "Absorption (higher = more moisture-wicking)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(16, 185, 129), rgb(5, 150, 105));">
+        "Durability (higher = longer-lasting)"
+      " "
+      <div class="legend-item">
+        <div class="legend-swatch" style="background: linear-gradient(90deg, rgb(139, 92, 246), rgb(109, 40, 217));">
+        "Thickness"
+      " "

@@ -1,6 +1,6 @@
 # Every push and pull request runs the full check: data validation, types, lint, format,
-# unit and smoke tests, and the browser suite (pixel and DOM parity with legacy v0.990,
-# backups, offline). The GitHub Pages build is made every time, so a broken build shows up on
+# unit and smoke tests, and the browser suite (the DOM baselines and offline support; the pixel
+# baselines are made on macOS and run there, not on this Linux runner). The GitHub Pages build is made every time, so a broken build shows up on
 # a branch; it is deployed only from main.
 #
 # Deploying needs the repository's Pages source set to "GitHub Actions"
@@ -42,13 +42,13 @@ jobs:
       - run: npx prettier --check .
       - name: Unit, smoke and data tests
         run: npm test
-      - name: Parity with legacy v0.990, backups, offline
+      - name: Browser suite (DOM baselines, offline)
         run: npm run test:visual
       - name: Keep the screenshots and diffs
         if: failure()
         uses: actions/upload-artifact@v7
         with:
-          name: parity-results
+          name: browser-results
           path: |
             test-results/
             playwright-report/

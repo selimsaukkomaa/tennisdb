@@ -1,11 +1,11 @@
 // The web build installs a service worker that precaches everything, so after one online
 // visit the app loads and works with the network off.
-import { APP_URL, expect, open, test } from './support';
+import { expect, open, test } from './support';
 
 test('works offline after the first visit', async ({ context }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop', 'one viewport is enough');
 
-  const page = await open(context, APP_URL);
+  const page = await open(context);
   // The worker activates and claims the page once the precache is complete.
   await page.waitForFunction(() => navigator.serviceWorker?.controller !== null, null, {
     timeout: 15_000,

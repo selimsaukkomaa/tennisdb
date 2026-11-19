@@ -8,7 +8,6 @@ import addFormatsModule from 'ajv-formats';
 import { describe, expect, test } from 'vitest';
 import { SCHEMA_FILES, SCHEMAS_DIR, renderSchema } from '../../scripts/export-schemas';
 import { loadFromDisk } from '../../scripts/validate-data';
-import seed from '../fixtures/log-seed.json';
 
 const addFormats = addFormatsModule as unknown as (ajv: Ajv2020) => Ajv2020;
 const committed = (file: string): string => readFileSync(join(SCHEMAS_DIR, file), 'utf8');
@@ -28,9 +27,6 @@ describe('a standard JSON Schema validator agrees with the Zod schemas', () => {
 
   test('the equipment data passes', () => expect(check('tennisdb.schema.json', db)).toEqual([]));
   test('the copy passes', () => expect(check('copy.schema.json', copy)).toEqual([]));
-  test('a stringing-log backup passes', () => {
-    expect(check('stringing-log.schema.json', seed.tennis_log_v2)).toEqual([]);
-  });
 
   test('it rejects a grip spec written as a string', () => {
     const bad = structuredClone(db);
