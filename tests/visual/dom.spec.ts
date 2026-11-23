@@ -63,6 +63,11 @@ const SCENARIOS: Scenario[] = [
     name: 'remembered racket and strings after a reload',
     steps: [...racquet('percept'), '#btn-solinco', { reload: true }],
   },
+  // the frame profile (v1.12): the details stay open across a racket switch
+  {
+    name: 'frame details open, then the Pro Tour 630',
+    steps: ['[data-frame-toggle]', ...racquet('headpt630')],
+  },
   // filters
   {
     name: 'Hex + Soft, panel closed (summary)',

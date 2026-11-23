@@ -27,6 +27,7 @@ import { gripBrandLabel, racquetSpec } from '../core/labels';
 import { perRacquet } from '../core/pairings';
 import { APP_VERSION } from '../version';
 import { html, raw, type SafeHtml } from './html';
+import { frameHtml } from './frame';
 import { pickerHtml } from './picker';
 import {
   HYBRID_HEAD,
@@ -55,8 +56,9 @@ export const GUT = 'gut';
 
 /**
  * The card above the racquet pages: "Regna 100 × Toroline", the racquet's spec, then the racquet
- * menu (picker.ts, since v1.10) and the strings to choose from. It is written for the first
- * racquet and brand; nav.ts keeps the title, spec and choices current.
+ * menu (picker.ts, since v1.10), the strings to choose from and the frame profile (frame.ts,
+ * since v1.12). It is written for the first racquet and brand; nav.ts keeps the title, spec,
+ * choices and profile current.
  */
 function selector(db: TennisDb): SafeHtml {
   const r = db.racquets[0]!;
@@ -68,6 +70,7 @@ function selector(db: TennisDb): SafeHtml {
 <div class="sel-row"><span class="sel-label">Strings</span><div class="switcher" id="strings-switcher">
 ${brands.map((b) => html`<button id="${brandButtonId(b)}" data-nav-brand="${b}">${db.brandsStrings[b]!.name}</button>\n`)}<button class="gut-choice" id="${brandButtonId(GUT)}" data-nav-brand="${GUT}">Natural gut</button>
 </div></div>
+<div class="sel-frame${r.profile ? '' : ' frame-none'}" data-frame>${frameHtml(r)}</div>
 </div>`;
 }
 

@@ -5,6 +5,7 @@
 // strings choice carries over between racquets, and the last racquet and strings are remembered.
 import { racquetSpec } from '../core/labels';
 import type { BrandId, Copy, RacquetId, TennisDb } from '../core/types';
+import { renderFrame } from './frame';
 import { setPicked } from './picker';
 import { loadChoice, saveChoice } from './prefs';
 import {
@@ -33,13 +34,14 @@ function ensurePage(rid: RacquetId): void {
   emit('page', rid);
 }
 
-/** The card follows the racquet on screen: title, spec and the racquet menu. */
+/** The card follows the racquet on screen: title, spec, the racquet menu and the frame profile. */
 function updateCard(rid: RacquetId): void {
   const r = db.racquets.find((x) => x.id === rid)!;
   const card = byId('selector');
   card.querySelector('[data-sel-racquet]')!.textContent = r.model;
   card.querySelector('[data-sel-spec]')!.textContent = `${r.brand} · ${racquetSpec(r)}`;
   setPicked('card', rid, r.model);
+  renderFrame(r);
 }
 
 const remember = (): void => saveChoice({ racquet: state.racquet, brand: state.brand });

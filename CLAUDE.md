@@ -20,7 +20,8 @@ These are the owner's rules. Follow them exactly.
 
 - A note describes how a string behaves in a given frame, in this order:
   1. what its construction and stiffness do;
-  2. interaction with the frame's RA, pattern and head size;
+  2. interaction with the frame: its profile (construction, damping, the trait words; since
+     v1.12), RA, pattern and head size;
   3. what to expect: feedback, dwell, launch, spin mechanism, tension hold;
   4. tension band and gauge lever;
   5. typical deployment: full bed, mains or crosses.
@@ -29,7 +30,26 @@ These are the owner's rules. Follow them exactly.
   about five first.
 - "Racket", never "racquet", in anything the app shows: UI words, notes, copy (the owner's
   call, v1.8; the `racket` rule and a smoke test hold it). Code names keep the old spelling
-  (`racquets.json`, `racquetId`, `data-racquet`): nobody reads them.
+  (`racquets.json`, `racquetId`, `data-racquet`): nobody reads them. So do the frame sources'
+  web addresses, which are never shown (the rule skips `url` fields, the owner's call, v1.12).
+
+### Content (frame profiles)
+
+Each racket has a `profile` in `racquets.json` (since v1.12; `src/core/frame.ts`): edition,
+summary (35–70 words), construction, measured specs, seven traits (one word from a fixed list
+plus a line) and its sources. The owner's calls, 2026-11-23:
+
+- Published sources only: a trait rests on a hands-on review or on players' reports that agree;
+  articles (maker or retailer copy, news, spec listings) give construction and specs only. A
+  trait no source supports is left out. The owner's own play is not a source.
+- The Regna 100 alone may rest on personal blogs and single players' posts (no professional
+  review of it exists). No other racket gets that exception.
+- The card shows no sources, and no shown text says who said what or quotes a review site's
+  score. Where sources disagree, the line gives the reading its word rests on and the changelog
+  flags the disagreement.
+- Each profile describes that exact frame: the Pro Tour 630 is the 1990s Twaron frame, and its
+  texts and notes never mention or compare the 2020 Pro Tour 2.0.
+- A new frame's profile is drafted and shown to the owner before its notes are written.
 
 ### Data changes
 
@@ -78,11 +98,12 @@ data/              TENNIS_DB, one JSON file per collection (meta, racquets, bran
 content/copy.json  UI copy that lived in v0.990's markup and JS (HTML strings, verbatim)
 src/core/          no DOM: data schemas (schema.ts; types.ts infers the types from them), db
                    assembly, chips, filter predicates, compare, gut, search index and scoring,
-                   pairings, stiffness, ratings, tags, validators
+                   pairings, stiffness, ratings, tags, frame (profile words and helpers),
+                   validators
 src/ui/            DOM layer: shell, tables, nav, picker (the racket menu, card and compare),
-                   prefs (the remembered racket and strings), filters, filter panel, compare,
-                   gut, search, palette, placeholders (short ones on phones); html`` / raw()
-                   escaping helpers
+                   prefs (the remembered racket and strings), frame (the card's Frame
+                   section), filters, filter panel, compare, gut, search, palette,
+                   placeholders (short ones on phones); html`` / raw() escaping helpers
 src/platform/      native check (the service worker registers only on the web)
 src/styles/        v0.990 CSS split verbatim, imported in cascade order; additions.css last
 schemas/          JSON Schema exported from the Zod schemas (generated: npm run schemas)
@@ -125,8 +146,9 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
   (`[data-racquet-page]`: its tables and gut view) is built the first time it is shown and
   kept (`page` fires), so code that acts on pages covers the ones built so far, and a page
   built later must pick up the current strings choice, filters and compare ticks.
-- Racquets are data-driven. A new frame needs a `racquets.json` entry, a pairing (tension
-  and note) in `pairings.json` for every string and hybrid, and optionally gut pairings;
+- Racquets are data-driven. A new frame needs a `racquets.json` entry with its frame profile,
+  a pairing (tension and note) in `pairings.json` for every string and hybrid, and optionally
+  gut pairings;
   `tests/unit/ten-rackets.test.ts` proves the UI follows for ten (seven placeholders). The
   menu orders brands A–Z, then models A–Z (`racquetGroups`); the first in `racquets.json` is
   where a first visit opens. Brand colours are per brand in CSS and need nothing. Views read
@@ -138,11 +160,11 @@ Until v1.6 every view was compared with the v0.990 page; that comparison was ret
 redesign in v1.7. The app is now checked against its own approved baselines
 (`tests/visual/baselines`):
 
-- pixel baselines (`tests/visual/views.spec.ts`): 17 views at 1440×900 and 390×844, the first
+- pixel baselines (`tests/visual/views.spec.ts`): 18 views at 1440×900 and 390×844, the first
   screen or a close-up, threshold 0.1, at most 0.1% of pixels differing. Made on macOS and run
   only there: CI runs Linux, which renders text differently. Run `npm run check` on the Mac
   before every release.
-- DOM baselines (`tests/visual/dom.spec.ts`): 25 scenarios, the rendered DOM normalised to
+- DOM baselines (`tests/visual/dom.spec.ts`): 26 scenarios, the rendered DOM normalised to
   text (`tests/visual/dom.ts`; elements that don't render are left out). Run everywhere, CI
   included. Steps click, type, pick an option, press a key or reload (which keeps what the page
   stored); each test starts with empty storage.
@@ -179,7 +201,9 @@ neutral text, notes present for every racquet, Crisp chip ⇔ Crisp tag, every f
 grip type ⇔ chip, CSS for every tag colour, a filter-header colour for every grip brand,
 bar-backed claims (Mega Tac, Tourna Grip Original), hybrid side labels that name their
 string's band, id and reference integrity, no "Connected" vocabulary, no "racquet" in any
-text of `data/` or `content/`, no tag or entity anywhere in `data/`. Some of v0.990's rules hold by construction instead: the stiffness band
+text of `data/` or `content/` (web addresses aside), no tag or entity anywhere in `data/`, and
+since v1.12 the frame profiles: one for every racket, every source cited and every citation
+listed, every trait backed by a review or players' reports, a summary of 35–70 words. Some of v0.990's rules hold by construction instead: the stiffness band
 comes from the figure, Firm/Soft from the band (`src/core/stiffness.ts`), a tag's colour from
 its label (`src/core/tags.ts`), and a rating's word from its score (`src/core/ratings.ts`).
 `scripts/validate-data.ts` adds file checks: UTF-8 literals in data, no smart quotes in

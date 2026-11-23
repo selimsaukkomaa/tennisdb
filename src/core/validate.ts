@@ -7,6 +7,7 @@
 // the topPick key and "square-textured"). If the shape is wrong only those issues are
 // reported; the rules below are content and cross-record checks on well-formed data.
 import { FEEL_CHIPS, tokens } from './chips';
+import { SUMMARY_WORDS, TRAITS, citedSources, wordCount } from './frame';
 import { CopySchema, TennisDbSchema } from './schema';
 import { feelTokens, stiffnessBand } from './stiffness';
 import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from './tags';
@@ -122,6 +123,7 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   const fail = (rule: string, where: string, message: string): void => {
     issues.push({ rule, where, message });
   };
+  const duplicates = (ids: string[]): string[] => ids.filter((id, i) => ids.indexOf(id) !== i);
   const racquetIds = db.racquets.map((r) => r.id);
   const rows: (StringRec | Hybrid)[] = [...db.strings, ...db.hybrids];
   const grips = allGrips(db);
@@ -157,6 +159,67 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
     if (ABOUT_VERDICT_LANGUAGE.test(about.replace(/<[^>]+>/g, ''))) {
       fail('neutral-grip-text', `about/${brand}`, 'verdict language in About box');
     }
+  }
+  for (const r of db.racquets) {
+    const p = r.profile;
+    if (!p) continue;
+    const texts: [string, string][] = [
+      ['edition', p.edition],
+      ['summary', p.summary],
+      ...p.construction.map((c): [string, string] => [`construction/${c.name}`, c.text]),
+      ...TRAITS.flatMap((t): [string, string][] => {
+        const trait = p.traits[t];
+        return trait ? [[t, trait.basis]] : [];
+      }),
+    ];
+    for (const [part, text] of texts) {
+      if (PREFERENCE_LANGUAGE.test(text))
+        fail('neutral-text', `${r.id}/profile/${part}`, 'preference or verdict language');
+    }
+  }
+
+  // ---- frame profiles (since v1.12; frame.ts): one per racket, every claim tied to its
+  // sources, every trait backed by a review or players' reports, a summary of about 50 words
+  for (const r of db.racquets) {
+    const p = r.profile;
+    if (!p) {
+      fail('profile-present', r.id, 'no frame profile');
+      continue;
+    }
+    const kinds = new Map(p.sources.map((s) => [s.id, s.kind]));
+    for (const id of duplicates(p.sources.map((s) => s.id)))
+      fail('profile-sources', `${r.id}/${id}`, 'duplicate source id');
+    const cited = citedSources(p);
+    for (const id of new Set(cited)) {
+      if (!kinds.has(id))
+        fail('profile-sources', `${r.id}/${id}`, 'cites a source the profile does not list');
+    }
+    for (const s of p.sources) {
+      if (!cited.includes(s.id))
+        fail('profile-sources', `${r.id}/${s.id}`, 'source listed but never cited');
+    }
+    const { sources: specSources, ...figures } = p.specs;
+    if (Object.values(figures).some((v) => v !== null) && specSources.length === 0)
+      fail('profile-sources', `${r.id}/specs`, 'specs without a source');
+    for (const t of TRAITS) {
+      const trait = p.traits[t];
+      if (
+        trait &&
+        !trait.sources.some((id) => kinds.get(id) === 'review' || kinds.get(id) === 'players')
+      )
+        fail(
+          'profile-evidence',
+          `${r.id}/${t}`,
+          "a trait needs a review or players' reports, not articles alone",
+        );
+    }
+    const words = wordCount(p.summary);
+    if (words < SUMMARY_WORDS.min || words > SUMMARY_WORDS.max)
+      fail(
+        'profile-summary',
+        r.id,
+        `summary is ${words} words, not ${SUMMARY_WORDS.min}–${SUMMARY_WORDS.max}`,
+      );
   }
 
   // ---- plain text: since v1.0 nothing in data/ is HTML (the copy in content/ still is)
@@ -265,7 +328,6 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   }
 
   // ---- integrity
-  const duplicates = (ids: string[]): string[] => ids.filter((id, i) => ids.indexOf(id) !== i);
   for (const id of duplicates([...rows.map((r) => r.id), ...grips.map((g) => g.id)]))
     fail('ids-unique', id, 'duplicate id');
   for (const id of duplicates([...gutPairings.map((p) => p.id), ...db.gutStrings.map((g) => g.id)]))
@@ -337,10 +399,12 @@ export function validateData(db: TennisDb, copy: Copy, css: string): Issue[] {
   }
 
   // ---- "racket", never "racquet", in anything a reader sees (since v1.8). Keys are code
-  // (racquetId, byRacquet) and keep the old spelling.
+  // (racquetId, byRacquet) and keep the old spelling, and so do the frame sources' web
+  // addresses (since v1.12, the owner's call): a source shows its title as the link text, never
+  // the address.
   const spelling = (v: unknown, path: PropertyKey[], where: (p: PropertyKey[]) => string): void => {
     if (typeof v === 'string') {
-      if (/racquet/i.test(v))
+      if (/racquet/i.test(v) && path.at(-1) !== 'url')
         fail('racket', where(path), '"racquet" in text; the app says "racket"');
     } else if (v && typeof v === 'object') {
       for (const [k, x] of Object.entries(v))

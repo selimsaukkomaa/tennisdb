@@ -40,6 +40,8 @@ const VIEWS: View[] = [
   { name: 'selector card', clicks: [], element: '#selector' },
   // The racket menu (v1.10), open on the racket on screen.
   { name: 'racket menu open', clicks: ['[data-rpick="card"] [data-rpick-toggle]'] },
+  // The frame profile's details (v1.12), open under the card's Frame row.
+  { name: 'frame details open', clicks: ['[data-frame-toggle]'] },
   { name: 'Percept 100D', clicks: racquet('percept') },
   { name: 'Pro Tour 630', clicks: racquet('headpt630') },
   { name: 'Grips', clicks: ['#btn-cat-grips'] },

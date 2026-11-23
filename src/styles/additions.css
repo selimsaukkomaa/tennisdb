@@ -215,3 +215,89 @@
   .compare-modal-header .rpick { position: static; }
   .compare-modal-header .rpick-list { left: 10px; right: 10px; top: calc(100% - 4px); min-width: 0; }
 }
+
+/* ── v1.12: the frame profile in the card (src/ui/frame.ts) ───────────
+   A Frame row under the strings gives each trait's word; Details opens the edition and summary,
+   the specs, the basis for each word and the construction under it, lined up with the rows'
+   content. A racket without a profile has no Frame row. */
+.sel-frame { margin-top: 14px; border-top: 1px solid #efede7; }
+.sel-frame.frame-none { display: none; }
+.frame-traits { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; list-style: none; margin: 0; padding: 0; }
+.frame-trait {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 5px 10px;
+  background: #faf9f6;
+  border: 1px solid #e7e4dc;
+  border-radius: 999px;
+}
+.frame-trait-label,
+.frame-basis-label {
+  font: 700 9.5px/1 'Space Mono', monospace;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+.frame-trait-word { font: 600 13px/1.2 'DM Sans', sans-serif; color: #1f2937; }
+.frame-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font: 700 0.7rem/1 'Space Mono', monospace;
+  letter-spacing: 0.3px;
+  padding: 7px 12px;
+  background: #fff;
+  color: #2563eb;
+  border: 1px solid #c7d4fb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.frame-toggle:hover { background: #f1f5ff; }
+.frame-caret { font-size: 0.62rem; transition: transform 0.15s; }
+.frame-open .frame-caret { transform: rotate(180deg); }
+
+.frame-details { display: none; max-width: 780px; margin: 16px 0 2px 88px; }  /* 74px label + 14px gap */
+.frame-open .frame-details { display: block; }
+.frame-edition { font: 600 12.5px/1.4 'DM Sans', sans-serif; color: #6b7280; margin: 0 0 4px; }
+.frame-summary { font: 400 14.5px/1.55 'DM Sans', sans-serif; color: #222; margin: 0; }
+.frame-specs { font-family: 'Space Mono', monospace; font-size: 0.7rem; color: #666; margin: 10px 0 0; }
+.frame-head {
+  font: 700 10.5px/1 'Space Mono', monospace;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 22px 0 8px;
+}
+.frame-basis-list { margin: 0; }
+.frame-basis {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  column-gap: 16px;
+  padding: 7px 0;
+  border-top: 1px solid #f1efe9;
+}
+.frame-basis:first-child { border-top: none; padding-top: 0; }
+.frame-basis dt { line-height: 1.5; }
+.frame-basis-word { font: 600 13.5px/1.5 'DM Sans', sans-serif; color: #111; margin-left: 4px; }
+.frame-basis dd,
+.frame-construction li { margin: 0; font: 400 13.5px/1.5 'DM Sans', sans-serif; color: #333; }
+.frame-construction { list-style: none; margin: 0; padding: 0; }
+.frame-construction li { padding: 4px 0; }
+.frame-part { display: block; font-weight: 700; color: #111; }
+
+/* On phones the words run as one line of text, not pills, and Details sits beside the label,
+   so the row stays short on the first screen. */
+@media (max-width: 600px) {
+  .sel-frame { margin-top: 12px; }
+  .frame-row .sel-label { width: auto; flex: 1; }
+  .frame-toggle { order: 1; padding: 6px 10px; }
+  .frame-traits { order: 2; width: 100%; row-gap: 3px; column-gap: 0; }
+  .frame-trait { gap: 5px; padding: 0; background: none; border: none; border-radius: 0; }
+  .frame-trait:not(:last-child)::after { content: '·'; margin: 0 7px 0 1px; color: #c0bdb5; }
+  .frame-trait-word { font-size: 13px; }
+  .frame-details { margin-left: 0; }
+  .frame-summary { font-size: 14px; }
+  .frame-basis { grid-template-columns: 1fr; row-gap: 2px; }
+}

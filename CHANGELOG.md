@@ -6,6 +6,180 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.12 — Frame profiles
+
+**Date:** 2026-11-23
+**Base:** v1.11 (the Regna 100 at 65 RA)
+**Status:** visible release and data release: each racket gets a frame profile, kept in
+`racquets.json` and shown in the card. A profile holds what the frame is made of, its measured
+specs, and how published reviews and players describe its play, trait by trait. The owner's calls
+on 2026-11-23:
+- the profile lives in the data and in the app;
+- a trait is one word from a fixed list plus a line;
+- only published sources count, with the Regna 100 the exception (below);
+- the three rackets get profiles now, and their 246 notes are revised against them later, a
+  sample of five first;
+- the card shows no sources, and the texts never say who said what;
+- the Pro Tour 630's texts leave out the 2020 Pro Tour 2.0, a different frame.
+
+`TENNIS_DB.version` stays `0.990`.
+
+---
+
+## The frame profile
+
+- **In the data:** each racket in `racquets.json` has a `profile`, with:
+  - `edition`: which frame exactly;
+  - a `summary` of 35–70 words;
+  - `construction`: materials, damping and build, a name and a line each;
+  - `specs`: strung weight, balance, swingweight and beam, null where no figure is published;
+  - `traits`: feel, power, launch, spin, stability, comfort and control, each a word and a line;
+  - `sources`: each a review, players' reports or an article, with its publisher, title, author,
+    date, address and the model it covers.
+
+  Every line cites its sources by id. The schema is `FrameProfileSchema` in `src/core/schema.ts`;
+  the words and helpers are in `src/core/frame.ts`.
+- **The words:**
+  - feel: damped, neutral or crisp;
+  - power: Tennis Warehouse's five steps (low, low-medium, medium, medium-high, high);
+  - launch, spin, stability, comfort and control: low, medium or high.
+- **Evidence:** a trait rests on a hands-on review or on players' reports that agree. Articles
+  (maker or retailer copy, news, spec listings) give construction and specs only. A trait no
+  source supports is left out.
+- **The Regna 100 exception** (owner): no professional review of the 100 exists, so personal blogs
+  and single players' posts count for it alone. Its profile has 13 sources:
+  - five Japanese hands-on blogs;
+  - Talk Tennis owners' threads;
+  - Tennis Bear's user comments;
+  - Tennisnerd's Regna 98 review, for the production figure only;
+  - spec and launch articles.
+
+  Most describe the 2019 frame (V2). The 2022 model (V3, the owner's) is the same frame in a new
+  design.
+- **No attribution in the texts** (owner, after a sample of five): the lines say how the frame
+  plays, never who said it or a review site's score. Where sources disagree, the line gives the
+  reading its word rests on, and the disagreement is flagged below.
+
+| | Feel | Power | Launch | Spin | Stability | Comfort | Control | Sources |
+|---|---|---|---|---|---|---|---|---:|
+| Regna 100 | neutral | medium-high | medium | medium | medium | high | high | 13 |
+| Percept 100D | crisp | low-medium | low | medium | medium | medium | high | 3 |
+| Pro Tour 630 | damped | low | low | medium | high | high | high | 4 |
+
+## In the card
+
+- **A Frame row** sits last in the card, under Strings, with each trait's word ("Feel neutral",
+  "Power medium-high", …). On phones the words run as one line of text, with Details beside the
+  label, so the row stays short on the first screen.
+- **Details** opens under the row and shows:
+  - the edition and summary;
+  - the specs line ("312 g strung · 3 pts HL · swingweight 318 · beam 21.5/23/21 mm");
+  - the line behind each word;
+  - the construction.
+
+  It starts closed on each visit and stays open across racket switches; the button is a
+  disclosure (`aria-expanded`). A racket without a profile shows no Frame row; only the
+  ten-rackets test's placeholders lack one. The code is in `src/ui/frame.ts`, the styles in
+  `additions.css`.
+- **No sources on screen** (owner): the source list, its numbered citations and its links were
+  shown in review, then taken out as clutter. The sources stay in the data, where the validators
+  hold every line to them.
+
+## Validators
+
+- **Schema:** it checks the profile's fields, the word lists and source kinds, dates (a year,
+  month or day), web addresses and 1–3 beam widths, with no unknown keys. `schemas/` is
+  regenerated.
+- **New rules:**
+  - `profile-present`: every racket in `data/` has a profile.
+  - `profile-sources`: ids are unique, every cited id is listed, every listed source is cited,
+    and specs with a figure cite a source.
+  - `profile-evidence`: every trait cites a review or players' reports.
+  - `profile-summary`: the summary is 35–70 words.
+- **`neutral-text`** now covers the profile's texts.
+- **The `racket` rule skips web addresses** (owner's pick): five source addresses keep
+  "racquet" in their path. No address is shown.
+- **Mutation tests:** 12 for the rules, 10 for the schema, and one showing that an address may
+  hold "racquet".
+
+## Baselines updated
+
+Approved with screenshots on 2026-11-23, then `--update-snapshots=all`:
+
+- **New:** one pixel view, "frame details open" (at both sizes), and one DOM scenario, "frame
+  details open, then the Pro Tour 630". That makes 18 views and 26 scenarios.
+- **DOM scenarios:** 21 of 25 changed, each only by the Frame row: 1,092 added lines, none
+  removed. The four grips scenarios don't show the card and are unchanged.
+- **Pixel views:** 19 files changed. Every view showing the card moved down, since the card grew
+  55 px on desktop and 125 px on a phone. The Pro Tour 630 gut table close-up differs only by
+  anti-aliasing at its new position; its text is the same. Two views differed only below the
+  per-pixel threshold and were restored.
+
+---
+
+## Data corrections
+
+None: the profiles are new.
+
+## Flags left open
+
+Since v1.11, plus these from the profiles:
+
+- **Regna 100, V2 or V3:** most sources describe the 2019 frame (V2). tennis-torasan and most
+  Talk Tennis owners say the 2022 model (V3) is the same frame in a new design. Two posters
+  disagree: one measures the shaft 1 mm thinner, one reads 63 RA (model unstated). Treated as one
+  frame.
+- **Regna 100 at Tension Lab:** 64 RA and swingweight 317, against Tennis Warehouse's 65 and the
+  profile's 318. Kept.
+- **Regna 100 spin:** reviewers split, from spin-frame levels to little; "medium" is the middle.
+- **Regna 100 comfort:** one player reports arm pain after moving from heavier frames; the others
+  find it easy on the arm.
+- **Percept 100D swingweight:** 318 at Tennis Warehouse, 319 at Tennis.com. Kept 318.
+- **Percept 100D comfort:** "harsh on mis-hits" rests on one tester, and the others find it
+  arm-friendly. The line keeps it, since "medium" rests on it.
+- **Pro Tour 630 head size:** 98 sq in by Head's outside measurement, "really 95" for some
+  players. Kept 98; the frame's tension offset (−3) is the same either way.
+- **Pro Tour 630 spin:** Talk Tennis players report strong spin with their own setups; the
+  hands-on review finds it adequate.
+
+## Verification
+
+`npm run check` passes: 387 Vitest tests (357 in v1.11; the new ones cover the profile rules and
+schema, and the card's Frame section), and the browser suite, 65 passed and 27 skipped on the Mac.
+On CI the pixel views are skipped as well.
+
+- **Against v0.990:** the data equals v0.990's value for value, with the declared changes. The
+  round trip leaves the profile out, since v0.990 had none.
+- **iOS:** not rebuilt; nothing native changed. The app takes the profiles at its next
+  `npm run build:ios`.
+
+## File size
+
+| | v1.11 | v1.12 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 341,878 | 359,353 | +17,475 |
+| gzip | 76,953 | 81,924 | +4,971 bytes |
+
+The three profiles are 11,629 bytes of data (3,597 gzipped), 4,933 of them the sources that
+aren't shown. The rest is the Frame section's code and styles.
+
+## Still open
+
+Unchanged from v1.11, except:
+
+- **Common rackets:** the owner decided two rules on 2026-11-23:
+  - **Tension rule:** a new frame takes the Regna 100's tensions shifted by one whole-kg offset,
+    from its string-bed density and RA. For the Pure Drive 2025 the offset is +1.
+  - **Natural gut:** each new racket gets the Regna's seven gut hybrids.
+
+  Next is the Pure Drive 2025: its profile, its tensions by the rule and its 82 notes, a sample
+  of five first.
+- **The three rackets' notes:** their 246 notes are to be revised against the profiles, a sample
+  of five first. Note order step 2 now includes the frame profile.
+- **New flags:** above.
+
+---
+
 # v1.11 — The Regna 100 at 65 RA
 
 **Date:** 2026-11-23

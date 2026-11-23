@@ -8,7 +8,278 @@
       "mains": 16,
       "crosses": 19
     },
-    "ra": 65
+    "ra": 65,
+    "profile": {
+      "edition": "2022 model (V3), all black: the 2019 frame (V2) in a new design.",
+      "summary": "Thin-beam 100 (21.5/23/21 mm) in high-modulus graphite with Namd through the whole frame, a thickened face and a leather grip, built in small batches in Japan. Light and head-light at 312 g strung. The frame flexes and snaps back: solid, lively contact without a muted feel, a carrying ball and precise placement.",
+      "construction": [
+        {
+          "name": "HM graphite, Namd, Black Micro Core",
+          "text": "Namd runs through the whole frame; earlier Yonex frames had it only in the shaft or sleeve.",
+          "sources": [
+            "improving-tennis-2019-info",
+            "tennisnavi-2020",
+            "tennisnerd-2021"
+          ]
+        },
+        {
+          "name": "Thickened face",
+          "text": "Part of the hoop wall is thicker, for stiffness and power.",
+          "sources": [
+            "improving-tennis-2019-info",
+            "tennis-torasan-2022"
+          ]
+        },
+        {
+          "name": "Sleeve carbon",
+          "text": "Densely woven carbon at the shaft that twists and returns quickly.",
+          "sources": [
+            "improving-tennis-2019-info",
+            "tennis-torasan-2022"
+          ]
+        },
+        {
+          "name": "Isometric head",
+          "text": "A squarer face, with the sweet spot widening toward the throat.",
+          "sources": [
+            "tennisnavi-2020",
+            "tennis-torasan-2022"
+          ]
+        },
+        {
+          "name": "No damping system",
+          "text": "No vibration-dampening mesh or insert in the frame.",
+          "sources": [
+            "tt-2024"
+          ]
+        },
+        {
+          "name": "Leather grip",
+          "text": "A leather replacement grip as standard.",
+          "sources": [
+            "tennisnerd-2021"
+          ]
+        },
+        {
+          "name": "Made in Japan",
+          "text": "Built by dedicated craftsmen in small batches, about 200 frames a month per model.",
+          "sources": [
+            "tennisnerd-98-2021",
+            "improving-tennis-2019-info",
+            "tennis-torasan-2022"
+          ]
+        }
+      ],
+      "specs": {
+        "strungWeightG": 312,
+        "balancePtsHL": 3,
+        "swingweight": 318,
+        "beamMm": [
+          21.5,
+          23,
+          21
+        ],
+        "sources": [
+          "tennisnerd-2021",
+          "tennis-torasan-2022"
+        ]
+      },
+      "traits": {
+        "feel": {
+          "word": "neutral",
+          "basis": "Solid and direct at contact: the frame holds the ball softly and springs back quickly. It absorbs shock without the muted feel of an EZONE or VCORE.",
+          "sources": [
+            "tt-2019",
+            "tt-2024",
+            "senchaaan-2019",
+            "tofuday-2019",
+            "apullo-2023",
+            "akazukin-2024"
+          ]
+        },
+        "power": {
+          "word": "medium-high",
+          "basis": "More pop than the Regna 98 and the VCORE Pro 100, less than the VCORE 100; close to the EZONE 100.",
+          "sources": [
+            "senchaaan-2019",
+            "tofuday-2019",
+            "akazukin-2024",
+            "tt-2019"
+          ]
+        },
+        "launch": {
+          "word": "medium",
+          "basis": "Higher than the Regna 98; a flat, carrying ball.",
+          "sources": [
+            "tt-2019",
+            "akazukin-2024",
+            "tofuday-2019"
+          ]
+        },
+        "spin": {
+          "word": "medium",
+          "basis": "Moderate topspin; slice is a strength.",
+          "sources": [
+            "senchaaan-2019",
+            "tofuday-2019",
+            "apullo-2023",
+            "akazukin-2024",
+            "improving-tennis-2019"
+          ]
+        },
+        "stability": {
+          "word": "medium",
+          "basis": "Steady on centre for its weight; heavy balls can twist it.",
+          "sources": [
+            "tofuday-2019",
+            "improving-tennis-2019",
+            "tt-2019"
+          ]
+        },
+        "comfort": {
+          "word": "high",
+          "basis": "Easy on the arm, even a tendinitis-prone one.",
+          "sources": [
+            "akazukin-2024",
+            "tt-2019"
+          ]
+        },
+        "control": {
+          "word": "high",
+          "basis": "Precise placement; full flat hits can sail long.",
+          "sources": [
+            "improving-tennis-2019",
+            "senchaaan-2019",
+            "tofuday-2019",
+            "tennisbear-2022",
+            "tt-2019",
+            "tt-2024"
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "improving-tennis-2019",
+          "kind": "review",
+          "publisher": "improving-tennis.com",
+          "title": "REGNA 2019 impressions, the 100 (in Japanese)",
+          "author": "ryomei",
+          "date": "2019-04-07",
+          "url": "https://improving-tennis.com/yonex-regna100-2019-impression",
+          "covers": "2019 model (V2)"
+        },
+        {
+          "id": "senchaaan-2019",
+          "kind": "review",
+          "publisher": "RACKET LABO",
+          "title": "REGNA 100 impressions (in Japanese)",
+          "author": "ぺんてぃ",
+          "date": "2019-05",
+          "url": "https://senchaaan.com/2019/05/02/%E3%80%90yonex%E3%80%91regna%E3%83%AC%E3%82%B0%E3%83%8A100%E3%82%92%E3%82%A4%E3%83%B3%E3%83%97%E3%83%AC%EF%BC%81%E3%81%BE%E3%82%8B%E3%81%A7%E4%B8%AD%E5%8E%9A%EF%BC%9F%E3%81%97%E3%81%AA%E3%81%A3/",
+          "covers": "2019 model (V2)"
+        },
+        {
+          "id": "tofuday-2019",
+          "kind": "review",
+          "publisher": "tofuday.com",
+          "title": "2019 REGNA 100 review (in Japanese)",
+          "author": "ぬつ",
+          "date": "2019-12-01",
+          "url": "https://tofuday.com/yonex-regna100-review",
+          "covers": "2019 model (V2)"
+        },
+        {
+          "id": "apullo-2023",
+          "kind": "review",
+          "publisher": "apullo-tennis.com",
+          "title": "REGNA 100 review (in Japanese)",
+          "author": "apullo",
+          "date": "2023-11-12",
+          "url": "https://apullo-tennis.com/20231112/1699761558",
+          "covers": "Generation not stated"
+        },
+        {
+          "id": "akazukin-2024",
+          "kind": "review",
+          "publisher": "akazukinkun.com",
+          "title": "Regna 100 review (in Japanese)",
+          "date": "2024-12-14",
+          "url": "https://akazukinkun.com/yonex-regna100"
+        },
+        {
+          "id": "tennisbear-2022",
+          "kind": "players",
+          "publisher": "Tennis Bear",
+          "title": "REGNA 100 (2022): user comments (in Japanese)",
+          "date": "2022",
+          "url": "https://www.tennisbear.net/racket/47/info"
+        },
+        {
+          "id": "tt-2019",
+          "kind": "players",
+          "publisher": "Talk Tennis",
+          "title": "2019 Yonex Regna (Japanese exclusive)",
+          "date": "2019-01-25",
+          "url": "https://tt.tennis-warehouse.com/index.php?threads/2019-yonex-regna-japanese-exclusive.635839/",
+          "covers": "2019 model (V2), later both"
+        },
+        {
+          "id": "tt-2024",
+          "kind": "players",
+          "publisher": "Talk Tennis",
+          "title": "Yonex Regna 2024: owners of the 2022 model",
+          "date": "2023-11-29",
+          "url": "https://tt.tennis-warehouse.com/index.php?threads/yonex-regna-2024.761326/"
+        },
+        {
+          "id": "tennisnerd-2021",
+          "kind": "article",
+          "publisher": "Tennisnerd",
+          "title": "The Yonex Regna is back (Tennis Warehouse's specs)",
+          "author": "Jonas Eriksson",
+          "date": "2021-04-26",
+          "url": "https://www.tennisnerd.net/gear/racquets/the-yonex-regna-is-back/24586",
+          "covers": "2019 model (V2)"
+        },
+        {
+          "id": "tennisnerd-98-2021",
+          "kind": "review",
+          "publisher": "Tennisnerd",
+          "title": "Yonex Regna 98 review",
+          "author": "Jonas Eriksson",
+          "date": "2021-06-02",
+          "url": "https://www.tennisnerd.net/gear/racquets/yonex-regna-98-review/24847",
+          "covers": "The Regna 98; cited for the production figure"
+        },
+        {
+          "id": "improving-tennis-2019-info",
+          "kind": "article",
+          "publisher": "improving-tennis.com",
+          "title": "REGNA 2019: technology and specs, from Yonex's launch material (in Japanese)",
+          "author": "ryomei",
+          "date": "2019",
+          "url": "https://improving-tennis.com/yonex-regna2019-information",
+          "covers": "2019 model (V2)"
+        },
+        {
+          "id": "tennisnavi-2020",
+          "kind": "article",
+          "publisher": "Tennis Navi",
+          "title": "REGNA 100 feature (in Japanese)",
+          "date": "2020-09-08",
+          "url": "https://tennisnavi.jp/article/racket/439710/",
+          "covers": "2019 model (V2)"
+        },
+        {
+          "id": "tennis-torasan-2022",
+          "kind": "article",
+          "publisher": "tennis-torasan.com",
+          "title": "REGNA 100/98 2022: release, specs and changes (in Japanese)",
+          "date": "2022-06-03",
+          "url": "https://tennis-torasan.com/regna-2022-matome/"
+        }
+      ]
+    }
   },
   {
     "id": "percept",
@@ -19,7 +290,150 @@
       "mains": 18,
       "crosses": 19
     },
-    "ra": 66
+    "ra": 66,
+    "profile": {
+      "edition": "The 2023 original.",
+      "summary": "Box-beam 100 (23 mm) with a dense 18×19 pattern. Servo Filter film and FlexCon in the shaft add flex and filter vibration; extra graphite in the hoop firms the face. Contact is crisp and solid, launch low and the ball flat; power stays modest and control high.",
+      "construction": [
+        {
+          "name": "2G-Namd",
+          "text": "High-modulus graphite with 2G-Namd, as Yonex lists the layup.",
+          "sources": [
+            "tennisnerd-2023"
+          ]
+        },
+        {
+          "name": "Servo Filter",
+          "text": "A film between the graphite layers of the shaft; adds flex and filters vibration.",
+          "sources": [
+            "tw-2023",
+            "tenniscom-2024"
+          ]
+        },
+        {
+          "name": "FlexCon",
+          "text": "A tapered, elongated box-beam shaft that flexes at contact to pocket the ball.",
+          "sources": [
+            "tenniscom-2024"
+          ]
+        },
+        {
+          "name": "Stiffer face",
+          "text": "Extra graphite in the hoop for a firmer face.",
+          "sources": [
+            "tenniscom-2024"
+          ]
+        },
+        {
+          "name": "Isometric head",
+          "text": "A squared head that widens the hitting zone near the top.",
+          "sources": [
+            "tennisnerd-2023"
+          ]
+        }
+      ],
+      "specs": {
+        "strungWeightG": 320,
+        "balancePtsHL": 6,
+        "swingweight": 318,
+        "beamMm": [
+          23
+        ],
+        "sources": [
+          "tw-2023",
+          "tennisnerd-2023"
+        ]
+      },
+      "traits": {
+        "feel": {
+          "word": "crisp",
+          "basis": "Crisp, solid contact; harsher off-centre.",
+          "sources": [
+            "tenniscom-2024",
+            "tw-2023"
+          ]
+        },
+        "power": {
+          "word": "low-medium",
+          "basis": "Modest free power; the swing supplies the pace, though the frame gives more than other 18×19 frames.",
+          "sources": [
+            "tw-2023",
+            "tennisnerd-2023"
+          ]
+        },
+        "launch": {
+          "word": "low",
+          "basis": "A low launch and a flat ball.",
+          "sources": [
+            "tw-2023",
+            "tennisnerd-2023"
+          ]
+        },
+        "spin": {
+          "word": "medium",
+          "basis": "Respectable topspin rather than high; the frame leans to flat drives.",
+          "sources": [
+            "tenniscom-2024",
+            "tw-2023",
+            "tennisnerd-2023"
+          ]
+        },
+        "stability": {
+          "word": "medium",
+          "basis": "Solid on centre; off-centre the ball leaves the strings quickly.",
+          "sources": [
+            "tw-2023",
+            "tenniscom-2024"
+          ]
+        },
+        "comfort": {
+          "word": "medium",
+          "basis": "Arm-friendly on clean hits, harsh on mis-hits.",
+          "sources": [
+            "tw-2023",
+            "tenniscom-2024"
+          ]
+        },
+        "control": {
+          "word": "high",
+          "basis": "Predictable placement; control is where the frame stands out.",
+          "sources": [
+            "tw-2023",
+            "tenniscom-2024",
+            "tennisnerd-2023"
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "tw-2023",
+          "kind": "review",
+          "publisher": "Tennis Warehouse",
+          "title": "Percept 100D review",
+          "author": "Brittany, Chris, Jason, Tiffani",
+          "date": "2023-10",
+          "url": "https://www.tennis-warehouse.com/learning_center/racquet_reviews/PERC1Dreview.html"
+        },
+        {
+          "id": "tennisnerd-2023",
+          "kind": "review",
+          "publisher": "Tennisnerd",
+          "title": "Percept 100D review",
+          "author": "Oak Gast",
+          "date": "2023-09-30",
+          "url": "https://www.tennisnerd.net/gear/racquets/racquet-reviews/yonex-percept-100d-review/32135"
+        },
+        {
+          "id": "tenniscom-2024",
+          "kind": "review",
+          "publisher": "Tennis.com",
+          "title": "Percept 100D review",
+          "author": "Jon Levey",
+          "date": "2024-02-29",
+          "url": "https://tennis.com/baseline/articles/racquet-review-yonex-percept-100d"
+        }
+      ]
+    }
   },
   {
     "id": "headpt630",
@@ -30,6 +444,135 @@
       "mains": 18,
       "crosses": 20
     },
-    "ra": 58
+    "ra": 58,
+    "profile": {
+      "edition": "The 1990s Twaron frame, made in Austria.",
+      "summary": "Box-beam 18×20 frame from the 1990s (about 20 mm), high-modulus graphite with Twaron aramid fibre, made in Austria. At 58 RA it is very flexible: contact feels plush and damped, with no ping. The ball leaves low; stability and control are high, free power low and spin moderate.",
+      "construction": [
+        {
+          "name": "HM graphite and Twaron",
+          "text": "High-modulus graphite with Twaron, an aramid fibre.",
+          "sources": [
+            "tt-2007"
+          ]
+        },
+        {
+          "name": "Box beam",
+          "text": "The PT57 mould, about 20 mm throughout.",
+          "sources": [
+            "tennisnerd-history-2022",
+            "tt-2007"
+          ]
+        },
+        {
+          "name": "Made in Austria",
+          "text": "From about 1994 to 2000.",
+          "sources": [
+            "tt-2014"
+          ]
+        }
+      ],
+      "specs": {
+        "strungWeightG": null,
+        "balancePtsHL": null,
+        "swingweight": null,
+        "beamMm": [
+          20
+        ],
+        "sources": [
+          "tt-2007"
+        ]
+      },
+      "traits": {
+        "feel": {
+          "word": "damped",
+          "basis": "Flexible and solid, with a plush, damped contact and no ping.",
+          "sources": [
+            "samtalkstennis-2008",
+            "tt-2007"
+          ]
+        },
+        "power": {
+          "word": "low",
+          "basis": "Little free power once the strings settle.",
+          "sources": [
+            "tt-2007"
+          ]
+        },
+        "launch": {
+          "word": "low",
+          "basis": "The ball does not fly high.",
+          "sources": [
+            "samtalkstennis-2008"
+          ]
+        },
+        "spin": {
+          "word": "medium",
+          "basis": "Adequate topspin and a sharp slice.",
+          "sources": [
+            "samtalkstennis-2008",
+            "tt-2007"
+          ]
+        },
+        "stability": {
+          "word": "high",
+          "basis": "Very stable; it can feel heavy in the hand.",
+          "sources": [
+            "samtalkstennis-2008",
+            "tt-2014"
+          ]
+        },
+        "comfort": {
+          "word": "high",
+          "basis": "Hard hitting without tiring the arm.",
+          "sources": [
+            "samtalkstennis-2008"
+          ]
+        },
+        "control": {
+          "word": "high",
+          "basis": "Hard swings still land in; the response is neutral and predictable.",
+          "sources": [
+            "samtalkstennis-2008",
+            "tt-2014"
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "samtalkstennis-2008",
+          "kind": "review",
+          "publisher": "sam talks tennis",
+          "title": "Head Pro Tour 630 (Thomas Muster)",
+          "date": "2008-08-24",
+          "url": "http://samtalkstennis.blogspot.com/2008/08/head-pro-tour-630-thomas-muster.html"
+        },
+        {
+          "id": "tennisnerd-history-2022",
+          "kind": "article",
+          "publisher": "Tennisnerd",
+          "title": "A Head of the Game, part 3: the class of 95",
+          "author": "James Lloyd",
+          "date": "2022-04-02",
+          "url": "https://www.tennisnerd.net/history/a-head-of-the-game-part-3/26667"
+        },
+        {
+          "id": "tt-2007",
+          "kind": "players",
+          "publisher": "Talk Tennis",
+          "title": "The Official Head Pro Tour 630/280 Club",
+          "date": "2007-11-21",
+          "url": "https://tt.tennis-warehouse.com/index.php?threads/the-official-head-pro-tour-630-280-club.167959/"
+        },
+        {
+          "id": "tt-2014",
+          "kind": "players",
+          "publisher": "Talk Tennis",
+          "title": "Head Pro Tour 630 is 20 years old now",
+          "date": "2014-06-11",
+          "url": "https://tt.tennis-warehouse.com/index.php?threads/head-pro-tour-630-is-20-years-old-now.503233/"
+        }
+      ]
+    }
   }
 ]

@@ -182,6 +182,58 @@
           <button class="gut-choice inactive" data-nav-brand="gut" id="btn-gut">
             "Natural gut"
           " "
+      <div class="sel-frame" data-frame="">
+        <div class="frame-row sel-row">
+          <span class="sel-label">
+            "Frame"
+          <ul aria-label="Frame character" class="frame-traits">
+            <li class="frame-trait">
+              <span class="frame-trait-label">
+                "Feel"
+              " "
+              <span class="frame-trait-word">
+                "neutral"
+            <li class="frame-trait">
+              <span class="frame-trait-label">
+                "Power"
+              " "
+              <span class="frame-trait-word">
+                "medium-high"
+            <li class="frame-trait">
+              <span class="frame-trait-label">
+                "Launch"
+              " "
+              <span class="frame-trait-word">
+                "medium"
+            <li class="frame-trait">
+              <span class="frame-trait-label">
+                "Spin"
+              " "
+              <span class="frame-trait-word">
+                "medium"
+            <li class="frame-trait">
+              <span class="frame-trait-label">
+                "Stability"
+              " "
+              <span class="frame-trait-word">
+                "medium"
+            <li class="frame-trait">
+              <span class="frame-trait-label">
+                "Comfort"
+              " "
+              <span class="frame-trait-word">
+                "high"
+            <li class="frame-trait">
+              <span class="frame-trait-label">
+                "Control"
+              " "
+              <span class="frame-trait-word">
+                "high"
+          <button aria-controls="frame-details" aria-expanded="false" class="frame-toggle" data-frame-toggle="" type="button">
+            "Details"
+            <span aria-hidden="true" class="frame-caret">
+              "▾"
+        " "
     <div id="racquet-pages">
       <div data-racquet-page="regna" id="regna-content" style="display: block;">
         " "

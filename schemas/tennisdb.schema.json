@@ -139,6 +139,9 @@
           "type": "integer",
           "minimum": 40,
           "maximum": 80
+        },
+        "profile": {
+          "$ref": "#/$defs/FrameProfile"
         }
       },
       "required": [
@@ -151,6 +154,415 @@
       ],
       "additionalProperties": false,
       "description": "Shown as \"<brand> <model>\" with the spec \"<ra> RA · <mains>×<crosses> · <n> sq in\"."
+    },
+    "FrameProfile": {
+      "type": "object",
+      "properties": {
+        "edition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "construction": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sources": {
+                "minItems": 1,
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                }
+              }
+            },
+            "required": [
+              "name",
+              "text",
+              "sources"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "specs": {
+          "type": "object",
+          "properties": {
+            "strungWeightG": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 250,
+                  "maximum": 400
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "balancePtsHL": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": -10,
+                  "maximum": 15
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "swingweight": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 250,
+                  "maximum": 380
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "beamMm": {
+              "anyOf": [
+                {
+                  "minItems": 1,
+                  "maxItems": 3,
+                  "type": "array",
+                  "items": {
+                    "type": "number",
+                    "minimum": 15,
+                    "maximum": 35
+                  }
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "sources": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+              }
+            }
+          },
+          "required": [
+            "strungWeightG",
+            "balancePtsHL",
+            "swingweight",
+            "beamMm",
+            "sources"
+          ],
+          "additionalProperties": false
+        },
+        "traits": {
+          "type": "object",
+          "properties": {
+            "feel": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "enum": [
+                    "damped",
+                    "neutral",
+                    "crisp"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sources": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                  }
+                }
+              },
+              "required": [
+                "word",
+                "basis",
+                "sources"
+              ],
+              "additionalProperties": false
+            },
+            "power": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "low-medium",
+                    "medium",
+                    "medium-high",
+                    "high"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sources": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                  }
+                }
+              },
+              "required": [
+                "word",
+                "basis",
+                "sources"
+              ],
+              "additionalProperties": false
+            },
+            "launch": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sources": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                  }
+                }
+              },
+              "required": [
+                "word",
+                "basis",
+                "sources"
+              ],
+              "additionalProperties": false
+            },
+            "spin": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sources": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                  }
+                }
+              },
+              "required": [
+                "word",
+                "basis",
+                "sources"
+              ],
+              "additionalProperties": false
+            },
+            "stability": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sources": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                  }
+                }
+              },
+              "required": [
+                "word",
+                "basis",
+                "sources"
+              ],
+              "additionalProperties": false
+            },
+            "comfort": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sources": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                  }
+                }
+              },
+              "required": [
+                "word",
+                "basis",
+                "sources"
+              ],
+              "additionalProperties": false
+            },
+            "control": {
+              "type": "object",
+              "properties": {
+                "word": {
+                  "type": "string",
+                  "enum": [
+                    "low",
+                    "medium",
+                    "high"
+                  ]
+                },
+                "basis": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sources": {
+                  "minItems": 1,
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+                  }
+                }
+              },
+              "required": [
+                "word",
+                "basis",
+                "sources"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "sources": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/FrameSource"
+          }
+        }
+      },
+      "required": [
+        "edition",
+        "summary",
+        "construction",
+        "specs",
+        "traits",
+        "sources"
+      ],
+      "additionalProperties": false,
+      "description": "Construction, measured specs and character from published sources (since v1.12; frame.ts)."
+    },
+    "FrameSource": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+        },
+        "kind": {
+          "type": "string",
+          "enum": [
+            "review",
+            "players",
+            "article"
+          ]
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "author": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}(-(0[1-9]|1[0-2])(-(0[1-9]|[12]\\d|3[01]))?)?$"
+        },
+        "url": {
+          "type": "string",
+          "pattern": "^https?:\\/\\/\\S+$"
+        },
+        "covers": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "kind",
+        "publisher",
+        "title",
+        "date",
+        "url"
+      ],
+      "additionalProperties": false
     },
     "Brand": {
       "type": "object",

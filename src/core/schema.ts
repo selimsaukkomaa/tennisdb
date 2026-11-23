@@ -5,7 +5,7 @@
 // plus a figure with its provenance since v0.998, and ratings are a score plus a word from
 // their axis's list since v0.999. Since v1.0 every string here is plain text: the one grip spec
 // that held markup is `{ text, emphasis }`, and validate.ts keeps tags and entities out
-// (plain-text).
+// (plain-text). Since v1.12 each racquet carries its frame profile (core/frame.ts).
 //
 // The schemas own the data's shape: required and optional fields, no unknown keys, formats
 // (ids, colours, rating scores) and the token lists the filter chips match. They are written so
@@ -17,6 +17,7 @@
 // never loads this module.
 import { z } from 'zod';
 import { FEEL_CHIPS, SHAPE_CHIPS } from './chips';
+import { SOURCE_KINDS, TRAIT_WORDS } from './frame';
 import { STIFFNESS_BANDS } from './stiffness';
 import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS, tagLabels } from './tags';
 import { GRIP_TYPES } from './types';
@@ -113,6 +114,66 @@ export const GripTagSchema = z
   .enum(tagLabels(GRIP_TAG_COLOURS))
   .meta({ id: 'GripTag', description: 'A feel tag of a grip; tags.ts gives its colour.' });
 
+/** A publication date: a year, a month or a day ("2019", "2023-10", "2024-02-29"). */
+const PublishedDate = z.string().regex(/^\d{4}(-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?)?$/);
+const Url = z.string().regex(/^https?:\/\/\S+$/);
+/** The ids of the profile's sources a claim rests on (validate.ts: profile-sources). */
+const Cites = z.array(Id).min(1);
+
+export const FrameSourceSchema = z
+  .strictObject({
+    id: Id,
+    /** review: hands-on; players: forum posts, user comments; article: news, copy, spec listings. */
+    kind: z.enum(SOURCE_KINDS),
+    publisher: Text,
+    title: Text,
+    author: Text.optional(),
+    /** When it was published; a forum thread's start. */
+    date: PublishedDate,
+    url: Url,
+    /** The generation or model it covers, where that differs from the profile's edition. */
+    covers: Text.optional(),
+  })
+  .meta({ id: 'FrameSource' });
+
+const traitSchema = <W extends readonly [string, ...string[]]>(words: W) =>
+  z.strictObject({ word: z.enum(words), basis: Text, sources: Cites }).optional();
+
+export const FrameProfileSchema = z
+  .strictObject({
+    /** Which generation or edition of the model the profile describes. */
+    edition: Text,
+    /** About 50 words, neutral (validate.ts: profile-summary, neutral-text). */
+    summary: Text,
+    construction: z.array(z.strictObject({ name: Text, text: Text, sources: Cites })).min(1),
+    /** Strung figures; null where nothing is published for the edition. */
+    specs: z.strictObject({
+      strungWeightG: z.int().min(250).max(400).nullable(),
+      /** Points head-light, strung. */
+      balancePtsHL: z.number().min(-10).max(15).nullable(),
+      swingweight: z.int().min(250).max(380).nullable(),
+      /** Beam widths in mm, tip to throat: one, or three where the beam varies. */
+      beamMm: z.array(z.number().min(15).max(35)).min(1).max(3).nullable(),
+      sources: z.array(Id),
+    }),
+    /** A trait is left out where no published source supports it (frame.ts). */
+    traits: z.strictObject({
+      feel: traitSchema(TRAIT_WORDS.feel),
+      power: traitSchema(TRAIT_WORDS.power),
+      launch: traitSchema(TRAIT_WORDS.launch),
+      spin: traitSchema(TRAIT_WORDS.spin),
+      stability: traitSchema(TRAIT_WORDS.stability),
+      comfort: traitSchema(TRAIT_WORDS.comfort),
+      control: traitSchema(TRAIT_WORDS.control),
+    }),
+    sources: z.array(FrameSourceSchema).min(1),
+  })
+  .meta({
+    id: 'FrameProfile',
+    description:
+      'Construction, measured specs and character from published sources (since v1.12; frame.ts).',
+  });
+
 export const RacquetSchema = z
   .strictObject({
     id: Id,
@@ -123,6 +184,8 @@ export const RacquetSchema = z
     /** String pattern: mains × crosses. */
     pattern: z.strictObject({ mains: z.int().min(12).max(22), crosses: z.int().min(14).max(24) }),
     ra: z.int().min(40).max(80),
+    /** Every racket in data/ has one (validate.ts: profile-present); test frames may not. */
+    profile: FrameProfileSchema.optional(),
   })
   .meta({
     id: 'Racquet',

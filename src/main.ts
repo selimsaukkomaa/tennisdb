@@ -5,6 +5,7 @@ import { isNative } from './platform/native';
 import { initCompare } from './ui/compare';
 import { initFilterPanel } from './ui/filter-panel';
 import { initFilters } from './ui/filters';
+import { initFrame } from './ui/frame';
 import { initGut } from './ui/gut';
 import { initNav } from './ui/nav';
 import { initPalette } from './ui/palette';
@@ -25,6 +26,7 @@ initGut(db, copy);
 initCompare(db);
 initNav(db, copy);
 initFilterPanel();
+initFrame();
 // Search before the palette: a result click navigates first, then the palette closes.
 initSearch(db);
 initPalette();

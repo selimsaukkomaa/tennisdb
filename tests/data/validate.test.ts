@@ -19,6 +19,8 @@ const pairing = (db: TennisDb, itemId: string, racquetId: string) =>
   db.pairings.find((p) => p.itemId === itemId && p.racquetId === racquetId)!;
 const gutOf = (db: TennisDb, racquetId: string) =>
   db.gutHybrids.find((p) => p.racquetId === racquetId)!;
+/** A racket's frame profile (since v1.12). */
+const profile = (db: TennisDb, id: string) => db.racquets.find((r) => r.id === id)!.profile!;
 const grip = (db: TennisDb, name: string) =>
   Object.values(db.grips)
     .flatMap((t) => Object.values(t).flat())
@@ -77,6 +79,18 @@ describe('each rule fires on broken data', () => {
     ['racket', (db) => (pairing(db, 'toroline-caviar', 'regna').note += ' Racquet-head speed matters.')],
     ['racket', (db) => (grip(db, 'Tac').notes += ' Fits any racquet.')],
     ['racket', (_db, copy) => (copy.gripAbout.kimony += ' Racquet sports.')],
+    ['neutral-text', (db) => (profile(db, 'regna').summary += ' Ideal for your game.')],
+    ['neutral-text', (db) => (profile(db, 'percept').traits.spin!.basis = 'Avoid it for heavy topspin.')],
+    ['plain-text', (db) => (profile(db, 'percept').construction[1]!.text += ' <b>Servo</b>')],
+    ['racket', (db) => (profile(db, 'percept').sources[0]!.title = 'Percept 100D racquet review')],
+    ['profile-present', (db) => delete db.racquets[2]!.profile],
+    ['profile-sources', (db) => profile(db, 'percept').traits.feel!.sources.push('tw-2099')],
+    ['profile-sources', (db) => profile(db, 'percept').sources.push({ ...profile(db, 'percept').sources[0]!, id: 'tw-2099' })],
+    ['profile-sources', (db) => profile(db, 'percept').sources.push({ ...profile(db, 'percept').sources[0]! })],
+    ['profile-sources', (db) => (profile(db, 'percept').specs.sources = [])],
+    ['profile-evidence', (db) => (profile(db, 'regna').traits.power!.sources = ['tennisnerd-2021', 'tennisnavi-2020'])],
+    ['profile-summary', (db) => (profile(db, 'regna').summary = 'Thin-beam 100, light and head-light.')],
+    ['profile-summary', (db) => (profile(db, 'regna').summary += ' ' + profile(db, 'regna').summary)],
   ])('%s', (rule, mutate) => {
     expect(rulesAfter(mutate)).toContain(rule);
   });
@@ -145,11 +159,29 @@ describe('the schemas catch a bad shape, and nothing else runs until it is fixed
     ['a grip spec without its emphasis flag', 'grips.kimony.dry.kimony-tourna.specs.1.emphasis', (db) => delete loose(grip(db, 'Tourna').specs[1]!).emphasis],
     ['a hybrid side without its link', 'hybrids.toroline-k-pop.mains.stringId', (db) => delete loose(db.hybrids[0]!.mains).stringId],
     ['copy without the gut intro', 'copy: gutIntro', (_db, copy) => delete loose(copy).gutIntro],
+    ['a trait word from no list', 'racquets.regna.profile.traits.feel.word', (db) => (loose(profile(db, 'regna').traits.feel!).word = 'lively')],
+    ['a power word off the power scale', 'racquets.percept.profile.traits.power.word', (db) => (loose(profile(db, 'percept').traits.power!).word = 'very high')],
+    ['a trait outside the list', 'racquets.percept.profile.traits', (db) => (loose(profile(db, 'percept').traits).sound = { word: 'crisp', basis: 'Ping.', sources: ['tw-2023'] })],
+    ['a trait that cites nothing', 'racquets.percept.profile.traits.control.sources', (db) => (profile(db, 'percept').traits.control!.sources = [])],
+    ['a source of an unknown kind', 'racquets.percept.profile.sources.tw-2023.kind', (db) => (loose(profile(db, 'percept').sources[0]!).kind = 'blog')],
+    ['a source date that is not a date', 'racquets.percept.profile.sources.tw-2023.date', (db) => (profile(db, 'percept').sources[0]!.date = 'October 2023')],
+    ['a source address that is not a web address', 'racquets.percept.profile.sources.tw-2023.url', (db) => (profile(db, 'percept').sources[0]!.url = 'tennis-warehouse.com')],
+    ['a spec written as text', 'racquets.percept.profile.specs.strungWeightG', (db) => (loose(profile(db, 'percept').specs).strungWeightG = '320 g')],
+    ['a beam with four widths', 'racquets.percept.profile.specs.beamMm', (db) => (profile(db, 'percept').specs.beamMm = [23, 23, 23, 23])],
+    ['a profile without its edition', 'racquets.regna.profile.edition', (db) => delete loose(profile(db, 'regna')).edition],
   ])('%s', (_name, where, mutate) => {
     const issues = schemaAfter(mutate);
     expect(issues.length).toBeGreaterThan(0);
     expect(issues.some((i) => i.includes(where))).toBe(true);
   });
+});
+
+test('a source address may say "racquet": readers see its title, not the address', () => {
+  const rules = rulesAfter((db) => {
+    const p = profile(db, 'regna');
+    p.sources[0]!.url = 'https://www.tennis-warehouse.com/learning_center/racquet_reviews/x.html';
+  });
+  expect(rules).toEqual([]);
 });
 
 test('a fourth racquet without notes lists exactly what it is missing', () => {
