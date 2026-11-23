@@ -8,7 +8,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Firmest in the O-Toro family — Racketpedia 1.10 kg/mm, roughly 15% above standard O-Toro. In the 64 RA frame the bed stays firm at 23 kg: low launch, short dwell, high-frequency feedback passing through the handle largely unfiltered. Hex edges give bite-driven spin that fades as the edges wear rather than as tension drops. 1.20 adds liveliness, 1.23 control. Arm load at 23 kg here is at the higher end of this database."
+    "note": "Firmest in the O-Toro family — Racketpedia 1.10 kg/mm, roughly 15% above standard O-Toro. In the 65 RA frame the bed stays firm at 23 kg: low launch, short dwell, high-frequency feedback passing through the handle largely unfiltered. Hex edges give bite-driven spin that fades as the edges wear rather than as tension drops. 1.20 adds liveliness, 1.23 control. Arm load at 23 kg here is at the higher end of this database."
   },
   {
     "itemId": "toroline-o-toro-tour",
@@ -41,7 +41,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Racketpedia 1.00 kg/mm — firm, a step below O-Toro Tour. In the 64 RA frame: low launch, short dwell, clear feedback, low power. Hex edges supply bite-driven spin that the open 16×19 lets breathe. Tension maintenance is the standout — stays playable 10+ hours. Three gauges give a fine control/liveliness lever."
+    "note": "Racketpedia 1.00 kg/mm — firm, a step below O-Toro Tour. In the 65 RA frame: low launch, short dwell, clear feedback, low power. Hex edges supply bite-driven spin that the open 16×19 lets breathe. Tension maintenance is the standout — stays playable 10+ hours. Three gauges give a fine control/liveliness lever."
   },
   {
     "itemId": "toroline-caviar",
@@ -173,7 +173,7 @@
       "minKg": 23,
       "maxKg": 24
     },
-    "note": "The soft 1.20 variant of A5. Toroline's own stiffness ranking places it well below Caviar and O-Toro Tour — one of the softer strings they make. Full bed in the 64 RA frame: deep pocketing, higher launch, more power, softened feedback. Player reports pair it as crosses under O-Toro Tour mains for added pocketing without killing the mains' snapback."
+    "note": "The soft 1.20 variant of A5. Toroline's own stiffness ranking places it well below Caviar and O-Toro Tour — one of the softer strings they make. Full bed in the 65 RA frame: deep pocketing, higher launch, more power, softened feedback. Player reports pair it as crosses under O-Toro Tour mains for added pocketing without killing the mains' snapback."
   },
   {
     "itemId": "toroline-a5-infrared",
@@ -206,7 +206,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "The flagship. Top spin numbers in lab tests; softer and more elastic than Tour (0.95 vs 1.10 kg/mm). Full bed in the 64 RA frame: more pocketing and launch than Tour, more damped feedback, spin from both hex bite and snapback in the open 16×19. Common hybrid role is mains over a slick round cross (the 101 and O-Snap recipes)."
+    "note": "The flagship. Top spin numbers in lab tests; softer and more elastic than Tour (0.95 vs 1.10 kg/mm). Full bed in the 65 RA frame: more pocketing and launch than Tour, more damped feedback, spin from both hex bite and snapback in the open 16×19. Common hybrid role is mains over a slick round cross (the 101 and O-Snap recipes)."
   },
   {
     "itemId": "toroline-o-toro",
@@ -239,7 +239,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Tour formula in an octagonal profile. Lower launch and a more penetrating flight than the hex Tour; eight shallower edges bite a little less per edge but hold up longer. Firm (~1.10) in the 64 RA frame: short dwell, clear feedback, low launch. Single gauge 1.25. The flattest-trajectory shaped Toroline in the open 16×19."
+    "note": "Tour formula in an octagonal profile. Lower launch and a more penetrating flight than the hex Tour; eight shallower edges bite a little less per edge but hold up longer. Firm (~1.10) in the 65 RA frame: short dwell, clear feedback, low launch. Single gauge 1.25. The flattest-trajectory shaped Toroline in the open 16×19."
   },
   {
     "itemId": "toroline-o-toro-octa",
@@ -338,7 +338,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Square profile — the sharpest edges in the Toroline lineup — at medium stiffness (0.95–1.00). Strong bite-driven spin in the open 16×19 with a moderately damped feel. Reviewers describe a \"plasticky\" contact in stiffer frames, and the 64 RA Regna is firm enough to show it. Mains in K-Pop, Wasabi Pro and What The Hybrid."
+    "note": "Square profile — the sharpest edges in the Toroline lineup — at medium stiffness (0.95–1.00). Strong bite-driven spin in the open 16×19 with a moderately damped feel. Reviewers describe a \"plasticky\" contact in stiffer frames, and the 65 RA Regna is firm enough to show it. Mains in K-Pop, Wasabi Pro and What The Hybrid."
   },
   {
     "itemId": "toroline-wasabi",
@@ -371,7 +371,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Hex profile at 0.95 kg/mm with more pocketing and a more damped feel than the O-Toro family. In the 64 RA frame it produces a medium-dwell, moderately muted bed with hex-driven spin the open pattern supports. Two gauges (1.23, 1.27). Used as mains in the Toro Pro hybrid and as crosses in What The Hybrid."
+    "note": "Hex profile at 0.95 kg/mm with more pocketing and a more damped feel than the O-Toro family. In the 65 RA frame it produces a medium-dwell, moderately muted bed with hex-driven spin the open pattern supports. Two gauges (1.23, 1.27). Used as mains in the Toro Pro hybrid and as crosses in What The Hybrid."
   },
   {
     "itemId": "toroline-toro-toro",
@@ -436,7 +436,7 @@
       "minKg": 24,
       "maxKg": 26
     },
-    "note": "Softest co-poly in the Toroline lineup (0.85 kg/mm) with an octagonal profile. Full bed in the 64 RA frame: soft, high-dwell, damped, launch on the high side; spin from the edges plus generous snapback in the open pattern. Mains in the Snapaholic hybrid, where a firm slick cross tightens the launch. Part of the Chef's Choice series."
+    "note": "Softest co-poly in the Toroline lineup (0.85 kg/mm) with an octagonal profile. Full bed in the 65 RA frame: soft, high-dwell, damped, launch on the high side; spin from the edges plus generous snapback in the open pattern. Mains in the Snapaholic hybrid, where a firm slick cross tightens the launch. Part of the Chef's Choice series."
   },
   {
     "itemId": "toroline-snapper",
@@ -469,7 +469,7 @@
       "minKg": 24,
       "maxKg": 26
     },
-    "note": "Budget-tier hex at 0.90 kg/mm with a simpler construction than the O-Toro family. Full bed in the 64 RA frame: softer, more damped, moderate dwell, hex-driven spin in the open pattern. Tension maintenance sits below the premium Toroline strings, so the playable window is shorter. Toroline's tagline is \"comfortably crisp\"; the stiffness number says medium-soft."
+    "note": "Budget-tier hex at 0.90 kg/mm with a simpler construction than the O-Toro family. Full bed in the 65 RA frame: softer, more damped, moderate dwell, hex-driven spin in the open pattern. Tension maintenance sits below the premium Toroline strings, so the playable window is shorter. Toroline's tagline is \"comfortably crisp\"; the stiffness number says medium-soft."
   },
   {
     "itemId": "toroline-super-toro",
@@ -502,7 +502,7 @@
       "kg": 25,
       "prestretchPct": 5
     },
-    "note": "Not polyester — a PEEK polymer. Lowest static stiffness in the Toroline range; Toroline recommends 5% pre-stretch and a 16 kg knot ceiling, which caps how firm a full bed can be made. Full bed in the Regna: very high dwell and launch, high power, low feedback — the string, not the 64 RA frame, sets the character. Designed role is crosses (the Stevie recipe under O-Toro Tour mains)."
+    "note": "Not polyester — a PEEK polymer. Lowest static stiffness in the Toroline range; Toroline recommends 5% pre-stretch and a 16 kg knot ceiling, which caps how firm a full bed can be made. Full bed in the Regna: very high dwell and launch, high power, low feedback — the string, not the 65 RA frame, sets the character. Designed role is crosses (the Stevie recipe under O-Toro Tour mains)."
   },
   {
     "itemId": "toroline-truffle-x",
@@ -534,7 +534,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Stiffer version of O-Toro Snap — more control, stability and tension hold, same ultra-slick round surface. Full bed in the 64 RA frame: firm, low-launch, smooth contact, spin entirely from snapback in the open 16×19. Crosses in the Snapaholic and O-Snap recipes, where the firmness gives a soft shaped main definition."
+    "note": "Stiffer version of O-Toro Snap — more control, stability and tension hold, same ultra-slick round surface. Full bed in the 65 RA frame: firm, low-launch, smooth contact, spin entirely from snapback in the open 16×19. Crosses in the Snapaholic and O-Snap recipes, where the firmness gives a soft shaped main definition."
   },
   {
     "itemId": "toroline-o-toro-snap-tour-flex",
@@ -567,7 +567,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "The original Solinco poly and the firmest in the lineup (1.12 kg/mm). Full bed in the 64 RA frame: firm, low-launch, lively feedback with short dwell; square edges give strong bite-driven spin in the open 16×19. Seven gauges (1.05–1.30) make it the most tunable string here — thin for bite and liveliness, thick for control and durability. Arm load is at the top of this database."
+    "note": "The original Solinco poly and the firmest in the lineup (1.12 kg/mm). Full bed in the 65 RA frame: firm, low-launch, lively feedback with short dwell; square edges give strong bite-driven spin in the open 16×19. Seven gauges (1.05–1.30) make it the most tunable string here — thin for bite and liveliness, thick for control and durability. Arm load is at the top of this database."
   },
   {
     "itemId": "solinco-tour-bite",
@@ -600,7 +600,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Sits between Tour Bite (firmer) and Hyper-G (softer) at 1.00 kg/mm; four-sided profile. Full bed in the 64 RA frame: low launch, penetrating flight, controlled feedback with a touch more dwell than Tour Bite. Tension maintenance is the standout — among the best in this database. Gauges 1.15–1.30 for tuning."
+    "note": "Sits between Tour Bite (firmer) and Hyper-G (softer) at 1.00 kg/mm; four-sided profile. Full bed in the 65 RA frame: low launch, penetrating flight, controlled feedback with a touch more dwell than Tour Bite. Tension maintenance is the standout — among the best in this database. Gauges 1.15–1.30 for tuning."
   },
   {
     "itemId": "solinco-confidential",
@@ -633,7 +633,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Softer evolution of Confidential with the same four-sided profile. Settles quickly and holds tension well. Full bed in the 64 RA frame: more pocketing, more power and softer, more damped feedback than standard Confidential; launch a little higher. Edge bite covers spin in the open pattern. 1.25 gauge firms the bed up if the extra softness is unwanted."
+    "note": "Softer evolution of Confidential with the same four-sided profile. Settles quickly and holds tension well. Full bed in the 65 RA frame: more pocketing, more power and softer, more damped feedback than standard Confidential; launch a little higher. Edge bite covers spin in the open pattern. 1.25 gauge firms the bed up if the extra softness is unwanted."
   },
   {
     "itemId": "solinco-confidential-soft",
@@ -666,7 +666,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Solinco's most popular string. Similar static stiffness to Tour Bite, but with markedly more vibration damping — feedback through the handle is quieter than the number suggests. Square profile with strong edge bite; spin is high and holds up well in the open 16×19. In a 64 RA frame the damping is the dominant character: a firm-but-quiet bed, low launch, controlled response. Seven gauges — thinner adds liveliness, thicker adds control."
+    "note": "Solinco's most popular string. Similar static stiffness to Tour Bite, but with markedly more vibration damping — feedback through the handle is quieter than the number suggests. Square profile with strong edge bite; spin is high and holds up well in the open 16×19. In a 65 RA frame the damping is the dominant character: a firm-but-quiet bed, low launch, controlled response. Seven gauges — thinner adds liveliness, thicker adds control."
   },
   {
     "itemId": "solinco-hyper-g",
@@ -699,7 +699,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Newest Solinco poly with CloudFORM treatment; more power and comfort than Tour Bite, Confidential and Hyper-G. Racketpedia ~0.85 kg/mm with strong tension maintenance. Pentagonal profile: bite plus snapback in the open 16×19. Full bed in the 64 RA frame: more launch and pocketing than the firmer three, feedback reported as clearer than the stiffness suggests. The \"slightly muted\" summary is inferred from stiffness, not from reviews."
+    "note": "Newest Solinco poly with CloudFORM treatment; more power and comfort than Tour Bite, Confidential and Hyper-G. Racketpedia ~0.85 kg/mm with strong tension maintenance. Pentagonal profile: bite plus snapback in the open 16×19. Full bed in the 65 RA frame: more launch and pocketing than the firmer three, feedback reported as clearer than the stiffness suggests. The \"slightly muted\" summary is inferred from stiffness, not from reviews."
   },
   {
     "itemId": "solinco-mach-10",
@@ -732,7 +732,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Tour Bite's formula with comfort additives — 0.85 vs 1.12 kg/mm. Same square profile, so bite-driven spin is intact in the open 16×19. Full bed in the 64 RA frame: markedly more pocketing and launch, softer, more damped feedback. Tension stability is lower than standard Tour Bite, so the playable window is shorter."
+    "note": "Tour Bite's formula with comfort additives — 0.85 vs 1.12 kg/mm. Same square profile, so bite-driven spin is intact in the open 16×19. Full bed in the 65 RA frame: markedly more pocketing and launch, softer, more damped feedback. Tension stability is lower than standard Tour Bite, so the playable window is shorter."
   },
   {
     "itemId": "solinco-tour-bite-soft",
@@ -765,7 +765,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Livelier and softer than standard Hyper-G (0.95 vs 1.10 kg/mm), with less of the damping. Full bed in the 64 RA frame: more launch and energy return, square-edge spin the open 16×19 amplifies. In open patterns the liveliness can run to trampolining — a thicker gauge (16L) tames it without raising tension."
+    "note": "Livelier and softer than standard Hyper-G (0.95 vs 1.10 kg/mm), with less of the damping. Full bed in the 65 RA frame: more launch and energy return, square-edge spin the open 16×19 amplifies. In open patterns the liveliness can run to trampolining — a thicker gauge (16L) tames it without raising tension."
   },
   {
     "itemId": "solinco-hyper-g-soft",
@@ -798,7 +798,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Six-sided profile (Tennis Warehouse: hexagonal — earlier notes here said 5-sided). Medium-firm (~1.00) with easy power for a firm string. Some reviewers describe a \"plastic-like\" contact at lower racket-head speeds; Tennis Warehouse's lab found high stiffness but unusually low vibration on court. Full bed in the 64 RA frame: firm, low-launch, hex bite in the open 16×19. Less refined contact than Tour Bite or Confidential."
+    "note": "Six-sided profile (Tennis Warehouse: hexagonal — earlier notes here said 5-sided). Medium-firm (~1.00) with easy power for a firm string. Some reviewers describe a \"plastic-like\" contact at lower racket-head speeds; Tennis Warehouse's lab found high stiffness but unusually low vibration on court. Full bed in the 65 RA frame: firm, low-launch, hex bite in the open 16×19. Less refined contact than Tour Bite or Confidential."
   },
   {
     "itemId": "solinco-revolution",
@@ -831,7 +831,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Tour Bite base with a diamond-textured coating for extra ball grab. Full bed in the 64 RA frame: firm, low-launch, with the most surface grip in the Solinco line — square edges plus texture. Tension stability is below standard Tour Bite, and the coating wears, so the playable window and durability are both shorter. Spin holds up well in the open 16×19."
+    "note": "Tour Bite base with a diamond-textured coating for extra ball grab. Full bed in the 65 RA frame: firm, low-launch, with the most surface grip in the Solinco line — square edges plus texture. Tension stability is below standard Tour Bite, and the coating wears, so the playable window and durability are both shorter. Spin holds up well in the open 16×19."
   },
   {
     "itemId": "solinco-tb-diamond-rough",
@@ -864,7 +864,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Round version of Hyper-G: lower launch, less bite, better penetration, with excellent tension maintenance. Spin is snapback-driven and the open 16×19 supports it. Full bed in the 64 RA frame: firm-medium, damped, controlled. Its usual role is crosses under Tour Bite or Confidential mains, where the slick surface aids snapback."
+    "note": "Round version of Hyper-G: lower launch, less bite, better penetration, with excellent tension maintenance. Spin is snapback-driven and the open 16×19 supports it. Full bed in the 65 RA frame: firm-medium, damped, controlled. Its usual role is crosses under Tour Bite or Confidential mains, where the slick surface aids snapback."
   },
   {
     "itemId": "solinco-hyper-g-round",
@@ -897,7 +897,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Twisted profile: the highest string-to-ball friction in the Solinco range, but also high string-to-string friction, which inhibits snapback. Net effect is bite-driven spin that shows most on slice and flatter strikes, less on brushed topspin where snapback does the work. The open 16×19 recovers some of that. Plays moderately firm in the 64 RA frame."
+    "note": "Twisted profile: the highest string-to-ball friction in the Solinco range, but also high string-to-string friction, which inhibits snapback. Net effect is bite-driven spin that shows most on slice and flatter strikes, less on brushed topspin where snapback does the work. The open 16×19 recovers some of that. Plays moderately firm in the 65 RA frame."
   },
   {
     "itemId": "solinco-barb-wire",
@@ -930,7 +930,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Durability-oriented round poly at ~0.90 kg/mm. Full bed in the 64 RA frame: medium-soft, damped, consistent response with snapback-driven spin the open 16×19 supports; less edge bite than any shaped Solinco. Exceptional durability and a long, predictable playable window. Also serves as a hard-wearing cross under shaped mains."
+    "note": "Durability-oriented round poly at ~0.90 kg/mm. Full bed in the 65 RA frame: medium-soft, damped, consistent response with snapback-driven spin the open 16×19 supports; less edge bite than any shaped Solinco. Exceptional durability and a long, predictable playable window. Also serves as a hard-wearing cross under shaped mains."
   },
   {
     "itemId": "solinco-outlast",
@@ -996,7 +996,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Firmest Yonex poly (1.08 kg/mm), pentagonal. Full bed in the 64 RA frame: low, direct ball flight, short dwell, clear feedback; five edges give bite-driven spin the open 16×19 supports. Used by Casper Ruud in a hybrid. Two gauges — 1.20 adds bite and liveliness, 1.25 control. Made in Japan, like the frame."
+    "note": "Firmest Yonex poly (1.08 kg/mm), pentagonal. Full bed in the 65 RA frame: low, direct ball flight, short dwell, clear feedback; five edges give bite-driven spin the open 16×19 supports. Used by Casper Ruud in a hybrid. Two gauges — 1.20 adds bite and liveliness, 1.25 control. Made in Japan, like the frame."
   },
   {
     "itemId": "yonex-poly-tour-spin",
@@ -1029,7 +1029,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Best tension maintenance in the Yonex lineup — stays playable 10+ hours. Round, 0.92 kg/mm: penetrating, low launch, with snapback-driven spin the open 16×19 supports. Full bed in the 64 RA frame: medium stiffness, clear without being sharp. Used by Shapovalov, Osaka and Shelton. Three gauges."
+    "note": "Best tension maintenance in the Yonex lineup — stays playable 10+ hours. Round, 0.92 kg/mm: penetrating, low launch, with snapback-driven spin the open 16×19 supports. Full bed in the 65 RA frame: medium stiffness, clear without being sharp. Used by Shapovalov, Osaka and Shelton. Three gauges."
   },
   {
     "itemId": "yonex-poly-tour-strike",
@@ -1095,7 +1095,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Octagonal profile with silicone-infused (SIF) construction for slickness and snapback. Firmer than Pro, more muted than Strike; 0.85–0.95 kg/mm. Full bed in the 64 RA frame: strong edge bite plus snapback in the open 16×19, high spin, controlled launch, damped feedback. Used by Ruud as hybrid mains."
+    "note": "Octagonal profile with silicone-infused (SIF) construction for slickness and snapback. Firmer than Pro, more muted than Strike; 0.85–0.95 kg/mm. Full bed in the 65 RA frame: strong edge bite plus snapback in the open 16×19, high spin, controlled launch, damped feedback. Used by Ruud as hybrid mains."
   },
   {
     "itemId": "yonex-poly-tour-rev",
@@ -1128,7 +1128,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Pentagonal at ~0.90 kg/mm, retailing under $10 — Yonex's budget shaped string. Full bed in the 64 RA frame: five-edge bite plus snapback in the open 16×19, moderate pocketing, feedback that stays clear without harshness. Three gauges. Yonex describes it as \"comfortably firm\" with sharp edges."
+    "note": "Pentagonal at ~0.90 kg/mm, retailing under $10 — Yonex's budget shaped string. Full bed in the 65 RA frame: five-edge bite plus snapback in the open 16×19, moderate pocketing, feedback that stays clear without harshness. Three gauges. Yonex describes it as \"comfortably firm\" with sharp edges."
   },
   {
     "itemId": "yonex-poly-tour-drive",
@@ -1161,7 +1161,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Yonex's most power-oriented poly, positioned between Strike (firmer, more control) and Pro (softer). Used by João Fonseca. No Racketpedia stiffness yet — the Med-Firm placement is inferred from Yonex's positioning and early reports of a firm, controlled feel. In the 64 RA frame: more energy return and depth than Strike, a little more launch, less lockdown. Tension hold reported as good."
+    "note": "Yonex's most power-oriented poly, positioned between Strike (firmer, more control) and Pro (softer). Used by João Fonseca. No Racketpedia stiffness yet — the Med-Firm placement is inferred from Yonex's positioning and early reports of a firm, controlled feel. In the 65 RA frame: more energy return and depth than Strike, a little more launch, less lockdown. Tension hold reported as good."
   },
   {
     "itemId": "yonex-poly-tour-force",
@@ -1194,7 +1194,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Silicone-oil infusion for snapback and power; 0.80 kg/mm, round. Livelier than Rev and firmer in contact than the number suggests. Full bed in the 64 RA frame: high power, higher launch, snapback-driven spin the open 16×19 amplifies — the most energetic Yonex poly in a frame that already has a lively response."
+    "note": "Silicone-oil infusion for snapback and power; 0.80 kg/mm, round. Livelier than Rev and firmer in contact than the number suggests. Full bed in the 65 RA frame: high power, higher launch, snapback-driven spin the open 16×19 amplifies — the most energetic Yonex poly in a frame that already has a lively response."
   },
   {
     "itemId": "yonex-poly-tour-fire",
@@ -1227,7 +1227,7 @@
       "minKg": 24,
       "maxKg": 26
     },
-    "note": "Softest Yonex poly (0.72 kg/mm). Full bed in the 64 RA frame: plush, high-dwell, high arc over the net, low feedback; spin is snapback-driven in the open 16×19 and the softness adds power. Yonex positions it alongside the VCORE line. Single gauge 1.25. The soft end of this brand's range."
+    "note": "Softest Yonex poly (0.72 kg/mm). Full bed in the 65 RA frame: plush, high-dwell, high arc over the net, low feedback; spin is snapback-driven in the open 16×19 and the softness adds power. Yonex positions it alongside the VCORE line. Single gauge 1.25. The soft end of this brand's range."
   },
   {
     "itemId": "yonex-poly-tour-air",
@@ -1260,7 +1260,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Durability poly built for hard hitters who overhit: low power, round, budget-priced. Low static stiffness (0.77) with low energy return, so the bed feels muted rather than soft — it absorbs pace. Full bed in the 64 RA frame: flat launch, quiet feedback, snapback-driven spin in the open 16×19. Long-lasting practice string."
+    "note": "Durability poly built for hard hitters who overhit: low power, round, budget-priced. Low static stiffness (0.77) with low energy return, so the bed feels muted rather than soft — it absorbs pace. Full bed in the 65 RA frame: flat launch, quiet feedback, snapback-driven spin in the open 16×19. Long-lasting practice string."
   },
   {
     "itemId": "yonex-poly-tour-tough",
@@ -1326,7 +1326,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Firmer than Sync (1.05 kg/mm), hexagonal, made from recycled polyester. Racketpedia scores its tension maintenance a perfect 100/100. Full bed in the 64 RA frame: firm, clear feedback, low launch, hex bite without excessive snapback in the open 16×19. Two gauges — 1.28 firms the bed further."
+    "note": "Firmer than Sync (1.05 kg/mm), hexagonal, made from recycled polyester. Racketpedia scores its tension maintenance a perfect 100/100. Full bed in the 65 RA frame: firm, clear feedback, low launch, hex bite without excessive snapback in the open 16×19. Two gauges — 1.28 firms the bed further."
   },
   {
     "itemId": "restring-vivo",
@@ -1392,7 +1392,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "ReString's flagship spin string. Outspins Hyper-G and RPM Blast in the brand's testing, with 2–5× the playable life. Hexagonal with an ultra-slick coating — edge bite plus extreme snapback in the open 16×19. Firm (1.05–1.10 kg/mm) but muted: the coating and construction damp feedback. Full bed in the 64 RA frame: high spin, controlled launch, quiet contact."
+    "note": "ReString's flagship spin string. Outspins Hyper-G and RPM Blast in the brand's testing, with 2–5× the playable life. Hexagonal with an ultra-slick coating — edge bite plus extreme snapback in the open 16×19. Firm (1.05–1.10 kg/mm) but muted: the coating and construction damp feedback. Full bed in the 65 RA frame: high spin, controlled launch, quiet contact."
   },
   {
     "itemId": "restring-zero",
@@ -1425,7 +1425,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Valldoreix collaboration — Zero-based formula, livelier and softer (~0.95 kg/mm). Full bed in the 64 RA frame: more launch and energy than Zero, hex bite plus snapback in the open 16×19. Reviewers report a tinny, less consistent contact in lively frames, and the Regna is one. Limited availability."
+    "note": "Valldoreix collaboration — Zero-based formula, livelier and softer (~0.95 kg/mm). Full bed in the 65 RA frame: more launch and energy than Zero, hex bite plus snapback in the open 16×19. Reviewers report a tinny, less consistent contact in lively frames, and the Regna is one. Limited availability."
   },
   {
     "itemId": "restring-slap-ltd-edition",
@@ -1458,7 +1458,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "The firmest Grapplesnake (1.05 kg/mm), pentagonal, pre-stretched for minimal break-in and strong tension maintenance. Comparable to ALU Power and Tour Bite. Full bed in the 64 RA frame: firm, low-launch, heavily damped contact — vibration is absorbed rather than transmitted — with five-edge bite in the open 16×19. Made in Germany."
+    "note": "The firmest Grapplesnake (1.05 kg/mm), pentagonal, pre-stretched for minimal break-in and strong tension maintenance. Comparable to ALU Power and Tour Bite. Full bed in the 65 RA frame: firm, low-launch, heavily damped contact — vibration is absorbed rather than transmitted — with five-edge bite in the open 16×19. Made in Germany."
   },
   {
     "itemId": "grapplesnake-tour-sniper",
@@ -1491,7 +1491,7 @@
       "minKg": 21,
       "maxKg": 23
     },
-    "note": "Seven-sided profile with a micro-particle abrasive surface; ~1.00 kg/mm. Maximum tension maintenance in the Grapplesnake range. Needs 2–3 sessions of break-in before snapback kicks in — the bed plays stiff and grabby at first, then loosens into high spin and control. Full bed in the 64 RA frame: firm, low launch, edge-plus-texture bite in the open 16×19."
+    "note": "Seven-sided profile with a micro-particle abrasive surface; ~1.00 kg/mm. Maximum tension maintenance in the Grapplesnake range. Needs 2–3 sessions of break-in before snapback kicks in — the bed plays stiff and grabby at first, then loosens into high spin and control. Full bed in the 65 RA frame: firm, low launch, edge-plus-texture bite in the open 16×19."
   },
   {
     "itemId": "grapplesnake-soldier",
@@ -1524,7 +1524,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Positioned between Alpha and Tour Sniper (0.90–0.95 kg/mm), octagonal. Exceptional tension maintenance. The coating produces a distinctive, loud contact — acoustically the most present Grapplesnake. Full bed in the 64 RA frame: medium stiffness, good pocketing and dwell, eight-edge bite plus snapback in the open 16×19."
+    "note": "Positioned between Alpha and Tour Sniper (0.90–0.95 kg/mm), octagonal. Exceptional tension maintenance. The coating produces a distinctive, loud contact — acoustically the most present Grapplesnake. Full bed in the 65 RA frame: medium stiffness, good pocketing and dwell, eight-edge bite plus snapback in the open 16×19."
   },
   {
     "itemId": "grapplesnake-tour-m8",
@@ -1557,7 +1557,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Tour Sniper's softer sister — same pentagonal profile at 0.90 kg/mm. Full bed in the 64 RA frame: more pocketing, higher launch and a plusher, more damped contact than Sniper; five-edge bite plus snapback in the open 16×19. Grapplesnake positions it for stiff frames and dense patterns, and as a hybrid cross."
+    "note": "Tour Sniper's softer sister — same pentagonal profile at 0.90 kg/mm. Full bed in the 65 RA frame: more pocketing, higher launch and a plusher, more damped contact than Sniper; five-edge bite plus snapback in the open 16×19. Grapplesnake positions it for stiff frames and dense patterns, and as a hybrid cross."
   },
   {
     "itemId": "grapplesnake-alpha",
@@ -1590,7 +1590,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Three spin mechanisms at once — square shape, abrasive surface, diamond indentations — on a formula softer than Alpha (~0.85 kg/mm) despite the square profile. Massive spin in the open 16×19, but the trajectory varies with contact quality; reviewers describe it as erratic. String 1–2 kg lighter than usual. Full bed in the 64 RA frame: soft, lively, very grippy."
+    "note": "Three spin mechanisms at once — square shape, abrasive surface, diamond indentations — on a formula softer than Alpha (~0.85 kg/mm) despite the square profile. Massive spin in the open 16×19, but the trajectory varies with contact quality; reviewers describe it as erratic. String 1–2 kg lighter than usual. Full bed in the 65 RA frame: soft, lively, very grippy."
   },
   {
     "itemId": "grapplesnake-aspera-triplum",
@@ -1623,7 +1623,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Sharp square edges for spin, on a formula that's more powerful and comfortable than typical square polys (~0.90 kg/mm). Full bed in the 64 RA frame: strong bite plus snapback in the open 16×19, medium-soft stiffness, more launch than the firm Grapplesnakes. Reviewers report an erratic contact in stiff frames — the Regna is firm enough to show it."
+    "note": "Sharp square edges for spin, on a formula that's more powerful and comfortable than typical square polys (~0.90 kg/mm). Full bed in the 65 RA frame: strong bite plus snapback in the open 16×19, medium-soft stiffness, more launch than the firm Grapplesnakes. Reviewers report an erratic contact in stiff frames — the Regna is firm enough to show it."
   },
   {
     "itemId": "grapplesnake-game-changer",
@@ -1656,7 +1656,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Metal-infused round poly with an abrasive surface — a category of its own. Solid, old-school contact (~0.95 kg/mm) with more spin than a round profile normally gives, from surface friction plus snapback in the open 16×19. Durable. Full bed in the 64 RA frame: medium stiffness, low launch, consistent."
+    "note": "Metal-infused round poly with an abrasive surface — a category of its own. Solid, old-school contact (~0.95 kg/mm) with more spin than a round profile normally gives, from surface friction plus snapback in the open 16×19. Durable. Full bed in the 65 RA frame: medium stiffness, low launch, consistent."
   },
   {
     "itemId": "grapplesnake-paradox-pro",
@@ -1689,7 +1689,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Softest string in the Grapplesnake lineup by a wide margin (0.45 kg/mm), round with an abrasive surface and new non-metallic additives. Full bed in the 64 RA frame: very soft, high-dwell, high-power, high-launch; spin from texture plus generous snapback in the open 16×19. Control is low by poly standards."
+    "note": "Softest string in the Grapplesnake lineup by a wide margin (0.45 kg/mm), round with an abrasive surface and new non-metallic additives. Full bed in the 65 RA frame: very soft, high-dwell, high-power, high-launch; spin from texture plus generous snapback in the open 16×19. Control is low by poly standards."
   },
   {
     "itemId": "grapplesnake-tour-mako",
@@ -1722,7 +1722,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Limited-edition hexagonal variant of Tour Mako, firmer and more rigid than the round version. Edges are moderate — similar to Alpha and Tour Sniper, not sharp. Full bed in the 64 RA frame: medium-firm, hex bite on top of the abrasive surface, snapback in the open 16×19. The Mako formula's feel with more spin and more control than round Mako."
+    "note": "Limited-edition hexagonal variant of Tour Mako, firmer and more rigid than the round version. Edges are moderate — similar to Alpha and Tour Sniper, not sharp. Full bed in the 65 RA frame: medium-firm, hex bite on top of the abrasive surface, snapback in the open 16×19. The Mako formula's feel with more spin and more control than round Mako."
   },
   {
     "itemId": "grapplesnake-tour-mako-short-fin",
@@ -1788,7 +1788,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "The ATP control reference for two decades — aluminium-coated round co-poly at 1.05 kg/mm. Full bed in the 64 RA frame: firm, smooth, low launch, exceptionally consistent; spin is snapback-driven and the open 16×19 supports it. 1.25 is the common gauge; 1.15 and 1.20 add liveliness and feel. Made in Belgium."
+    "note": "The ATP control reference for two decades — aluminium-coated round co-poly at 1.05 kg/mm. Full bed in the 65 RA frame: firm, smooth, low launch, exceptionally consistent; spin is snapback-driven and the open 16×19 supports it. 1.25 is the common gauge; 1.15 and 1.20 add liveliness and feel. Made in Belgium."
   },
   {
     "itemId": "luxilon-alu-power",
@@ -1821,7 +1821,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "ALU Power with a textured surface: same 1.05 kg/mm and tension stability, noticeably more grip on the ball. Full bed in the 64 RA frame: firm, smooth contact with friction-driven spin on top of snapback in the open 16×19. The step up from standard ALU when the smooth version's spin runs short."
+    "note": "ALU Power with a textured surface: same 1.05 kg/mm and tension stability, noticeably more grip on the ball. Full bed in the 65 RA frame: firm, smooth contact with friction-driven spin on top of snapback in the open 16×19. The step up from standard ALU when the smooth version's spin runs short."
   },
   {
     "itemId": "luxilon-alu-power-rough",
@@ -1854,7 +1854,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Lower-stiffness sister to ALU Power (0.85 vs 1.05 kg/mm). Full bed in the 64 RA frame: notably more dwell and a little more launch than standard ALU, with softened feedback; still round, so spin is snapback-driven in the open 16×19. The band sits 1 kg above ALU Power to retain launch control."
+    "note": "Lower-stiffness sister to ALU Power (0.85 vs 1.05 kg/mm). Full bed in the 65 RA frame: notably more dwell and a little more launch than standard ALU, with softened feedback; still round, so spin is snapback-driven in the open 16×19. The band sits 1 kg above ALU Power to retain launch control."
   },
   {
     "itemId": "luxilon-alu-power-soft",
@@ -1887,7 +1887,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Pentagonal sister to ALU Power at 1.00 kg/mm — slightly less smooth in contact, much more spin. Full bed in the 64 RA frame: firm, low launch, five-edge bite plus snapback in the open 16×19. The shape engages the ball at contact where smooth ALU relies on snapback alone. Two gauges (1.23, 1.27)."
+    "note": "Pentagonal sister to ALU Power at 1.00 kg/mm — slightly less smooth in contact, much more spin. Full bed in the 65 RA frame: firm, low launch, five-edge bite plus snapback in the open 16×19. The shape engages the ball at contact where smooth ALU relies on snapback alone. Two gauges (1.23, 1.27)."
   },
   {
     "itemId": "luxilon-alu-power-spin",
@@ -1920,7 +1920,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "ALU Power in thin gauges (1.15, 1.20) tuned for feel and spin; 0.95 kg/mm. Full bed in the 64 RA frame: livelier and more pocketing than standard ALU, more snapback in the open 16×19 from the thinner string. Durability drops with gauge. Same smooth, predictable character."
+    "note": "ALU Power in thin gauges (1.15, 1.20) tuned for feel and spin; 0.95 kg/mm. Full bed in the 65 RA frame: livelier and more pocketing than standard ALU, more snapback in the open 16×19 from the thinner string. Durability drops with gauge. Same smooth, predictable character."
   },
   {
     "itemId": "luxilon-alu-power-feel",
@@ -1953,7 +1953,7 @@
       "minKg": 22,
       "maxKg": 23
     },
-    "note": "Firmer than ALU Power (1.18 kg/mm) with the best tension maintenance in the Luxilon mainline — stays playable 12+ hours. Full bed in the 64 RA frame: very firm, low power, lockdown control, minimal dwell; round, so spin is snapback-driven in the open 16×19. The narrow 22–23 band reflects how firm the bed already is. (Earlier notes gave 1.10 kg/mm.)"
+    "note": "Firmer than ALU Power (1.18 kg/mm) with the best tension maintenance in the Luxilon mainline — stays playable 12+ hours. Full bed in the 65 RA frame: very firm, low power, lockdown control, minimal dwell; round, so spin is snapback-driven in the open 16×19. The narrow 22–23 band reflects how firm the bed already is. (Earlier notes gave 1.10 kg/mm.)"
   },
   {
     "itemId": "luxilon-4g",
@@ -1986,7 +1986,7 @@
       "minKg": 22,
       "maxKg": 23
     },
-    "note": "4G with surface texture: the same 1.10 kg/mm and exceptional tension maintenance, with much more grip on the ball. Full bed in the 64 RA frame: very firm, low power, lockdown control, with friction-driven spin on top of snapback in the open 16×19. 22–23 kg."
+    "note": "4G with surface texture: the same 1.10 kg/mm and exceptional tension maintenance, with much more grip on the ball. Full bed in the 65 RA frame: very firm, low power, lockdown control, with friction-driven spin on top of snapback in the open 16×19. 22–23 kg."
   },
   {
     "itemId": "luxilon-4g-rough",
@@ -2019,7 +2019,7 @@
       "minKg": 23,
       "maxKg": 24
     },
-    "note": "4G's tension stability at reduced stiffness (0.95 kg/mm) — sits between ALU Power Soft and standard 4G. Full bed in the 64 RA frame: medium stiffness, more dwell than 4G, slightly muted contact, snapback-driven spin in the open 16×19. Long playable life. 23–24 kg."
+    "note": "4G's tension stability at reduced stiffness (0.95 kg/mm) — sits between ALU Power Soft and standard 4G. Full bed in the 65 RA frame: medium stiffness, more dwell than 4G, slightly muted contact, snapback-driven spin in the open 16×19. Long playable life. 23–24 kg."
   },
   {
     "itemId": "luxilon-4g-soft",
@@ -2052,7 +2052,7 @@
       "minKg": 24,
       "maxKg": 25
     },
-    "note": "Racketpedia 0.85 kg/mm, the softest Luxilon mainline poly. In the 64 RA frame it produces notably more dwell and a higher launch than ALU Power, with feedback rounded off at the top end. Round profile, so spin is snapback-driven — which the open 16×19 supports. The high band claws back launch control that the softness gives up; going to 1.30 does the same with less tension load."
+    "note": "Racketpedia 0.85 kg/mm, the softest Luxilon mainline poly. In the 65 RA frame it produces notably more dwell and a higher launch than ALU Power, with feedback rounded off at the top end. Round profile, so spin is snapback-driven — which the open 16×19 supports. The high band claws back launch control that the softness gives up; going to 1.30 does the same with less tension load."
   },
   {
     "itemId": "luxilon-element",
@@ -2085,7 +2085,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Pentagonal at 1.00 kg/mm with sharper edges than ALU Power Spin — more aggressive grip, a little less smoothness in contact. Full bed in the 64 RA frame: firm, low launch, strong edge bite plus snapback in the open 16×19. Two gauges."
+    "note": "Pentagonal at 1.00 kg/mm with sharper edges than ALU Power Spin — more aggressive grip, a little less smoothness in contact. Full bed in the 65 RA frame: firm, low launch, strong edge bite plus snapback in the open 16×19. Two gauges."
   },
   {
     "itemId": "luxilon-adrenaline",
@@ -2118,7 +2118,7 @@
       "minKg": 24,
       "maxKg": 26
     },
-    "note": "Multifilament-like response in a co-poly construction (0.85 kg/mm); Luxilon aims it at players moving from gut or synthetic gut. Full bed in the 64 RA frame: cushioned, lively, more launch and dwell than ALU Power, snapback-driven spin in the open 16×19. Band runs high (24–26) to retain control."
+    "note": "Multifilament-like response in a co-poly construction (0.85 kg/mm); Luxilon aims it at players moving from gut or synthetic gut. Full bed in the 65 RA frame: cushioned, lively, more launch and dwell than ALU Power, snapback-driven spin in the open 16×19. Band runs high (24–26) to retain control."
   },
   {
     "itemId": "luxilon-m2-pro",
@@ -2151,7 +2151,7 @@
       "minKg": 23,
       "maxKg": 24
     },
-    "note": "Bio-sourced polyester (~60% renewable feedstock). Luxilon positions it near ALU Power Soft in playability; the 1.00 kg/mm figure here sits closer to standard ALU Power — flagged, not resolved. Full bed in the 64 RA frame: medium-firm, smooth, low launch, snapback-driven spin in the open 16×19. Round, two gauges."
+    "note": "Bio-sourced polyester (~60% renewable feedstock). Luxilon positions it near ALU Power Soft in playability; the 1.00 kg/mm figure here sits closer to standard ALU Power — flagged, not resolved. Full bed in the 65 RA frame: medium-firm, smooth, low launch, snapback-driven spin in the open 16×19. Round, two gauges."
   },
   {
     "itemId": "luxilon-eco-power",
@@ -2184,7 +2184,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Seven-sided co-poly at 1.00 kg/mm with sharper edges than typical pentagonals — a favourite among NCAA and lower-tour players. Full bed in the 64 RA frame: firm, low launch, aggressive edge bite plus snapback in the open 16×19; spin profile slightly beyond ALU Power Spin. Three gauges."
+    "note": "Seven-sided co-poly at 1.00 kg/mm with sharper edges than typical pentagonals — a favourite among NCAA and lower-tour players. Full bed in the 65 RA frame: firm, low launch, aggressive edge bite plus snapback in the open 16×19; spin profile slightly beyond ALU Power Spin. Three gauges."
   },
   {
     "itemId": "tourna-big-hitter-black-7",
@@ -2217,7 +2217,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "Textured round co-poly aimed at competitive juniors and college players; 1.05 kg/mm, priced below ALU Power Rough. Full bed in the 64 RA frame: firm, slightly firmer than ALU Rough overall, texture-driven spin plus snapback in the open 16×19. Less refined contact than the premium shaped strings here."
+    "note": "Textured round co-poly aimed at competitive juniors and college players; 1.05 kg/mm, priced below ALU Power Rough. Full bed in the 65 RA frame: firm, slightly firmer than ALU Rough overall, texture-driven spin plus snapback in the open 16×19. Less refined contact than the premium shaped strings here."
   },
   {
     "itemId": "tourna-big-hitter-blue-rough",
@@ -2250,7 +2250,7 @@
       "minKg": 23,
       "maxKg": 25
     },
-    "note": "Softer-formula sister to Big Hitter Black 7 (0.92 kg/mm), textured round. Full bed in the 64 RA frame: medium stiffness, more dwell and comfort than Blue Rough, texture-driven spin plus snapback in the open 16×19. Trades some of the brand's firmness for arm-friendliness."
+    "note": "Softer-formula sister to Big Hitter Black 7 (0.92 kg/mm), textured round. Full bed in the 65 RA frame: medium stiffness, more dwell and comfort than Blue Rough, texture-driven spin plus snapback in the open 16×19. Trades some of the brand's firmness for arm-friendliness."
   },
   {
     "itemId": "tourna-big-hitter-silver-rough",
@@ -2283,7 +2283,7 @@
       "minKg": 22,
       "maxKg": 24
     },
-    "note": "No-frills round co-poly at 0.98 kg/mm, 1.30 gauge only — tournament durability at an entry-level price. Full bed in the 64 RA frame: firm, flat, durable, snapback-driven spin in the open 16×19. A generic round poly: nothing distinctive in either direction."
+    "note": "No-frills round co-poly at 0.98 kg/mm, 1.30 gauge only — tournament durability at an entry-level price. Full bed in the 65 RA frame: firm, flat, durable, snapback-driven spin in the open 16×19. A generic round poly: nothing distinctive in either direction."
   },
   {
     "itemId": "tourna-pro-16",
@@ -2316,7 +2316,7 @@
       "minKg": 24,
       "maxKg": 26
     },
-    "note": "Multifilament with an armoured coating for durability; 0.65 kg/mm. Aimed at players wanting gut-like comfort without gut's cost. Full bed in the 64 RA frame: plush, high-power, high-launch, low control by poly standards. The Natural Gut section covers the real-gut hybrids this string approximates."
+    "note": "Multifilament with an armoured coating for durability; 0.65 kg/mm. Aimed at players wanting gut-like comfort without gut's cost. Full bed in the 65 RA frame: plush, high-power, high-launch, low control by poly standards. The Natural Gut section covers the real-gut hybrids this string approximates."
   },
   {
     "itemId": "tourna-quasi-gut-armor",
@@ -2349,7 +2349,7 @@
       "minKg": 24,
       "maxKg": 26
     },
-    "note": "Nylon synthetic gut, 0.55 kg/mm — the softest string in this database. Full bed in the 64 RA frame: very soft, powerful, high launch, low control, fast tension loss. Outside the poly-and-multi range everything else here sits in. As a budget cross under a poly main it adds comfort and pace."
+    "note": "Nylon synthetic gut, 0.55 kg/mm — the softest string in this database. Full bed in the 65 RA frame: very soft, powerful, high launch, low control, fast tension loss. Outside the poly-and-multi range everything else here sits in. As a budget cross under a poly main it adds comfort and pace."
   },
   {
     "itemId": "tourna-pro-tour",
@@ -2382,7 +2382,7 @@
       "mainsKg": 23,
       "crossesKg": 24
     },
-    "note": "The flagship Toroline hybrid — Karue Sell's setup. Wasabi square mains bite the ball; Caviar hex crosses hold tension and keep launch low. In the open 16×19: high spin from edge bite plus snapback, low power, tight directional response. Med-firm bed in the 64 RA frame, feedback clear."
+    "note": "The flagship Toroline hybrid — Karue Sell's setup. Wasabi square mains bite the ball; Caviar hex crosses hold tension and keep launch low. In the open 16×19: high spin from edge bite plus snapback, low power, tight directional response. Med-firm bed in the 65 RA frame, feedback clear."
   },
   {
     "itemId": "toroline-k-pop",
@@ -2448,7 +2448,7 @@
       "mainsKg": 23,
       "crossesKg": 24
     },
-    "note": "Dustin Brown's setup. Firm O-Toro Tour hex mains (1.10) bite the ball; slick, medium-stiffness O-Toro Snap crosses (~0.95) give snapback and add feel. In the 64 RA frame: firm-launching mains, softer contact than a full Tour bed, high spin from edge bite plus snapback in the open 16×19. 23/24 kg."
+    "note": "Dustin Brown's setup. Firm O-Toro Tour hex mains (1.10) bite the ball; slick, medium-stiffness O-Toro Snap crosses (~0.95) give snapback and add feel. In the 65 RA frame: firm-launching mains, softer contact than a full Tour bed, high spin from edge bite plus snapback in the open 16×19. 23/24 kg."
   },
   {
     "itemId": "toroline-dreddy",
@@ -2514,7 +2514,7 @@
       "mainsKg": 22,
       "crossesKg": 23
     },
-    "note": "Ben Johnson (TheTennis101) blend: medium-soft O-Toro hex mains for bite-plus-snapback spin, slick Snap round crosses for cross movement. Two ~0.95 strings — a medium-soft, pocketing bed in the 64 RA frame, higher launch and softer contact than K-Pop or Dreddy. 22/23 kg."
+    "note": "Ben Johnson (TheTennis101) blend: medium-soft O-Toro hex mains for bite-plus-snapback spin, slick Snap round crosses for cross movement. Two ~0.95 strings — a medium-soft, pocketing bed in the 65 RA frame, higher launch and softer contact than K-Pop or Dreddy. 22/23 kg."
   },
   {
     "itemId": "toroline-101",
@@ -2547,7 +2547,7 @@
       "mainsKg": 22,
       "crossesKg": 23
     },
-    "note": "Tuned by TennCom. Medium-soft O-Toro hex mains over the firmer Snap Tour Flex crosses: the stiffness contrast speeds snapback and gives the bed more definition than the 101. In the 64 RA frame: medium bed, high spin from bite plus snapback, lower launch and firmer contact than the 101. 22/23 kg."
+    "note": "Tuned by TennCom. Medium-soft O-Toro hex mains over the firmer Snap Tour Flex crosses: the stiffness contrast speeds snapback and gives the bed more definition than the 101. In the 65 RA frame: medium bed, high spin from bite plus snapback, lower launch and firmer contact than the 101. 22/23 kg."
   },
   {
     "itemId": "toroline-o-snap",
@@ -2613,7 +2613,7 @@
       "mainsKg": 22,
       "crossesKg": 23
     },
-    "note": "Wasabi square mains for edge bite; Toro Toro's softer hex crosses (0.95) for pocketing and feel. Hex-on-square crosses don't slide as freely as Wasabi X, so snapback is lower than Wasabi Pro and the contact is softer and more damped. A medium bed in the 64 RA frame between K-Pop's control and Wasabi Pro's aggression. 22/23 kg."
+    "note": "Wasabi square mains for edge bite; Toro Toro's softer hex crosses (0.95) for pocketing and feel. Hex-on-square crosses don't slide as freely as Wasabi X, so snapback is lower than Wasabi Pro and the contact is softer and more damped. A medium bed in the 65 RA frame between K-Pop's control and Wasabi Pro's aggression. 22/23 kg."
   },
   {
     "itemId": "toroline-what-the-hybrid",
@@ -2679,7 +2679,7 @@
       "mainsKg": 22,
       "crossesKg": 23
     },
-    "note": "Two flagship hex shapes: O-Toro Tour mains (1.10) for durability, control and tension hold; O-Toro crosses (0.95) for spin and a softer contact. Hex-on-hex crosses slide less freely than round crosses, so spin is edge-led. In the 64 RA frame: clean, low launch, penetrating flight, firmer than the 101, more spin than a full Tour bed. 22/23 kg."
+    "note": "Two flagship hex shapes: O-Toro Tour mains (1.10) for durability, control and tension hold; O-Toro crosses (0.95) for spin and a softer contact. Hex-on-hex crosses slide less freely than round crosses, so spin is edge-led. In the 65 RA frame: clean, low launch, penetrating flight, firmer than the 101, more spin than a full Tour bed. 22/23 kg."
   },
   {
     "itemId": "toroline-cole",

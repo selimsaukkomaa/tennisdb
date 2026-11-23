@@ -141,7 +141,7 @@
       " "
       <div class="sel-spec">
         <span class="sel-spec-text" data-sel-spec="">
-          "Yonex · 64 RA · 16×19 · 100 sq in"
+          "Yonex · 65 RA · 16×19 · 100 sq in"
       " "
       <div class="sel-row">
         <span class="sel-label">

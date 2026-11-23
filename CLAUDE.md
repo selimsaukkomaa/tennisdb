@@ -91,7 +91,7 @@ scripts/           validate-data, export-schemas, make-icons, vendor-fonts; one-
                    migrate-racquets, migrate-stiffness, migrate-ratings, migrate-specs,
                    derive-stiffness-bands, stiffness-words, derive-stiffness-widths,
                    derive-tag-colours, recheck-stiffness, derive-rating-words,
-                   racket-spelling) are not meant to run again
+                   racket-spelling, regna-ra) are not meant to run again
 tests/             data/, unit/, smoke/ (Vitest); visual/ (Playwright, with baselines/)
 ios/               Capacitor project (SPM)
 legacy/            v0.990 HTML, build_990.py, smoke_v990.js, v0.989/v0.990 changelogs (reference)

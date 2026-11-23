@@ -103,7 +103,7 @@ describe('ten racquets from data alone', () => {
       'Yonex',
       '  EZONE 100 · 65 RA · 16×19 · 100 sq in',
       '  Percept 100D · 66 RA · 18×19 · 100 sq in',
-      '✓ Regna 100 · 64 RA · 16×19 · 100 sq in',
+      '✓ Regna 100 · 65 RA · 16×19 · 100 sq in',
     ]);
     expect($('#selector [data-rpick-current]').textContent).toBe('Regna 100');
   });

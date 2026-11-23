@@ -46,7 +46,7 @@ describe('search index', () => {
     const regna = index.find((i) => i.type === 'racquet' && i.id === 'regna')!;
     expect(regna).toMatchObject({
       label: 'Regna 100',
-      sublabel: 'Yonex · 64 RA · 16×19 · 100 sq in',
+      sublabel: 'Yonex · 65 RA · 16×19 · 100 sq in',
       racquet: 'regna',
       icon: RACQUET_ICON,
     });

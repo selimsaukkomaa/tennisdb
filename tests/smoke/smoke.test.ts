@@ -159,7 +159,7 @@ describe('rendering', () => {
   test('the selector card names the racquet and its strings', () => {
     expect($('#selector .sel-racquet')?.textContent).toBe('Regna 100');
     expect($('#selector [data-sel-strings]')?.textContent).toBe('Toroline');
-    expect($('#selector .sel-spec-text')?.textContent).toBe('Yonex · 64 RA · 16×19 · 100 sq in');
+    expect($('#selector .sel-spec-text')?.textContent).toBe('Yonex · 65 RA · 16×19 · 100 sq in');
   });
   test('"Natural gut" is the last strings choice', () => {
     const last = $('#strings-switcher button:last-child');

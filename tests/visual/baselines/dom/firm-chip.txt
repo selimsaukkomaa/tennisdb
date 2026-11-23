@@ -149,7 +149,7 @@
       " "
       <div class="sel-spec">
         <span class="sel-spec-text" data-sel-spec="">
-          "Yonex · 64 RA · 16×19 · 100 sq in"
+          "Yonex · 65 RA · 16×19 · 100 sq in"
         <span class="badge-show filter-all-badge" id="filter-badge">
           "— showing all"
       " "
@@ -296,7 +296,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Firmest in the O-Toro family — Racketpedia 1.10 kg/mm, roughly 15% above standard O-Toro. In the 64 RA frame the bed stays firm at 23 kg: low launch, short dwell, high-frequency feedback passing through the handle largely unfiltered. Hex edges give bite-driven spin that fades as the edges wear rather than as tension drops. 1.20 adds liveliness, 1.23 control. Arm load at 23 kg here is at the higher end of this database."
+                    "Firmest in the O-Toro family — Racketpedia 1.10 kg/mm, roughly 15% above standard O-Toro. In the 65 RA frame the bed stays firm at 23 kg: low launch, short dwell, high-frequency feedback passing through the handle largely unfiltered. Hex edges give bite-driven spin that fades as the edges wear rather than as tension drops. 1.20 adds liveliness, 1.23 control. Arm load at 23 kg here is at the higher end of this database."
                 <tr data-feel="crisp,firm" data-id="toroline-caviar" data-shape="hexagonal" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-caviar" type="checkbox">
@@ -347,7 +347,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Racketpedia 1.00 kg/mm — firm, a step below O-Toro Tour. In the 64 RA frame: low launch, short dwell, clear feedback, low power. Hex edges supply bite-driven spin that the open 16×19 lets breathe. Tension maintenance is the standout — stays playable 10+ hours. Three gauges give a fine control/liveliness lever."
+                    "Racketpedia 1.00 kg/mm — firm, a step below O-Toro Tour. In the 65 RA frame: low launch, short dwell, clear feedback, low power. Hex edges supply bite-driven spin that the open 16×19 lets breathe. Tension maintenance is the standout — stays playable 10+ hours. Three gauges give a fine control/liveliness lever."
                 <tr data-feel="crisp,firm" data-id="toroline-cash" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-cash" type="checkbox">
@@ -443,7 +443,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Tour formula in an octagonal profile. Lower launch and a more penetrating flight than the hex Tour; eight shallower edges bite a little less per edge but hold up longer. Firm (~1.10) in the 64 RA frame: short dwell, clear feedback, low launch. Single gauge 1.25. The flattest-trajectory shaped Toroline in the open 16×19."
+                    "Tour formula in an octagonal profile. Lower launch and a more penetrating flight than the hex Tour; eight shallower edges bite a little less per edge but hold up longer. Firm (~1.10) in the 65 RA frame: short dwell, clear feedback, low launch. Single gauge 1.25. The flattest-trajectory shaped Toroline in the open 16×19."
                 <tr data-feel="firm" data-id="toroline-o-toro-snap-tour-flex" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-toro-snap-tour-flex" type="checkbox">
@@ -491,7 +491,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Stiffer version of O-Toro Snap — more control, stability and tension hold, same ultra-slick round surface. Full bed in the 64 RA frame: firm, low-launch, smooth contact, spin entirely from snapback in the open 16×19. Crosses in the Snapaholic and O-Snap recipes, where the firmness gives a soft shaped main definition."
+                    "Stiffer version of O-Toro Snap — more control, stability and tension hold, same ultra-slick round surface. Full bed in the 65 RA frame: firm, low-launch, smooth contact, spin entirely from snapback in the open 16×19. Crosses in the Snapaholic and O-Snap recipes, where the firmness gives a soft shaped main definition."
               " "
           <div class="card" style="margin-top: 1rem;">
             " "
@@ -574,7 +574,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "23/24"
                   <td class="notes">
-                    "The flagship Toroline hybrid — Karue Sell's setup. Wasabi square mains bite the ball; Caviar hex crosses hold tension and keep launch low. In the open 16×19: high spin from edge bite plus snapback, low power, tight directional response. Med-firm bed in the 64 RA frame, feedback clear."
+                    "The flagship Toroline hybrid — Karue Sell's setup. Wasabi square mains bite the ball; Caviar hex crosses hold tension and keep launch low. In the open 16×19: high spin from edge bite plus snapback, low power, tight directional response. Med-firm bed in the 65 RA frame, feedback clear."
                 <tr data-feel="crisp,firm,lively" data-id="toroline-dreddy" data-shape="hexagonal,round" data-type="hybrid">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-dreddy" type="checkbox">
@@ -614,7 +614,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "23/24"
                   <td class="notes">
-                    "Dustin Brown's setup. Firm O-Toro Tour hex mains (1.10) bite the ball; slick, medium-stiffness O-Toro Snap crosses (~0.95) give snapback and add feel. In the 64 RA frame: firm-launching mains, softer contact than a full Tour bed, high spin from edge bite plus snapback in the open 16×19. 23/24 kg."
+                    "Dustin Brown's setup. Firm O-Toro Tour hex mains (1.10) bite the ball; slick, medium-stiffness O-Toro Snap crosses (~0.95) give snapback and add feel. In the 65 RA frame: firm-launching mains, softer contact than a full Tour bed, high spin from edge bite plus snapback in the open 16×19. 23/24 kg."
                 <tr data-feel="firm,plush" data-id="toroline-stevie" data-shape="hexagonal,round" data-type="hybrid">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-stevie" type="checkbox">
@@ -774,7 +774,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22/23"
                   <td class="notes">
-                    "Two flagship hex shapes: O-Toro Tour mains (1.10) for durability, control and tension hold; O-Toro crosses (0.95) for spin and a softer contact. Hex-on-hex crosses slide less freely than round crosses, so spin is edge-led. In the 64 RA frame: clean, low launch, penetrating flight, firmer than the 101, more spin than a full Tour bed. 22/23 kg."
+                    "Two flagship hex shapes: O-Toro Tour mains (1.10) for durability, control and tension hold; O-Toro crosses (0.95) for spin and a softer contact. Hex-on-hex crosses slide less freely than round crosses, so spin is edge-led. In the 65 RA frame: clean, low launch, penetrating flight, firmer than the 101, more spin than a full Tour bed. 22/23 kg."
               " "
           <div class="footer">
             " "
@@ -881,7 +881,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "The original Solinco poly and the firmest in the lineup (1.12 kg/mm). Full bed in the 64 RA frame: firm, low-launch, lively feedback with short dwell; square edges give strong bite-driven spin in the open 16×19. Seven gauges (1.05–1.30) make it the most tunable string here — thin for bite and liveliness, thick for control and durability. Arm load is at the top of this database."
+                    "The original Solinco poly and the firmest in the lineup (1.12 kg/mm). Full bed in the 65 RA frame: firm, low-launch, lively feedback with short dwell; square edges give strong bite-driven spin in the open 16×19. Seven gauges (1.05–1.30) make it the most tunable string here — thin for bite and liveliness, thick for control and durability. Arm load is at the top of this database."
                 <tr data-feel="crisp,firm" data-id="solinco-confidential" data-shape="square" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-confidential" type="checkbox">
@@ -930,7 +930,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Sits between Tour Bite (firmer) and Hyper-G (softer) at 1.00 kg/mm; four-sided profile. Full bed in the 64 RA frame: low launch, penetrating flight, controlled feedback with a touch more dwell than Tour Bite. Tension maintenance is the standout — among the best in this database. Gauges 1.15–1.30 for tuning."
+                    "Sits between Tour Bite (firmer) and Hyper-G (softer) at 1.00 kg/mm; four-sided profile. Full bed in the 65 RA frame: low launch, penetrating flight, controlled feedback with a touch more dwell than Tour Bite. Tension maintenance is the standout — among the best in this database. Gauges 1.15–1.30 for tuning."
                 <tr data-feel="firm" data-id="solinco-hyper-g" data-shape="square" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-hyper-g" type="checkbox">
@@ -981,7 +981,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Solinco's most popular string. Similar static stiffness to Tour Bite, but with markedly more vibration damping — feedback through the handle is quieter than the number suggests. Square profile with strong edge bite; spin is high and holds up well in the open 16×19. In a 64 RA frame the damping is the dominant character: a firm-but-quiet bed, low launch, controlled response. Seven gauges — thinner adds liveliness, thicker adds control."
+                    "Solinco's most popular string. Similar static stiffness to Tour Bite, but with markedly more vibration damping — feedback through the handle is quieter than the number suggests. Square profile with strong edge bite; spin is high and holds up well in the open 16×19. In a 65 RA frame the damping is the dominant character: a firm-but-quiet bed, low launch, controlled response. Seven gauges — thinner adds liveliness, thicker adds control."
                 <tr data-feel="crisp,firm" data-id="solinco-revolution" data-shape="hexagonal" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="solinco-revolution" type="checkbox">
@@ -1032,7 +1032,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "23–25"
                   <td class="notes">
-                    "Six-sided profile (Tennis Warehouse: hexagonal — earlier notes here said 5-sided). Medium-firm (~1.00) with easy power for a firm string. Some reviewers describe a \"plastic-like\" contact at lower racket-head speeds; Tennis Warehouse's lab found high stiffness but unusually low vibration on court. Full bed in the 64 RA frame: firm, low-launch, hex bite in the open 16×19. Less refined contact than Tour Bite or Confidential."
+                    "Six-sided profile (Tennis Warehouse: hexagonal — earlier notes here said 5-sided). Medium-firm (~1.00) with easy power for a firm string. Some reviewers describe a \"plastic-like\" contact at lower racket-head speeds; Tennis Warehouse's lab found high stiffness but unusually low vibration on court. Full bed in the 65 RA frame: firm, low-launch, hex bite in the open 16×19. Less refined contact than Tour Bite or Confidential."
               " "
           <div class="footer">
             " "
@@ -1140,7 +1140,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Firmest Yonex poly (1.08 kg/mm), pentagonal. Full bed in the 64 RA frame: low, direct ball flight, short dwell, clear feedback; five edges give bite-driven spin the open 16×19 supports. Used by Casper Ruud in a hybrid. Two gauges — 1.20 adds bite and liveliness, 1.25 control. Made in Japan, like the frame."
+                    "Firmest Yonex poly (1.08 kg/mm), pentagonal. Full bed in the 65 RA frame: low, direct ball flight, short dwell, clear feedback; five edges give bite-driven spin the open 16×19 supports. Used by Casper Ruud in a hybrid. Two gauges — 1.20 adds bite and liveliness, 1.25 control. Made in Japan, like the frame."
                 <tr data-feel="firm" data-id="yonex-poly-tour-pro" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="yonex-poly-tour-pro" type="checkbox">
@@ -1244,7 +1244,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Yonex's most power-oriented poly, positioned between Strike (firmer, more control) and Pro (softer). Used by João Fonseca. No Racketpedia stiffness yet — the Med-Firm placement is inferred from Yonex's positioning and early reports of a firm, controlled feel. In the 64 RA frame: more energy return and depth than Strike, a little more launch, less lockdown. Tension hold reported as good."
+                    "Yonex's most power-oriented poly, positioned between Strike (firmer, more control) and Pro (softer). Used by João Fonseca. No Racketpedia stiffness yet — the Med-Firm placement is inferred from Yonex's positioning and early reports of a firm, controlled feel. In the 65 RA frame: more energy return and depth than Strike, a little more launch, less lockdown. Tension hold reported as good."
               " "
           <div class="footer">
             " "
@@ -1351,7 +1351,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Firmer than Sync (1.05 kg/mm), hexagonal, made from recycled polyester. Racketpedia scores its tension maintenance a perfect 100/100. Full bed in the 64 RA frame: firm, clear feedback, low launch, hex bite without excessive snapback in the open 16×19. Two gauges — 1.28 firms the bed further."
+                    "Firmer than Sync (1.05 kg/mm), hexagonal, made from recycled polyester. Racketpedia scores its tension maintenance a perfect 100/100. Full bed in the 65 RA frame: firm, clear feedback, low launch, hex bite without excessive snapback in the open 16×19. Two gauges — 1.28 firms the bed further."
                 <tr data-feel="firm" data-id="restring-zero" data-shape="hexagonal" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="restring-zero" type="checkbox">
@@ -1402,7 +1402,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "ReString's flagship spin string. Outspins Hyper-G and RPM Blast in the brand's testing, with 2–5× the playable life. Hexagonal with an ultra-slick coating — edge bite plus extreme snapback in the open 16×19. Firm (1.05–1.10 kg/mm) but muted: the coating and construction damp feedback. Full bed in the 64 RA frame: high spin, controlled launch, quiet contact."
+                    "ReString's flagship spin string. Outspins Hyper-G and RPM Blast in the brand's testing, with 2–5× the playable life. Hexagonal with an ultra-slick coating — edge bite plus extreme snapback in the open 16×19. Firm (1.05–1.10 kg/mm) but muted: the coating and construction damp feedback. Full bed in the 65 RA frame: high spin, controlled launch, quiet contact."
               " "
           <div class="footer">
             " "
@@ -1509,7 +1509,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "The firmest Grapplesnake (1.05 kg/mm), pentagonal, pre-stretched for minimal break-in and strong tension maintenance. Comparable to ALU Power and Tour Bite. Full bed in the 64 RA frame: firm, low-launch, heavily damped contact — vibration is absorbed rather than transmitted — with five-edge bite in the open 16×19. Made in Germany."
+                    "The firmest Grapplesnake (1.05 kg/mm), pentagonal, pre-stretched for minimal break-in and strong tension maintenance. Comparable to ALU Power and Tour Bite. Full bed in the 65 RA frame: firm, low-launch, heavily damped contact — vibration is absorbed rather than transmitted — with five-edge bite in the open 16×19. Made in Germany."
                 <tr data-feel="crisp,firm" data-id="grapplesnake-soldier" data-shape="heptagonal" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="grapplesnake-soldier" type="checkbox">
@@ -1556,7 +1556,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "21–23"
                   <td class="notes">
-                    "Seven-sided profile with a micro-particle abrasive surface; ~1.00 kg/mm. Maximum tension maintenance in the Grapplesnake range. Needs 2–3 sessions of break-in before snapback kicks in — the bed plays stiff and grabby at first, then loosens into high spin and control. Full bed in the 64 RA frame: firm, low launch, edge-plus-texture bite in the open 16×19."
+                    "Seven-sided profile with a micro-particle abrasive surface; ~1.00 kg/mm. Maximum tension maintenance in the Grapplesnake range. Needs 2–3 sessions of break-in before snapback kicks in — the bed plays stiff and grabby at first, then loosens into high spin and control. Full bed in the 65 RA frame: firm, low launch, edge-plus-texture bite in the open 16×19."
                 <tr data-feel="crisp,firm" data-id="grapplesnake-tour-mako-short-fin" data-shape="hexagonal" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="grapplesnake-tour-mako-short-fin" type="checkbox">
@@ -1603,7 +1603,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Limited-edition hexagonal variant of Tour Mako, firmer and more rigid than the round version. Edges are moderate — similar to Alpha and Tour Sniper, not sharp. Full bed in the 64 RA frame: medium-firm, hex bite on top of the abrasive surface, snapback in the open 16×19. The Mako formula's feel with more spin and more control than round Mako."
+                    "Limited-edition hexagonal variant of Tour Mako, firmer and more rigid than the round version. Edges are moderate — similar to Alpha and Tour Sniper, not sharp. Full bed in the 65 RA frame: medium-firm, hex bite on top of the abrasive surface, snapback in the open 16×19. The Mako formula's feel with more spin and more control than round Mako."
               " "
           <div class="footer">
             " "
@@ -1714,7 +1714,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "The ATP control reference for two decades — aluminium-coated round co-poly at 1.05 kg/mm. Full bed in the 64 RA frame: firm, smooth, low launch, exceptionally consistent; spin is snapback-driven and the open 16×19 supports it. 1.25 is the common gauge; 1.15 and 1.20 add liveliness and feel. Made in Belgium."
+                    "The ATP control reference for two decades — aluminium-coated round co-poly at 1.05 kg/mm. Full bed in the 65 RA frame: firm, smooth, low launch, exceptionally consistent; spin is snapback-driven and the open 16×19 supports it. 1.25 is the common gauge; 1.15 and 1.20 add liveliness and feel. Made in Belgium."
                 <tr data-feel="crisp,firm" data-id="luxilon-alu-power-rough" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="luxilon-alu-power-rough" type="checkbox">
@@ -1763,7 +1763,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "ALU Power with a textured surface: same 1.05 kg/mm and tension stability, noticeably more grip on the ball. Full bed in the 64 RA frame: firm, smooth contact with friction-driven spin on top of snapback in the open 16×19. The step up from standard ALU when the smooth version's spin runs short."
+                    "ALU Power with a textured surface: same 1.05 kg/mm and tension stability, noticeably more grip on the ball. Full bed in the 65 RA frame: firm, smooth contact with friction-driven spin on top of snapback in the open 16×19. The step up from standard ALU when the smooth version's spin runs short."
                 <tr data-feel="crisp,firm" data-id="luxilon-alu-power-spin" data-shape="pentagonal" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="luxilon-alu-power-spin" type="checkbox">
@@ -1814,7 +1814,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Pentagonal sister to ALU Power at 1.00 kg/mm — slightly less smooth in contact, much more spin. Full bed in the 64 RA frame: firm, low launch, five-edge bite plus snapback in the open 16×19. The shape engages the ball at contact where smooth ALU relies on snapback alone. Two gauges (1.23, 1.27)."
+                    "Pentagonal sister to ALU Power at 1.00 kg/mm — slightly less smooth in contact, much more spin. Full bed in the 65 RA frame: firm, low launch, five-edge bite plus snapback in the open 16×19. The shape engages the ball at contact where smooth ALU relies on snapback alone. Two gauges (1.23, 1.27)."
                 <tr data-feel="crisp,firm" data-id="luxilon-4g" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="luxilon-4g" type="checkbox">
@@ -1865,7 +1865,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–23"
                   <td class="notes">
-                    "Firmer than ALU Power (1.18 kg/mm) with the best tension maintenance in the Luxilon mainline — stays playable 12+ hours. Full bed in the 64 RA frame: very firm, low power, lockdown control, minimal dwell; round, so spin is snapback-driven in the open 16×19. The narrow 22–23 band reflects how firm the bed already is. (Earlier notes gave 1.10 kg/mm.)"
+                    "Firmer than ALU Power (1.18 kg/mm) with the best tension maintenance in the Luxilon mainline — stays playable 12+ hours. Full bed in the 65 RA frame: very firm, low power, lockdown control, minimal dwell; round, so spin is snapback-driven in the open 16×19. The narrow 22–23 band reflects how firm the bed already is. (Earlier notes gave 1.10 kg/mm.)"
                 <tr data-feel="crisp,firm" data-id="luxilon-4g-rough" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="luxilon-4g-rough" type="checkbox">
@@ -1914,7 +1914,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–23"
                   <td class="notes">
-                    "4G with surface texture: the same 1.10 kg/mm and exceptional tension maintenance, with much more grip on the ball. Full bed in the 64 RA frame: very firm, low power, lockdown control, with friction-driven spin on top of snapback in the open 16×19. 22–23 kg."
+                    "4G with surface texture: the same 1.10 kg/mm and exceptional tension maintenance, with much more grip on the ball. Full bed in the 65 RA frame: very firm, low power, lockdown control, with friction-driven spin on top of snapback in the open 16×19. 22–23 kg."
                 <tr data-feel="crisp,firm" data-id="luxilon-adrenaline" data-shape="pentagonal" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="luxilon-adrenaline" type="checkbox">
@@ -1965,7 +1965,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Pentagonal at 1.00 kg/mm with sharper edges than ALU Power Spin — more aggressive grip, a little less smoothness in contact. Full bed in the 64 RA frame: firm, low launch, strong edge bite plus snapback in the open 16×19. Two gauges."
+                    "Pentagonal at 1.00 kg/mm with sharper edges than ALU Power Spin — more aggressive grip, a little less smoothness in contact. Full bed in the 65 RA frame: firm, low launch, strong edge bite plus snapback in the open 16×19. Two gauges."
                 <tr data-feel="crisp,firm" data-id="luxilon-eco-power" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="luxilon-eco-power" type="checkbox">
@@ -2014,7 +2014,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "23–24"
                   <td class="notes">
-                    "Bio-sourced polyester (~60% renewable feedstock). Luxilon positions it near ALU Power Soft in playability; the 1.00 kg/mm figure here sits closer to standard ALU Power — flagged, not resolved. Full bed in the 64 RA frame: medium-firm, smooth, low launch, snapback-driven spin in the open 16×19. Round, two gauges."
+                    "Bio-sourced polyester (~60% renewable feedstock). Luxilon positions it near ALU Power Soft in playability; the 1.00 kg/mm figure here sits closer to standard ALU Power — flagged, not resolved. Full bed in the 65 RA frame: medium-firm, smooth, low launch, snapback-driven spin in the open 16×19. Round, two gauges."
               " "
         <div class="filter-brand-header filter-show" id="fh-regna-tourna-section">
           "Tourna"
@@ -2118,7 +2118,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Seven-sided co-poly at 1.00 kg/mm with sharper edges than typical pentagonals — a favourite among NCAA and lower-tour players. Full bed in the 64 RA frame: firm, low launch, aggressive edge bite plus snapback in the open 16×19; spin profile slightly beyond ALU Power Spin. Three gauges."
+                    "Seven-sided co-poly at 1.00 kg/mm with sharper edges than typical pentagonals — a favourite among NCAA and lower-tour players. Full bed in the 65 RA frame: firm, low launch, aggressive edge bite plus snapback in the open 16×19; spin profile slightly beyond ALU Power Spin. Three gauges."
                 <tr data-feel="firm" data-id="tourna-big-hitter-blue-rough" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="tourna-big-hitter-blue-rough" type="checkbox">
@@ -2167,7 +2167,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Textured round co-poly aimed at competitive juniors and college players; 1.05 kg/mm, priced below ALU Power Rough. Full bed in the 64 RA frame: firm, slightly firmer than ALU Rough overall, texture-driven spin plus snapback in the open 16×19. Less refined contact than the premium shaped strings here."
+                    "Textured round co-poly aimed at competitive juniors and college players; 1.05 kg/mm, priced below ALU Power Rough. Full bed in the 65 RA frame: firm, slightly firmer than ALU Rough overall, texture-driven spin plus snapback in the open 16×19. Less refined contact than the premium shaped strings here."
                 <tr data-feel="firm" data-id="tourna-pro-16" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="tourna-pro-16" type="checkbox">
@@ -2214,7 +2214,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "No-frills round co-poly at 0.98 kg/mm, 1.30 gauge only — tournament durability at an entry-level price. Full bed in the 64 RA frame: firm, flat, durable, snapback-driven spin in the open 16×19. A generic round poly: nothing distinctive in either direction."
+                    "No-frills round co-poly at 0.98 kg/mm, 1.30 gauge only — tournament durability at an entry-level price. Full bed in the 65 RA frame: firm, flat, durable, snapback-driven spin in the open 16×19. A generic round poly: nothing distinctive in either direction."
               " "
     <div class="legend">
       " "

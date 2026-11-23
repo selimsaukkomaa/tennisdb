@@ -13,6 +13,8 @@
 // (V0990_STIFFNESS_SCALE, patch H), which also changes one sentence in the brand footers.
 // v1.8's "racket" for "racquet" (scripts/racket-spelling.ts) changes one note, four grip texts
 // and the Yonex About box; each is applied here, or undone on the copy, phrase by phrase.
+// v1.11 corrects the Regna 100's RA from 64 to 65 (scripts/regna-ra.ts): the figure, and "64 RA"
+// in the 67 Regna notes that cite it, applied after the other text edits.
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
@@ -26,6 +28,7 @@ import { GRIP_TAG_COLOURS, STRING_TAG_COLOURS } from '../../src/core/tags';
 import { specHtml } from '../../src/ui/tables';
 import { GRIP_TAG_CHANGES } from '../../scripts/derive-tag-colours';
 import { RACKET_ABOUT_EDITS, RACKET_GRIP_EDITS } from '../../scripts/racket-spelling';
+import { REGNA_RA } from '../../scripts/regna-ra';
 import { STIFFNESS_WORD_EDITS } from '../../scripts/stiffness-words';
 import { NEW_BAR_SENTENCE, OLD_BAR_SENTENCE } from '../../scripts/derive-stiffness-widths';
 import {
@@ -157,8 +160,15 @@ const expected = (): unknown => {
   applyStiffnessScale(db, 4);
   // v1.6: every rating's word from its score (patch K).
   expect(applyRatingWords(db)).toBe(137);
-  // 39 fields until v1.7; v1.8's "racket" adds Revolution's Regna note.
-  expect(applyTextEdits(db, V0990_ALL_TEXT_EDITS)).toHaveLength(40);
+  // 39 fields until v1.7; v1.8's "racket" adds Revolution's Regna note; v1.11's Regna RA adds
+  // the 58 of its 67 notes that no earlier edit touched (98).
+  expect(applyTextEdits(db, V0990_ALL_TEXT_EDITS)).toHaveLength(98);
+  // v1.11: the Regna 100 at 65 RA (scripts/regna-ra.ts).
+  const regna = (db as unknown as { racquets: { id: string; ra: number }[] }).racquets.find(
+    (r) => r.id === REGNA_RA.racquet,
+  )!;
+  expect(regna.ra).toBe(REGNA_RA.from);
+  regna.ra = REGNA_RA.to;
   // v1.4: the five grip tags that took their label's majority colour (patch I).
   type V0990Grip = { id: string; feelTags: { label: string; variant: string }[] };
   const grips = Object.values(

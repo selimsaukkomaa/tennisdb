@@ -8,7 +8,7 @@ export const gripBrandLabel = (brand: BrandId): string =>
 /** A racquet's full name, e.g. "Yonex Regna 100". */
 export const racquetLabel = (r: Racquet): string => `${r.brand} ${r.model}`;
 
-/** Context-line spec, e.g. "64 RA · 16×19 · 100 sq in". */
+/** Context-line spec, e.g. "65 RA · 16×19 · 100 sq in". */
 export const racquetSpec = (r: Racquet): string =>
   `${r.ra} RA · ${r.pattern.mains}×${r.pattern.crosses} · ${r.headSizeSqIn} sq in`;
 

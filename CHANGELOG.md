@@ -6,6 +6,115 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.11 — The Regna 100 at 65 RA
+
+**Date:** 2026-11-23
+**Base:** v1.10 (a racket menu)
+**Status:** data release: the specs check for the common rackets (the first step of that to-do),
+and the one correction it found, the Regna 100's stiffness. The owner's calls on 2026-11-19:
+Tennis Warehouse's strung figure is the RA of every frame; the new rackets carry their generation
+in the name; the Regna 100 takes 65 in place of 64, and its notes change the figure and nothing
+else. `TENNIS_DB.version` stays `0.990`.
+
+---
+
+## The specs check
+
+For each proposed frame: the current generation, head size, string pattern and RA, from Tennis
+Warehouse's spec tables ("Average Strung Specs"), checked against the maker's own pages. Nothing
+is in `data/` yet: each racket comes with its pairings (Still open).
+
+| Menu name | Generation | Head | Pattern | RA | The maker's RA |
+|---|---|---:|---|---:|---|
+| Babolat Pure Drive 2025 | Gen 11 | 100 | 16×19 | 69 | 72 ± 3, unstrung |
+| Babolat Pure Aero 2026 | Gen 9 | 100 | 16×19 | 66 | 69 ± 3, unstrung |
+| Head Speed MP 2026 | 2026 | 100 | 16×19 | 60 | not published |
+| Wilson Blade 98 v10 | v10, 16×19 (April 2026) | 98 | 16×19 | 61 | not published |
+| Yonex EZONE 100 2025 | 8th generation | 100 | 16×19 | 68 | not published |
+| Wilson Clash 100 v3 | v3 (2025) | 100 | 16×19 | 54 | 51 on one listing |
+| Wilson Pro Staff 97 v15 | v15, the "Classic" finish on v14's specs | 97 | 16×19 | 66 | not published |
+
+- **RA:** Tennis Warehouse's figure for every frame: one method across the brands, measured
+  strung, as the frame plays; it matches the Percept 100D's 66. Only Babolat publishes RA, unstrung
+  and about three points higher. Retailers and reviews scatter around the lab figure (Pure Drive
+  65–72, Pure Aero 66–70, Blade 61–63, EZONE 67–69, Clash 54–56, Pro Staff 64–66).
+- **Head size and pattern:** the makers agree on all seven. All are 16×19, so the Percept 100D
+  (18×19) and the Pro Tour 630 (18×20) stay the only dense patterns.
+- **Names carry the generation**, each brand's own way (years for Babolat, Head and Yonex,
+  v-numbers for Wilson), since RA moves between generations: the Blade 98 16×19 measured 62 as v9
+  and 61 as v10.
+
+## The Regna 100 at 65 RA
+
+- **The correction:** Tennis Warehouse measures the Regna 100 at 65; the data had 64 since v0.990,
+  with no source recorded. `racquets.json` now says 65, so the card, the racket menu and search
+  read "65 RA · 16×19 · 100 sq in".
+- **67 notes** cited the figure ("In the 64 RA frame…", "Full bed in the 64 RA frame…"). Each now
+  reads 65 and nothing else in it changed: the owner's call, no parenthetical in the notes, this
+  entry lists the correction. The other 15 Regna notes don't cite it. A sample of five was shown
+  first: O-Toro Tour, Tour Bite Soft, SLAP (Ltd. Edition), 4G Soft and Cole.
+- **By `scripts/regna-ra.ts`** (one-off): it asserts the racket stands at 64 and that the notes
+  citing "64 RA" are exactly the 67 listed, each once and all in the Regna, and afterwards that
+  no "64 RA" is left in `data/` or `content/`. With `--sample` it prints five and writes nothing.
+- **Against v0.990:** a declared change, like v1.8's spelling. The round trip sets 65 on v0.990's
+  Regna and applies the 67 edits after the other text edits: 98 fields (was 40), since 9 of the
+  67 notes had an earlier edit.
+
+## Baselines updated
+
+Approved with screenshots on 2026-11-20 (the card, the menu, the O-Toro Tour note), then
+`--update-snapshots=all`:
+
+- **DOM scenarios:** 13 of 25, those showing the Regna card or its notes. Every changed line
+  (206) is "64 RA" becoming "65 RA".
+- **Pixel views:** 11 files: the default view, the card, the racket menu, filters open and
+  Natural gut (Regna), each at both sizes, and compare open (desktop). Each change is under the
+  0.1% tolerance (25 to 478 pixels), so a plain `--update-snapshots` would have left them out.
+  Six views came out different only below the per-pixel threshold and were restored.
+
+---
+
+## Data corrections
+
+- **Regna 100, RA 64 → 65**, and the figure in 67 Regna notes (above).
+
+## Flags left open
+
+Since v1.5, plus:
+
+- **Pro Tour 630 at 58 RA:** the original PT630, with Twaron. No published figure was found to
+  check it against (the 2020 Pro Tour 2.0, a different layup, is listed at 65). Kept.
+
+## Verification
+
+`npm run check` passes: 357 Vitest tests, as in v1.10 (the round trip now applies 98 text edits
+and the RA), and the browser suite, 62 passed and 26 skipped on the Mac. On CI the pixel views are
+skipped as well.
+
+- **Against v0.990:** the data equals v0.990's value for value, with the declared changes.
+- **iOS:** not rebuilt; nothing native changed, and the app takes the data at its next
+  `npm run build:ios`.
+
+## File size
+
+| | v1.10 | v1.11 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 341,878 | 341,878 | 0 |
+| gzip | 76,955 | 76,953 | −2 bytes |
+
+Each change swaps one digit for another, the version number included.
+
+## Still open
+
+Unchanged from v1.10, except:
+
+- **Common rackets:** the specs check is done (above). Next, the tension rule (how a frame's
+  tension band follows from its specs), to the owner first; then the first racket with a sample
+  of five notes, and one or two rackets per release.
+- **New flag:** the Pro Tour 630's RA (above).
+
+---
+
 # v1.10 — A racket menu
 
 **Date:** 2026-11-19

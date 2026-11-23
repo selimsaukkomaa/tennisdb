@@ -95,7 +95,7 @@
       " "
       <div class="sel-spec">
         <span class="sel-spec-text" data-sel-spec="">
-          "Yonex · 64 RA · 16×19 · 100 sq in"
+          "Yonex · 65 RA · 16×19 · 100 sq in"
         <span class="badge-show filter-all-badge" id="filter-badge">
           "— showing all"
       " "
@@ -241,7 +241,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "22–24"
                   <td class="notes">
-                    "Racketpedia 1.00 kg/mm — firm, a step below O-Toro Tour. In the 64 RA frame: low launch, short dwell, clear feedback, low power. Hex edges supply bite-driven spin that the open 16×19 lets breathe. Tension maintenance is the standout — stays playable 10+ hours. Three gauges give a fine control/liveliness lever."
+                    "Racketpedia 1.00 kg/mm — firm, a step below O-Toro Tour. In the 65 RA frame: low launch, short dwell, clear feedback, low power. Hex edges supply bite-driven spin that the open 16×19 lets breathe. Tension maintenance is the standout — stays playable 10+ hours. Three gauges give a fine control/liveliness lever."
                 <tr data-feel="crisp,firm" data-id="toroline-cash" data-shape="round" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-cash" type="checkbox">
@@ -384,7 +384,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "23–24"
                   <td class="notes">
-                    "The soft 1.20 variant of A5. Toroline's own stiffness ranking places it well below Caviar and O-Toro Tour — one of the softer strings they make. Full bed in the 64 RA frame: deep pocketing, higher launch, more power, softened feedback. Player reports pair it as crosses under O-Toro Tour mains for added pocketing without killing the mains' snapback."
+                    "The soft 1.20 variant of A5. Toroline's own stiffness ranking places it well below Caviar and O-Toro Tour — one of the softer strings they make. Full bed in the 65 RA frame: deep pocketing, higher launch, more power, softened feedback. Player reports pair it as crosses under O-Toro Tour mains for added pocketing without killing the mains' snapback."
                 <tr data-feel="soft" data-id="toroline-o-toro-spin" data-shape="pentagonal" data-type="string">
                   <td class="string-name">
                     <input aria-label="Add to compare" class="compare-check" data-compare-id="toroline-o-toro-spin" type="checkbox">
@@ -569,7 +569,7 @@
                   <td style="white-space: nowrap; font-family: \"Space Mono\", monospace; font-size: 0.78rem; color: rgb(85, 85, 85);">
                     "23/24"
                   <td class="notes">
-                    "The flagship Toroline hybrid — Karue Sell's setup. Wasabi square mains bite the ball; Caviar hex crosses hold tension and keep launch low. In the open 16×19: high spin from edge bite plus snapback, low power, tight directional response. Med-firm bed in the 64 RA frame, feedback clear."
+                    "The flagship Toroline hybrid — Karue Sell's setup. Wasabi square mains bite the ball; Caviar hex crosses hold tension and keep launch low. In the open 16×19: high spin from edge bite plus snapback, low power, tight directional response. Med-firm bed in the 65 RA frame, feedback clear."
               " "
           <div class="footer">
             " "

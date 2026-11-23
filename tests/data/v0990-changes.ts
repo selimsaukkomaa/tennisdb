@@ -4,6 +4,7 @@
 // (retired with the redesign); they run as JavaScript source, so they stay strings.
 import { RACKET_NOTE_EDITS } from "../../scripts/racket-spelling";
 import { RECHECK_TEXT_EDITS } from "../../scripts/recheck-stiffness";
+import { REGNA_RA_EDITS } from "../../scripts/regna-ra";
 import { STIFFNESS_WORD_EDITS } from "../../scripts/stiffness-words";
 
 /**
@@ -98,11 +99,15 @@ export const V0990_RECHECK_LABELS: readonly [string, string, string][] = [
   ['solinco-hyper-g-round', 'Medium · ~0.95', 'Medium · 0.95'],
 ];
 
-/** All text edits applied to legacy since v1.2: the stiffness words, the re-check's, then v1.8's "racket". */
+/**
+ * All text edits applied to legacy since v1.2: the stiffness words, the re-check's, v1.8's
+ * "racket", then v1.11's Regna RA (last: some of the earlier edits' texts still read "64 RA").
+ */
 export const V0990_ALL_TEXT_EDITS = [
   ...STIFFNESS_WORD_EDITS,
   ...RECHECK_TEXT_EDITS,
   ...RACKET_NOTE_EDITS,
+  ...REGNA_RA_EDITS,
 ];
 
 /**
