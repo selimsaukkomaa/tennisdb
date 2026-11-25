@@ -120,9 +120,11 @@ describe('B: one string filter state for every racquet', () => {
   test('clearing on another racquet leaves no stale state behind', () => {
     $('#filter-clear').click();
     showRacquet('regna');
-    for (const r of DB.racquets) {
-      const content = $(`#${r.id}-content`);
-      expect(hiddenRows(r.id)).toBe(0);
+    const built = $$('[data-racquet-page]').map((p) => p.dataset.racquetPage!);
+    expect([...built].sort()).toEqual(['headpt630', 'percept', 'regna']);
+    for (const rid of built) {
+      const content = $(`#${rid}-content`);
+      expect(hiddenRows(rid)).toBe(0);
       expect($$('.filter-force-show, .filter-all-hidden', content)).toHaveLength(0);
       expect($$('.filter-brand-header.filter-show', content)).toHaveLength(0);
     }

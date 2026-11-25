@@ -63,8 +63,8 @@ describe('data', () => {
     );
     expect(n).toBe(35);
   });
-  test('21 gut pairings', () => {
-    expect(DB.gutHybrids).toHaveLength(21);
+  test('28 gut pairings', () => {
+    expect(DB.gutHybrids).toHaveLength(28);
   });
   test('7 string brands', () => expect(Object.keys(DB.brandsStrings)).toHaveLength(7));
   test('PT630 98 sq in', () =>

@@ -33,6 +33,17 @@
     "note": "Firm string in the most flexible frame here. The 58 RA layup spreads the impact impulse and the Twaron damps post-impact vibration, so the same 1.10 kg/mm string plays softer and quieter than in either Yonex while keeping short dwell and low launch. Hex bite is the main spin source in the 18×20. Run 2–3 kg below the Regna — dense pattern and smaller hoop both raise effective bed stiffness."
   },
   {
+    "itemId": "toroline-o-toro-tour",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Firm hexagonal co-poly, 1.10 kg/mm. The stiff 69 RA hoop keeps the bed firm; the flax throat mutes the buzz, not the shock. Short dwell, crisp feedback, a low launch that pulls the frame's high ball flight down; hex bite plus snapback in the open 16×19. 23–25 kg; 1.20 livelier, 1.23 tighter. Full bed or mains."
+  },
+  {
     "itemId": "toroline-caviar",
     "itemKind": "string",
     "racquetId": "regna",
@@ -64,6 +75,17 @@
       "maxKg": 22
     },
     "note": "1.00 kg/mm in the 58 RA frame lands mid-range: the flex and Twaron layup soften the impact, while the string keeps the bed from going loose. Hex bite is the main spin source in the 18×20. Tension hold matters in a pattern that's tedious to restring. Run 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "toroline-caviar",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Firm hex co-poly, 1.00 kg/mm, with low power and a narrow launch window. In the stiff 69 RA frame it reins in the easy pace and high launch; the flax throat softens the buzz. Short dwell, clear feedback, hex bite plus snapback in the open 16×19, long tension hold. 23–25 kg; 1.16 livelier, 1.24 tighter. Full bed, mains or crosses."
   },
   {
     "itemId": "toroline-vamos",
@@ -99,6 +121,17 @@
     "note": "The 58 RA frame softens Vamos further, and the hex shape gives the 18×20 its spin. The extra launch is partly cancelled by the dense pattern's flattening. The open question is stiffness: if Vamos really sits near 0.90 kg/mm, the frame's own compliance plus the string's makes a soft, high-dwell bed. No lab data yet. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-vamos",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Hexagonal co-poly on the A5 polymer, medium in stiffness, built for a higher launch than its round base. In the stiff, high-launching 69 RA frame the two add up: the ball leaves high and deep, with crisp feedback the flax throat softens. Hex bite plus snapback in the open 16×19. 23–25 kg; single gauge 1.23. Full bed or mains."
+  },
+  {
     "itemId": "toroline-cash",
     "itemKind": "string",
     "racquetId": "regna",
@@ -130,6 +163,17 @@
       "maxKg": 21
     },
     "note": "Round plus 18×20 is the least spin-friendly combination in this database: no edge bite, snapback pinned. Firm and control-oriented suits the frame's low power — a flat, penetrating ball with good directional stability — and the 58 RA flex takes the edge off the firmness. Slice and net play are where a firm round string in this frame shows best. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "toroline-cash",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Firm round co-poly with a control-oriented response and strong tension hold. In the stiff, powerful 69 RA frame it keeps the ball low and the pace in check; feedback stays clear, muted a little by the flax throat. Spin comes from snapback in the open 16×19, with no edges to bite. 23–25 kg; single gauge 1.25. Full bed or crosses."
   },
   {
     "itemId": "toroline-a5",
@@ -165,6 +209,17 @@
     "note": "If the 0.90 figure holds, A5 sits on the soft side for a frame already supplying compliance through 58 RA and Twaron: higher dwell, quieter feedback, more launch than the firm options. Round plus 18×20 is the low end for spin here — snapback and edge bite are both limited. The top of the band firms the bed. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-a5",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Round co-poly whose spin comes from snapback alone and holds up as the string ages. In the stiff 69 RA frame the launch is predictable and the feedback clear, with the flax throat taking off the harsher buzz; the open 16×19 gives the snapback room. Medium dwell. 24–25 kg; single gauge 1.25. Full bed or crosses."
+  },
+  {
     "itemId": "toroline-a5-infrared",
     "itemKind": "string",
     "racquetId": "regna",
@@ -196,6 +251,17 @@
       "maxKg": 22
     },
     "note": "Toroline's soft, high-launch A5 variant in the lowest-RA frame here. The frame already supplies compliance through 58 RA and Twaron, so this stacks compliance on compliance: deep pocketing, high launch, reduced high-frequency feedback. Whether that's useful depends on wanting the PT630 to play softer than stock. As crosses under a firm shaped main, the 18×20 limits how much comes through."
+  },
+  {
+    "itemId": "toroline-a5-infrared",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "The softened 1.20 version of A5: deeper pocketing, more launch, less firmness. In the stiff, powerful 69 RA frame the extra give eases contact but adds to a launch that is already high, so the ball carries deep. Softened feedback, snapback spin in the open 16×19. 24–25 kg; single gauge 1.20. Full bed, or crosses under a firm hex main."
   },
   {
     "itemId": "toroline-o-toro",
@@ -231,6 +297,17 @@
     "note": "More pocketing than O-Toro Tour in a frame that supplies little energy of its own — the string, not the frame, provides the elasticity. 0.95 kg/mm in the 58 RA frame: medium dwell, damped feedback, hex bite doing the spin work in the 18×20. Sits between Tour and the soft Toroline options on this frame. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-o-toro",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Hexagonal co-poly at 0.95 kg/mm, more elastic and damped than the Tour version. In the stiff 69 RA frame it adds pocketing and comfort and lifts an already high launch; feedback is quiet through the flax throat. Heavy spin from hex bite plus snapback in the open 16×19. 24–25 kg; single gauge 1.23. Full bed, or mains over a slick round cross."
+  },
+  {
     "itemId": "toroline-o-toro-octa",
     "itemKind": "string",
     "racquetId": "regna",
@@ -262,6 +339,17 @@
       "maxKg": 22
     },
     "note": "Octagonal profile maximises edge contact — useful in the 18×20 where edge bite is the only spin mechanism available. The PT630's flex softens the ~1.10 stiffness and damps the harshness sharp-edged polys can produce in stiffer hoops. Low launch on top of a dense pattern gives a very flat ball. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "toroline-o-toro-octa",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Octagonal take on the firm Tour formula, about 1.10 kg/mm; eight shallower edges bite a little less but hold their shape longer. In the stiff, high-launching 69 RA frame it flattens the ball flight into a penetrating one. Short dwell, clear feedback through the flax-damped throat, bite plus snapback in the open 16×19. 23–25 kg; single gauge 1.25. Full bed or mains."
   },
   {
     "itemId": "toroline-o-toro-spin",
@@ -297,6 +385,17 @@
     "note": "Highest string-to-ball friction in the lineup, in a pattern where friction is the only spin mechanism. The 58 RA frame keeps the pentagonal edges from feeling harsh. More spin access than O-Toro Tour, a higher launch than the dense pattern usually gives, less directional precision. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-o-toro-spin",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Pentagonal co-poly, about 0.95 kg/mm, with a grippy surface and an elastic, damped feel. In the stiff, high-launching 69 RA frame its own higher launch stacks on the frame's, giving a steep, heavy topspin arc and less directional precision than the firm hex strings. Bite plus snapback in the open 16×19. 24–25 kg; single gauge 1.23. Full bed or mains."
+  },
+  {
     "itemId": "toroline-o-toro-snap",
     "itemKind": "string",
     "racquetId": "regna",
@@ -328,6 +427,17 @@
       "maxKg": 22
     },
     "note": "No edge geometry, and the 18×20 pins the snapback its slick surface is built for — a low-spin combination as a full bed. The frame's flex softens it further; the ball comes out flat and controlled. As crosses under shaped mains the slickness helps the mains move in the dense pattern. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "toroline-o-toro-snap",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Round co-poly with an ultra-slick surface, about 0.95 kg/mm. In the stiff 69 RA frame it gives a smooth, moderately damped bed and a flatter trajectory than the shaped O-Toros, which tempers the frame's high launch. Spin is snapback in the open 16×19, with little bite. 24–25 kg; single gauge 1.25. Mostly crosses under a shaped main."
   },
   {
     "itemId": "toroline-wasabi",
@@ -363,6 +473,17 @@
     "note": "Square edges deliver maximum bite, which the 18×20 needs — spin here is edge-driven or nothing. The PT630's deep flex absorbs the harshness square polys can produce, and the string's medium stiffness adds some power to a low-powered frame. Expect faster notching at the crossings than with a round string. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-wasabi",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Square co-poly at 0.95–1.00 kg/mm with sharp edges and a moderately damped feel. Its contact turns plasticky in stiff frames, and the 69 RA hoop is stiff enough to show it even with the flax throat. Strong bite plus snapback in the open 16×19 for high spin. 23–25 kg; single gauge 1.23. Full bed, or mains over a slick cross."
+  },
+  {
     "itemId": "toroline-toro-toro",
     "itemKind": "string",
     "racquetId": "regna",
@@ -396,6 +517,17 @@
     "note": "Medium-soft hex in the lowest-RA frame here: frame flex and string compliance add up to a high-dwell, damped bed. Hex edges provide the spin the 18×20 can't get from snapback. Softer feel than O-Toro; Toro Toro's pocketing shows most clearly in this frame. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-toro-toro",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Hexagonal co-poly at 0.95 kg/mm, with more pocketing and damping than the O-Toro family. In the stiff 69 RA frame it gives medium dwell and muted contact through the flax throat, while the launch rises with the frame's. Hex bite plus snapback in the open 16×19. 24–25 kg; 1.27 firms and steadies the bed. Full bed, mains or crosses."
+  },
+  {
     "itemId": "toroline-enso-pro-carbon",
     "itemKind": "string",
     "racquetId": "regna",
@@ -426,6 +558,17 @@
       "maxKg": 16
     },
     "note": "A PEEK polymer in the lowest-RA frame: as a full bed the compliance stacks — very high dwell, high launch, little high-frequency feedback — and the 16 kg knot ceiling means tension can't compensate. As crosses under O-Toro Tour or Caviar mains, the 18×20 contains the softness and the bed stays firm-launching with lower shock. Do not exceed 16 kg when tying knots."
+  },
+  {
+    "itemId": "toroline-enso-pro-carbon",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "A PEEK polymer at 0.90 kg/mm with a low-friction surface; the carbon version plays firmer than the pink. As a full bed in the stiff, powerful 69 RA frame it is soft, lively and high-launching, with little feedback. 24–25 kg, knots at 16 kg or below; gauges 1.24–1.27. Built as crosses under a firm hex main, freeing snapback in the open 16×19."
   },
   {
     "itemId": "toroline-snapper",
@@ -461,6 +604,16 @@
     "note": "Octagonal bite gives the 18×20 aggressive edge-driven spin. At 0.85 kg/mm in the 58 RA frame the compliance stacks: soft, high-dwell, damped bed with more launch than the dense pattern usually gives. An alternative to O-Toro Octa with the same edge count and a considerably softer formula. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-snapper",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Octagonal co-poly at 0.85 kg/mm, soft and damped. In the stiff, powerful 69 RA frame it cushions contact but lifts the launch further: a high, long flight, low feedback. Edge bite plus generous snapback in the open 16×19. Up to 25 kg, the frame's rated maximum; single gauge 1.23. Full bed, or mains over a firm slick cross."
+  },
+  {
     "itemId": "toroline-super-toro",
     "itemKind": "string",
     "racquetId": "regna",
@@ -494,6 +647,16 @@
     "note": "Medium-soft hex in the 58 RA frame: damped, moderate-to-high dwell bed with the hex edges doing the spin work in the 18×20. The simpler construction's weaker tension hold is more noticeable in a pattern that's slow to restring. Close to O-Toro in character with a shorter playable life. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-super-toro",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Budget hex co-poly at 0.90 kg/mm, softer and more damped than the O-Toro family. In the stiff 69 RA frame it gives moderate dwell, a muted feel and a launch on the high side. Hex bite plus snapback in the open 16×19; tension drops sooner. Up to 25 kg, the frame's rated maximum; single gauge 1.23. Full bed."
+  },
+  {
     "itemId": "toroline-truffle-x",
     "itemKind": "string",
     "racquetId": "regna",
@@ -524,6 +687,17 @@
       "maxKg": 16
     },
     "note": "Lowest-stiffness string in this database in the lowest-RA frame. As a full bed the two compound: maximum dwell, high launch, very little high-frequency feedback, and the knot ceiling means the bed can't be tightened to compensate. As crosses under a firm shaped main, the 18×20's tight spacing contains the softness — a slightly softer, more forgiving bed with the mains still defining launch and spin."
+  },
+  {
+    "itemId": "toroline-truffle-x",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "prestretch",
+      "kg": 25,
+      "prestretchPct": 5
+    },
+    "note": "A very soft PEEK polymer. As a full bed in the stiff, powerful 69 RA frame the string sets the character: very high dwell, launch and power, little feedback, and a softer impact than the hoop gives alone. 25 kg with 5% prestretch, knots at 16 kg or below; single gauge 1.30. Built as crosses under a firm hex main."
   },
   {
     "itemId": "toroline-o-toro-snap-tour-flex",
@@ -559,6 +733,17 @@
     "note": "Firmer than standard Snap; the added stiffness keeps the bed firm in a frame that softens everything. Round in the 18×20 means limited spin — no edges, pinned snapback — and a flat, controlled ball. Its natural role here is crosses under a shaped main, where slickness helps the mains slide. 2–3 kg below the Regna."
   },
   {
+    "itemId": "toroline-o-toro-snap-tour-flex",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "The stiffer version of O-Toro Snap: the same ultra-slick round surface with more control and tension hold. In the stiff 69 RA frame it plays firm and low-launching, pulling the frame's trajectory down, with smooth contact the flax throat mutes further. Spin is snapback in the open 16×19. 23–25 kg; single gauge 1.25. Mostly crosses, firming up a softer shaped main."
+  },
+  {
     "itemId": "solinco-tour-bite",
     "itemKind": "string",
     "racquetId": "regna",
@@ -590,6 +775,17 @@
       "maxKg": 21
     },
     "note": "The PT630's 58 RA flex and Twaron layup soften the firmest Solinco considerably — feedback is clear but not sharp. Square edges are the spin source in the 18×20. The 18–21 band sits low to keep the dense bed elastic. Seven gauges (15L–20) give a wide control/liveliness range. The lowest-launch, most control-oriented Solinco setup on this frame."
+  },
+  {
+    "itemId": "solinco-tour-bite",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Square co-poly at 1.12 kg/mm with lively feedback. In the stiff 69 RA hoop the bed is very firm and the arm load high; the flax throat mutes the buzz, not the shock. Short dwell, low launch, strong bite plus snapback in the open 16×19. 23–25 kg; gauges 1.05–1.30, thin for bite, thick for control. Full bed or mains."
   },
   {
     "itemId": "solinco-confidential",
@@ -625,6 +821,17 @@
     "note": "Four-sided profile for spin in the 18×20, 1.00 kg/mm that the 58 RA frame softens to a mid-firm feel, and tension maintenance that suits a pattern that's tedious to restring. Slightly more forgiving than Tour Bite in this frame with the same low launch. 2–3 kg below the Regna."
   },
   {
+    "itemId": "solinco-confidential",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Four-sided co-poly at 1.00 kg/mm, between Tour Bite and Hyper-G in stiffness. In the stiff, high-launching 69 RA frame it brings the ball down into a penetrating flight, with controlled feedback, the buzz taken off by the flax throat. Edge bite in the open 16×19; tension holds very well. 23–25 kg; gauges 1.15–1.30. Full bed or mains."
+  },
+  {
     "itemId": "solinco-confidential-soft",
     "itemKind": "string",
     "racquetId": "regna",
@@ -656,6 +863,17 @@
       "maxKg": 22
     },
     "note": "Softer Confidential in a frame that already softens: pocketing and comfort stack, feedback goes quieter, launch rises a little versus standard Confidential. The four-sided profile keeps spin access in the 18×20. Tension hold is good. Standard Confidential is the firmer, lower-launch version of the same shape here. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "solinco-confidential-soft",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Softer four-sided co-poly at 0.85 kg/mm that settles quickly and holds tension well. In the stiff, powerful 69 RA frame it adds pocketing and comfort, and some power and launch to a frame with plenty of both; feedback is soft and damped. Edge bite in the open 16×19. 23–25 kg; 1.25 or 1.30 firms the bed. Full bed or mains."
   },
   {
     "itemId": "solinco-hyper-g",
@@ -691,6 +909,17 @@
     "note": "The 58 RA frame and Twaron layup both damp vibration, and Hyper-G adds a third damping layer. One of the quietest combinations in this database: firm bed, very low high-frequency feedback, short dwell. Square edges supply the spin in the 18×20. At 19–20 kg the bed keeps enough elasticity to stay away from boardy."
   },
   {
+    "itemId": "solinco-hyper-g",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Square co-poly at 1.10 kg/mm with strong damping, so the handle stays quieter than the stiffness suggests. With the flax throat, the stiff 69 RA frame gives a firm but quiet bed: short dwell, controlled, low-launching. Edge bite plus snapback in the open 16×19 for lasting spin. 23–25 kg; gauges 1.05–1.30. Full bed or mains."
+  },
+  {
     "itemId": "solinco-mach-10",
     "itemKind": "string",
     "racquetId": "regna",
@@ -722,6 +951,17 @@
       "maxKg": 22
     },
     "note": "0.85 kg/mm pentagonal in the 58 RA frame: flex and string compliance combine into a softer, higher-dwell bed than the firm Solincos give here, with five edges covering spin in the 18×20 where snapback is pinned. Reported tension hold is strong, which matters in a slow-to-restring pattern. 1.30 gauge is the dial for the added power. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "solinco-mach-10",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Pentagonal co-poly at 0.85 kg/mm with a cushioning treatment and strong tension hold. In the stiff, powerful 69 RA frame it softens contact and adds pocketing, and the launch climbs; feedback stays clearer than the stiffness suggests. Bite plus snapback in the open 16×19. 24–25 kg; gauges 1.15–1.30, thicker for control. Full bed or mains."
   },
   {
     "itemId": "solinco-tour-bite-soft",
@@ -757,6 +997,17 @@
     "note": "Soft square in a soft frame: compliance stacks into a high-dwell, damped bed with square edges still providing spin in the 18×20. The lower tension stability costs more in a pattern that's slow to restring. Standard Tour Bite is the same shape with a much firmer bed and longer life on this frame. 2–3 kg below the Regna."
   },
   {
+    "itemId": "solinco-tour-bite-soft",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Tour Bite's square profile on a softer formula, 0.85 kg/mm. In the stiff 69 RA frame it brings markedly more pocketing and comfort than standard Tour Bite, with softer, damped feedback and a launch that rises with the frame's. Edge bite plus snapback in the open 16×19; tension falls away sooner. 24–25 kg; gauges 1.20–1.30. Full bed or mains."
+  },
+  {
     "itemId": "solinco-hyper-g-soft",
     "itemKind": "string",
     "racquetId": "regna",
@@ -788,6 +1039,17 @@
       "maxKg": 22
     },
     "note": "Added liveliness in a frame that gives little of its own: more energy return and launch than standard Hyper-G, with square edges covering spin in the 18×20. Softer bed than Hyper-G in the 58 RA frame — compliance stacks, feedback quiets. Hyper-G is the firmer, more damped version of the same profile here. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "solinco-hyper-g-soft",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Softer, livelier Hyper-G with less damping. In the stiff, powerful 69 RA frame its energy return adds to the frame's and the launch climbs; the open 16×19 can tip it into a trampoline feel. Square-edge bite plus snapback for high spin. 24–25 kg; a thicker gauge, up to 1.25, tames it without more tension. Full bed or mains."
   },
   {
     "itemId": "solinco-revolution",
@@ -823,6 +1085,17 @@
     "note": "Hex geometry for spin in the 18×20, with more power than the other firm Solincos — useful in a low-powered hoop. The plastic-like contact reported at low swing speeds is worth noting in a heavy frame that rewards a full swing; the 58 RA flex softens it. 2–3 kg below the Regna."
   },
   {
+    "itemId": "solinco-revolution",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Hexagonal co-poly, medium-firm, with easy power for a firm string and a hard, snappy contact that can feel plasticky at slower swings. In the stiff 69 RA frame it plays firm and low-launching, with less vibration than the stiffness suggests, helped by the flax throat. Hex bite in the open 16×19. 24–25 kg; gauges 1.20–1.30. Full bed or mains."
+  },
+  {
     "itemId": "solinco-tb-diamond-rough",
     "itemKind": "string",
     "racquetId": "regna",
@@ -854,6 +1127,17 @@
       "maxKg": 21
     },
     "note": "In the 18×20 every bit of friction counts and the rough coating adds it on top of square edges. Same firm base as Tour Bite, softened by the PT630's flex. The coating's durability loss and the faster tension drop cost more in a pattern that's slow to restring. 18–21 kg — 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "solinco-tb-diamond-rough",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Tour Bite's square profile with a diamond-textured coating for extra grab. In the stiff, high-launching 69 RA frame it plays firm and low-launching, with clear feedback the flax throat mutes. Edges plus texture bite hard in the open 16×19; tension and coating wear sooner than on standard Tour Bite. 23–25 kg; 1.20 or 1.25. Full bed or mains."
   },
   {
     "itemId": "solinco-hyper-g-round",
@@ -889,6 +1173,17 @@
     "note": "As crosses under Tour Bite or Confidential mains in the 18×20 it softens the bed a touch and adds feel, with the mains doing the spin work. As a full bed the round profile leaves the 18×20 without an edge-bite source, so spin is low. The frame's flex keeps it comfortable. 2–3 kg below the Regna."
   },
   {
+    "itemId": "solinco-hyper-g-round",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Round Hyper-G at 0.95 kg/mm: lower launch, less bite, more penetration and excellent tension hold. In the stiff 69 RA frame the bed is firm-medium, damped and controlled, flattening the frame's high ball flight. Spin is snapback in the open 16×19. 24–25 kg; gauges 1.15–1.30. Full bed, or crosses under square mains, where the slick surface helps snapback."
+  },
+  {
     "itemId": "solinco-barb-wire",
     "itemKind": "string",
     "racquetId": "regna",
@@ -920,6 +1215,17 @@
       "maxKg": 22
     },
     "note": "In the 18×20 every bit of surface friction counts, and the twisted profile supplies more than any shaped poly here; snapback wasn't on offer anyway. The frame's flex takes the edge off the texture's harshness. Cross wear is the cost — twisted mains chew crosses faster in a dense pattern, so watch the crossings. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "solinco-barb-wire",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Twisted co-poly at 0.90 kg/mm with a very grippy surface, though the same friction between strings holds back snapback. In the stiff 69 RA frame it plays moderately firm, with clear feedback through the flax throat; the open 16×19 frees some of the movement, so spin stays bite-led. 23–25 kg; gauges 1.20–1.30. Full bed or mains."
   },
   {
     "itemId": "solinco-outlast",
@@ -955,6 +1261,17 @@
     "note": "Round plus 18×20 means little spin access. Medium-soft in the 58 RA frame: damped, moderate-dwell bed; the frame already supplies comfort, so the softness mostly adds pocketing. Its durability is the main attribute in a pattern that's tedious to restring. 2–3 kg below the Regna."
   },
   {
+    "itemId": "solinco-outlast",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Round, durability-oriented co-poly. In the stiff 69 RA frame it gives a medium-soft, damped, consistent response, with the launch on the high side of the frame's; spin is snapback in the open 16×19, with no edges to bite. A long, predictable playable life. 24–25 kg; gauges 1.20–1.30. Full bed, or a hard-wearing cross under shaped mains."
+  },
+  {
     "itemId": "solinco-vanquish-multi",
     "itemKind": "string",
     "racquetId": "regna",
@@ -986,6 +1303,16 @@
       "maxKg": 22
     },
     "note": "Multifilament in the most flexible frame here. Frame and string both soft: very high dwell and comfort, high launch, low high-frequency feedback; control is the lowest of any combination on this frame. In a hybrid the 18×20 contains multi crosses reasonably well — a softer bed while poly mains keep launch and spin. Tension loss is faster than poly and shows more in a dense pattern."
+  },
+  {
+    "itemId": "solinco-vanquish-multi",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Premium multifilament at 0.55–0.65 kg/mm. As a full bed in the stiff, powerful 69 RA frame it softens contact a great deal but stacks power, dwell and launch on the frame's, so control drops and tension goes quickly. Up to 25 kg, the frame's rated maximum; gauges 1.20–1.30. As crosses under square poly mains it adds comfort and pace, and notches."
   },
   {
     "itemId": "yonex-poly-tour-spin",
@@ -1021,6 +1348,17 @@
     "note": "Highest stiffness in the Yonex lineup, softened by the PT630's 58 RA flex and Twaron layup into a firm-but-comfortable bed. The pentagonal geometry is the spin source in the 18×20. Low, direct ball flight on top of a dense pattern gives a very flat trajectory. Used by Ruud (hybrid). 2–3 kg below the Regna."
   },
   {
+    "itemId": "yonex-poly-tour-spin",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Pentagonal co-poly at 1.08 kg/mm, firm and direct. In the stiff 69 RA hoop the bed is firm and the arm load high, the flax throat muting only the buzz; the low ball flight pulls the frame's high launch down. Short dwell, clear feedback, edge bite plus snapback in the open 16×19. 23–25 kg; 1.20 livelier, 1.25 tighter. Full bed or mains."
+  },
+  {
     "itemId": "yonex-poly-tour-strike",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1052,6 +1390,17 @@
       "maxKg": 22
     },
     "note": "Outstanding tension maintenance in a dense 18×20 that loses tension faster and is tedious to restring. Round profile limits spin — no edges, pinned snapback — but the controlled, low-launch response matches the frame's own precision. 0.92 kg/mm in the 58 RA frame plays medium and stable. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "yonex-poly-tour-strike",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Round co-poly at 0.92 kg/mm with long tension hold. In the stiff, high-launching 69 RA frame its penetrating, low ball flight keeps the frame's height in check, and the bed plays medium, clear without sharpness through the flax throat. Spin is snapback in the open 16×19. 23–25 kg; gauges 1.20–1.30. Full bed, or mains over a softer cross."
   },
   {
     "itemId": "yonex-poly-tour-pro",
@@ -1087,6 +1436,17 @@
     "note": "Softer and more pocketing than Strike in a frame that already supplies comfort — the two add up to a damped, medium-dwell bed. Round in the 18×20 means little spin access. As crosses under Poly Tour Spin mains (the Shelton blend) the mains carry the spin and Pro adds feel. 2–3 kg below the Regna."
   },
   {
+    "itemId": "yonex-poly-tour-pro",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Round all-round co-poly with more pocketing and less bite than the rest of its line. In the stiff 69 RA frame it gives medium dwell and a moderate feel, and the launch follows the frame's up; spin is snapback in the open 16×19. Tension drops sooner than Strike's. 24–25 kg; gauges 1.20–1.30. Full bed, or crosses under Strike or Rev."
+  },
+  {
     "itemId": "yonex-poly-tour-rev",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1118,6 +1478,17 @@
       "maxKg": 22
     },
     "note": "More power than Strike with good energy return — welcome in a low-powered frame — and octagonal edges that give the 18×20 a spin source (earlier notes here called Rev round; it is octagonal). The silicone slickness helps the mains move in the dense pattern. Muted feel stacks with the frame's damping. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "yonex-poly-tour-rev",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Octagonal co-poly at 0.85–0.95 kg/mm, silicone-infused for slickness. In the stiff 69 RA frame it plays muted, the flax throat adding to its own damping, and its controlled launch keeps the frame's height in check. Edge bite plus snapback in the open 16×19 for high spin. 23–25 kg; gauges 1.20–1.30. Full bed, or mains over a round cross."
   },
   {
     "itemId": "yonex-poly-tour-drive",
@@ -1153,6 +1524,17 @@
     "note": "Shaped, medium-soft and inexpensive — pentagonal edges supply spin in the 18×20 and the 58 RA flex softens the ~0.90 stiffness into a comfortable, medium-dwell bed. (Earlier notes here described Drive as a round power poly; that was Poly Tour Force's profile.) 2–3 kg below the Regna."
   },
   {
+    "itemId": "yonex-poly-tour-drive",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Budget pentagonal co-poly, medium-soft, with sharp edges. In the stiff 69 RA frame it gives moderate pocketing and feedback that stays clear without harshness, the flax throat taking off the buzz; the launch sits on the high side with the frame's. Five-edge bite plus snapback in the open 16×19. 24–25 kg; gauges 1.20–1.30. Full bed or mains."
+  },
+  {
     "itemId": "yonex-poly-tour-force",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1184,6 +1566,17 @@
       "maxKg": 22
     },
     "note": "No lab data yet, so this is inference: a medium-firm round poly in the 58 RA frame should add energy to a low-powered hoop while the flex keeps feedback soft. Round plus 18×20 caps spin. Early reports of a firm, controlled feel would fit the frame's character; unverified until Racketpedia numbers land. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "yonex-poly-tour-force",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Round co-poly, medium-firm, built for power. In the stiff, powerful 69 RA frame its energy return adds to the frame's, giving depth and a little more launch, with clear feedback through the flax throat. Spin is snapback in the open 16×19; tension holds well. 23–25 kg; gauges 1.20–1.30, the thicker for control. Full bed or mains."
   },
   {
     "itemId": "yonex-poly-tour-fire",
@@ -1219,6 +1612,17 @@
     "note": "Adds power and launch to a frame that supplies little of either. Round in the 18×20 limits spin, though the silicone slickness restores a little snapback. 0.80 kg/mm in the 58 RA frame: soft, lively, higher-launch bed with less directional lockdown than the firm Yonex options. 2–3 kg below the Regna."
   },
   {
+    "itemId": "yonex-poly-tour-fire",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Round co-poly at 0.80 kg/mm, infused with silicone oil for snapback and power, and firmer in contact than the figure suggests. In the stiff, powerful 69 RA frame the two outputs stack: high power, a high launch, lively feedback through the flax throat. Snapback spin in the open 16×19. 24–25 kg; gauges 1.20–1.30, the thicker to hold it down. Full bed."
+  },
+  {
     "itemId": "yonex-poly-tour-air",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1250,6 +1654,16 @@
       "maxKg": 22
     },
     "note": "Softest Yonex poly in the lowest-RA frame here: compliance stacks into a very plush, high-dwell, high-arc bed with little high-frequency feedback. Round plus 18×20 leaves spin access low. The band sits high for this frame to retain some launch control. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "yonex-poly-tour-air",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Soft round poly at 0.72 kg/mm. The plush bed softens contact in the stiff 69 RA hoop, while its power and high arc stack on the frame's own: long dwell, deep, high ball flight, low feedback. Spin is snapback in the open 16×19. Up to 25 kg, the frame's rated maximum; single gauge 1.25. Full bed."
   },
   {
     "itemId": "yonex-poly-tour-tough",
@@ -1285,6 +1699,17 @@
     "note": "Muted, low-energy poly in a damped, low-powered frame: the quietest and lowest-powered Yonex setup on this frame, with the 18×20 leaving spin access low. Durability is the attribute. The 58 RA flex keeps the contact soft. 2–3 kg below the Regna."
   },
   {
+    "itemId": "yonex-poly-tour-tough",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Durability-oriented round co-poly at 0.77 kg/mm with low energy return: the bed feels muted rather than soft and absorbs pace. In the stiff, powerful 69 RA frame that tempers the frame's output; the launch stays flat and the feedback quiet. Snapback spin in the open 16×19. 23–25 kg; single gauge 1.25. Full bed."
+  },
+  {
     "itemId": "yonex-tour-super-850-multi",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1316,6 +1741,16 @@
       "maxKg": 22
     },
     "note": "Multifilament in the most flexible frame here: plush on plush — very high dwell and power, high launch, little high-frequency feedback, low control. In a hybrid the 18×20 contains multi crosses reasonably well, giving a softer bed under poly mains. Tension loss shows more in a dense pattern. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "yonex-tour-super-850-multi",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Soft premium multifilament. As a full bed in the stiff, powerful 69 RA frame it absorbs much of the impact but adds power and launch to the frame's, so control is low and tension goes quickly. Up to 25 kg, the frame's rated maximum; gauges 1.25–1.32. As crosses under Poly Tour Spin or Strike mains it adds comfort and pace, and notches."
   },
   {
     "itemId": "restring-vivo",
@@ -1351,6 +1786,17 @@
     "note": "Hex edges for spin in the 18×20, firmness the 58 RA flex softens to mid-firm, and the best tension hold in this database in a pattern that loses tension faster and is tedious to restring. Recycled polyester. Low launch on a dense bed gives a flat ball. 2–3 kg below the Regna."
   },
   {
+    "itemId": "restring-vivo",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Firm hexagonal co-poly at 1.05 kg/mm from recycled polyester, with excellent tension hold. In the stiff 69 RA hoop the bed is firm with clear feedback, the flax throat muting the buzz; the low launch pulls the frame's high ball flight down. Hex bite plus snapback in the open 16×19. 23–25 kg; 1.28 firms the bed. Full bed or mains."
+  },
+  {
     "itemId": "restring-sync",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1382,6 +1828,17 @@
       "maxKg": 22
     },
     "note": "Round in the 18×20 is the least spin-friendly combination in this database — no edge bite, and snapback is pinned by the dense crosses. What remains: smooth, quiet contact, low launch, a very stable feel with the frame's flex softening the string's stiffness. The natural role is crosses under a shaped main. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "restring-sync",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Round co-poly at 0.85–0.95 kg/mm with a smooth, ALU-like feel and a long playable life. In the stiff, high-launching 69 RA frame it keeps the ball low and the contact smooth. Moderate snapback spin in the open 16×19. 24–25 kg; 1.20 livelier, 1.25 firmer. Full bed, or crosses under a shaped main such as Vivo."
   },
   {
     "itemId": "restring-zero",
@@ -1417,6 +1874,17 @@
     "note": "Hex edges give the 18×20 its spin source (earlier notes here called Zero square; it is hexagonal), and the slick coating helps the mains move in the dense pattern. Firm at 1.05–1.10 but the 58 RA flex softens it; the string's muted character plus the frame's damping makes a quiet bed. 2–3 kg below the Regna."
   },
   {
+    "itemId": "restring-zero",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Firm hexagonal co-poly at 1.05–1.10 kg/mm with an ultra-slick coating that keeps it muted. In the stiff 69 RA frame, with the flax throat, contact stays quiet for the stiffness, and the controlled launch holds the frame's height down. Edge bite plus strong snapback in the open 16×19 for very high spin. 23–25 kg; 1.23 or 1.28. Full bed or mains."
+  },
+  {
     "itemId": "restring-slap-ltd-edition",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1448,6 +1916,17 @@
       "maxKg": 22
     },
     "note": "The added liveliness gives energy to a frame that supplies little, and the 58 RA flex tempers the erratic contact SLAP can show in stiff hoops. Hex edges do the spin work in the 18×20. Softer and less consistent than Zero in the same frame. Limited availability. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "restring-slap-ltd-edition",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "A livelier, softer version of Zero's hexagonal formula. In the stiff, powerful 69 RA frame the extra energy adds to the frame's, lifting launch and pace, and the contact can turn tinny and less consistent. Hex bite plus snapback in the open 16×19. 24–25 kg; single gauge 1.23. Full bed or mains; a limited edition."
   },
   {
     "itemId": "grapplesnake-tour-sniper",
@@ -1483,6 +1962,17 @@
     "note": "Firmest Grapplesnake, softened by the 58 RA flex into a firm-but-comfortable bed. Pentagonal edges are the spin source in the 18×20. The string's own damping plus the frame's makes one of the quieter combinations here. Comparable to ALU Power and Tour Bite in this frame. 2–3 kg below the Regna."
   },
   {
+    "itemId": "grapplesnake-tour-sniper",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Pentagonal co-poly at 1.05 kg/mm, pre-stretched for little break-in and strong tension hold. In the stiff 69 RA frame the bed is firm and low-launching, and its heavy damping plus the flax throat absorb vibration rather than pass it on. Five-edge bite plus snapback in the open 16×19. 23–25 kg; 1.25 or 1.30. Full bed or mains."
+  },
+  {
     "itemId": "grapplesnake-soldier",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1514,6 +2004,17 @@
       "maxKg": 22
     },
     "note": "Heptagonal geometry and abrasive surface are the spin source in the 18×20. Maximum tension maintenance matters in a pattern that loses tension faster and is tedious to restring. The 58 RA flex softens the firm, grabby break-in phase. Once settled: firm, controlled, high spin. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "grapplesnake-soldier",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 22,
+      "maxKg": 24
+    },
+    "note": "Seven-sided co-poly, about 1.00 kg/mm, with an abrasive surface and very strong tension hold; it plays stiff and grabby for two or three sessions before snapback settles in. In the stiff 69 RA frame the bed is firm and low-launching; edges plus texture bite in the open 16×19. 22–24 kg; single gauge 1.25. Full bed or mains."
   },
   {
     "itemId": "grapplesnake-tour-m8",
@@ -1549,6 +2050,17 @@
     "note": "Tour Sniper's precision with some of Alpha's softness — in the 58 RA frame that lands as a medium bed with good dwell, eight-edge bite supplying spin in the 18×20. Exceptional tension hold in a pattern that's slow to restring. The middle Grapplesnake option on this frame. 2–3 kg below the Regna."
   },
   {
+    "itemId": "grapplesnake-tour-m8",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Octagonal co-poly at 0.90–0.95 kg/mm with exceptional tension hold and a coating that makes a loud contact sound. In the stiff 69 RA frame it plays medium, with good pocketing and a launch on the high side; the flax throat mutes vibration, not sound. Edge bite plus snapback in the open 16×19. 23–25 kg; 1.25 or 1.30. Full bed or mains."
+  },
+  {
     "itemId": "grapplesnake-alpha",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1580,6 +2092,17 @@
       "maxKg": 22
     },
     "note": "Softer pentagonal in the 58 RA frame: compliance stacks into a plush, medium-to-high dwell bed, with five edges still giving the 18×20 a spin source. Plays markedly softer than Tour Sniper in this frame — the widest gap between the two sisters is here. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "grapplesnake-alpha",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Pentagonal co-poly at 0.90 kg/mm, softer and plusher than Tour Sniper and built with stiff frames in mind. In the 69 RA frame it cushions contact and, with the flax throat, damps it well, while pocketing and launch rise. Five-edge bite plus snapback in the open 16×19. 24–25 kg; single gauge 1.25. Full bed, or crosses under a firmer main."
   },
   {
     "itemId": "grapplesnake-aspera-triplum",
@@ -1615,6 +2138,17 @@
     "note": "Square shape, abrasive surface and indentations all count in the 18×20, where friction is the only spin mechanism (earlier notes here called Triplum triangular; the name refers to the triple approach). Soft formula in the 58 RA frame: compliance stacks into a plush, high-dwell bed. String 1–2 kg lighter than usual, 2–3 kg below the Regna."
   },
   {
+    "itemId": "grapplesnake-aspera-triplum",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Square profile, abrasive surface and diamond indentations, on a soft formula. In the stiff, powerful 69 RA frame it plays soft and lively, adds launch and grips the ball hard: very high spin from bite plus snapback in the open 16×19, with a trajectory that varies with contact quality. 24–25 kg; single gauge 1.23. Full bed or mains."
+  },
+  {
     "itemId": "grapplesnake-game-changer",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1646,6 +2180,17 @@
       "maxKg": 22
     },
     "note": "Square edges give the 18×20 maximum edge bite, and the 58 RA flex absorbs the harshness and the erratic contact reported in stiff frames. The formula's extra power helps a low-powered hoop. Medium-soft, grippy bed with more launch than the firm options. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "grapplesnake-game-changer",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Square co-poly, about 0.90 kg/mm, with more power and comfort than most square strings. In the stiff 69 RA frame the contact can turn erratic and the launch climbs with the frame's; the flax throat softens the feedback. Strong bite plus snapback in the open 16×19. 24–25 kg; single gauge 1.20. Full bed or mains."
   },
   {
     "itemId": "grapplesnake-paradox-pro",
@@ -1681,6 +2226,17 @@
     "note": "The abrasive surface adds some spin access in the 18×20, though less than a shaped string. The vintage, solid contact suits the frame's old-school character, and the 58 RA flex softens the metal-infused string. Good control and durability in a pattern that's tedious to restring. 2–3 kg below the Regna."
   },
   {
+    "itemId": "grapplesnake-paradox-pro",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Metal-infused round co-poly with an abrasive surface and a solid, traditional contact. In the stiff, high-launching 69 RA frame it plays medium, consistent and low-launching, with clear feedback through the flax throat. Surface friction plus snapback in the open 16×19 give more spin than a round string usually does. Durable. 24–25 kg; 1.26 or 1.29. Full bed."
+  },
+  {
     "itemId": "grapplesnake-tour-mako",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1712,6 +2268,17 @@
       "maxKg": 22
     },
     "note": "0.45 kg/mm in the 58 RA frame: compliance stacks into a very plush, high-dwell, high-launch bed with little high-frequency feedback. Round, so spin in the 18×20 comes from the abrasive surface alone. The soft end of what this frame can be strung with. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "grapplesnake-tour-mako",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Very soft round co-poly at 0.45 kg/mm with an abrasive surface. In the stiff, powerful 69 RA frame it takes the sting out of contact but piles power and launch onto the frame's: very high dwell, a high, deep flight, low control by poly standards. Texture plus snapback spin in the open 16×19. 23–25 kg; single gauge 1.25. Full bed."
   },
   {
     "itemId": "grapplesnake-tour-mako-short-fin",
@@ -1747,6 +2314,17 @@
     "note": "Hex geometry adds bite in the 18×20 — a meaningful spin upgrade over round Mako in a pattern with no snapback to speak of. Firmer than the round version, so the bed stays defined in the 58 RA frame instead of stacking softness on softness. Limited edition. 2–3 kg below the Regna."
   },
   {
+    "itemId": "grapplesnake-tour-mako-short-fin",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Hexagonal version of Tour Mako, firmer and more rigid than the round string, with moderate edges over an abrasive surface. In the stiff 69 RA frame it plays medium-firm with a controlled launch and clear feedback through the flax throat. Hex bite plus texture and snapback in the open 16×19. 23–25 kg; single gauge 1.25. Full bed or mains; a limited edition."
+  },
+  {
     "itemId": "grapplesnake-irukandji",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1778,6 +2356,17 @@
       "maxKg": 21
     },
     "note": "Crosses under a shaped main in the 18×20: slick face helps the mains move, anti-notching profile helps in a pattern with 360 crossings. The 0.85 stiffness listed here softens further in the 58 RA frame (earlier notes gave 0.45 kg/mm — that is Tour Mako's figure). Full bed is soft and low-spin. 19–21 kg, 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "grapplesnake-irukandji",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Rectangular-round co-poly designed as a hybrid cross: its flat face sits against the mains to limit notching, and its slick surface frees snapback. In the stiff 69 RA frame the mains define launch and feel, the flax throat muting both; the open 16×19 gives the mains room to move. 24–25 kg; single gauge 1.25. Crosses under Tour Sniper, Soldier or gut mains."
   },
   {
     "itemId": "luxilon-alu-power",
@@ -1813,6 +2402,17 @@
     "note": "Round in the 18×20 leaves little spin access — no edges, pinned snapback. Otherwise a firm, smooth, low-launch bed the 58 RA flex softens to mid-firm. Rough and Spin are the textured and shaped versions of the same string for this pattern. 2–3 kg below the Regna."
   },
   {
+    "itemId": "luxilon-alu-power",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Aluminium-coated round co-poly: firm, smooth, consistent. In the stiff, powerful 69 RA frame its low launch and modest output keep the ball down; the flax throat mutes contact without dulling feedback. Spin comes from snapback in the open 16×19, not bite. 23–25 kg; 1.25 the usual gauge, 1.15–1.20 livelier, 1.30 firmer. Full bed, or crosses under gut."
+  },
+  {
     "itemId": "luxilon-alu-power-rough",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1844,6 +2444,17 @@
       "maxKg": 21
     },
     "note": "Texture compensates for the 18×20's spin resistance while keeping ALU Power's smooth, firm feel; the 58 RA flex softens the 1.05 stiffness. Round-rough sits between smooth ALU and the pentagonal Spin in spin access on this frame. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "luxilon-alu-power-rough",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "ALU Power with a textured surface: the same firm, smooth character and tension stability, with more grip on the ball. In the stiff, powerful 69 RA frame it keeps the launch low and the response consistent, the flax throat muting contact. Friction-driven spin on top of snapback in the open 16×19. 23–25 kg; single gauge 1.25. Full bed or mains."
   },
   {
     "itemId": "luxilon-alu-power-soft",
@@ -1879,6 +2490,17 @@
     "note": "0.85 kg/mm in the 58 RA frame: frame flex and string softness stack into a higher-dwell, quieter bed than standard ALU gives here. Round in the 18×20 leaves spin access low. The band is high for this frame to preserve some launch control. 2–3 kg below the Regna."
   },
   {
+    "itemId": "luxilon-alu-power-soft",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "The lower-stiffness sister of ALU Power, with more dwell and softened feedback. In the stiff 69 RA frame it eases contact while keeping much of the ALU control, though the launch rises a little with the frame's. Spin is snapback in the open 16×19. 24–25 kg; single gauge 1.25. Full bed, or crosses under gut."
+  },
+  {
     "itemId": "luxilon-alu-power-spin",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1910,6 +2532,17 @@
       "maxKg": 21
     },
     "note": "Pentagonal geometry is a spin source the 18×20 can use, and the 1.00 stiffness softens in the 58 RA frame to a firm-but-comfortable bed. Adrenaline is the sharper-edged alternative with the same stiffness on this frame. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "luxilon-alu-power-spin",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Pentagonal sister to ALU Power: slightly less smooth in contact, with far more spin access. In the stiff, high-launching 69 RA frame it plays firm and low-launching, with clear feedback the flax throat mutes. Five-edge bite plus snapback in the open 16×19. 23–25 kg; 1.23 or 1.27. Full bed or mains."
   },
   {
     "itemId": "luxilon-alu-power-feel",
@@ -1945,6 +2578,17 @@
     "note": "Thin gauge helps a round string in the 18×20 a little, but no edges means spin access remains limited; Rough and Spin address the pattern more directly. Medium bed in the 58 RA frame with more feel than standard ALU. 2–3 kg below the Regna."
   },
   {
+    "itemId": "luxilon-alu-power-feel",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "ALU Power in thin gauges, tuned for feel and spin: livelier and more pocketing than the standard string, just as smooth and predictable. In the stiff, powerful 69 RA frame the extra life lifts launch and pace a little. More snapback in the open 16×19, and the thin string wears sooner. 24–25 kg; 1.15 or 1.20. Full bed or mains."
+  },
+  {
     "itemId": "luxilon-4g",
     "itemKind": "string",
     "racquetId": "regna",
@@ -1976,6 +2620,17 @@
       "maxKg": 20
     },
     "note": "The 58 RA flex softens 4G to a playable firm bed, but the round profile leaves the 18×20 with little spin access. Exceptional tension hold matters in a pattern that loses tension faster and is tedious to restring. 19–20 kg, 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "luxilon-4g",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 24
+    },
+    "note": "Very firm round co-poly at 1.18 kg/mm with exceptional tension hold. In the stiff 69 RA hoop it makes a low-powered bed with minimal dwell, reining in the frame's pace and launch; the flax throat mutes the buzz, not the shock. Snapback spin in the open 16×19. 23–24 kg; 1.25 or 1.30. Full bed, or mains over gut."
   },
   {
     "itemId": "luxilon-4g-rough",
@@ -2011,6 +2666,17 @@
     "note": "Texture helps the 18×20 while keeping 4G's firmness and tension hold; the 58 RA flex softens the contact. ALU Power Spin reaches similar spin with a shaped profile and slightly lower stiffness on this frame. 19–20 kg, 2–3 kg below the Regna."
   },
   {
+    "itemId": "luxilon-4g-rough",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 24
+    },
+    "note": "4G with a textured surface: the same tension hold and very firm, low-powered response, with much more grip on the ball. In the stiff 69 RA hoop the bed holds the frame's launch down, the flax throat muting the buzz. Friction-driven spin on top of snapback in the open 16×19. 23–24 kg; single gauge 1.25. Full bed or mains."
+  },
+  {
     "itemId": "luxilon-4g-soft",
     "itemKind": "string",
     "racquetId": "regna",
@@ -2042,6 +2708,17 @@
       "maxKg": 21
     },
     "note": "Softer 4G in the 58 RA frame: compliance stacks into a medium bed with quieter feedback than standard 4G gives here. Round in the 18×20 leaves spin access low. Tension hold remains the attribute in a slow-to-restring pattern. 20–21 kg, 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "luxilon-4g-soft",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "4G's tension stability at lower stiffness, between ALU Power Soft and standard 4G. In the stiff 69 RA frame it gives a medium bed with more dwell than 4G and a slightly muted contact; the launch stays moderate. Snapback spin in the open 16×19 and a long playable life. 24–25 kg; single gauge 1.25. Full bed or mains."
   },
   {
     "itemId": "luxilon-element",
@@ -2077,6 +2754,16 @@
     "note": "Soft co-poly in the 58 RA frame. Frame flex, Twaron damping and the string's 0.85 kg/mm stack: very high dwell, quiet feedback, more launch than the PT630 gives with firm strings. Round profile offers little edge bite in the 18×20, where snapback is also limited, so spin sits at the low end. The band is high for this frame to preserve some launch control."
   },
   {
+    "itemId": "luxilon-element",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Round co-poly at 0.85 kg/mm with IRIS fibre, soft for a Luxilon. In the stiff, powerful 69 RA frame it adds dwell and comfort but also launch, with feedback rounded off; spin is snapback in the open 16×19. Up to 25 kg, the frame's rated maximum; 1.30 firms the bed and lowers the launch. Full bed."
+  },
+  {
     "itemId": "luxilon-adrenaline",
     "itemKind": "string",
     "racquetId": "regna",
@@ -2108,6 +2795,17 @@
       "maxKg": 21
     },
     "note": "Pentagonal grip is a spin source the 18×20 can use, and the 1.00 stiffness softens in the 58 RA frame. Adrenaline and ALU Power Spin are the same stiffness with different edge sharpness — a direct A/B pair on this frame. 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "luxilon-adrenaline",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Pentagonal co-poly with sharper edges than ALU Power Spin: more aggressive grip, a little less smoothness. In the stiff, high-launching 69 RA frame it plays firm and low-launching, with clear feedback the flax throat mutes. Strong edge bite plus snapback in the open 16×19. 23–25 kg; 1.25 or 1.30. Full bed or mains."
   },
   {
     "itemId": "luxilon-m2-pro",
@@ -2143,6 +2841,16 @@
     "note": "A soft, multi-like co-poly in the 58 RA frame: compliance stacks into a plush, high-dwell, quiet bed with low control by poly standards. Round in the 18×20 leaves spin access low. The band sits high for this frame to retain some launch control. 21–22 kg."
   },
   {
+    "itemId": "luxilon-m2-pro",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Co-poly at 0.85 kg/mm with a multifilament-like response, aimed at players coming from gut or synthetic gut. In the stiff, powerful 69 RA frame it cushions contact but stacks launch and liveliness on the frame's, with long dwell. Snapback spin in the open 16×19. Up to 25 kg, the frame's rated maximum; 1.30 adds control. Full bed."
+  },
+  {
     "itemId": "luxilon-eco-power",
     "itemKind": "string",
     "racquetId": "regna",
@@ -2174,6 +2882,17 @@
       "maxKg": 21
     },
     "note": "Round in the 18×20 leaves spin access low; the 58 RA flex softens the medium-firm stiffness into a smooth, controlled bed. The shaped Luxilons are the versions of this brand that address the pattern. 20–21 kg, 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "luxilon-eco-power",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Bio-sourced co-poly, about 60% from renewable feedstock. In the stiff 69 RA frame it plays medium-firm and smooth, with a low launch that keeps the frame's height in check and feedback the flax throat softens. Round, so spin is snapback in the open 16×19. 24–25 kg; 1.25 or 1.30. Full bed."
   },
   {
     "itemId": "tourna-big-hitter-black-7",
@@ -2209,6 +2928,17 @@
     "note": "Heptagonal grip is a strong spin source for the 18×20, and the 1.00 stiffness softens in the 58 RA frame to firm-but-comfortable. Sits with Adrenaline and ALU Power Spin as the shaped, 1.00 kg/mm options on this frame, with the sharpest edges of the three. 2–3 kg below the Regna."
   },
   {
+    "itemId": "tourna-big-hitter-black-7",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Seven-sided co-poly with sharper edges than most shaped strings. In the stiff, high-launching 69 RA frame it plays firm, with clear feedback the flax throat mutes and a low launch that pulls the frame's high ball flight down. Aggressive edge bite plus snapback in the open 16×19. 23–25 kg; gauges 1.20–1.30. Full bed or mains."
+  },
+  {
     "itemId": "tourna-big-hitter-blue-rough",
     "itemKind": "string",
     "racquetId": "regna",
@@ -2240,6 +2970,17 @@
       "maxKg": 21
     },
     "note": "Texture compensates for the 18×20's spin resistance; the 1.05 stiffness is at the upper end for this frame even after the 58 RA flex softens it. Firm, flat, textured bed. 19–21 kg, 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "tourna-big-hitter-blue-rough",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "Textured round co-poly at 1.05 kg/mm. In the stiff 69 RA hoop the bed is firm, with a low launch and clear feedback the flax throat mutes only partly; the contact is less refined than that of the premium shaped strings. Texture-driven spin on top of snapback in the open 16×19. 23–25 kg; 1.25 or 1.30. Full bed or mains."
   },
   {
     "itemId": "tourna-big-hitter-silver-rough",
@@ -2275,6 +3016,17 @@
     "note": "0.92 kg/mm in the 58 RA frame: compliance stacks into a medium, quieter bed. Texture gives the 18×20 some friction-driven spin. Softer than Blue Rough and Black 7 in this frame; the band sits high to retain launch control. 20–22 kg, 2–3 kg below the Regna."
   },
   {
+    "itemId": "tourna-big-hitter-silver-rough",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 24,
+      "maxKg": 25
+    },
+    "note": "Textured round co-poly at 0.92 kg/mm, softer than the rest of the Big Hitter line. In the stiff 69 RA frame it gives a medium bed with more dwell and comfort than Blue Rough and a launch on the high side. Texture plus snapback spin in the open 16×19. 24–25 kg; single gauge 1.25. Full bed."
+  },
+  {
     "itemId": "tourna-pro-16",
     "itemKind": "string",
     "racquetId": "regna",
@@ -2306,6 +3058,17 @@
       "maxKg": 21
     },
     "note": "Round plus 18×20 leaves spin access low. Firm and durable, softened by the 58 RA flex. Durability is the attribute in a pattern that's tedious to restring. 19–21 kg, 2–3 kg below the Regna."
+  },
+  {
+    "itemId": "tourna-pro-16",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "range",
+      "minKg": 23,
+      "maxKg": 25
+    },
+    "note": "No-frills round co-poly at 0.98 kg/mm, durable and inexpensive. In the stiff 69 RA frame it plays firm and flat, keeping the frame's launch in check, with clear feedback through the flax throat. Spin is snapback in the open 16×19. 23–25 kg; single gauge 1.30. Full bed."
   },
   {
     "itemId": "tourna-quasi-gut-armor",
@@ -2341,6 +3104,16 @@
     "note": "Multifilament in the most flexible frame here: plush on plush, very high dwell and power, low feedback, low control, and the 18×20 leaves spin access low. The band sits high for this frame to retain some launch control. 21–22 kg."
   },
   {
+    "itemId": "tourna-quasi-gut-armor",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Multifilament at 0.65 kg/mm with an armoured coating, built for gut-like comfort. In the stiff, powerful 69 RA frame it absorbs much of the impact but adds power and launch to the frame's, so control is low. Little spin from a smooth round string, even in the open 16×19. Up to 25 kg, the frame's rated maximum; single gauge 1.30. Full bed."
+  },
+  {
     "itemId": "tourna-pro-tour",
     "itemKind": "string",
     "racquetId": "regna",
@@ -2372,6 +3145,16 @@
       "maxKg": 24
     },
     "note": "The softest string here in the lowest-RA frame: maximum compliance stacking — very high dwell, high launch, little feedback, low control. As a budget cross under a poly main the 18×20 contains the softness. 22–24 kg, the top of this frame's range."
+  },
+  {
+    "itemId": "tourna-pro-tour",
+    "itemKind": "string",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "max",
+      "maxKg": 25
+    },
+    "note": "Nylon synthetic gut at 0.55 kg/mm, of wrapped construction. As a full bed in the stiff, powerful 69 RA frame it is very soft and very powerful, with a high launch, low control and quick tension loss. Up to 25 kg, the frame's rated maximum; 1.30 or 1.35. As a budget cross under a poly main it adds comfort and pace."
   },
   {
     "itemId": "toroline-k-pop",
@@ -2407,6 +3190,17 @@
     "note": "Square mains give the 18×20 maximum edge bite and Caviar crosses add controlled snapback and tension hold. The PT630's flex absorbs the harshness square mains can produce in stiffer hoops. High spin, low launch, low power — the most control-oriented Toroline hybrid on this frame. 20/19 kg."
   },
   {
+    "itemId": "toroline-k-pop",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 24,
+      "crossesKg": 25
+    },
+    "note": "Square Wasabi mains over hex Caviar crosses: a med-firm, low-powered hybrid. In the stiff, high-launching 69 RA frame it holds output and trajectory down; the flax throat mutes the firm bed's feedback without hiding it. Edge bite plus snapback in the open 16×19 give high spin, and Caviar holds tension. 24/25 kg, gauges set by the pack."
+  },
+  {
     "itemId": "toroline-k-pop-spin",
     "itemKind": "hybrid",
     "racquetId": "regna",
@@ -2438,6 +3232,17 @@
       "crossesKg": 19
     },
     "note": "Pentagonal mains are the spin source in the 18×20, where friction is all that's available; slick crosses help the mains move. Two ~0.95 strings in the 58 RA frame make a medium-soft, high-dwell bed with more launch than the dense pattern usually allows. The PT630's mass keeps it stable. 20/19 kg."
+  },
+  {
+    "itemId": "toroline-k-pop-spin",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 24
+    },
+    "note": "O-Toro Spin pentagonal mains, with high string-to-ball friction, over slick O-Toro hex crosses for snapback; both about 0.95 kg/mm. In the stiff, high-launching 69 RA frame the medium, pocketing bed sends the ball high, with damped feedback through the flax throat. Very high spin in the open 16×19 and a heavy topspin arc with a steep drop. 23/24 kg."
   },
   {
     "itemId": "toroline-dreddy",
@@ -2473,6 +3278,17 @@
     "note": "O-Toro Tour mains supply edge bite in the 18×20 and hold launch low; Snap's slick round crosses help the mains move in a pattern that pins snapback. The 58 RA flex softens the firm mains. Firm-launching bed with softer contact than a full Tour bed. (Earlier notes here described a Caviar/O-Toro pairing — that is the Cole recipe.) 20/19 kg."
   },
   {
+    "itemId": "toroline-dreddy",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 24,
+      "crossesKg": 25
+    },
+    "note": "Firm O-Toro Tour hex mains at 1.10 kg/mm over slick, medium O-Toro Snap round crosses. The mains bite and set a low launch against the stiff 69 RA frame's high one; the crosses add snapback and soften contact a little, alongside the flax throat. Clear feedback, high spin from edge bite plus snapback in the open 16×19. 24/25 kg."
+  },
+  {
     "itemId": "toroline-stevie",
     "itemKind": "hybrid",
     "racquetId": "regna",
@@ -2504,6 +3320,17 @@
       "crossesKg": 16
     },
     "note": "Firm hex mains for spin and launch in the 18×20, ultra-soft PEEK crosses for power in a low-powered frame. The 58 RA flex plus soft crosses stacks compliance — high dwell, quiet contact, mains still defining trajectory. Keep Truffle X at or below 16 kg. 20/16 kg."
+  },
+  {
+    "itemId": "toroline-stevie",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 25
+    },
+    "note": "Firm O-Toro Tour hex mains over very soft Truffle X crosses, a PEEK polymer. The mains set launch and spin; the crosses add pocketing and power and soften contact in the stiff 69 RA frame. In the open 16×19 the hex mains still bite and snap back. 23/25 kg; Truffle X knots at 16 kg or below."
   },
   {
     "itemId": "toroline-101",
@@ -2539,6 +3366,17 @@
     "note": "Medium-soft on medium-soft in the 58 RA frame: compliance stacks into a plush, high-dwell bed. Hex mains still supply edge bite in the 18×20, and slick crosses help them move. The softest-contact Toroline poly hybrid on this frame. (Earlier notes here described Toro Toro mains — 101 uses O-Toro.) 20/19 kg."
   },
   {
+    "itemId": "toroline-101",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 24
+    },
+    "note": "Medium-soft O-Toro hex mains over slick O-Toro Snap round crosses, both about 0.95 kg/mm. In the stiff, powerful 69 RA frame the pocketing bed softens contact and lets the launch climb, so the ball flies high with plenty of spin from bite plus snapback in the open 16×19. Damped, quiet feedback through the flax throat. 23/24 kg."
+  },
+  {
     "itemId": "toroline-o-snap",
     "itemKind": "hybrid",
     "racquetId": "regna",
@@ -2570,6 +3408,17 @@
       "crossesKg": 19
     },
     "note": "Hex mains give the 18×20 its edge bite; firm slick crosses keep the bed defined in a frame that softens everything and help the mains move in a dense pattern. Medium bed in the 58 RA frame — more control than the 101, less bite than K-Pop. 20/19 kg."
+  },
+  {
+    "itemId": "toroline-o-snap",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 24
+    },
+    "note": "Medium-soft O-Toro hex mains over the firmer, ultra-slick Snap Tour Flex cross. The stiffness contrast speeds snapback and gives the bed definition, and the firm cross holds the stiff 69 RA frame's launch lower than an all-soft hybrid would. A medium bed, clear feedback through the flax throat, high spin from bite plus snapback in the open 16×19. 23/24 kg."
   },
   {
     "itemId": "toroline-wasabi-pro",
@@ -2605,6 +3454,17 @@
     "note": "Square mains give the 18×20 maximum edge bite; slick crosses help them move in a pattern that pins snapback. The 58 RA flex absorbs the square edges' harshness. (Earlier notes here described Wasabi/Caviar — that is K-Pop.) Med-firm, lively, high-spin bed. 20/19 kg."
   },
   {
+    "itemId": "toroline-wasabi-pro",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 24
+    },
+    "note": "Square Wasabi mains over slick round Wasabi X crosses, so the sharp edges bite and then snap back freely. In the stiff, powerful 69 RA frame the medium-firm bed is lively, with a less refined contact and a launch that rises with the frame's. Very high spin in the open 16×19, with less directional predictability than K-Pop. 23/24 kg."
+  },
+  {
     "itemId": "toroline-what-the-hybrid",
     "itemKind": "hybrid",
     "racquetId": "regna",
@@ -2636,6 +3496,17 @@
       "crossesKg": 19
     },
     "note": "Square mains for edge bite in the 18×20; softer hex crosses for dwell in a frame that already supplies compliance — a damped, medium-soft bed. Snapback is doubly limited (hex-on-square, dense pattern), so spin is what the edges give. (Earlier notes here described Snapper/O-Toro — that is not this recipe.) 20/19 kg."
+  },
+  {
+    "itemId": "toroline-what-the-hybrid",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 24
+    },
+    "note": "Square Wasabi mains over softer Toro Toro hex crosses at 0.95 kg/mm. Hex crosses slide less freely than a round one, so snapback is lower and spin edge-led in the open 16×19; the contact is softer and more damped. In the stiff, high-launching 69 RA frame the medium bed sits between K-Pop's control and Wasabi Pro's liveliness. 23/24 kg."
   },
   {
     "itemId": "toroline-snapaholic",
@@ -2671,6 +3542,17 @@
     "note": "Octagonal mains give the 18×20 aggressive edge bite; the firm slick cross keeps a soft main defined in the 58 RA frame and helps it move in a dense pattern. Med-firm, elastic bed with high spin. (Earlier notes here described O-Toro Tour/Snap — that is Dreddy.) 20/19 kg."
   },
   {
+    "itemId": "toroline-snapaholic",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 24
+    },
+    "note": "Soft octagonal Snapper mains at 0.85 kg/mm over the firm, ultra-slick Snap Tour Flex cross. The stiffness contrast speeds snapback and the edges add bite: very high spin in the open 16×19. In the stiff 69 RA frame the med-firm bed is lively and elastic, and the firm cross holds the frame's high launch down. 23/24 kg."
+  },
+  {
     "itemId": "toroline-cole",
     "itemKind": "hybrid",
     "racquetId": "regna",
@@ -2702,5 +3584,16 @@
       "crossesKg": 19
     },
     "note": "Hex mains and hex crosses both contribute edge bite in the 18×20 — the shape-on-shape recipe for a pattern with no snapback to speak of. O-Toro Tour mains hold launch low and tension steady; O-Toro crosses soften contact in a frame the 58 RA already softens. Clean, precise, medium-firm bed. 20/19 kg."
+  },
+  {
+    "itemId": "toroline-cole",
+    "itemKind": "hybrid",
+    "racquetId": "puredrive2025",
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 24
+    },
+    "note": "Firm O-Toro Tour hex mains at 1.10 kg/mm for control and tension hold, over O-Toro hex crosses at 0.95 for spin and softer contact. Hex-on-hex crosses slide less, so spin in the open 16×19 is edge-led. In the stiff, high-launching 69 RA frame the bed is clean and penetrating, launching lower than the frame alone. 23/24 kg."
   }
 ]

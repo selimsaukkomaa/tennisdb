@@ -63,6 +63,16 @@ const SCENARIOS: Scenario[] = [
     name: 'remembered racket and strings after a reload',
     steps: [...racquet('percept'), '#btn-solinco', { reload: true }],
   },
+  // the Pure Drive 2025 (v1.13): Toroline has ranges, "max 25", a prestretch and splits;
+  // its gut setups carry their own ratings
+  {
+    name: 'Pure Drive 2025, Toroline',
+    steps: racquet('puredrive2025'),
+  },
+  {
+    name: 'Pure Drive 2025, Natural gut',
+    steps: [...racquet('puredrive2025'), '#btn-gut'],
+  },
   // the frame profile (v1.12): the details stay open across a racket switch
   {
     name: 'frame details open, then the Pro Tour 630',

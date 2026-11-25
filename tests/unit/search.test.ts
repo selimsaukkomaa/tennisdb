@@ -17,7 +17,7 @@ const percept = buildSearchIndex(db, 'percept');
 describe('search index', () => {
   test('for the racquet on screen: each string and hybrid once, its gut pairings, every racquet', () => {
     const count = (type: SearchItem['type']): number => index.filter((i) => i.type === type).length;
-    expect(count('racquet')).toBe(3);
+    expect(count('racquet')).toBe(4);
     expect(count('string')).toBe(72);
     expect(count('hybrid')).toBe(10);
     expect(count('grip')).toBe(35);

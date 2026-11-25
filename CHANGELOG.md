@@ -6,6 +6,156 @@ v0.990 shipped as a single HTML file. Their changelogs are in `legacy/`
 
 ---
 
+# v1.13 — The Pure Drive 2025
+
+**Date:** 2026-11-25
+**Base:** v1.12 (frame profiles)
+**Status:** data release with a visible change: the first racket beyond the owner's three, the
+first of the common rackets. The Babolat Pure Drive 2025 joins with its frame profile, a pairing
+for each of the 82 strings and hybrids, and seven gut setups. The owner's calls, 2026-11-23:
+- the profile was approved before any note was written, with stability "medium";
+- tensions follow the tension rule (offset +1), capped at Babolat's 25 kg maximum (option A);
+- the notes were approved after a sample of five;
+- each frame's gut setups get their own ratings, set from its profile, not copied from the
+  Regna's.
+
+`TENNIS_DB.version` stays `0.990`.
+
+---
+
+## The racket
+
+- **In `racquets.json`:** `puredrive2025`, Babolat Pure Drive 2025, 100 sq in, 16×19, 69 RA
+  (Tennis Warehouse's strung figure, as for every new frame). It comes last in the file, so a
+  first visit still opens on the Regna 100. The menu lists it first, under Babolat (brands A–Z).
+- **The profile:** four hands-on reviews. Specs: 318 g strung, 4 pts HL, swingweight 317, beam
+  23/26/23 mm. Construction: NF2 Tech 2.0 (a flax throat), HTR, FSI Power, the elliptical beam.
+
+| | Feel | Power | Launch | Spin | Stability | Comfort | Control | Sources |
+|---|---|---|---|---|---|---|---|---:|
+| Pure Drive 2025 | crisp | high | high | high | medium | medium | medium | 4 |
+
+## Tensions
+
+- **The rule:** the Regna 100's tension shifted by one whole-kg offset, from string-bed density
+  and RA (v1.12, Still open). For the Pure Drive the offset is +1.
+- **The cap** (owner, option A): Babolat rates the frame 21–25 kg, and the rule put 41 of the 89
+  items (82 pairings, 7 gut setups) above 25. After the shift nothing goes above the maker's
+  maximum:
+  - 24 ranges stop at 25 (24–26 → 24–25);
+  - 9 ranges that would start at 25 become "max 25" (Snapper, Super Toro, Vanquish Multi, Poly
+    Tour Air, Tour Super 850 Multi, Element, M2 Pro, Quasi-Gut Armor, Pro Tour);
+  - the prestretch and 7 splits move down whole, so each keeps its mains/crosses gap: Truffle X
+    26 → 25 (5% PS), Stevie 24/26 → 23/25, and six of the gut setups (27/25 → 25/23,
+    27/24 → 25/22, 26/24 → 25/23, 25/27 → 23/25, and 24/26 → 23/25 twice).
+
+  Rejected: the rule as is (41 items above the maker's range), and shifting every item to fit
+  (63 of 89 at 23–25). The nine "max 25" notes read "Up to 25 kg, the frame's rated
+  maximum"; the other capped notes give their band as it now stands.
+- **CLAUDE.md** now records the rule, the cap and the gut ratings under "Content (a new frame's
+  tensions and gut)".
+
+## Notes
+
+- **82 pairings and 7 gut notes**, written to the note order with the profile as step 2: 47–62
+  words, median 58. A sample of five was approved first, then all 89.
+- **The texts:** the band is stated in kilograms, never as "the Regna's plus one". A disputed
+  stiffness gets no figure. No reviewer or player is named.
+
+## Natural gut
+
+- **The Regna's seven setups**, with tensions by the rule and the cap and new notes.
+- **Ratings set for this frame** (owner): power, spin, comfort and gut protection come from the
+  profile against the Regna's. The Pure Drive has more power (high against medium-high) and more
+  spin (high against medium on the same 16×19), and less comfort (medium against high). Firm poly
+  mains pass more of the frame through, and hex edges wear the gut harder at its ball speed. Nine
+  rating words differ from the Regna's, and Caviar over VS Touch reads "Firm · Crisp" instead of
+  "Med-Firm · Crisp".
+- **Two notes fixed in review** to agree with these ratings: O-Toro Tour over VS Touch no longer
+  claims more power than the Caviar version, and Tour Bite over Wilson gut is "the least plush" of
+  the seven rather than "the firmest".
+
+## Tests
+
+- **The round trip** sets the added rackets aside before converting back to v0.990
+  (`ADDED_RACQUETS`), asserting each one's racket, 82 pairings and 7 gut setups.
+- **Ten rackets:** the data's four plus six placeholders; the Pure Drive placeholder is gone, and
+  the test's menu, keyboard and search steps use the real one.
+- **Counts:** four rackets in the menu and in search, 28 gut setups. The v0.992 clearing test
+  loops over the pages built so far.
+
+## Baselines updated
+
+Approved with screenshots on 2026-11-25, then `--update-snapshots=all`:
+
+- **New:** one pixel view, "Pure Drive 2025" (at both sizes), and two DOM scenarios, "Pure Drive
+  2025, Toroline" (ranges, "max 25", the prestretch and the splits) and "Pure Drive 2025,
+  Natural gut". That makes 19 views and 28 scenarios.
+- **Changed:** the racket menu, which lists the Pure Drive under Babolat: the "racket menu open"
+  view at both sizes and its DOM scenario (one group and option added, the later groups'
+  ids renumbered). The Percept 100D and Pro Tour 630 phone views changed too, by one button's
+  hover shade (157 and 282 pixels): the menu's options sit lower now, so the pointer rests on a
+  different strings button after the pick. Five views differed only below the per-pixel
+  threshold and were restored.
+
+---
+
+## Data corrections
+
+None: the racket is new.
+
+## Flags left open
+
+Since v1.12, plus these:
+
+- **Pure Drive RA:** 68 at Tennisnerd, 69 at Tennis Warehouse. Kept 69 (Tennis Warehouse's
+  strung figure for every frame).
+- **Pure Drive weight and swingweight:** 315 g and 315 at Tennis.com, 318 g and 317 at Tennis
+  Warehouse. Kept 318 and 317.
+- **Pure Drive power:** Babolat's spec sheet says "Low-Medium", against "high" in every
+  playtest. The word rests on the playtests.
+- **Pure Drive stability:** one review calls it top-notch; the others find it solid for its
+  weight but pushed around by heavy pace. Kept "medium".
+- **The Regna's gut ratings:** Caviar over VS Touch has more power than O-Toro Tour over VS Touch
+  (70 against 62). The O-Toro Tour note says the reverse, and so do the strings' own power
+  ratings (38 against 30). Left as is; the Pure Drive's ratings follow the note.
+
+## Verification
+
+`npm run check` passes: 387 Vitest tests (the same number as v1.12; the tests above changed, none
+were added), and the browser suite, 69 passed and 29 skipped on the Mac. On CI the pixel views
+are skipped as well.
+
+- **Against v0.990:** the data equals v0.990's value for value, with the declared changes and the
+  Pure Drive set aside.
+- **iOS:** not rebuilt; nothing native changed. The app takes the Pure Drive at its next
+  `npm run build:ios`.
+
+## File size
+
+| | v1.12 | v1.13 | Δ |
+|---|---:|---:|---|
+| Page (HTML + JS + CSS) | 359,353 | 406,837 | +47,484 |
+| gzip | 81,924 | 89,646 | +7,722 bytes |
+
+All of it is the Pure Drive's data: 38,693 bytes of pairings, 4,990 of gut setups and 3,802 of
+racket and profile (9,509 gzipped together). Six more frames at this size would add about
+46 KB gzipped.
+
+## Still open
+
+Unchanged from v1.12, except:
+
+- **Common rackets:** the Pure Drive 2025 is done. Six remain, one per release, each with its
+  profile shown first, then a sample of five notes: Pure Aero 2026 (offset 0), EZONE 100 2025 (0),
+  Pro Staff 97 v15 (0), Blade 98 v10 (−1), Speed MP 2026 (−1), Clash 100 v3 (−2). Each one's
+  rated tension range is checked for the cap.
+- **The three rackets' notes:** still to be revised against the profiles, a sample of five
+  first.
+- **New flags:** above.
+
+---
+
 # v1.12 — Frame profiles
 
 **Date:** 2026-11-23

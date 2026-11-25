@@ -15,6 +15,8 @@
 // and the Yonex About box; each is applied here, or undone on the copy, phrase by phrase.
 // v1.11 corrects the Regna 100's RA from 64 to 65 (scripts/regna-ra.ts): the figure, and "64 RA"
 // in the 67 Regna notes that cite it, applied after the other text edits.
+// v1.13 adds the Pure Drive 2025, a racket v0.990 never had: it is set aside with its 82
+// pairings and 7 gut pairings before the conversion (ADDED_RACQUETS), and nothing else is.
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, test } from 'vitest';
@@ -47,6 +49,25 @@ const legacyHtml = readFileSync(
 const legacyJson = legacyHtml.match(
   /<script id="tennis-data" type="application\/json">([\s\S]*?)<\/script>/,
 )![1]!;
+
+/** Rackets added since v0.990, with how many pairings and gut pairings each brought. */
+const ADDED_RACQUETS = [{ id: 'puredrive2025', pairings: 82, gutHybrids: 7 }] as const;
+
+/** The data without the rackets added since v0.990; asserts each took exactly its own. */
+function withoutAdded(db: TennisDb): TennisDb {
+  const ids = new Set<string>(ADDED_RACQUETS.map((r) => r.id));
+  for (const r of ADDED_RACQUETS) {
+    expect(db.racquets.filter((x) => x.id === r.id)).toHaveLength(1);
+    expect(db.pairings.filter((p) => p.racquetId === r.id)).toHaveLength(r.pairings);
+    expect(db.gutHybrids.filter((g) => g.racquetId === r.id)).toHaveLength(r.gutHybrids);
+  }
+  return {
+    ...db,
+    racquets: db.racquets.filter((r) => !ids.has(r.id)),
+    pairings: db.pairings.filter((p) => !ids.has(p.racquetId)),
+    gutHybrids: db.gutHybrids.filter((g) => !ids.has(g.racquetId)),
+  };
+}
 
 /** v1.6 stores a rating as its score (v0.999-v1.5: { score, label }); v0.990 had the bar. */
 function withBars<T extends object>(rec: T, fields: readonly RatingAxis[]): T {
@@ -191,11 +212,11 @@ const expected = (): unknown => {
 
 describe('data/ against legacy v0.990', () => {
   test('converted back to the v0.990 shape, it equals the embedded blob with the declared moves', () => {
-    expect(toV0990(assembleDb())).toStrictEqual(expected());
+    expect(toV0990(withoutAdded(assembleDb()))).toStrictEqual(expected());
   });
 
   test('and serialises to the same length (no character lost or added)', () => {
-    expect(JSON.stringify(toV0990(assembleDb())).length).toBe(JSON.stringify(expected()).length);
+    expect(JSON.stringify(toV0990(withoutAdded(assembleDb()))).length).toBe(JSON.stringify(expected()).length);
   });
 
   test('assembleDb returns independent copies', () => {

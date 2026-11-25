@@ -51,6 +51,24 @@ plus a line) and its sources. The owner's calls, 2026-11-23:
   texts and notes never mention or compare the 2020 Pro Tour 2.0.
 - A new frame's profile is drafted and shown to the owner before its notes are written.
 
+### Content (a new frame's tensions and gut)
+
+The owner's calls, 2026-11-23 (first applied to the Pure Drive 2025, v1.13):
+
+- **Tension rule:** a new frame takes the Regna 100's tension for every string and hybrid,
+  shifted by one whole-kg offset per frame: round(23.51 × (D_regna / D_frame − 1) + (RA − 65) / 7),
+  where D = (mains + crosses) / √head (sq in) and 23.51 is the Regna's average midpoint. Ranges
+  keep their width; splits, prestretch and `max` shift too. It fits the existing frames: Percept
+  −1 (82 of 82 exact), Pro Tour 630 −3 (69 of 82 within 0.5 kg).
+- **The maker's maximum caps it:** after the shift, nothing goes above the frame's rated
+  maximum. A range stops there (24–26 → 24–25 under a 25 kg maximum); a range that would start
+  at it becomes the `max` kind ("max 25"); splits and prestretch move down whole, so a hybrid
+  keeps its mains/crosses gap (27/25 → 25/23). A `max` item's note says so ("Up to 25 kg, the
+  frame's rated maximum").
+- **Natural gut:** each new frame gets the Regna's seven gut setups, tensions by the same rule
+  and cap, and new notes. Their ratings (power, spin, comfort, gut protection) and feel label are
+  set for that frame from its profile against the Regna's, never copied.
+
 ### Data changes
 
 - Data corrections are never silent. The corrected note carries a one-line parenthetical
@@ -149,7 +167,8 @@ npm run build:ios    # build + cap sync ios; then npm run ios:open or run from X
 - Racquets are data-driven. A new frame needs a `racquets.json` entry with its frame profile,
   a pairing (tension and note) in `pairings.json` for every string and hybrid, and optionally
   gut pairings;
-  `tests/unit/ten-rackets.test.ts` proves the UI follows for ten (seven placeholders). The
+  `tests/unit/ten-rackets.test.ts` proves the UI follows for ten (the data's four plus six
+  placeholders). The
   menu orders brands A–Z, then models A–Z (`racquetGroups`); the first in `racquets.json` is
   where a first visit opens. Brand colours are per brand in CSS and need nothing. Views read
   pairings through `src/core/pairings.ts`, never directly.
@@ -160,11 +179,11 @@ Until v1.6 every view was compared with the v0.990 page; that comparison was ret
 redesign in v1.7. The app is now checked against its own approved baselines
 (`tests/visual/baselines`):
 
-- pixel baselines (`tests/visual/views.spec.ts`): 18 views at 1440×900 and 390×844, the first
+- pixel baselines (`tests/visual/views.spec.ts`): 19 views at 1440×900 and 390×844, the first
   screen or a close-up, threshold 0.1, at most 0.1% of pixels differing. Made on macOS and run
   only there: CI runs Linux, which renders text differently. Run `npm run check` on the Mac
   before every release.
-- DOM baselines (`tests/visual/dom.spec.ts`): 26 scenarios, the rendered DOM normalised to
+- DOM baselines (`tests/visual/dom.spec.ts`): 28 scenarios, the rendered DOM normalised to
   text (`tests/visual/dom.ts`; elements that don't render are left out). Run everywhere, CI
   included. Steps click, type, pick an option, press a key or reload (which keeps what the page
   stored); each test starts with empty storage.
@@ -188,7 +207,9 @@ hint reads "⌘K" there and "Ctrl K" elsewhere, and the DOM baselines must read 
 
 The data is still compared with v0.990's (`tests/data/legacy-roundtrip.test.ts`): converted back
 to the v0.990 shape, with every declared data change applied to the v0.990 blob
-(`tests/data/v0990-changes.ts`), it must equal v0.990's value for value.
+(`tests/data/v0990-changes.ts`), it must equal v0.990's value for value. Rackets added since
+(`ADDED_RACQUETS` in that test: the Pure Drive 2025) are set aside first, their pairing and gut
+counts asserted, since v0.990 had none of them.
 
 ## Data validation
 

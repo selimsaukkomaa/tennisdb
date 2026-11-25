@@ -544,5 +544,187 @@
       "crossesKg": 22
     },
     "notes": "O-Toro Tour hex mains over Wilson 17 gut crosses: the thinner gut adds slightly more elasticity than VS Touch 16 in the dense pattern; the mains' tension stability pairs with gut's slow decline. A lower-cost gut option — Wilson runs cheaper than VS Touch."
+  },
+  {
+    "id": "gh-puredrive2025-1",
+    "racquetId": "puredrive2025",
+    "config": "gut-mains",
+    "mains": {
+      "string": "Babolat VS Touch",
+      "gauge": "1.30 / 16",
+      "stringId": "gut-babolat-vs-touch"
+    },
+    "crosses": {
+      "string": "ALU Power",
+      "gauge": "1.25 / 16L",
+      "stringId": "luxilon-alu-power"
+    },
+    "feelLabel": "Plush · Powerful",
+    "power": 92,
+    "spin": 62,
+    "comfort": 86,
+    "gutProtection": 79,
+    "tension": {
+      "kind": "split",
+      "mainsKg": 25,
+      "crossesKg": 23
+    },
+    "notes": "Gut mains over ALU Power crosses. The gut's elasticity and dwell soften the stiff 69 RA hoop while its power adds to the frame's own; the firm, smooth cross gives a controlled floor and holds launch down. A round cross costs little spin in the open 16×19 and is gentle on the gut. 25/23 kg."
+  },
+  {
+    "id": "gh-puredrive2025-2",
+    "racquetId": "puredrive2025",
+    "config": "gut-mains",
+    "mains": {
+      "string": "Babolat VS Touch",
+      "gauge": "1.30 / 16",
+      "stringId": "gut-babolat-vs-touch"
+    },
+    "crosses": {
+      "string": "Caviar",
+      "gauge": "1.20 / 17",
+      "stringId": "toroline-caviar"
+    },
+    "feelLabel": "Med-Firm · Lively",
+    "power": 85,
+    "spin": 81,
+    "comfort": 85,
+    "gutProtection": 45,
+    "tension": {
+      "kind": "split",
+      "mainsKg": 25,
+      "crossesKg": 22
+    },
+    "notes": "Gut mains over Caviar hex crosses: more bite than with ALU Power, at the cost of gut life, as the hex edges saw at the mains. In the stiff 69 RA frame the gut softens contact and adds power; the firm cross gives a livelier, firmer response and a lower launch. Bite plus snapback in the open 16×19. 25/22 kg."
+  },
+  {
+    "id": "gh-puredrive2025-3",
+    "racquetId": "puredrive2025",
+    "config": "gut-mains",
+    "mains": {
+      "string": "Wilson Natural Gut",
+      "gauge": "1.25 / 17",
+      "stringId": "gut-wilson-natural"
+    },
+    "crosses": {
+      "string": "ALU Power Soft",
+      "gauge": "1.25 / 16L",
+      "stringId": "luxilon-alu-power-soft"
+    },
+    "feelLabel": "Plush · Soft",
+    "power": 93,
+    "spin": 52,
+    "comfort": 82,
+    "gutProtection": 85,
+    "tension": {
+      "kind": "split",
+      "mainsKg": 25,
+      "crossesKg": 23
+    },
+    "notes": "Thin Wilson 17 gut mains over ALU Power Soft crosses, the softest of these gut setups. In the stiff, powerful 69 RA frame the bed is plush and very powerful, with long dwell and a high launch. Spin is modest from two round strings, even in the open 16×19; gut life is long with a smooth, soft cross. 25/23 kg."
+  },
+  {
+    "id": "gh-puredrive2025-4",
+    "racquetId": "puredrive2025",
+    "config": "gut-crosses",
+    "mains": {
+      "string": "Caviar",
+      "gauge": "1.24 / 16L",
+      "stringId": "toroline-caviar"
+    },
+    "crosses": {
+      "string": "Babolat VS Touch",
+      "gauge": "1.30 / 16",
+      "stringId": "gut-babolat-vs-touch"
+    },
+    "feelLabel": "Firm · Crisp",
+    "power": 75,
+    "spin": 81,
+    "comfort": 79,
+    "gutProtection": null,
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 25
+    },
+    "notes": "Caviar hex mains over gut crosses: the mains set spin and a low launch, the gut adds power, feel and comfort. In the stiff 69 RA frame the gut takes the edge off the firm mains, which check the frame's height. Crosses move less than mains, so the gut lasts longer; the bed is firmer than with gut mains. 23/25 kg."
+  },
+  {
+    "id": "gh-puredrive2025-5",
+    "racquetId": "puredrive2025",
+    "config": "gut-crosses",
+    "mains": {
+      "string": "O-Toro Tour",
+      "gauge": "1.25 / 16L",
+      "stringId": "toroline-o-toro-tour"
+    },
+    "crosses": {
+      "string": "Babolat VS Touch",
+      "gauge": "1.30 / 16",
+      "stringId": "gut-babolat-vs-touch"
+    },
+    "feelLabel": "Firm · Crisp",
+    "power": 67,
+    "spin": 75,
+    "comfort": 83,
+    "gutProtection": null,
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 25
+    },
+    "notes": "O-Toro Tour hex mains at 1.10 kg/mm over gut crosses. The firm, tension-stable mains set a low launch against the stiff 69 RA frame's high one; the gut adds dwell, feel and some comfort. Hex bite plus snapback in the open 16×19, and the hex edges wear the gut less as crosses than they would as mains. 23/25 kg."
+  },
+  {
+    "id": "gh-puredrive2025-6",
+    "racquetId": "puredrive2025",
+    "config": "gut-crosses",
+    "mains": {
+      "string": "4G",
+      "gauge": "1.30 / 16",
+      "stringId": "luxilon-4g"
+    },
+    "crosses": {
+      "string": "Babolat VS Touch",
+      "gauge": "1.30 / 16",
+      "stringId": "gut-babolat-vs-touch"
+    },
+    "feelLabel": "Very Firm · Stable",
+    "power": 60,
+    "spin": 62,
+    "comfort": 89,
+    "gutProtection": null,
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 25
+    },
+    "notes": "4G mains over gut crosses: the round, very firm mains bring lockdown control and exceptional tension hold, the gut feel and comfort. In the stiff, powerful 69 RA frame this is a low-powered gut setup that reins in the frame's pace and launch. Spin comes from snapback in the open 16×19. 23/25 kg."
+  },
+  {
+    "id": "gh-puredrive2025-7",
+    "racquetId": "puredrive2025",
+    "config": "gut-crosses",
+    "mains": {
+      "string": "Tour Bite",
+      "gauge": "1.20 / 17",
+      "stringId": "solinco-tour-bite"
+    },
+    "crosses": {
+      "string": "Wilson Natural Gut",
+      "gauge": "1.25 / 17",
+      "stringId": "gut-wilson-natural"
+    },
+    "feelLabel": "Firm · Lively",
+    "power": 65,
+    "spin": 91,
+    "comfort": 73,
+    "gutProtection": null,
+    "tension": {
+      "kind": "split",
+      "mainsKg": 23,
+      "crossesKg": 25
+    },
+    "notes": "Tour Bite 1.20 square mains over thin Wilson 17 gut crosses. The edges supply bite, the gut adds elasticity and power to the stiff 69 RA frame's own, and the firm mains keep the launch down: the least plush of these gut setups. Bite plus snapback in the open 16×19; as crosses the gut wears less than under square mains. 23/25 kg."
   }
 ]

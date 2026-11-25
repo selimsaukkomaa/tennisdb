@@ -574,5 +574,179 @@
         }
       ]
     }
+  },
+  {
+    "id": "puredrive2025",
+    "brand": "Babolat",
+    "model": "Pure Drive 2025",
+    "headSizeSqIn": 100,
+    "pattern": {
+      "mains": 16,
+      "crosses": 19
+    },
+    "ra": 69,
+    "profile": {
+      "edition": "The 2025 model, the 11th generation.",
+      "summary": "Thick-beam 100 (23/26/23 mm) in graphite, stiff at 69 RA, with natural flax in the throat to filter vibration and a hoop braced against twisting. Head-light at 318 g strung. Power comes easily, the ball leaves high with plenty of spin, contact is firm but muted and solid for its weight, and control is the price of the power.",
+      "construction": [
+        {
+          "name": "NF2 Tech 2.0",
+          "text": "Natural flax fibres laid in one direction in the throat, to filter vibration at contact while keeping the frame rigid.",
+          "sources": [
+            "tenniscom-2025",
+            "tenniscompanion-2025",
+            "tennisnerd-2025"
+          ]
+        },
+        {
+          "name": "HTR",
+          "text": "High Torsion Rigidity: a hoop stiffened against twisting, for stability and power.",
+          "sources": [
+            "tennisnerd-2025",
+            "tenniscom-2025"
+          ]
+        },
+        {
+          "name": "FSI Power",
+          "text": "A layout Babolat says passes more of the swing's energy to the ball.",
+          "sources": [
+            "tennisnerd-2025",
+            "tenniscom-2025"
+          ]
+        },
+        {
+          "name": "Elliptical beam",
+          "text": "A thick, stiff 23/26/23 mm beam, the main source of the frame's sturdiness.",
+          "sources": [
+            "tenniscom-2025",
+            "tw-2025"
+          ]
+        }
+      ],
+      "specs": {
+        "strungWeightG": 318,
+        "balancePtsHL": 4,
+        "swingweight": 317,
+        "beamMm": [
+          23,
+          26,
+          23
+        ],
+        "sources": [
+          "tw-2025",
+          "tennisnerd-2025",
+          "tenniscompanion-2025"
+        ]
+      },
+      "traits": {
+        "feel": {
+          "word": "crisp",
+          "basis": "Firm, crisp contact with plenty of feedback; the flax mutes it enough that mis-hits don't feel hollow.",
+          "sources": [
+            "tw-2025",
+            "tennisnerd-2025",
+            "tenniscom-2025",
+            "tenniscompanion-2025"
+          ]
+        },
+        "power": {
+          "word": "high",
+          "basis": "Easy, explosive pace and depth from every part of the court, on serve above all.",
+          "sources": [
+            "tw-2025",
+            "tennisnerd-2025",
+            "tenniscom-2025",
+            "tenniscompanion-2025"
+          ]
+        },
+        "launch": {
+          "word": "high",
+          "basis": "The ball leaves high and carries deep; full flat swings can send it long.",
+          "sources": [
+            "tw-2025",
+            "tenniscompanion-2025",
+            "tenniscom-2025"
+          ]
+        },
+        "spin": {
+          "word": "high",
+          "basis": "Plenty of topspin and kick from the open 16×19, short of the Pure Aero; flat shots come just as easily.",
+          "sources": [
+            "tw-2025",
+            "tenniscompanion-2025",
+            "tenniscom-2025",
+            "tennisnerd-2025"
+          ]
+        },
+        "stability": {
+          "word": "medium",
+          "basis": "Solid for its weight, at the net too; heavy pace can push it around.",
+          "sources": [
+            "tenniscompanion-2025",
+            "tw-2025",
+            "tennisnerd-2025",
+            "tenniscom-2025"
+          ]
+        },
+        "comfort": {
+          "word": "medium",
+          "basis": "Clean hits feel muted; mis-hits and long sessions with a firm string show the stiffness.",
+          "sources": [
+            "tenniscompanion-2025",
+            "tenniscom-2025",
+            "tw-2025",
+            "tennisnerd-2025"
+          ]
+        },
+        "control": {
+          "word": "medium",
+          "basis": "Predictable off the strings, but ambitious or flat swings sail long; spin and bigger targets bring the ball down.",
+          "sources": [
+            "tw-2025",
+            "tennisnerd-2025",
+            "tenniscom-2025",
+            "tenniscompanion-2025"
+          ]
+        }
+      },
+      "sources": [
+        {
+          "id": "tw-2025",
+          "kind": "review",
+          "publisher": "Tennis Warehouse",
+          "title": "Pure Drive 2025 review",
+          "author": "Brittany, Jason, Zsofi, Alex, Luca",
+          "date": "2025-04",
+          "url": "https://www.tennis-warehouse.com/learning_center/racquet_reviews/BPD25Rreview.html"
+        },
+        {
+          "id": "tennisnerd-2025",
+          "kind": "review",
+          "publisher": "Tennisnerd",
+          "title": "Pure Drive review (2025)",
+          "author": "Jonas Eriksson",
+          "date": "2025-01-30",
+          "url": "https://www.tennisnerd.net/gear/racquets/racquet-reviews/babolat-pure-drive-review-2025/44368"
+        },
+        {
+          "id": "tenniscom-2025",
+          "kind": "review",
+          "publisher": "Tennis.com",
+          "title": "Pure Drive review",
+          "author": "Jon Levey",
+          "date": "2025-03-22",
+          "url": "https://www.tennis.com/news/articles/racquet-review-babolat-pure-drive-ultimate-power-frame-comfortable-perricard"
+        },
+        {
+          "id": "tenniscompanion-2025",
+          "kind": "review",
+          "publisher": "TennisCompanion",
+          "title": "Babolat Pure Drive 2025 review and test",
+          "author": "Jon Crim",
+          "date": "2025-09-10",
+          "url": "https://tenniscompanion.org/babolat-pure-drive-2025/"
+        }
+      ]
+    }
   }
 ]

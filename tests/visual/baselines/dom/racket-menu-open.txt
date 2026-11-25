@@ -97,6 +97,16 @@
           <div aria-activedescendant="rpick-card-regna" aria-label="Racket" class="rpick-list" id="rpick-card-list" role="listbox" tabindex="-1">
             <div aria-labelledby="rpick-card-g0" class="rpick-group" role="group">
               <div class="rpick-brand" id="rpick-card-g0">
+                "Babolat"
+              <div aria-selected="false" class="rpick-option" data-rpick-value="puredrive2025" id="rpick-card-puredrive2025" role="option">
+                <span aria-hidden="true" class="rpick-check">
+                  "✓"
+                <span class="rpick-model">
+                  "Pure Drive 2025"
+                <span class="rpick-spec">
+                  "69 RA · 16×19 · 100 sq in"
+            <div aria-labelledby="rpick-card-g1" class="rpick-group" role="group">
+              <div class="rpick-brand" id="rpick-card-g1">
                 "Head"
               <div aria-selected="false" class="rpick-option" data-rpick-value="headpt630" id="rpick-card-headpt630" role="option">
                 <span aria-hidden="true" class="rpick-check">
@@ -105,8 +115,8 @@
                   "Pro Tour 630"
                 <span class="rpick-spec">
                   "58 RA · 18×20 · 98 sq in"
-            <div aria-labelledby="rpick-card-g1" class="rpick-group" role="group">
-              <div class="rpick-brand" id="rpick-card-g1">
+            <div aria-labelledby="rpick-card-g2" class="rpick-group" role="group">
+              <div class="rpick-brand" id="rpick-card-g2">
                 "Yonex"
               <div aria-selected="false" class="rpick-option" data-rpick-value="percept" id="rpick-card-percept" role="option">
                 <span aria-hidden="true" class="rpick-check">

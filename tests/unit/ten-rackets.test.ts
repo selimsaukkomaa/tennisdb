@@ -1,9 +1,10 @@
 // @vitest-environment jsdom
 // More frames must need only data: add racquets (and their pairings) and every
 // racquet-dependent part of the UI picks them up. v1.8 to v1.9 tested a fourth racquet; since
-// v1.10, when the UI was made ready for about ten, it tests ten: the data's three plus seven
+// v1.10, when the UI was made ready for about ten, it tests ten: the data's racquets plus
 // placeholders, each strung as in the Regna. Their names are the common frames proposed for the
-// data; their specs are made up for the test.
+// data; their specs are made up for the test. Since v1.13 the Pure Drive is real (the data's
+// four plus six placeholders), and it has gut pairings where the placeholders have none.
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { beforeAll, describe, expect, test } from 'vitest';
@@ -29,7 +30,6 @@ const frame = (
 ): Racquet => ({ id, brand, model, headSizeSqIn, pattern: { mains: 16, crosses: 19 }, ra });
 
 const PLACEHOLDERS: Racquet[] = [
-  frame('test-pure-drive', 'Babolat', 'Pure Drive', 100, 71),
   frame('test-pure-aero', 'Babolat', 'Pure Aero', 100, 67),
   frame('test-speed-mp', 'Head', 'Speed MP', 100, 64),
   frame('test-blade-98', 'Wilson', 'Blade 98', 98, 62),
@@ -38,7 +38,7 @@ const PLACEHOLDERS: Racquet[] = [
   frame('test-ezone-100', 'Yonex', 'EZONE 100', 100, 65),
 ];
 
-/** The data plus seven racquets, every item strung in each as in the Regna; no gut pairings. */
+/** The data plus six racquets, every item strung in each as in the Regna; no gut pairings. */
 function withTenRackets(): TennisDb {
   const base = assembleDb();
   const regna = base.pairings.filter((p) => p.racquetId === 'regna');
@@ -92,7 +92,7 @@ describe('ten racquets from data alone', () => {
     expect(menuText('card')).toEqual([
       'Babolat',
       '  Pure Aero · 67 RA · 16×19 · 100 sq in',
-      '  Pure Drive · 71 RA · 16×19 · 100 sq in',
+      '  Pure Drive 2025 · 69 RA · 16×19 · 100 sq in',
       'Head',
       '  Pro Tour 630 · 58 RA · 18×20 · 98 sq in',
       '  Speed MP · 64 RA · 16×19 · 100 sq in',
@@ -168,7 +168,7 @@ describe('ten racquets from data alone', () => {
     expect(list.getAttribute('aria-activedescendant')).toBe('rpick-card-test-pure-aero');
     key('ArrowDown');
     key('Enter');
-    expect($('#selector .sel-racquet').textContent).toBe('Pure Drive');
+    expect($('#selector .sel-racquet').textContent).toBe('Pure Drive 2025');
     expect(document.activeElement).toBe($('#selector [data-rpick-toggle]'));
     showRacquet('regna');
   });
@@ -298,14 +298,18 @@ describe('compare', () => {
 
 describe('search', () => {
   test('lists every racquet, and each string once, opening in the racquet on screen', () => {
-    showRacquet('test-pure-drive');
+    showRacquet('test-pure-aero');
     const index = rebuildIndex();
     expect(index.filter((i) => i.type === 'racquet')).toHaveLength(10);
     const strings = index.filter((i) => i.type === 'string');
     expect(strings).toHaveLength(72);
-    expect(strings.every((i) => i.racquet === 'test-pure-drive')).toBe(true);
-    expect(strings[0]!.sublabel).toMatch(/· Pure Drive$/);
+    expect(strings.every((i) => i.racquet === 'test-pure-aero')).toBe(true);
+    expect(strings[0]!.sublabel).toMatch(/· Pure Aero$/);
     expect(index.filter((i) => i.type === 'guthybrid')).toHaveLength(0);
+    showRacquet('puredrive2025');
+    const pd = rebuildIndex().filter((i) => i.type === 'guthybrid');
+    expect(pd).toHaveLength(7);
+    expect(pd.every((i) => i.racquet === 'puredrive2025')).toBe(true);
     showRacquet('regna');
   });
 });

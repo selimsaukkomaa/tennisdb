@@ -17,8 +17,9 @@ const names = (racquets: readonly Racquet[]): [string, string[]][] =>
   racquetGroups(racquets).map((g) => [g.brand, g.racquets.map((r) => r.model)]);
 
 describe('racquetGroups', () => {
-  test("the data's three: Head, then Yonex", () => {
+  test("the data's four: Babolat, Head, then Yonex", () => {
     expect(names(assembleDb().racquets)).toEqual([
+      ['Babolat', ['Pure Drive 2025']],
       ['Head', ['Pro Tour 630']],
       ['Yonex', ['Percept 100D', 'Regna 100']],
     ]);

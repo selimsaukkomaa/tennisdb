@@ -44,6 +44,8 @@ const VIEWS: View[] = [
   { name: 'frame details open', clicks: ['[data-frame-toggle]'] },
   { name: 'Percept 100D', clicks: racquet('percept') },
   { name: 'Pro Tour 630', clicks: racquet('headpt630') },
+  // The first racket beyond the owner's three (v1.13): Toroline shows all four tension kinds.
+  { name: 'Pure Drive 2025', clicks: racquet('puredrive2025') },
   { name: 'Grips', clicks: ['#btn-cat-grips'] },
   { name: 'Natural gut (Regna)', clicks: ['#btn-gut'] },
   {
